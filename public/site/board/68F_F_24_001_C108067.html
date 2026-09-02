@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>24 ПОДВЕСКА ДВИГАТЕЛЯ / 001 РЕЗИН. ОПОРА НА КРОНШТЕЙНЕ ДВИГ.</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108067">68F  Действительно для: CA, US</a> → 001 РЕЗИН. ОПОРА НА КРОНШТЕЙНЕ ДВИГ.</div>
+<h1>001 РЕЗИН. ОПОРА НА КРОНШТЕЙНЕ ДВИГ.</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B24001000278 <span class="hint">(3)</span></button><button data-i="1" class="">B24001000279 <span class="hint">(12)</span></button><button data-i="2" class="">B24001000280 <span class="hint">(16)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B24001000278.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="98"><td>98</td><td class="pn" data-raw="N000931012120" title="Клик — скопировать">N 000931 012120</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000137012203" title="Клик — скопировать">N 000137 012203</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0949904205" title="Клик — скопировать">A 094 990 42 05</td><td>Пружинная шайба</td><td>2</td><td></td></tr><tr data-pos="118"><td>118</td><td class="pn" data-raw="A1162230034" title="Клик — скопировать">A 116 223 00 34</td><td>Экран защитный</td><td>2</td><td></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="N914019008000" title="Клик — скопировать">N 914019 008000</td><td>Винт с неспадающей шайбой</td><td>4</td><td></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1112200017" title="Клик — скопировать">A 111 220 00 17</td><td>Эластомерная опора</td><td>1</td><td>ОПОРА ДВИГАТЕЛЯ</td></tr><tr data-pos="338"><td>338</td><td class="pn" data-raw="A1082420140" title="Клик — скопировать">A 108 242 01 40</td><td>Пластина с резьбой</td><td>2</td><td></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1082401902" title="Клик — скопировать">A 108 240 19 02</td><td>КРОНШТЕЙН ОПОРЫ ДВИГАТЕЛЯ</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="384"><td>384</td><td class="pn" data-raw="A1082420284" title="Клик — скопировать">A 108 242 02 84</td><td>ВКЛАДКА</td><td>1</td><td></td></tr><tr data-pos="403"><td>403</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>2</td><td>НЕСУЩАЯ БАЛКА ДВИГАТЕЛЯ К РЕЗИНОВОЙ ОПОРЕ СЗАДИ</td></tr><tr data-pos="422"><td>422</td><td class="pn" data-raw="N000933008153" title="Клик — скопировать">N 000933 008153</td><td>Винт</td><td>4</td><td>НЕСУЩАЯ БАЛКА ДВИГАТЕЛЯ К НЕСУЩЕМУ ОСНОВАНИЮ КУЗОВА; M8X25-8.8</td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="N007349008002" title="Клик — скопировать">N 007349 008002</td><td>Шайба</td><td>4</td><td>НЕСУЩАЯ БАЛКА ДВИГАТЕЛЯ К НЕСУЩЕМУ ОСНОВАНИЮ КУЗОВА</td></tr><tr data-pos="438"><td>438</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>4</td><td>НЕСУЩАЯ БАЛКА ДВИГАТЕЛЯ К НЕСУЩЕМУ ОСНОВАНИЮ КУЗОВА</td></tr><tr data-pos="456"><td>456</td><td class="pn" data-raw="A1089870840" title="Клик — скопировать">A 108 987 08 40</td><td>Резиновый буфер</td><td>1</td><td>ОТБОЙНИК ГЛУШИТЕЛЯ СЛЕВА</td></tr><tr data-pos="464"><td>464</td><td class="pn" data-raw="A1089870740" title="Клик — скопировать">A 108 987 07 40</td><td>РЕЗИНОВЫЙ УПОР</td><td>2</td><td>BRACING</td></tr><tr data-pos="472"><td>472</td><td class="pn" data-raw="N000137012203" title="Клик — скопировать">N 000137 012203</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="472"><td>472</td><td class="pn" data-raw="A0949904205" title="Клик — скопировать">A 094 990 42 05</td><td>Пружинная шайба</td><td>1</td><td>КРОНШТЕЙН ОПОРЫ ДВИГАТЕЛЯ К КРЫШКЕ КОРОБКИ ПЕРЕДАЧ</td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="N000934012023" title="Клик — скопировать">N 000934 012023</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="N308673012002" title="Клик — скопировать">N 308673 012002</td><td>Шестигранная гайка</td><td>1</td><td>КРОНШТЕЙН ОПОРЫ ДВИГАТЕЛЯ К КРЫШКЕ КОРОБКИ ПЕРЕДАЧ</td></tr><tr data-pos="505"><td>505</td><td class="pn" data-raw="A0002400648" title="Клик — скопировать">A 000 240 06 48</td><td>ДЕМПФЕР МОТОРА</td><td>-</td><td></td></tr><tr data-pos="505"><td>505</td><td class="pn" data-raw="A0002401348" title="Клик — скопировать">A 000 240 13 48</td><td>Амортизатор двигателя</td><td>2</td><td></td></tr><tr data-pos="515"><td>515</td><td class="pn" data-raw="A0002401348" title="Клик — скопировать">A 000 240 13 48</td><td>Амортизатор двигателя</td><td>2</td><td></td></tr><tr data-pos="532"><td>532</td><td class="pn" data-raw="A1092410302" title="Клик — скопировать">A 109 241 03 02</td><td>КРОНШТЕЙН</td><td>1</td><td></td></tr><tr data-pos="558"><td>558</td><td class="pn" data-raw="A1072410065" title="Клик — скопировать">A 107 241 00 65</td><td>Резиновый буфер</td><td>8</td><td></td></tr><tr data-pos="567"><td>567</td><td class="pn" data-raw="A1082410012" title="Клик — скопировать">A 108 241 00 12</td><td>Тарельчатый диск</td><td>6</td><td></td></tr><tr data-pos="575"><td>575</td><td class="pn" data-raw="A1082410112" title="Клик — скопировать">A 108 241 01 12</td><td>Тарельчатый диск</td><td>1</td><td></td></tr><tr data-pos="592"><td>592</td><td class="pn" data-raw="A1092400040" title="Клик — скопировать">A 109 240 00 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="601"><td>601</td><td class="pn" data-raw="A1092400045" title="Клик — скопировать">A 109 240 00 45</td><td>Экран защитный</td><td>1</td><td></td></tr><tr data-pos="612"><td>612</td><td class="pn" data-raw="A1085860124" title="Клик — скопировать">A 108 586 01 24</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1162230112" title="Клик — скопировать">A 116 223 01 12</td><td>САЙЛЕНТ-БЛОК</td><td>2</td><td>СПЕРЕДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1162400418" title="Клик — скопировать">A 116 240 04 18</td><td>Резиновая опора</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000933008108" title="Клик — скопировать">N 000933 008108</td><td>Винт</td><td>2</td><td>НЕСУЩАЯ БАЛКА ДВИГАТЕЛЯ К РЕЗИНОВОЙ ОПОРЕ СЗАДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1082420031" title="Клик — скопировать">A 108 242 00 31</td><td>Удерживающая пластина</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089870940" title="Клик — скопировать">A 108 987 09 40</td><td>Резиновый буфер</td><td>1</td><td>ОТБОЙНИК ГЛУШИТЕЛЯ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000933008108" title="Клик — скопировать">N 000933 008108</td><td>Винт</td><td>3</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>3</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1072400117" title="Клик — скопировать">A 107 240 01 17</td><td>Ремкомплект демпфера</td><td>2</td><td>ENINE SHOCK ABSORBER MOUNTING PARTS</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1162400418" title="Клик — скопировать">A 116 240 04 18</td><td>- Резиновая опора</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1082420031" title="Клик — скопировать">A 108 242 00 31</td><td>- Удерживающая пластина</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>- Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137012203" title="Клик — скопировать">N 000137 012203</td><td>- Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0949904205" title="Клик — скопировать">A 094 990 42 05</td><td>- Пружинная шайба</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000933008130" title="Клик — скопировать">N 000933 008130</td><td>- Винт</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017008039" title="Клик — скопировать">N 304017 008039</td><td>- Винт с 6-гранной головкой</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000933008147" title="Клик — скопировать">N 000933 008147</td><td>- Винт</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017008021" title="Клик — скопировать">N 304017 008021</td><td>- Винт с 6-гранной головкой</td><td>2</td><td>M8X20</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934012023" title="Клик — скопировать">N 000934 012023</td><td>- Гайка</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N308673012002" title="Клик — скопировать">N 308673 012002</td><td>- Шестигранная гайка</td><td>1</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 48 · подписано на схемах: 29 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B24001000278.png", "poses": ["98", "110", "128"]}, {"png": "../../img_png/drawing_B24001000279.png", "poses": ["350", "403", "422", "430", "438", "464", "472", "490", "505", "558", "567", "612"]}, {"png": "../../img_png/drawing_B24001000280.png", "poses": ["98", "110", "118", "128", "170", "338", "350", "384", "456", "464", "515", "532", "575", "592", "601", "612"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

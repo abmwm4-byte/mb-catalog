@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>49 СИСТЕМА ВЫПУСКА ОГ / 001 СИСТЕМА ВЫПУСКА ОГ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108014">232 -/-</a> → 001 СИСТЕМА ВЫПУСКА ОГ</div>
+<h1>001 СИСТЕМА ВЫПУСКА ОГ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B49001000023 <span class="hint">(5)</span></button><button data-i="1" class="">B49001000022 <span class="hint">(17)</span></button><button data-i="2" class="">B49001000024 <span class="hint">(0)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B49001000023.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1084902120" title="Клик — скопировать">A 108 490 21 20</td><td>Выпускная труба</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1084920319" title="Клик — скопировать">A 108 492 03 19</td><td>Держатель</td><td>1</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>2</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ; M8</td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="N915035000023" title="Клик — скопировать">N 915035 000023</td><td>Уплотнительное кольцо</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1124920904" title="Клик — скопировать">A 112 492 09 04</td><td>Выпускная труба</td><td>2</td><td>СЗАДИ</td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A1124913401" title="Клик — скопировать">A 112 491 34 01</td><td>Глушитель</td><td>1</td><td></td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1094900143" title="Клик — скопировать">A 109 490 01 43</td><td>Удерживающая дуга</td><td>1</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0004920053" title="Клик — скопировать">A 000 492 00 53</td><td>втулка</td><td>2</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A0004920183" title="Клик — скопировать">A 000 492 01 83</td><td>ИЗОЛЯЦИЯ</td><td>-</td><td></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A0004920983" title="Клик — скопировать">A 000 492 09 83</td><td>Изоляционная шайба</td><td>2</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos="112"><td>112</td><td class="pn" data-raw="A0004920043" title="Клик — скопировать">A 000 492 00 43</td><td>СКОБА</td><td>1</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1074920082" title="Клик — скопировать">A 107 492 00 82</td><td>Резиновое кольцо</td><td>4</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1074920082" title="Клик — скопировать">A 107 492 00 82</td><td>Резиновое кольцо</td><td>4</td><td></td></tr><tr data-pos="141"><td>141</td><td class="pn" data-raw="A1239870940" title="Клик — скопировать">A 123 987 09 40</td><td>Резиновый буфер</td><td>2</td><td></td></tr><tr data-pos="187"><td>187</td><td class="pn" data-raw="A1084920630" title="Клик — скопировать">A 108 492 06 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A1204200227" title="Клик — скопировать">A 120 420 02 27</td><td>Т-образный винт</td><td>1</td><td></td></tr><tr data-pos="211"><td>211</td><td class="pn" data-raw="A0009873841" title="Клик — скопировать">A 000 987 38 41</td><td>КОЛЬЦО РЕЗИНОВОЕ</td><td>1</td><td></td></tr><tr data-pos="217"><td>217</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="217"><td>217</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>1</td><td>6 MM</td></tr><tr data-pos="222"><td>222</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td></td></tr><tr data-pos="229"><td>229</td><td class="pn" data-raw="N000934006013" title="Клик — скопировать">N 000934 006013</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="229"><td>229</td><td class="pn" data-raw="N304032006008" title="Клик — скопировать">N 304032 006008</td><td>Шестигранная гайка</td><td>1</td><td></td></tr><tr data-pos="235"><td>235</td><td class="pn" data-raw="A1094920530" title="Клик — скопировать">A 109 492 05 30</td><td>Экран защитный</td><td>1</td><td></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1084920330" title="Клик — скопировать">A 108 492 03 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="253"><td>253</td><td class="pn" data-raw="A1084920430" title="Клик — скопировать">A 108 492 04 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1084902920" title="Клик — скопировать">A 108 490 29 20</td><td>Выпускная труба</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1104920027" title="Клик — скопировать">A 110 492 00 27</td><td>Зажимная скоба</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1104920126" title="Клик — скопировать">A 110 492 01 26</td><td>ЭЛЕМЕНТ НАТЯЖНОЙ</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008246" title="Клик — скопировать">N 000931 008246</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017008028" title="Клик — скопировать">N 304017 008028</td><td>Винт с 6-гранной головкой</td><td>6</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>6</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ; M8</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1084900521" title="Клик — скопировать">A 108 490 05 21</td><td>Выпускная труба</td><td>1</td><td>СЕРЕДИНА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>2</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>2</td><td>ПОДВЕСКА ГЛАВНОГО ГЛУШИТЕЛЯ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1124921140" title="Клик — скопировать">A 112 492 11 40</td><td>ХОМУТ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1124900341" title="Клик — скопировать">A 112 490 03 41</td><td>ХОМУТ</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0004900741" title="Клик — скопировать">A 000 490 07 41</td><td>хомут</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008327" title="Клик — скопировать">N 000931 008327</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017008043" title="Клик — скопировать">N 304017 008043</td><td>Винт с 6-гранной головкой</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ; M8X55 - 8.8</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>Шайба</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ; 8 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ЗАДНЕЙ ВЫПУСКНОЙ ТРУБЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1211550181" title="Клик — скопировать">A 121 155 01 81</td><td>Эластомерная шайба</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000440009103" title="Клик — скопировать">N 000440 009103</td><td>Шайба</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1084920053" title="Клик — скопировать">A 108 492 00 53</td><td>РАСПОРН. ТРУБКА</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008244" title="Клик — скопировать">N 000931 008244</td><td>Винт</td><td>2</td><td>ДЕРЖАТЕЛЬ НА КАБИНЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127008203" title="Клик — скопировать">N 000127 008203</td><td>Пружинное кольцо</td><td>2</td><td>ДЕРЖАТЕЛЬ НА КАБИНЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008407" title="Клик — скопировать">N 000125 008407</td><td>ШАЙБА</td><td>2</td><td>ДЕРЖАТЕЛЬ НА КАБИНЕ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008010" title="Клик — скопировать">N 000934 008010</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка</td><td>2</td><td>ДЕРЖАТЕЛЬ НА КАБИНЕ; M8</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1134920214" title="Клик — скопировать">A 113 492 02 14</td><td>Накладка</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000933006103" title="Клик — скопировать">N 000933 006103</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017006018" title="Клик — скопировать">N 304017 006018</td><td>Винт с 6-гранной головкой</td><td>1</td><td>КРЕПЛЕНИЕ ЗАЩИТ. ЩИТКА; M6X12</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>1</td><td>КРЕПЛЕНИЕ ЗАЩИТ. ЩИТКА; 6 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>КРЕПЛЕНИЕ ЗАЩИТ. ЩИТКА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934006003" title="Клик — скопировать">N 000934 006003</td><td>Гайка</td><td>1</td><td>КРЕПЛЕНИЕ ЗАЩИТ. ЩИТКА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1124900830" title="Клик — скопировать">A 112 490 08 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1094920530" title="Клик — скопировать">A 109 492 05 30</td><td>Экран защитный</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902036" title="Клик — скопировать">A 000 990 20 36</td><td>БОЛТ</td><td>3</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902036" title="Клик — скопировать">A 000 990 20 36</td><td>БОЛТ</td><td>5</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1084900030" title="Клик — скопировать">A 108 490 00 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902036" title="Клик — скопировать">A 000 990 20 36</td><td>БОЛТ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085860349" title="Клик — скопировать">A 108 586 03 49</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 67 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49001000023.png", "poses": ["13", "23", "26", "60", "78"]}, {"png": "../../img_png/drawing_B49001000022.png", "poses": ["34", "84", "90", "96", "112", "122", "134", "141", "187", "205", "211", "217", "222", "229", "235", "245", "253"]}, {"png": "../../img_png/drawing_B49001000024.png", "poses": []}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

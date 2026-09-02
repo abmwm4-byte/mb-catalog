@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>18 СИСТЕМА СМАЗКИ ДВИГАТ. / 045 МАСЛЯН. ФИЛЬТР</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">510  Действительно для: JP</a> → 045 МАСЛЯН. ФИЛЬТР</div>
+<h1>045 МАСЛЯН. ФИЛЬТР</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B18045000111 <span class="hint">(16)</span></button><button data-i="1" class="">B18045000119 <span class="hint">(6)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B18045000111.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0021841201" title="Клик — скопировать">A 002 184 12 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0021841301" title="Клик — скопировать">A 002 184 13 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0021842201" title="Клик — скопировать">A 002 184 22 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0001842471" title="Клик — скопировать">A 000 184 24 71</td><td>- БОЛТ</td><td>1</td><td>МАСЛ. ФИЛЬТР НА ПРОМЕЖУТ. ФЛАНЦЕ</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0001841037" title="Клик — скопировать">A 000 184 10 37</td><td>- ПРУЖИНА</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0011846425" title="Клик — скопировать">A 001 184 64 25</td><td>- Фил. элемент масл.фильтра</td><td>1</td><td>ДО ПРОБЕГА 1000 КМ</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0001800609" title="Клик — скопировать">A 000 180 06 09</td><td>ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td>С 1001 СМ; ОБЪЕМ ПОСТАВ.</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1161840417" title="Клик — скопировать">A 116 184 04 17</td><td>ШТУЦЕР</td><td>1</td><td>МАСЛ. ФИЛЬТР НА ПРОМЕЖУТ. ФЛАНЦЕ</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0019976048" title="Клик — скопировать">A 001 997 60 48</td><td>Уплотнительное кольцо</td><td>1</td><td>МАСЛ. ФИЛЬТР НА ПРОМЕЖУТ. ФЛАНЦЕ</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1171840409" title="Клик — скопировать">A 117 184 04 09</td><td>ФЛАНЕЦ</td><td>-</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1171800136" title="Клик — скопировать">A 117 180 01 36</td><td>ФЛАНЕЦ</td><td>1</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1161870055" title="Клик — скопировать">A 116 187 00 55</td><td>Клапан</td><td>1</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000908014008" title="Клик — скопировать">N 000908 014008</td><td>Резьбовая пробка</td><td>1</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N007603014104" title="Клик — скопировать">N 007603 014104</td><td>Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1171840380" title="Клик — скопировать">A 117 184 03 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>ПРОМЕЖУТ. ФЛАНЕЦ НА БЛОКЕ ЦИЛ.</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000912008063" title="Клик — скопировать">N 000912 008063</td><td>Винт</td><td>3</td><td>ПРОМЕЖУТ. ФЛАНЕЦ НА БЛОКЕ ЦИЛ.</td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>3</td><td>ПРОМЕЖУТ. ФЛАНЕЦ НА БЛОКЕ ЦИЛ.</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A0065429417" title="Клик — скопировать">A 006 542 94 17</td><td>Датчик давления</td><td>1</td><td>МАНОМЕТР МАСЛА</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>1</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B18045000111.png", "poses": ["5", "14", "29", "62", "65", "74", "77", "83", "89", "92", "95", "98", "101", "107", "122", "125"]}, {"png": "../../img_png/drawing_B18045000119.png", "poses": ["62", "65", "98", "107", "122", "125"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>54 ЭЛЕКТР. ОБОРУД. И КОНТР. ПРИБОРЫ / 120 ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → 120 ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</div>
+<h1>120 ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B54120000079 <span class="hint">(44)</span></button><button data-i="1" class="">B54120000077 <span class="hint">(35)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B54120000079.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075404710" title="Клик — скопировать">A 107 540 47 10</td><td>Провод</td><td>1</td><td>ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075401434" title="Клик — скопировать">A 107 540 14 34</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075404910" title="Клик — скопировать">A 107 540 49 10</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>МОЩНОСТЬ ДВИГАТЕЛЯ ПРИ КОНДИЦИОНЕРЕ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075401534" title="Клик — скопировать">A 107 540 15 34</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>МОЩНОСТЬ ДВИГАТЕЛЯ ПРИ КОНДИЦИОНЕРЕ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075405210" title="Клик — скопировать">A 107 540 52 10</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075401634" title="Клик — скопировать">A 107 540 16 34</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>ЖГУТ ЭЛЕКТРОПРОВОДКИ ДВИГАТЕЛЯ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075405310" title="Клик — скопировать">A 107 540 53 10</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>МОЩНОСТЬ ДВИГАТЕЛЯ ПРИ КОНДИЦИОНЕРЕ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075401734" title="Клик — скопировать">A 107 540 17 34</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>МОЩНОСТЬ ДВИГАТЕЛЯ ПРИ КОНДИЦИОНЕРЕ</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0125458628" title="Клик — скопировать">A 012 545 86 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>OXYGEN SENSOR HEATING;BIPOLAR; 2-PIN RK2.5</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0025452926" title="Клик — скопировать">A 002 545 29 26</td><td>- КОНТАКТНАЯ ВТУЛКА</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0035450626" title="Клик — скопировать">A 003 545 06 26</td><td>- Контактная втулка</td><td>NB</td><td>4 MM; 0.35-2.5 MM2 RK2.5</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0125450728" title="Клик — скопировать">A 012 545 07 28</td><td>- Сцепление, механическое</td><td>1</td><td>МИКРОВЫКЛЮЧАТЕЛЬ; 3-PIN</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0135454828" title="Клик — скопировать">A 013 545 48 28</td><td>- Крышка</td><td>-</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0225458828" title="Клик — скопировать">A 022 545 88 28</td><td>- Крышка</td><td>2</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0135454728" title="Клик — скопировать">A 013 545 47 28</td><td>- Корпус штекерной втулки</td><td>NB</td><td>TO 013 545 48 28</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1245400581" title="Клик — скопировать">A 124 540 05 81</td><td>- РОЗЕТКА</td><td>-</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1245401381" title="Клик — скопировать">A 124 540 13 81</td><td>- Корпус штекерной втулки</td><td>1</td><td>ВПУСК.ТРУБОПРОВ.ВОЗДУШ.ФИЛЬТРА</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1245450080" title="Клик — скопировать">A 124 545 00 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>TO 124 540 13 81</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0015452826" title="Клик — скопировать">A 001 545 28 26</td><td>- Штекерная втулка</td><td>-</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>NB</td><td>2.5mm; 0.35-2.5 MM2 RK2.5</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0115459628" title="Клик — скопировать">A 011 545 96 28</td><td>- Штекерная втулка</td><td>1</td><td>КИСЛОРОДНЫЙ ДАТЧИК</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0135458728" title="Клик — скопировать">A 013 545 87 28</td><td>- Корпус штекерной втулки</td><td>2</td><td>ДАТЧИК NTC; 1-PIN</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0115458528" title="Клик — скопировать">A 011 545 85 28</td><td>- Разъем, электрический</td><td>1</td><td>ДАТЧИК ТЕМПЕРАТУРЫ; 1-PIN</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0115458528" title="Клик — скопировать">A 011 545 85 28</td><td>- Разъем, электрический</td><td>1</td><td>УСТРОЙСТВО БЛОКИРОВКИ ВКЛЮЧЕНИЯ КЛИМАТИЧЕСКОЙ СИСТЕМЫ ПРИ ХОЛОДНОМ ДВИГАТЕЛЕ, 1-КОНТАКТН.; 1-PIN</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0115458528" title="Клик — скопировать">A 011 545 85 28</td><td>- Разъем, электрический</td><td>1</td><td>TEMPERATURE SWITCH,110 DEGS.; 1-PIN</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0125452428" title="Клик — скопировать">A 012 545 24 28</td><td>- Разъем, электрический</td><td>1</td><td>AIR-FLOW SENSOR-PLATE CONTACT; 3-PIN</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0125452428" title="Клик — скопировать">A 012 545 24 28</td><td>- Разъем, электрический</td><td>1</td><td>ЭЛЕМЕНТ ДРОССЕЛЬНОЙ ЗАСЛОНКИ; 3-PIN</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0125452428" title="Клик — скопировать">A 012 545 24 28</td><td>- Разъем, электрический</td><td>1</td><td>КОМПРЕСС. КОНДИЦИОНЕРА; 3-PIN</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1265452328" title="Клик — скопировать">A 126 545 23 28</td><td>- Сцепление, механическое</td><td>1</td><td>FUEL PUMP RELAY,12-POLE; 12-PIN</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1265452328" title="Клик — скопировать">A 126 545 23 28</td><td>- Сцепление, механическое</td><td>1</td><td>COMPRESSOR CONTROL UNIT; 12-POLE; 12-PIN</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0115457128" title="Клик — скопировать">A 011 545 71 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>ЭЛ.ГИДРАВЛ.ИСПОЛН.ЭЛЕМ.,2-КОНТАКТ.; 2-PIN</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0115457128" title="Клик — скопировать">A 011 545 71 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>РЕГУЛЯТОР ХОЛОСТОГО ХОДА; 2-PIN</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>- Наружный круглый штекер</td><td>-</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка</td><td>NB</td><td>4 MM; 0.35-4.0 MM2 RK4</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0085450928" title="Клик — скопировать">A 008 545 09 28</td><td>- Корпус штекера</td><td>1</td><td>РАЗЪЕМ ЖГУТА ПРОВОДКИ КЛИМ. УСТАНОВКИ; 2-PIN</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>- Крышка</td><td>1</td><td>TO 008 545 09 28; 2-PIN RK4.</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0085451828" title="Клик — скопировать">A 008 545 18 28</td><td>- ШТИФТ ШТЕКЕРА</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0135457928" title="Клик — скопировать">A 013 545 79 28</td><td>- Штекерный штифт</td><td>NB</td><td>TO 008 545 09 28; 4.0mm2</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0085452028" title="Клик — скопировать">A 008 545 20 28</td><td>- Нижняя часть корпуса</td><td>1</td><td>РАЗЪЕМ TEMPOMAT; 1-PIN</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0085452028" title="Клик — скопировать">A 008 545 20 28</td><td>- Нижняя часть корпуса</td><td>1</td><td>МАРШРУТНЫЙ КОМПЬЮТЕР; 1-PIN</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0095451428" title="Клик — скопировать">A 009 545 14 28</td><td>- Верхняя часть корпуса</td><td>NB</td><td>TO 008 545 20 28</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0015454426" title="Клик — скопировать">A 001 545 44 26</td><td>- Контактная втулка</td><td>NB</td><td>4 MM; 0.35-6.0 MM2 RK4.0</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0095455228" title="Клик — скопировать">A 009 545 52 28</td><td>- Корпус штекера</td><td>1</td><td>РАЗЪЕМ ЖГУТА ПРОВОДКИ КЛИМ. УСТАНОВКИ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0095452128" title="Клик — скопировать">A 009 545 21 28</td><td>- Крышка</td><td>1</td><td>TO 009 545 52 28</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0095455628" title="Клик — скопировать">A 009 545 56 28</td><td>- Корпус штекера</td><td>1</td><td>РАЗЪЕМ ЖГУТА ПРОВОДКИ САЛОНА</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0095456028" title="Клик — скопировать">A 009 545 60 28</td><td>- Крышка</td><td>1</td><td>TO 009 545 56 28</td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0015453826" title="Клик — скопировать">A 001 545 38 26</td><td>- Контактный стержень</td><td>NB</td><td>4 MM; 4.0 MM2 RK4</td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1165400181" title="Клик — скопировать">A 116 540 01 81</td><td>- Картер сцепления</td><td>1</td><td>COLD START VALVE,BIPOLAR; 2-PIN JPT</td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0015450726" title="Клик — скопировать">A 001 545 07 26</td><td>- Контактная пружина</td><td>-</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0025451926" title="Клик — скопировать">A 002 545 19 26</td><td>- ПРУЖИНА КОНТАКТНАЯ</td><td>-</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0035450226" title="Клик — скопировать">A 003 545 02 26</td><td>- Контактная пружина</td><td>NB</td><td>TO 16 540 01 81; 0.5-1.5mm2</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0005452845" title="Клик — скопировать">A 000 545 28 45</td><td>- Защитный колпачок</td><td>1</td><td>TO 116 540 01 81</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1079971581" title="Клик — скопировать">A 107 997 15 81</td><td>- втулка</td><td>1</td><td>ЭЛ. ПРОВОД ЧЕРЕЗ ПЕРЕГОРОДКУ</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0001593140" title="Клик — скопировать">A 000 159 31 40</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0009954020" title="Клик — скопировать">A 000 995 40 20</td><td>ХОМУТ</td><td>-</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0009954320" title="Клик — скопировать">A 000 995 43 20</td><td>Крепежный хомут</td><td>2</td><td>ЭЛ. ПРОВОД НА ПЕРЕГОРОДКЕ</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1145460075" title="Клик — скопировать">A 114 546 00 75</td><td>ХОМУТ</td><td>1</td><td>ЭЛ. ПРОВОД НА ПЕРЕГОРОДКЕ</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A2019884178" title="Клик — скопировать">A 201 988 41 78</td><td>Скоба</td><td>1</td><td>OXYGEN SENSOR PLUG CONNECTION TO MAIN FLOOR</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0059881378" title="Клик — скопировать">A 005 988 13 78</td><td>СКОБА</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0079880278" title="Клик — скопировать">A 007 988 02 78</td><td>Скоба</td><td>1</td><td>OXYGEN SENSOR PLUG CONNECTION TO MAIN FLOOR</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1075455340" title="Клик — скопировать">A 107 545 53 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>OXYGEN SENSOR PLUG CONNECTION TO MAIN FLOOR</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N007981004318" title="Клик — скопировать">N 007981 004318</td><td>Шуруп</td><td>1</td><td>ДЕРЖАТ. НА ПАНЕЛИ БУ; 4,2X9,5</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N000933006183" title="Клик — скопировать">N 000933 006183</td><td>БОЛТ</td><td>-</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N304017006016" title="Клик — скопировать">N 304017 006016</td><td>Винт с 6-гранной головкой</td><td>1</td><td>ПРОВОД МАССЫ НА ДВИГ.; M6X16</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N000933006122" title="Клик — скопировать">N 000933 006122</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>Винт с 6-гранной головкой</td><td>1</td><td>GROUND CABLE TO INTAKE MANIFOLD BRACKET</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>GROUND CABLE TO INTAKE MANIFOLD BRACKET</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1075455140" title="Клик — скопировать">A 107 545 51 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A0145457028" title="Клик — скопировать">A 014 545 70 28</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ</td><td>1</td><td>KE</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A0145457128" title="Клик — скопировать">A 014 545 71 28</td><td>Кодирующий штекер</td><td>1</td><td>KE</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0155450728" title="Клик — скопировать">A 015 545 07 28</td><td>Кодирующий штекер</td><td>1</td><td>EZL</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0155450828" title="Клик — скопировать">A 015 545 08 28</td><td>Кодирующий штекер</td><td>1</td><td>EZL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N001367000015" title="Клик — скопировать">N 001367 000015</td><td>Проволока</td><td>1</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ KE,180 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009880970" title="Клик — скопировать">A 000 988 09 70</td><td>ПЛОМБА</td><td>1</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ KE</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2015400280" title="Клик — скопировать">A 201 540 02 80</td><td>Крышка</td><td>1</td><td>ШТЕКЕР КОРРЕКТИРУЮЩИЙ EZL</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 75 · подписано на схемах: 72 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54120000079.png", "poses": ["5", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "56", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "104", "107", "110", "113", "116", "119", "122", "125", "134", "137", "149", "152", "155"]}, {"png": "../../img_png/drawing_B54120000077.png", "poses": ["11", "14", "20", "23", "32", "35", "38", "41", "44", "47", "50", "56", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "107", "110", "113", "116", "119", "122", "152", "155"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

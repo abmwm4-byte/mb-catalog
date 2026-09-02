@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>15 ЭЛЕКТР. ОБОРУДОВАНИЕ / 060 СИСТЕМА ЗАЖИГАНИЯ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">575 AB 09/85 Действительно для: CA, US</a> → 060 СИСТЕМА ЗАЖИГАНИЯ</div>
+<h1>060 СИСТЕМА ЗАЖИГАНИЯ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B15060000025.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0031583401" title="Клик — скопировать">A 003 158 34 01</td><td>РАСПРЕДЕЛИТЕЛЬ ЗАЖИГАНИЯ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0001584031" title="Клик — скопировать">A 000 158 40 31</td><td>- РАСПРЕДЕЛИТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0001581811" title="Клик — скопировать">A 000 158 18 11</td><td>- КРЫШКА</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0001585202" title="Клик — скопировать">A 000 158 52 02</td><td>- КРЫШКА РАСПРЕДЕЛИТЕЛЯ</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0001580360" title="Клик — скопировать">A 000 158 03 60</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0119970548" title="Клик — скопировать">A 011 997 05 48</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0001582185" title="Клик — скопировать">A 000 158 21 85</td><td>КОЖУХ</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1161500612" title="Клик — скопировать">A 116 150 06 12</td><td>ВАЛ</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1161500812" title="Клик — скопировать">A 116 150 08 12</td><td>ВАЛ</td><td>1</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1161580153" title="Клик — скопировать">A 116 158 01 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>ПО ПОТРЕБН.;ЦИЛИНДРИЧ.</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1169883078" title="Клик — скопировать">A 116 988 30 78</td><td>СКОБА</td><td>1</td><td>РАСПРЕД.ЗАЖИГ. НА КРЫШКЕ КАРТЕРА ГРМ</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1169900312" title="Клик — скопировать">A 116 990 03 12</td><td>БОЛТ</td><td>1</td><td>РАСПРЕД.ЗАЖИГ. НА КРЫШКЕ КАРТЕРА ГРМ</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1001504618" title="Клик — скопировать">A 100 150 46 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1001504518" title="Клик — скопировать">A 100 150 45 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1021502118" title="Клик — скопировать">A 102 150 21 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1161506918" title="Клик — скопировать">A 116 150 69 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1161507018" title="Клик — скопировать">A 116 150 70 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1101591818" title="Клик — скопировать">A 110 159 18 18</td><td>Провод выс. напряжения</td><td>1</td><td>ЦИЛИНДР NO.1,780 MM</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1101591818" title="Клик — скопировать">A 110 159 18 18</td><td>Провод выс. напряжения</td><td>4</td><td>ЦИЛИНДР NO.2,NO.6,NO.7,NO.8,740 MM</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1101591818" title="Клик — скопировать">A 110 159 18 18</td><td>Провод выс. напряжения</td><td>1</td><td>ЦИЛИНДР NO.3,830 MM</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1101591818" title="Клик — скопировать">A 110 159 18 18</td><td>Провод выс. напряжения</td><td>1</td><td>ЦИЛИНДР NO.4,900 MM</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1101591818" title="Клик — скопировать">A 110 159 18 18</td><td>Провод выс. напряжения</td><td>1</td><td>ЦИЛИНДР NO.5,660 MM</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590137" title="Клик — скопировать">A 116 159 01 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 1</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590237" title="Клик — скопировать">A 116 159 02 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 2</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590337" title="Клик — скопировать">A 116 159 03 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 3</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590437" title="Клик — скопировать">A 116 159 04 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 4</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590537" title="Клик — скопировать">A 116 159 05 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 5</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590637" title="Клик — скопировать">A 116 159 06 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 6</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590737" title="Клик — скопировать">A 116 159 07 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 7</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1161590837" title="Клик — скопировать">A 116 159 08 37</td><td>втулка</td><td>2</td><td>ЦИЛИНДР 8</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A0001591438" title="Клик — скопировать">A 000 159 14 38</td><td>Кабельная втулка</td><td>16</td><td>ПРОВОД ВЫСКОВОЛЬТНЫЙ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A0001592842" title="Клик — скопировать">A 000 159 28 42</td><td>Соединительный штекер</td><td>8</td><td>РАСПРЕДЕЛИТЕЛЬ ЗАЖИГАНИЯ</td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A0001565910" title="Клик — скопировать">A 000 156 59 10</td><td>ЭКРАНИРОВАННЫЙ ШТЕКЕР</td><td>6</td><td>СВЕЧА ЗАЖИГАНИЯ</td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A0001565610" title="Клик — скопировать">A 000 156 56 10</td><td>ЭКРАНИРОВАННЫЙ ШТЕКЕР</td><td>2</td><td>СВЕЧА ЗАЖИГАНИЯ NOS.3,NOS.4</td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1161507418" title="Клик — скопировать">A 116 150 74 18</td><td>ПРОВОД СИСТЕМЫ ЗАЖИГАНИЯ</td><td>-</td><td></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1151590818" title="Клик — скопировать">A 115 159 08 18</td><td>Провод выс. напряжения</td><td>1</td><td>РАСПРЕД.ЗАЖИГ. К КАТУШКЕ ЗАЖИГ.</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0001591438" title="Клик — скопировать">A 000 159 14 38</td><td>Кабельная втулка</td><td>2</td><td>ПРОВОД ВЫСКОВОЛЬТНЫЙ</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A0001592842" title="Клик — скопировать">A 000 159 28 42</td><td>Соединительный штекер</td><td>1</td><td>РАСПРЕДЕЛИТЕЛЬ ЗАЖИГАНИЯ</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0001592942" title="Клик — скопировать">A 000 159 29 42</td><td>Кабельный штекер</td><td>1</td><td>КАТУШКА ЗАЖИГ.</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="N040621022200" title="Клик — скопировать">N 040621 022200</td><td>Изоляционный шланг</td><td>1</td><td>ЦИЛИНДР NOS.:1-4 390 MM</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="N040621022200" title="Клик — скопировать">N 040621 022200</td><td>Изоляционный шланг</td><td>1</td><td>ЦИЛИНДР NOS.:5-8 300 MM</td></tr><tr data-pos="164"><td>164</td><td class="pn" data-raw="A1101590540" title="Клик — скопировать">A 110 159 05 40</td><td>Держатель</td><td>2</td><td>ПРОВОД ВЫСКОВОЛЬТНЫЙ</td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="N916016022206" title="Клик — скопировать">N 916016 022206</td><td>Хомут</td><td>1</td><td>ПРОВОД ЗАЖИГ.,ЦИЛ. №1-4</td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N000933006102" title="Клик — скопировать">N 000933 006102</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N304017006016" title="Клик — скопировать">N 304017 006016</td><td>Винт с 6-гранной головкой</td><td>1</td><td>ПРОВОД ЗАЖИГ.,ЦИЛ. №1-4; M6X16</td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A1159950365" title="Клик — скопировать">A 115 995 03 65</td><td>хомут</td><td>1</td><td>ПРОВОД ДАТЧИКА ПОЛОЖ. НА ВАКУУМН.ШЛАНГЕ</td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1109950365" title="Клик — скопировать">A 110 995 03 65</td><td>хомут</td><td>-</td><td></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A0004760436" title="Клик — скопировать">A 000 476 04 36</td><td>Держатель шланга</td><td>1</td><td>ПРОВОД ДАТЧИКА ПОЛОЖ. НА ВАКУУМН.ШЛАНГЕ</td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A0004760436" title="Клик — скопировать">A 000 476 04 36</td><td>Держатель шланга</td><td>1</td><td>ПРОВОД ЗАЖИГ.И ДИАГН.ПРОВОД НА НАПОРН.ТРУБОПРОВ.</td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A1169970790" title="Клик — скопировать">A 116 997 07 90</td><td>Кабельная стяжка</td><td>-</td><td>7X100MM</td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>ПРОВОД ЗАЖИГ.И ДИАГН.ПРОВОД НА НАПОРН.ТРУБОПРОВ.; 7X100 MM</td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A0029970790" title="Клик — скопировать">A 002 997 07 90</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ</td><td>-</td><td></td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>ПРОВОД ЗАЖИГ. НА ВАКУУМ.ТРУБОПРОВ.; 7X100 MM</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0031591203" title="Клик — скопировать">A 003 159 12 03</td><td>Свеча зажигания</td><td>8</td><td>W 7 DCO BOSCH</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0031594503" title="Клик — скопировать">A 003 159 45 03</td><td>Свеча зажигания</td><td>8</td><td>14-7 DUO BERU</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0031592603" title="Клик — скопировать">A 003 159 26 03</td><td>Свеча зажигания</td><td>8</td><td>N 9 YCC CHAMPION</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1169970765" title="Клик — скопировать">A 116 997 07 65</td><td>ФЛАНЕЦ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1161590003" title="Клик — скопировать">A 116 159 00 03</td><td>СВЕЧА ЗАЖИГАНИЯ</td><td>8</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 58 · подписано на схемах: 56 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B15060000025.png", "poses": ["5", "11", "14", "17", "32", "35", "41", "44", "47", "53", "116", "119", "122", "125", "128", "146", "149", "152", "155", "158", "164", "185", "188", "191", "194", "197", "200"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

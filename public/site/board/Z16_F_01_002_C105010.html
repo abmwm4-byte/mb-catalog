@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>01 ENGINE HOUSING / 002 ENGINE HOUSING</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C105010">Z16 -/-</a> → 002 ENGINE HOUSING</div>
+<h1>002 ENGINE HOUSING</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B01002Z16001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009971730" title="Клик — скопировать">A 000 997 17 30</td><td>	- LOCKING SCREW</td><td>3</td><td>FOR CORE HOLES</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1800530732" title="Клик — скопировать">A 180 053 07 32</td><td>	- Кольцо седла клапана</td><td>6</td><td>FOR EXHAUST</td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A1800160229" title="Клик — скопировать">A 180 016 02 29</td><td>	- Соединительный штуцер</td><td>1</td><td>FOR THERMOSTAT</td></tr><tr data-pos="73b"><td>73b</td><td class="pn" data-raw="A1809901640" title="Клик — скопировать">A 180 990 16 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1210500024" title="Клик — скопировать">A 121 050 00 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1210501624" title="Клик — скопировать">A 121 050 16 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1869900940" title="Клик — скопировать">A 186 990 09 40</td><td>ШАЙБА</td><td>8</td><td>FOR CYLINDER HEAD AT CYLINDER CRANKCASE</td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1800160338" title="Клик — скопировать">A 180 016 03 38</td><td>Скоба</td><td>3</td><td>FOR CYLINDER HEAD COVER</td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1800101130" title="Клик — скопировать">A 180 010 11 30</td><td>CYLINDER HEAD COVER</td><td>1</td><td></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1365010054" title="Клик — скопировать">A 136 501 00 54</td><td>	- Запорная крышка</td><td>1</td><td>FOR OIL FILLING IN</td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1809970240" title="Клик — скопировать">A 180 997 02 40</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>FOR SCREWED COVER</td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1800100470" title="Клик — скопировать">A 180 010 04 70</td><td>	- ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1809950701" title="Клик — скопировать">A 180 995 07 01</td><td>	- TUBE CLAMP</td><td>2</td><td>FOR BREATHER TUBE AT CYLINDER HEAD COVER UP TO ENGINE 6503167</td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1809970272" title="Клик — скопировать">A 180 997 02 72</td><td>	- Штуцер</td><td>1</td><td>FOR BREATHER TUBE AT CYLINDER HEAD COVER</td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1800160280" title="Клик — скопировать">A 180 016 02 80</td><td>	- GASKET</td><td>1</td><td>FOR CYLINDER HEAD COVER</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1800100370" title="Клик — скопировать">A 180 010 03 70</td><td>ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800530832" title="Клик — скопировать">A 180 053 08 32</td><td>	- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>6</td><td>RING, DIA. 40.3-MM FOR EXHAUST REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901740" title="Клик — скопировать">A 180 990 17 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901840" title="Клик — скопировать">A 180 990 18 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500624" title="Клик — скопировать">A 121 050 06 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. = 14.018-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500224" title="Клик — скопировать">A 121 050 02 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500324" title="Клик — скопировать">A 121 050 03 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502124" title="Клик — скопировать">A 121 050 21 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.018-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502224" title="Клик — скопировать">A 121 050 22 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502324" title="Клик — скопировать">A 121 050 23 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800100570" title="Клик — скопировать">A 180 010 05 70</td><td>BREATHER TUBE</td><td>1</td><td>EXPORT, SPECIAL REQUEST (TROPICAL DESIGN)</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 26 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01002Z16001.png", "poses": ["57", "60", "73", "73b", "74", "75", "82", "84", "85", "86", "87", "88", "89", "93", "97", "101"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

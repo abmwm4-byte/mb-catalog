@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>75 Крышка багажника / 015 Крышка багажника</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205003">C205_FW -/-</a> → 015 Крышка багажника</div>
+<h1>015 Крышка багажника</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B75015000087.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057500075" title="Клик — скопировать">A 205 750 00 75</td><td>TRUNK LID</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057502400" title="Клик — скопировать">A 205 750 24 00</td><td>TRUNK LID</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057500475" title="Клик — скопировать">A 205 750 04 75</td><td>TRUNK LID</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057502700" title="Клик — скопировать">A 205 750 27 00</td><td>TRUNK LID</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2057500328" title="Клик — скопировать">A 205 750 03 28</td><td>Рычаг петли (HINGE BRACKET)</td><td>1</td><td>Слева</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2057500428" title="Клик — скопировать">A 205 750 04 28</td><td>Рычаг петли (HINGE BRACKET)</td><td>1</td><td>Справа</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1409901017" title="Клик — скопировать">A 140 990 10 17</td><td>Винт 6-гр. с шайбой (HEXAGONAL HEAD SCREW)</td><td>4</td><td>Петля к крышке багажника слева и справа; M6X20</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1409901017" title="Клик — скопировать">A 140 990 10 17</td><td>Винт 6-гр. с шайбой (HEXAGONAL HEAD SCREW)</td><td>4</td><td>Петля к крышке багажника слева и справа; M6X20</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0019908000" title="Клик — скопировать">A 001 990 80 00</td><td>Винт с 6-гр.гол. и шайбой (HEXAGON HEAD SCREW)</td><td>3</td><td>Петля к остову кузова, слева; M6X19</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0019908000" title="Клик — скопировать">A 001 990 80 00</td><td>Винт с 6-гр.гол. и шайбой (HEXAGON HEAD SCREW)</td><td>3</td><td>Петля к остову кузова, справа; M6X19</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000003175" title="Клик — скопировать">N 000000 003175</td><td>Гайка (NUT)</td><td>1</td><td>Петля к остову кузова, слева; M8</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000003175" title="Клик — скопировать">N 000000 003175</td><td>Гайка (NUT)</td><td>1</td><td>Петля к остову кузова, справа; M8</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2127500026" title="Клик — скопировать">A 212 750 00 26</td><td>Упорный клин (RETAINER WEDGE)</td><td>1</td><td>Крышка багажника слева</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2127500026" title="Клик — скопировать">A 212 750 00 26</td><td>Упорный клин (RETAINER WEDGE)</td><td>1</td><td>Крышка багажника справа</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2057570029" title="Клик — скопировать">A 205 757 00 29</td><td>Пружина крышки багажника (EXTENSION SPRING)</td><td>2</td><td>Слева и справа</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2057570129" title="Клик — скопировать">A 205 757 01 29</td><td>Пружина крышки багажника (EXTENSION SPRING)</td><td>2</td><td>Слева и справа</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2046821704" title="Клик — скопировать">A 204 682 17 04</td><td>Демпфирование (DAMPING)</td><td>2</td><td>Пружина растяжения слева и справа</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2057500098" title="Клик — скопировать">A 205 750 00 98</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2057503300" title="Клик — скопировать">A 205 750 33 00</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2057505800" title="Клик — скопировать">A 205 750 58 00</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056940025" title="Клик — скопировать">A 205 694 00 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908504" title="Клик — скопировать">A 205 690 85 04</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056940325" title="Клик — скопировать">A 205 694 03 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056942025" title="Клик — скопировать">A 205 694 20 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908904" title="Клик — скопировать">A 205 690 89 04</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056942325" title="Клик — скопировать">A 205 694 23 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908307" title="Клик — скопировать">A 205 690 83 07</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908407" title="Клик — скопировать">A 205 690 84 07</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908507" title="Клик — скопировать">A 205 690 85 07</td><td>Облиц. крышки багажника</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908607" title="Клик — скопировать">A 205 690 86 07</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908504" title="Клик — скопировать">A 205 690 85 04</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056908904" title="Клик — скопировать">A 205 690 89 04</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056940325" title="Клик — скопировать">A 205 694 03 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2056942325" title="Клик — скопировать">A 205 694 23 25</td><td>Облиц. крышки багажника (TRIM, TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A2056930300" title="Клик — скопировать">A 205 693 03 00</td><td>- Сегмент рамы (FRAME SEGMENT)</td><td>1</td><td>Плафон освещения салона</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009914795" title="Клик — скопировать">A 000 991 47 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>7</td><td>Облицовка к крышке багажника</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2057571200" title="Клик — скопировать">A 205 757 12 00</td><td>Выемка под ручку</td><td>1</td><td>В облицовку</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2019900292" title="Клик — скопировать">A 201 990 02 92</td><td>Распорная заклепка</td><td>2</td><td>Крепление выемки под ручку; 8 MM</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2218202101" title="Клик — скопировать">A 221 820 21 01</td><td>Плафон освещения салона (INTERIOR LAMP)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A1178260081" title="Клик — скопировать">A 117 826 00 81</td><td>Отражатель (REFLECTOR)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A2218250382" title="Клик — скопировать">A 221 825 03 82</td><td>- Ламповый патрон (SOCKET)</td><td>1</td><td>С лампой накаливания; 12V-5W</td></tr><tr data-pos="227"><td>227</td><td class="pn" data-raw="N000000000853" title="Клик — скопировать">N 000000 000853</td><td>	- Лампа накаливания (BULB)</td><td>1</td><td>Крышка багажника; 12V-5W</td></tr><tr data-pos="227"><td>227</td><td class="pn" data-raw="N000000000853" title="Клик — скопировать">N 000000 000853</td><td>	- Лампа накаливания (BULB)</td><td>1</td><td>Крышка багажника; 12V-5W</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2058210089" title="Клик — скопировать">A 205 821 00 89</td><td>Кабельный канал (CABLE DUCT)</td><td>1</td><td>Петля крышки багажника слева</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2058212300" title="Клик — скопировать">A 205 821 23 00</td><td>Кабельный канал (CABLE DUCT)</td><td>1</td><td>Петля крышки багажника слева</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2058210189" title="Клик — скопировать">A 205 821 01 89</td><td>Кабельный канал (CABLE DUCT)</td><td>1</td><td>Петля крышки багажника справа</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2058212400" title="Клик — скопировать">A 205 821 24 00</td><td>Кабельный канал (CABLE DUCT)</td><td>1</td><td>Петля крышки багажника справа</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009914795" title="Клик — скопировать">A 000 991 47 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>1</td><td>Кабельный канал к рычагу петли слева</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009914795" title="Клик — скопировать">A 000 991 47 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>1</td><td>Кабельный канал к рычагу петли справа</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A0028214951" title="Клик — скопировать">A 002 821 49 51</td><td>Переключатель (SWITCH)</td><td>1</td><td>Открывание багажника изнутри</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A2057500089" title="Клик — скопировать">A 205 750 00 89</td><td>Упорный клин (RETAINER WEDGE)</td><td>2</td><td>Снизу слева и справа</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A2187500089" title="Клик — скопировать">A 218 750 00 89</td><td>Упорный клин (RETAINER WEDGE)</td><td>2</td><td>Снизу слева и справа</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2208217251" title="Клик — скопировать">A 220 821 72 51</td><td>Переключатель (SWITCH)</td><td>1</td><td>Дистанционное закрывание крышки багажника с KEYLESS-GO</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2208211479" title="Клик — скопировать">A 220 821 14 79</td><td>Переключатель (SWITCH)</td><td>1</td><td>Дистанционное закрывание крышки багажника с KEYLESS-GO</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2057500189" title="Клик — скопировать">A 205 750 01 89</td><td>Упорный клин (RETAINER WEDGE)</td><td>2</td><td>Сверху слева и справа</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0029981650" title="Клик — скопировать">A 002 998 16 50</td><td>Пробка (STOP PLUG)</td><td>1</td><td>Крышка багажника слева снаружи; 10MM</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0029981650" title="Клик — скопировать">A 002 998 16 50</td><td>Пробка (STOP PLUG)</td><td>1</td><td>Крышка багажника справа снаружи; 10MM</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0029981650" title="Клик — скопировать">A 002 998 16 50</td><td>Пробка (STOP PLUG)</td><td>1</td><td>Крышка багажника снизу слева; 10MM</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0029981650" title="Клик — скопировать">A 002 998 16 50</td><td>Пробка (STOP PLUG)</td><td>1</td><td>Отверстие для стока краски в крышке багажника посередине; 10MM</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2058200042" title="Клик — скопировать">A 205 820 00 42</td><td>Приводн. узел крышки баг. (DRIVE UNIT TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2058202801" title="Клик — скопировать">A 205 820 28 01</td><td>Приводн. узел крышки баг. (DRIVE UNIT TRUNK LID)</td><td>1</td><td>Крышка багажника</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2057570082" title="Клик — скопировать">A 205 757 00 82</td><td>Подпорка (SUPPORT)</td><td>1</td><td>Привод</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2057573200" title="Клик — скопировать">A 205 757 32 00</td><td>Подпорка (SUPPORT)</td><td>1</td><td>Привод</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A6420940785" title="Клик — скопировать">A 642 094 07 85</td><td>Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Привод</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0993170000" title="Клик — скопировать">A 099 317 00 00</td><td>Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Привод</td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A2057500031" title="Клик — скопировать">A 205 750 00 31</td><td>Консоль (CONSOLE)</td><td>1</td><td>Рычаг петли</td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0119908804" title="Клик — скопировать">A 011 990 88 04</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>1</td><td>Крепление консоли; M5X20</td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление консоли; M6</td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление консоли; M6</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2057500131" title="Клик — скопировать">A 205 750 01 31</td><td>Консоль (CONSOLE)</td><td>1</td><td>Рычаг петли</td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Консоль к рычагу петли; M6X12</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 71 · подписано на схемах: 71 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B75015000087.png", "poses": ["10", "20", "50", "60", "70", "80", "100", "110", "130", "150", "155", "170", "190", "200", "220", "225", "227", "240", "260", "280", "290", "300", "350", "360", "400", "420", "440", "460", "470", "480", "500", "520"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

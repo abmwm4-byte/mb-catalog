@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>47 ТОПЛИВНАЯ СИСТЕМА / 030 ПАКЕТ ТОПЛ. НАСОСА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107044">048 BIS 09/85</a> → 030 ПАКЕТ ТОПЛ. НАСОСА</div>
+<h1>030 ПАКЕТ ТОПЛ. НАСОСА</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B47030000043 <span class="hint">(45)</span></button><button data-i="1" class="">B47030000045 <span class="hint">(36)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B47030000043.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0010917101" title="Клик — скопировать">A 001 091 71 01</td><td>Подкачивающий насос</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0020911301" title="Клик — скопировать">A 002 091 13 01</td><td>ТОПЛИВНЫЙ</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0020919701" title="Клик — скопировать">A 002 091 97 01</td><td>Топливный насос</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1230910082" title="Клик — скопировать">A 123 091 00 82</td><td>- втулка</td><td>1</td><td>ABOVE FUEL PUMP</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0000900110" title="Клик — скопировать">A 000 090 01 10</td><td>- Комплект клапана</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N007603012405" title="Клик — скопировать">N 007603 012405</td><td>	- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1239900053" title="Клик — скопировать">A 123 990 00 53</td><td>- гайка</td><td>1</td><td>ТОПЛИВОПРОВОД К ПОДКАЧИВАЮЩЕМУ НАСОСУ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>- Уплотнительное кольцо</td><td>2</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0000927601" title="Клик — скопировать">A 000 092 76 01</td><td>Фильтр</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0024774501" title="Клик — скопировать">A 002 477 45 01</td><td>Топливный фильтр</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1230910182" title="Клик — скопировать">A 123 091 01 82</td><td>- ЭЛ-Т ИЗОЛЯЦИОННЫЙ</td><td>1</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18-AL</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1074700279" title="Клик — скопировать">A 107 470 02 79</td><td>Штуцер</td><td>1</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1074700081" title="Клик — скопировать">A 107 470 00 81</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1164700481" title="Клик — скопировать">A 116 470 04 81</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1234700381" title="Клик — скопировать">A 123 470 03 81</td><td>Держатель</td><td>1</td><td>ТОПЛ. НАСОС И ТОПЛ. ФИЛЬТР</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N007985005165" title="Клик — скопировать">N 007985 005165</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>2</td><td>M5</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1144762026" title="Клик — скопировать">A 114 476 20 26</td><td>ШЛАНГ</td><td>-</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1149971882" title="Клик — скопировать">A 114 997 18 82</td><td>ШЛАНГ</td><td>-</td><td>13.3X3 MM</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N916030000527" title="Клик — скопировать">N 916030 000527</td><td>Шланг</td><td>NB</td><td>140mm; 7.5X3</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг</td><td>NB</td><td>140mm; 7,3 X 3 MM</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0019976990" title="Клик — скопировать">A 001 997 69 90</td><td>Хомут для шланга</td><td>2</td><td>9-13 MM</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N916033012100" title="Клик — скопировать">N 916033 012100</td><td>Хомут</td><td>2</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1234700675" title="Клик — скопировать">A 123 470 06 75</td><td>Шланг</td><td>1</td><td>ТОПЛ. НАСОС К ТОПЛ. ФИЛЬТРУ</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1234702264" title="Клик — скопировать">A 123 470 22 64</td><td>Провод</td><td>1</td><td>FROM PUMP TO FILTER,ACCUMULATOR VALVE</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>2</td><td>ТОПЛИВОПРОВОД НА ТОПЛИВНОМ ФИЛЬТРЕ</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>2</td><td>ТОПЛИВОПРОВОД К ПОДКАЧИВАЮЩЕМУ НАСОСУ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N915036008202" title="Клик — скопировать">N 915036 008202</td><td>Полый болт</td><td>1</td><td>ТОПЛИВОПРОВОД НА ТОПЛИВНОМ ФИЛЬТРЕ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N915036008202" title="Клик — скопировать">N 915036 008202</td><td>Полый болт</td><td>1</td><td>ТОПЛИВОПРОВОД К ПОДКАЧИВАЮЩЕМУ НАСОСУ</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1164780040" title="Клик — скопировать">A 116 478 00 40</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1264780340" title="Клик — скопировать">A 126 478 03 40</td><td>Держатель</td><td>1</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N007976006203" title="Клик — скопировать">N 007976 006203</td><td>Шуруп</td><td>4</td><td>ДЕРЖАТЕЛЬ НА КРОНШТ. ЗАДН. МОСТА; B6,3X13</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1074760136" title="Клик — скопировать">A 107 476 01 36</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1269880011" title="Клик — скопировать">A 126 988 00 11</td><td>Буфер</td><td>3</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1269880011" title="Клик — скопировать">A 126 988 00 11</td><td>Буфер</td><td>1</td><td></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>8</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>8</td><td>M5</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1234700481" title="Клик — скопировать">A 123 470 04 81</td><td>Держатель</td><td>1</td><td>FUEL ACCUMULATOR</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1234700681" title="Клик — скопировать">A 123 470 06 81</td><td>Держатель</td><td>1</td><td>FUEL ACCUMULATOR</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0004760121" title="Клик — скопировать">A 000 476 01 21</td><td>Память</td><td>1</td><td></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A0004760821" title="Клик — скопировать">A 000 476 08 21</td><td>РЕСИВЕР</td><td>1</td><td></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A0004760421" title="Клик — скопировать">A 000 476 04 21</td><td>Память</td><td>1</td><td></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A1169950301" title="Клик — скопировать">A 116 995 03 01</td><td>ХОМУТ</td><td>-</td><td></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A1239950001" title="Клик — скопировать">A 123 995 00 01</td><td>Крепежный хомут</td><td>1</td><td>PRESSURE COMPENSATOR VALVE TO BRACKET</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1164700193" title="Клик — скопировать">A 116 470 01 93</td><td>Клапан</td><td>1</td><td></td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="N007985005175" title="Клик — скопировать">N 007985 005175</td><td>Винт</td><td>1</td><td>M5X16</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="N007985005165" title="Клик — скопировать">N 007985 005165</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>2</td><td>M5</td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A1074700216" title="Клик — скопировать">A 107 470 02 16</td><td>Бак</td><td>1</td><td></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A1074700716" title="Клик — скопировать">A 107 470 07 16</td><td>Бак</td><td>1</td><td></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A1164700216" title="Клик — скопировать">A 116 470 02 16</td><td>Бак</td><td>1</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1264700116" title="Клик — скопировать">A 126 470 01 16</td><td>Компенсационный бачок</td><td>1</td><td></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A1124761226" title="Клик — скопировать">A 112 476 12 26</td><td>Шланг</td><td>NB</td><td>DAMPER CAGE TO PUMP 55mm</td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A1234763026" title="Клик — скопировать">A 123 476 30 26</td><td>Шланг</td><td>NB</td><td>DAMPER CAGE TO PUMP 50mm 75mm; 22X4MM</td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N916002017100" title="Клик — скопировать">N 916002 017100</td><td>Хомут</td><td>2</td><td>DAMPER CAGE TO PUMP</td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>2</td><td>DAMPER CAGE TO PUMP</td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A1164701575" title="Клик — скопировать">A 116 470 15 75</td><td>Шланг</td><td>1</td><td></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1234700875" title="Клик — скопировать">A 123 470 08 75</td><td>Шланг</td><td>1</td><td>FROM TANK FILTER TO DAMPER CAGE</td></tr><tr data-pos="203"><td>203</td><td class="pn" data-raw="N916002017100" title="Клик — скопировать">N 916002 017100</td><td>Хомут</td><td>1</td><td>FROM TANK FILTER TO DAMPER CAGE</td></tr><tr data-pos="203"><td>203</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>1</td><td>FROM TANK FILTER TO DAMPER CAGE</td></tr><tr data-pos="206"><td>206</td><td class="pn" data-raw="A1164702775" title="Клик — скопировать">A 116 470 27 75</td><td>Шланг</td><td>1</td><td>FROM FUEL FILTER TO FUEL ACCUMULATOR</td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="A1079971482" title="Клик — скопировать">A 107 997 14 82</td><td>- ШЛАНГ</td><td>NB</td><td>240 MM</td></tr><tr data-pos="212"><td>212</td><td class="pn" data-raw="A1074763726" title="Клик — скопировать">A 107 476 37 26</td><td>Шланг</td><td>NB</td><td>FROM FUEL ACCUMULATOR TO DAMPER CAGE 340mm 250 MM</td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A1239976382" title="Клик — скопировать">A 123 997 63 82</td><td>ШЛАНГ</td><td>-</td><td></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A1079971482" title="Клик — скопировать">A 107 997 14 82</td><td>ШЛАНГ</td><td>NB</td><td>(ЗАЩИТНЫЙ ШЛАНГ) 280mm 220 MM</td></tr><tr data-pos="218"><td>218</td><td class="pn" data-raw="A1234702275" title="Клик — скопировать">A 123 470 22 75</td><td>Шланг</td><td>1</td><td>FROM ACCUMULATOR TO DAMPER CAGE &amp; VALVE</td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="N916033011100" title="Клик — скопировать">N 916033 011100</td><td>Хомут</td><td>3</td><td>FROM ACCUMULATOR TO DAMPER CAGE &amp; VALVE</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N006797004132" title="Клик — скопировать">N 006797 004132</td><td>Зубчатая шайба</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ; M4</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N006797005132" title="Клик — скопировать">N 006797 005132</td><td>Зубчатая шайба</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ; M5</td></tr><tr data-pos="233"><td>233</td><td class="pn" data-raw="N000934004006" title="Клик — скопировать">N 000934 004006</td><td>Гайка</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ</td></tr><tr data-pos="233"><td>233</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ; M5</td></tr><tr data-pos="242"><td>242</td><td class="pn" data-raw="A1264780137" title="Клик — скопировать">A 126 478 01 37</td><td>Защитная крышка</td><td>1</td><td></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="N007976006203" title="Клик — скопировать">N 007976 006203</td><td>Шуруп</td><td>3</td><td>B6,3X13</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 75 · подписано на схемах: 75 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B47030000043.png", "poses": ["5", "8", "11", "14", "17", "23", "26", "29", "32", "35", "38", "41", "44", "53", "62", "65", "68", "71", "74", "122", "125", "134", "137", "140", "143", "146", "149", "152", "158", "176", "179", "182", "185", "191", "200", "203", "206", "209", "212", "215", "221", "230", "233", "242", "245"]}, {"png": "../../img_png/drawing_B47030000045.png", "poses": ["8", "11", "14", "17", "23", "26", "32", "35", "53", "65", "77", "122", "125", "134", "137", "143", "149", "152", "161", "167", "170", "173", "176", "179", "185", "191", "194", "197", "203", "215", "218", "221", "230", "233", "242", "245"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

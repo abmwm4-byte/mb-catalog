@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>04 Энергоснабжение высоковольтной аккумуляторной батареи / 136 Сервисное обслуживание и объемы ремонтных работ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C244644">C244_FX -/-</a> → 136 Сервисное обслуживание и объемы ремонтных работ</div>
+<h1>136 Сервисное обслуживание и объемы ремонтных работ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">PV000.010.290.059_version_006 <span class="hint">(4)</span></button><button data-i="1" class="">PV000.010.293.620_version_006 <span class="hint">(11)</span></button><button data-i="2" class="">PV000.010.299.725_version_001 <span class="hint">(16)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.010.290.059_version_006.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A5513437200" title="Клик — скопировать">A 551 343 72 00</td><td>Газоотводный канал (GAS VENT DUCT)</td><td>4</td><td>Газоотвод.канал Разрывн.пластина Высоковольтная АКБ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A5513438501" title="Клик — скопировать">A 551 343 85 01</td><td>Газоотводный канал</td><td>4</td><td>Газоотвод.канал Разрывн.пластина Высоковольтная АКБ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A5515840700" title="Клик — скопировать">A 551 584 07 00</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Информационная табличка производителя высоковольтной АКБ</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A7895841058" title="Клик — скопировать">A 789 584 10 58</td><td>Наклейка (ADHESIVE LABEL)</td><td>1</td><td>Информационная табличка утилизации высоковольтной АКБ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0008179006" title="Клик — скопировать">A 000 817 90 06</td><td>Информационная табличка (INFORMATION LABEL)</td><td>3</td><td>Информационная табличка высоковольтной системы сзади - крышка высоковольтной АКБ</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513407903" title="Клик — скопировать">A 551 340 79 03</td><td>Несущая пластина</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513400003" title="Клик — скопировать">A 551 340 00 03</td><td>Несущая пластина</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513402404" title="Клик — скопировать">A 551 340 24 04</td><td>Несущая пластина (CARRIER PLATE)</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513407903" title="Клик — скопировать">A 551 340 79 03</td><td>Несущая пластина</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513402404" title="Клик — скопировать">A 551 340 24 04</td><td>Несущая пластина (CARRIER PLATE)</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513400103" title="Клик — скопировать">A 551 340 01 03</td><td>Несущая пластина</td><td>1</td><td></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A5513402404" title="Клик — скопировать">A 551 340 24 04</td><td>Несущая пластина (CARRIER PLATE)</td><td>1</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A5515400900" title="Клик — скопировать">A 551 540 09 00</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки контроля АКБ - блок управления высоковольтной аккумуляторной батареей</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="N000000009178" title="Клик — скопировать">N 000000 009178</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Болт, жгут электропроводки контроля АКБ - блок управления высоковольтной аккумуляторной батареей</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A5513435002" title="Клик — скопировать">A 551 343 50 02</td><td>Прокладка фланца (FLANGE SEAL)</td><td>1</td><td>Уплотнение/уплотняющая поверхность крышки корпуса высоковольтной аккумуляторной батареи</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A5513435202" title="Клик — скопировать">A 551 343 52 02</td><td>Прокладка фланца (FLANGE SEAL)</td><td>1</td><td>Уплотнение/уплотняющая поверхность крышки корпуса высоковольтной аккумуляторной батареи</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A0009905945" title="Клик — скопировать">A 000 990 59 45</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>36</td><td>Болт, несущая пластина сзади, высоковольтная аккумуляторная батарея; M6X18</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A5515450100" title="Клик — скопировать">A 551 545 01 00</td><td>Разъед. выключатель АКБ (BATTERY DISCONNECT SWITCH)</td><td>1</td><td>Разъед.выключатель АКБ Нижн.часть Высоковольтная АКБ</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A5513438801" title="Клик — скопировать">A 551 343 88 01</td><td>Несущая пластина (CARRIER PLATE)</td><td>1</td><td>Сервисная крышка сзади, корпус высоковольтной аккумуляторной батареи</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A5513432901" title="Клик — скопировать">A 551 343 29 01</td><td>Несущая пластина (CARRIER PLATE)</td><td>1</td><td>Сервисная крышка сзади, корпус высоковольтной аккумуляторной батареи</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A5513435102" title="Клик — скопировать">A 551 343 51 02</td><td>Прокладка фланца (FLANGE SEAL)</td><td>1</td><td>Уплотнение/уплотняющая поверхность сервисной крышки сзади, корпус высоковольтной аккумуляторной батареи</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A5513435302" title="Клик — скопировать">A 551 343 53 02</td><td>Прокладка фланца</td><td>1</td><td>Уплотнение/уплотняющая поверхность сервисной крышки сзади, корпус высоковольтной аккумуляторной батареи</td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0009905945" title="Клик — скопировать">A 000 990 59 45</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>10</td><td>Болт сервисной крышки сзади, корпус высоковольтной аккумуляторной батареи; M6X18</td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0009907745" title="Клик — скопировать">A 000 990 77 45</td><td>Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Винтовая заглушка, несущая пластина сзади, высоковольтная аккумуляторная батарея</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009907745" title="Клик — скопировать">A 000 990 77 45</td><td>Резьбовая пробка (SCREW PLUG)</td><td>4</td><td>Винты компенсации давления Несущая пластина/сервисная крышка сзади, высоковольтная аккумуляторная батарея</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009012233" title="Клик — скопировать">A 000 901 22 33</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009012233" title="Клик — скопировать">A 000 901 22 33</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009019634" title="Клик — скопировать">A 000 901 96 34</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009019734" title="Клик — скопировать">A 000 901 97 34</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009019734" title="Клик — скопировать">A 000 901 97 34</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009012536" title="Клик — скопировать">A 000 901 25 36</td><td>Номер блока управления (CU, IDENTIFICATION NUMBER)</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010228" title="Клик — скопировать">A 000 901 02 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010228" title="Клик — скопировать">A 000 901 02 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010328" title="Клик — скопировать">A 000 901 03 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010328" title="Клик — скопировать">A 000 901 03 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010228" title="Клик — скопировать">A 000 901 02 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010328" title="Клик — скопировать">A 000 901 03 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010428" title="Клик — скопировать">A 000 901 04 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009010528" title="Клик — скопировать">A 000 901 05 28</td><td>Номер блока управления</td><td>1</td><td>Зарядное устройство высоковольтной АКБ</td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0003417806" title="Клик — скопировать">A 000 341 78 06</td><td>- Прокладка корпуса (HOUSING SEAL)</td><td>1</td><td>Блок управления к АКБ</td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0003417806" title="Клик — скопировать">A 000 341 78 06</td><td>- Прокладка корпуса (HOUSING SEAL)</td><td>1</td><td>Блок управления к АКБ</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009908141" title="Клик — скопировать">A 000 990 81 41</td><td>- Шпилька Torx External (STUD BOLT W HEXAL. DRIVE)</td><td>1</td><td>M6X34</td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0009908241" title="Клик — скопировать">A 000 990 82 41</td><td>- Шпилька Torx External (STUD BOLT W HEXAL. DRIVE)</td><td>2</td><td>M8X44</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0009908341" title="Клик — скопировать">A 000 990 83 41</td><td>- Шпилька Torx External (STUD BOLT W HEXAL. DRIVE)</td><td>1</td><td>M8X66</td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="N000000004660" title="Клик — скопировать">N 000000 004660</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Блок управления к АКБ</td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0009908535" title="Клик — скопировать">A 000 990 85 35</td><td>Винт Torx с полукр. гол. (PAN HEAD SCREW)</td><td>2</td><td>Высоковольтный контакт Устройство управления к высоковольтной АКБ; M6X20</td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0003417906" title="Клик — скопировать">A 000 341 79 06</td><td>Корпус штекера (PLUG HOUSING)</td><td>1</td><td>Высоковольтный Interlock</td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0003417906" title="Клик — скопировать">A 000 341 79 06</td><td>Корпус штекера (PLUG HOUSING)</td><td>1</td><td>Высоковольтный Interlock</td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0003417906" title="Клик — скопировать">A 000 341 79 06</td><td>Корпус штекера (PLUG HOUSING)</td><td>1</td><td>Высоковольтный Interlock</td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0003418006" title="Клик — скопировать">A 000 341 80 06</td><td>Крышка корпуса (HOUSING COVER)</td><td>1</td><td></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0003418006" title="Клик — скопировать">A 000 341 80 06</td><td>Крышка корпуса (HOUSING COVER)</td><td>1</td><td></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="N910105005000" title="Клик — скопировать">N 910105 005000</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>Крышка корпуса к блоку управления; M5X12</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0009909343" title="Клик — скопировать">A 000 990 93 43</td><td>Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>4</td><td>Блок управления к трубчатой распорке; M8X45</td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="N000000008303" title="Клик — скопировать">N 000000 008303</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>Блок управления к батарее снаружи; M8</td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="N000000008303" title="Клик — скопировать">N 000000 008303</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Блок управления к батарее центр; M8</td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A5406103002" title="Клик — скопировать">A 540 610 30 02</td><td>Распорка трубчатая (TUBULAR STRUT)</td><td>1</td><td></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A5406109500" title="Клик — скопировать">A 540 610 95 00</td><td>Распорка трубчатая (TUBULAR STRUT)</td><td>1</td><td></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A1746103302" title="Клик — скопировать">A 174 610 33 02</td><td>Распорка трубчатая (TUBULAR STRUT)</td><td>1</td><td></td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="N913024008100" title="Клик — скопировать">N 913024 008100</td><td>- Гайка заклепочная (RIVET NUT)</td><td>4</td><td>8X16-ST</td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A0009906544" title="Клик — скопировать">A 000 990 65 44</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>2</td><td>Трубчатая распорка к батарее; M8X25</td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A0009902649" title="Клик — скопировать">A 000 990 26 49</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>4</td><td>Трубчатая распорка к батарее; M8X55</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 61 · подписано на схемах: 61 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.290.059_version_006.png", "poses": ["10", "80", "90", "100"]}, {"png": "../../img_png/drawing_PV000.010.293.620_version_006.png", "poses": ["190", "260", "270", "280", "290", "300", "310", "320", "330", "340", "350"]}, {"png": "../../img_png/drawing_PV000.010.299.725_version_001.png", "poses": ["400", "410", "420", "430", "440", "450", "460", "470", "480", "490", "500", "510", "550", "560", "570", "580"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

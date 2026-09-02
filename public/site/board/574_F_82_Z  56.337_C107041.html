@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>82 ЭЛЕКТРООБОРУДОВАНИЕ / Z  56.337 AIRBAG (FOR TYPES 124,201 ELECTRICAL PARTS,SEE STANDARD VERSION)</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → Z  56.337 AIRBAG (FOR TYPES 124,201 ELECTRICAL PARTS,SEE STANDARD VERSION)</div>
+<h1>Z  56.337 AIRBAG (FOR TYPES 124,201 ELECTRICAL PARTS,SEE STANDARD VERSION)</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">S05633700003 <span class="hint">(9)</span></button><button data-i="1" class="">S05633700001 <span class="hint">(0)</span></button><button data-i="2" class="">S05633700002 <span class="hint">(8)</span></button><button data-i="3" class="">S05633700004 <span class="hint">(5)</span></button><button data-i="4" class="">S05633700005 <span class="hint">(6)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S05633700003.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="106"><td>106</td><td class="pn" data-raw="A1076100536" title="Клик — скопировать">A 107 610 05 36</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>(ДАТЧИК)</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1268201410" title="Клик — скопировать">A 126 820 14 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0018208910" title="Клик — скопировать">A 001 820 89 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1248205110" title="Клик — скопировать">A 124 820 51 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0008206826" title="Клик — скопировать">A 000 820 68 26</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="151"><td>151</td><td class="pn" data-raw="A1245405735" title="Клик — скопировать">A 124 540 57 35</td><td>Адаптерный кабель</td><td>1</td><td>TO 004 820 11 10</td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0115452028" title="Клик — скопировать">A 011 545 20 28</td><td>- КОРПУС ШТЕК. ГНЕЗДА</td><td>1</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>9</td><td>2,5 MM; 0.35-2.5 MM2 RK2.5</td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0009842029" title="Клик — скопировать">A 000 984 20 29</td><td>болт</td><td>2</td><td>ДАТЧИК НА ДЕРЖАТЕЛЕ</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A0008210262" title="Клик — скопировать">A 000 821 02 62</td><td>Конденсатор</td><td>1</td><td>ENERGY RESERVE</td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A0029941045" title="Клик — скопировать">A 002 994 10 45</td><td>предохранитель</td><td>2</td><td>CONDENSER TO INTERIOR PLATE,LEFT OUTSIDE</td></tr><tr data-pos="189"><td>189</td><td class="pn" data-raw="A0949903508" title="Клик — скопировать">A 094 990 35 08</td><td>Шуруп</td><td>2</td><td>CONDENSER TO STAY</td></tr><tr data-pos="196"><td>196</td><td class="pn" data-raw="A0008200297" title="Клик — скопировать">A 000 820 02 97</td><td>ЭЛЕКТРОУСТАНОВКА</td><td>1</td><td>(ЭЛЕКТРОТРАНСФОРМАТОР)</td></tr><tr data-pos="216"><td>216</td><td class="pn" data-raw="N914128004200" title="Клик — скопировать">N 914128 004200</td><td>Шуруп</td><td>2</td><td>ЭЛЕКТРОТРАНСФОРМАТОР НА КРОНШТЕЙНЕ; 4.8X13</td></tr><tr data-pos="229"><td>229</td><td class="pn" data-raw="A0009838910" title="Клик — скопировать">A 000 983 89 10</td><td>Войлочная лента</td><td>1</td><td>ТРАНСФОРМАТОР; 3X70 MM</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078601486" title="Клик — скопировать">A 107 860 14 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078602586" title="Клик — скопировать">A 107 860 25 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1238680128" title="Клик — скопировать">A 123 868 01 28</td><td>ПРОСТАВКА</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1078603469" title="Клик — скопировать">A 107 860 34 69</td><td>ЗАМКОВЫЙ БЛОК</td><td>2</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05633700003.png", "poses": ["106", "149", "166", "173", "189", "196", "229", "266", "300"]}, {"png": "../../img_png/drawing_S05633700001.png", "poses": []}, {"png": "../../img_png/drawing_S05633700002.png", "poses": ["149", "151", "153", "155", "166", "174", "196", "295"]}, {"png": "../../img_png/drawing_S05633700004.png", "poses": ["149", "166", "173", "196", "295"]}, {"png": "../../img_png/drawing_S05633700005.png", "poses": ["149", "166", "173", "189", "196", "216"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

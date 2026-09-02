@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>54 ЭЛЕКТР. ОБОРУД. И КОНТР. ПРИБОРЫ / 030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">048 BIS 09/85</a> → 030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</div>
+<h1>030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B54030000114.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1235400101" title="Клик — скопировать">A 123 540 01 01</td><td>АКБ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1405400001" title="Клик — скопировать">A 140 540 00 01</td><td>АКБ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0035417501" title="Клик — скопировать">A 003 541 75 01</td><td>аккумуляторная батарея</td><td>1</td><td>К-Т ДЕТАЛЕЙ 66 AH; 12V/74AH</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0015417901" title="Клик — скопировать">A 001 541 79 01</td><td>- аккумуляторная батарея</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0035417501" title="Клик — скопировать">A 003 541 75 01</td><td>- аккумуляторная батарея</td><td>1</td><td>66 AH; 12V/74AH</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0009890515" title="Клик — скопировать">A 000 989 05 15</td><td>- КОМПЛ. КИСЛОТЫ АККУМУЛ.</td><td>-</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0009891315" title="Клик — скопировать">A 000 989 13 15</td><td>- Электролит (BATTERY ACID)</td><td>1</td><td>TO 001 541 79 01</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0005462335" title="Клик — скопировать">A 000 546 23 35</td><td>Крышка клеммы</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0015460835" title="Клик — скопировать">A 001 546 08 35</td><td>Защитный колпачок (PROTECTIVE CAP)</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1075410140" title="Клик — скопировать">A 107 541 01 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ПРОВОД АКБ НА КОРОБЕ АКБ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009902992" title="Клик — скопировать">A 000 990 29 92</td><td>ЗАКЛЕПКА</td><td>-</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019901692" title="Клик — скопировать">A 001 990 16 92</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>КРОНШТЕЙН НА РАМКЕ АККУМУЛЯТОРНОЙ БАТАРЕИ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1075403930" title="Клик — скопировать">A 107 540 39 30</td><td>ПЛЮС. ПРОВОД</td><td>1</td><td>АКБ К СТАРТЕРУ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1075404030" title="Клик — скопировать">A 107 540 40 30</td><td>ПЛЮС. ПРОВОД</td><td>1</td><td>АКБ К СТАРТЕРУ</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0005460937" title="Клик — скопировать">A 000 546 09 37</td><td>КАБ. ВТУЛКА (GROMMET)</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0005460937" title="Клик — скопировать">A 000 546 09 37</td><td>КАБ. ВТУЛКА (GROMMET)</td><td>2</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0005460937" title="Клик — скопировать">A 000 546 09 37</td><td>КАБ. ВТУЛКА (GROMMET)</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0005461937" title="Клик — скопировать">A 000 546 19 37</td><td>КАБ. ВТУЛКА</td><td>1</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0001590540" title="Клик — скопировать">A 000 159 05 40</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0005460830" title="Клик — скопировать">A 000 546 08 30</td><td>- Изоляционный шланг (INSULATING HOSE)</td><td>1</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1115460071" title="Клик — скопировать">A 111 546 00 71</td><td>болт (SCREW)</td><td>1</td><td>ПЛЮСОВОЙ ПРОВОД НА АКБ</td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1115460235" title="Клик — скопировать">A 111 546 02 35</td><td>Защитный колпачок</td><td>1</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1115460035" title="Клик — скопировать">A 111 546 00 35</td><td>КОЛПАЧОК</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1165460135" title="Клик — скопировать">A 116 546 01 35</td><td>Защитный колпачок (PROTECTIVE CAP)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30</td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0949904808" title="Клик — скопировать">A 094 990 48 08</td><td>Винт (SCREW)</td><td>1</td><td>CABLE TO STARTING MOTOR,TERMINAL 15A; M5X6</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>1</td><td>CABLE TO STARTING MOTOR,TERMINAL 15A</td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="N007985004123" title="Клик — скопировать">N 007985 004123</td><td>Винт</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 50; M4X6</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0001510011" title="Клик — скопировать">A 000 151 00 11</td><td>КРЕПЕЖНАЯ СКОБА</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 50</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="N000933006183" title="Клик — скопировать">N 000933 006183</td><td>БОЛТ</td><td>-</td><td></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="N304017006016" title="Клик — скопировать">N 304017 006016</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>ДЕРЖАТЕЛЬ НА КОЛЕСН. АРКЕ; M6X16</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="N000125006421" title="Клик — скопировать">N 000125 006421</td><td>Шайба</td><td>1</td><td>ДЕРЖАТЕЛЬ НА КОЛЕСН. АРКЕ</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="N000125006449" title="Клик — скопировать">N 000125 006449</td><td>Шайба (WASHER)</td><td>1</td><td>ДЕРЖАТЕЛЬ НА КОЛЕСН. АРКЕ</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>1</td><td>ДЕРЖАТЕЛЬ НА КОЛЕСН. АРКЕ</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>ДЕРЖАТЕЛЬ НА КОЛЕСН. АРКЕ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1075410505" title="Клик — скопировать">A 107 541 05 05</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1075410805" title="Клик — скопировать">A 107 541 08 05</td><td>Защитный экран (PROTECTIVE METAL SHEET)</td><td>1</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1075410605" title="Клик — скопировать">A 107 541 06 05</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N007976004212" title="Клик — скопировать">N 007976 004212</td><td>Шуруп (TAPPING SCREW)</td><td>1</td><td>ЗАЩИТН. ЩИТОК НА ЛОНЖЕРОНЕ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0039882778" title="Клик — скопировать">A 003 988 27 78</td><td>Скоба (CLAMP)</td><td>1</td><td>ЗАЩИТН. ЩИТОК НА ЛОНЖЕРОНЕ</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1265400531" title="Клик — скопировать">A 126 540 05 31</td><td>Провод (GROUND LINE)</td><td>1</td><td>ОТРИЦАТ. ВЫВОД АКБ К МАССЕ</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="N000933008131" title="Клик — скопировать">N 000933 008131</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="N304017008016" title="Клик — скопировать">N 304017 008016</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>2</td><td>ПРОВОД МАССЫ НА ЛОНЖЕРОНЕ РАМЫ; M8X16</td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>2</td><td>ПРОВОД МАССЫ НА ЛОНЖЕРОНЕ РАМЫ</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A1075400931" title="Клик — скопировать">A 107 540 09 31</td><td>ПРОВОД МАССЫ</td><td>-</td><td></td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A1155400031" title="Клик — скопировать">A 115 540 00 31</td><td>Провод массы (GROUND LINE)</td><td>1</td><td>ДВИГАТЕЛЬ К РАМЕ</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="A1075405008" title="Клик — скопировать">A 107 540 50 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ГЕНЕРАТОР К СОЕДИНИТ.ПРОВОДКИ</td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="A0055450228" title="Клик — скопировать">A 005 545 02 28</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>ALTERNATOR,3-POLE; 3-PIN</td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A0005467840" title="Клик — скопировать">A 000 546 78 40</td><td>- Штекерная втулка (RECEPTACLE)</td><td>2</td><td>TO 005 545 02 28</td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0005467940" title="Клик — скопировать">A 000 546 79 40</td><td>- Штекерная втулка (RECEPTACLE)</td><td>1</td><td>TO 005 545 02 28; 1.0-2.5 MM2 FF6.3</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 51 · подписано на схемах: 51 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54030000114.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "62", "65", "68", "80", "92", "95", "98", "101", "104", "107", "110", "113", "116", "119", "122", "125", "128", "131", "137", "140", "155", "158", "161", "173", "176", "179", "182", "185"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

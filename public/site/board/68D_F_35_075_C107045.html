@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>35 ЗАДНИЙ МОСТ / 075 ПОДВЕСКА ЗАДНЕГО МОСТА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">68D BIS 09/85 Действительно для: CA, US</a> → 075 ПОДВЕСКА ЗАДНЕГО МОСТА</div>
+<h1>075 ПОДВЕСКА ЗАДНЕГО МОСТА</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B35075000028.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1263501805" title="Клик — скопировать">A 126 350 18 05</td><td>РЫЧАГ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1263503205" title="Клик — скопировать">A 126 350 32 05</td><td>Рычаг подвески (HANDLE BAR)</td><td>1</td><td>LEFT TRANSVERSE CONTROL ARM, WITH WHEEL BEARING AND COVER PLATE</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1263501905" title="Клик — скопировать">A 126 350 19 05</td><td>РЫЧАГ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1263503305" title="Клик — скопировать">A 126 350 33 05</td><td>Рычаг подвески (HANDLE BAR)</td><td>1</td><td>RIGHT TRANSVERSE CONTROL ARM, WITH WHEEL BEARING AND COVER PLATE</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1269970135" title="Клик — скопировать">A 126 997 01 35</td><td>- Пробка (GROMMET)</td><td>2</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1263520165" title="Клик — скопировать">A 126 352 01 65</td><td>- Резиновая опора (RUBBER BUSHING)</td><td>4</td><td>ДИАГОН. РЫЧАГ НА КРОНШТ. МОСТА</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1233520765" title="Клик — скопировать">A 123 352 07 65</td><td>- Резиновая опора (RUBBER BUSHING)</td><td>4</td><td>РЕМОНТ. ИСПОЛНЕНИЕ С ЭКСЦЕНТР. ВНУТР. ВТУЛКОЙ</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1154203544" title="Клик — скопировать">A 115 420 35 44</td><td>- Щиток (COVER SHEET)</td><td>1</td><td>REAR WHEEL BRAKE,LEFT</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1154203644" title="Клик — скопировать">A 115 420 36 44</td><td>- Щиток (COVER SHEET)</td><td>1</td><td>REAR WHEEL BRAKE,RIGHT</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N914004006002" title="Клик — скопировать">N 914004 006002</td><td>- Винт с неспадающей шайбой</td><td>4</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1154270396" title="Клик — скопировать">A 115 427 03 96</td><td>- Манжета (BOOT)</td><td>2</td><td>COVER PLATE TO TRANSVERSE CONTROL ARM</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1234230006" title="Клик — скопировать">A 123 423 00 06</td><td>- Кронштейн торм. механизма (BRAKE CARRIER)</td><td>2</td><td>ТОРМОЗН. КОЛОДКА</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1234230106" title="Клик — скопировать">A 123 423 01 06</td><td>- КРОНШТЕЙН</td><td>2</td><td>ТОРМОЗН. КОЛОДКА</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1234230206" title="Клик — скопировать">A 123 423 02 06</td><td>- КРОНШТЕЙН</td><td>2</td><td>ТОРМОЗН. КОЛОДКА</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1239900312" title="Клик — скопировать">A 123 990 03 12</td><td>- болт (SCREW)</td><td>4</td><td>BRAKE SHOE SUPPORT TO TRANSVERSE CONTROL ARM</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1159970681" title="Клик — скопировать">A 115 997 06 81</td><td>- втулка (GROMMET)</td><td>2</td><td>23 MM</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1263501146" title="Клик — скопировать">A 126 350 11 46</td><td>- ФЛАНЕЦ</td><td>-</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1263501546" title="Клик — скопировать">A 126 350 15 46</td><td>- Комплект фланца (PARTS KIT, FLANGE)</td><td>1</td><td>К-Т ЛЕВЫХ ДЕТАЛЕЙ</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1263501246" title="Клик — скопировать">A 126 350 12 46</td><td>- ФЛАНЕЦ</td><td>-</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1263501646" title="Клик — скопировать">A 126 350 16 46</td><td>- Комплект фланца (PARTS KIT, FLANGE)</td><td>1</td><td>К-Т ПРАВЫХ ДЕТАЛЕЙ</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1159910560" title="Клик — скопировать">A 115 991 05 60</td><td>	- Цилиндрический шрифт (CYLINDER PIN)</td><td>2</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0009808202" title="Клик — скопировать">A 000 980 82 02</td><td>- Кон. роликоподшипник</td><td>2</td><td>ПОДШИПНИК КОЛЕСА</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009804202" title="Клик — скопировать">A 000 980 42 02</td><td>- Шарикоподшипник (BALL BEARING)</td><td>2</td><td>ПОДШИПНИК КОЛЕСА</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1153571262" title="Клик — скопировать">A 115 357 12 62</td><td>- Прижимная шайба (PRESSURE DISK)</td><td>2</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0059971646" title="Клик — скопировать">A 005 997 16 46</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>2</td><td>СНАРУЖИ</td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A0079973547" title="Клик — скопировать">A 007 997 35 47</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>2</td><td>ВНУТР.</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1153530142" title="Клик — скопировать">A 115 353 01 42</td><td>- Проставочная втулка (SPACER BUSH)</td><td>2</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1153570026" title="Клик — скопировать">A 115 357 00 26</td><td>- Шлицевая гайка (SLOTTED NUT)</td><td>2</td><td></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1233500068" title="Клик — скопировать">A 123 350 00 68</td><td>Ремк-т полуоси зад. моста (REPAIR KIT, RR AXLE SHAFT)</td><td>2</td><td>ОПОРА ЗАДН. КОЛЕСА</td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1153520576" title="Клик — скопировать">A 115 352 05 76</td><td>Диск (WINDOW)</td><td>4</td><td>КОРПУС МОСТА НА КРОНШТЕЙНЕ ЗАД. МОСТА</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A0949907910" title="Клик — скопировать">A 094 990 79 10</td><td>Гайка (NUT)</td><td>4</td><td>КОРПУС МОСТА НА КРОНШТЕЙНЕ ЗАД. МОСТА</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000960016164" title="Клик — скопировать">N 000960 016164</td><td>Винт</td><td>-</td><td>M16X1.5X85-8.8</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000960016250" title="Клик — скопировать">N 000960 016250</td><td>Винт (SCREW)</td><td>4</td><td>ДИАГОН. РЫЧАГ НА КРОНШТ. МОСТА</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000936016012" title="Клик — скопировать">N 000936 016012</td><td>ГАЙКА</td><td>4</td><td>ДИАГОН. РЫЧАГ НА КРОНШТ. МОСТА</td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="N912004016101" title="Клик — скопировать">N 912004 016101</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>4</td><td>ДИАГОН. РЫЧАГ НА КРОНШТ. МОСТА</td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1239903201" title="Клик — скопировать">A 123 990 32 01</td><td>болт (SCREW)</td><td>2</td><td>ПОЛУОСЬ НА ФЛАНЦЕ ПОЛУОСИ ЗАДН. МОСТА M 8 X 85</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1153570675" title="Клик — скопировать">A 115 357 06 75</td><td>Диск (WINDOW)</td><td>2</td><td>ПОЛУОСЬ НА ФЛАНЦЕ ПОЛУОСИ ЗАДН. МОСТА</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1263570053" title="Клик — скопировать">A 126 357 00 53</td><td>втулка (SLEEVE)</td><td>2</td><td>ПОЛУОСЬ НА ФЛАНЦЕ ПОЛУОСИ ЗАДН. МОСТА 67 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1153507305" title="Клик — скопировать">A 115 350 73 05</td><td>- РЫЧАГ</td><td>-</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1153506905" title="Клик — скопировать">A 115 350 69 05</td><td>- РЫЧАГ</td><td>-</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1155860235" title="Клик — скопировать">A 115 586 02 35</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 41 · подписано на схемах: 38 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B35075000028.png", "poses": ["5", "14", "17", "47", "56", "59", "65", "68", "98", "101", "104", "107", "110", "113", "116", "119", "122", "125", "128", "131", "134", "137", "140", "143", "146", "149", "152"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

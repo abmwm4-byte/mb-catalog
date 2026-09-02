@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>27 722.3 АКП DB / 045 КОРПУС КП, ВАКУУМН. ЭЛЕМЕНТ, МАГНИТ.    КЛАПАН, ТЯГА УПРАВЛ. ДАВЛ.</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">575 AB 09/85 Действительно для: CA, US</a> → 045 КОРПУС КП, ВАКУУМН. ЭЛЕМЕНТ, МАГНИТ.    КЛАПАН, ТЯГА УПРАВЛ. ДАВЛ.</div>
+<h1>045 КОРПУС КП, ВАКУУМН. ЭЛЕМЕНТ, МАГНИТ.    КЛАПАН, ТЯГА УПРАВЛ. ДАВЛ.</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B27045000007 <span class="hint">(37)</span></button><button data-i="1" class="">B27045000012 <span class="hint">(6)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B27045000007.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1072704711" title="Клик — скопировать">A 107 270 47 11</td><td>- КОРПУС КП</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1072705711" title="Клик — скопировать">A 107 270 57 11</td><td>- КОРПУС КП</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1072706111" title="Клик — скопировать">A 107 270 61 11</td><td>- КОРПУС КП</td><td>1</td><td>БЕЗ ФЛАНЦА K2</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1269910001" title="Клик — скопировать">A 126 991 00 01</td><td>	- Палец</td><td>1</td><td>СТОПОРНАЯ СКОБА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N000007012219" title="Клик — скопировать">N 000007 012219</td><td>	- Цилиндрический штифт</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0069970147" title="Клик — скопировать">A 006 997 01 47</td><td>	- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0099974847" title="Клик — скопировать">A 009 997 48 47</td><td>	- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1262770350" title="Клик — скопировать">A 126 277 03 50</td><td>	- ВТУЛКА</td><td>1</td><td>ЛЕНТА ТОРМОЗНАЯ B 2</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1262770850" title="Клик — скопировать">A 126 277 08 50</td><td>	- втулка</td><td>1</td><td>ЛЕНТА ТОРМОЗНАЯ B 2</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0069977347" title="Клик — скопировать">A 006 997 73 47</td><td>	- Уплотнительное кольцо</td><td>1</td><td>ЛЕНТА ТОРМОЗНАЯ B 2</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N005401310000" title="Клик — скопировать">N 005401 310000</td><td>	- Шар</td><td>1</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000933006049" title="Клик — скопировать">N 000933 006049</td><td>- Винт</td><td>5</td><td>ФЛАНЕЦ НА КОРПУСЕ КП</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000125006421" title="Клик — скопировать">N 000125 006421</td><td>- Шайба</td><td>5</td><td>ФЛАНЕЦ НА КОРПУСЕ КП</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1159970630" title="Клик — скопировать">A 115 997 06 30</td><td>- Резьбовая пробка</td><td>4</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N007603008105" title="Клик — скопировать">N 007603 008105</td><td>- Уплотнительное кольцо</td><td>4</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1262701050" title="Клик — скопировать">A 126 270 10 50</td><td>- втулка</td><td>1</td><td>(ДРОССЕЛЬН. ТЕМПЕРАТУР. ВТУЛКА) RED</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1262770084" title="Клик — скопировать">A 126 277 00 84</td><td>- ВКЛАДКА</td><td>1</td><td></td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1262770042" title="Клик — скопировать">A 126 277 00 42</td><td>- Маслоотражатель</td><td>-</td><td></td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1402770042" title="Клик — скопировать">A 140 277 00 42</td><td>- Маслоотражатель</td><td>1</td><td>КАРТЕР КП</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1262700589" title="Клик — скопировать">A 126 270 05 89</td><td>- Клапан</td><td>1</td><td>ВТОРИЧН. НАСОС B 2</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1262702579" title="Клик — скопировать">A 126 270 25 79</td><td>- КАМЕРА ВАКУУМНАЯ</td><td>1</td><td>RED</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1262770440" title="Клик — скопировать">A 126 277 04 40</td><td>	- Держатель</td><td>1</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1262770081" title="Клик — скопировать">A 126 277 00 81</td><td>	- Колпачок</td><td>1</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0109971548" title="Клик — скопировать">A 010 997 15 48</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0149971148" title="Клик — скопировать">A 014 997 11 48</td><td>	- Кольцевая прокладка</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1262772075" title="Клик — скопировать">A 126 277 20 75</td><td>- ШТИФТ</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1262779375" title="Клик — скопировать">A 126 277 93 75</td><td>- Штифт</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="72"><td>72</td><td class="pn" data-raw="A1262709079" title="Клик — скопировать">A 126 270 90 79</td><td>- Комплект вакуумной камеры</td><td>1</td><td>К-Т ДЕТАЛЕЙ RED</td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A0139972348" title="Клик — скопировать">A 013 997 23 48</td><td>	- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1262777540" title="Клик — скопировать">A 126 277 75 40</td><td>	- Держатель</td><td>1</td><td></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1269870745" title="Клик — скопировать">A 126 987 07 45</td><td>	- Колпачок</td><td>1</td><td></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A0149971148" title="Клик — скопировать">A 014 997 11 48</td><td>	- Кольцевая прокладка</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1262778675" title="Клик — скопировать">A 126 277 86 75</td><td>	- Нажимной штифт</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A1262772132" title="Клик — скопировать">A 126 277 21 32</td><td>- Поршень</td><td>1</td><td>МОДУЛИРУЮЩЕЕ ДАВЛЕНИЕ</td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1262770540" title="Клик — скопировать">A 126 277 05 40</td><td>- Держатель</td><td>1</td><td>КАМЕРА ВАКУУМНАЯ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N914020006000" title="Клик — скопировать">N 914020 006000</td><td>- Винт с неспадающей шайбой</td><td>2</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0003042390" title="Клик — скопировать">A 000 304 23 90</td><td>- ПЕРЕКЛ.МАГНИТ</td><td>1</td><td>(МАГНИТ. КАТУШКА)</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0003042790" title="Клик — скопировать">A 000 304 27 90</td><td>- Катушка</td><td>1</td><td>(МАГНИТ. КАТУШКА)</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0003042290" title="Клик — скопировать">A 000 304 22 90</td><td>- ПЕРЕКЛ.МАГНИТ</td><td>1</td><td>(РАМА МАГНИТА)</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0003042890" title="Клик — скопировать">A 000 304 28 90</td><td>- ПЕРЕКЛ.МАГНИТ</td><td>1</td><td>(РАМА МАГНИТА)</td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0089973148" title="Клик — скопировать">A 008 997 31 48</td><td>- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A0089973048" title="Клик — скопировать">A 008 997 30 48</td><td>- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0019973548" title="Клик — скопировать">A 001 997 35 48</td><td>- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1153040160" title="Клик — скопировать">A 115 304 01 60</td><td>- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="A1262700182" title="Клик — скопировать">A 126 270 01 82</td><td>- Воздушный клапан</td><td>1</td><td></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A0059977848" title="Клик — скопировать">A 005 997 78 48</td><td>	- Уплотнительное кольцо</td><td>1</td><td>TO 126 270 01 82</td></tr><tr data-pos="201"><td>201</td><td class="pn" data-raw="A0119972248" title="Клик — скопировать">A 011 997 22 48</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td></tr><tr data-pos="201"><td>201</td><td class="pn" data-raw="A0169970448" title="Клик — скопировать">A 016 997 04 48</td><td>- Кольцевая прокладка</td><td>1</td><td>ТРОСОВЫЙ ПРИВОД</td></tr><tr data-pos="204"><td>204</td><td class="pn" data-raw="A1263002930" title="Клик — скопировать">A 126 300 29 30</td><td>- Трос</td><td>1</td><td>УПРАВЛ. ДАВЛЕНИЕ</td></tr><tr data-pos="216"><td>216</td><td class="pn" data-raw="N912001012000" title="Клик — скопировать">N 912001 012000</td><td>- Механический фиксатор</td><td>1</td><td>ТРОСОВЫЙ ПРИВОД; 12MM</td></tr><tr data-pos="219"><td>219</td><td class="pn" data-raw="A1262780274" title="Клик — скопировать">A 126 278 02 74</td><td>- Палец</td><td>1</td><td>РЫЧАГ УПРАВЛ. ДАВЛЕН.</td></tr><tr data-pos="222"><td>222</td><td class="pn" data-raw="A0059977748" title="Клик — скопировать">A 005 997 77 48</td><td>- Уплотнительное кольцо</td><td>-</td><td></td></tr><tr data-pos="222"><td>222</td><td class="pn" data-raw="A0179977348" title="Клик — скопировать">A 017 997 73 48</td><td>- Кольцевая прокладка</td><td>1</td><td></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A1262700459" title="Клик — скопировать">A 126 270 04 59</td><td>- Рычаг</td><td>-</td><td></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A1242700259" title="Клик — скопировать">A 124 270 02 59</td><td>- Рычаг</td><td>1</td><td>УПРАВЛ. ДАВЛЕНИЕ</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 55 · подписано на схемах: 55 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B27045000007.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "44", "47", "50", "53", "54", "56", "59", "62", "65", "68", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "83", "86", "89", "92", "95", "98", "179", "182"]}, {"png": "../../img_png/drawing_B27045000012.png", "poses": ["201", "204", "216", "219", "222", "225"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

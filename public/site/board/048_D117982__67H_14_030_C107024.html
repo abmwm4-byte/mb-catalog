@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>14 ВПУСКНОЙ И ВЫПУСКНОЙ КОЛЛЕКТОР / 030 ВПУСКНОЙ КОЛЛЕКТОР</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107024">048 BIS 09/85</a> → 030 ВПУСКНОЙ КОЛЛЕКТОР</div>
+<h1>030 ВПУСКНОЙ КОЛЛЕКТОР</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B14030000097 <span class="hint">(36)</span></button><button data-i="1" class="">B14030000101 <span class="hint">(12)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B14030000097.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1161402501" title="Клик — скопировать">A 116 140 25 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>НИЖНЯЯ ДЕТАЛЬ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171401901" title="Клик — скопировать">A 117 140 19 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171402201" title="Клик — скопировать">A 117 140 22 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>НИЖНЯЯ ДЕТАЛЬ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N000443032003" title="Клик — скопировать">N 000443 032003</td><td>- Запорная крышка</td><td>2</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1171400501" title="Клик — скопировать">A 117 140 05 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1171402001" title="Клик — скопировать">A 117 140 20 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ВЕРХ.ЧАСТЬ</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1171402101" title="Клик — скопировать">A 117 140 21 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1171402401" title="Клик — скопировать">A 117 140 24 01</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ВЕРХ.ЧАСТЬ</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N000443014001" title="Клик — скопировать">N 000443 014001</td><td>- Запорная крышка</td><td>NB</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1169970115" title="Клик — скопировать">A 116 997 01 15</td><td>- РЕЗЬБ. ПАТРОН</td><td>1</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N915006013000" title="Клик — скопировать">N 915006 013000</td><td>- ШТУЦЕР ДВОЙНОЙ</td><td>1</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N915013013002" title="Клик — скопировать">N 915013 013002</td><td>- Штуцер</td><td>NB</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N915006013003" title="Клик — скопировать">N 915006 013003</td><td>- ШТУЦЕР ДВОЙНОЙ</td><td>1</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="N007603018101" title="Клик — скопировать">N 007603 018101</td><td>- Уплотнительное кольцо</td><td>NB</td><td>A18X22-CU</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0949909507" title="Клик — скопировать">A 094 990 95 07</td><td>- Уплотнительное кольцо</td><td>NB</td><td></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1109971572" title="Клик — скопировать">A 110 997 15 72</td><td>- ШТУЦЕР</td><td>1</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1169970772" title="Клик — скопировать">A 116 997 07 72</td><td>- ШТУЦЕР</td><td>1</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N914005006004" title="Клик — скопировать">N 914005 006004</td><td>Винт с неспадающей шайбой</td><td>8</td><td></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1171400265" title="Клик — скопировать">A 117 140 02 65</td><td>промежуточный элемент</td><td>8</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="N000931008257" title="Клик — скопировать">N 000931 008257</td><td>Винт</td><td>4</td><td></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>2</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1161411880" title="Клик — скопировать">A 116 141 18 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1161412480" title="Клик — скопировать">A 116 141 24 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>2</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1171410680" title="Клик — скопировать">A 117 141 06 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1171412980" title="Клик — скопировать">A 117 141 29 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1171410580" title="Клик — скопировать">A 117 141 05 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1171412880" title="Клик — скопировать">A 117 141 28 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000931008058" title="Клик — скопировать">N 000931 008058</td><td>Винт</td><td>8</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000931008326" title="Клик — скопировать">N 000931 008326</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N304014008009" title="Клик — скопировать">N 304014 008009</td><td>Винт с 6-гранной головкой</td><td>4</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N000931008244" title="Клик — скопировать">N 000931 008244</td><td>Винт</td><td>4</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>16</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A1160940041" title="Клик — скопировать">A 116 094 00 41</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td>ВПУСКНОЙ КОЛЛЕКТОР К ГБЦ</td></tr><tr data-pos="164"><td>164</td><td class="pn" data-raw="A1162230741" title="Клик — скопировать">A 116 223 07 41</td><td>ПЕТЛЯ ПОДВЕСКИ</td><td>1</td><td>СЗАДИ СЛЕВА</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1162230641" title="Клик — скопировать">A 116 223 06 41</td><td>ПЕТЛЯ ПОДВЕСКИ</td><td>1</td><td>СЗАДИ СПРАВА</td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="N915013008002" title="Клик — скопировать">N 915013 008002</td><td>Штуцер</td><td>1</td><td></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18-AL</td></tr><tr data-pos="203"><td>203</td><td class="pn" data-raw="A1169970072" title="Клик — скопировать">A 116 997 00 72</td><td>ШТУЦЕР</td><td>1</td><td></td></tr><tr data-pos="206"><td>206</td><td class="pn" data-raw="A1109971672" title="Клик — скопировать">A 110 997 16 72</td><td>ШТУЦЕР</td><td>1</td><td></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="N007603012111" title="Клик — скопировать">N 007603 012111</td><td>Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1009900663" title="Клик — скопировать">A 100 990 06 63</td><td>Полый болт</td><td>1</td><td></td></tr><tr data-pos="224"><td>224</td><td class="pn" data-raw="N007603010100" title="Клик — скопировать">N 007603 010100</td><td>Уплотнительное кольцо</td><td>2</td><td>10X13.5 AL</td></tr><tr data-pos="227"><td>227</td><td class="pn" data-raw="A1869912740" title="Клик — скопировать">A 186 991 27 40</td><td>Проставочная трубка</td><td>1</td><td></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N000961010016" title="Клик — скопировать">N 000961 010016</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="233"><td>233</td><td class="pn" data-raw="N007603010100" title="Клик — скопировать">N 007603 010100</td><td>Уплотнительное кольцо</td><td>1</td><td>10X13.5 AL</td></tr><tr data-pos="236"><td>236</td><td class="pn" data-raw="A1154760426" title="Клик — скопировать">A 115 476 04 26</td><td>ШЛАНГ</td><td>1</td><td></td></tr><tr data-pos="239"><td>239</td><td class="pn" data-raw="A1160900329" title="Клик — скопировать">A 116 090 03 29</td><td>ВПУСКНАЯ ТРУБА</td><td>-</td><td></td></tr><tr data-pos="239"><td>239</td><td class="pn" data-raw="A1160940182" title="Клик — скопировать">A 116 094 01 82</td><td>ШЛАНГ</td><td>1</td><td></td></tr><tr data-pos="248"><td>248</td><td class="pn" data-raw="A1169971282" title="Клик — скопировать">A 116 997 12 82</td><td>Шланг</td><td>1</td><td></td></tr><tr data-pos="251"><td>251</td><td class="pn" data-raw="N916026023001" title="Клик — скопировать">N 916026 023001</td><td>Хомут</td><td>-</td><td>23-30 MM</td></tr><tr data-pos="251"><td>251</td><td class="pn" data-raw="N000000000667" title="Клик — скопировать">N 000000 000667</td><td>Хомут</td><td>2</td><td>23-30 MM</td></tr><tr data-pos="254"><td>254</td><td class="pn" data-raw="N916026023001" title="Клик — скопировать">N 916026 023001</td><td>Хомут</td><td>-</td><td>23-30 MM</td></tr><tr data-pos="254"><td>254</td><td class="pn" data-raw="N000000000667" title="Клик — скопировать">N 000000 000667</td><td>Хомут</td><td>1</td><td>23-30 MM</td></tr><tr data-pos="257"><td>257</td><td class="pn" data-raw="A1169970390" title="Клик — скопировать">A 116 997 03 90</td><td>Хомут для шланга</td><td>2</td><td></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="N000835008122" title="Клик — скопировать">N 000835 008122</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="N000835008082" title="Клик — скопировать">N 000835 008082</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916033012100" title="Клик — скопировать">N 916033 012100</td><td>Хомут</td><td>1</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 58 · подписано на схемах: 57 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14030000097.png", "poses": ["5", "14", "29", "35", "41", "80", "83", "86", "89", "101", "104", "107", "113", "131", "137", "149", "161", "164", "170", "197", "200", "203", "206", "209", "221", "224", "227", "230", "233", "236", "239", "248", "251", "254", "257", "290"]}, {"png": "../../img_png/drawing_B14030000101.png", "poses": ["14", "35", "41", "104", "134", "197", "200", "206", "209", "221", "224", "257"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>72 ДВЕРИ / 030 СИСТЕМА ЗАМКОВ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">68D BIS 09/85 Действительно для: CA, US</a> → 030 СИСТЕМА ЗАМКОВ</div>
+<h1>030 СИСТЕМА ЗАМКОВ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B72030000104.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1077200135" title="Клик — скопировать">A 107 720 01 35</td><td>Замок двери (DOOR LOCK)</td><td>1</td><td>LEFT,WITH INTERIOR LOCKING MECHANISM</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1077200435" title="Клик — скопировать">A 107 720 04 35</td><td>Замок двери (DOOR LOCK)</td><td>1</td><td>RIGHT,LESS INTERIOR LOCKING MECHANISM</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1077230169" title="Клик — скопировать">A 107 723 01 69</td><td>ПРИВОДНАЯ ШТАНГА</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1077230269" title="Клик — скопировать">A 107 723 02 69</td><td>ПРИВОДНАЯ ШТАНГА</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1009940160" title="Клик — скопировать">A 100 994 01 60</td><td>предохранитель (SECURING)</td><td>4</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139940160" title="Клик — скопировать">A 113 994 01 60</td><td>Скоба (CLAMP)</td><td>2</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1077200193" title="Клик — скопировать">A 107 720 01 93</td><td>ПРЕДОХР. БЛОКИР. ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1077200293" title="Клик — скопировать">A 107 720 02 93</td><td>ПРЕДОХР. БЛОКИР. ДВЕРИ</td><td>2</td><td>СПРАВА</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1009940160" title="Клик — скопировать">A 100 994 01 60</td><td>предохранитель (SECURING)</td><td>2</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1077600361" title="Клик — скопировать">A 107 760 03 61</td><td>Управление (ACTUATION)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1077600461" title="Клик — скопировать">A 107 760 04 61</td><td>Управление (ACTUATION)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N007985006196" title="Клик — скопировать">N 007985 006196</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N007985006193" title="Клик — скопировать">N 007985 006193</td><td>Винт</td><td>-</td><td>M6X16-8.8</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0009906137" title="Клик — скопировать">A 000 990 61 37</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>6</td><td>M6X16</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0009940510" title="Клик — скопировать">A 000 994 05 10</td><td>Диск (WINDOW)</td><td>-</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0009905821" title="Клик — скопировать">A 000 990 58 21</td><td>БОЛТ</td><td>6</td><td>ВНУТР. ПРИВОД НА ДВЕРИ</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0009907191" title="Клик — скопировать">A 000 990 71 91</td><td>Гайкодержатель (NUT HOLDER)</td><td>6</td><td>ВНУТР. ПРИВОД НА ДВЕРИ</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0009907191" title="Клик — скопировать">A 000 990 71 91</td><td>Гайкодержатель (NUT HOLDER)</td><td>2</td><td>ТЯГА НА ВНУТРЕННЕЙ ДЕТАЛИ,ДВЕРЬ ВОДИТЕЛЯ</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0029888378" title="Клик — скопировать">A 002 988 83 78</td><td>Скоба</td><td>-</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0069886378" title="Клик — скопировать">A 006 988 63 78</td><td>Скоба (CLAMP)</td><td>6</td><td>ТЯГА НА ВНУТРЕННЕЙ ДЕТАЛИ,ДВЕРЬ ВОДИТЕЛЯ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0009903631" title="Клик — скопировать">A 000 990 36 31</td><td>БОЛТ</td><td>-</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1409843029" title="Клик — скопировать">A 140 984 30 29</td><td>Винт Torx с полукр. гол. (PAN HEAD SCREW)</td><td>4</td><td>DOOR LOCK TO FRONT DOOR INTERIOR PLATE; M6X14</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0009903330" title="Клик — скопировать">A 000 990 33 30</td><td>Болт с потайной головкой (COUNTERSUNK SCREW)</td><td>4</td><td>DOOR LOCK TO FRONT DOOR INTERIOR PLATE</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009907191" title="Клик — скопировать">A 000 990 71 91</td><td>Гайкодержатель (NUT HOLDER)</td><td>8</td><td>DOOR LOCK TO FRONT DOOR INTERIOR PLATE</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1077660511" title="Клик — скопировать">A 107 766 05 11</td><td>Ковшовая платформа (RECESS)</td><td>1</td><td>LEFT FRONT DOOR LOCK INTERIOR HANDLE ASSEMBLY</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1077660611" title="Клик — скопировать">A 107 766 06 11</td><td>Ковшовая платформа (RECESS)</td><td>1</td><td>RIGHT FRONT DOOR LOCK INTERIOR HANDLE ASSEMBLY</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N007985006196" title="Клик — скопировать">N 007985 006196</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N007985006193" title="Клик — скопировать">N 007985 006193</td><td>Винт</td><td>-</td><td>M6X16-8.8</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0009906137" title="Клик — скопировать">A 000 990 61 37</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>ESCUTCHEON TO MOUNTING; M6X16</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0009940510" title="Клик — скопировать">A 000 994 05 10</td><td>Диск (WINDOW)</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0009905821" title="Клик — скопировать">A 000 990 58 21</td><td>БОЛТ</td><td>1</td><td>ESCUTCHEON TO MOUNTING</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1077660191" title="Клик — скопировать">A 107 766 01 91</td><td>Крышка (COVER)</td><td>1</td><td>ВНУТР. ПРИВОД СЛЕВА</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1157200504" title="Клик — скопировать">A 115 720 05 04</td><td>Скоба замка (LOCK STRIKER)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1157200604" title="Клик — скопировать">A 115 720 06 04</td><td>Скоба замка (LOCK STRIKER)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0009903330" title="Клик — скопировать">A 000 990 33 30</td><td>Болт с потайной головкой (COUNTERSUNK SCREW)</td><td>8</td><td>ЗАМКОВ. ПРОУШИНА НА КАБИНЕ</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1157230511" title="Клик — скопировать">A 115 723 05 11</td><td>ПЛАСТИНА</td><td>NB</td><td></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1157230611" title="Клик — скопировать">A 115 723 06 11</td><td>Компенсационная пластина</td><td>NB</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1156370011" title="Клик — скопировать">A 115 637 00 11</td><td>ПЛАСТИНА (THREADED PLATE)</td><td>4</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1087230124" title="Клик — скопировать">A 108 723 01 24</td><td>Окаймление (EDGING)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1087230224" title="Клик — скопировать">A 108 723 02 24</td><td>ОБРАМЛЕНИЕ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N007988004103" title="Клик — скопировать">N 007988 004103</td><td>БОЛТ</td><td>4</td><td>EDGING TO DOOR</td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1077600759" title="Клик — скопировать">A 107 760 07 59</td><td>Ручка двери (DOOR HANDLE)</td><td>1</td><td>LEFT;WORKSHOP VERSION,WITH KEY;ANY LOCK</td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1077600859" title="Клик — скопировать">A 107 760 08 59</td><td>Ручка двери (DOOR HANDLE)</td><td>1</td><td>RIGHT;WORKSHOP VERSION,WITH KEY; ANY LOCK</td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077600959" title="Клик — скопировать">A 107 760 09 59</td><td>РУЧКА ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077604759" title="Клик — скопировать">A 107 760 47 59</td><td>РУЧКА ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077600559" title="Клик — скопировать">A 107 760 05 59</td><td>Ручка двери (DOOR HANDLE)</td><td>1</td><td>БЕЗ КЛЮЧА,СЛЕВА</td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077601059" title="Клик — скопировать">A 107 760 10 59</td><td>РУЧКА ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077604859" title="Клик — скопировать">A 107 760 48 59</td><td>РУЧКА ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1077600659" title="Клик — скопировать">A 107 760 06 59</td><td>Ручка двери (DOOR HANDLE)</td><td>1</td><td>БЕЗ КЛЮЧА,СПРАВА</td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0059937901" title="Клик — скопировать">A 005 993 79 01</td><td>- Нажимная пружина (COMPRESSION SPRING)</td><td>NB</td><td>&quot;HUF&quot;</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1207660015" title="Клик — скопировать">A 120 766 00 15</td><td>- БОЛТ</td><td>2</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0007663506" title="Клик — скопировать">A 000 766 35 06</td><td>КЛЮЧ</td><td>-</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0007601906" title="Клик — скопировать">A 000 760 19 06</td><td>Ключ (KEY)</td><td>2</td><td>ОСНОВН. КЛЮЧ</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A2017600306" title="Клик — скопировать">A 201 760 03 06</td><td>- Ключ (KEY)</td><td>2</td><td>BLANK (MASTER KEY)</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0007602006" title="Клик — скопировать">A 000 760 20 06</td><td>Запасной ключ (SECONDARY KEY)</td><td>1</td><td>КЛЮЧ ЗАПАСНОЙ</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A2017600406" title="Клик — скопировать">A 201 760 04 06</td><td>- КЛЮЧ</td><td>1</td><td>BLANK (SECONDARY KEY)</td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0007601606" title="Клик — скопировать">A 000 760 16 06</td><td>КЛЮЧ</td><td>-</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A2017602706" title="Клик — скопировать">A 201 760 27 06</td><td>КЛЮЧ</td><td>1</td><td>(ПЛОСКИЙ КЛЮЧ)</td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1077660105" title="Клик — скопировать">A 107 766 01 05</td><td>Промежуточная прокладка (INTERMEDIATE LAYER)</td><td>2</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>4</td><td>РУЧКА ДВЕРИ НА ДВЕРИ</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N007985006149" title="Клик — скопировать">N 007985 006149</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N007985006580" title="Клик — скопировать">N 007985 006580</td><td>Винт (SCREW)</td><td>4</td><td>РУЧКА ДВЕРИ НА ДВЕРИ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1078901167" title="Клик — скопировать">A 107 890 11 67</td><td>ГАРНИТУРА БЛОКИРОВКИ</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1078931103" title="Клик — скопировать">A 107 893 11 03</td><td>ГАРНИТУРА БЛОКИРОВКИ</td><td>1</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1088900661" title="Клик — скопировать">A 108 890 06 61</td><td>Сумка (BAG)</td><td>2</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 65 · подписано на схемах: 65 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B72030000104.png", "poses": ["5", "14", "17", "20", "23", "26", "29", "35", "38", "41", "44", "50", "53", "56", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "104", "107", "128", "131", "134", "140", "143"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>

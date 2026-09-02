@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>33 ПЕРЕДНИЙ МОСТ / 030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107042">048 BIS 09/85</a> → 030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</div>
+<h1>030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B33030000017.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073320001" title="Клик — скопировать">A 107 332 00 01</td><td>Поворотный кулак</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073320002" title="Клик — скопировать">A 107 332 00 02</td><td>Поворотный кулак</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1073320220" title="Клик — скопировать">A 107 332 02 20</td><td>Маятниковый рычаг</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1073320320" title="Клик — скопировать">A 107 332 03 20</td><td>Маятниковый рычаг</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N308676012010" title="Клик — скопировать">N 308676 012010</td><td>Винт с 6-гранной головкой</td><td>4</td><td>M12X1.5X40</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1074201186" title="Клик — скопировать">A 107 420 11 86</td><td>Держатель трубопровода</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1074201286" title="Клик — скопировать">A 107 420 12 86</td><td>Держатель</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1153341601" title="Клик — скопировать">A 115 334 16 01</td><td>Ступица переднего колеса</td><td>2</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0009815805" title="Клик — скопировать">A 000 981 58 05</td><td>Конический подшипник</td><td>2</td><td>ВНУТР.</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0059975046" title="Клик — скопировать">A 005 997 50 46</td><td>Уплотнительное кольцо</td><td>2</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0009815905" title="Клик — скопировать">A 000 981 59 05</td><td>Кон. роликоподшипник</td><td>2</td><td>СНАРУЖИ</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1153340315" title="Клик — скопировать">A 115 334 03 15</td><td>Диск</td><td>2</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1203340772" title="Клик — скопировать">A 120 334 07 72</td><td>Зажимная гайка</td><td>2</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1209901320" title="Клик — скопировать">A 120 990 13 20</td><td>болт</td><td>2</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A2015470085" title="Клик — скопировать">A 201 547 00 85</td><td>Контактная пружина</td><td>2</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1083340025" title="Клик — скопировать">A 108 334 00 25</td><td>Колпак ступицы колеса</td><td>2</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1153300051" title="Клик — скопировать">A 115 330 00 51</td><td>Ремк-т роликоподшипника</td><td>2</td><td>ПОДШИПНИК ПЕР.КОЛЕСА</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1073301207" title="Клик — скопировать">A 107 330 12 07</td><td>Поперечный рычаг</td><td>1</td><td>ВНИЗУ СЛЕВА</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1073301307" title="Клик — скопировать">A 107 330 13 07</td><td>Поперечный рычаг</td><td>1</td><td>СНИЗУ СПРАВА</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1153331127" title="Клик — скопировать">A 115 333 11 27</td><td>Шарнир</td><td>2</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1153320360" title="Клик — скопировать">A 115 332 03 60</td><td>КОЛПАЧОК</td><td>2</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N913002014002" title="Клик — скопировать">N 913002 014002</td><td>Гайка</td><td>2</td><td>ПОПЕРЕЧ. РЫЧАГ СНИЗУ НА ПОВОРОТНОМ КУЛАКЕ; M14X1,5-8</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1143300185" title="Клик — скопировать">A 114 330 01 85</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0003330260" title="Клик — скопировать">A 000 333 02 60</td><td>Стяжное кольцо</td><td>2</td><td>МАНЖЕТА НЕСУЩ.РЫЧАГА</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1153301675" title="Клик — скопировать">A 115 330 16 75</td><td>Ремк-т поперечного рычага</td><td>2</td><td>ПОПЕРЕЧН. РЫЧАГ НИЖН.</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1153330477" title="Клик — скопировать">A 115 333 04 77</td><td>Регулировочный диск</td><td>4</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1153330574" title="Клик — скопировать">A 115 333 05 74</td><td>Палец</td><td>4</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="N913001014001" title="Клик — скопировать">N 913001 014001</td><td>Гайка</td><td>4</td><td></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1153303807" title="Клик — скопировать">A 115 330 38 07</td><td>Поперечный рычаг</td><td>1</td><td>СВЕРХУ СЛЕВА</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1153303907" title="Клик — скопировать">A 115 330 39 07</td><td>Поперечный рычаг</td><td>1</td><td>СВЕРХУ СПРАВА</td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="N000960012224" title="Клик — скопировать">N 000960 012224</td><td>Винт</td><td>4</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N913004012008" title="Клик — скопировать">N 913004 012008</td><td>Гайка</td><td>4</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1153301775" title="Клик — скопировать">A 115 330 17 75</td><td>Ремк-т поперечного рычага</td><td>2</td><td>ПОПЕРЕЧ.РЫЧАГ СВЕРХУ</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N913002012002" title="Клик — скопировать">N 913002 012002</td><td>Гайка</td><td>2</td><td>ПОПЕРЕЧ. РЫЧАГ ВЕРХ. НА ПОВОРОТ. КУЛАКЕ</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1145860333" title="Клик — скопировать">A 114 586 03 33</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>направляющий шарнир</td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1153300177" title="Клик — скопировать">A 115 330 01 77</td><td>Упор</td><td>1</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1153300703" title="Клик — скопировать">A 115 330 07 03</td><td>ТЯГА СХОЖДЕНИЯ</td><td>-</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1153300803" title="Клик — скопировать">A 115 330 08 03</td><td>ТЯГА СХОЖДЕНИЯ</td><td>-</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1073300103" title="Клик — скопировать">A 107 330 01 03</td><td>Поперечная рулевая тяга</td><td>2</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0003381910" title="Клик — скопировать">A 000 338 19 10</td><td>- ШАРНИР ШАРОВОЙ</td><td>-</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0003385210" title="Клик — скопировать">A 000 338 52 10</td><td>- ШАРНИР ШАРОВОЙ</td><td>2</td><td>ПРАВАЯ РЕЗЬБА</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0003385510" title="Клик — скопировать">A 000 338 55 10</td><td>- ШАРНИР ШАРОВОЙ</td><td>2</td><td>ПРАВАЯ РЕЗЬБА</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0003382010" title="Клик — скопировать">A 000 338 20 10</td><td>- ШАРНИР ШАРОВОЙ</td><td>-</td><td></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0003385010" title="Клик — скопировать">A 000 338 50 10</td><td>- ШАРНИР ШАРОВОЙ</td><td>2</td><td>ЛЕВАЯ РЕЗЬБА</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0003385310" title="Клик — скопировать">A 000 338 53 10</td><td>- Шаровой шарнир</td><td>2</td><td>ЛЕВАЯ РЕЗЬБА</td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0009951844" title="Клик — скопировать">A 000 995 18 44</td><td>- ХОМУТ</td><td>-</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0003384245" title="Клик — скопировать">A 000 338 42 45</td><td>- хомут</td><td>4</td><td></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>- Винт</td><td>-</td><td></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="N304017008027" title="Клик — скопировать">N 304017 008027</td><td>- Винт с 6-гранной головкой</td><td>4</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>- Пружинное кольцо</td><td>4</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>- Гайка</td><td>4</td><td></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A0003300485" title="Клик — скопировать">A 000 330 04 85</td><td>Ремк-т шарового шарнира</td><td>4</td><td>TIE ROD BOOT</td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1209900155" title="Клик — скопировать">A 120 990 01 55</td><td>гайка</td><td>4</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="N913002010010" title="Клик — скопировать">N 913002 010010</td><td>Гайка</td><td>4</td><td>M10X1</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N000094002077" title="Клик — скопировать">N 000094 002077</td><td>Шплинт</td><td>4</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1155860633" title="Клик — скопировать">A 115 586 06 33</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1159901901" title="Клик — скопировать">A 115 990 19 01</td><td>болт</td><td>1</td><td>FRONT AXLE MOUNTING PARTS,LEFT</td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1155860733" title="Клик — скопировать">A 115 586 07 33</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1159940732" title="Клик — скопировать">A 115 994 07 32</td><td>Стопорная шайба</td><td>1</td><td>FRONT AXLE MOUNTING PARTS,RIGHT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1073300898" title="Клик — скопировать">A 107 330 08 98</td><td>ПЕРЕДНИЙ МОСТ</td><td>-</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1073300998" title="Клик — скопировать">A 107 330 09 98</td><td>ПЕРЕДНИЙ МОСТ</td><td>-</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1159970281" title="Клик — скопировать">A 115 997 02 81</td><td>- КАБ. ВТУЛКА</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1153333014" title="Клик — скопировать">A 115 333 30 14</td><td>- ПОДШИПНИК</td><td>-</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 63 · подписано на схемах: 59 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B33030000017.png", "poses": ["5", "11", "14", "17", "23", "26", "29", "32", "35", "38", "41", "44", "47", "53", "56", "59", "62", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "104", "107", "110", "113", "116", "119", "122", "125", "128", "131", "134", "137"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  applyRows();
+})();
+</script></body></html>
