@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="106"><td>106</td><td class="pn" data-raw="A1076100536" title="Клик — скопировать">A 107 610 05 36</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>(ДАТЧИК)</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1268201410" title="Клик — скопировать">A 126 820 14 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0018208910" title="Клик — скопировать">A 001 820 89 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1248205110" title="Клик — скопировать">A 124 820 51 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0008206826" title="Клик — скопировать">A 000 820 68 26</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="151"><td>151</td><td class="pn" data-raw="A1245405735" title="Клик — скопировать">A 124 540 57 35</td><td>Адаптерный кабель</td><td>1</td><td>TO 004 820 11 10</td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0115452028" title="Клик — скопировать">A 011 545 20 28</td><td>- КОРПУС ШТЕК. ГНЕЗДА</td><td>1</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>9</td><td>2,5 MM; 0.35-2.5 MM2 RK2.5</td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0009842029" title="Клик — скопировать">A 000 984 20 29</td><td>болт</td><td>2</td><td>ДАТЧИК НА ДЕРЖАТЕЛЕ</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A0008210262" title="Клик — скопировать">A 000 821 02 62</td><td>Конденсатор</td><td>1</td><td>ENERGY RESERVE</td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A0029941045" title="Клик — скопировать">A 002 994 10 45</td><td>предохранитель</td><td>2</td><td>CONDENSER TO INTERIOR PLATE,LEFT OUTSIDE</td></tr><tr data-pos="189"><td>189</td><td class="pn" data-raw="A0949903508" title="Клик — скопировать">A 094 990 35 08</td><td>Шуруп</td><td>2</td><td>CONDENSER TO STAY</td></tr><tr data-pos="196"><td>196</td><td class="pn" data-raw="A0008200297" title="Клик — скопировать">A 000 820 02 97</td><td>ЭЛЕКТРОУСТАНОВКА</td><td>1</td><td>(ЭЛЕКТРОТРАНСФОРМАТОР)</td></tr><tr data-pos="216"><td>216</td><td class="pn" data-raw="N914128004200" title="Клик — скопировать">N 914128 004200</td><td>Шуруп</td><td>2</td><td>ЭЛЕКТРОТРАНСФОРМАТОР НА КРОНШТЕЙНЕ; 4.8X13</td></tr><tr data-pos="229"><td>229</td><td class="pn" data-raw="A0009838910" title="Клик — скопировать">A 000 983 89 10</td><td>Войлочная лента</td><td>1</td><td>ТРАНСФОРМАТОР; 3X70 MM</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078601486" title="Клик — скопировать">A 107 860 14 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078602586" title="Клик — скопировать">A 107 860 25 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1238680128" title="Клик — скопировать">A 123 868 01 28</td><td>ПРОСТАВКА</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1078603469" title="Клик — скопировать">A 107 860 34 69</td><td>ЗАМКОВЫЙ БЛОК</td><td>2</td><td></td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="106"><td>106</td><td class="pn" data-raw="A1076100536" title="Клик — скопировать">A 107 610 05 36</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>(ДАТЧИК)</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1268201410" title="Клик — скопировать">A 126 820 14 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0018208910" title="Клик — скопировать">A 001 820 89 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1248205110" title="Клик — скопировать">A 124 820 51 10</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0048201110" title="Клик — скопировать">A 004 820 11 10</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0008206826" title="Клик — скопировать">A 000 820 68 26</td><td>Датчик ускорения</td><td>1</td><td>ПОДУШ.БЕЗОП. С НАТЯЖИТ.РЕМНЯ БЕЗОП.</td></tr><tr data-pos="151"><td>151</td><td class="pn" data-raw="A1245405735" title="Клик — скопировать">A 124 540 57 35</td><td>Адаптерный кабель</td><td>1</td><td>TO 004 820 11 10</td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0115452028" title="Клик — скопировать">A 011 545 20 28</td><td>- КОРПУС ШТЕК. ГНЕЗДА</td><td>1</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>9</td><td>2,5 MM; 0.35\-2.5 MM2 RK2.5</td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0009842029" title="Клик — скопировать">A 000 984 20 29</td><td>болт</td><td>2</td><td>ДАТЧИК НА ДЕРЖАТЕЛЕ</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A0008210262" title="Клик — скопировать">A 000 821 02 62</td><td>Конденсатор</td><td>1</td><td>ENERGY RESERVE</td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A0029941045" title="Клик — скопировать">A 002 994 10 45</td><td>предохранитель</td><td>2</td><td>CONDENSER TO INTERIOR PLATE,LEFT OUTSIDE</td></tr><tr data-pos="189"><td>189</td><td class="pn" data-raw="A0949903508" title="Клик — скопировать">A 094 990 35 08</td><td>Шуруп</td><td>2</td><td>CONDENSER TO STAY</td></tr><tr data-pos="196"><td>196</td><td class="pn" data-raw="A0008200297" title="Клик — скопировать">A 000 820 02 97</td><td>ЭЛЕКТРОУСТАНОВКА</td><td>1</td><td>(ЭЛЕКТРОТРАНСФОРМАТОР)</td></tr><tr data-pos="216"><td>216</td><td class="pn" data-raw="N914128004200" title="Клик — скопировать">N 914128 004200</td><td>Шуруп</td><td>2</td><td>ЭЛЕКТРОТРАНСФОРМАТОР НА КРОНШТЕЙНЕ; 4.8X13</td></tr><tr data-pos="229"><td>229</td><td class="pn" data-raw="A0009838910" title="Клик — скопировать">A 000 983 89 10</td><td>Войлочная лента</td><td>1</td><td>ТРАНСФОРМАТОР; 3X70 MM</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078601486" title="Клик — скопировать">A 107 860 14 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="266"><td>266</td><td class="pn" data-raw="A1078602586" title="Клик — скопировать">A 107 860 25 86</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>С НАТЯЖИТ. РЕМНЕЙ БЕЗОП.</td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1238680128" title="Клик — скопировать">A 123 868 01 28</td><td>ПРОСТАВКА</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1078603469" title="Клик — скопировать">A 107 860 34 69</td><td>ЗАМКОВЫЙ БЛОК</td><td>2</td><td></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1697800205" title="Клик — скопировать">A 169 780 02 05</td><td>Ламельный сдвижной люк (LAMELLA SLIDING ROOF)</td><td>1</td><td>ПОЛНОСТЬЮ</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1687800098" title="Клик — скопировать">A 168 780 00 98</td><td>- Уплотнение (SEAL)</td><td>1</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1697800162" title="Клик — скопировать">A 169 780 01 62</td><td>- Петля (HINGE)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1697800262" title="Клик — скопировать">A 169 780 02 62</td><td>- Петля (HINGE)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1687820071" title="Клик — скопировать">A 168 782 00 71</td><td>- БОЛТ</td><td>2</td><td>РЕГУЛИРОВКА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688900158" title="Клик — скопировать">A 168 890 01 58</td><td>- ремкомплект (REPAIR KIT)</td><td>1</td><td>БОЛТЫ РАМЫ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1697800140" title="Клик — скопировать">A 169 780 01 40</td><td>- Облицовка крыши (TRIM, ROOF)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1697800240" title="Клик — скопировать">A 169 780 02 40</td><td>- Облицовка крыши (TRIM, ROOF)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1687820197" title="Клик — скопировать">A 168 782 01 97</td><td>- Проставка (SPACER PIECE)</td><td>4</td><td></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1697840209" title="Клик — скопировать">A 169 784 02 09</td><td>- Облицовка (TRIM)</td><td>2</td><td>ШТОРКА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1697820296" title="Клик — скопировать">A 169 782 02 96</td><td>Шланг (HOSE)</td><td>2</td><td>ВОДОСТОК</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1697820296" title="Клик — скопировать">A 169 782 02 96</td><td>Шланг (HOSE)</td><td>2</td><td>ВОДОСТОК</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0009953114" title="Клик — скопировать">A 000 995 31 14</td><td>Держатель (HOLDER)</td><td>6</td><td>ВОДОСТОК</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0009953114" title="Клик — скопировать">A 000 995 31 14</td><td>Держатель (HOLDER)</td><td>6</td><td>ВОДОСТОК</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A1697800244" title="Клик — скопировать">A 169 780 02 44</td><td>Ремк-т ветроотражателя (REPAIR KIT, WIND DEFLE.)</td><td>1</td><td>ДЛЯ ОБТЕКАТЕЛЯ, СКОЛЬЗЯЩИХ САЛАЗОК И ЭЛЕМЕНТА РАМЫ СПЕРЕДИ</td></tr><tr data-pos="425"><td>425</td><td class="pn" data-raw="A1687800198" title="Клик — скопировать">A 168 780 01 98</td><td>- Уплотнение (SEAL)</td><td>1</td><td>РАМА</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075407809" title="Клик — скопировать">A 107 540 78 09</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>2</td><td>ИНДИКАЦИЯ ИЗНОСА ТОРМ. КОЛОДОК</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1269972881" title="Клик — скопировать">A 126 997 28 81</td><td>- втулка (GROMMET)</td><td>2</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A3179970281" title="Клик — скопировать">A 317 997 02 81</td><td>- Проходная втулка (FEED-THROUGH GROMMET)</td><td>2</td><td>10 MM</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0085450928" title="Клик — скопировать">A 008 545 09 28</td><td>- Корпус штекера</td><td>NB</td><td>ДВУХПОЛЮСНЫЙ; 2-PIN</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>- Крышка</td><td>-</td><td>2-PIN RK4.</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0005457903" title="Клик — скопировать">A 000 545 79 03</td><td>- КРЫШКА</td><td>NB</td><td>TO 008 545 09 28</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0135457928" title="Клик — скопировать">A 013 545 79 28</td><td>- Штекерный штифт (PLUG PIN)</td><td>NB</td><td>TO 008 545 09 28; 4.0mm2</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000933006127" title="Клик — скопировать">N 000933 006127</td><td>Винт</td><td>2</td><td>РАЗЪЕМ НА ТОРМОЗН. СУППОРТЕ; M6X25</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>2</td><td>РАЗЪЕМ НА ТОРМОЗН. СУППОРТЕ</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075407809" title="Клик — скопировать">A 107 540 78 09</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>2</td><td>ИНДИКАЦИЯ ИЗНОСА ТОРМ. КОЛОДОК</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1269972881" title="Клик — скопировать">A 126 997 28 81</td><td>- втулка (GROMMET)</td><td>2</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A3179970281" title="Клик — скопировать">A 317 997 02 81</td><td>- Проходная втулка (FEED-THROUGH GROMMET)</td><td>2</td><td>10 MM</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0085450928" title="Клик — скопировать">A 008 545 09 28</td><td>- Корпус штекера</td><td>NB</td><td>ДВУХПОЛЮСНЫЙ; 2\-PIN</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>- Крышка</td><td>-</td><td>2\-PIN RK4.</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0005457903" title="Клик — скопировать">A 000 545 79 03</td><td>- КРЫШКА</td><td>NB</td><td>TO 008 545 09 28</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0135457928" title="Клик — скопировать">A 013 545 79 28</td><td>- Штекерный штифт (PLUG PIN)</td><td>NB</td><td>TO 008 545 09 28; 4.0mm2</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000933006127" title="Клик — скопировать">N 000933 006127</td><td>Винт</td><td>2</td><td>РАЗЪЕМ НА ТОРМОЗН. СУППОРТЕ; M6X25</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>2</td><td>РАЗЪЕМ НА ТОРМОЗН. СУППОРТЕ</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

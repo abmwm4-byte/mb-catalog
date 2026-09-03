@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0020919701" title="Клик — скопировать">A 002 091 97 01</td><td>Топливный насос</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1230910082" title="Клик — скопировать">A 123 091 00 82</td><td>- втулка</td><td>1</td><td>ABOVE FUEL PUMP</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0000900110" title="Клик — скопировать">A 000 090 01 10</td><td>- Комплект клапана</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N007603012405" title="Клик — скопировать">N 007603 012405</td><td>	- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1239900053" title="Клик — скопировать">A 123 990 00 53</td><td>гайка</td><td>1</td><td>ТОПЛИВОПРОВОД К ПОДКАЧИВАЮЩЕМУ НАСОСУ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>2</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0014778701" title="Клик — скопировать">A 001 477 87 01</td><td>ФИЛЬТР ТОПЛ.</td><td>-</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0024771701" title="Клик — скопировать">A 002 477 17 01</td><td>ФИЛЬТР ТОПЛ.</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0024774401" title="Клик — скопировать">A 002 477 44 01</td><td>Топливный фильтр</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0024771301" title="Клик — скопировать">A 002 477 13 01</td><td>ФИЛЬТР ТОПЛ.</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0024774401" title="Клик — скопировать">A 002 477 44 01</td><td>Топливный фильтр</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0000910182" title="Клик — скопировать">A 000 091 01 82</td><td>- Изоляционная втулка</td><td>1</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1074700681" title="Клик — скопировать">A 107 470 06 81</td><td>Держатель</td><td>1</td><td>НАСОС,ФИЛЬТР И ТОПЛ.РЕСИВЕР</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N007985005165" title="Клик — скопировать">N 007985 005165</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N007985005194" title="Клик — скопировать">N 007985 005194</td><td>Винт</td><td>1</td><td>PUMP,FILTER &amp; FUEL ACCUMULATOR TO BRACKET</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>2</td><td>M5</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1074709164" title="Клик — скопировать">A 107 470 91 64</td><td>Провод</td><td>1</td><td>ТОПЛ.НАСОС К ФИЛЬТРУ И РЕСИВЕРУ</td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N007603012110" title="Клик — скопировать">N 007603 012110</td><td>Уплотнительное кольцо</td><td>2</td><td>ТОПЛИВОПРОВОД НА ТОПЛИВНОМ ФИЛЬТРЕ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N915036008202" title="Клик — скопировать">N 915036 008202</td><td>Полый болт</td><td>1</td><td>ТОПЛИВОПРОВОД НА ТОПЛИВНОМ ФИЛЬТРЕ</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1264780340" title="Клик — скопировать">A 126 478 03 40</td><td>Держатель</td><td>1</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="N007976006203" title="Клик — скопировать">N 007976 006203</td><td>Шуруп</td><td>4</td><td>ДЕРЖАТЕЛЬ НА КРОНШТ. ЗАДН. МОСТА; B6,3X13</td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1269880011" title="Клик — скопировать">A 126 988 00 11</td><td>Буфер</td><td>4</td><td></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A0004760521" title="Клик — скопировать">A 000 476 05 21</td><td>РЕСИВЕР</td><td>1</td><td></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A0004760621" title="Клик — скопировать">A 000 476 06 21</td><td>Память</td><td>1</td><td></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="A1264700062" title="Клик — скопировать">A 126 470 00 62</td><td>Угловой штуцер</td><td>1</td><td></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A1234763026" title="Клик — скопировать">A 123 476 30 26</td><td>Шланг</td><td>NB</td><td>ELBOW FITTING TO PUMP 60mm; 22X4MM</td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>2</td><td></td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="A1074704075" title="Клик — скопировать">A 107 470 40 75</td><td>ТОПЛ. ШЛАНГ</td><td>1</td><td>FROM TANK FILTER TO ELBOW FITTING</td></tr><tr data-pos="203"><td>203</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>1</td><td>FROM TANK FILTER TO ELBOW FITTING</td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A1264704075" title="Клик — скопировать">A 126 470 40 75</td><td>Топливный шланг</td><td>1</td><td>Поставляемая длина: 300 мм</td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="N916033011100" title="Клик — скопировать">N 916033 011100</td><td>Хомут</td><td>2</td><td></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1149970490" title="Клик — скопировать">A 114 997 04 90</td><td>связующее вещество</td><td>-</td><td></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1149970290" title="Клик — скопировать">A 114 997 02 90</td><td>связующее вещество</td><td>-</td><td></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1149970590" title="Клик — скопировать">A 114 997 05 90</td><td>связующее вещество</td><td>1</td><td>9X210 MM</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N006797004132" title="Клик — скопировать">N 006797 004132</td><td>Зубчатая шайба</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ; M4</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N006797005231" title="Клик — скопировать">N 006797 005231</td><td>Зубчатая шайба</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ</td></tr><tr data-pos="233"><td>233</td><td class="pn" data-raw="N000934004006" title="Клик — скопировать">N 000934 004006</td><td>Гайка</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ</td></tr><tr data-pos="233"><td>233</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>1</td><td>ЭЛ. ПРОВОДА НА ТОПЛ. НАСОСЕ; M5</td></tr><tr data-pos="242"><td>242</td><td class="pn" data-raw="A1264780337" title="Клик — скопировать">A 126 478 03 37</td><td>Защитная крышка</td><td>1</td><td></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="N007976006203" title="Клик — скопировать">N 007976 006203</td><td>Шуруп</td><td>3</td><td>B6,3X13</td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

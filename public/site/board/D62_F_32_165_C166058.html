@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1663260165" title="Клик — скопировать">A 166 326 01 65</td><td>Стабилизатор (ROHRDREHSTAB)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1663260365" title="Клик — скопировать">A 166 326 03 65</td><td>Стабилизатор (ROHRDREHSTAB)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1663260265" title="Клик — скопировать">A 166 326 02 65</td><td>Стабилизатор (ROHRDREHSTAB)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1663202911" title="Клик — скопировать">A 166 320 29 11</td><td>Торсион (DREHSTAB)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1643201232" title="Клик — скопировать">A 164 320 12 32</td><td>Соединительная тяга (VERBINDUNGSSTANGE)</td><td>2</td><td>СЗАДИ СЛЕВА И СПРАВА</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000003281" title="Клик — скопировать">N 000000 003281</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>2</td><td>СОЕДИНИТЕЛЬНАЯ ТЯГА К СТАБИЛИЗАТОРУ ПОПЕРЕЧНОЙ УСТОЙЧИВОСТИ; M14X1,5</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000000007083" title="Клик — скопировать">N 000000 007083</td><td>Винт с 6-гранной головкой</td><td>4</td><td>СТАБИЛИЗАТОР ПОПЕР.УСТОЙЧ.К БАЛКЕ ЗАДНЕГО МОСТА; M12X1,5X22</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910105012021" title="Клик — скопировать">N 910105 012021</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>4</td><td>СТАБИЛИЗАТОР ПОПЕР.УСТОЙЧ.К БАЛКЕ ЗАДНЕГО МОСТА; M12X1.5X50</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N000000003277" title="Клик — скопировать">N 000000 003277</td><td>Гайка (MUTTER)</td><td>2</td><td>СОЕДИН. ШТАНГА НА ПОПЕРЕЧ. РЫЧАГЕ; M14X1.5</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0029905482" title="Клик — скопировать">A 002 990 54 82</td><td>Диск (SCHEIBE)</td><td>2</td><td>СОЕДИН. ШТАНГА НА ПОПЕРЕЧ. РЫЧАГЕ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009941725" title="Клик — скопировать">A 000 994 17 25</td><td>Пружинная шайба (SPANNSCHEIBE)</td><td>2</td><td>СОЕДИНИТЕЛЬНАЯ ТЯГА К СТАБИЛИЗАТОРУ ПОПЕРЕЧНОЙ УСТОЙЧИВОСТИ</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

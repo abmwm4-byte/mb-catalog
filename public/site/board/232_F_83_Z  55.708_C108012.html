@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1096802717" title="Клик — скопировать">A 109 680 27 17</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1086800417" title="Клик — скопировать">A 108 680 04 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1086804617" title="Клик — скопировать">A 108 680 46 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1086803817" title="Клик — скопировать">A 108 680 38 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1086807617" title="Клик — скопировать">A 108 680 76 17</td><td>Крышка</td><td>1</td><td></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1086872509" title="Клик — скопировать">A 108 687 25 09</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1086872809" title="Клик — скопировать">A 108 687 28 09</td><td>Крышка</td><td>1</td><td>ПОД ПЕРЕДН. ПАНЕЛЬЮ, В ЦЕНТРЕ</td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="A1088302145" title="Клик — скопировать">A 108 830 21 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>-</td><td></td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="A1088304945" title="Клик — скопировать">A 108 830 49 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>-</td><td></td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="A1088304745" title="Клик — скопировать">A 108 830 47 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>1</td><td></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1109871044" title="Клик — скопировать">A 110 987 10 44</td><td>Диск</td><td>1</td><td>15.5 MM</td></tr><tr data-pos="48"><td>48</td><td class="pn" data-raw="A1088310253" title="Клик — скопировать">A 108 831 02 53</td><td>КРЫШКА</td><td>1</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1088311242" title="Клик — скопировать">A 108 831 12 42</td><td>РАМА</td><td>1</td><td></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A1088300075" title="Клик — скопировать">A 108 830 00 75</td><td>НАКЛАДКА</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019884478" title="Клик — скопировать">A 001 988 44 78</td><td>Скоба</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088301345" title="Клик — скопировать">A 108 830 13 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088300745" title="Клик — скопировать">A 108 830 07 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088303545" title="Клик — скопировать">A 108 830 35 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009830098" title="Клик — скопировать">A 000 983 00 98</td><td>ПОРОЛОН</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009833598" title="Клик — скопировать">A 000 983 35 98</td><td>ПОРОЛОН</td><td>1</td><td>*** 5X125X973 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981003246" title="Клик — скопировать">N 007981 003246</td><td>Шуруп</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981004254" title="Клик — скопировать">N 007981 004254</td><td>Шуруп</td><td>2</td><td>4.2X19</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021005202" title="Клик — скопировать">N 009021 005202</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021005205" title="Клик — скопировать">N 009021 005205</td><td>Шайба</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009943345" title="Клик — скопировать">A 000 994 33 45</td><td>предохранитель</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1409941045" title="Клик — скопировать">A 140 994 10 45</td><td>предохранитель</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1109971441" title="Клик — скопировать">A 110 997 14 41</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1159971040" title="Клик — скопировать">A 115 997 10 40</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009942445" title="Клик — скопировать">A 000 994 24 45</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088302945" title="Клик — скопировать">A 108 830 29 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>1</td><td>SUMMER VENTILATION,LEFT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1109871244" title="Клик — скопировать">A 110 987 12 44</td><td>ДИСК</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1009870044" title="Клик — скопировать">A 100 987 00 44</td><td>Диск</td><td>1</td><td>42 MM</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

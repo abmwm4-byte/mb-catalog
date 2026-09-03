@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2478600174" title="Клик — скопировать">A 247 860 01 74</td><td>Разделительная сетка (PARTITIONING NET)</td><td>1</td><td>Защитная сетка грузового отсека</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2478109809" title="Клик — скопировать">A 247 810 98 09</td><td>Шторка багажного отсека (LUGG. CMPRT. ROLLER BLIND)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2478109208" title="Клик — скопировать">A 247 810 92 08</td><td>Шторка багажного отсека (LUGG. CMPRT. ROLLER BLIND)</td><td>1</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008103900" title="Клик — скопировать">A 000 810 39 00</td><td>- К-т накладки ручки двери (PARTS KIT, HANDLE STRIP)</td><td>1</td><td>Облицовка багажного отсека</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2478120100" title="Клик — скопировать">A 247 812 01 00</td><td>- Подвесной палец (ATTACHMENT PIN)</td><td>1</td><td>Шторка слева</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2478120200" title="Клик — скопировать">A 247 812 02 00</td><td>- Подвесной палец (ATTACHMENT PIN)</td><td>1</td><td>Шторка справа</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2468600914" title="Клик — скопировать">A 246 860 09 14</td><td>Держатель (HOLDER)</td><td>2</td><td>Крепление грузозащитной сетки</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2109840929" title="Клик — скопировать">A 210 984 09 29</td><td>Винт Torx с полукр. гол. (PAN HEAD SCREW)</td><td>2</td><td>Крепление держателя; M8X22</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2468680639" title="Клик — скопировать">A 246 868 06 39</td><td>Накладка крепления груза</td><td>2</td><td>Накладка кронштейна</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009908759" title="Клик — скопировать">A 000 990 87 59</td><td>6-гран. гаечная заклепка (HEX. BLIND CLINCH NUT)</td><td>4</td><td>Кронштейн (левый и правый) к остову кузова</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2478109900" title="Клик — скопировать">A 247 810 99 00</td><td>Консоль (CONSOLE)</td><td>2</td><td>Спереди слева</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2478100001" title="Клик — скопировать">A 247 810 00 01</td><td>Консоль (CONSOLE)</td><td>2</td><td>Спереди справа</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2478100301" title="Клик — скопировать">A 247 810 03 01</td><td>Консоль (CONSOLE)</td><td>2</td><td>Слева сверху</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2478100301" title="Клик — скопировать">A 247 810 03 01</td><td>Консоль (CONSOLE)</td><td>2</td><td>Слева сверху</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2478100401" title="Клик — скопировать">A 247 810 04 01</td><td>Консоль (CONSOLE)</td><td>2</td><td>Справа вверху</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2478100401" title="Клик — скопировать">A 247 810 04 01</td><td>Консоль (CONSOLE)</td><td>2</td><td>Справа вверху</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2478100601" title="Клик — скопировать">A 247 810 06 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Спереди слева сверху</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2478100801" title="Клик — скопировать">A 247 810 08 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Спереди слева сверху</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2478100701" title="Клик — скопировать">A 247 810 07 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Спереди справа сверху</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2478100901" title="Клик — скопировать">A 247 810 09 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Спереди справа сверху</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0109902504" title="Клик — скопировать">A 010 990 25 04</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>1</td><td>Кронштейн (левый) к остову кузова; M6X17,2</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0109902504" title="Клик — скопировать">A 010 990 25 04</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>1</td><td>Кронштейн (правый) к остову кузова; M6X17,2</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2478101101" title="Клик — скопировать">A 247 810 11 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Сзади слева вверху</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2478101201" title="Клик — скопировать">A 247 810 12 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Сзади справа вверху</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0009906156" title="Клик — скопировать">A 000 990 61 56</td><td>CAGE NUT</td><td>2</td><td>Держатель слева</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0009906156" title="Клик — скопировать">A 000 990 61 56</td><td>CAGE NUT</td><td>2</td><td>Держатель справа</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000005944" title="Клик — скопировать">N 000000 005944</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Кронштейн (левый) к остову кузова; M8X25</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000005944" title="Клик — скопировать">N 000000 005944</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Кронштейн (правый) к остову кузова; M8X25</td></tr></tbody></table>
   </div>
 </div>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200286" title="Клик — скопировать">A 107 620 02 86</td><td>- КРОНШТЕЙН</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200686" title="Клик — скопировать">A 107 620 06 86</td><td>- Поперечина</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076200967" title="Клик — скопировать">A 107 620 09 67</td><td>- Ответная пластина замка</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1076200314" title="Клик — скопировать">A 107 620 03 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1076200414" title="Клик — скопировать">A 107 620 04 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>СПЕРЕДИ СПРАВА</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1076201514" title="Клик — скопировать">A 107 620 15 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>СПЕРЕДИ СПРАВА</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076200372" title="Клик — скопировать">A 107 620 03 72</td><td>- Усиливающий элемент</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200536" title="Клик — скопировать">A 107 620 05 36</td><td>	- ДЕТАЛЬ УПРАВЛЕНИЯ</td><td>-</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200736" title="Клик — скопировать">A 107 620 07 36</td><td>	- Проводящая деталь</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200636" title="Клик — скопировать">A 107 620 06 36</td><td>	- ДЕТАЛЬ УПРАВЛЕНИЯ</td><td>-</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200836" title="Клик — скопировать">A 107 620 08 36</td><td>	- Проводящая деталь</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076260133" title="Клик — скопировать">A 107 626 01 33</td><td>- СКОБА</td><td>1</td><td>(TOWING BRACKET) ON RIGHT FRONT SIDE MEMBER</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076260040" title="Клик — скопировать">A 107 626 00 40</td><td>Крышка</td><td>1</td><td>ЗАМОК КАПОТА</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0009873360" title="Клик — скопировать">A 000 987 33 60</td><td>ПОДКЛАДНАЯ РЕЗИНА</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076260097" title="Клик — скопировать">A 107 626 00 97</td><td>ПОДКЛАДКА</td><td>1</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N007985006128" title="Клик — скопировать">N 007985 006128</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1076230419" title="Клик — скопировать">A 107 623 04 19</td><td>Распорка</td><td>1</td><td>МЕЖДУ ТРАВЕРСОЙ СПЕРЕДИ И УСИЛИТ.СПЕРЕДИ В ЦЕНТРЕ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N007985006128" title="Клик — скопировать">N 007985 006128</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>1</td><td>6 MM</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N914126006001" title="Клик — скопировать">N 914126 006001</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N910105006002" title="Клик — скопировать">N 910105 006002</td><td>Винт с 6-гранной головкой</td><td>1</td><td>M6X12</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1159840022" title="Клик — скопировать">A 115 984 00 22</td><td>ПЛОСКАЯ ГАЙКА</td><td>-</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N913008006300" title="Клик — скопировать">N 913008 006300</td><td>Гайка</td><td>1</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076200185" title="Клик — скопировать">A 107 620 01 85</td><td>Распорка</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076200485" title="Клик — скопировать">A 107 620 04 85</td><td>РАСПОРКА</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076200285" title="Клик — скопировать">A 107 620 02 85</td><td>Распорка</td><td>1</td><td>BETWEEN STIFFENING AND END PIECE</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N914126006001" title="Клик — скопировать">N 914126 006001</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N910105006002" title="Клик — скопировать">N 910105 006002</td><td>Винт с 6-гранной головкой</td><td>4</td><td>M6X12</td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

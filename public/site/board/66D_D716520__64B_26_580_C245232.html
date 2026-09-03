@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1683600330" title="Клик — скопировать">A 168 360 03 30</td><td>- ВИЛКА ПЕРЕКЛЮЧЕНИЯ</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1683600730" title="Клик — скопировать">A 168 360 07 30</td><td>- Вилка перекл.передач (SHIFT FORK)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1693600238" title="Клик — скопировать">A 169 360 02 38</td><td>- В.упр.перекл.п.,вн.кор.п.</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1693600438" title="Клик — скопировать">A 169 360 04 38</td><td>- В.упр.перекл.п.,вн.кор.п. (GEARSHIFT SHAFT)</td><td>1</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009930161" title="Клик — скопировать">A 000 993 01 61</td><td>	- Двойной шаровой подпятник (DOUBLE BALL SOCKET)</td><td>1</td><td>ВАЛ ПЕРЕКЛЮЧЕНИЯ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1685450114" title="Клик — скопировать">A 168 545 01 14</td><td>	- Переключатель (SWITCH)</td><td>1</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0289977648" title="Клик — скопировать">A 028 997 76 48</td><td>	- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ ФОНАРЕЙ ЗАДНЕГО ХОДА</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="N000000001118" title="Клик — скопировать">N 000000 001118</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>M6X28; M6X28</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1695421018" title="Клик — скопировать">A 169 542 10 18</td><td>- ДАТЧИК</td><td>1</td><td>ФУНКЦИЯ ПУСКА-ОСТАНОВКИ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1699050800" title="Клик — скопировать">A 169 905 08 00</td><td>- Датчик хода (TRAVEL SENSOR)</td><td>1</td><td>ФУНКЦИЯ ПУСКА-ОСТАНОВКИ</td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2105402081" title="Клик — скопировать">A 210 540 20 81</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5-СТУП. S16/2; 2-PIN MQS</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5-СТУП. S16/2; 0.25-0.35 MM2 MQS</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0135454426" title="Клик — скопировать">A 013 545 44 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5-СТУП. S16/2; 0.5-0.75 MM2 MQS</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1683600330" title="Клик — скопировать">A 168 360 03 30</td><td>- ВИЛКА ПЕРЕКЛЮЧЕНИЯ</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1683600730" title="Клик — скопировать">A 168 360 07 30</td><td>- Вилка перекл.передач (SHIFT FORK)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1693600238" title="Клик — скопировать">A 169 360 02 38</td><td>- В.упр.перекл.п.,вн.кор.п.</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1693600438" title="Клик — скопировать">A 169 360 04 38</td><td>- В.упр.перекл.п.,вн.кор.п. (GEARSHIFT SHAFT)</td><td>1</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009930161" title="Клик — скопировать">A 000 993 01 61</td><td>	- Двойной шаровой подпятник (DOUBLE BALL SOCKET)</td><td>1</td><td>ВАЛ ПЕРЕКЛЮЧЕНИЯ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1685450114" title="Клик — скопировать">A 168 545 01 14</td><td>	- Переключатель (SWITCH)</td><td>1</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0289977648" title="Клик — скопировать">A 028 997 76 48</td><td>	- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ ФОНАРЕЙ ЗАДНЕГО ХОДА</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="N000000001118" title="Клик — скопировать">N 000000 001118</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>M6X28; M6X28</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1695421018" title="Клик — скопировать">A 169 542 10 18</td><td>- ДАТЧИК</td><td>1</td><td>ФУНКЦИЯ ПУСКА\-ОСТАНОВКИ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1699050800" title="Клик — скопировать">A 169 905 08 00</td><td>- Датчик хода (TRAVEL SENSOR)</td><td>1</td><td>ФУНКЦИЯ ПУСКА\-ОСТАНОВКИ</td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2105402081" title="Клик — скопировать">A 210 540 20 81</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5\-СТУП. S16/2; 2\-PIN MQS</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5\-СТУП. S16/2; 0.25\-0.35 MM2 MQS</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0135454426" title="Клик — скопировать">A 013 545 44 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ВЫКЛ. СВЕТА ЗАДН. ХОДА 5\-СТУП. S16/2; 0.5\-0.75 MM2 MQS</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 13 · подписано на схемах: 13 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

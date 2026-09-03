@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 7</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 7
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="500"><td>500</td><td class="pn" data-raw="A6541422200" title="Клик — скопировать">A 654 142 22 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Система выпуска ОГ</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A6541422400" title="Клик — скопировать">A 654 142 24 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Система выпуска ОГ</td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A0009881700" title="Клик — скопировать">A 000 988 17 00</td><td>- Зажимная скоба (CLAMPING BRACKET)</td><td>2</td><td>К экрану</td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A0009881700" title="Клик — скопировать">A 000 988 17 00</td><td>- Зажимная скоба (CLAMPING BRACKET)</td><td>2</td><td>К экрану</td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A6541422600" title="Клик — скопировать">A 654 142 26 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Система выпуска ОГ</td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A6541422800" title="Клик — скопировать">A 654 142 28 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Система выпуска ОГ</td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Экран к блоку цилиндров; M6X12</td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Экран к картеру газораспределительного механизма; M6X12</td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A2053326200" title="Клик — скопировать">A 205 332 62 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Редуктор переднего моста</td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A2573320000" title="Клик — скопировать">A 257 332 00 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Редуктор переднего моста</td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A2573320300" title="Клик — скопировать">A 257 332 03 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Редуктор переднего моста</td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A2573350500" title="Клик — скопировать">A 257 335 05 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Экран к редуктору переднего моста</td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A2573350600" title="Клик — скопировать">A 257 335 06 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Экран к редуктору переднего моста</td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="N000000000276" title="Клик — скопировать">N 000000 000276</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление кронштейна теплозащитного экрана; M8X20</td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление кронштейна теплозащитного экрана; M6X19</td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="N000000004310" title="Клик — скопировать">N 000000 004310</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>Крепление экрана; M6X10</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

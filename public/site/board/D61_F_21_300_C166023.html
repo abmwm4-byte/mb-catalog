@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="200"><td>200</td><td class="pn" data-raw="A6420105667" title="Клик — скопировать">A 642 010 56 67</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A6420105667" title="Клик — скопировать">A 642 010 56 67</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A6420105012" title="Клик — скопировать">A 642 010 50 12</td><td>Защитный кожух двигателя (MOTORABDECKUNG)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N910143006002" title="Клик — скопировать">N 910143 006002</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>КРЫШКА КРОНШТЕЙНА; M6X20</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N910143006002" title="Клик — скопировать">N 910143 006002</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>КРЫШКА КРОНШТЕЙНА; M6X20</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A6420101740" title="Клик — скопировать">A 642 010 17 40</td><td>Держатель (HALTER)</td><td>1</td><td>УКРЫВАЮЩИЙ ЩИТОК НА ДВИГАТЕЛЕ</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A6420101740" title="Клик — скопировать">A 642 010 17 40</td><td>Держатель (HALTER)</td><td>1</td><td>УКРЫВАЮЩИЙ ЩИТОК НА ДВИГАТЕЛЕ</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A6420105112" title="Клик — скопировать">A 642 010 51 12</td><td>Держатель (HALTER)</td><td>1</td><td>УКРЫВАЮЩИЙ ЩИТОК НА ДВИГАТЕЛЕ</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A6040940085" title="Клик — скопировать">A 604 094 00 85</td><td>- Эластомерная опора (ELASTOMERLAGER)</td><td>1</td><td>К КРОНШТЕЙНУ</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="N000000002754" title="Клик — скопировать">N 000000 002754</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>КРОНШТЕЙН К КРЫШКЕ ГРМ; M6X69</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A6420961168" title="Клик — скопировать">A 642 096 11 68</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>ТУРБОНАГНЕТАТЕЛЬ</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ ЗАЩИТНОГО ЭКРАНА; M6X15</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ ЗАЩИТНОГО ЭКРАНА; M6X19</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A6421510345" title="Клик — скопировать">A 642 151 03 45</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>ДЛЯ СТАРТЕРА</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A6421510245" title="Клик — скопировать">A 642 151 02 45</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>ДЛЯ СТАРТЕРА</td></tr><tr data-pos="285"><td>285</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>1</td><td>КРЕПЛЕНИЕ ЗАЩИТНОГО ЭКРАНА; M6</td></tr></tbody></table>
   </div>
 </div>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

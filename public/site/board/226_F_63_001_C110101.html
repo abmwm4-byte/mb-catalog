@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>63 БОКОВИНА / 001 БОКОВИНЫ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C110101">226 -/-</a> → 001 БОКОВИНЫ</div>
+<h1>001 БОКОВИНЫ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B63001000011.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1106301321" title="Клик — скопировать">A 110 630 13 21</td><td>ЗАДНЕЕ КРЫЛО</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1106371309" title="Клик — скопировать">A 110 637 13 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1106371509" title="Клик — скопировать">A 110 637 15 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>ПЕРЕДН. ЧАСТЬ СЛЕВА</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1106370135" title="Клик — скопировать">A 110 637 01 35</td><td>ЛОНЖЕРОН</td><td>1</td><td>ВНИЗУ СЛЕВА</td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1106370136" title="Клик — скопировать">A 110 637 01 36</td><td>КОНЦЕВОЙ СЕГМЕНТ</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1106301310" title="Клик — скопировать">A 110 630 13 10</td><td>СТОЙКА</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A1106300120" title="Клик — скопировать">A 110 630 01 20</td><td>- ПОДШИПНИК</td><td>1</td><td>СЛЕВА,ДЛЯ ОГРАНИЧ.ДВЕРИ</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1106300711" title="Клик — скопировать">A 110 630 07 11</td><td>СТОЙКА</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1106300520" title="Клик — скопировать">A 110 630 05 20</td><td>- ПОДШИПНИК</td><td>2</td><td>КРОНШТЕЙН ДВЕРИ</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1107330042" title="Клик — скопировать">A 110 733 00 42</td><td>- ШАРНИР</td><td>2</td><td>ЗАДНЯЯ ДВЕРЬ СВЕРХУ</td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1107330045" title="Клик — скопировать">A 110 733 00 45</td><td>- ШАРНИР</td><td>2</td><td>ЗАДН. ДВЕРЬ СНИЗУ</td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="H101207230082" title="Клик — скопировать">H 10 120 723 00 82</td><td>- ШАЙБА</td><td>8</td><td></td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1107230052" title="Клик — скопировать">A 110 723 00 52</td><td>- ПАЛЕЦ ШАРНИРА</td><td>-</td><td></td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1157230015" title="Клик — скопировать">A 115 723 00 15</td><td>- Шарнирный болт</td><td>4</td><td></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009970488" title="Клик — скопировать">A 000 997 04 88</td><td>- Пресс-масленка</td><td>4</td><td></td></tr><tr data-pos="61"><td>61</td><td class="pn" data-raw="A1106370145" title="Клик — скопировать">A 110 637 01 45</td><td>РАМА КРЫШИ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1106370147" title="Клик — скопировать">A 110 637 01 47</td><td>РАМА КРЫШИ</td><td>1</td><td>СНАРУЖИ СЛЕВА</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1106370515" title="Клик — скопировать">A 110 637 05 15</td><td>УСИЛИТЕЛЬ</td><td>2</td><td>СТОЙКА ПЕРЕД.СТЕНКИ СВЕРХУ</td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1106370715" title="Клик — скопировать">A 110 637 07 15</td><td>УСИЛИТЕЛЬ</td><td>2</td><td>REAR PILLAR,TOP</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1106301169" title="Клик — скопировать">A 110 630 11 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td>REAR PILLAR,TOP</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1106301169" title="Клик — скопировать">A 110 630 11 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1106301169" title="Клик — скопировать">A 110 630 11 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1106370176" title="Клик — скопировать">A 110 637 01 76</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td>СЗАДИ СНАРУЖИ СЛЕВА</td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1106300113" title="Клик — скопировать">A 110 630 01 13</td><td>- СТОЙКА</td><td>1</td><td>СНАРУЖИ СЛЕВА</td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="H101207610236" title="Клик — скопировать">H 10 120 761 02 36</td><td>	- ПЛАСТИНА</td><td>2</td><td></td></tr><tr data-pos="91"><td>91</td><td class="pn" data-raw="A1106300313" title="Клик — скопировать">A 110 630 03 13</td><td>- СТОЙКА</td><td>1</td><td>ВНУТРИ СЛЕВА</td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="A1106370146" title="Клик — скопировать">A 110 637 01 46</td><td>РАМА КРЫШИ</td><td>1</td><td>ВНУТРИ СЛЕВА</td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A1106370142" title="Клик — скопировать">A 110 637 01 42</td><td>НИША</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1106300228" title="Клик — скопировать">A 110 630 02 28</td><td>РАСПОРКА</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1106300322" title="Клик — скопировать">A 110 630 03 22</td><td>КОНЦЕВОЙ СЕГМЕНТ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1106300720" title="Клик — скопировать">A 110 630 07 20</td><td>ПОДШИПНИК</td><td>1</td><td>ВНИЗУ СЛЕВА</td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="A1106300028" title="Клик — скопировать">A 110 630 00 28</td><td>РАСПОРКА</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301421" title="Клик — скопировать">A 110 630 14 21</td><td>ЗАДНЕЕ КРЫЛО</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106371409" title="Клик — скопировать">A 110 637 14 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106371609" title="Клик — скопировать">A 110 637 16 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009903897" title="Клик — скопировать">A 000 990 38 97</td><td>- ЗАКЛЕПКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N910002004201" title="Клик — скопировать">N 910002 004201</td><td>- Заклепка</td><td>70</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370235" title="Клик — скопировать">A 110 637 02 35</td><td>ЛОНЖЕРОН</td><td>1</td><td>СНИЗУ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370236" title="Клик — скопировать">A 110 637 02 36</td><td>КОНЦЕВОЙ СЕГМЕНТ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300510" title="Клик — скопировать">A 110 630 05 10</td><td>СТОЙКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300910" title="Клик — скопировать">A 110 630 09 10</td><td>СТОЙКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300610" title="Клик — скопировать">A 110 630 06 10</td><td>СТОЙКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301010" title="Клик — скопировать">A 110 630 10 10</td><td>СТОЙКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301410" title="Клик — скопировать">A 110 630 14 10</td><td>СТОЙКА</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300220" title="Клик — скопировать">A 110 630 02 20</td><td>- ПОДШИПНИК</td><td>1</td><td>СПРАВА,ДЛЯ ОГРАНИЧ.ДВЕРИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300811" title="Клик — скопировать">A 110 630 08 11</td><td>СТОЙКА</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370245" title="Клик — скопировать">A 110 637 02 45</td><td>РАМА КРЫШИ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370247" title="Клик — скопировать">A 110 637 02 47</td><td>РАМА КРЫШИ</td><td>1</td><td>СНАРУЖИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300769" title="Клик — скопировать">A 110 630 07 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300969" title="Клик — скопировать">A 110 630 09 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300869" title="Клик — скопировать">A 110 630 08 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301069" title="Клик — скопировать">A 110 630 10 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301269" title="Клик — скопировать">A 110 630 12 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301269" title="Клик — скопировать">A 110 630 12 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301269" title="Клик — скопировать">A 110 630 12 69</td><td>БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370276" title="Клик — скопировать">A 110 637 02 76</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>1</td><td>СЗАДИ СНАРУЖИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301113" title="Клик — скопировать">A 110 630 11 13</td><td>- СТОЙКА</td><td>1</td><td>СНАРУЖИ СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106301213" title="Клик — скопировать">A 110 630 12 13</td><td>- СТОЙКА</td><td>1</td><td>СНАРУЖИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300213" title="Клик — скопировать">A 110 630 02 13</td><td>- СТОЙКА</td><td>1</td><td>СНАРУЖИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300413" title="Клик — скопировать">A 110 630 04 13</td><td>- СТОЙКА</td><td>1</td><td>ВНУТРИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009875451" title="Клик — скопировать">A 000 987 54 51</td><td>УПЛОТН. РЕЗИНА</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370246" title="Клик — скопировать">A 110 637 02 46</td><td>РАМА КРЫШИ</td><td>1</td><td>ВНУТРИ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106370242" title="Клик — скопировать">A 110 637 02 42</td><td>НИША</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300422" title="Клик — скопировать">A 110 630 04 22</td><td>КОНЦЕВОЙ СЕГМЕНТ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106300820" title="Клик — скопировать">A 110 630 08 20</td><td>ПОДШИПНИК</td><td>1</td><td>СНИЗУ СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009943345" title="Клик — скопировать">A 000 994 33 45</td><td>предохранитель</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1409941045" title="Клик — скопировать">A 140 994 10 45</td><td>предохранитель</td><td>4</td><td>КРЫЛО СЗАДИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007976004203" title="Клик — скопировать">N 007976 004203</td><td>Шуруп</td><td>4</td><td>КРЫЛО СЗАДИ; 4.2X13</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137004202" title="Клик — скопировать">N 000137 004202</td><td>Пружинная шайба</td><td>4</td><td>КРЫЛО СЗАДИ</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 69 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B63001000011.png", "poses": ["6", "15", "19", "29", "31", "35", "37", "41", "45", "47", "49", "51", "54", "57", "61", "65", "71", "75", "77", "80", "84", "87", "91", "94", "96", "98", "101", "105", "109"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695000000" title="Клик — скопировать">A 169 500 00 00</td><td>Радиатор (COOLER)</td><td>1</td><td>ОХЛАД.НАДДУВ.ВОЗД.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695000900" title="Клик — скопировать">A 169 500 09 00</td><td>Охладитель наддув.воздуха (CHARGE AIR COOLER, AIR)</td><td>1</td><td>ОХЛАД.НАДДУВ.ВОЗД.</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0079934101" title="Клик — скопировать">A 007 993 41 01</td><td>- Стопорная пружина (CATCH SPRING)</td><td>1</td><td>НА РАДИАТОРЕ ВОЗДУХА НАДДУВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200301" title="Клик — скопировать">A 169 520 03 01</td><td>Трубопровод наддув. возд.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200401" title="Клик — скопировать">A 169 520 04 01</td><td>Трубопровод наддув. возд.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200701" title="Клик — скопировать">A 169 520 07 01</td><td>Патрубок впускной (AIR SUCTION PIPE)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0019916170" title="Клик — скопировать">A 001 991 61 70</td><td>Скоба (CLAMP)</td><td>4</td><td>НАДДУВ. ВОЗДУХОВОД</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1695280482" title="Клик — скопировать">A 169 528 04 82</td><td>Шланг наддув. воздуха (CHARGE AIR HOSE)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0289974248" title="Клик — скопировать">A 028 997 42 48</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>ВОЗДУШ. КАНАЛ СПРАВА И РАДИАТ. НАДДУВА</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0069972690" title="Клик — скопировать">A 006 997 26 90</td><td>Шланговый хомут (HOSE CLAMP W. WORM DRIVE)</td><td>1</td><td>ШЛАНГ НАДДУВ.ВОЗДУХА; 50-70/9 C7 W3</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695000000" title="Клик — скопировать">A 169 500 00 00</td><td>Радиатор (COOLER)</td><td>1</td><td>ОХЛАД.НАДДУВ.ВОЗД.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695000900" title="Клик — скопировать">A 169 500 09 00</td><td>Охладитель наддув.воздуха (CHARGE AIR COOLER, AIR)</td><td>1</td><td>ОХЛАД.НАДДУВ.ВОЗД.</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0079934101" title="Клик — скопировать">A 007 993 41 01</td><td>- Стопорная пружина (CATCH SPRING)</td><td>1</td><td>НА РАДИАТОРЕ ВОЗДУХА НАДДУВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200301" title="Клик — скопировать">A 169 520 03 01</td><td>Трубопровод наддув. возд.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200401" title="Клик — скопировать">A 169 520 04 01</td><td>Трубопровод наддув. возд.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1695200701" title="Клик — скопировать">A 169 520 07 01</td><td>Патрубок впускной (AIR SUCTION PIPE)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0019916170" title="Клик — скопировать">A 001 991 61 70</td><td>Скоба (CLAMP)</td><td>4</td><td>НАДДУВ. ВОЗДУХОВОД</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1695280482" title="Клик — скопировать">A 169 528 04 82</td><td>Шланг наддув. воздуха (CHARGE AIR HOSE)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0289974248" title="Клик — скопировать">A 028 997 42 48</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>ВОЗДУШ. КАНАЛ СПРАВА И РАДИАТ. НАДДУВА</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0069972690" title="Клик — скопировать">A 006 997 26 90</td><td>Шланговый хомут (HOSE CLAMP W. WORM DRIVE)</td><td>1</td><td>ШЛАНГ НАДДУВ.ВОЗДУХА; 50\-70/9 C7 W3</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

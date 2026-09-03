@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="29"><td>29</td><td class="pn" data-raw="A6512200607" title="Клик — скопировать">A 651 220 06 07</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A6452230141" title="Клик — скопировать">A 645 223 01 41</td><td>Строповочная проушина (LIFTING LUG)</td><td>1</td><td>Сзади слева</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A6452230041" title="Клик — скопировать">A 645 223 00 41</td><td>Строповочная проушина (LIFTING LUG)</td><td>1</td><td>Передн. лев.</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000000000270" title="Клик — скопировать">N 000000 000270</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Кронштейн опоры двигателя к блоку цилиндров</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N000000003853" title="Клик — скопировать">N 000000 003853</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Проушина для вывешивания сзади справа к головке блока цилиндров; M8X16</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N000000003853" title="Клик — скопировать">N 000000 003853</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Проушина для вывешивания спереди слева; M8X16</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000003853" title="Клик — скопировать">N 000000 003853</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Проушина для вывешивания сзади слева; M8X16</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2213150061" title="Клик — скопировать">A 221 315 00 61</td><td>Буксирная проушина (TOWING EYE)</td><td>1</td><td>К проушине для вывешивания сзади справа</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2223150000" title="Клик — скопировать">A 222 315 00 00</td><td>Буксирная проушина (TOWING EYE)</td><td>1</td><td>К проушине для вывешивания сзади справа</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

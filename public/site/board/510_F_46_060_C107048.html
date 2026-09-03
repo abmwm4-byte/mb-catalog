@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1079975482" title="Клик — скопировать">A 107 997 54 82</td><td>Шланг</td><td>1</td><td>НАСОС К РУЛ.МЕХАНИЗМУ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1269950220" title="Клик — скопировать">A 126 995 02 20</td><td>ХОМУТ</td><td>-</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1249950620" title="Клик — скопировать">A 124 995 06 20</td><td>хомут</td><td>1</td><td>ШЛАНГ ВЫС. ДАВЛ. НА ТРАВЕРСЕ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1269972182" title="Клик — скопировать">A 126 997 21 82</td><td>Шланг</td><td>1</td><td>ШЛАНГ ВЫС. ДАВЛ. НА ТРАВЕРСЕ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N007976005203" title="Клик — скопировать">N 007976 005203</td><td>Шуруп</td><td>1</td><td>ШЛАНГ ВЫС. ДАВЛ. НА ТРАВЕРСЕ</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1074601324" title="Клик — скопировать">A 107 460 13 24</td><td>Разветвитель трубы</td><td>1</td><td>РУЛ.МЕХАНИЗМ К ТРУБКЕ ОХЛАЖД.</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0009974752" title="Клик — скопировать">A 000 997 47 52</td><td>Шланг</td><td>NB</td><td>ТРУБКА ОХЛАЖДЕНИЯ К НАСОСУ 310 MM; 20X4MM</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0009974752" title="Клик — скопировать">A 000 997 47 52</td><td>Шланг</td><td>1</td><td>РУЛ.МЕХАНИЗМ К ТРУБКЕ ОХЛАЖД. 200mm; 20X4MM</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1079972382" title="Клик — скопировать">A 107 997 23 82</td><td>Шланг</td><td>2</td><td>(ЗАЩИТНЫЙ ШЛАНГ)</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0049977490" title="Клик — скопировать">A 004 997 74 90</td><td>связующее вещество</td><td>4</td><td>18.5 MM</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1074603724" title="Клик — скопировать">A 107 460 37 24</td><td>Трубка охлаждения</td><td>1</td><td>ТРУБКА ОХЛ.</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1079971181" title="Клик — скопировать">A 107 997 11 81</td><td>резиновая втулка</td><td>2</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N007976006204" title="Клик — скопировать">N 007976 006204</td><td>Шуруп</td><td>1</td><td>ТРУБА ОХЛ. НА ЛОНЖЕРОНЕ РАМЫ</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>1</td><td>ТРУБА ОХЛ. НА ЛОНЖЕРОНЕ РАМЫ; 6 MM</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1074602524" title="Клик — скопировать">A 107 460 25 24</td><td>ПРОВОД</td><td>1</td><td>ТРУБКА ОХЛАЖДЕНИЯ К НАСОСУ</td></tr></tbody></table>
   </div>
 </div>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

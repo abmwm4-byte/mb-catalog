@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076980101" title="Клик — скопировать">A 107 698 01 01</td><td>НАКЛАДКА ВОДООТВОДНАЯ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076980901" title="Клик — скопировать">A 107 698 09 01</td><td>Водоотводная планка</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076980201" title="Клик — скопировать">A 107 698 02 01</td><td>НАКЛАДКА ВОДООТВОДНАЯ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076981001" title="Клик — скопировать">A 107 698 10 01</td><td>Водоотводная планка</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N007982003203" title="Клик — скопировать">N 007982 003203</td><td>Шуруп</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N007982003238" title="Клик — скопировать">N 007982 003238</td><td>Шуруп</td><td>8</td><td>B3,5X13; 3.5X13</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076900197" title="Клик — скопировать">A 107 690 01 97</td><td>ПОДКЛАДКА</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076900797" title="Клик — скопировать">A 107 690 07 97</td><td>Подкладка</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076900297" title="Клик — скопировать">A 107 690 02 97</td><td>ПОДКЛАДКА</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076900897" title="Клик — скопировать">A 107 690 08 97</td><td>Подкладка</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076980180" title="Клик — скопировать">A 107 698 01 80</td><td>Декоративный элемент</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076980280" title="Клик — скопировать">A 107 698 02 80</td><td>Декоративный элемент</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076980121" title="Клик — скопировать">A 107 698 01 21</td><td>Подкладка</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076980221" title="Клик — скопировать">A 107 698 02 21</td><td>Подкладка</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076900071" title="Клик — скопировать">A 107 690 00 71</td><td>Крепежная пластина</td><td>2</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N009021004108" title="Клик — скопировать">N 009021 004108</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0949906308" title="Клик — скопировать">A 094 990 63 08</td><td>Шайба</td><td>2</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>Пружинное кольцо</td><td>-</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000934004006" title="Клик — скопировать">N 000934 004006</td><td>Гайка</td><td>2</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009887681" title="Клик — скопировать">A 000 988 76 81</td><td>Кнопка-застежка</td><td>14</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0009887581" title="Клик — скопировать">A 000 988 75 81</td><td>Кнопка-застежка</td><td>14</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N007981003214" title="Клик — скопировать">N 007981 003214</td><td>Шуруп</td><td>2</td><td>B3,9X9,5</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076980780" title="Клик — скопировать">A 107 698 07 80</td><td>Декоративный элемент</td><td>1</td><td>СТОЙКА ПЕРЕДН. СТЕНКИ СЛЕВА</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076980880" title="Клик — скопировать">A 107 698 08 80</td><td>Декоративный элемент</td><td>1</td><td>СТОЙКА ПЕРЕД. СТЕНКИ, СПРАВА</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1076980997" title="Клик — скопировать">A 107 698 09 97</td><td>ПОДКЛАДКА</td><td>-</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1076880096" title="Клик — скопировать">A 107 688 00 96</td><td>ПОДКЛАДКА</td><td>-</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1266980698" title="Клик — скопировать">A 126 698 06 98</td><td>УПЛОТНИТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1266980598" title="Клик — скопировать">A 126 698 05 98</td><td>УПЛОТНИТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1266981898" title="Клик — скопировать">A 126 698 18 98</td><td>Уплотнение</td><td>2</td><td>1170 MM</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N007982002219" title="Клик — скопировать">N 007982 002219</td><td>Шуруп</td><td>-</td><td></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N007982002212" title="Клик — скопировать">N 007982 002212</td><td>Шуруп</td><td>6</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1076900980" title="Клик — скопировать">A 107 690 09 80</td><td>Декоративный элемент</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1076901080" title="Клик — скопировать">A 107 690 10 80</td><td>Декоративный элемент</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A0039881078" title="Клик — скопировать">A 003 988 10 78</td><td>- Скоба</td><td>2</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A0009904733" title="Клик — скопировать">A 000 990 47 33</td><td>- болт</td><td>2</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N009021004108" title="Клик — скопировать">N 009021 004108</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0949906308" title="Клик — скопировать">A 094 990 63 08</td><td>Шайба</td><td>2</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="N000934004006" title="Клик — скопировать">N 000934 004006</td><td>Гайка</td><td>2</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="N040621004200" title="Клик — скопировать">N 040621 004200</td><td>Изоляционный шланг</td><td>2</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1076980384" title="Клик — скопировать">A 107 698 03 84</td><td>МОЛДИНГ</td><td>-</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1076901380" title="Клик — скопировать">A 107 690 13 80</td><td>Декоративный элемент</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1076980484" title="Клик — скопировать">A 107 698 04 84</td><td>МОЛДИНГ</td><td>-</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1076901480" title="Клик — скопировать">A 107 690 14 80</td><td>Декоративный элемент</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1076981484" title="Клик — скопировать">A 107 698 14 84</td><td>МОЛДИНГ</td><td>-</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1076901580" title="Клик — скопировать">A 107 690 15 80</td><td>МОЛДИНГ</td><td>-</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1076902480" title="Клик — скопировать">A 107 690 24 80</td><td>Декоративный элемент</td><td>1</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1076902480" title="Клик — скопировать">A 107 690 24 80</td><td>Декоративный элемент</td><td>1</td><td></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A1076980097" title="Клик — скопировать">A 107 698 00 97</td><td>Подкладка</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

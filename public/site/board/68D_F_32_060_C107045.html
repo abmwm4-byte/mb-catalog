@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073230165" title="Клик — скопировать">A 107 323 01 65</td><td>Торсион (TORSION BAR)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153200845" title="Клик — скопировать">A 115 320 08 45</td><td>Держатель (HOLDER)</td><td>2</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1153200047" title="Клик — скопировать">A 115 320 00 47</td><td>Ремкомплект торсиона (REPAIR KIT, TORSION BAR)</td><td>1</td><td>ПЕРЕДН. СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВ.</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1153230244" title="Клик — скопировать">A 115 323 02 44</td><td>- Резиновый буфер (BUFFER W CLEARANCE HOLE)</td><td>8</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1153230367" title="Клик — скопировать">A 115 323 03 67</td><td>- Диск (WINDOW)</td><td>8</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1143230585" title="Клик — скопировать">A 114 323 05 85</td><td>- Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1159900801" title="Клик — скопировать">A 115 990 08 01</td><td>- болт (SCREW)</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1159910140" title="Клик — скопировать">A 115 991 01 40</td><td>- Проставочная трубка (SPACER TUBE)</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008116" title="Клик — скопировать">N 000933 008116</td><td>- Винт</td><td>-</td><td>M8X28-8.8</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008337" title="Клик — скопировать">N 000933 008337</td><td>- Винт</td><td>4</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>- Пружинное кольцо (SPRING LOCK WASHER)</td><td>4</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N913002008004" title="Клик — скопировать">N 913002 008004</td><td>- Гайка</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ; M8</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073230165" title="Клик — скопировать">A 107 323 01 65</td><td>Торсион (TORSION BAR)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153200845" title="Клик — скопировать">A 115 320 08 45</td><td>Держатель (HOLDER)</td><td>2</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1153200047" title="Клик — скопировать">A 115 320 00 47</td><td>Ремкомплект торсиона (REPAIR KIT, TORSION BAR)</td><td>1</td><td>ПЕРЕДН. СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВ.</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1153230244" title="Клик — скопировать">A 115 323 02 44</td><td>- Резиновый буфер (BUFFER W CLEARANCE HOLE)</td><td>8</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1153230367" title="Клик — скопировать">A 115 323 03 67</td><td>- Диск (WINDOW)</td><td>8</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1143230585" title="Клик — скопировать">A 114 323 05 85</td><td>- Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1159900801" title="Клик — скопировать">A 115 990 08 01</td><td>- болт (SCREW)</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1159910140" title="Клик — скопировать">A 115 991 01 40</td><td>- Проставочная трубка (SPACER TUBE)</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008116" title="Клик — скопировать">N 000933 008116</td><td>- Винт</td><td>-</td><td>M8X28\-8.8</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008337" title="Клик — скопировать">N 000933 008337</td><td>- Винт</td><td>4</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>- Пружинное кольцо (SPRING LOCK WASHER)</td><td>4</td><td>СТАБИЛИЗ. НА РАМЕ</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N913002008004" title="Клик — скопировать">N 913002 008004</td><td>- Гайка</td><td>2</td><td>СТАБИЛИЗАТОР ПОПЕРЕЧН. УСТОЙЧИВОСТИ К ПЕР.МОСТУ; M8</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 12 · подписано на схемах: 12 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

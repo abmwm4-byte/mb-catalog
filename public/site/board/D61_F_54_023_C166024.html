@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0061519801" title="Клик — скопировать">A 006 151 98 01</td><td>Стартер (STARTER)</td><td>1</td><td>BOSCH</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6429060800" title="Клик — скопировать">A 642 906 08 00</td><td>Стартер</td><td>1</td><td>BOSCH</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6429061000" title="Клик — скопировать">A 642 906 10 00</td><td>Стартер (STARTER)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0021521410" title="Клик — скопировать">A 002 152 14 10</td><td>- Тяговое реле стартера (MAGNETSCHALTER STARTER)</td><td>1</td><td>Стартер TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0021521210" title="Клик — скопировать">A 002 152 12 10</td><td>- Тяговое реле стартера (MAGNETSCHALTER STARTER)</td><td>1</td><td>Стартер TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0021522710" title="Клик — скопировать">A 002 152 27 10</td><td>- Втягивающее реле (EINRUECKRELAIS)</td><td>1</td><td>Стартер TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0049902712" title="Клик — скопировать">A 004 990 27 12</td><td>- болт (SCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ ЭЛЕКТРОМАГНИТНОГО ВЫКЛЮЧАТЕЛЯ TO A 006 151 98 01</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0049902712" title="Клик — скопировать">A 004 990 27 12</td><td>- болт (SCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ ЭЛЕКТРОМАГНИТНОГО ВЫКЛЮЧАТЕЛЯ TO A 642 906 08 00</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0011512113" title="Клик — скопировать">A 001 151 21 13</td><td>- Шестерня стартера (STARTERRITZEL)</td><td>1</td><td>Стартер TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0011516313" title="Клик — скопировать">A 001 151 63 13</td><td>- Шестерня стартера (STARTERRITZEL)</td><td>1</td><td>Стартер TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0011515614" title="Клик — скопировать">A 001 151 56 14</td><td>- CARBON BRUSH SET (KOHLEBUERSTENSATZ)</td><td>1</td><td>Стартер TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0011517714" title="Клик — скопировать">A 001 151 77 14</td><td>- CARBON BRUSH SET (KOHLEBUERSTENSATZ)</td><td>1</td><td>Стартер TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0199811910" title="Клик — скопировать">A 019 981 19 10</td><td>- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ПРИВОДН. ОПОРА TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0199811910" title="Клик — скопировать">A 019 981 19 10</td><td>- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ПРИВОДН. ОПОРА TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0001516850" title="Клик — скопировать">A 000 151 68 50</td><td>- Металлокер. втулка (SINTERBUCHSE)</td><td>1</td><td>ОПОРА КОММУТАТОРА TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0001516850" title="Клик — скопировать">A 000 151 68 50</td><td>- Металлокер. втулка (SINTERBUCHSE)</td><td>1</td><td>ОПОРА КОММУТАТОРА TO A 642 906 08 00; BOSCH</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0001516415" title="Клик — скопировать">A 000 151 64 15</td><td>- Комплект якоря (TEILESATZ ANKER)</td><td>1</td><td>АНКЕР TO A 006 151 98 01; BOSCH</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="N910143010018" title="Клик — скопировать">N 910143 010018</td><td>Винт с 6-гр. глвк</td><td>2</td><td>СТАРТЕР К БЛОКУ ЦИЛИНДРОВ И КП; M10X90</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

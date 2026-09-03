@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055849100" title="Клик — скопировать">A 205 584 91 00</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>Audio 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055840003" title="Клик — скопировать">A 205 584 00 03</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>Audio 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055847503" title="Клик — скопировать">A 205 584 75 03</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>Audio 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842006" title="Клик — скопировать">A 205 584 20 06</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>Audio 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055845108" title="Клик — скопировать">A 205 584 51 08</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>AUDIO 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055846710" title="Клик — скопировать">A 205 584 67 10</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>Audio 20</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055849000" title="Клик — скопировать">A 205 584 90 00</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055849202" title="Клик — скопировать">A 205 584 92 02</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055846703" title="Клик — скопировать">A 205 584 67 03</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055843206" title="Клик — скопировать">A 205 584 32 06</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055846707" title="Клик — скопировать">A 205 584 67 07</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055843908" title="Клик — скопировать">A 205 584 39 08</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848709" title="Клик — скопировать">A 205 584 87 09</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055845510" title="Клик — скопировать">A 205 584 55 10</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055849312" title="Клик — скопировать">A 205 584 93 12</td><td>Доп. руководство (SUPPLEMENT)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055841611" title="Клик — скопировать">A 205 584 16 11</td><td>Брошюра с дополнениями</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055841711" title="Клик — скопировать">A 205 584 17 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND на английском языке</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055841811" title="Клик — скопировать">A 205 584 18 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND на французском языке</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055841911" title="Клик — скопировать">A 205 584 19 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842011" title="Клик — скопировать">A 205 584 20 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842111" title="Клик — скопировать">A 205 584 21 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842211" title="Клик — скопировать">A 205 584 22 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842311" title="Клик — скопировать">A 205 584 23 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842411" title="Клик — скопировать">A 205 584 24 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842511" title="Клик — скопировать">A 205 584 25 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842611" title="Клик — скопировать">A 205 584 26 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842711" title="Клик — скопировать">A 205 584 27 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842811" title="Клик — скопировать">A 205 584 28 11</td><td>Брошюра с дополнениями (SUPPLEMENTARY BOOKLET)</td><td>1</td><td>COMAND</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Руководство по эксплуатации системы AUDIO/COMAND, см. в КГ: 58/300</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Печатная версия, как опция к электронному руководству по эксплуатации, см. КГ98</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

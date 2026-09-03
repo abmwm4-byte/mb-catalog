@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160102413" title="Клик — скопировать">A 116 010 24 13</td><td>МАСЛЯНЫЙ КАРТЕР</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160102313" title="Клик — скопировать">A 116 010 23 13</td><td>МАСЛЯНЫЙ КАРТЕР</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160103913" title="Клик — скопировать">A 116 010 39 13</td><td>МАСЛЯНЫЙ КАРТЕР</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160104913" title="Клик — скопировать">A 116 010 49 13</td><td>МАСЛЯНЫЙ КАРТЕР</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160103813" title="Клик — скопировать">A 116 010 38 13</td><td>- МАСЛЯНЫЙ КАРТЕР</td><td>-</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160104713" title="Клик — скопировать">A 116 010 47 13</td><td>- МАСЛЯНЫЙ КАРТЕР</td><td>-</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1170100128" title="Клик — скопировать">A 117 010 01 28</td><td>- МАСЛЯНЫЙ КАРТЕР</td><td>1</td><td>НИЖНЯЯ ДЕТАЛЬ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1160140522" title="Клик — скопировать">A 116 014 05 22</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1190140822" title="Клик — скопировать">A 119 014 08 22</td><td>- Уплотнительная прокладка</td><td>1</td><td>НИЖНЯЯ ЧАСТЬ МАСЛ.КАРТЕРА К ВЕРХНЕЙ ЧАСТИ МАСЛ.КАРТЕРА</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N914020006000" title="Клик — скопировать">N 914020 006000</td><td>- Винт с неспадающей шайбой</td><td>-</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0019909312" title="Клик — скопировать">A 001 990 93 12</td><td>- БОЛТ</td><td>20</td><td>НИЖНЯЯ ЧАСТЬ МАСЛ.КАРТЕРА К ВЕРХНЕЙ ЧАСТИ МАСЛ.КАРТЕРА</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1309970032" title="Клик — скопировать">A 130 997 00 32</td><td>- болт</td><td>1</td><td>СЛИВ МАСЛА</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N007603026301" title="Клик — скопировать">N 007603 026301</td><td>- Уплотнительное кольцо</td><td>1</td><td>СЛИВ МАСЛА</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N007604010100" title="Клик — скопировать">N 007604 010100</td><td>- Резьбовая пробка</td><td>1</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N007603010100" title="Клик — скопировать">N 007603 010100</td><td>- Уплотнительное кольцо</td><td>1</td><td>10X13.5 AL</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N000908016000" title="Клик — скопировать">N 000908 016000</td><td>- Резьбовая пробка</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N007603016401" title="Клик — скопировать">N 007603 016401</td><td>- Уплотнительное кольцо</td><td>1</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1160140222" title="Клик — скопировать">A 116 014 02 22</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1160140822" title="Клик — скопировать">A 116 014 08 22</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>МАСЛ.КАРТЕР К БЛОКУ ЦИЛ. ДВИГ.</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N914005006004" title="Клик — скопировать">N 914005 006004</td><td>Винт с неспадающей шайбой</td><td>30</td><td>МАСЛ.КАРТЕР К БЛОКУ ЦИЛ. ДВИГ.</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1160100566" title="Клик — скопировать">A 116 010 05 66</td><td>НАПРАВЛ. ТРУБКА</td><td>1</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1160100266" title="Клик — скопировать">A 116 010 02 66</td><td>НАПРАВЛ. ТРУБКА</td><td>-</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1160100366" title="Клик — скопировать">A 116 010 03 66</td><td>НАПРАВЛ. ТРУБКА</td><td>-</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1160100466" title="Клик — скопировать">A 116 010 04 66</td><td>НАПРАВЛ. ТРУБКА</td><td>-</td><td></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1160180616" title="Клик — скопировать">A 116 018 06 16</td><td>НАПРАВЛ. ТРУБКА</td><td>1</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1160100872" title="Клик — скопировать">A 116 010 08 72</td><td>ЩУП МАСЛЯНЫЙ</td><td>1</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1160101172" title="Клик — скопировать">A 116 010 11 72</td><td>ЩУП МАСЛЯНЫЙ</td><td>1</td><td></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1369970041" title="Клик — скопировать">A 136 997 00 41</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

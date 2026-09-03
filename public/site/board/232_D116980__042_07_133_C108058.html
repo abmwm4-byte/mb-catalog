@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160700024" title="Клик — скопировать">A 116 070 00 24</td><td>ОПОРА ПОДШИПНИКА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160700124" title="Клик — скопировать">A 116 070 01 24</td><td>ОПОРА ПОДШИПНИКА</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160700324" title="Клик — скопировать">A 116 070 03 24</td><td>ОПОРА ПОДШИПНИКА</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160700021" title="Клик — скопировать">A 116 070 00 21</td><td>РЫЧАГ</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160700321" title="Клик — скопировать">A 116 070 03 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160700321" title="Клик — скопировать">A 116 070 03 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160700121" title="Клик — скопировать">A 116 070 01 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160700221" title="Клик — скопировать">A 116 070 02 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160700721" title="Клик — скопировать">A 116 070 07 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1160700621" title="Клик — скопировать">A 116 070 06 21</td><td>РЫЧАГ</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1160701121" title="Клик — скопировать">A 116 070 11 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1160700521" title="Клик — скопировать">A 116 070 05 21</td><td>РЫЧАГ</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1150720450" title="Клик — скопировать">A 115 072 04 50</td><td>втулка</td><td>4</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1150720450" title="Клик — скопировать">A 115 072 04 50</td><td>втулка</td><td>2</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N006799007007" title="Клик — скопировать">N 006799 007007</td><td>Стопорная шайба</td><td>2</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1800720393" title="Клик — скопировать">A 180 072 03 93</td><td>Ролик</td><td>1</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N006799004001" title="Клик — скопировать">N 006799 004001</td><td>Стопорная шайба</td><td>1</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N900331005093" title="Клик — скопировать">N 900331 005093</td><td>ПРИВОДНАЯ ШТАНГА</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>Гайка</td><td>1</td><td>M5</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0009911622" title="Клик — скопировать">A 000 991 16 22</td><td>Шаровой подпятник</td><td>-</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0009918922" title="Клик — скопировать">A 000 991 89 22</td><td>ПОДПЯТНИК ШАРОВОЙ</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0009930461" title="Клик — скопировать">A 000 993 04 61</td><td>Шаровой подпятник</td><td>1</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0000709875" title="Клик — скопировать">A 000 070 98 75</td><td>Штанга</td><td>1</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1160780541" title="Клик — скопировать">A 116 078 05 41</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0009972881" title="Клик — скопировать">A 000 997 28 81</td><td>Проходная втулка</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1160700175" title="Клик — скопировать">A 116 070 01 75</td><td>ТЯГА</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1160700375" title="Клик — скопировать">A 116 070 03 75</td><td>ТЯГА</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1102770550" title="Клик — скопировать">A 110 277 05 50</td><td>- втулка</td><td>1</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>- Гайка</td><td>1</td><td>M5</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1153000086" title="Клик — скопировать">A 115 300 00 86</td><td>- Шаровой подпятник</td><td>-</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0009918822" title="Клик — скопировать">A 000 991 88 22</td><td>- Шаровой подпятник</td><td>1</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N071805008300" title="Клик — скопировать">N 071805 008300</td><td>	- Пруж. стопорное кольцо</td><td>1</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N000125006421" title="Клик — скопировать">N 000125 006421</td><td>Шайба</td><td>1</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N000125006449" title="Клик — скопировать">N 000125 006449</td><td>Шайба</td><td>1</td><td></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N000094002059" title="Клик — скопировать">N 000094 002059</td><td>Шплинт</td><td>1</td><td>2X14 MM</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0949903005" title="Клик — скопировать">A 094 990 30 05</td><td>Шплинт</td><td>1</td><td>2,0X14</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0000706775" title="Клик — скопировать">A 000 070 67 75</td><td>ТЯГА</td><td>-</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

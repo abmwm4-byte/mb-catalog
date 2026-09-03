@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>78 СДВИЖНОЙ ЛЮК / 150 ПАНОРАМНАЯ КРЫША</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C247651">C247_FX -/-</a> → 150 ПАНОРАМНАЯ КРЫША</div>
+<h1>150 ПАНОРАМНАЯ КРЫША</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B78150000237 <span class="hint">(9)</span></button><button data-i="1" class="">B78150000238 <span class="hint">(32)</span></button><button data-i="2" class="">B78150000256 <span class="hint">(10)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B78150000237.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477802000" title="Клик — скопировать">A 247 780 20 00</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Передн.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477800401" title="Клик — скопировать">A 247 780 04 01</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Передн.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477805201" title="Клик — скопировать">A 247 780 52 01</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Передн.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477803000" title="Клик — скопировать">A 247 780 30 00</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Передн.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477800501" title="Клик — скопировать">A 247 780 05 01</td><td>Рама сдвижного люка</td><td>1</td><td>Передн.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2477805401" title="Клик — скопировать">A 247 780 54 01</td><td>Рама сдвижного люка</td><td>1</td><td>Передн.</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2477802200" title="Клик — скопировать">A 247 780 22 00</td><td>- Крышка сдвижного люка (SLIDING SUNROOF PANEL)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2477802500" title="Клик — скопировать">A 247 780 25 00</td><td>- Крышка сдвижного люка (SLIDING SUNROOF PANEL)</td><td>1</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009844029" title="Клик — скопировать">A 000 984 40 29</td><td>- болт (SCREW)</td><td>6</td><td>СТЕКЛЯННАЯ КРЫШКА НА МЕХАНИЗМЕ ОТКИДЫВАНИЯ; M5X10</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2137800400" title="Клик — скопировать">A 213 780 04 00</td><td>- Крышка внешнего люка (CAP, SLIDING-TILTING ROOF)</td><td>1</td><td>СТЕКЛЯННАЯ КРЫША СПЕРЕДИ НЕПОДВИЖНА</td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A2137820700" title="Клик — скопировать">A 213 782 07 00</td><td>	- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>СТЕКЛЯННАЯ КРЫША СПЕРЕДИ НЕПОДВИЖНА</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2137802700" title="Клик — скопировать">A 213 780 27 00</td><td>- Механизм сдвижного люка (SLIDING SUNROOF COMPONENT)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2137802800" title="Клик — скопировать">A 213 780 28 00</td><td>- Механизм сдвижного люка (SLIDING SUNROOF COMPONENT)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000002242" title="Клик — скопировать">N 000000 002242</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крепление механизма привода сдвижной панели крыши (левая сторона); M5X10</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000002242" title="Клик — скопировать">N 000000 002242</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крепление механизма привода сдвижной панели крыши (правая сторона); M5X10</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0069900712" title="Клик — скопировать">A 006 990 07 12</td><td>- Винт Torx с полукруглой (PAN HEAD SCREW)</td><td>1</td><td>Крепление механизма привода сдвижной панели крыши (левая сторона)</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0069900712" title="Клик — скопировать">A 006 990 07 12</td><td>- Винт Torx с полукруглой (PAN HEAD SCREW)</td><td>1</td><td>Крепление механизма привода сдвижной панели крыши (правая сторона)</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0008330271" title="Клик — скопировать">A 000 833 02 71</td><td>- болт (SCREW)</td><td>4</td><td>Крепление механизмов крыши</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2137803800" title="Клик — скопировать">A 213 780 38 00</td><td>- Сегмент рамы (FRAME SEGMENT)</td><td>1</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2137820900" title="Клик — скопировать">A 213 782 09 00</td><td>- Крепежная планка (MOUNTING RAIL)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2139067003" title="Клик — скопировать">A 213 906 70 03</td><td>- Двигатель с редуктором (GEAR MOTOR)</td><td>1</td><td>Шторка</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000002490" title="Клик — скопировать">N 000000 002490</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>КРЕПЛЕНИЕ ДВИГ.; M5X25</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2138203802" title="Клик — скопировать">A 213 820 38 02</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>ДЛЯ ПРИВОДНЫХ МОТОРОВ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2479062303" title="Клик — скопировать">A 247 906 23 03</td><td>- Двигатель с редуктором (GEAR MOTOR)</td><td>1</td><td>Стеклянный сдвижной люк</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1679066407" title="Клик — скопировать">A 167 906 64 07</td><td>- Двигатель с редуктором (GEAR MOTOR)</td><td>1</td><td>Стеклянный сдвижной люк</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1679066407" title="Клик — скопировать">A 167 906 64 07</td><td>- Двигатель с редуктором (GEAR MOTOR)</td><td>1</td><td>Стеклянный сдвижной люк</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N000000002490" title="Клик — скопировать">N 000000 002490</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>КРЕПЛЕНИЕ ДВИГ.; M5X25</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2477805400" title="Клик — скопировать">A 247 780 54 00</td><td>- Ветроотражатель (WIND DEFLECTOR)</td><td>1</td><td></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2137802900" title="Клик — скопировать">A 213 780 29 00</td><td>- Ветроотражатель (WIND DEFLECTOR)</td><td>1</td><td></td></tr><tr data-pos="175"><td>175</td><td class="pn" data-raw="N000000002696" title="Клик — скопировать">N 000000 002696</td><td>	- Винт (SCREW)</td><td>8</td><td>КРЕПЛЕНИЕ ОБТЕКАТЕЛЯ; 3X10</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2137804300" title="Клик — скопировать">A 213 780 43 00</td><td>- Петля обтекателя (HINGE, WIND DEFLECTOR)</td><td>2</td><td>ОБТЕКАТЕЛЬ (ЛЕВЫЙ И ПРАВЫЙ)</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2137821000" title="Клик — скопировать">A 213 782 10 00</td><td>- Опора ветроотражателя (BEARING, WIND DEFLECTOR)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2137821100" title="Клик — скопировать">A 213 782 11 00</td><td>- Опора ветроотражателя (BEARING, WIND DEFLECTOR)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2137820000" title="Клик — скопировать">A 213 782 00 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>ВНУТР.</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2137822000" title="Клик — скопировать">A 213 782 20 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2137820300" title="Клик — скопировать">A 213 782 03 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>СНАРУЖИ</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2137820600" title="Клик — скопировать">A 213 782 06 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2137820800" title="Клик — скопировать">A 213 782 08 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0059903812" title="Клик — скопировать">A 005 990 38 12</td><td>- Винт с плоской головкой (PAN HEAD SCREW WITH ISR)</td><td>2</td><td>ПОДЪЕМНЫЙ РЫЧАГ</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="N000000002242" title="Клик — скопировать">N 000000 002242</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>ПОДЪЕМНЫЙ РЫЧАГ; M5X10</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A0069900712" title="Клик — скопировать">A 006 990 07 12</td><td>- Винт Torx с полукруглой (PAN HEAD SCREW)</td><td>2</td><td>ПОДЪЕМНЫЙ РЫЧАГ</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2476909102" title="Клик — скопировать">A 247 690 91 02</td><td>- Декоративная планка (TRIM STRIP)</td><td>1</td><td>СТЕКЛЯННАЯ ПАНОРАМНАЯ КРЫША (ЛЕВАЯ СТОРОНА)</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2476909202" title="Клик — скопировать">A 247 690 92 02</td><td>- Декоративная планка (TRIM STRIP)</td><td>1</td><td>СТЕКЛЯННАЯ ПАНОРАМНАЯ КРЫША (ПРАВАЯ СТОРОНА)</td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A2229880102" title="Клик — скопировать">A 222 988 01 02</td><td>- Проставка (SPACER PIECE)</td><td>9</td><td>20X6X3 MM</td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0159902101" title="Клик — скопировать">A 015 990 21 01</td><td>- Винт 6-гр. с шайбой (HEXAGONAL HEAD SCREW)</td><td>4</td><td>КОНСОЛЬ НА СТЕКЛЯННОЙ ПАНОРАМНОЙ КРЫШЕ (ЛЕВАЯ И ПРАВАЯ)</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2477805900" title="Клик — скопировать">A 247 780 59 00</td><td>- Комплект троса (PARTS KIT, CABLE)</td><td>1</td><td>Шторка</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2477808800" title="Клик — скопировать">A 247 780 88 00</td><td>- Комплект троса (PARTS KIT, CABLE)</td><td>1</td><td>Шторка</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A2137802600" title="Клик — скопировать">A 213 780 26 00</td><td>Роликовая шторка на люке (ROLLER BLIND, SUNROOF)</td><td>1</td><td>Передн.</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A2477808900" title="Клик — скопировать">A 247 780 89 00</td><td>Роликовая шторка на люке (ROLLER BLIND, SUNROOF)</td><td>1</td><td>Передн.</td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A2477820600" title="Клик — скопировать">A 247 782 06 00</td><td>- Башмак (SLIDING SHOE)</td><td>1</td><td>Для шторки, спереди слева</td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A2477820500" title="Клик — скопировать">A 247 782 05 00</td><td>- Башмак (SLIDING SHOE)</td><td>1</td><td>Для шторки, спереди справа</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2477870000" title="Клик — скопировать">A 247 787 00 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>РАМКА СТЕКЛЯННОЙ КРЫШИ НА ЛЕВОЙ СТОЙКЕ КУЗОВА &quot;B&quot;</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2477870100" title="Клик — скопировать">A 247 787 01 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>РАМКА СТЕКЛЯННОЙ КРЫШИ НА ПРАВОЙ СТОЙКЕ КУЗОВА &quot;B&quot;</td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0159902101" title="Клик — скопировать">A 015 990 21 01</td><td>Винт 6-гр. с шайбой (HEXAGONAL HEAD SCREW)</td><td>4</td><td>КОНСОЛЬ НА РАМЕ</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009903008" title="Клик — скопировать">A 000 990 30 08</td><td>Винт с сфероцил. головкой (PAN HEAD SCREW)</td><td>4</td><td>СТЕКЛЯННАЯ ПАНОРАМНАЯ КРЫША НА ОСТОВЕ КУЗОВА; M6X25</td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A0129891271" title="Клик — скопировать">A 012 989 12 71</td><td>К-т 2-компонентного клея (PARTS KIT, 2C ADHESIVE)</td><td>1</td><td>СТЕКЛЯННАЯ ПАНОРАМНАЯ КРЫША НА ОСТОВЕ КУЗОВА</td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0009894905" title="Клик — скопировать">A 000 989 49 05</td><td>1-компонентный клей (1-COMPONENT ADHESIVE)</td><td>1</td><td>Стеклянная крыша спереди, неподвижная</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2477801200" title="Клик — скопировать">A 247 780 12 00</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Сзади</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2477803200" title="Клик — скопировать">A 247 780 32 00</td><td>Рама сдвижного люка (SLIDING SUNROOF FRAME)</td><td>1</td><td>Сзади</td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A2137821700" title="Клик — скопировать">A 213 782 17 00</td><td>- Уплотнение сдвижного люка (SEAL, SLIDING SUNROOF)</td><td>1</td><td>СПЕРЕДИ</td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A2137810900" title="Клик — скопировать">A 213 781 09 00</td><td>- Направляющая (GUIDE RAIL)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A2137811100" title="Клик — скопировать">A 213 781 11 00</td><td>- Направляющая (GUIDE RAIL)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="A2137821400" title="Клик — скопировать">A 213 782 14 00</td><td>- Крепежный уголок (ANGLE BRACKET)</td><td>4</td><td>КРЕПЛЕНИЕ НАПРАВЛЯЮЩЕЙ ПЛАНКИ СЛЕВА И СПРАВА</td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A0009903111" title="Клик — скопировать">A 000 990 31 11</td><td>- Винт с плоской головкой (FLAT HEAD SCREW)</td><td>4</td><td>КРЕПЛЕНИЕ КРЕПЁЖНОГО УГОЛКА; M5X14</td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="A2137820047" title="Клик — скопировать">A 213 782 00 47</td><td>- Буксировочный кронштейн (DRIVER BRACKET)</td><td>2</td><td>ШТОРКА</td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A0019846229" title="Клик — скопировать">A 001 984 62 29</td><td>- Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>4</td><td>КРЕПЛЕНИЕ ЗАДНЕЙ РУЛОННОЙ ШТОРКИ; 5X10</td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A2477805800" title="Клик — скопировать">A 247 780 58 00</td><td>Роликовая шторка на люке (ROLLER BLIND, SUNROOF)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="705"><td>705</td><td class="pn" data-raw="A2137821500" title="Клик — скопировать">A 213 782 15 00</td><td>- Башмак (SLIDING SHOE)</td><td>1</td><td>ДЛЯ ШТОРКИ, СЗАДИ СЛЕВА</td></tr><tr data-pos="705"><td>705</td><td class="pn" data-raw="A2137821600" title="Клик — скопировать">A 213 782 16 00</td><td>- Башмак (SLIDING SHOE)</td><td>1</td><td>ДЛЯ ШТОРКИ, СЗАДИ СПРАВА</td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A2477820400" title="Клик — скопировать">A 247 782 04 00</td><td>- Башмак (SLIDING SHOE)</td><td>1</td><td>Для шторки, сзади слева и справа</td></tr><tr data-pos="750"><td>750</td><td class="pn" data-raw="A2137822600" title="Клик — скопировать">A 213 782 26 00</td><td>Подпорка (SUPPORT)</td><td>2</td><td>РЕЗИНОВЫЙ БУФЕР (ЛЕВЫЙ И ПРАВЫЙ)</td></tr><tr data-pos="800"><td>800</td><td class="pn" data-raw="A0129891271" title="Клик — скопировать">A 012 989 12 71</td><td>К-т 2-компонентного клея (PARTS KIT, 2C ADHESIVE)</td><td>1</td><td>СТЕКЛЯННАЯ ПАНОРАМНАЯ КРЫША НА ОСТОВЕ КУЗОВА</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 72 · подписано на схемах: 72 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B78150000237.png", "poses": ["10", "330", "340", "400", "410", "420", "450", "500", "800"]}, {"png": "../../img_png/drawing_B78150000238.png", "poses": ["20", "30", "40", "45", "60", "70", "80", "90", "100", "110", "120", "130", "140", "150", "160", "170", "175", "180", "190", "200", "210", "220", "230", "240", "260", "270", "280", "300", "350", "360", "365", "460"]}, {"png": "../../img_png/drawing_B78150000256.png", "poses": ["510", "520", "530", "540", "560", "600", "700", "705", "710", "750"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2436801800" title="Клик — скопировать">A 243 680 18 00</td><td>Пол багажника (LOAD COMPARTMENT FLOOR)</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2436809901" title="Клик — скопировать">A 243 680 99 01</td><td>Пол багажника (LOAD COMPARTMENT FLOOR)</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2436802700" title="Клик — скопировать">A 243 680 27 00</td><td>Пол багажника (LOAD COMPARTMENT FLOOR)</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2436800002" title="Клик — скопировать">A 243 680 00 02</td><td>Пол багажника (LOAD COMPARTMENT FLOOR)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0996800184" title="Клик — скопировать">A 099 680 01 84</td><td>- Блокировка</td><td>1</td><td>Пол грузового отделения</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0996840027" title="Клик — скопировать">A 099 684 00 27</td><td>- Крепежная пластина (MOUNTING PLATE)</td><td>1</td><td>Блокирующее устройство</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N000000003307" title="Клик — скопировать">N 000000 003307</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Крепление замка</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2436803900" title="Клик — скопировать">A 243 680 39 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>Спереди</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000000007647" title="Клик — скопировать">N 000000 007647</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крепление консоли; M6X16</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление консоли слева и справа; M6</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление консоли слева и справа; M6</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2436804000" title="Клик — скопировать">A 243 680 40 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>Облицовка спереди</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2436803500" title="Клик — скопировать">A 243 680 35 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>Сзади слева</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>2</td><td>Крепление задней левой консоли</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>2</td><td>Крепление задней левой консоли</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2436803600" title="Клик — скопировать">A 243 680 36 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>Сзади справа</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>2</td><td>Крепление задней правой консоли</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>2</td><td>Крепление задней правой консоли</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2476841600" title="Клик — скопировать">A 247 684 16 00</td><td>Противоскользящий коврик (ANTI-SKID PAD)</td><td>1</td><td></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2476805307" title="Клик — скопировать">A 247 680 53 07</td><td>Защитный мат (PROTECTIVE MAT)</td><td>1</td><td></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2436803202" title="Клик — скопировать">A 243 680 32 02</td><td>Защитный мат (PROTECTIVE MAT)</td><td>1</td><td></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2436803202" title="Клик — скопировать">A 243 680 32 02</td><td>Защитный мат (PROTECTIVE MAT)</td><td>1</td><td></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2436803202" title="Клик — скопировать">A 243 680 32 02</td><td>Защитный мат (PROTECTIVE MAT)</td><td>1</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2438900000" title="Клик — скопировать">A 243 890 00 00</td><td>крепление (MOUNT)</td><td>1</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2438900100" title="Клик — скопировать">A 243 890 01 00</td><td>крепление (MOUNT)</td><td>1</td><td></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A2436941000" title="Клик — скопировать">A 243 694 10 00</td><td>Облицовка ниши баг.</td><td>1</td><td>Сзади</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A0009914695" title="Клик — скопировать">A 000 991 46 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>2</td><td>Крепление (левое и правое)</td></tr></tbody></table>
   </div>
 </div>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

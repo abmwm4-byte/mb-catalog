@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>67 ОКНА / Z  55.730 REAR WINDOW PANE HEATED ELECTRICALLY</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C111021">68G USA 250/280 SE/C Действительно для: CA, US</a> → Z  55.730 REAR WINDOW PANE HEATED ELECTRICALLY</div>
+<h1>Z  55.730 REAR WINDOW PANE HEATED ELECTRICALLY</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">S05573000001 <span class="hint">(11)</span></button><button data-i="1" class="">S05573000002 <span class="hint">(1)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S05573000001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0025455228" title="Клик — скопировать">A 002 545 52 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0045458628" title="Клик — скопировать">A 004 545 86 28</td><td>Штекер</td><td>-</td><td></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0075450028" title="Клик — скопировать">A 007 545 00 28</td><td>КОРПУС ШТЕК. ГНЕЗДА</td><td>-</td><td></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0155454928" title="Клик — скопировать">A 015 545 49 28</td><td>КОРПУС ШТЕК. ГНЕЗДА</td><td>1</td><td>3\-КОНТАКТ.; 4\-PIN</td></tr><tr data-pos="72"><td>72</td><td class="pn" data-raw="A0025454528" title="Клик — скопировать">A 002 545 45 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="72"><td>72</td><td class="pn" data-raw="A0055451328" title="Клик — скопировать">A 005 545 13 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="72"><td>72</td><td class="pn" data-raw="A0065458028" title="Клик — скопировать">A 006 545 80 28</td><td>CONTACT SUPPORT</td><td>1</td><td>ПЯТИПОЛЮСНЫЙ; 6\-PIN</td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0018214051" title="Клик — скопировать">A 001 821 40 51</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0018216151" title="Клик — скопировать">A 001 821 61 51</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>1</td><td>с  TELL\-TALE LAMP</td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1158201192" title="Клик — скопировать">A 115 820 11 92</td><td>КНОПКА</td><td>-</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1158201692" title="Клик — скопировать">A 115 820 16 92</td><td>КНОПКА</td><td>-</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1158202392" title="Клик — скопировать">A 115 820 23 92</td><td>Кнопка</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1108210059" title="Клик — скопировать">A 110 821 00 59</td><td>РОЗЕТКА</td><td>-</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1108210459" title="Клик — скопировать">A 110 821 04 59</td><td>Декоративная розетка</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1108210259" title="Клик — скопировать">A 110 821 02 59</td><td>Декоративная розетка</td><td>1</td><td></td></tr><tr data-pos="108"><td>108</td><td class="pn" data-raw="A1158210403" title="Клик — скопировать">A 115 821 04 03</td><td>Декоративная розетка</td><td>1</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005453001" title="Клик — скопировать">A 000 545 30 01</td><td>БЛОК ПРЕДОХРАНИТЕЛЕЙ</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005456301" title="Клик — скопировать">A 000 545 63 01</td><td>БЛОК ПРЕДОХРАНИТЕЛЕЙ</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005456201" title="Клик — скопировать">A 000 545 62 01</td><td>БЛОК ПРЕДОХРАНИТЕЛЕЙ</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005459901" title="Клик — скопировать">A 000 545 99 01</td><td>Закр. блок предохр.</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005456201" title="Клик — скопировать">A 000 545 62 01</td><td>БЛОК ПРЕДОХРАНИТЕЛЕЙ</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005459901" title="Клик — скопировать">A 000 545 99 01</td><td>Закр. блок предохр.</td><td>1</td><td></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0005461841" title="Клик — скопировать">A 000 546 18 41</td><td>Кабельный соединитель</td><td>-</td><td></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0005467041" title="Клик — скопировать">A 000 546 70 41</td><td>Кабельный соединитель</td><td>1</td><td></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009880227" title="Клик — скопировать">A 000 988 02 27</td><td>КРЕПЕЖН. ВТУЛКА</td><td>-</td><td></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1089880027" title="Клик — скопировать">A 108 988 00 27</td><td>Отрезок шланга</td><td>1</td><td></td></tr><tr data-pos="175"><td>175</td><td class="pn" data-raw="A1149970190" title="Клик — скопировать">A 114 997 01 90</td><td>Кабельная стяжка</td><td>2</td><td>80mm</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0019887778" title="Клик — скопировать">A 001 988 77 78</td><td>СКОБА</td><td>-</td><td></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009881778" title="Клик — скопировать">A 000 988 17 78</td><td>СКОБА</td><td>2</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1119972381" title="Клик — скопировать">A 111 997 23 81</td><td>КАБ. ВТУЛКА</td><td>-</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0089971781" title="Клик — скопировать">A 008 997 17 81</td><td>втулка</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116705380" title="Клик — скопировать">A 111 670 53 80</td><td>ЗАДНЕЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116785210" title="Клик — скопировать">A 111 678 52 10</td><td>ЗАЩИТНОЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116785410" title="Клик — скопировать">A 111 678 54 10</td><td>ЗАЩИТНОЕ СТЕКЛО</td><td>1</td><td>ЭЛ.ОБОГРЕВ,ПРОЗРАЧ.,МНОГОСЛОЙ.БЕЗОПАС.СТЕКЛО</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116705580" title="Клик — скопировать">A 111 670 55 80</td><td>ЗАДНЕЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116785310" title="Клик — скопировать">A 111 678 53 10</td><td>ЗАЩИТНОЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116785710" title="Клик — скопировать">A 111 678 57 10</td><td>ЗАЩИТНОЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116785510" title="Клик — скопировать">A 111 678 55 10</td><td>ЗАЩИТНОЕ СТЕКЛО</td><td>1</td><td>ELECTRICALLY HEATED, COMPOUND GLASS, HEAT\-ABSORBING</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116705880" title="Клик — скопировать">A 111 670 58 80</td><td>ЗАДНЕЕ СТЕКЛО</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116705980" title="Клик — скопировать">A 111 670 59 80</td><td>ДЕТАЛИ АКСЕССУАРОВ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1156701481" title="Клик — скопировать">A 115 670 14 81</td><td>ДЕТАЛИ АКСЕССУАРОВ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0025455128" title="Клик — скопировать">A 002 545 51 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0045458628" title="Клик — скопировать">A 004 545 86 28</td><td>Штекер</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0075450028" title="Клик — скопировать">A 007 545 00 28</td><td>КОРПУС ШТЕК. ГНЕЗДА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0155454928" title="Клик — скопировать">A 015 545 49 28</td><td>КОРПУС ШТЕК. ГНЕЗДА</td><td>1</td><td>ЧЕТЫРЁХПОЛЮСНЫЙ; 4\-PIN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1008210051" title="Клик — скопировать">A 100 821 00 51</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1008210151" title="Клик — скопировать">A 100 821 01 51</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N072601012230" title="Клик — скопировать">N 072601 012230</td><td>- Лампа накаливания</td><td>1</td><td>12V\-1.2W</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N072601012800" title="Клик — скопировать">N 072601 012800</td><td>Лампа накаливания</td><td>1</td><td>12V/2W</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1108200392" title="Клик — скопировать">A 110 820 03 92</td><td>КНОПКА</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1108200992" title="Клик — скопировать">A 110 820 09 92</td><td>КНОПКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1108200892" title="Клик — скопировать">A 110 820 08 92</td><td>КНОПКА</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158200192" title="Клик — скопировать">A 115 820 01 92</td><td>КНОПКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158201592" title="Клик — скопировать">A 115 820 15 92</td><td>КНОПКА</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007976005202" title="Клик — скопировать">N 007976 005202</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>2</td><td>6 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007985004125" title="Клик — скопировать">N 007985 004125</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>Пружинное кольцо</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005458234" title="Клик — скопировать">A 000 545 82 34</td><td>предохранитель</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N072581008101" title="Клик — скопировать">N 072581 008101</td><td>Плавкая вставка</td><td>1</td><td>*** 8A</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005454334" title="Клик — скопировать">A 000 545 43 34</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005458334" title="Клик — скопировать">A 000 545 83 34</td><td>предохранитель</td><td>1</td><td>*** 16</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981004337" title="Клик — скопировать">N 007981 004337</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007985004125" title="Клик — скопировать">N 007985 004125</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>Пружинное кольцо</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981004219" title="Клик — скопировать">N 007981 004219</td><td>Шуруп</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981003241" title="Клик — скопировать">N 007981 003241</td><td>Шуруп</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981003246" title="Клик — скопировать">N 007981 003246</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>Пружинное кольцо</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1109971281" title="Клик — скопировать">A 110 997 12 81</td><td>резиновая втулка</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1369950037" title="Клик — скопировать">A 136 995 00 37</td><td>хомут</td><td>-</td><td></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 75 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05573000001.png", "poses": ["70", "82", "95", "100", "108", "140", "158", "170", "175", "180", "185"]}, {"png": "../../img_png/drawing_S05573000002.png", "poses": ["72"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

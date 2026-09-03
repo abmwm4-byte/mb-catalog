@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1089201320" title="Клик — скопировать">A 108 920 13 20</td><td>ПОДУШКИ ЗАДНИХ СИДЕНИЙ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1089200322" title="Клик — скопировать">A 108 920 03 22</td><td>- РАМА ПОДУШКИ</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1089240414" title="Клик — скопировать">A 108 924 04 14</td><td>- НАКЛАДКА</td><td>1</td><td></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0009842061" title="Клик — скопировать">A 000 984 20 61</td><td>- Скоба</td><td>3</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1089200346" title="Клик — скопировать">A 108 920 03 46</td><td>- ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A1089200014" title="Клик — скопировать">A 108 920 00 14</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1089203330" title="Клик — скопировать">A 108 920 33 30</td><td>СПИНКА СИДЕНЬЯ</td><td>1</td><td></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1089200434" title="Клик — скопировать">A 108 920 04 34</td><td>РАМА СПИНКИ</td><td>1</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1089240816" title="Клик — скопировать">A 108 924 08 16</td><td>- НАКЛАДКА</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1089201447" title="Клик — скопировать">A 108 920 14 47</td><td>- ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="69"><td>69</td><td class="pn" data-raw="A0009900148" title="Клик — скопировать">A 000 990 01 48</td><td>Диск</td><td>2</td><td>REAR BACKREST TO REAR BODY PANEL</td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>2</td><td>REAR BACKREST TO REAR BODY PANEL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089201120" title="Клик — скопировать">A 108 920 11 20</td><td>ПОДУШКИ ЗАДНИХ СИДЕНИЙ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200122" title="Клик — скопировать">A 108 920 01 22</td><td>- РАМА ПОДУШКИ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200222" title="Клик — скопировать">A 108 920 02 22</td><td>- РАМА ПОДУШКИ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089240314" title="Клик — скопировать">A 108 924 03 14</td><td>- НАКЛАДКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009842061" title="Клик — скопировать">A 000 984 20 61</td><td>- Скоба</td><td>10</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200302" title="Клик — скопировать">A 108 920 03 02</td><td>НАКЛАДКА ПОДУШКИ СИДЕНЬЯ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200214" title="Клик — скопировать">A 108 920 02 14</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200030" title="Клик — скопировать">A 108 920 00 30</td><td>СПИНКА СИДЕНЬЯ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200330" title="Клик — скопировать">A 108 920 03 30</td><td>СПИНКА СИДЕНЬЯ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009842061" title="Клик — скопировать">A 000 984 20 61</td><td>- Скоба</td><td>20</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1159730820" title="Клик — скопировать">A 115 973 08 20</td><td>- Подшипник</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N006799009001" title="Клик — скопировать">N 006799 009001</td><td>- Стопорная шайба</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0039880178" title="Клик — скопировать">A 003 988 01 78</td><td>- Зажимная скоба</td><td>10</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089200504" title="Клик — скопировать">A 108 920 05 04</td><td>НАКЛАДКА СПИНКИ</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

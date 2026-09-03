@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2054760501" title="Клик — скопировать">A 205 476 05 01</td><td>Обратный топливопровод (FUEL RETURN LINE)</td><td>1</td><td>Обратная магистраль</td></tr><tr data-pos="1100"><td>1100</td><td class="pn" data-raw="A2054760401" title="Клик — скопировать">A 205 476 04 01</td><td>Подводящий топливопровод (FUEL FEED LINE)</td><td>1</td><td>Подаюшая магистраль</td></tr><tr data-pos="1200"><td>1200</td><td class="pn" data-raw="A2054760501" title="Клик — скопировать">A 205 476 05 01</td><td>Обратный топливопровод (FUEL RETURN LINE)</td><td>1</td><td>Обратная магистраль</td></tr><tr data-pos="2000"><td>2000</td><td class="pn" data-raw="A2134700224" title="Клик — скопировать">A 213 470 02 24</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>Подаюшая магистраль</td></tr><tr data-pos="2010"><td>2010</td><td class="pn" data-raw="A6540900652" title="Клик — скопировать">A 654 090 06 52</td><td>Топливный фильтр (FUEL FILTER)</td><td>1</td><td>Под топливным баком</td></tr><tr data-pos="2020"><td>2020</td><td class="pn" data-raw="A6540920000" title="Клик — скопировать">A 654 092 00 00</td><td>- Фил. элемент топ. фильтра (FUEL FILTER ELEMENT)</td><td>1</td><td></td></tr><tr data-pos="2030"><td>2030</td><td class="pn" data-raw="A0029907917" title="Клик — скопировать">A 002 990 79 17</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Корпус; M16X20</td></tr><tr data-pos="2040"><td>2040</td><td class="pn" data-raw="A0009976000" title="Клик — скопировать">A 000 997 60 00</td><td>- Кольцевое уплотнение (FLAT SEALING RING)</td><td>1</td><td>К топливному фильтру</td></tr><tr data-pos="2050"><td>2050</td><td class="pn" data-raw="A6540780041" title="Клик — скопировать">A 654 078 00 41</td><td>Держатель (HOLDER)</td><td>1</td><td>Топливный фильтр</td></tr><tr data-pos="2060"><td>2060</td><td class="pn" data-raw="N000000004660" title="Клик — скопировать">N 000000 004660</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Топливный фильтр к держателю</td></tr><tr data-pos="2070"><td>2070</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>Крепление держателя; M6</td></tr><tr data-pos="2070"><td>2070</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>Крепление держателя; M6</td></tr><tr data-pos="2100"><td>2100</td><td class="pn" data-raw="A2134700403" title="Клик — скопировать">A 213 470 04 03</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>От топливного фильтра к разъему</td></tr><tr data-pos="2100"><td>2100</td><td class="pn" data-raw="A2134700464" title="Клик — скопировать">A 213 470 04 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>От топливного фильтра к разъему</td></tr><tr data-pos="2150"><td>2150</td><td class="pn" data-raw="A2054760401" title="Клик — скопировать">A 205 476 04 01</td><td>Подводящий топливопровод (FUEL FEED LINE)</td><td>1</td><td>Подаюшая магистраль</td></tr><tr data-pos="2200"><td>2200</td><td class="pn" data-raw="A2134702602" title="Клик — скопировать">A 213 470 26 02</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td>Подаюшая магистраль</td></tr><tr data-pos="2250"><td>2250</td><td class="pn" data-raw="A2054760501" title="Клик — скопировать">A 205 476 05 01</td><td>Обратный топливопровод (FUEL RETURN LINE)</td><td>1</td><td>Обратная магистраль</td></tr><tr data-pos="2300"><td>2300</td><td class="pn" data-raw="A2134702502" title="Клик — скопировать">A 213 470 25 02</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td>Обратная магистраль</td></tr><tr data-pos="2400"><td>2400</td><td class="pn" data-raw="A2384701300" title="Клик — скопировать">A 238 470 13 00</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>Обратная магистраль</td></tr><tr data-pos="2450"><td>2450</td><td class="pn" data-raw="A0049958277" title="Клик — скопировать">A 004 995 82 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>5</td><td>Крепление топливопровода</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

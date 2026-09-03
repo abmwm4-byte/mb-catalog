@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694701264" title="Клик — скопировать">A 169 470 12 64</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694702764" title="Клик — скопировать">A 169 470 27 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694702864" title="Клик — скопировать">A 169 470 28 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1694761326" title="Клик — скопировать">A 169 476 13 26</td><td>- Топливный шланг</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1694700575" title="Клик — скопировать">A 169 470 05 75</td><td>- Топливный шланг (FUEL HOSE)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>НАПОРН. ТРУБОПРОВ. НА ТОПЛ. БАКЕ; 13-14.5 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.; 13-14.5 MM</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ДИСТАНЦИР. ТОПЛИВОПРОВ.; 7,3 X 3 MM</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6524761136" title="Клик — скопировать">A 652 476 11 36</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6524761136" title="Клик — скопировать">A 652 476 11 36</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009959177" title="Клик — скопировать">A 000 995 91 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009954014" title="Клик — скопировать">A 000 995 40 14</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0129883078" title="Клик — скопировать">A 012 988 30 78</td><td>Зажим фланца трубы (PIPE FLANGE CLAMP)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694701264" title="Клик — скопировать">A 169 470 12 64</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694702764" title="Клик — скопировать">A 169 470 27 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1694702864" title="Клик — скопировать">A 169 470 28 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1694761326" title="Клик — скопировать">A 169 476 13 26</td><td>- Топливный шланг</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1694700575" title="Клик — скопировать">A 169 470 05 75</td><td>- Топливный шланг (FUEL HOSE)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>НАПОРН. ТРУБОПРОВ. НА ТОПЛ. БАКЕ; 13\-14.5 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВ. НА ДВИГ.; 13\-14.5 MM</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ДИСТАНЦИР. ТОПЛИВОПРОВ.; 7,3 X 3 MM</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6524761136" title="Клик — скопировать">A 652 476 11 36</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6524761136" title="Клик — скопировать">A 652 476 11 36</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009959077" title="Клик — скопировать">A 000 995 90 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>2</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009959177" title="Клик — скопировать">A 000 995 91 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009954014" title="Клик — скопировать">A 000 995 40 14</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0129883078" title="Клик — скопировать">A 012 988 30 78</td><td>Зажим фланца трубы (PIPE FLANGE CLAMP)</td><td>1</td><td>КРЕПЛЕНИЕ ТОПЛИВОПРОВОДОВ</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

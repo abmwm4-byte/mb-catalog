@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1161510152" title="Клик — скопировать">A 116 151 01 52</td><td>РАСПОРНАЯ ШАЙБА</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1161510252" title="Клик — скопировать">A 116 151 02 52</td><td>Диск (WINDOW)</td><td>NB</td><td>1.0 MM</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1165401673" title="Клик — скопировать">A 116 540 16 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>2</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>2</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1161551135" title="Клик — скопировать">A 116 155 11 35</td><td>КРОНШТЕЙН</td><td>1</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000931008266" title="Клик — скопировать">N 000931 008266</td><td>Винт (SCREW)</td><td>3</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба (SPRING WASHER)</td><td>3</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N000931010315" title="Клик — скопировать">N 000931 010315</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N304014010007" title="Клик — скопировать">N 304014 010007</td><td>Винт с 6-гранной головкой</td><td>-</td><td>M10X100</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N304014010008" title="Клик — скопировать">N 304014 010008</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000125010518" title="Клик — скопировать">N 000125 010518</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000125010532" title="Клик — скопировать">N 000125 010532</td><td>Шайба</td><td>1</td><td></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1001500072" title="Клик — скопировать">A 100 150 00 72</td><td>Стяжный болт (TENSIONING SCREW)</td><td>1</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000125010518" title="Клик — скопировать">N 000125 010518</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000125010532" title="Клик — скопировать">N 000125 010532</td><td>Шайба</td><td>1</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="N000934010009" title="Клик — скопировать">N 000934 010009</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="N304032010002" title="Клик — скопировать">N 304032 010002</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>M10</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="A1161500673" title="Клик — скопировать">A 116 150 06 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="N000931008251" title="Клик — скопировать">N 000931 008251</td><td>Винт (SCREW)</td><td>1</td><td></td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>Шайба</td><td>1</td><td>8 MM</td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

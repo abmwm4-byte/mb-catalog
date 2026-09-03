@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1116835136" title="Клик — скопировать">A 111 683 51 36</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="4"><td>4</td><td class="pn" data-raw="A1116835398" title="Клик — скопировать">A 111 683 53 98</td><td>УПЛОТНИТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1116805536" title="Клик — скопировать">A 111 680 55 36</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1086820207" title="Клик — скопировать">A 108 682 02 07</td><td>ШУМОИЗОЛЯЦИЯ</td><td>1</td><td></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1096801340" title="Клик — скопировать">A 109 680 13 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1096801345" title="Клик — скопировать">A 109 680 13 45</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1119971081" title="Клик — скопировать">A 111 997 10 81</td><td>- КАБ. ВТУЛКА</td><td>1</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1096803317" title="Клик — скопировать">A 109 680 33 17</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1128400474" title="Клик — скопировать">A 112 840 04 74</td><td>ЧАШКА</td><td>-</td><td></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1088410274" title="Клик — скопировать">A 108 841 02 74</td><td>ЧАШКА</td><td>1</td><td></td></tr><tr data-pos="64"><td>64</td><td class="pn" data-raw="A1128400375" title="Клик — скопировать">A 112 840 03 75</td><td>НАСТИЛ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>17</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086822504" title="Клик — скопировать">A 108 682 25 04</td><td>ШУМОИЗОЛЯЦИЯ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009891810" title="Клик — скопировать">A 000 989 18 10</td><td>Изоляционный мат</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009832991" title="Клик — скопировать">A 000 983 29 91</td><td>ПАПКА</td><td>1</td><td>ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086802940" title="Клик — скопировать">A 108 680 29 40</td><td>НАСТИЛ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801040" title="Клик — скопировать">A 109 680 10 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801140" title="Клик — скопировать">A 109 680 11 40</td><td>НАСТИЛ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801440" title="Клик — скопировать">A 109 680 14 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096805340" title="Клик — скопировать">A 109 680 53 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801245" title="Клик — скопировать">A 109 680 12 45</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801917" title="Клик — скопировать">A 109 680 19 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096802017" title="Клик — скопировать">A 109 680 20 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096803217" title="Клик — скопировать">A 109 680 32 17</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096801317" title="Клик — скопировать">A 109 680 13 17</td><td>ПАНЕЛЬ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096802717" title="Клик — скопировать">A 109 680 27 17</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1116805073" title="Клик — скопировать">A 111 680 50 73</td><td>УПЛОТНИТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1118305045" title="Клик — скопировать">A 111 830 50 45</td><td>КАНАЛ ВОЗДУШНЫЙ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400274" title="Клик — скопировать">A 109 840 02 74</td><td>ЧАШКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098410190" title="Клик — скопировать">A 109 841 01 90</td><td>ОБИВКА</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701330" title="Клик — скопировать">A 109 970 13 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701430" title="Клик — скопировать">A 109 970 14 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos=""><td></td><td class="pn" data-raw="A1099701330" title="Клик — скопировать">A 109 970 13 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701430" title="Клик — скопировать">A 109 970 14 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099700131" title="Клик — скопировать">A 109 970 01 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099700231" title="Клик — скопировать">A 109 970 02 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099705930" title="Клик — скопировать">A 109 970 59 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706130" title="Клик — скопировать">A 109 970 61 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706030" title="Клик — скопировать">A 109 970 60 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706230" title="Клик — скопировать">A 109 970 62 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701931" title="Клик — скопировать">A 109 970 19 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099702031" title="Клик — скопировать">A 109 970 20 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701530" title="Клик — скопировать">A 109 970 15 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706330" title="Клик — скопировать">A 109 970 63 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701630" title="Клик — скопировать">A 109 970 16 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706430" title="Клик — скопировать">A 109 970 64 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701731" title="Клик — скопировать">A 109 970 17 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701831" title="Клик — скопировать">A 109 970 18 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099700930" title="Клик — скопировать">A 109 970 09 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706730" title="Клик — скопировать">A 109 970 67 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099701030" title="Клик — скопировать">A 109 970 10 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099706830" title="Клик — скопировать">A 109 970 68 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099702131" title="Клик — скопировать">A 109 970 21 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099702231" title="Клик — скопировать">A 109 970 22 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089702130" title="Клик — скопировать">A 108 970 21 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089701331" title="Клик — скопировать">A 108 970 13 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099703330" title="Клик — скопировать">A 109 970 33 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099700331" title="Клик — скопировать">A 109 970 03 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089702230" title="Клик — скопировать">A 108 970 22 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089701431" title="Клик — скопировать">A 108 970 14 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099703430" title="Клик — скопировать">A 109 970 34 30</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1099700431" title="Клик — скопировать">A 109 970 04 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089705731" title="Клик — скопировать">A 108 970 57 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>LEFT COMPLETE, BUT LESS COVER</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1089705831" title="Клик — скопировать">A 108 970 58 31</td><td>ПОДЛОКОТНИК ОТКИДН.</td><td>1</td><td>RIGHT;COMPLETE,BUT LESS COVER</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

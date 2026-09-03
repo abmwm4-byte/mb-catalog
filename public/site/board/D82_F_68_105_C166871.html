@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>68 Облицовка / 105 Шумоизоляция задней стойки и багажника</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C166871">D82 -/-</a> → 105 Шумоизоляция задней стойки и багажника</div>
+<h1>105 Шумоизоляция задней стойки и багажника</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B68105000057.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1666821062" title="Клик — скопировать">A 166 682 10 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СЛЕВА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1666829300" title="Клик — скопировать">A 166 682 93 00</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СЛЕВА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1666820962" title="Клик — скопировать">A 166 682 09 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СПРАВА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1666825600" title="Клик — скопировать">A 166 682 56 00</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СПРАВА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1666829500" title="Клик — скопировать">A 166 682 95 00</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СПРАВА</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1666820662" title="Клик — скопировать">A 166 682 06 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>СНАРУЖИ СВЕРХУ СПРАВА</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1666829600" title="Клик — скопировать">A 166 682 96 00</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>СНАРУЖИ СВЕРХУ СПРАВА</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1666820562" title="Клик — скопировать">A 166 682 05 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СЛЕВА</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1666829000" title="Клик — скопировать">A 166 682 90 00</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>КОЛЁСНАЯ АРКА СЛЕВА</td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A1666820762" title="Клик — скопировать">A 166 682 07 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>СНАРУЖИ СВЕРХУ СЛЕВА</td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A1666820762" title="Клик — скопировать">A 166 682 07 62</td><td>Шумоизоляция кол. арки (ABDAEMPFUNG RADLAUF)</td><td>1</td><td>СНАРУЖИ СВЕРХУ СЛЕВА</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1666822230" title="Клик — скопировать">A 166 682 22 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА ПРАВАЯ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1666820100" title="Клик — скопировать">A 166 682 01 00</td><td>Шумоизоляция под зад.сид. (ABDAEMPFUNG FONDSITZ)</td><td>2</td><td>ПОД ЗАДНИМ СИДЕНЬЕМ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1666821752" title="Клик — скопировать">A 166 682 17 52</td><td>Шумоизоляция зад. Стойки (ABDAEMPFUNG C-SAEULE)</td><td>3</td><td>С\-СТОЙКА СПРАВА</td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A1666820000" title="Клик — скопировать">A 166 682 00 00</td><td>Шумоизоляция под зад.сид. (ABDAEMPFUNG FONDSITZ)</td><td>2</td><td>ПОД ЗАДНИМ СИДЕНЬЕМ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1666821830" title="Клик — скопировать">A 166 682 18 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА, СЗАДИ СПРАВА</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1666820341" title="Клик — скопировать">A 166 682 03 41</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>2</td><td>ЛОНЖЕРОН СПЕРЕДИ СПРАВА</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1666820070" title="Клик — скопировать">A 166 682 00 70</td><td>Шумоизоляция отк. крышки (ABDAEMPFUNG KLAPPE)</td><td>3</td><td>ЗАДН. КРЫШКА</td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1666822130" title="Клик — скопировать">A 166 682 21 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1666822130" title="Клик — скопировать">A 166 682 21 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1666821152" title="Клик — скопировать">A 166 682 11 52</td><td>Шумоизоляция зад. Стойки (ABDAEMPFUNG C-SAEULE)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td></tr><tr data-pos="172"><td>172</td><td class="pn" data-raw="A1666821252" title="Клик — скопировать">A 166 682 12 52</td><td>Шумоизоляция зад. Стойки (ABDAEMPFUNG C-SAEULE)</td><td>1</td><td>СЗАДИ СЛЕВА</td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1666821352" title="Клик — скопировать">A 166 682 13 52</td><td>Шумоизоляция зад. Стойки (ABDAEMPFUNG C-SAEULE)</td><td>1</td><td></td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1666821352" title="Клик — скопировать">A 166 682 13 52</td><td>Шумоизоляция зад. Стойки (ABDAEMPFUNG C-SAEULE)</td><td>1</td><td></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1666820902" title="Клик — скопировать">A 166 682 09 02</td><td>Шумоизоляция пола задняя (ABDAEMPFUNG FONDBODEN)</td><td>1</td><td>ЗАДН. ПОЛ СЛЕВА</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1666821002" title="Клик — скопировать">A 166 682 10 02</td><td>Шумоизоляция пола задняя (ABDAEMPFUNG FONDBODEN)</td><td>1</td><td>ЗАДН. ПОЛ СПРАВА</td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1666820200" title="Клик — скопировать">A 166 682 02 00</td><td>Шумоизоляция пола задняя (ABDAEMPFUNG FONDBODEN)</td><td>1</td><td>ЗАДН. ПОЛ СЛЕВА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1666821740" title="Клик — скопировать">A 166 682 17 40</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СЗАДИ СНАРУЖИ, СПРАВА</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1666824201" title="Клик — скопировать">A 166 682 42 01</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СЗАДИ СНАРУЖИ, СПРАВА</td></tr><tr data-pos="195"><td>195</td><td class="pn" data-raw="A1666820300" title="Клик — скопировать">A 166 682 03 00</td><td>Шумоизоляция пола задняя (ABDAEMPFUNG FONDBODEN)</td><td>1</td><td>ЗАДН. ПОЛ СЛЕВА</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1666821440" title="Клик — скопировать">A 166 682 14 40</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СЗАДИ СНАРУЖИ, СЛЕВА</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1666829100" title="Клик — скопировать">A 166 682 91 00</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СЗАДИ СНАРУЖИ, СЛЕВА</td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A1666820400" title="Клик — скопировать">A 166 682 04 00</td><td>Шумоизоляция пола задняя (ABDAEMPFUNG FONDBODEN)</td><td>1</td><td>ЗАДН. ПОЛ СПРАВА</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A1646829604" title="Клик — скопировать">A 164 682 96 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СЗАДИ СПРАВА</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A1646824504" title="Клик — скопировать">A 164 682 45 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A1646829504" title="Клик — скопировать">A 164 682 95 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СЗАДИ СЛЕВА</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1646821904" title="Клик — скопировать">A 164 682 19 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СЗАДИ</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1646822504" title="Клик — скопировать">A 164 682 25 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1646822604" title="Клик — скопировать">A 164 682 26 04</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666820641" title="Клик — скопировать">A 166 682 06 41</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666823701" title="Клик — скопировать">A 166 682 37 01</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666823801" title="Клик — скопировать">A 166 682 38 01</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666820241" title="Клик — скопировать">A 166 682 02 41</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666823801" title="Клик — скопировать">A 166 682 38 01</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666823701" title="Клик — скопировать">A 166 682 37 01</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666820541" title="Клик — скопировать">A 166 682 05 41</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1666823601" title="Клик — скопировать">A 166 682 36 01</td><td>Шумоизоляция днища багаж. (ABDAEMPFUNG LADERAUMBODEN)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A1666822440" title="Клик — скопировать">A 166 682 24 40</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A1666822340" title="Клик — скопировать">A 166 682 23 40</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1646825530" title="Клик — скопировать">A 164 682 55 30</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>БОКОВИНА ЛЕВАЯ</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1646825530" title="Клик — скопировать">A 164 682 55 30</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>БОКОВИНА ПРАВАЯ</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A1666821730" title="Клик — скопировать">A 166 682 17 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА ЛЕВАЯ</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A1666821030" title="Клик — скопировать">A 166 682 10 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА ПРАВАЯ</td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A1666821640" title="Клик — скопировать">A 166 682 16 40</td><td>Шумоизоляция зад. стенки (ABDAEMPFUNG RUECKWAND)</td><td>1</td><td>СЗАДИ СПРАВА</td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A1666821540" title="Клик — скопировать">A 166 682 15 40</td><td>Шумоизоляция зад. стенки (ABDAEMPFUNG RUECKWAND)</td><td>1</td><td>СЗАДИ СЛЕВА</td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A1666821530" title="Клик — скопировать">A 166 682 15 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>СЗАДИ СНИЗУ СЛЕВА</td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A1666821630" title="Клик — скопировать">A 166 682 16 30</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>СЗАДИ СНИЗУ СПРАВА</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1666820332" title="Клик — скопировать">A 166 682 03 32</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА ЛЕВАЯ</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1666820232" title="Клик — скопировать">A 166 682 02 32</td><td>Шумоизоляция боковины (ABDAEMPFUNG SEITENWAND)</td><td>1</td><td>БОКОВИНА ПРАВАЯ</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1666820044" title="Клик — скопировать">A 166 682 00 44</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>2</td><td>ЗАДНЯЯ ЧАСТЬ КУЗОВА</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1666823501" title="Клик — скопировать">A 166 682 35 01</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>2</td><td>ЗАДНЯЯ ЧАСТЬ КУЗОВА</td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1666822240" title="Клик — скопировать">A 166 682 22 40</td><td>Шумоизоляция задней части (ABDAEMPFUNG HECK)</td><td>2</td><td>ЗАДНЯЯ ЧАСТЬ КУЗОВА</td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A1666822040" title="Клик — скопировать">A 166 682 20 40</td><td>Шумоизоляция зад. стенки (ABDAEMPFUNG RUECKWAND)</td><td>2</td><td>ЗАДНЯЯ СТЕНКА</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 63 · подписано на схемах: 63 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68105000057.png", "poses": ["100", "105", "110", "115", "120", "125", "130", "135", "150", "155", "160", "165", "170", "172", "174", "180", "185", "190", "195", "200", "205", "220", "230", "240", "250", "260", "270", "290", "300", "310", "330", "340", "350", "360", "370", "380"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

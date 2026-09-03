@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200961" title="Клик — скопировать">A 107 620 09 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201561" title="Клик — скопировать">A 107 620 15 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202361" title="Клик — скопировать">A 107 620 23 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203361" title="Клик — скопировать">A 107 620 33 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076205161" title="Клик — скопировать">A 107 620 51 61</td><td>- Брызговик модульный</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200661" title="Клик — скопировать">A 107 620 06 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201661" title="Клик — скопировать">A 107 620 16 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202461" title="Клик — скопировать">A 107 620 24 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203561" title="Клик — скопировать">A 107 620 35 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203761" title="Клик — скопировать">A 107 620 37 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204161" title="Клик — скопировать">A 107 620 41 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204461" title="Клик — скопировать">A 107 620 44 61</td><td>- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076205461" title="Клик — скопировать">A 107 620 54 61</td><td>- Брызговик модульный</td><td>1</td><td>СПЕРЕДИ СПРАВА</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076200761" title="Клик — скопировать">A 107 620 07 61</td><td>	- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076205361" title="Клик — скопировать">A 107 620 53 61</td><td>	- Брызговик модульный</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076200861" title="Клик — скопировать">A 107 620 08 61</td><td>	- БРЫЗГОВИК МОДУЛЬНЫЙ</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076205061" title="Клик — скопировать">A 107 620 50 61</td><td>	- Брызговик модульный</td><td>1</td><td>СПЕРЕДИ СПРАВА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076260183" title="Клик — скопировать">A 107 626 01 83</td><td>	- Растяжка пер. моста</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076260283" title="Клик — скопировать">A 107 626 02 83</td><td>	- Растяжка пер. моста</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1076261831" title="Клик — скопировать">A 107 626 18 31</td><td>	- Консоль</td><td>1</td><td>КРЮК БУКСИРОВОЧНЫЙ</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076202531" title="Клик — скопировать">A 107 620 25 31</td><td>	- КОНСОЛЬ</td><td>-</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076203331" title="Клик — скопировать">A 107 620 33 31</td><td>	- Консоль</td><td>1</td><td>FRONT SUBFRAME,REAR LEFT</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076202631" title="Клик — скопировать">A 107 620 26 31</td><td>	- КОНСОЛЬ</td><td>-</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076203431" title="Клик — скопировать">A 107 620 34 31</td><td>	- Консоль</td><td>1</td><td>FRONT SUBFRAME,REAR RIGHT</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1076260814" title="Клик — скопировать">A 107 626 08 14</td><td>	- ДЕРЖАТЕЛЬ</td><td>1</td><td>РАСШИРИТЕЛЬН.БАЧОК ОЖ НА КОЛЕСН.АРКЕ СПЕРЕДИ СПРАВА</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076263714" title="Клик — скопировать">A 107 626 37 14</td><td>	- Держатель</td><td>1</td><td>РАСШИРИТЕЛЬН.БАЧОК ОЖ НА КОЛЕСН.АРКЕ СПЕРЕДИ СПРАВА</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1076265414" title="Клик — скопировать">A 107 626 54 14</td><td>	- Держатель</td><td>1</td><td>ДИАГН.РАЗЪЕМ НА КОЛЕСН. АРКЕ СПРЕДИ СЛЕВА</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076200131" title="Клик — скопировать">A 107 620 01 31</td><td>	- Консоль</td><td>1</td><td>TORSION BAR BEARING TO LEFT WHEELHOUSE</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076200231" title="Клик — скопировать">A 107 620 02 31</td><td>	- Консоль</td><td>1</td><td>TORSION BAR BEARING TO RIGHT WHEELHOUSE</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076202031" title="Клик — скопировать">A 107 620 20 31</td><td>	- Консоль</td><td>1</td><td>TORSION BAR BEARING TO RIGHT WHEELHOUSE</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076260233" title="Клик — скопировать">A 107 626 02 33</td><td>		- TOWING BRACKET</td><td>1</td><td>КРЮК БУКСИРОВОЧНЫЙ</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076261830" title="Клик — скопировать">A 107 626 18 30</td><td>		- Ответная пластина замка</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076260379" title="Клик — скопировать">A 107 626 03 79</td><td>	- Подпорка</td><td>1</td><td>RIGHT FRONT TORSION BAR BEARING CONSOLE</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076202331" title="Клик — скопировать">A 107 620 23 31</td><td>	- Консоль</td><td>1</td><td>FRONT SUBFRAME,FRONT LEFT</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076202431" title="Клик — скопировать">A 107 620 24 31</td><td>	- КОНСОЛЬ</td><td>1</td><td>FRONT SUBFRAME,FRONT RIGHT</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076202931" title="Клик — скопировать">A 107 620 29 31</td><td>	- Консоль</td><td>1</td><td>FRONT SUBFRAME,FRONT LEFT</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076203031" title="Клик — скопировать">A 107 620 30 31</td><td>	- Консоль</td><td>1</td><td>FRONT SUBFRAME,FRONT RIGHT</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1076201131" title="Клик — скопировать">A 107 620 11 31</td><td>	- Консоль</td><td>1</td><td>АМОРТИЗАТОР ПЕРЕДНЕЙ ЛЕВЫЙ</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1076201231" title="Клик — скопировать">A 107 620 12 31</td><td>	- Консоль</td><td>1</td><td>АМОРТИЗАТОР ПЕРЕДНИЙ ПРАВЫЙ</td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

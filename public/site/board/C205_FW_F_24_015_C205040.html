@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2052400200" title="Клик — скопировать">A 205 240 02 00</td><td>Опора двигателя (ENGINE MOUNT)</td><td>1</td><td>Слева</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2052406217" title="Клик — скопировать">A 205 240 62 17</td><td>Опора двигателя (ENGINE MOUNT)</td><td>1</td><td>Слева</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2052400300" title="Клик — скопировать">A 205 240 03 00</td><td>Опора двигателя (ENGINE MOUNT)</td><td>1</td><td>Справа</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2052406317" title="Клик — скопировать">A 205 240 63 17</td><td>Опора двигателя (ENGINE MOUNT)</td><td>1</td><td>Справа</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2052400345" title="Клик — скопировать">A 205 240 03 45</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Справа</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009902037" title="Клик — скопировать">A 000 990 20 37</td><td>Винт с 6-гр. глвк (PARTS KIT, HEX. HEAD BOLT)</td><td>2</td><td>Опора двигателя к левому и правому ‌кронштейну опоры двигателя; M10X70</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910105008014" title="Клик — скопировать">N 910105 008014</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>6</td><td>Опора двигателя (левая и правая) к ‌интегральной балке; M8X35</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000000000270" title="Клик — скопировать">N 000000 000270</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>6</td><td>Опора двигателя (левая и правая) к ‌интегральной балке</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Теплозащитный экран (правый) на двигателе; M6X15</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2052420001" title="Клик — скопировать">A 205 242 00 01</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td>Сзади</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2052421101" title="Клик — скопировать">A 205 242 11 01</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td>Сзади</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2052400102" title="Клик — скопировать">A 205 240 01 02</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td>Сзади</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2052420901" title="Клик — скопировать">A 205 242 09 01</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td>Сзади</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2132400702" title="Клик — скопировать">A 213 240 07 02</td><td>Кронштейн опоры двигателя (ENGINE CARRIER)</td><td>1</td><td>Сзади</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0039900803" title="Клик — скопировать">A 003 990 08 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>6</td><td>Кронштейн опоры двигателя к раме; M10X20</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2052403300" title="Клик — скопировать">A 205 240 33 00</td><td>TRANSMISSION BEARING (TRANSMISSION MOUNT)</td><td>1</td><td>Сзади</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2052400818" title="Клик — скопировать">A 205 240 08 18</td><td>TRANSMISSION BEARING (TRANSMISSION MOUNT)</td><td>1</td><td>Сзади</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2052405300" title="Клик — скопировать">A 205 240 53 00</td><td>TRANSMISSION BEARING (TRANSMISSION MOUNT)</td><td>1</td><td>Сзади</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000000428" title="Клик — скопировать">N 000000 000428</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>2</td><td>Опора коробки передач к коробке передач; M10X35</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000000000276" title="Клик — скопировать">N 000000 000276</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>3</td><td>Опора коробки передач к кронштейну опоры коробки передач; M8X20</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2112420340" title="Клик — скопировать">A 211 242 03 40</td><td>Держатель (HOLDER)</td><td>1</td><td>К коробке передач</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2052420440" title="Клик — скопировать">A 205 242 04 40</td><td>Держатель (HOLDER)</td><td>1</td><td>К коробке передач</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0049903412" title="Клик — скопировать">A 004 990 34 12</td><td>болт (SCREW)</td><td>4</td><td>Держатель к коробке передач; M8X30</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

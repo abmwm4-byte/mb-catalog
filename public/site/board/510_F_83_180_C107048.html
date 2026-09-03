@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0008303484" title="Клик — скопировать">A 000 830 34 84</td><td>Клапан</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008350644" title="Клик — скопировать">A 000 835 06 44</td><td>Электромагнит</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0008300198" title="Клик — скопировать">A 000 830 01 98</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1078313194" title="Клик — скопировать">A 107 831 31 94</td><td>Шланг</td><td>1</td><td></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1269971581" title="Клик — скопировать">A 126 997 15 81</td><td>втулка</td><td>1</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A6171870190" title="Клик — скопировать">A 617 187 01 90</td><td>Проставка</td><td>1</td><td>18 MM</td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>NB</td><td>BETWEEN ENGINE AND FEED LINE 20-27; 20-27 MM</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1078313594" title="Клик — скопировать">A 107 831 35 94</td><td>Шланг</td><td>1</td><td>BETWEEN CONTROL VALVE AND HEAT EXCHANGER</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1268320494" title="Клик — скопировать">A 126 832 04 94</td><td>ШЛАНГ</td><td>-</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A4635016382" title="Клик — скопировать">A 463 501 63 82</td><td>Шланг</td><td>1</td><td>КЛАПАН ОЖ К РЕЦИРКУЛ. НАСОСУ</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A1109870541" title="Клик — скопировать">A 110 987 05 41</td><td>Кольцо</td><td>2</td><td></td></tr><tr data-pos="164"><td>164</td><td class="pn" data-raw="A1078313394" title="Клик — скопировать">A 107 831 33 94</td><td>Шланг</td><td>1</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ</td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A0944660500" title="Клик — скопировать">A 094 466 05 00</td><td>Резиновое кольцо</td><td>2</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0008356964" title="Клик — скопировать">A 000 835 69 64</td><td>Циркуляционный насос</td><td>1</td><td></td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>NB</td><td>BETWEEN CONTROL VALVE AND HEAT EXCHANGER 21/9</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>NB</td><td>МЕЖДУ ТЕПЛООБМЕН. И ОБРАТН. ТРУБОПРОВ. 21/9</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="N916026016001" title="Клик — скопировать">N 916026 016001</td><td>Хомут</td><td>-</td><td>16-24MM</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>NB</td><td>BETWEEN ENGINE AND FEED LINE 14-24; 14-24 MM</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>NB</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ 16-24; 14-24 MM</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0008303484" title="Клик — скопировать">A 000 830 34 84</td><td>Клапан</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008350644" title="Клик — скопировать">A 000 835 06 44</td><td>Электромагнит</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0008300198" title="Клик — скопировать">A 000 830 01 98</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1078313194" title="Клик — скопировать">A 107 831 31 94</td><td>Шланг</td><td>1</td><td></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1269971581" title="Клик — скопировать">A 126 997 15 81</td><td>втулка</td><td>1</td><td></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A6171870190" title="Клик — скопировать">A 617 187 01 90</td><td>Проставка</td><td>1</td><td>18 MM</td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>NB</td><td>BETWEEN ENGINE AND FEED LINE 20\-27; 20\-27 MM</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1078313594" title="Клик — скопировать">A 107 831 35 94</td><td>Шланг</td><td>1</td><td>BETWEEN CONTROL VALVE AND HEAT EXCHANGER</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1268320494" title="Клик — скопировать">A 126 832 04 94</td><td>ШЛАНГ</td><td>-</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A4635016382" title="Клик — скопировать">A 463 501 63 82</td><td>Шланг</td><td>1</td><td>КЛАПАН ОЖ К РЕЦИРКУЛ. НАСОСУ</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A1109870541" title="Клик — скопировать">A 110 987 05 41</td><td>Кольцо</td><td>2</td><td></td></tr><tr data-pos="164"><td>164</td><td class="pn" data-raw="A1078313394" title="Клик — скопировать">A 107 831 33 94</td><td>Шланг</td><td>1</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ</td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A0944660500" title="Клик — скопировать">A 094 466 05 00</td><td>Резиновое кольцо</td><td>2</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0008356964" title="Клик — скопировать">A 000 835 69 64</td><td>Циркуляционный насос</td><td>1</td><td></td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>NB</td><td>BETWEEN CONTROL VALVE AND HEAT EXCHANGER 21/9</td></tr><tr data-pos="173"><td>173</td><td class="pn" data-raw="N916033021100" title="Клик — скопировать">N 916033 021100</td><td>Хомут</td><td>NB</td><td>МЕЖДУ ТЕПЛООБМЕН. И ОБРАТН. ТРУБОПРОВ. 21/9</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="N916026016001" title="Клик — скопировать">N 916026 016001</td><td>Хомут</td><td>-</td><td>16\-24MM</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>NB</td><td>BETWEEN ENGINE AND FEED LINE 14\-24; 14\-24 MM</td></tr><tr data-pos="176"><td>176</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>NB</td><td>РЕЦИРКУЛЯЦ. НАСОС К ДВИГАТЕЛЮ 16\-24; 14\-24 MM</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

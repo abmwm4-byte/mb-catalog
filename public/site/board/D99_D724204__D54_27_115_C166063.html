@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2122707805" title="Клик — скопировать">A 212 270 78 05</td><td>- Поддон масляный (OELWANNE)</td><td>1</td><td></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0002713471" title="Клик — скопировать">A 000 271 34 71</td><td>	- Пробка, первая заправка</td><td>1</td><td>СЛИВ МАСЛА</td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A0005844147" title="Клик — скопировать">A 000 584 41 47</td><td>	- Предупреждающая табличка (WARNSCHILD)</td><td>1</td><td></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0009880152" title="Клик — скопировать">A 000 988 01 52</td><td>- Постоянный магнит (PERMANENTMAGNET)</td><td>2</td><td></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0009880852" title="Клик — скопировать">A 000 988 08 52</td><td>- Постоянный магнит (PERMANENTMAGNET)</td><td>2</td><td></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A2122710096" title="Клик — скопировать">A 212 271 00 96</td><td>- Переливная трубка (UEBERLAUFROHR)</td><td>1</td><td></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A2222715100" title="Клик — скопировать">A 222 271 51 00</td><td>- Переливная трубка (UEBERLAUFROHR)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2122710080" title="Клик — скопировать">A 212 271 00 80</td><td>- Эластомерный уплотнитель (ELASTOMERFORMDICHTUNG)</td><td>1</td><td>МАСЛ.КАРТЕР К КАРТЕРУ КОРОБКИ ПЕРЕДАЧ</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2122770295" title="Клик — скопировать">A 212 277 02 95</td><td>- Масляный фильтр КП (GETRIEBEOELFILTER)</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0119904704" title="Клик — скопировать">A 011 990 47 04</td><td>- Винт Torx с полукр. гол. (LINSENKOPFSCHRAUBE M. ISR)</td><td>2</td><td>M6X20</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2202710068" title="Клик — скопировать">A 220 271 00 68</td><td>- Зажимное тело (KLEMMKOERPER)</td><td>6</td><td>МАСЛ.КАРТЕР К КАРТЕРУ КОРОБКИ ПЕРЕДАЧ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2202710268" title="Клик — скопировать">A 220 271 02 68</td><td>- Зажимное тело (KLEMMKOERPER)</td><td>1</td><td>МАСЛ.КАРТЕР К КАРТЕРУ КОРОБКИ ПЕРЕДАЧ</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0049903512" title="Клик — скопировать">A 004 990 35 12</td><td>- Винт Torx External (SCHRAUBE MIT SECHSRUND)</td><td>7</td><td>МАСЛ.КАРТЕР К КАРТЕРУ КОРОБКИ ПЕРЕДАЧ; M6X40</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2122709505" title="Клик — скопировать">A 212 270 95 05</td><td>- Масляный насос (OELPUMPE)</td><td>1</td><td></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N000912005043" title="Клик — скопировать">N 000912 005043</td><td>	- Винт (SCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ ЭЛЕКТРОДВИГАТЕЛЯ ПОСТОЯННОГО ТОКА; M5X30</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="N000000007044" title="Клик — скопировать">N 000000 007044</td><td>- Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>КРЕПЛЕНИЕ МАСЛЯНОГО НАСОСА; M5X75</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="N000000002053" title="Клик — скопировать">N 000000 002053</td><td>- Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ МАСЛЯНОГО НАСОСА M5X35</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0049904412" title="Клик — скопировать">A 004 990 44 12</td><td>- болт (SCHRAUBE)</td><td>1</td><td>МАСЛЯНЫЙ НАСОС НА КОРПУСЕ КП</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009825432" title="Клик — скопировать">A 000 982 54 32</td><td>АКБ бортовой сети (ELECTRICAL SYSTEM BATTERY)</td><td>1</td><td>АКБ 12 В</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745458200" title="Клик — скопировать">A 174 545 82 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745455401" title="Клик — скопировать">A 174 545 54 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745458400" title="Клик — скопировать">A 174 545 84 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745455501" title="Клик — скопировать">A 174 545 55 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1745458300" title="Клик — скопировать">A 174 545 83 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Держатель батареи</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1745458500" title="Клик — скопировать">A 174 545 85 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Держатель батареи</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>3</td><td>Гайка кронштейна - блок силовых предохранителей в салоне; M6</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>3</td><td>Гайка кронштейна - блок силовых предохранителей в салоне; M6</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000002209" title="Клик — скопировать">N 000000 002209</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Винт/гайка кронштейна АКБ; M5X20</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000002209" title="Клик — скопировать">N 000000 002209</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Винт/гайка кронштейна АКБ; M5X20</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009976423" title="Клик — скопировать">A 000 997 64 23</td><td>Вентиляционный шланг (VENT HOSE)</td><td>1</td><td>Вентиляционный трубопровод АКБ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0019908552" title="Клик — скопировать">A 001 990 85 52</td><td>Гайка специальной формы (NUT, SPECIAL FORM)</td><td>1</td><td>Пуск двигателя от внешнего источника питания, минусовой вывод</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0019908552" title="Клик — скопировать">A 001 990 85 52</td><td>Гайка специальной формы (NUT, SPECIAL FORM)</td><td>1</td><td>Пуск двигателя от внешнего источника питания, минусовой вывод</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009825432" title="Клик — скопировать">A 000 982 54 32</td><td>АКБ бортовой сети (ELECTRICAL SYSTEM BATTERY)</td><td>1</td><td>АКБ 12 В</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745458200" title="Клик — скопировать">A 174 545 82 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745455401" title="Клик — скопировать">A 174 545 54 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745458400" title="Клик — скопировать">A 174 545 84 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1745455501" title="Клик — скопировать">A 174 545 55 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Кронштейн блока силовых предохранителей в салоне</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1745458300" title="Клик — скопировать">A 174 545 83 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Держатель батареи</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1745458500" title="Клик — скопировать">A 174 545 85 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Держатель батареи</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>3</td><td>Гайка кронштейна \- блок силовых предохранителей в салоне; M6</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>3</td><td>Гайка кронштейна \- блок силовых предохранителей в салоне; M6</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000002209" title="Клик — скопировать">N 000000 002209</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Винт/гайка кронштейна АКБ; M5X20</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000002209" title="Клик — скопировать">N 000000 002209</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Винт/гайка кронштейна АКБ; M5X20</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009976423" title="Клик — скопировать">A 000 997 64 23</td><td>Вентиляционный шланг (VENT HOSE)</td><td>1</td><td>Вентиляционный трубопровод АКБ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0019908552" title="Клик — скопировать">A 001 990 85 52</td><td>Гайка специальной формы (NUT, SPECIAL FORM)</td><td>1</td><td>Пуск двигателя от внешнего источника питания, минусовой вывод</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0019908552" title="Клик — скопировать">A 001 990 85 52</td><td>Гайка специальной формы (NUT, SPECIAL FORM)</td><td>1</td><td>Пуск двигателя от внешнего источника питания, минусовой вывод</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 14 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

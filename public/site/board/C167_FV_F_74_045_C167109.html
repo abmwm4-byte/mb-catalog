@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>74 ДВЕРЬ БАГАЖНОГО ОТДЕЛЕНИЯ / 045 НАВЕСНЫЕ ДЕТАЛИ ДВЕРИ БАГАЖН.ОТДЕЛЕНИЯ, ОКНО БАГАЖНОГО ОТДЕЛЕНИЯ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C167109">C167_FV -/-</a> → 045 НАВЕСНЫЕ ДЕТАЛИ ДВЕРИ БАГАЖН.ОТДЕЛЕНИЯ, ОКНО БАГАЖНОГО ОТДЕЛЕНИЯ</div>
+<h1>045 НАВЕСНЫЕ ДЕТАЛИ ДВЕРИ БАГАЖН.ОТДЕЛЕНИЯ, ОКНО БАГАЖНОГО ОТДЕЛЕНИЯ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">PV000.003.320.284_version_005 <span class="hint">(17)</span></button><button data-i="1" class="">PV000.003.320.823_version_012 <span class="hint">(34)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.003.320.284_version_005.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401700" title="Клик — скопировать">A 167 740 17 00</td><td>Заднее стекло (HECKSCHEIBE)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677400501" title="Клик — скопировать">A 167 740 05 01</td><td>Заднее стекло (HECKSCHEIBE)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401800" title="Клик — скопировать">A 167 740 18 00</td><td>Заднее стекло, тонир. (HECKSCHEIBE, GETOENT)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401700" title="Клик — скопировать">A 167 740 17 00</td><td>Заднее стекло (HECKSCHEIBE)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401800" title="Клик — скопировать">A 167 740 18 00</td><td>Заднее стекло, тонир. (HECKSCHEIBE, GETOENT)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677400501" title="Клик — скопировать">A 167 740 05 01</td><td>Заднее стекло (HECKSCHEIBE)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401800" title="Клик — скопировать">A 167 740 18 00</td><td>Заднее стекло, тонир. (HECKSCHEIBE, GETOENT)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401700" title="Клик — скопировать">A 167 740 17 00</td><td>Заднее стекло (HECKSCHEIBE)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1677401800" title="Клик — скопировать">A 167 740 18 00</td><td>Заднее стекло, тонир. (HECKSCHEIBE, GETOENT)</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1729822802" title="Клик — скопировать">A 172 982 28 02</td><td>- Кабельный наконечник (KABELSCHUH, SONDERFORM)</td><td>1</td><td>К заднему стеклу; 2.0\-4.0 MM2 M6</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009874766" title="Клик — скопировать">A 000 987 47 66</td><td>- Уплотнительная прокладка (DICHTSTREIFEN)</td><td>4</td><td>К заднему стеклу</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009874566" title="Клик — скопировать">A 000 987 45 66</td><td>- Уплотнительная прокладка (DICHTSTREIFEN)</td><td>4</td><td>К заднему стеклу</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1677406400" title="Клик — скопировать">A 167 740 64 00</td><td>Облицовка рамки стекла (VERKLEIDUNG FENSTERRAHMEN)</td><td>1</td><td>Рамка стекла</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0029912170" title="Клик — скопировать">A 002 991 21 70</td><td>- Скоба (KLAMMER)</td><td>8</td><td>Крепление облицовки</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1677402300" title="Клик — скопировать">A 167 740 23 00</td><td>Облицовка двери багажника (VERKLEIDUNG RUECKWANDTUER)</td><td>1</td><td>Дверь задней стенки снизу</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A2039882878" title="Клик — скопировать">A 203 988 28 78</td><td>- Скоба (KLAMMER)</td><td>2</td><td>К облицовке рамки стекла</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0019913298" title="Клик — скопировать">A 001 991 32 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>11</td><td>Крепление облицовки</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1677402600" title="Клик — скопировать">A 167 740 26 00</td><td>Облицовка ручки двери (VERKLEIDUNG ZUZIEHGRIFF)</td><td>1</td><td>Накладка ручки</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1677402600" title="Клик — скопировать">A 167 740 26 00</td><td>Облицовка ручки двери (VERKLEIDUNG ZUZIEHGRIFF)</td><td>1</td><td>Накладка ручки</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1677402600" title="Клик — скопировать">A 167 740 26 00</td><td>Облицовка ручки двери (VERKLEIDUNG ZUZIEHGRIFF)</td><td>1</td><td>Накладка ручки</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1677402600" title="Клик — скопировать">A 167 740 26 00</td><td>Облицовка ручки двери (VERKLEIDUNG ZUZIEHGRIFF)</td><td>1</td><td>Накладка ручки</td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A0029912170" title="Клик — скопировать">A 002 991 21 70</td><td>- Скоба (KLAMMER)</td><td>5</td><td>Крепление облицовки</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0049912770" title="Клик — скопировать">A 004 991 27 70</td><td>- Крепежная скоба (BEFESTIGUNGSKLAMMER)</td><td>2</td><td>Поручень к облицовке снизу слева и справа</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0009064905" title="Клик — скопировать">A 000 906 49 05</td><td>- Плафон освещения салона (INNENRAUMLEUCHTE)</td><td>1</td><td>Дверь задней стенки снизу</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A1777470000" title="Клик — скопировать">A 177 747 00 00</td><td>Запорная крышка</td><td>1</td><td>Облицовка двери задней стенки снизу слева</td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A1777470000" title="Клик — скопировать">A 177 747 00 00</td><td>Запорная крышка</td><td>1</td><td>Облицовка двери задней стенки снизу слева</td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A1778212200" title="Клик — скопировать">A 177 821 22 00</td><td>Защитная рама</td><td>1</td><td>Облицовка двери задней стенки снизу слева</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A1679059303" title="Клик — скопировать">A 167 905 93 03</td><td>Блок выключателей</td><td>1</td><td>Тягово\-сцепное устройство</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2128210651" title="Клик — скопировать">A 212 821 06 51</td><td>Выключатель (TASTSCHALTER)</td><td>1</td><td>Автоматическое закрывание двери задней стенки</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2128210551" title="Клик — скопировать">A 212 821 05 51</td><td>Выключатель (TASTSCHALTER)</td><td>1</td><td>Автоматическое закрывание двери задней стенки</td></tr><tr data-pos="305"><td>305</td><td class="pn" data-raw="A0009894905" title="Клик — скопировать">A 000 989 49 05</td><td>1-компонентный клей (EINKOMPONENTENKLEBER)</td><td>1</td><td>Установка стекла; &quot;1\-компонентный клей&quot;</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A1676901701" title="Клик — скопировать">A 167 690 17 01</td><td>Облицовка кр.зад.ст.куз. (D-SAEULENABDECKUNG)</td><td>1</td><td>К двери задней стенки</td></tr><tr data-pos="315"><td>315</td><td class="pn" data-raw="A0019916698" title="Клик — скопировать">A 001 991 66 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>7</td><td>К двери задней стенки</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1676940500" title="Клик — скопировать">A 167 694 05 00</td><td>Облицовка задней стенки (VERKLEIDUNG RUECKWANDBER.)</td><td>1</td><td>К двери задней стенки слева</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1676940600" title="Клик — скопировать">A 167 694 06 00</td><td>Облицовка задней стенки (VERKLEIDUNG RUECKWANDBER.)</td><td>1</td><td>К двери задней стенки справа</td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0009930200" title="Клик — скопировать">A 000 993 02 00</td><td>Шаровая цапфа (KUGELZAPFEN)</td><td>2</td><td>К двери задней стенки слева и справа</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1676901501" title="Клик — скопировать">A 167 690 15 01</td><td>Облицовка кр.зад.ст.куз. (D-SAEULENABDECKUNG)</td><td>1</td><td>Снизу слева</td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1676901601" title="Клик — скопировать">A 167 690 16 01</td><td>Облицовка кр.зад.ст.куз. (D-SAEULENABDECKUNG)</td><td>1</td><td>Снизу справа</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0019916698" title="Клик — скопировать">A 001 991 66 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>Крайняя задняя стойка снизу слева</td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0019916698" title="Клик — скопировать">A 001 991 66 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>Крайняя задняя стойка внизу справа</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008101711" title="Клик — скопировать">A 000 810 17 11</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008101611" title="Клик — скопировать">A 000 810 16 11</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008103500" title="Клик — скопировать">A 000 810 35 00</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008105600" title="Клик — скопировать">A 000 810 56 00</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008101711" title="Клик — скопировать">A 000 810 17 11</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008101611" title="Клик — скопировать">A 000 810 16 11</td><td>Крепежная пластина (BEFESTIGUNGSPLATTE)</td><td>1</td><td>Номерной знак</td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A0099908404" title="Клик — скопировать">A 009 990 84 04</td><td>- Винт с полукругл.головой (LINSENKOPFSCHRAUBE M BUND)</td><td>4</td><td>Номерной знак; M6X6</td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A0099908404" title="Клик — скопировать">A 009 990 84 04</td><td>- Винт с полукругл.головой (LINSENKOPFSCHRAUBE M BUND)</td><td>4</td><td>Номерной знак; M6X6</td></tr><tr data-pos="408"><td>408</td><td class="pn" data-raw="A1269901152" title="Клик — скопировать">A 126 990 11 52</td><td>- Квадратная гайка (VIERKANTMUTTER)</td><td>4</td><td>Для таблички номерного знака</td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="N000000008345" title="Клик — скопировать">N 000000 008345</td><td>FILLISTER HD SCREW (LINSENKOPFSCHRAUBE)</td><td>4</td><td>Крепежная пластина к двери задней стенки; 5X16</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009983685" title="Клик — скопировать">A 000 998 36 85</td><td>Дюбель (DUEBEL)</td><td>4</td><td>Крепежная пластина к двери задней стенки</td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009983685" title="Клик — скопировать">A 000 998 36 85</td><td>Дюбель (DUEBEL)</td><td>4</td><td>Крепежная пластина к двери задней стенки</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0009062903" title="Клик — скопировать">A 000 906 29 03</td><td>Фонарь осв. ном. знака (KENNZEICHENLEUCHTE)</td><td>2</td><td>Фонарь освещения номерного знака</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0999061504" title="Клик — скопировать">A 099 906 15 04</td><td>Фонарь осв. ном. знака (KENNZEICHENLEUCHTE)</td><td>2</td><td>Фонарь освещения номерного знака</td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0999067504" title="Клик — скопировать">A 099 906 75 04</td><td>Фонарь осв. ном. знака (KENNZEICHENLEUCHTE)</td><td>2</td><td>Фонарь освещения номерного знака</td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1677430000" title="Клик — скопировать">A 167 743 00 00</td><td>Декоративная планка (ZIERLEISTE)</td><td>1</td><td></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1677430700" title="Клик — скопировать">A 167 743 07 00</td><td>Декоративная планка (ZIERLEISTE)</td><td>1</td><td></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1677431200" title="Клик — скопировать">A 167 743 12 00</td><td>Декоративная планка (ZIERLEISTE)</td><td>1</td><td></td></tr><tr data-pos="455"><td>455</td><td class="pn" data-raw="A1678171200" title="Клик — скопировать">A 167 817 12 00</td><td>Звезда Mercedes (MERCEDES STERN)</td><td>1</td><td></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0009985403" title="Клик — скопировать">A 000 998 54 03</td><td>Уплотнительная втулка (DICHTTUELLE)</td><td>3</td><td>Trim strip to rear\-end door</td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0009985403" title="Клик — скопировать">A 000 998 54 03</td><td>Уплотнительная втулка (DICHTTUELLE)</td><td>2</td><td>Trim strip to rear\-end door</td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="A2019972281" title="Клик — скопировать">A 201 997 22 81</td><td>Крепежная втулка (BEFESTIGUNGSTUELLE)</td><td>3</td><td>Трехлучевая звезда Mercedes к двери задней стенки</td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A1679069908" title="Клик — скопировать">A 167 906 99 08</td><td>Задний блок-фонарь (HECKLEUCHTENKOMBINATION)</td><td>1</td><td></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A1677404901" title="Клик — скопировать">A 167 740 49 01</td><td>Декоративная накладка (ABDECKBLENDE)</td><td>1</td><td></td></tr><tr data-pos="475"><td>475</td><td class="pn" data-raw="A0009918698" title="Клик — скопировать">A 000 991 86 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>Панель облицовки (центральная) на распашной двери багажного отделения</td></tr><tr data-pos="475"><td>475</td><td class="pn" data-raw="A0009918698" title="Клик — скопировать">A 000 991 86 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>Панель облицовки (центральная) на распашной двери багажного отделения</td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A2127600229" title="Клик — скопировать">A 212 760 02 29</td><td>Упор (ANSCHLAG)</td><td>2</td><td>К двери задней стенки слева и справа</td></tr><tr data-pos="485"><td>485</td><td class="pn" data-raw="A0949901205" title="Клик — скопировать">A 094 990 12 05</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>К двери задней стенки слева и справа; M6X20</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A1677901300" title="Клик — скопировать">A 167 790 13 00</td><td>Спойлер на крыше (DACHSPOILER)</td><td>1</td><td></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A1677902200" title="Клик — скопировать">A 167 790 22 00</td><td>Спойлер на крыше</td><td>1</td><td></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A0029903650" title="Клик — скопировать">A 002 990 36 50</td><td>Гайка комбинированная (KOMBIMUTTER)</td><td>4</td><td>Задний спойлер к двери задней стенки</td></tr><tr data-pos="535"><td>535</td><td class="pn" data-raw="A0009915000" title="Клик — скопировать">A 000 991 50 00</td><td>Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>3</td><td>Задний спойлер к двери задней стенки</td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A0009905023" title="Клик — скопировать">A 000 990 50 23</td><td>Болт, особая форма (SCHRAUBE, SONDERFORM)</td><td>4</td><td>Задний спойлер к двери задней стенки</td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="A1567930398" title="Клик — скопировать">A 156 793 03 98</td><td>Уплотнение спойлера (DICHTUNG SPOILER)</td><td>1</td><td></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1677900100" title="Клик — скопировать">A 167 790 01 00</td><td>Навесной задний спойлер (ANBAUHECKSPOILER)</td><td>1</td><td>Сбоку слева</td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1677901700" title="Клик — скопировать">A 167 790 17 00</td><td>Навесной задний спойлер (ANBAUHECKSPOILER)</td><td>1</td><td>Сбоку слева</td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1677900200" title="Клик — скопировать">A 167 790 02 00</td><td>Навесной задний спойлер (ANBAUHECKSPOILER)</td><td>1</td><td>Сбоку справа</td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1677901600" title="Клик — скопировать">A 167 790 16 00</td><td>Навесной задний спойлер (ANBAUHECKSPOILER)</td><td>1</td><td>Сбоку справа</td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A0019917498" title="Клик — скопировать">A 001 991 74 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>3</td><td>Задний спойлер к двери задней стенки слева</td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A0019917498" title="Клик — скопировать">A 001 991 74 98</td><td>- Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>3</td><td>Задний спойлер к двери задней стенки справа</td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A1677500300" title="Клик — скопировать">A 167 750 03 00</td><td>Демпфер (SCHWINGUNGSTILGER)</td><td>2</td><td>Дверь задней стенки</td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A0109902504" title="Клик — скопировать">A 010 990 25 04</td><td>Винт с полукругл.головой (LINSENKOPFSCHRAUBE M BUND)</td><td>8</td><td>Крепление гасителя крутильных колебаний; M6X17,2</td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A1648220330" title="Клик — скопировать">A 164 822 03 30</td><td>Зуммер</td><td>1</td><td>Дверь задней стенки</td></tr><tr data-pos="650"><td>650</td><td class="pn" data-raw="A1677500800" title="Клик — скопировать">A 167 750 08 00</td><td>Накладка ручки двери (GRIFFLEISTE)</td><td>1</td><td></td></tr><tr data-pos="670"><td>670</td><td class="pn" data-raw="A2019972281" title="Клик — скопировать">A 201 997 22 81</td><td>Крепежная втулка (BEFESTIGUNGSTUELLE)</td><td>1</td><td>Trim strip to rear\-end door</td></tr><tr data-pos="805"><td>805</td><td class="pn" data-raw="A1678171400" title="Клик — скопировать">A 167 817 14 00</td><td>Обозначение типа (TYPKENNZEICHEN)</td><td>1</td><td>К двери задней стенки GLE 300d</td></tr><tr data-pos="895"><td>895</td><td class="pn" data-raw="A1678170301" title="Клик — скопировать">A 167 817 03 01</td><td>Обозначение типа (TYPKENNZEICHEN)</td><td>1</td><td>К двери задней стенки 4MATIC</td></tr><tr data-pos="895"><td>895</td><td class="pn" data-raw="A1678170301" title="Клик — скопировать">A 167 817 03 01</td><td>Обозначение типа (TYPKENNZEICHEN)</td><td>1</td><td>К двери задней стенки 4MATIC</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 88 · подписано на схемах: 88 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.003.320.284_version_005.png", "poses": ["10", "15", "20", "100", "105", "150", "155", "160", "200", "205", "210", "220", "240", "280", "290", "300", "305"]}, {"png": "../../img_png/drawing_PV000.003.320.823_version_012.png", "poses": ["310", "315", "320", "330", "350", "360", "400", "405", "408", "410", "420", "440", "450", "455", "460", "465", "470", "475", "480", "485", "500", "520", "535", "540", "560", "580", "590", "600", "610", "620", "650", "670", "805", "895"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A0021844301" title="Клик — скопировать">A 002 184 43 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>-</td><td></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A0021844801" title="Клик — скопировать">A 002 184 48 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>1</td><td>WITH TEMPERATURE SWITCH FA. KNECHT</td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0001846808" title="Клик — скопировать">A 000 184 68 08</td><td>- КРЫШКА</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0001841632" title="Клик — скопировать">A 000 184 16 32</td><td>	- КЛАПАН</td><td>1</td><td></td></tr><tr data-pos="6"><td>6</td><td class="pn" data-raw="A0001842656" title="Клик — скопировать">A 000 184 26 56</td><td>	- ЗАГЛУШКА РЕЗЬБОВАЯ</td><td>1</td><td></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A0035456724" title="Клик — скопировать">A 003 545 67 24</td><td>	- ВЫКЛЮЧАТЕЛЬ АВТОМ.</td><td>1</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N007604014106" title="Клик — скопировать">N 007604 014106</td><td>Резьбовая пробка</td><td>-</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N007604014110" title="Клик — скопировать">N 007604 014110</td><td>Резьбовая пробка</td><td>1</td><td>ДЛЯ ГОЛОВКИ БЛОКА ЦИЛИНДРОВ</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18-AL</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A0021844301" title="Клик — скопировать">A 002 184 43 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>-</td><td></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A0021844801" title="Клик — скопировать">A 002 184 48 01</td><td>МАСЛЯН. ФИЛЬТР</td><td>1</td><td>с  TEMPERATURE SWITCH FA. KNECHT</td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0001846808" title="Клик — скопировать">A 000 184 68 08</td><td>- КРЫШКА</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0001841632" title="Клик — скопировать">A 000 184 16 32</td><td>	- КЛАПАН</td><td>1</td><td></td></tr><tr data-pos="6"><td>6</td><td class="pn" data-raw="A0001842656" title="Клик — скопировать">A 000 184 26 56</td><td>	- ЗАГЛУШКА РЕЗЬБОВАЯ</td><td>1</td><td></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A0035456724" title="Клик — скопировать">A 003 545 67 24</td><td>	- ВЫКЛЮЧАТЕЛЬ АВТОМ.</td><td>1</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N007604014106" title="Клик — скопировать">N 007604 014106</td><td>Резьбовая пробка</td><td>-</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N007604014110" title="Клик — скопировать">N 007604 014110</td><td>Резьбовая пробка</td><td>1</td><td>ДЛЯ ГОЛОВКИ БЛОКА ЦИЛИНДРОВ</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18\-AL</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

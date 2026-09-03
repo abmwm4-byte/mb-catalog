@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2448905500" title="Клик — скопировать">A 244 890 55 00</td><td>Рейлинги на крыше (ROOF RAILING)</td><td>1</td><td>Слева</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2448905700" title="Клик — скопировать">A 244 890 57 00</td><td>Рейлинги на крыше (ROOF RAILING)</td><td>1</td><td>Слева</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2448905600" title="Клик — скопировать">A 244 890 56 00</td><td>Рейлинги на крыше (ROOF RAILING)</td><td>1</td><td>Справа</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2448905800" title="Клик — скопировать">A 244 890 58 00</td><td>Рейлинги на крыше (ROOF RAILING)</td><td>1</td><td>Справа</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0009908235" title="Клик — скопировать">A 000 990 82 35</td><td>Гайка с фланцем/вставкой (NUT WITH CLAMPING PIECE)</td><td>8</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2446902300" title="Клик — скопировать">A 244 690 23 00</td><td>Водоотводная накладка (WATER DEFLECTOR)</td><td>1</td><td>Защита от перетирания водоотводной планки левой передней стойки кузова</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2446902000" title="Клик — скопировать">A 244 690 20 00</td><td>Водоотводная накладка (WATER DEFLECTOR)</td><td>1</td><td>Защита от перетирания водоотводной планки правой передней стойки кузова</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1749911400" title="Клик — скопировать">A 174 991 14 00</td><td>Скоба декоративной планки (TRIM STRIP CLIP)</td><td>2</td><td>Удерживающая скоба Водоотводящая планка/водоотвод Передняя стойка кузова</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1749910000" title="Клик — скопировать">A 174 991 00 00</td><td>Скоба декоративной планки (TRIM STRIP CLIP)</td><td>2</td><td>Удерживающая скоба Водоотводящая планка/водоотвод Передняя стойка кузова</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2486980400" title="Клик — скопировать">A 248 698 04 00</td><td>Облицовка лонжерона (TRIM, LONGITUDINAL MEMBER)</td><td>1</td><td>Облицовка порога снаружи слева</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2486981300" title="Клик — скопировать">A 248 698 13 00</td><td>Облицовка лонжерона (TRIM, LONGITUDINAL MEMBER)</td><td>1</td><td>Облицовка порога снаружи справа</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2446908502" title="Клик — скопировать">A 244 690 85 02</td><td>Декоративная планка (TRIM STRIP)</td><td>1</td><td>Водоотводная планка слева</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2446908402" title="Клик — скопировать">A 244 690 84 02</td><td>Декоративная планка (TRIM STRIP)</td><td>1</td><td>Водоотводная планка справа</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009913002" title="Клик — скопировать">A 000 991 30 02</td><td>Крепежная клипса (FASTENING CLIP)</td><td>6</td><td>Фиксирующая клипса облицовки Лонжерон слева</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009913002" title="Клик — скопировать">A 000 991 30 02</td><td>Крепежная клипса (FASTENING CLIP)</td><td>6</td><td>Фиксирующая клипса облицовки Лонжерон справа</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2449910700" title="Клик — скопировать">A 244 991 07 00</td><td>Крепежная клипса (FASTENING CLIP)</td><td>1</td><td>Фиксирующая клипса облицовки Лонжерон слева</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2449910700" title="Клик — скопировать">A 244 991 07 00</td><td>Крепежная клипса (FASTENING CLIP)</td><td>1</td><td>Фиксирующая клипса облицовки Лонжерон справа</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009913795" title="Клик — скопировать">A 000 991 37 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>2</td><td>Лонжерон левый (внешняя сторона)</td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009913795" title="Клик — скопировать">A 000 991 37 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>2</td><td>Лонжерон правый (внешняя сторона)</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0009917298" title="Клик — скопировать">A 000 991 72 98</td><td>Скоба (CLAMP)</td><td>2</td><td>Лонжерон слева внутри</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0009917298" title="Клик — скопировать">A 000 991 72 98</td><td>Скоба (CLAMP)</td><td>2</td><td>Лонжерон справа внутри</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009917498" title="Клик — скопировать">A 000 991 74 98</td><td>Клипса обшивки (COVER CLIP)</td><td>4</td><td>Продольный несущий элемент внизу слева</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009917498" title="Клик — скопировать">A 000 991 74 98</td><td>Клипса обшивки (COVER CLIP)</td><td>4</td><td>Продольный несущий элемент внизу справа</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0009901925" title="Клик — скопировать">A 000 990 19 25</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Пружинная гайка Облицовка Лонжерон снаружи слева</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0009901925" title="Клик — скопировать">A 000 990 19 25</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Пружинная гайка Облицовка Лонжерон снаружи справа</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2486980000" title="Клик — скопировать">A 248 698 00 00</td><td>Нащельник (COVER STRIP)</td><td>1</td><td>Декоративная планка слева</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2486981600" title="Клик — скопировать">A 248 698 16 00</td><td>Нащельник (COVER STRIP)</td><td>1</td><td>Декоративная планка справа</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

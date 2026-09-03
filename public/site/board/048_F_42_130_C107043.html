@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1074201484" title="Клик — скопировать">A 107 420 14 84</td><td>СТОЯНОЧНЫЙ ТОРМОЗ</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1074201684" title="Клик — скопировать">A 107 420 16 84</td><td>Стояночный тормоз</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1074270220" title="Клик — скопировать">A 107 427 02 20</td><td>- Ручка</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1984270076" title="Клик — скопировать">A 198 427 00 76</td><td>- Диск</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1989930001" title="Клик — скопировать">A 198 993 00 01</td><td>- пружина</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1134270022" title="Клик — скопировать">A 113 427 00 22</td><td>- Кнопка-застежка</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1074270089" title="Клик — скопировать">A 107 427 00 89</td><td>- СОЕДИНИТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1074270074" title="Клик — скопировать">A 107 427 00 74</td><td>- Палец</td><td>1</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1074270014" title="Клик — скопировать">A 107 427 00 14</td><td>- РОЛИК</td><td>2</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N006799004001" title="Клик — скопировать">N 006799 004001</td><td>- Стопорная шайба</td><td>2</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1074270213" title="Клик — скопировать">A 107 427 02 13</td><td>- Рычаг</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1074270152" title="Клик — скопировать">A 107 427 01 52</td><td>- РАСПОРНАЯ ШАЙБА</td><td>2</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N001434008058" title="Клик — скопировать">N 001434 008058</td><td>- Палец</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="N000094002086" title="Клик — скопировать">N 000094 002086</td><td>- Шплинт</td><td>1</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1154271889" title="Клик — скопировать">A 115 427 18 89</td><td>- Язычок</td><td>2</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N001434008070" title="Клик — скопировать">N 001434 008070</td><td>- Палец</td><td>2</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000094002086" title="Клик — скопировать">N 000094 002086</td><td>- Шплинт</td><td>2</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1079930010" title="Клик — скопировать">A 107 993 00 10</td><td>- пружина</td><td>1</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000933006122" title="Клик — скопировать">N 000933 006122</td><td>- Винт</td><td>-</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>- Винт с 6-гранной головкой</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>- Пружинная шайба</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>- Шайба</td><td>-</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>- Шайба</td><td>1</td><td>6 MM</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000933008147" title="Клик — скопировать">N 000933 008147</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N304017008021" title="Клик — скопировать">N 304017 008021</td><td>Винт с 6-гранной головкой</td><td>4</td><td>M8X20</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>4</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>Шайба</td><td>4</td><td>8 MM</td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1074200085" title="Клик — скопировать">A 107 420 00 85</td><td>ТРОС. ПРИВОД СТОЯН. ТОРМ.</td><td>-</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1074201385" title="Клик — скопировать">A 107 420 13 85</td><td>ТРОС. ПРИВОД СТОЯН. ТОРМ.</td><td>-</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1074201485" title="Клик — скопировать">A 107 420 14 85</td><td>Тормозной трос</td><td>2</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1074201485" title="Клик — скопировать">A 107 420 14 85</td><td>Тормозной трос</td><td>2</td><td></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1074202185" title="Клик — скопировать">A 107 420 21 85</td><td>Тормозной трос</td><td>2</td><td></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N070614010010" title="Клик — скопировать">N 070614 010010</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N000933010162" title="Клик — скопировать">N 000933 010162</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="N000137010205" title="Клик — скопировать">N 000137 010205</td><td>Пружинная шайба</td><td>2</td><td></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1159970681" title="Клик — скопировать">A 115 997 06 81</td><td>втулка</td><td>4</td><td>23 MM</td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="A1159930325" title="Клик — скопировать">A 115 993 03 25</td><td>пружина</td><td>2</td><td></td></tr><tr data-pos="212"><td>212</td><td class="pn" data-raw="N073379006101" title="Клик — скопировать">N 073379 006101</td><td>Шланг</td><td>2</td><td>12 MM</td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A1164270096" title="Клик — скопировать">A 116 427 00 96</td><td>Манжета</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1075451440" title="Клик — скопировать">A 107 545 14 40</td><td>- ДЕРЖАТЕЛЬ</td><td>-</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1161802801" title="Клик — скопировать">A 116 180 28 01</td><td>МАСЛЯНЫЙ НАСОС</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1161802001" title="Клик — скопировать">A 116 180 20 01</td><td>МАСЛЯНЫЙ НАСОС (OIL PUMP)</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1171800104" title="Клик — скопировать">A 117 180 01 04</td><td>- ШЕСТЕРНЯ (DRIVE SHAFT)</td><td>1</td><td>С ВАЛОМ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1161800208" title="Клик — скопировать">A 116 180 02 08</td><td>- Вал масляного насоса (OIL PUMP AXLE)</td><td>1</td><td>С ЗУБЧ. КОЛЕСОМ</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1171810512" title="Клик — скопировать">A 117 181 05 12</td><td>- ПРИВОДНАЯ ШЕСТЕРНЯ (DRIVE WHEEL)</td><td>1</td><td>РЕМОНТ. ИСПОЛНЕНИЕ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N001481004029" title="Клик — скопировать">N 001481 004029</td><td>- Распорный штифт</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000933008018" title="Клик — скопировать">N 000933 008018</td><td>- Винт</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1169900248" title="Клик — скопировать">A 116 990 02 48</td><td>- ШАЙБА</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1161860104" title="Клик — скопировать">A 116 186 01 04</td><td>- СЕТКА</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1161860408" title="Клик — скопировать">A 116 186 04 08</td><td>- ЩИТОК ЗАКРЫВ.</td><td>1</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N009045060000" title="Клик — скопировать">N 009045 060000</td><td>- СТОПОРН. КОЛЬЦО</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1161860207" title="Клик — скопировать">A 116 186 02 07</td><td>- КОМПЕНСАТОР</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1161860007" title="Клик — скопировать">A 116 186 00 07</td><td>- КОМПЕНСАТОР (ADAPTER)</td><td>1</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000931006115" title="Клик — скопировать">N 000931 006115</td><td>- Винт</td><td>-</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000933006151" title="Клик — скопировать">N 000933 006151</td><td>- Винт</td><td>4</td><td>ВСАСЫВАЮЩАЯ СЕТКА К КОРПУСУ МАСЛЯНОГО НАСОСА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>- Пружинная шайба (SPRING WASHER)</td><td>4</td><td>ВСАСЫВАЮЩАЯ СЕТКА К КОРПУСУ МАСЛЯНОГО НАСОСА</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N913002006005" title="Клик — скопировать">N 913002 006005</td><td>- Гайка</td><td>-</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N913002006009" title="Клик — скопировать">N 913002 006009</td><td>- Гайка (NUT)</td><td>4</td><td>ВСАСЫВАЮЩАЯ СЕТКА К КОРПУСУ МАСЛЯНОГО НАСОСА; M6</td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N304017008027" title="Клик — скопировать">N 304017 008027</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>2</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000931008248" title="Клик — скопировать">N 000931 008248</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N304017008053" title="Клик — скопировать">N 304017 008053</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>M8X60</td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N000125008407" title="Клик — скопировать">N 000125 008407</td><td>ШАЙБА</td><td>3</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009972794" title="Клик — скопировать">A 000 997 27 94</td><td>РОЛИКОВАЯ ЦЕПЬ (ROLLER CHAIN)</td><td>1</td><td></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1161810793" title="Клик — скопировать">A 116 181 07 93</td><td>пружина (SPRING)</td><td>1</td><td></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1161811159" title="Клик — скопировать">A 116 181 11 59</td><td>СТЯЖНАЯ СКОБА (TENSIONING BRACKET)</td><td>1</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N006799006003" title="Клик — скопировать">N 006799 006003</td><td>Стопорная шайба (RETAINING WASHER)</td><td>1</td><td>6MM</td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1161800315" title="Клик — скопировать">A 116 180 03 15</td><td>ПРЕДОХРАНИТЕЛЬНЫЙ КЛАПАН</td><td>1</td><td></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1161840232" title="Клик — скопировать">A 116 184 02 32</td><td>- КЛАПАН</td><td>1</td><td></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1169931401" title="Клик — скопировать">A 116 993 14 01</td><td>- ПРУЖИНА</td><td>1</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N000472012000" title="Клик — скопировать">N 000472 012000</td><td>- Стопорное кольцо (RETAINING RING)</td><td>1</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1141800215" title="Клик — скопировать">A 114 180 02 15</td><td>Перепускной масл. клапан (OIL OVERPRESSURE VALVE)</td><td>1</td><td></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1279930201" title="Клик — скопировать">A 127 993 02 01</td><td>- ПРУЖИНА</td><td>1</td><td></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A3211810042" title="Клик — скопировать">A 321 181 00 42</td><td>- ПОРШЕНЬ</td><td>1</td><td></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N073123012300" title="Клик — скопировать">N 073123 012300</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1161840037" title="Клик — скопировать">A 116 184 00 37</td><td>ПРУЖИНА</td><td>1</td><td>OIL OVERFLOW VALVE AT THE FRONT OF CRANKCASE TO OIL COOLER</td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1161840432" title="Клик — скопировать">A 116 184 04 32</td><td>КЛАПАН (VALVE CONE)</td><td>1</td><td>OIL OVERFLOW VALVE AT THE FRONT OF CRANKCASE TO OIL COOLER</td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1161840130" title="Клик — скопировать">A 116 184 01 30</td><td>СЕДЛО КЛАПАНА</td><td>1</td><td>OIL OVERFLOW VALVE AT THE FRONT OF CRANKCASE TO OIL COOLER</td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1161840054" title="Клик — скопировать">A 116 184 00 54</td><td>НАПРАВЛЯЮЩАЯ (VALVE GUIDE)</td><td>1</td><td>OIL OVERFLOW VALVE AT THE FRONT OF CRANKCASE TO OIL COOLER</td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

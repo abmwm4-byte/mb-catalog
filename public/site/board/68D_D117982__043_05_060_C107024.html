@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500226" title="Клик — скопировать">A 116 050 02 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500126" title="Клик — скопировать">A 116 050 01 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1100500027" title="Клик — скопировать">A 110 050 00 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0000531635" title="Клик — скопировать">A 000 053 16 35</td><td>УС-ВО ПРОВОРОТА КЛАПАНА</td><td>16</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1100530120" title="Клик — скопировать">A 110 053 01 20</td><td>Пружина клапана</td><td>16</td><td>СНАРУЖИ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1300530022" title="Клик — скопировать">A 130 053 00 22</td><td>ПРУЖИНА КЛАПАНА</td><td>16</td><td>ВНУТР.</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1169902640" title="Клик — скопировать">A 116 990 26 40</td><td>ШАЙБА</td><td>16</td><td>ПОВЫШ. СИЛЫ ПРУЖИНЫ КЛАПАНА В РЕМ. СЛУЧАЕ 1.25 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1300530225" title="Клик — скопировать">A 130 053 02 25</td><td>ТАРЕЛКА ПРУЖИНЫ КЛАПАНА</td><td>16</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1150530026" title="Клик — скопировать">A 115 053 00 26</td><td>Конический сухарь</td><td>32</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1160500167" title="Клик — скопировать">A 116 050 01 67</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>МАСЛОСЪЕМНЫЙ КОЛПАЧОК</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1160551501" title="Клик — скопировать">A 116 055 15 01</td><td>КОРОМЫСЛО КЛАПАНА</td><td>16</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1160501120" title="Клик — скопировать">A 116 050 11 20</td><td>БОЛТ</td><td>16</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1160550421" title="Клик — скопировать">A 116 055 04 21</td><td>- ПАЛЕЦ С ШАРОВОЙ ГОЛОВКОЙ</td><td>16</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1100551193" title="Клик — скопировать">A 110 055 11 93</td><td>ПРУЖИНА</td><td>16</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1160500480" title="Клик — скопировать">A 116 050 04 80</td><td>ГИБРИДНЫЙ ЭЛЕМЕНТ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1300530353" title="Клик — скопировать">A 130 053 03 53</td><td>Нажимной упор</td><td>16</td><td>STANDARD;4.5 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1300530453" title="Клик — скопировать">A 130 053 04 53</td><td>Нажимной упор</td><td>16</td><td>REPAIR SIZE I;3.5 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1300530553" title="Клик — скопировать">A 130 053 05 53</td><td>Нажимной упор</td><td>16</td><td>REPAIR SIZE II;2.5 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530053" title="Клик — скопировать">A 117 053 00 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530153" title="Клик — скопировать">A 117 053 01 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530253" title="Клик — скопировать">A 117 053 02 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530353" title="Клик — скопировать">A 117 053 03 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530453" title="Клик — скопировать">A 117 053 04 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530553" title="Клик — скопировать">A 117 053 05 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530653" title="Клик — скопировать">A 117 053 06 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

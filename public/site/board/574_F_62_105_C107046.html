@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202508" title="Клик — скопировать">A 107 620 25 08</td><td>Моторный щит</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202308" title="Клик — скопировать">A 107 620 23 08</td><td>МОТОРНЫЙ ЩИТ</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1266260053" title="Клик — скопировать">A 126 626 00 53</td><td>	- Чашка</td><td>1</td><td>ДАТЧ.ИЗБЫТОЧ.ГАЗА</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076203116" title="Клик — скопировать">A 107 620 31 16</td><td>- УСИЛИТЕЛЬ</td><td>1</td><td>МОТОРНЫЙ ЩИТ</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076203316" title="Клик — скопировать">A 107 620 33 16</td><td>- Усиливающий элемент</td><td>1</td><td>МОТОРНЫЙ ЩИТ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1076250514" title="Клик — скопировать">A 107 625 05 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>AUTOMATIC HEATING WATER VALVE</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076201914" title="Клик — скопировать">A 107 620 19 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>AUTOMATIC HEATING CONTROL UNIT</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1076202814" title="Клик — скопировать">A 107 620 28 14</td><td>Держатель</td><td>1</td><td>HYDRAULIC UNIT TO RIGHT FRONT SIDE MEMBER</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1076267714" title="Клик — скопировать">A 107 626 77 14</td><td>Держатель</td><td>1</td><td>ЛОНЖЕРОН СПЕРЕДИ СПРАВА</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076202214" title="Клик — скопировать">A 107 620 22 14</td><td>Держатель</td><td>1</td><td>BATTERY FRAME,REAR</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076202314" title="Клик — скопировать">A 107 620 23 14</td><td>Держатель</td><td>1</td><td>BATTERY FRAME,FRONT</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076202114" title="Клик — скопировать">A 107 620 21 14</td><td>Держатель</td><td>1</td><td>BATTERY FRAME,FRONT</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200818" title="Клик — скопировать">A 107 620 08 18</td><td>Рама батареи</td><td>1</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1076261012" title="Клик — скопировать">A 107 626 10 12</td><td>Крепежный уголок</td><td>1</td><td>ДЛЯ АКБ</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000933006103" title="Клик — скопировать">N 000933 006103</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N304017006018" title="Клик — скопировать">N 304017 006018</td><td>Винт с 6-гранной головкой</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ; M6X12</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000933006127" title="Клик — скопировать">N 000933 006127</td><td>Винт</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ; M6X25</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000125006421" title="Клик — скопировать">N 000125 006421</td><td>Шайба</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000125006449" title="Клик — скопировать">N 000125 006449</td><td>Шайба</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000125006449" title="Клик — скопировать">N 000125 006449</td><td>Шайба</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1079910240" title="Клик — скопировать">A 107 991 02 40</td><td>РАСПОРН. ТРУБКА</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1076260612" title="Клик — скопировать">A 107 626 06 12</td><td>Крепежный уголок</td><td>1</td><td>ДЛЯ АКБ</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>2</td><td>ANGLE TO BATTERY FRAME</td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N009021006103" title="Клик — скопировать">N 009021 006103</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>2</td><td>ANGLE TO BATTERY FRAME; 6 MM</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076200316" title="Клик — скопировать">A 107 620 03 16</td><td>Усиливающий элемент</td><td>1</td><td>ПОД КРЫШКОЙ ПОД ПРИБОРН. ПАНЕЛЬЮ</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076200416" title="Клик — скопировать">A 107 620 04 16</td><td>Усиливающий элемент</td><td>1</td><td>ПОД КРЫШКОЙ ПОД ПРИБОРН. ПАНЕЛЬЮ</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1076200004" title="Клик — скопировать">A 107 620 00 04</td><td>Центральный элемент</td><td>1</td><td>ПОД ОБТЕКАТЕЛЕМ</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1076280128" title="Клик — скопировать">A 107 628 01 28</td><td>Соединительная пластина</td><td>1</td><td>СНАРУЖИ СЛЕВА</td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1076280228" title="Клик — скопировать">A 107 628 02 28</td><td>Соединительная пластина</td><td>1</td><td>СНАРУЖИ СПРАВА</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1076200374" title="Клик — скопировать">A 107 620 03 74</td><td>Рама</td><td>1</td><td>СВЕРХУ, ПОПЕРЕК</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1076270128" title="Клик — скопировать">A 107 627 01 28</td><td>ПОДШИПНИК</td><td>2</td><td>РУЧКА ЗАКРЫВАНИЯ</td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0009903330" title="Клик — скопировать">A 000 990 33 30</td><td>Болт с потайной головкой</td><td>4</td><td>MOUNTING TO FRONT PANEL FRAME</td></tr></tbody></table>
   </div>
 </div>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

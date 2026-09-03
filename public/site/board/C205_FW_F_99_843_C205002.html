@@ -27,12 +27,18 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -66,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067108" title="Клик — скопировать">A 000 906 71 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP1,7.2KW,1X30A,60HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067408" title="Клик — скопировать">A 000 906 74 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP2,22KW,3X32A,50HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067408" title="Клик — скопировать">A 000 906 74 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP2,22KW,3X32A,50HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067408" title="Клик — скопировать">A 000 906 74 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP2,22KW,3X32A,50HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067908" title="Клик — скопировать">A 000 906 79 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYPGB,7.2KW,1X32A,50HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067408" title="Клик — скопировать">A 000 906 74 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP2,22KW,3X32A,50HZ</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009067608" title="Клик — скопировать">A 000 906 76 08</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td>HOME,6M CABLE,TYP1,7,2,1X30A,50/60HZ,P</td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009069906" title="Клик — скопировать">A 000 906 99 06</td><td>Зарядная станция (CHARGING STATION)</td><td>1</td><td></td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009065808" title="Клик — скопировать">A 000 906 58 08</td><td>Зарядная станция</td><td>1</td><td></td></tr><tr data-pos="843"><td>843</td><td class="pn" data-raw="A0009065908" title="Клик — скопировать">A 000 906 59 08</td><td>Зарядная станция</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
@@ -117,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

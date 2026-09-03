@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058350600" title="Клик — скопировать">A 205 835 06 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058352400" title="Клик — скопировать">A 205 835 24 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058352500" title="Клик — скопировать">A 205 835 25 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2238351600" title="Клик — скопировать">A 223 835 16 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009942745" title="Клик — скопировать">A 000 994 27 45</td><td>Стопор болта (BOLT LOCK)</td><td>1</td><td>Ионизатор к воздушному каналу</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2228900100" title="Клик — скопировать">A 222 890 01 00</td><td>Корпус системы (HOUSING, PERFUME ATOMIZER)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0555455728" title="Клик — скопировать">A 055 545 57 28</td><td>- Штекер (PLUG)</td><td>1</td><td>6-PIN MQS</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2228990600" title="Клик — скопировать">A 222 899 06 00</td><td>Флакон (FLACON)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538000000" title="Клик — скопировать">A 253 800 00 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538000100" title="Клик — скопировать">A 253 800 01 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0029957277" title="Клик — скопировать">A 002 995 72 77</td><td>Держатель шланга (HOSE BRACKET)</td><td>1</td><td>Крепление шлангового трубопровода</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0008990117" title="Клик — скопировать">A 000 899 01 17</td><td>Комплект пробников (FRAGRANCE TESTER SET)</td><td>1</td><td>Система ароматизации</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058350600" title="Клик — скопировать">A 205 835 06 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058352400" title="Клик — скопировать">A 205 835 24 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058352500" title="Клик — скопировать">A 205 835 25 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2238351600" title="Клик — скопировать">A 223 835 16 00</td><td>Ионизатор (IONIZER)</td><td>1</td><td>К воздушному каналу</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009942745" title="Клик — скопировать">A 000 994 27 45</td><td>Стопор болта (BOLT LOCK)</td><td>1</td><td>Ионизатор к воздушному каналу</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2228900100" title="Клик — скопировать">A 222 890 01 00</td><td>Корпус системы (HOUSING, PERFUME ATOMIZER)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0555455728" title="Клик — скопировать">A 055 545 57 28</td><td>- Штекер (PLUG)</td><td>1</td><td>6\-PIN MQS</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2228990600" title="Клик — скопировать">A 222 899 06 00</td><td>Флакон (FLACON)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538000000" title="Клик — скопировать">A 253 800 00 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538000100" title="Клик — скопировать">A 253 800 01 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Система ароматизации</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0029957277" title="Клик — скопировать">A 002 995 72 77</td><td>Держатель шланга (HOSE BRACKET)</td><td>1</td><td>Крепление шлангового трубопровода</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0008990117" title="Клик — скопировать">A 000 899 01 17</td><td>Комплект пробников (FRAGRANCE TESTER SET)</td><td>1</td><td>Система ароматизации</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 12 · подписано на схемах: 12 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

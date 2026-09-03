@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,7 +72,8 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2433501601" title="Клик — скопировать">A 243 350 16 01</td><td>Подрамник (SUSPENSION SUBFRAME)</td><td>1</td><td>С опорой</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2473521900" title="Клик — скопировать">A 247 352 19 00</td><td>- Опора рычага аморт.стойки (SPRING LINK BUSHING)</td><td>2</td><td>Рычаг амортизационной стойки к балке заднего моста, слева и справа</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2473522000" title="Клик — скопировать">A 247 352 20 00</td><td>- Опора рычага аморт.стойки (SPRING LINK BUSHING)</td><td>2</td><td>Рычаг амортизационной стойки к балке заднего моста, слева и справа</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2433510000" title="Клик — скопировать">A 243 351 00 00</td><td>- Опора подрамника (AXLE SUBFRAME SUSPENSION)</td><td>2</td><td>Спереди слева и справа</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2433510200" title="Клик — скопировать">A 243 351 02 00</td><td>- Опора подрамника (AXLE SUBFRAME SUSPENSION)</td><td>2</td><td>Сзади слева и справа</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2433510100" title="Клик — скопировать">A 243 351 01 00</td><td>- Опора редуктора зад.моста (REAR AXLE DIFF. BEARING)</td><td>2</td><td>Спереди слева и справа</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2433510100" title="Клик — скопировать">A 243 351 01 00</td><td>- Опора редуктора зад.моста (REAR AXLE DIFF. BEARING)</td><td>2</td><td>Сзади слева и справа</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2473525800" title="Клик — скопировать">A 247 352 58 00</td><td>Упорная пластина (STOP PLATE)</td><td>1</td><td>Спереди слева</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2473525800" title="Клик — скопировать">A 247 352 58 00</td><td>Упорная пластина (STOP PLATE)</td><td>1</td><td>Спереди справа</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2473525700" title="Клик — скопировать">A 247 352 57 00</td><td>Упорная пластина (STOP PLATE)</td><td>1</td><td>Сзади слева</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2473525700" title="Клик — скопировать">A 247 352 57 00</td><td>Упорная пластина (STOP PLATE)</td><td>1</td><td>Сзади справа</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009904129" title="Клик — скопировать">A 000 990 41 29</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>2</td><td>Балка заднего моста к несущему основанию кузова (левая сторона)</td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009904129" title="Клик — скопировать">A 000 990 41 29</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>2</td><td>Балка заднего моста к несущему основанию кузова (правая сторона)</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2473526900" title="Клик — скопировать">A 247 352 69 00</td><td>Эксцентриковый упор (ECCENTRIC END STOP)</td><td>1</td><td>Спереди слева</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2473526900" title="Клик — скопировать">A 247 352 69 00</td><td>Эксцентриковый упор (ECCENTRIC END STOP)</td><td>1</td><td>Спереди справа</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009915940" title="Клик — скопировать">A 000 991 59 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>Упорный буфер к подрамнику (передний левый)</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009915940" title="Клик — скопировать">A 000 991 59 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>Упорный буфер к подрамнику (передний правый)</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2473527300" title="Клик — скопировать">A 247 352 73 00</td><td>Эксцентриковый упор (ECCENTRIC END STOP)</td><td>1</td><td>Сзади слева</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2473527300" title="Клик — скопировать">A 247 352 73 00</td><td>Эксцентриковый упор (ECCENTRIC END STOP)</td><td>1</td><td>Сзади справа</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0009915940" title="Клик — скопировать">A 000 991 59 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>Упорный буфер к подрамнику (задний левый)</td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0009915940" title="Клик — скопировать">A 000 991 59 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>Упорный буфер к подрамнику (задний правый)</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0009902719" title="Клик — скопировать">A 000 990 27 19</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>2</td><td>Модуль привода к подрамнику (передняя сторона)</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009902719" title="Клик — скопировать">A 000 990 27 19</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>2</td><td>Модуль привода к подрамнику (задняя сторона)</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2433523300" title="Клик — скопировать">A 243 352 33 00</td><td>Поперечина (CROSS BRIDGE)</td><td>1</td><td>К подрамнику</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A2433522600" title="Клик — скопировать">A 243 352 26 00</td><td>Облицовка балки зад.моста (TRIM, REAR AXLE CARRIER)</td><td>1</td><td>Подрамник</td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="N910105010009" title="Клик — скопировать">N 910105 010009</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>Панель облицовки к подрамнику; M10X25</td></tr></tbody></table>
   </div>
 </div>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

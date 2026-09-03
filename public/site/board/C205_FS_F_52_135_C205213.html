@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>52 Металлические листовые детали шасси / система впуска воздуха / 135 Система впуска воздуха дизельных а/м</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205213">C205_FS -/-</a> → 135 Система впуска воздуха дизельных а/м</div>
+<h1>135 Система впуска воздуха дизельных а/м</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.002.919.011_version_002.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="305"><td>305</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td></tr><tr data-pos="2260"><td>2260</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td></tr><tr data-pos="3000"><td>3000</td><td class="pn" data-raw="A6540908000" title="Клик — скопировать">A 654 090 80 00</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td></tr><tr data-pos="3000"><td>3000</td><td class="pn" data-raw="A6540900301" title="Клик — скопировать">A 654 090 03 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td></tr><tr data-pos="3000"><td>3000</td><td class="pn" data-raw="A6540902601" title="Клик — скопировать">A 654 090 26 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td></tr><tr data-pos="3000"><td>3000</td><td class="pn" data-raw="A6540902501" title="Клик — скопировать">A 654 090 25 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td></tr><tr data-pos="3020"><td>3020</td><td class="pn" data-raw="A6540940004" title="Клик — скопировать">A 654 094 00 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td></tr><tr data-pos="3030"><td>3030</td><td class="pn" data-raw="A0009055906" title="Клик — скопировать">A 000 905 59 06</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td></td></tr><tr data-pos="3040"><td>3040</td><td class="pn" data-raw="A6540940085" title="Клик — скопировать">A 654 094 00 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Демпферный фильтр к наддувочному воздуховоду</td></tr><tr data-pos="3050"><td>3050</td><td class="pn" data-raw="A0009982542" title="Клик — скопировать">A 000 998 25 42</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Защитный кожух двигателя к демпферному фильтру</td></tr><tr data-pos="3060"><td>3060</td><td class="pn" data-raw="A0993170100" title="Клик — скопировать">A 099 317 01 00</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>Защитный кожух двигателя сзади</td></tr><tr data-pos="3070"><td>3070</td><td class="pn" data-raw="A6540980180" title="Клик — скопировать">A 654 098 01 80</td><td>- Эластомерный уплотнитель (ELASTOMERIC MOLDED SEAL)</td><td>1</td><td>Блок управления двигателя к демпферному фильтру</td></tr><tr data-pos="3080"><td>3080</td><td class="pn" data-raw="A6540980280" title="Клик — скопировать">A 654 098 02 80</td><td>- Эластомерный уплотнитель (ELASTOMERIC MOLDED SEAL)</td><td>1</td><td>Расходомер воздуха к демпферному фильтру</td></tr><tr data-pos="3090"><td>3090</td><td class="pn" data-raw="A6540940122" title="Клик — скопировать">A 654 094 01 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Демпферный фильтр к охладителю наддувочного воздуха</td></tr><tr data-pos="3100"><td>3100</td><td class="pn" data-raw="A6540940022" title="Клик — скопировать">A 654 094 00 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>2</td><td>Демпферный фильтр слева к распределительному трубопроводу наддувочного воздуха</td></tr><tr data-pos="3150"><td>3150</td><td class="pn" data-raw="A6540901200" title="Клик — скопировать">A 654 090 12 00</td><td>Трубопровод оч. воздуха (CLEAN AIR LINE)</td><td>1</td><td></td></tr><tr data-pos="3150"><td>3150</td><td class="pn" data-raw="A6540909401" title="Клик — скопировать">A 654 090 94 01</td><td>Трубопровод оч. воздуха (CLEAN AIR LINE)</td><td>1</td><td></td></tr><tr data-pos="3160"><td>3160</td><td class="pn" data-raw="A0005848806" title="Клик — скопировать">A 000 584 88 06</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>1</td><td></td></tr><tr data-pos="3160"><td>3160</td><td class="pn" data-raw="A0008179006" title="Клик — скопировать">A 000 817 90 06</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>1</td><td></td></tr><tr data-pos="3160"><td>3160</td><td class="pn" data-raw="A0005848806" title="Клик — скопировать">A 000 584 88 06</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>1</td><td></td></tr><tr data-pos="3170"><td>3170</td><td class="pn" data-raw="A6540900048" title="Клик — скопировать">A 654 090 00 48</td><td>- Расходомер воздуха (HOT FILM AIR FLOW SENSOR)</td><td>1</td><td></td></tr><tr data-pos="3170"><td>3170</td><td class="pn" data-raw="A6549053400" title="Клик — скопировать">A 654 905 34 00</td><td>- Расходомер воздуха (HOT FILM AIR FLOW SENSOR)</td><td>1</td><td></td></tr><tr data-pos="3180"><td>3180</td><td class="pn" data-raw="A6540980083" title="Клик — скопировать">A 654 098 00 83</td><td>- Гофрированный шланг (ACCORDION HOSE)</td><td>1</td><td></td></tr><tr data-pos="3190"><td>3190</td><td class="pn" data-raw="A0019956810" title="Клик — скопировать">A 001 995 68 10</td><td>- Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>Гофрированный шланг к расходомеру</td></tr><tr data-pos="3200"><td>3200</td><td class="pn" data-raw="A0019956710" title="Клик — скопировать">A 001 995 67 10</td><td>- Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>Гофрированный шланг к воздушному фильтру</td></tr><tr data-pos="3250"><td>3250</td><td class="pn" data-raw="A6540943700" title="Клик — скопировать">A 654 094 37 00</td><td>Впускная труба (RAW AIR LINE)</td><td>1</td><td></td></tr><tr data-pos="3250"><td>3250</td><td class="pn" data-raw="A6540941597" title="Клик — скопировать">A 654 094 15 97</td><td>Впускная труба (RAW AIR LINE)</td><td>1</td><td></td></tr><tr data-pos="3300"><td>3300</td><td class="pn" data-raw="A6540107600" title="Клик — скопировать">A 654 010 76 00</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td></td></tr><tr data-pos="3310"><td>3310</td><td class="pn" data-raw="A0009982542" title="Клик — скопировать">A 000 998 25 42</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Защитный кожух двигателя спереди</td></tr><tr data-pos="3320"><td>3320</td><td class="pn" data-raw="A0019930560" title="Клик — скопировать">A 001 993 05 60</td><td>- Эласт.-мет. шарн. элемент</td><td>1</td><td>Защитный кожух двигателя спереди</td></tr><tr data-pos="3330"><td>3330</td><td class="pn" data-raw="A6540103102" title="Клик — скопировать">A 654 010 31 02</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td>Спереди</td></tr><tr data-pos="3360"><td>3360</td><td class="pn" data-raw="A0009982542" title="Клик — скопировать">A 000 998 25 42</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>Защитный кожух двигателя спереди</td></tr><tr data-pos="3380"><td>3380</td><td class="pn" data-raw="A6540106505" title="Клик — скопировать">A 654 010 65 05</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td>Слева</td></tr><tr data-pos="3380"><td>3380</td><td class="pn" data-raw="A6540104001" title="Клик — скопировать">A 654 010 40 01</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td>Слева</td></tr><tr data-pos="3400"><td>3400</td><td class="pn" data-raw="A2055050800" title="Клик — скопировать">A 205 505 08 00</td><td>Впуск холодного воздуха (COLD AIR INTAKE)</td><td>1</td><td></td></tr><tr data-pos="3410"><td>3410</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 36 · подписано на схемах: 36 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.919.011_version_002.png", "poses": ["3000", "3020", "3030", "3040", "3050", "3060", "3070", "3080", "3090", "3100", "3150", "3160", "3170", "3180", "3190", "3200", "3250", "3300", "3310", "3320", "3330", "3360", "3380", "3400", "3410"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
+  applyRows();
+})();
+</script></body></html>

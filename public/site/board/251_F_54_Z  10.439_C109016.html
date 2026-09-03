@@ -35,6 +35,10 @@ a { color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -68,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0005425919" title="Клик — скопировать">A 000 542 59 19</td><td>Контактор</td><td>1</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A1085400209" title="Клик — скопировать">A 108 540 02 09</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N072586001200" title="Клик — скопировать">N 072586 001200</td><td>Соединитель проводов</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0025454428" title="Клик — скопировать">A 002 545 44 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0055451328" title="Клик — скопировать">A 005 545 13 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0065458028" title="Клик — скопировать">A 006 545 80 28</td><td>CONTACT SUPPORT</td><td>1</td><td>6-СЕКЦИОН.; 6-PIN</td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>Наружный круглый штекер</td><td>-</td><td></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>Контактная втулка</td><td>6</td><td>TO 006 545 80 28; 0.35-4.0 MM2 RK4</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0095453028" title="Клик — скопировать">A 009 545 30 28</td><td>Верхняя часть корпуса</td><td>1</td><td>TO 006 545 80 28</td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1085420340" title="Клик — скопировать">A 108 542 03 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="66"><td>66</td><td class="pn" data-raw="N007981004326" title="Клик — скопировать">N 007981 004326</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N007981004326" title="Клик — скопировать">N 007981 004326</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="114"><td>114</td><td class="pn" data-raw="A0009941345" title="Клик — скопировать">A 000 994 13 45</td><td>предохранитель</td><td>2</td><td></td></tr><tr data-pos="118"><td>118</td><td class="pn" data-raw="N000084004174" title="Клик — скопировать">N 000084 004174</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>1</td><td></td></tr><tr data-pos="126"><td>126</td><td class="pn" data-raw="A1109971281" title="Клик — скопировать">A 110 997 12 81</td><td>резиновая втулка</td><td>1</td><td></td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0005425919" title="Клик — скопировать">A 000 542 59 19</td><td>Контактор</td><td>1</td><td></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A1085400209" title="Клик — скопировать">A 108 540 02 09</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N072586001200" title="Клик — скопировать">N 072586 001200</td><td>Соединитель проводов</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0025454428" title="Клик — скопировать">A 002 545 44 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0055451328" title="Клик — скопировать">A 005 545 13 28</td><td>ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A0065458028" title="Клик — скопировать">A 006 545 80 28</td><td>CONTACT SUPPORT</td><td>1</td><td>6\-СЕКЦИОН.; 6\-PIN</td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>Наружный круглый штекер</td><td>-</td><td></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>Контактная втулка</td><td>6</td><td>TO 006 545 80 28; 0.35\-4.0 MM2 RK4</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0095453028" title="Клик — скопировать">A 009 545 30 28</td><td>Верхняя часть корпуса</td><td>1</td><td>TO 006 545 80 28</td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A1085420340" title="Клик — скопировать">A 108 542 03 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="66"><td>66</td><td class="pn" data-raw="N007981004326" title="Клик — скопировать">N 007981 004326</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N007981004326" title="Клик — скопировать">N 007981 004326</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="114"><td>114</td><td class="pn" data-raw="A0009941345" title="Клик — скопировать">A 000 994 13 45</td><td>предохранитель</td><td>2</td><td></td></tr><tr data-pos="118"><td>118</td><td class="pn" data-raw="N000084004174" title="Клик — скопировать">N 000084 004174</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>1</td><td></td></tr><tr data-pos="126"><td>126</td><td class="pn" data-raw="A1109971281" title="Клик — скопировать">A 110 997 12 81</td><td>резиновая втулка</td><td>1</td><td></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -119,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>

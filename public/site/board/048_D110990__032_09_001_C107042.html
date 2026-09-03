@@ -27,12 +27,26 @@ a { color: #1268c8; }
 .catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
 .catsel a:hover { background: #f0f6ff; }
 .cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
 .scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
 .scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
 .scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
 .scheme-tabs .hint { color: #7a8089; font-size: 13px; }
 .parts tr.dim { opacity: .35; }
 .showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
 /* viewer */
 .blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
 @media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
@@ -58,8 +72,9 @@ a { color: #1268c8; }
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
-    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 6</div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1100942682" title="Клик — скопировать">A 110 094 26 82</td><td>ШЛАНГ</td><td>1</td><td></td></tr><tr data-pos="108"><td>108</td><td class="pn" data-raw="A1169880511" title="Клик — скопировать">A 116 988 05 11</td><td>Резиновый буфер</td><td>1</td><td>SCOOP AND AIR CLEANER TO AIR DUCT</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1100940791" title="Клик — скопировать">A 110 094 07 91</td><td>МАНЖЕТА</td><td>1</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N916026080000" title="Клик — скопировать">N 916026 080000</td><td>Хомут</td><td>-</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A0069970890" title="Клик — скопировать">A 006 997 08 90</td><td>хомут</td><td>1</td><td>80-100 MM</td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="N916026090000" title="Клик — скопировать">N 916026 090000</td><td>Хомут</td><td>1</td><td>BOOT TO THROTTLE HOUSING</td></tr><tr data-pos="286"><td>286</td><td class="pn" data-raw="A0070946102" title="Клик — скопировать">A 007 094 61 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0010943704" title="Клик — скопировать">A 001 094 37 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="336"><td>336</td><td class="pn" data-raw="A0000940485" title="Клик — скопировать">A 000 094 04 85</td><td>- Резиновый буфер</td><td>1</td><td></td></tr><tr data-pos="349"><td>349</td><td class="pn" data-raw="A0000942079" title="Клик — скопировать">A 000 094 20 79</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td></td></tr><tr data-pos="373"><td>373</td><td class="pn" data-raw="A0010945180" title="Клик — скопировать">A 001 094 51 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="373"><td>373</td><td class="pn" data-raw="A1020940060" title="Клик — скопировать">A 102 094 00 60</td><td>- уплотнение</td><td>1</td><td></td></tr><tr data-pos="381"><td>381</td><td class="pn" data-raw="A1235849321" title="Клик — скопировать">A 123 584 93 21</td><td>- Информационная табличка</td><td>-</td><td></td></tr><tr data-pos="381"><td>381</td><td class="pn" data-raw="A2105840047" title="Клик — скопировать">A 210 584 00 47</td><td>- Предупреждающая табличка</td><td>1</td><td>&quot;ОПАСНО ДЛЯ ЖИЗНИ! ВЫСОКОЕ НАПРЯЖЕНИЕ&quot;; ПО-НЕМЕЦКИ, АНГЛИЙСКИ И ФРАНЦУЗСКИ</td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="422"><td>422</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="432"><td>432</td><td class="pn" data-raw="A1890940085" title="Клик — скопировать">A 189 094 00 85</td><td>РЕЗИНОВЫЙ УПОР</td><td>1</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="579"><td>579</td><td class="pn" data-raw="A0000944711" title="Клик — скопировать">A 000 094 47 11</td><td>ВОЗДУХОЗАБОРНИК</td><td>1</td><td></td></tr><tr data-pos="714"><td>714</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="N000315006004" title="Клик — скопировать">N 000315 006004</td><td>Гайка</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td></tr></tbody></table>
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 6
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1100942682" title="Клик — скопировать">A 110 094 26 82</td><td>ШЛАНГ</td><td>1</td><td></td></tr><tr data-pos="108"><td>108</td><td class="pn" data-raw="A1169880511" title="Клик — скопировать">A 116 988 05 11</td><td>Резиновый буфер</td><td>1</td><td>SCOOP AND AIR CLEANER TO AIR DUCT</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1100940791" title="Клик — скопировать">A 110 094 07 91</td><td>МАНЖЕТА</td><td>1</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N916026080000" title="Клик — скопировать">N 916026 080000</td><td>Хомут</td><td>-</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A0069970890" title="Клик — скопировать">A 006 997 08 90</td><td>хомут</td><td>1</td><td>80\-100 MM</td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="N916026090000" title="Клик — скопировать">N 916026 090000</td><td>Хомут</td><td>1</td><td>BOOT TO THROTTLE HOUSING</td></tr><tr data-pos="286"><td>286</td><td class="pn" data-raw="A0070946102" title="Клик — скопировать">A 007 094 61 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0010943704" title="Клик — скопировать">A 001 094 37 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="336"><td>336</td><td class="pn" data-raw="A0000940485" title="Клик — скопировать">A 000 094 04 85</td><td>- Резиновый буфер</td><td>1</td><td></td></tr><tr data-pos="349"><td>349</td><td class="pn" data-raw="A0000942079" title="Клик — скопировать">A 000 094 20 79</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td></td></tr><tr data-pos="373"><td>373</td><td class="pn" data-raw="A0010945180" title="Клик — скопировать">A 001 094 51 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td></tr><tr data-pos="373"><td>373</td><td class="pn" data-raw="A1020940060" title="Клик — скопировать">A 102 094 00 60</td><td>- уплотнение</td><td>1</td><td></td></tr><tr data-pos="381"><td>381</td><td class="pn" data-raw="A1235849321" title="Клик — скопировать">A 123 584 93 21</td><td>- Информационная табличка</td><td>-</td><td></td></tr><tr data-pos="381"><td>381</td><td class="pn" data-raw="A2105840047" title="Клик — скопировать">A 210 584 00 47</td><td>- Предупреждающая табличка</td><td>1</td><td>&quot;ОПАСНО ДЛЯ ЖИЗНИ! ВЫСОКОЕ НАПРЯЖЕНИЕ&quot;; ПО\-НЕМЕЦКИ, АНГЛИЙСКИ И ФРАНЦУЗСКИ</td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="422"><td>422</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="432"><td>432</td><td class="pn" data-raw="A1890940085" title="Клик — скопировать">A 189 094 00 85</td><td>РЕЗИНОВЫЙ УПОР</td><td>1</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="579"><td>579</td><td class="pn" data-raw="A0000944711" title="Клик — скопировать">A 000 094 47 11</td><td>ВОЗДУХОЗАБОРНИК</td><td>1</td><td></td></tr><tr data-pos="714"><td>714</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="N000315006004" title="Клик — скопировать">N 000315 006004</td><td>Гайка</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -109,6 +124,22 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси»
+  const chi=document.getElementById('chassis');
+  function applyChassis(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    rows.forEach(tr=>{
+      tr.classList.remove('no-fit');
+      if(!q)return;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!f&&!t)return;
+      const n=parseInt(q,10); if(isNaN(n))return;
+      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+    });
+  }
+  if(chi)chi.addEventListener('input',applyChassis);
   applyRows();
 })();
 </script></body></html>
