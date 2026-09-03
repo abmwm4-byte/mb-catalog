@@ -128,6 +128,8 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
 
   // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
