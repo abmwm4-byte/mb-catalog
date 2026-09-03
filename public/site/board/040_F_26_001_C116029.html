@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>26 КОРОБКА ПЕРЕДАЧ / 001 КОРОБКА ПЕРЕДАЧ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116029">040 STANDARD</a> → 001 КОРОБКА ПЕРЕДАЧ</div>
+<h1>001 КОРОБКА ПЕРЕДАЧ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B26001000009 <span class="hint">(44)</span></button><button data-i="1" class="">B26001000010 <span class="hint">(30)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B26001000009.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1152673605" title="Клик — скопировать">A 115 267 36 05</td><td>Опорный кронштейн</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1152607282" title="Клик — скопировать">A 115 260 72 82</td><td>Тяга переключения передач</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1159910301" title="Клик — скопировать">A 115 991 03 01</td><td>Палец</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1232602239" title="Клик — скопировать">A 123 260 22 39</td><td>Рычаг перекл.передач</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ Коробка передач</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A1152600376" title="Клик — скопировать">A 115 260 03 76</td><td>Направляющий палец</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1152670750" title="Клик — скопировать">A 115 267 07 50</td><td>втулка</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1232670252" title="Клик — скопировать">A 123 267 02 52</td><td>Диск</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A1159902640" title="Клик — скопировать">A 115 990 26 40</td><td>ШАЙБА</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N900055018001" title="Клик — скопировать">N 900055 018001</td><td>Пружинная шайба</td><td>1</td><td>Коробка передач [015] UP TO CHASSIS: 020     074321 024,025 070430 028,029 036430</td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A1239930626" title="Клик — скопировать">A 123 993 06 26</td><td>Тарельчатая пружина</td><td>2</td><td>Коробка передач [016] FROM CHASSIS: 020     074322 024,025 070431 028,029 036431</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1232670252" title="Клик — скопировать">A 123 267 02 52</td><td>Диск</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1152672250" title="Клик — скопировать">A 115 267 22 50</td><td>втулка</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A1152680550" title="Клик — скопировать">A 115 268 05 50</td><td>втулка</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1159939303" title="Клик — скопировать">A 115 993 93 03</td><td>Нажимная пружина</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1152670114" title="Клик — скопировать">A 115 267 01 14</td><td>Колпачок</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1159939902" title="Клик — скопировать">A 115 993 99 02</td><td>Нажимная пружина</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N007346005000" title="Клик — скопировать">N 007346 005000</td><td>Зажимная гильза</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N001481005017" title="Клик — скопировать">N 001481 005017</td><td>Распорный штифт</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1152604139" title="Клик — скопировать">A 115 260 41 39</td><td>Рычаг</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Коробка передач [011] FROM CHASSIS: 020     060220 024,025 057863 028,029 032101</td><td class="restr"></td></tr><tr data-pos="46"><td>46</td><td class="pn" data-raw="A1152604339" title="Клик — скопировать">A 115 260 43 39</td><td>Рычаг</td><td>1</td><td>ПЕРВАЯ И ВТОРАЯ ПЕРЕДАЧА Коробка передач [011] FROM CHASSIS: 020     060220 024,025 057863 028,029 032101</td><td class="restr"></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1152604239" title="Клик — скопировать">A 115 260 42 39</td><td>Рычаг</td><td>1</td><td>ТРЕТЬЯ И ЧЕТВЁРТАЯ ПЕРЕДАЧА Коробка передач [011] FROM CHASSIS: 020     060220 024,025 057863 028,029 032101</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1152670676" title="Клик — скопировать">A 115 267 06 76</td><td>Диск</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="58"><td>58</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>2</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000933006130" title="Клик — скопировать">N 000933 006130</td><td>Винт</td><td>2</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0009902291" title="Клик — скопировать">A 000 990 22 91</td><td>ГАЙКОДЕРЖАТЕЛЬ</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0019906791" title="Клик — скопировать">A 001 990 67 91</td><td>Гайкодержатель</td><td>4</td><td>Коробка передач [019] FROM CHASSIS: 020     108779 024,025 125061 028,029 048863 032,033 085288 036     004951 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos="64"><td>64</td><td class="pn" data-raw="A1152670380" title="Клик — скопировать">A 115 267 03 80</td><td>Уплотнительная прокладка</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N914130006100" title="Клик — скопировать">N 914130 006100</td><td>Винт</td><td>4</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1232670097" title="Клик — скопировать">A 123 267 00 97</td><td>Манжета</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A1262670410" title="Клик — скопировать">A 126 267 04 10</td><td>Ручка рычага перекл.пер.</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="N070616010003" title="Клик — скопировать">N 070616 010003</td><td>Гайка</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A0005452406" title="Клик — скопировать">A 000 545 24 06</td><td>Переключатель</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0035457128" title="Клик — скопировать">A 003 545 71 28</td><td>- ШТЕКЕР</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0065457828" title="Клик — скопировать">A 006 545 78 28</td><td>- Корпус штекера</td><td>1</td><td>6\-PIN Коробка передач</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1162600333" title="Клик — скопировать">A 116 260 03 33</td><td>ТЯГА ПЕРЕКЛ. ПЕРЕДАЧ</td><td>1</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1162600433" title="Клик — скопировать">A 116 260 04 33</td><td>ТЯГА ПЕРЕКЛ. ПЕРЕДАЧ</td><td>1</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1162600533" title="Клик — скопировать">A 116 260 05 33</td><td>ТЯГА ПЕРЕКЛ. ПЕРЕДАЧ</td><td>1</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1152600353" title="Клик — скопировать">A 115 260 03 53</td><td>- Концевой элемент</td><td>3</td><td>Коробка передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1159920110" title="Клик — скопировать">A 115 992 01 10</td><td>	- ВТУЛКА</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2109920010" title="Клик — скопировать">A 210 992 00 10</td><td>	- втулка</td><td>3</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="91"><td>91</td><td class="pn" data-raw="N070616010004" title="Клик — скопировать">N 070616 010004</td><td>- Гайка</td><td>3</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A0009942960" title="Клик — скопировать">A 000 994 29 60</td><td>предохранитель</td><td>6</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A1152607537" title="Клик — скопировать">A 115 260 75 37</td><td>РЫЧАГ</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A1152682530" title="Клик — скопировать">A 115 268 25 30</td><td>Рычаг</td><td>2</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="99"><td>99</td><td class="pn" data-raw="A1232602437" title="Клик — скопировать">A 123 260 24 37</td><td>РЫЧАГ</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="99"><td>99</td><td class="pn" data-raw="A1232670030" title="Клик — скопировать">A 123 267 00 30</td><td>Рычаг</td><td>1</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0009920510" title="Клик — скопировать">A 000 992 05 10</td><td>- ВТУЛКА</td><td>3</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="N000933006127" title="Клик — скопировать">N 000933 006127</td><td>Винт</td><td>3</td><td>M6X25 Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>3</td><td>Коробка передач [020] UP TO CHASSIS: 020     115264 024,025 137763</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="N000934006013" title="Клик — скопировать">N 000934 006013</td><td>Гайка</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="N304032006008" title="Клик — скопировать">N 304032 006008</td><td>Шестигранная гайка</td><td>3</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1152673505" title="Клик — скопировать">A 115 267 35 05</td><td>Опорный кронштейн</td><td>1</td><td>Автоматическая коробка переключения передач [014] FROM CHASSIS: 020     054951 024,025 053937 028,029 030666 032,033 044509 036     000195</td><td class="restr"></td></tr><tr data-pos="123"><td>123</td><td class="pn" data-raw="A1152600538" title="Клик — скопировать">A 115 260 05 38</td><td>Вал упр. перекл.передач</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1159920310" title="Клик — скопировать">A 115 992 03 10</td><td>- Втулка подшипника</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="127"><td>127</td><td class="pn" data-raw="A1152671250" title="Клик — скопировать">A 115 267 12 50</td><td>- втулка</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1152671250" title="Клик — скопировать">A 115 267 12 50</td><td>втулка</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="132"><td>132</td><td class="pn" data-raw="N000471016001" title="Клик — скопировать">N 000471 016001</td><td>Стопорное кольцо</td><td>-</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="132"><td>132</td><td class="pn" data-raw="A0949942400" title="Клик — скопировать">A 094 994 24 00</td><td>Стопорное кольцо</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1152670052" title="Клик — скопировать">A 115 267 00 52</td><td>Диск</td><td>NB</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1232670410" title="Клик — скопировать">A 123 267 04 10</td><td>Рукоятка рычага селектора</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="N070616010003" title="Клик — скопировать">N 070616 010003</td><td>Гайка</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="142"><td>142</td><td class="pn" data-raw="A1262670123" title="Клик — скопировать">A 126 267 01 23</td><td>Вилкообразная головка</td><td>1</td><td>Автоматическая коробка переключения передач [014] FROM CHASSIS: 020     054951 024,025 053937 028,029 030666 032,033 044509 036     000195</td><td class="restr"></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A1269930120" title="Клик — скопировать">A 126 993 01 20</td><td>пружина</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1152670950" title="Клик — скопировать">A 115 267 09 50</td><td>втулка</td><td>2</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="148"><td>148</td><td class="pn" data-raw="A1152670174" title="Клик — скопировать">A 115 267 01 74</td><td>БОЛТ</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="N912002006000" title="Клик — скопировать">N 912002 006000</td><td>Механический фиксатор</td><td>2</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1152670376" title="Клик — скопировать">A 115 267 03 76</td><td>Диск</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1152670380" title="Клик — скопировать">A 115 267 03 80</td><td>Уплотнительная прокладка</td><td>1</td><td>ОПОРН. ЭЛЕМЕНТ НА ТУННЕЛЕ Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="157"><td>157</td><td class="pn" data-raw="N914130006100" title="Клик — скопировать">N 914130 006100</td><td>Винт</td><td>4</td><td>ОПОРН. ЭЛЕМЕНТ НА ТУННЕЛЕ Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="159"><td>159</td><td class="pn" data-raw="A0009902291" title="Клик — скопировать">A 000 990 22 91</td><td>ГАЙКОДЕРЖАТЕЛЬ</td><td>-</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="159"><td>159</td><td class="pn" data-raw="A0019906791" title="Клик — скопировать">A 001 990 67 91</td><td>Гайкодержатель</td><td>4</td><td>ОПОРН. ЭЛЕМЕНТ НА ТУННЕЛЕ Автоматическая коробка переключения передач [019] FROM CHASSIS: 020     108779 024,025 125061 028,029 048863 032,033 085288 036     004951 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0002600972" title="Клик — скопировать">A 000 260 09 72</td><td>Коммутационный короб</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A0005445493" title="Клик — скопировать">A 000 544 54 93</td><td>- ЛАМПОВЫЙ ПАТРОН</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="168"><td>168</td><td class="pn" data-raw="A0045458428" title="Клик — скопировать">A 004 545 84 28</td><td>- ШТЕКЕР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="168"><td>168</td><td class="pn" data-raw="A1265401081" title="Клик — скопировать">A 126 540 10 81</td><td>- Штекер</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="169"><td>169</td><td class="pn" data-raw="A0009881878" title="Клик — скопировать">A 000 988 18 78</td><td>Скоба</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N000933006103" title="Клик — скопировать">N 000933 006103</td><td>Винт</td><td>-</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N304017006018" title="Клик — скопировать">N 304017 006018</td><td>Винт с 6-гранной головкой</td><td>3</td><td>M6X12 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="171"><td>171</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>3</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1232670197" title="Клик — скопировать">A 123 267 01 97</td><td>Уплотнительная рамка</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="177"><td>177</td><td class="pn" data-raw="A1152670597" title="Клик — скопировать">A 115 267 05 97</td><td>Манжета</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1162600733" title="Клик — скопировать">A 116 260 07 33</td><td>Тяга переключения передач</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N070616010004" title="Клик — скопировать">N 070616 010004</td><td>- Гайка</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009942960" title="Клик — скопировать">A 000 994 29 60</td><td>предохранитель</td><td>2</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="192"><td>192</td><td class="pn" data-raw="A1159920310" title="Клик — скопировать">A 115 992 03 10</td><td>Втулка подшипника</td><td>1</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152673405" title="Клик — скопировать">A 115 267 34 05</td><td>ПОДШИПНИК</td><td>-</td><td>Коробка передач [015] UP TO CHASSIS: 020     074321 024,025 070430 028,029 036430</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021005202" title="Клик — скопировать">N 009021 005202</td><td>Шайба</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021005205" title="Клик — скопировать">N 009021 005205</td><td>Шайба</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>1</td><td>Коробка передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152601939" title="Клик — скопировать">A 115 260 19 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [003] UP TO CHASSIS: 020     022580 024,025 025893 028,029 020537</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152603839" title="Клик — скопировать">A 115 260 38 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [004] FROM CHASSIS: 020     022581-060219 024,025 025894-057862 028,029 020538-032100</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152601739" title="Клик — скопировать">A 115 260 17 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [003] UP TO CHASSIS: 020     022580 024,025 025893 028,029 020537</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152603639" title="Клик — скопировать">A 115 260 36 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [004] FROM CHASSIS: 020     022581-060219 024,025 025894-057862 028,029 020538-032100</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152601839" title="Клик — скопировать">A 115 260 18 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [003] UP TO CHASSIS: 020     022580 024,025 025893 028,029 020537</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152603739" title="Клик — скопировать">A 115 260 37 39</td><td>РЫЧАГ ПЕРЕКЛЮЧЕНИЯ</td><td>-</td><td>Коробка передач [004] FROM CHASSIS: 020     022581-060219 024,025 025894-057862 028,029 020538-032100</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902791" title="Клик — скопировать">A 000 990 27 91</td><td>ГАЙКОДЕРЖАТЕЛЬ</td><td>-</td><td>Коробка передач [018] UP TO CHASSIS: 020     108778 024,025 125060 028,029 048862 032,033 085287 036     004950</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152671905" title="Клик — скопировать">A 115 267 19 05</td><td>ПОДШИПНИК</td><td>-</td><td>Автоматическая коробка переключения передач [013] UP TO CHASSIS: 020     054950 024,025 053936 028,029 030665 032,033 044508 036     000194</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152670323" title="Клик — скопировать">A 115 267 03 23</td><td>ГОЛОВКА ВИЛКИ</td><td>-</td><td>Автоматическая коробка переключения передач [013] UP TO CHASSIS: 020     054950 024,025 053936 028,029 030665 032,033 044508 036     000194</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902791" title="Клик — скопировать">A 000 990 27 91</td><td>ГАЙКОДЕРЖАТЕЛЬ</td><td>-</td><td>Автоматическая коробка переключения передач [018] UP TO CHASSIS: 020     108778 024,025 125060 028,029 048862 032,033 085287 036     004950</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005444993" title="Клик — скопировать">A 000 544 49 93</td><td>Ламповый патрон</td><td>1</td><td>УКАЗАТЕЛЬ ПЕРЕДАЧИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005445593" title="Клик — скопировать">A 000 544 55 93</td><td>- Крышка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N072601012110" title="Клик — скопировать">N 072601 012110</td><td>Лампа накаливания</td><td>1</td><td>12V\-2W Автоматическая коробка переключения передач</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 103 · подписано на схемах: 85 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26001000009.png", "poses": ["5", "7", "8", "10", "12", "14", "15", "16", "17", "18", "19", "22", "24", "26", "29", "30", "32", "43", "46", "49", "56", "58", "59", "62", "64", "68", "71", "73", "75", "79", "80", "82", "84", "86", "89", "90", "91", "93", "96", "99", "101", "103", "104", "105"]}, {"png": "../../img_png/drawing_B26001000010.png", "poses": ["120", "123", "125", "127", "130", "132", "134", "137", "139", "142", "144", "146", "148", "150", "152", "155", "157", "159", "165", "167", "168", "169", "170", "171", "174", "177", "180", "188", "190", "192"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

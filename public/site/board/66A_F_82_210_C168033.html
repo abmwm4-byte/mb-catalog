@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>82 ЭЛЕКТРООБОРУДОВАНИЕ / 210 БЛОК-ФАРА, ПРОТИВОТУМАН. ФАРА И ДОПОЛН. УКАЗАТ. ПОВОРОТА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168033">66A Standard Недействительно для: JP</a> → 210 БЛОК-ФАРА, ПРОТИВОТУМАН. ФАРА И ДОПОЛН. УКАЗАТ. ПОВОРОТА</div>
+<h1>210 БЛОК-ФАРА, ПРОТИВОТУМАН. ФАРА И ДОПОЛН. УКАЗАТ. ПОВОРОТА</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B82210000013 <span class="hint">(29)</span></button><button data-i="1" class="">B82210000041 <span class="hint">(23)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B82210000013.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688200161" title="Клик — скопировать">A 168 820 01 61</td><td>БЛОК-ФАРА</td><td>1</td><td>СЛЕВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688200961" title="Клик — скопировать">A 168 820 09 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СЛЕВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688200361" title="Клик — скопировать">A 168 820 03 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СЛЕВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688201161" title="Клик — скопировать">A 168 820 11 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СЛЕВА, ЛЕВОСТОРОН. ДВИЖ.;</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688200261" title="Клик — скопировать">A 168 820 02 61</td><td>БЛОК-ФАРА</td><td>1</td><td>СПРАВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688201061" title="Клик — скопировать">A 168 820 10 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СПРАВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688200461" title="Клик — скопировать">A 168 820 04 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СПРАВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688201261" title="Клик — скопировать">A 168 820 12 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>СПРАВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688260190" title="Клик — скопировать">A 168 826 01 90</td><td>- Рассеиватель (LICHTSCHEIBE)</td><td>1</td><td>СЛЕВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688260290" title="Клик — скопировать">A 168 826 02 90</td><td>- Рассеиватель (LICHTSCHEIBE)</td><td>1</td><td>СПРАВА, ПРАВОСТОРОН.ДВИЖЕНИЕ [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688260390" title="Клик — скопировать">A 168 826 03 90</td><td>- Рассеиватель (LICHTSCHEIBE)</td><td>1</td><td>СЛЕВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688260490" title="Клик — скопировать">A 168 826 04 90</td><td>- Рассеиватель (LICHTSCHEIBE)</td><td>1</td><td>СПРАВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688260191" title="Клик — скопировать">A 168 826 01 91</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>РАССЕИВАТЕЛЬ, СЛЕВА</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688260291" title="Клик — скопировать">A 168 826 02 91</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>РАССЕИВАТЕЛЬ, СПРАВА</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688200228" title="Клик — скопировать">A 168 820 02 28</td><td>- ОТРАЖАТЕЛЬ</td><td>1</td><td>СПРАВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688200128" title="Клик — скопировать">A 168 820 01 28</td><td>- ОТРАЖАТЕЛЬ</td><td>1</td><td>СЛЕВА, ПРАВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="-613"><span class="icode">-613</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688200328" title="Клик — скопировать">A 168 820 03 28</td><td>- ОТРАЖАТЕЛЬ</td><td>1</td><td>СЛЕВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688200428" title="Клик — скопировать">A 168 820 04 28</td><td>- ОТРАЖАТЕЛЬ</td><td>1</td><td>СПРАВА, ЛЕВОСТОРОН.ДВИЖЕНИЕ</td><td class="restr" data-expr="613"><span class="icode">613</span></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1408200649" title="Клик — скопировать">A 140 820 06 49</td><td>- Колпачок (KAPPE)</td><td>6</td><td>BEAM UNIT</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1408261680" title="Клик — скопировать">A 140 826 16 80</td><td>- Уплотнение (DICHTUNG)</td><td>6</td><td>КОЛПАЧОК</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0008009775" title="Клик — скопировать">A 000 800 97 75</td><td>- ЭЛЕМЕНТ</td><td>2</td><td>СИСТЕМА РЕГУЛИРОВКИ УГЛА НАКЛОНА ФАР</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1298002475" title="Клик — скопировать">A 129 800 24 75</td><td>- Исполнительный элемент (STELLELEMENT)</td><td>2</td><td>СИСТЕМА РЕГУЛИРОВКИ УГЛА НАКЛОНА ФАР</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0018260382" title="Клик — скопировать">A 001 826 03 82</td><td>- Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>УКАЗАТЕЛЬ ПОВОРОТА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1688260391" title="Клик — скопировать">A 168 826 03 91</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>БЛОК\-ФАРА СЛЕВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1688260491" title="Клик — скопировать">A 168 826 04 91</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>БЛОК\-ФАРА СПРАВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N400809000005" title="Клик — скопировать">N 400809 000005</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>МИГАЮЩИЙ СВЕТ; 12V\-21W</td><td class="restr" data-expr="M668/M166+(M14/M16/M19)"><span class="icode">M668/M166+(M14/M16/M19)</span></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N400809000007" title="Клик — скопировать">N 400809 000007</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>БЛИЖНИЙ СВЕТ; H7 12V\-55W</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N000000000268" title="Клик — скопировать">N 000000 000268</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ДАЛЬНИЙ СВЕТ; H1 12V\-55W</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N000000000268" title="Клик — скопировать">N 000000 000268</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ПРОТИВОТУМАННЫЕ ФАРЫ; H1 12V\-55W</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="N000000000853" title="Клик — скопировать">N 000000 000853</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>СТОЯНОЧНЫЙ СВЕТ; 12V\-5W</td><td class="restr"></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1688260377" title="Клик — скопировать">A 168 826 03 77</td><td>Пленка (FOLIE)</td><td>2</td><td>ТУРИСТИЧ. РЕШЕНИЕ ПРИ ПРАВОСТОРОН. ДВИЖ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1688260477" title="Клик — скопировать">A 168 826 04 77</td><td>Пленка (FOLIE)</td><td>2</td><td>ТУРИСТИЧ. РЕШЕНИЕ ПРИ ЛЕВОСТОРОН. ДВИЖ.</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0949904409" title="Клик — скопировать">A 094 990 44 09</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ СВЕТ. МОДУЛЯ; M5X20</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0949904409" title="Клик — скопировать">A 094 990 44 09</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>КРЕПЛЕНИЕ СВЕТ. МОДУЛЯ; M5X20</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0039944245" title="Клик — скопировать">A 003 994 42 45</td><td>Вставная гайка (STECKMUTTER)</td><td>2</td><td>КРЕП. МАТЕРИАЛ СВЕТ. МОДУЛЬ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N913014005001" title="Клик — скопировать">N 913014 005001</td><td>Клетьевая гайка (KAEFIGMUTTER)</td><td>2</td><td>КРЕП. МАТЕРИАЛ СВЕТ. МОДУЛЬ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1688200121" title="Клик — скопировать">A 168 820 01 21</td><td>Повторитель ук. пов. (ZUSATZBLINKLEUCHTE)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0025442694" title="Клик — скопировать">A 002 544 26 94</td><td>ЛАМПА НАКАЛИВ.</td><td>2</td><td>ОРАНЖ.; ДЛЯ БЕЛОГО УКАЗАТ. ПОВОРОТА; 12V\-5W</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0005400966" title="Клик — скопировать">A 000 540 09 66</td><td>Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>ДОПОЛН. УКАЗАТ. ПОВОРОТА СЛЕВА И СПРАВА</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1688200756" title="Клик — скопировать">A 168 820 07 56</td><td>Противотуманная фара (NEBELSCHEINWERFER)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1688200856" title="Клик — скопировать">A 168 820 08 56</td><td>Противотуманная фара (NEBELSCHEINWERFER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1688850514" title="Клик — скопировать">A 168 885 05 14</td><td>Держатель (HALTER)</td><td>1</td><td>ВЕРХН. ЧАСТЬ СЛЕВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1688850614" title="Клик — скопировать">A 168 885 06 14</td><td>Держатель (HALTER)</td><td>1</td><td>ВЕРХН. ЧАСТЬ СПРАВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0119902701" title="Клик — скопировать">A 011 990 27 01</td><td>болт (SCHRAUBE)</td><td>12</td><td></td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0119902701" title="Клик — скопировать">A 011 990 27 01</td><td>болт (SCHRAUBE)</td><td>12</td><td>КРЕПЛЕНИЕ ПРОТИВОТУМАННОЙ ФАРЫ К КРОНШТЕЙНУ БАМПЕРА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0029949345" title="Клик — скопировать">A 002 994 93 45</td><td>предохранитель (SICHERUNG)</td><td>4</td><td>КРЕПЛЕНИЕ ПРОТИВОТУМАННОЙ ФАРЫ; 4,8MM</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0049944245" title="Клик — скопировать">A 004 994 42 45</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>8</td><td>ПРОТИВОТУМАН. ФАРА НА ДЕРЖАТ.</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1685402232" title="Клик — скопировать">A 168 540 22 32</td><td>Электрический провод (ELEKTRISCHE LEITUNG)</td><td>2</td><td>ПРОТИВОТУМАННЫЕ ФАРЫ</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="N000000000268" title="Клик — скопировать">N 000000 000268</td><td>Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ПРОТИВОТУМАННЫЕ ФАРЫ; H1 12V\-55W</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688850714" title="Клик — скопировать">A 168 885 07 14</td><td>Держатель (HALTER)</td><td>1</td><td>FOG LAMP, BOTTOM PART LEFT</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688850814" title="Клик — скопировать">A 168 885 08 14</td><td>Держатель (HALTER)</td><td>1</td><td>FOG LAMP, BOTTOM PART RIGHT</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0015458528" title="Клик — скопировать">A 001 545 85 28</td><td>Корпус штекера (STECKERGEHAEUSE)</td><td>1</td><td>REPAIR SOLUTION для  HEADLAMPS (ONLYFOR H4 BULBS); 3\-PIN FF6.3</td><td class="restr"></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A0075457426" title="Клик — скопировать">A 007 545 74 26</td><td>Контактная втулка (KONTAKTBUCHSE)</td><td>NB</td><td>РЕМ. РЕШЕНИЕ ДЛЯ ФАРЫ; FF6.3</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688201761" title="Клик — скопировать">A 168 820 17 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>LEFT, RIGHT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="-(613/M21)"><span class="icode">-(613/M21)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688201961" title="Клик — скопировать">A 168 820 19 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>LEFT, LEFT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="613+-M21"><span class="icode">613+-M21</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688202361" title="Клик — скопировать">A 168 820 23 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>LEFT, RIGHT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="949/M21"><span class="icode">949/M21</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688202561" title="Клик — скопировать">A 168 820 25 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>LEFT, LEFT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="(M21/949)+613"><span class="icode">(M21/949)+613</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688201861" title="Клик — скопировать">A 168 820 18 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>RIGHT, RIGHT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="-(613/M21)"><span class="icode">-(613/M21)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688202061" title="Клик — скопировать">A 168 820 20 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>RIGHT, LEFT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="613+-M21"><span class="icode">613+-M21</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688202661" title="Клик — скопировать">A 168 820 26 61</td><td>Модуль освещения (LEUCHTEINHEIT)</td><td>1</td><td>RIGHT, LEFT\-SIDE TRAFFIC; с  CLEAR LENS</td><td class="restr" data-expr="(M21/949)+613"><span class="icode">(M21/949)+613</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2038200149" title="Клик — скопировать">A 203 820 01 49</td><td>- Защитный колпачок (SCHUTZKAPPE)</td><td>2</td><td>PROTECTIVE CAP для  HIGH BEAM AND FOG LAMP</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1688200049" title="Клик — скопировать">A 168 820 00 49</td><td>- Колпачок (KAPPE)</td><td>2</td><td>PROTECTIVE CAP для  LOW BEAM</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A1298002475" title="Клик — скопировать">A 129 800 24 75</td><td>- Исполнительный элемент (STELLELEMENT)</td><td>2</td><td>СИСТЕМА РЕГУЛИРОВКИ УГЛА НАКЛОНА ФАР</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0018260382" title="Клик — скопировать">A 001 826 03 82</td><td>- Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>УКАЗАТЕЛЬ ПОВОРОТА</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="N400809000005" title="Клик — скопировать">N 400809 000005</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>МИГАЮЩИЙ СВЕТ; 12V\-21W</td><td class="restr" data-expr="M668/M166+(M14/M16/M19)"><span class="icode">M668/M166+(M14/M16/M19)</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="N400809000007" title="Клик — скопировать">N 400809 000007</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>БЛИЖНИЙ СВЕТ; H7 12V\-55W</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="N000000000374" title="Клик — скопировать">N 000000 000374</td><td>- Лампа накаливания</td><td>2</td><td>ДАЛЬН.И ПРОТИВОТУМАН.СВЕТ; H4 12V\-60/55W [408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="N072601012803" title="Клик — скопировать">N 072601 012803</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ДАЛЬН.И ПРОТИВОТУМАН.СВЕТ; H4 12V\-60/55W [408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="N000000000853" title="Клик — скопировать">N 000000 000853</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>СТОЯНОЧНЫЙ СВЕТ; 12V\-5W</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1688260077" title="Клик — скопировать">A 168 826 00 77</td><td>Пленка (FOLIE)</td><td>2</td><td>ТУРИСТИЧ. РЕШЕНИЕ ПРИ ПРАВОСТОРОН. ДВИЖ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1688260577" title="Клик — скопировать">A 168 826 05 77</td><td>Пленка (FOLIE)</td><td>2</td><td>ТУРИСТИЧ. РЕШЕНИЕ ПРИ ЛЕВОСТОРОН. ДВИЖ.</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0949904409" title="Клик — скопировать">A 094 990 44 09</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>3</td><td>КРЕПЛЕНИЕ СВЕТ. МОДУЛЯ; M5X20</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0949904409" title="Клик — скопировать">A 094 990 44 09</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>КРЕПЛЕНИЕ СВЕТ. МОДУЛЯ; M5X20</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0039944245" title="Клик — скопировать">A 003 994 42 45</td><td>Вставная гайка (STECKMUTTER)</td><td>2</td><td>КРЕП. МАТЕРИАЛ СВЕТ. МОДУЛЬ</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="N913014005001" title="Клик — скопировать">N 913014 005001</td><td>Клетьевая гайка (KAEFIGMUTTER)</td><td>2</td><td>КРЕП. МАТЕРИАЛ СВЕТ. МОДУЛЬ</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1688200121" title="Клик — скопировать">A 168 820 01 21</td><td>Повторитель ук. пов. (ZUSATZBLINKLEUCHTE)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A0025442694" title="Клик — скопировать">A 002 544 26 94</td><td>ЛАМПА НАКАЛИВ.</td><td>2</td><td>ОРАНЖ.; ДЛЯ БЕЛОГО УКАЗАТ. ПОВОРОТА; 12V\-5W</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0005400966" title="Клик — скопировать">A 000 540 09 66</td><td>Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>ДОПОЛН. УКАЗАТ. ПОВОРОТА СЛЕВА И СПРАВА</td><td class="restr" data-expr="-M21"><span class="icode">-M21</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1688200756" title="Клик — скопировать">A 168 820 07 56</td><td>Противотуманная фара (NEBELSCHEINWERFER)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1688200856" title="Клик — скопировать">A 168 820 08 56</td><td>Противотуманная фара (NEBELSCHEINWERFER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1688850514" title="Клик — скопировать">A 168 885 05 14</td><td>Держатель (HALTER)</td><td>1</td><td>ВЕРХН. ЧАСТЬ СЛЕВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1688850614" title="Клик — скопировать">A 168 885 06 14</td><td>Держатель (HALTER)</td><td>1</td><td>ВЕРХН. ЧАСТЬ СПРАВА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0119902701" title="Клик — скопировать">A 011 990 27 01</td><td>болт (SCHRAUBE)</td><td>12</td><td></td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0119902701" title="Клик — скопировать">A 011 990 27 01</td><td>болт (SCHRAUBE)</td><td>12</td><td>КРЕПЛЕНИЕ ПРОТИВОТУМАННОЙ ФАРЫ К КРОНШТЕЙНУ БАМПЕРА</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0029949345" title="Клик — скопировать">A 002 994 93 45</td><td>предохранитель (SICHERUNG)</td><td>4</td><td>КРЕПЛЕНИЕ ПРОТИВОТУМАННОЙ ФАРЫ; 4,8MM</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A1685402232" title="Клик — скопировать">A 168 540 22 32</td><td>Электрический провод (ELEKTRISCHE LEITUNG)</td><td>2</td><td>ПРОТИВОТУМАННЫЕ ФАРЫ</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="495"><td>495</td><td class="pn" data-raw="N000000000268" title="Клик — скопировать">N 000000 000268</td><td>Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ПРОТИВОТУМАННЫЕ ФАРЫ; H1 12V\-55W</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A1688850714" title="Клик — скопировать">A 168 885 07 14</td><td>Держатель (HALTER)</td><td>1</td><td>FOG LAMP, BOTTOM PART LEFT</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A1688850814" title="Клик — скопировать">A 168 885 08 14</td><td>Держатель (HALTER)</td><td>1</td><td>FOG LAMP, BOTTOM PART RIGHT</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A1688202514" title="Клик — скопировать">A 168 820 25 14</td><td>Ремкомплект держателя (REP.SATZ HALTER)</td><td>1</td><td>ВАРИАНТ РЕМОНТА ДЛЯ ЛЕВОЙ ФАРЫ</td><td class="restr"></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A1688202614" title="Клик — скопировать">A 168 820 26 14</td><td>Ремкомплект держателя (REP.SATZ HALTER)</td><td>1</td><td>ВАРИАНТ РЕМОНТА ДЛЯ ПРАВОЙ ФАРЫ</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 91 · подписано на схемах: 91 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82210000013.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "43", "44", "47", "50", "53", "56", "59", "65", "71", "74", "77", "80", "85", "100", "110", "115"]}, {"png": "../../img_png/drawing_B82210000041.png", "poses": ["200", "210", "230", "240", "250", "260", "270", "280", "300", "310", "320", "330", "370", "380", "390", "450", "460", "470", "480", "490", "495", "500", "550"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

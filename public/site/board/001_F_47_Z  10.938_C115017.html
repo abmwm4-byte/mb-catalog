@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>47 ТОПЛИВНАЯ СИСТЕМА / Z  10.938 ИСПАРИТЕЛЬ ТОПЛИВА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115017">001 -/-</a> → Z  10.938 ИСПАРИТЕЛЬ ТОПЛИВА</div>
+<h1>Z  10.938 ИСПАРИТЕЛЬ ТОПЛИВА</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">S01093800001 <span class="hint">(32)</span></button><button data-i="1" class="">S01093800002 <span class="hint">(9)</span></button><button data-i="2" class="">S01093800003 <span class="hint">(0)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S01093800001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1144710068" title="Клик — скопировать">A 114 471 00 68</td><td>БАЧОК</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [015] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 114.008,015,017         200000 114.023,060,062,072,073 100000 115.015                 200000</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1154711668" title="Клик — скопировать">A 115 471 16 68</td><td>Расширительный бачок</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1144710115" title="Клик — скопировать">A 114 471 01 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0089979082" title="Клик — скопировать">A 008 997 90 82</td><td>ПЛАСТИКОВАЯ ТРУБКА</td><td>1</td><td>8X1MM Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1154700293" title="Клик — скопировать">A 115 470 02 93</td><td>КЛАПАН</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1154710281" title="Клик — скопировать">A 115 471 02 81</td><td>МАНЖЕТА</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [410] НОВ. НОМЕР ДЕТ. СМ. СТАНДАРТ. ИСПОЛНЕНИЕ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N916033012100" title="Клик — скопировать">N 916033 012100</td><td>Хомут</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1074700093" title="Клик — скопировать">A 107 470 00 93</td><td>КЛАПАН</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/05 [021] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 114.011 106727 114.015 234660 114.023 100663 115.017 034213</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1074700493" title="Клик — скопировать">A 107 470 04 93</td><td>КЛАПАН</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1234700193" title="Клик — скопировать">A 123 470 01 93</td><td>Клапан</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1074710042" title="Клик — скопировать">A 107 471 00 42</td><td>- ФИЛЬТР</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/05 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1074710267" title="Клик — скопировать">A 107 471 02 67</td><td>- КРЫШКА</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/05 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1144710241" title="Клик — скопировать">A 114 471 02 41</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1144710441" title="Клик — скопировать">A 114 471 04 41</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>Z  10.938/01, Z  10.938/02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N007976004211" title="Клик — скопировать">N 007976 004211</td><td>Шуруп</td><td>2</td><td>4,8X25 Z  10.938/01, Z  10.938/02, Z  10.938/05</td><td class="restr"></td></tr><tr data-pos="147"><td>147</td><td class="pn" data-raw="N007981004243" title="Клик — скопировать">N 007981 004243</td><td>Шуруп</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="147"><td>147</td><td class="pn" data-raw="N000000002062" title="Клик — скопировать">N 000000 002062</td><td>Шуруп</td><td>3</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0009870044" title="Клик — скопировать">A 000 987 00 44</td><td>Запорная шайба</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/05</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0019886578" title="Клик — скопировать">A 001 988 65 78</td><td>СКОБА</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0039888178" title="Клик — скопировать">A 003 988 81 78</td><td>Скоба</td><td>2</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A0009881878" title="Клик — скопировать">A 000 988 18 78</td><td>Скоба</td><td>3</td><td>LINE TO CARDBOARD WALL Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A1144710115" title="Клик — скопировать">A 114 471 01 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0089979082" title="Клик — скопировать">A 008 997 90 82</td><td>ПЛАСТИКОВАЯ ТРУБКА</td><td>1</td><td>СПЕРЕДИ; 8X1MM Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009900278" title="Клик — скопировать">A 000 990 02 78</td><td>ЭЛЕМЕНТ ПОДКЛЮЧЕНИЯ</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A1144710223" title="Клик — скопировать">A 114 471 02 23</td><td>Трубопровод</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="461"><td>461</td><td class="pn" data-raw="A1144711115" title="Клик — скопировать">A 114 471 11 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>1</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="462"><td>462</td><td class="pn" data-raw="A1144710115" title="Клик — скопировать">A 114 471 01 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="462"><td>462</td><td class="pn" data-raw="A0089979082" title="Клик — скопировать">A 008 997 90 82</td><td>ПЛАСТИКОВАЯ ТРУБКА</td><td>1</td><td>КЛАПАН К ДВИГ. 850mm; 8X1MM Z  10.938/01, Z  10.938/02 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="A1144711215" title="Клик — скопировать">A 114 471 12 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="A1164712315" title="Клик — скопировать">A 116 471 23 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="A1164714115" title="Клик — скопировать">A 116 471 41 15</td><td>Вентиляционная трубка</td><td>1</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="466"><td>466</td><td class="pn" data-raw="A1149971882" title="Клик — скопировать">A 114 997 18 82</td><td>ШЛАНГ</td><td>1</td><td>*** 140mm; 13.3X3 MM Z  10.938/01, Z  10.938/02 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="466"><td>466</td><td class="pn" data-raw="A1149971882" title="Клик — скопировать">A 114 997 18 82</td><td>ШЛАНГ</td><td>1</td><td>40 MM; 13.3X3 MM Z  10.938/01, Z  10.938/02 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="467"><td>467</td><td class="pn" data-raw="A1074710615" title="Клик — скопировать">A 107 471 06 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="467"><td>467</td><td class="pn" data-raw="A1074711615" title="Клик — скопировать">A 107 471 16 15</td><td>Воздухоподводящая труба</td><td>2</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="468"><td>468</td><td class="pn" data-raw="A0019976990" title="Клик — скопировать">A 001 997 69 90</td><td>Хомут для шланга</td><td>4</td><td>9\-13 MM Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A1144710115" title="Клик — скопировать">A 114 471 01 15</td><td>ТРУБКА ВЫТЯЖН. ВЕНТ.</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0089979082" title="Клик — скопировать">A 008 997 90 82</td><td>ПЛАСТИКОВАЯ ТРУБКА</td><td>1</td><td>СЗАДИ; 8X1MM Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0009900278" title="Клик — скопировать">A 000 990 02 78</td><td>ЭЛЕМЕНТ ПОДКЛЮЧЕНИЯ</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A1144710223" title="Клик — скопировать">A 114 471 02 23</td><td>Трубопровод</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A1104760326" title="Клик — скопировать">A 110 476 03 26</td><td>ШЛАНГ</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A1149971882" title="Клик — скопировать">A 114 997 18 82</td><td>ШЛАНГ</td><td>1</td><td>40 MM; 13.3X3 MM Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1084760081" title="Клик — скопировать">A 108 476 00 81</td><td>ВСТАВКА РЕЗИНОВАЯ</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1004760381" title="Клик — скопировать">A 100 476 03 81</td><td>ВСТАВКА РЕЗИНОВАЯ</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1104760084" title="Клик — скопировать">A 110 476 00 84</td><td>Резиновое крепление</td><td>NB</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A0009877770" title="Клик — скопировать">A 000 987 77 70</td><td>Резиновое крепление</td><td>NB</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/09 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1104760084" title="Клик — скопировать">A 110 476 00 84</td><td>Резиновое крепление</td><td>NB</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1124760184" title="Клик — скопировать">A 112 476 01 84</td><td>Резиновое крепление</td><td>2</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1104760184" title="Клик — скопировать">A 110 476 01 84</td><td>ДЕМПФ. ПОЛОСЫ</td><td>-</td><td>Z  10.938/31</td><td class="restr"></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A0009877770" title="Клик — скопировать">A 000 987 77 70</td><td>Резиновое крепление</td><td>1</td><td>BREATHER LINE UNDER REAR FLOOR Z  10.938/31 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1099950022" title="Клик — скопировать">A 109 995 00 22</td><td>хомут</td><td>NB</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1159950122" title="Клик — скопировать">A 115 995 01 22</td><td>хомут</td><td>1</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1809950022" title="Клик — скопировать">A 180 995 00 22</td><td>хомут</td><td>1</td><td>Z  10.938/01, Z  10.938/02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1109950022" title="Клик — скопировать">A 110 995 00 22</td><td>хомут</td><td>1</td><td>BREATHER LINE UNDER REAR FLOOR Z  10.938/31</td><td class="restr"></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A0009950068" title="Клик — скопировать">A 000 995 00 68</td><td>хомут</td><td>16</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A1089950520" title="Клик — скопировать">A 108 995 05 20</td><td>хомут</td><td>2</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="615"><td>615</td><td class="pn" data-raw="N007976006204" title="Клик — скопировать">N 007976 006204</td><td>Шуруп</td><td>1</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A1109971481" title="Клик — скопировать">A 110 997 14 81</td><td>втулка</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A1079970881" title="Клик — скопировать">A 107 997 08 81</td><td>КАБ. ВТУЛКА</td><td>-</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A0079975881" title="Клик — скопировать">A 007 997 58 81</td><td>втулка</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos="665"><td>665</td><td class="pn" data-raw="A0009972881" title="Клик — скопировать">A 000 997 28 81</td><td>Проходная втулка</td><td>2</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916002009100" title="Клик — скопировать">N 916002 009100</td><td>Хомут</td><td>4</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>7X100 MM Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916033012100" title="Клик — скопировать">N 916033 012100</td><td>Хомут</td><td>1</td><td>Z  10.938/01, Z  10.938/02, Z  10.938/03, Z  10.938/04, Z  10.938/05, Z  10.938/06, Z  10.938/07, Z  10.938/08, Z  10.938/09, Z  10.938/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916033012100" title="Клик — скопировать">N 916033 012100</td><td>Хомут</td><td>4</td><td>Z  10.938/01, Z  10.938/02</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 65 · подписано на схемах: 61 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01093800001.png", "poses": ["10", "30", "40", "60", "65", "100", "110", "120", "130", "140", "147", "170", "400", "405", "410", "420", "461", "462", "465", "466", "467", "468", "470", "480", "490", "570", "580", "590", "610", "615", "660", "665"]}, {"png": "../../img_png/drawing_S01093800002.png", "poses": ["100", "110", "120", "130", "140", "147", "580", "610", "615"]}, {"png": "../../img_png/drawing_S01093800003.png", "poses": []}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>83 Отопитель и вентиляция / 035 Короб отопителя и кондиционера с вентилятором и жгутом проводов</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205276">C205_FS -/-</a> → 035 Короб отопителя и кондиционера с вентилятором и жгутом проводов</div>
+<h1>035 Короб отопителя и кондиционера с вентилятором и жгутом проводов</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B83035000102.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058309304" title="Клик — скопировать">A 205 830 93 04</td><td>Корпус испарителя (EVAPORATOR HOUSING)</td><td>1</td><td>Верхняя и нижняя половина Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058309404" title="Клик — скопировать">A 205 830 94 04</td><td>Корпус испарителя (EVAPORATOR HOUSING)</td><td>1</td><td>Верхняя и нижняя половина Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2058306800" title="Клик — скопировать">A 205 830 68 00</td><td>Многоканальный короб (DISTRIBUTOR HOUSING)</td><td>1</td><td>Распределитель воздуха Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2058307000" title="Клик — скопировать">A 205 830 70 00</td><td>Многоканальный короб (DISTRIBUTOR HOUSING)</td><td>1</td><td>Распределитель воздуха Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2058306900" title="Клик — скопировать">A 205 830 69 00</td><td>Многоканальный короб (DISTRIBUTOR HOUSING)</td><td>1</td><td>Распределитель воздуха Рулевое управление: Влево</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2058307100" title="Клик — скопировать">A 205 830 71 00</td><td>Многоканальный короб (DISTRIBUTOR HOUSING)</td><td>1</td><td>Распределитель воздуха Рулевое управление: Вправо</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2058301603" title="Клик — скопировать">A 205 830 16 03</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Воздушный канал</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2058301703" title="Клик — скопировать">A 205 830 17 03</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Воздуховод (верхний)</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2058308700" title="Клик — скопировать">A 205 830 87 00</td><td>Верхняя часть корпуса (HOUSING UPPER PART)</td><td>1</td><td>Приточный воздух / рециркулирующий воздух Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2058308800" title="Клик — скопировать">A 205 830 88 00</td><td>Верхняя часть корпуса (HOUSING UPPER PART)</td><td>1</td><td>Приточный воздух / рециркулирующий воздух Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2058301803" title="Клик — скопировать">A 205 830 18 03</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>Корпус</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2058200083" title="Клик — скопировать">A 205 820 00 83</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Короб кондиционера Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2058200283" title="Клик — скопировать">A 205 820 02 83</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Короб кондиционера Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2058200183" title="Клик — скопировать">A 205 820 01 83</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Короб кондиционера Рулевое управление: Влево</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2058200383" title="Клик — скопировать">A 205 820 03 83</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Короб кондиционера Рулевое управление: Вправо</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0019845829" title="Клик — скопировать">A 001 984 58 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>44</td><td>К коробу кондиционера; 4X16</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0019845829" title="Клик — скопировать">A 001 984 58 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>60</td><td>К коробу кондиционера; 4X16</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0999062003" title="Клик — скопировать">A 099 906 20 03</td><td>Вентилятор (BLOWER)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0999062103" title="Клик — скопировать">A 099 906 21 03</td><td>Вентилятор (BLOWER)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1718300272" title="Клик — скопировать">A 171 830 02 72</td><td>Датчик температуры (TEMPERATURE SENSOR)</td><td>1</td><td>Испаритель</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058307400" title="Клик — скопировать">A 205 830 74 00</td><td>К-т рычага управления (PARTS KIT, CONTROL LEVER)</td><td>1</td><td>Комплект деталей Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058307600" title="Клик — скопировать">A 205 830 76 00</td><td>К-т рычага управления (PARTS KIT, CONTROL LEVER)</td><td>1</td><td>Комплект деталей Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058307500" title="Клик — скопировать">A 205 830 75 00</td><td>К-т рычага управления (PARTS KIT, CONTROL LEVER)</td><td>1</td><td>Комплект деталей Рулевое управление: Влево</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058307700" title="Клик — скопировать">A 205 830 77 00</td><td>К-т рычага управления (PARTS KIT, CONTROL LEVER)</td><td>1</td><td>Комплект деталей Рулевое управление: Вправо</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1699060100" title="Клик — скопировать">A 169 906 01 00</td><td>Исп. электродвигатель (ACTUATOR MOTOR)</td><td>4</td><td>К коробу кондиционера</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0999067402" title="Клик — скопировать">A 099 906 74 02</td><td>Шаговый электродвигатель (STEPPER MOTOR)</td><td>4</td><td>К коробу кондиционера MAGNA</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0999067502" title="Клик — скопировать">A 099 906 75 02</td><td>Шаговый электродвигатель (STEPPER MOTOR)</td><td>4</td><td>К коробу кондиционера JOHNSON</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1699060100" title="Клик — скопировать">A 169 906 01 00</td><td>Исп. электродвигатель (ACTUATOR MOTOR)</td><td>7</td><td>К коробу кондиционера MAGNA</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0999067402" title="Клик — скопировать">A 099 906 74 02</td><td>Шаговый электродвигатель (STEPPER MOTOR)</td><td>7</td><td>К коробу кондиционера MAGNA</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0999067502" title="Клик — скопировать">A 099 906 75 02</td><td>Шаговый электродвигатель (STEPPER MOTOR)</td><td>7</td><td>К коробу кондиционера JOHNSON</td><td class="restr" data-expr="581/463"><span class="icode">581/463</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0998300061" title="Клик — скопировать">A 099 830 00 61</td><td>Теплообм. (HEAT EXCHANGER)</td><td>1</td><td>К коробу кондиционера</td><td class="restr"></td></tr><tr data-pos="355"><td>355</td><td class="pn" data-raw="A2058351000" title="Клик — скопировать">A 205 835 10 00</td><td>К-т упл. теплообменника (SEAL KIT, HEAT EXCHANGER)</td><td>1</td><td>Между теплообменником и крышкой</td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A2058350200" title="Клик — скопировать">A 205 835 02 00</td><td>К-т крышки теплообменника (PARTS KIT, CAP HEAT EXCHA)</td><td>1</td><td>Для теплообменника Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A2058350300" title="Клик — скопировать">A 205 835 03 00</td><td>К-т крышки теплообменника (PARTS KIT, CAP HEAT EXCHA)</td><td>1</td><td>Для теплообменника Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A2058301903" title="Клик — скопировать">A 205 830 19 03</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>К коробу кондиционера Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A2058302003" title="Клик — скопировать">A 205 830 20 03</td><td>Уплотнительная рамка (SEALING FRAME)</td><td>1</td><td>К коробу кондиционера Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2058307800" title="Клик — скопировать">A 205 830 78 00</td><td>Испаритель (EVAPORATOR)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="805/806"><span class="icode">805/806</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2058309904" title="Клик — скопировать">A 205 830 99 04</td><td>Испаритель (EVAPORATOR)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="-(805/806)"><span class="icode">-(805/806)</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2058307900" title="Клик — скопировать">A 205 830 79 00</td><td>Испаритель (EVAPORATOR)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="805/806"><span class="icode">805/806</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2058300005" title="Клик — скопировать">A 205 830 00 05</td><td>Испаритель (EVAPORATOR)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="-(805/806)"><span class="icode">-(805/806)</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0998300600" title="Клик — скопировать">A 099 830 06 00</td><td>Расширительный клапан (EXPANSION VALVE)</td><td>1</td><td>Испаритель</td><td class="restr" data-expr="806/807/808"><span class="icode">806/807/808</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0998300100" title="Клик — скопировать">A 099 830 01 00</td><td>Расширительный клапан (EXPANSION VALVE)</td><td>1</td><td>Испаритель</td><td class="restr" data-expr="809/800/801/802/803/804/805"><span class="icode">809/800/801/802/803/804/805</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0998300600" title="Клик — скопировать">A 099 830 06 00</td><td>Расширительный клапан (EXPANSION VALVE)</td><td>1</td><td>Испаритель</td><td class="restr" data-expr="(809/800/801/802/803/804/805)+2U8"><span class="icode">(809/800/801/802/803/804/805)+2U8</span></td></tr><tr data-pos="395"><td>395</td><td class="pn" data-raw="A2058301503" title="Клик — скопировать">A 205 830 15 03</td><td>К-т упл. расш. клапана (SEAL KIT, EXPANSION VALVE)</td><td>1</td><td>Комплект уплотнений расширительного клапана</td><td class="restr"></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2058307200" title="Клик — скопировать">A 205 830 72 00</td><td>Крышка корпуса (HOUSING COVER)</td><td>1</td><td>Угольный фильтр</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A2058350147" title="Клик — скопировать">A 205 835 01 47</td><td>Пылеул. фильтр с ак. угл. (FINE PARTICLE FILTER)</td><td>1</td><td>Угольный фильтр</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A2058350147" title="Клик — скопировать">A 205 835 01 47</td><td>Пылеул. фильтр с ак. угл. (FINE PARTICLE FILTER)</td><td>1</td><td>Угольный фильтр</td><td class="restr" data-expr="P21/700/830"><span class="icode">P21/700/830</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A2058352700" title="Клик — скопировать">A 205 835 27 00</td><td>Пылеул. фильтр с ак. угл. (FINE PARTICLE FILTER)</td><td>1</td><td>Угольный фильтр</td><td class="restr" data-expr="(P21/700/830)"><span class="icode">(P21/700/830)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308500" title="Клик — скопировать">A 205 830 85 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем Рулевое управление: Влево</td><td class="restr" data-expr="(807/808/809)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)"><span class="icode">(807/808/809)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308600" title="Клик — скопировать">A 205 830 86 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем Рулевое управление: Вправо</td><td class="restr" data-expr="(805/806)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)"><span class="icode">(805/806)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308600" title="Клик — скопировать">A 205 830 86 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем Рулевое управление: Вправо</td><td class="restr" data-expr="(807/808/809)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)"><span class="icode">(807/808/809)+(M626/M651/M654/(M274/M264)+(401/463/824/873)/095)+-(ME05/ME06/913/228)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308500" title="Клик — скопировать">A 205 830 85 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем Рулевое управление: Влево</td><td class="restr" data-expr="(805/806/807/808/809)+228+463+(M626/M651/M654/M274/M264)"><span class="icode">(805/806/807/808/809)+228+463+(M626/M651/M654/M274/M264)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308600" title="Клик — скопировать">A 205 830 86 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем Рулевое управление: Вправо</td><td class="restr" data-expr="(805/806/807/808/809)+228+463+(M626/M651/M654/M274/M264)"><span class="icode">(805/806/807/808/809)+228+463+(M626/M651/M654/M274/M264)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем</td><td class="restr" data-expr="(800/801/802/803/804)+-(ME05/913)"><span class="icode">(800/801/802/803/804)+-(ME05/913)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308500" title="Клик — скопировать">A 205 830 85 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем LFT. Valeo Рулевое управление: Влево</td><td class="restr" data-expr="(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)"><span class="icode">(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058300205" title="Клик — скопировать">A 205 830 02 05</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем LFT. Catem Рулевое управление: Влево</td><td class="restr" data-expr="M654/(M274/M264)+(401/463/824/873)"><span class="icode">M654/(M274/M264)+(401/463/824/873)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058308600" title="Клик — скопировать">A 205 830 86 00</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем LFT. Valeo Рулевое управление: Вправо</td><td class="restr" data-expr="(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)"><span class="icode">(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058300305" title="Клик — скопировать">A 205 830 03 05</td><td>Дополнительный отопитель</td><td>1</td><td>С кабелем LFT. Catem Рулевое управление: Вправо</td><td class="restr" data-expr="(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)"><span class="icode">(M654/(M274/M264)+(401/463/824/873))+-(805/806/807/808/809/913)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>С кабелем</td><td class="restr" data-expr="(800/801/802/803/804)+(ME05/913)"><span class="icode">(800/801/802/803/804)+(ME05/913)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>Запасная решётка</td><td class="restr" data-expr="(805/806)+-(M626/M651/M274+(463/824/873)/ME05/ME06/913/228)"><span class="icode">(805/806)+-(M626/M651/M274+(463/824/873)/ME05/ME06/913/228)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>Запасная решётка</td><td class="restr" data-expr="(807/808/809)+-(M626/M651/M274+(463/824/873)/ME05/ME06/913/228)"><span class="icode">(807/808/809)+-(M626/M651/M274+(463/824/873)/ME05/ME06/913/228)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>Запасная решётка</td><td class="restr" data-expr="(805/806/807/808/809)+(ME05/ME06/913/228)+-463"><span class="icode">(805/806/807/808/809)+(ME05/ME06/913/228)+-463</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>Запасная решётка</td><td class="restr" data-expr="(805/806/807/808/809)+(ME05/ME06/228/913)+463"><span class="icode">(805/806/807/808/809)+(ME05/ME06/228/913)+463</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2058300261" title="Клик — скопировать">A 205 830 02 61</td><td>Дополнительный отопитель (BOOSTER HEATER)</td><td>1</td><td>Запасная решётка</td><td class="restr" data-expr="(805/806/807/808/809)+228+463+913+(M626/M651/M654/M274/M264)"><span class="icode">(805/806/807/808/809)+228+463+913+(M626/M651/M654/M274/M264)</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0019845729" title="Клик — скопировать">A 001 984 57 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>2</td><td>Для дополнительного подогревателя или замены решетки; M4X14</td><td class="restr"></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A2058350700" title="Клик — скопировать">A 205 835 07 00</td><td>Крышка корпуса (HOUSING COVER)</td><td>2</td><td>Выпуск воздуха</td><td class="restr" data-expr="(805/806/807/808)+-(P14/P22/P29/P86/580/581/919/463/731/H07)"><span class="icode">(805/806/807/808)+-(P14/P22/P29/P86/580/581/919/463/731/H07)</span></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A2058350700" title="Клик — скопировать">A 205 835 07 00</td><td>Крышка корпуса (HOUSING COVER)</td><td>2</td><td>Выпуск воздуха</td><td class="restr" data-expr="579+-(805/806/807/808)"><span class="icode">579+-(805/806/807/808)</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0029902000" title="Клик — скопировать">A 002 990 20 00</td><td>Винт с 6-гр.гол. и шайбой (HEXAGON HEAD SCREW)</td><td>3</td><td>Короб кондиционера к поперечине</td><td class="restr"></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A2058320200" title="Клик — скопировать">A 205 832 02 00</td><td>Шланг конденсата (CONDENSATION HOSE)</td><td>1</td><td>Сток конденсата</td><td class="restr"></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A0009984885" title="Клик — скопировать">A 000 998 48 85</td><td>Закладная гайка (SPREADER NUT)</td><td>2</td><td>Крепление шланга</td><td class="restr"></td></tr><tr data-pos="920"><td>920</td><td class="pn" data-raw="A0325451928" title="Клик — скопировать">A 032 545 19 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>Датчик температуры испарителя B10/6; 2\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="930"><td>930</td><td class="pn" data-raw="A0315450226" title="Клик — скопировать">A 031 545 02 26</td><td>Картер сцепления (COUPLING HOUSING)</td><td>1</td><td>Дополнительный электроподогреватель N33/5; 12 PIN MLK1.2</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 72 · подписано на схемах: 72 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B83035000102.png", "poses": ["10", "15", "20", "25", "30", "35", "60", "70", "90", "120", "140", "190", "350", "355", "360", "365", "370", "390", "395", "420", "430", "440", "450", "460", "480", "500", "510", "520", "920", "930"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

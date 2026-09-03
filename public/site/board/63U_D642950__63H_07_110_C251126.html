@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>07 Система впрыска топлива / 110 Топливный фильтр, трубопроводы</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251126">63U -/-</a> → 110 Топливный фильтр, трубопроводы</div>
+<h1>110 Топливный фильтр, трубопроводы</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">PV000.010.116.882_version_001 <span class="hint">(22)</span></button><button data-i="1" class="">PV000.010.116.883_version_001 <span class="hint">(14)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.010.116.882_version_001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420781281" title="Клик — скопировать">A 642 078 12 81</td><td>Шланг (HOSE)</td><td>1</td><td>Подводящий трубопровод (от разъёма к фильтру)</td><td class="restr" data-expr="F203/F209/F211/F219/F251+FW/F463"><span class="icode">F203/F209/F211/F219/F251+FW/F463</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420783481" title="Клик — скопировать">A 642 078 34 81</td><td>Шланг (HOSE)</td><td>1</td><td>Подводящий трубопровод (от разъёма к фильтру)</td><td class="restr" data-expr="F164/F204/F221/F251"><span class="icode">F164/F204/F221/F251</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6420781981" title="Клик — скопировать">A 642 078 19 81</td><td>Шланг (HOSE)</td><td>1</td><td>Подводящий трубопровод (между топливопроводом от бака и трубопроводом к фильтру)</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420782081" title="Клик — скопировать">A 642 078 20 81</td><td>Шланг (HOSE)</td><td>1</td><td>Обратный трубопровод между трубопроводом от насоса высокого давления и трубопроводом к баку</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A6420781481" title="Клик — скопировать">A 642 078 14 81</td><td>Топливный шланг</td><td>1</td><td>Клапан к топливному баку</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A6420782181" title="Клик — скопировать">A 642 078 21 81</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td>Клапан к топливному баку</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6420701332" title="Клик — скопировать">A 642 070 13 32</td><td>Дренажный топливопровод (LEAK FUEL LINE)</td><td>1</td><td></td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F212/F219/F221/F251"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F212/F219/F221/F251</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6420703032" title="Клик — скопировать">A 642 070 30 32</td><td>Дренажная трубка</td><td>1</td><td></td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6420701932" title="Клик — скопировать">A 642 070 19 32</td><td>Дренажная трубка (LEAK OIL LINE)</td><td>1</td><td></td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6420705532" title="Клик — скопировать">A 642 070 55 32</td><td>Дренажная трубка (LEAK OIL LINE)</td><td>1</td><td></td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009956665" title="Клик — скопировать">A 000 995 66 65</td><td>Проставочный элемент (SPACER)</td><td>1</td><td>Крепление проводов</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6420780341" title="Клик — скопировать">A 642 078 03 41</td><td>Держатель (HOLDER)</td><td>1</td><td>Дренажный трубопровод</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000000001117" title="Клик — скопировать">N 000000 001117</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Дренажный трубопровод к головке блока цилиндров; M6X23</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A6420780141" title="Клик — скопировать">A 642 078 01 41</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливный шланг к поперечному патрубку наддувочного воздуха; M6X16</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A6420920240" title="Клик — скопировать">A 642 092 02 40</td><td>Держатель (HOLDER)</td><td>1</td><td>Топливный фильтр</td><td class="restr" data-expr="F164/F204/F221/F251"><span class="icode">F164/F204/F221/F251</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Топливный фильтр к распределителю наддувочного воздуха; M6X19</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>3</td><td>Топливопровод к головке блока цилиндров; M6X15</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F251/F463</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливопровод к крышке клапанного механизма; M6X15</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливный фильтр к распределителю наддувочного воздуха; M6X15</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F219/F221/F251/F463/F461/F639/F906"><span class="icode">F164/F203/F204/F209/F211/F219/F221/F251/F463/F461/F639/F906</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливопровод к распределителю наддувочного воздуха; M6X15</td><td class="restr" data-expr="F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F022/F031/F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливопровод к крышке клапанного механизма; M6X12</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251/F463</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Топливопровод к распределителю наддувочного воздуха; M6X12</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F219/F221/F251/F463"><span class="icode">F164/F203/F204/F209/F211/F219/F221/F251/F463</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A6420700532" title="Клик — скопировать">A 642 070 05 32</td><td>Провод (FUEL LINE)</td><td>1</td><td>Топливный бак к разъему</td><td class="restr" data-expr="F164/F251"><span class="icode">F164/F251</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A6420700132" title="Клик — скопировать">A 642 070 01 32</td><td>Провод</td><td>1</td><td>Разъем к фильтру</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A6420702732" title="Клик — скопировать">A 642 070 27 32</td><td>Топливозаборная трубка (FUEL INTAKE LINE)</td><td>1</td><td>Разъем к фильтру</td><td class="restr" data-expr="F164/F203/F204/F209/F211/F212/F219/F221/F251"><span class="icode">F164/F203/F204/F209/F211/F212/F219/F221/F251</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0019915870" title="Клик — скопировать">A 001 991 58 70</td><td>- Пружинная скоба (SPRING CLIP)</td><td>1</td><td></td><td class="restr" data-expr="F203/F209/F211/F219/F221/F164/F251/F204/F463/F461/F906/F639"><span class="icode">F203/F209/F211/F219/F221/F164/F251/F204/F463/F461/F906/F639</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A6420700281" title="Клик — скопировать">A 642 070 02 81</td><td>Провод (LINE)</td><td>1</td><td></td><td class="restr" data-expr="(F164/F204/F221/F251)+809+-U41/F203/F209/F211/F219/F463/F164+460+494+U41+808"><span class="icode">(F164/F204/F221/F251)+809+-U41/F203/F209/F211/F219/F463/F164+460+494+U41+808</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A6420701681" title="Клик — скопировать">A 642 070 16 81</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td></td><td class="restr" data-expr="(F164/F204/F221/F251+-U41)+-809"><span class="icode">(F164/F204/F221/F251+-U41)+-809</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A6420702181" title="Клик — скопировать">A 642 070 21 81</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td></td><td class="restr" data-expr="(F164/F204/F221/F251)+U41"><span class="icode">(F164/F204/F221/F251)+U41</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A6420782081" title="Клик — скопировать">A 642 078 20 81</td><td>Шланг (HOSE)</td><td>1</td><td>Обратный трубопровод между насосом высокого давления и топливопроводом</td><td class="restr" data-expr="F203/F209/F211/F219/F221/F164/F251/F204/F463"><span class="icode">F203/F209/F211/F219/F221/F164/F251/F204/F463</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A6420781381" title="Клик — скопировать">A 642 078 13 81</td><td>Топливный шланг (FUEL HOSE)</td><td>1</td><td>Обратный трубопровод между насосом высокого давления и топливопроводом</td><td class="restr" data-expr="F203/F209/F211/F219/F221/F164/F251/F204/F463"><span class="icode">F203/F209/F211/F219/F221/F164/F251/F204/F463</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A0049972090" title="Клик — скопировать">A 004 997 20 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>NB</td><td>Крепление топливопроводов; 14.5\-15.5 MM</td><td class="restr"></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>NB</td><td>Крепление топливопроводов; 13\-14.5 MM</td><td class="restr"></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A0009957435" title="Клик — скопировать">A 000 995 74 35</td><td>Зажим для шланга (HOSE CLAMP)</td><td>1</td><td>Крепление топливопровода</td><td class="restr"></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A6460920501" title="Клик — скопировать">A 646 092 05 01</td><td>Топливный фильтр (FUEL FILTER)</td><td>1</td><td>Без нагревательного элемента и датчика уровня жидкости [002930] ВНИМАНИЕ! ПЕРЕД ЗАКАЗОМ НЕОБХОДИМО ОПРЕДЕЛИТЬ НОМЕР УСТАНОВЛЕННОЙ НА А/М ДЕТАЛИ</td><td class="restr" data-expr="(F164+-494/F203/F204/F209/F211/F212/F219/F221+-494/F251+-494/F639)+-(U41/U43/U83)"><span class="icode">(F164+-494/F203/F204/F209/F211/F212/F219/F221+-494/F251+-494/F639)+-(U41/U43/U83)</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A6420920201" title="Клик — скопировать">A 642 092 02 01</td><td>Сменный фильтр (FUEL EXPENDABLE FILTER)</td><td>1</td><td>Для наружного нагревательного элемента 180 Вт [002930] ВНИМАНИЕ! ПЕРЕД ЗАКАЗОМ НЕОБХОДИМО ОПРЕДЕЛИТЬ НОМЕР УСТАНОВЛЕННОЙ НА А/М ДЕТАЛИ</td><td class="restr" data-expr="(F164/F204/F221/F251)+-U41"><span class="icode">(F164/F204/F221/F251)+-U41</span></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A0001593304" title="Клик — скопировать">A 000 159 33 04</td><td>Нагревательный элемент (HEATING ELEMENT)</td><td>1</td><td>Без зонда уровня воды 180W</td><td class="restr" data-expr="(F164/F204/F221/F251)+-U41"><span class="icode">(F164/F204/F221/F251)+-U41</span></td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A0189979645" title="Клик — скопировать">A 018 997 96 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td></td><td class="restr" data-expr="(F164/F204/F221/F251)+-U41"><span class="icode">(F164/F204/F221/F251)+-U41</span></td></tr><tr data-pos="650"><td>650</td><td class="pn" data-raw="A6420920301" title="Клик — скопировать">A 642 092 03 01</td><td>Фильтр-патрон (FILTER CARTRIDGE)</td><td>1</td><td>Для нагревательного элемента 180 Вт (центральная зона) [002930] ВНИМАНИЕ! ПЕРЕД ЗАКАЗОМ НЕОБХОДИМО ОПРЕДЕЛИТЬ НОМЕР УСТАНОВЛЕННОЙ НА А/М ДЕТАЛИ</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A0001593404" title="Клик — скопировать">A 000 159 34 04</td><td>Нагревательный элемент (HEATING ELEMENT)</td><td>1</td><td>С датчиком уровня охлаждающей жидкости и нагревателем 180Вт</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="670"><td>670</td><td class="pn" data-raw="A0009978201" title="Клик — скопировать">A 000 997 82 01</td><td>Полый болт (HOLLOW SCREW)</td><td>1</td><td></td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="680"><td>680</td><td class="pn" data-raw="A0189979445" title="Клик — скопировать">A 018 997 94 45</td><td>Кольцевая прокладка (O-RING)</td><td>2</td><td>Снизу</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="690"><td>690</td><td class="pn" data-raw="A0189979345" title="Клик — скопировать">A 018 997 93 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td>Посередине</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0189979545" title="Клик — скопировать">A 018 997 95 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td>Сверху</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление нагревательного элемента; M6X19</td><td class="restr" data-expr="F221/F164+-U41/F251/F204"><span class="icode">F221/F164+-U41/F251/F204</span></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0119908404" title="Клик — скопировать">A 011 990 84 04</td><td>Винт с полукругл.головой (PAN HEAD SCREW W COLLAR)</td><td>2</td><td>Крепление нагревательного элемента; M5X13</td><td class="restr" data-expr="(F164/F204/F221/F251)+U41/(F164/F251)+494+U41"><span class="icode">(F164/F204/F221/F251)+U41/(F164/F251)+494+U41</span></td></tr><tr data-pos="750"><td>750</td><td class="pn" data-raw="A6420920101" title="Клик — скопировать">A 642 092 01 01</td><td>Топливный фильтр (FUEL FILTER)</td><td>1</td><td>Для датчика уровня охлаждающей жидкости [002930] ВНИМАНИЕ! ПЕРЕД ЗАКАЗОМ НЕОБХОДИМО ОПРЕДЕЛИТЬ НОМЕР УСТАНОВЛЕННОЙ НА А/М ДЕТАЛИ</td><td class="restr" data-expr="(F203/F209/F211/F219)+U41/F211+(U43/U83)/(F164/F251)+(U41/460)"><span class="icode">(F203/F209/F211/F219)+U41/F211+(U43/U83)/(F164/F251)+(U41/460)</span></td></tr><tr data-pos="760"><td>760</td><td class="pn" data-raw="A0001539513" title="Клик — скопировать">A 000 153 95 13</td><td>Переключатель (SWITCH)</td><td>1</td><td>Датчик уровня охлаждающей жидкости [001655] ТАКЖЕ ЗАКАЗАТЬ:1X A 611 078 00 71; 1X A 015 997 07 45;2X A 001 984 55 29</td><td class="restr" data-expr="(F164/F251/F203/F209/F211/F219)+U41/F211+(U43/U83)/F639+617K/F906+(617K/936K/U41)/F463/F461"><span class="icode">(F164/F251/F203/F209/F211/F219)+U41/F211+(U43/U83)/F639+617K/F906+(617K/936K/U41)/F463/F461</span></td></tr><tr data-pos="770"><td>770</td><td class="pn" data-raw="A0159970745" title="Клик — скопировать">A 015 997 07 45</td><td>Кольцевая прокладка (O-RING)</td><td>2</td><td></td><td class="restr" data-expr="(F164/F251/F203/F209/F211/F219)+U41/F211+(U43/U83)/F639+617K/F906+(617K/936K/U41)/F461/F463"><span class="icode">(F164/F251/F203/F209/F211/F219)+U41/F211+(U43/U83)/F639+617K/F906+(617K/936K/U41)/F461/F463</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 50 · подписано на схемах: 50 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.116.882_version_001.png", "poses": ["10", "20", "50", "70", "100", "110", "120", "140", "150", "170", "200", "210", "230", "240", "250", "260", "270", "300", "320", "450", "460", "470"]}, {"png": "../../img_png/drawing_PV000.010.116.883_version_001.png", "poses": ["550", "600", "610", "620", "650", "660", "670", "680", "690", "700", "710", "750", "760", "770"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>68 Обшивка / Z  56.028 КОЖУХ В КОРПУСЕ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116020">040 STANDARD</a> → Z  56.028 КОЖУХ В КОРПУСЕ</div>
+<h1>Z  56.028 КОЖУХ В КОРПУСЕ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S05602800001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166800539" title="Клик — скопировать">A 116 680 05 39</td><td>НАКЛАДКА</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/01, Z  56.028/02, Z  56.028/04 [044] 116.020 UP TO CHASSIS 092086 EXCEPT FOR SEE FOOTN.44 ALSO INSTALLED ON SEE FOOTN.44;116.024,025 UP TO CHASSIS 098932 AND      FOOTN.45 092009,  092043,  092050,  092053,  092058-  092062,  092064,  092066-  092068,  092070,  092073-  092075,  092077,  092079- 092082,  092084. 092105,  092122,  092147,  092161,  092173,  092192,  092198,  092214,  092361. [045] ALSO INSTALLED ON 042997,043015;116.032,033 UP TO CHASSIS 072548 EXCEPT FOR SEE FOOTN.45 ALSO INSTALLED ON SEE FOOTN.45 098613,  098815,  098834,  098849,  098897,  098909,  098912,  098914,  098924,  098926,  098930. 098937,  098940,  098945,  098947,  098952,  098958,  098965,  098966,  098970,  098986,  098989,  098994,  099007,  099022, 099036,  099039,  099044,  099051,  099054,  099056,  099065,  099087,  099093,  099099,  099106,  099111,  099118,  099133, 099144,  099154,  099155,  099162,  099164,  099176,  099177,  099181,  099188,  099189,  099191,  099197,  099200,  099203, 099209,  099231,  099234,  099239,  099255,  099258,  099261,  099281,  099314,  099318,  099330,  099340,  099342,  099355, 099364,  099368,  099400,  099411,  099413,  099424,  099425,  099434,  099440,  099456,  099482,  099498,  099510,  099546, 099554,  099587,  099590. 098613,  098815,  098834,  098849,  098897,  098909,  098912,  098914,  098924,  098926,  098930.</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166801907" title="Клик — скопировать">A 116 680 19 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/01 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166806708" title="Клик — скопировать">A 116 680 67 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/02, Z  56.028/04 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802307" title="Клик — скопировать">A 116 680 23 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/07 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166807108" title="Клик — скопировать">A 116 680 71 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/08 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802407" title="Клик — скопировать">A 116 680 24 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/26 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166803807" title="Клик — скопировать">A 116 680 38 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/29 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166808608" title="Клик — скопировать">A 116 680 86 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/30 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166803507" title="Клик — скопировать">A 116 680 35 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/32 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166808308" title="Клик — скопировать">A 116 680 83 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/33, Z  56.028/34 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166807008" title="Клик — скопировать">A 116 680 70 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/35, Z  56.028/36 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802207" title="Клик — скопировать">A 116 680 22 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/37 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802707" title="Клик — скопировать">A 116 680 27 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/55 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166807508" title="Клик — скопировать">A 116 680 75 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/56 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802607" title="Клик — скопировать">A 116 680 26 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/57 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166807408" title="Клик — скопировать">A 116 680 74 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/58 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166804107" title="Клик — скопировать">A 116 680 41 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/59 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166808908" title="Клик — скопировать">A 116 680 89 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/60 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166807608" title="Клик — скопировать">A 116 680 76 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/61 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166809008" title="Клик — скопировать">A 116 680 90 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/62 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166800539" title="Клик — скопировать">A 116 680 05 39</td><td>НАКЛАДКА</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/63 [044] 116.020 UP TO CHASSIS 092086 EXCEPT FOR SEE FOOTN.44 ALSO INSTALLED ON SEE FOOTN.44;116.024,025 UP TO CHASSIS 098932 AND      FOOTN.45 092009,  092043,  092050,  092053,  092058-  092062,  092064,  092066-  092068,  092070,  092073-  092075,  092077,  092079- 092082,  092084. 092105,  092122,  092147,  092161,  092173,  092192,  092198,  092214,  092361. [021] BLACK NO. 9007 [045] ALSO INSTALLED ON 042997,043015;116.032,033 UP TO CHASSIS 072548 EXCEPT FOR SEE FOOTN.45 ALSO INSTALLED ON SEE FOOTN.45 098613,  098815,  098834,  098849,  098897,  098909,  098912,  098914,  098924,  098926,  098930. 098937,  098940,  098945,  098947,  098952,  098958,  098965,  098966,  098970,  098986,  098989,  098994,  099007,  099022, 099036,  099039,  099044,  099051,  099054,  099056,  099065,  099087,  099093,  099099,  099106,  099111,  099118,  099133, 099144,  099154,  099155,  099162,  099164,  099176,  099177,  099181,  099188,  099189,  099191,  099197,  099200,  099203, 099209,  099231,  099234,  099239,  099255,  099258,  099261,  099281,  099314,  099318,  099330,  099340,  099342,  099355, 099364,  099368,  099400,  099411,  099413,  099424,  099425,  099434,  099440,  099456,  099482,  099498,  099510,  099546, 099554,  099587,  099590. 098613,  098815,  098834,  098849,  098897,  098909,  098912,  098914,  098924,  098926,  098930.</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166804207" title="Клик — скопировать">A 116 680 42 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/63 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802807" title="Клик — скопировать">A 116 680 28 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/64 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166806808" title="Клик — скопировать">A 116 680 68 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/65 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1166802007" title="Клик — скопировать">A 116 680 20 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/66 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809639" title="Клик — скопировать">A 116 680 96 39</td><td>НАКЛАДКА</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/03 [026] KNOTTED WALNUT VENEER NO.8272,CODES 001-006,101-106,201-206,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809807" title="Клик — скопировать">A 116 680 98 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/05 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809908" title="Клик — скопировать">A 116 680 99 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/06 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809907" title="Клик — скопировать">A 116 680 99 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/14 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166800009" title="Клик — скопировать">A 116 680 00 09</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/15 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166801308" title="Клик — скопировать">A 116 680 13 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/17 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166801409" title="Клик — скопировать">A 116 680 14 09</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/18 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166801008" title="Клик — скопировать">A 116 680 10 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/20 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166801109" title="Клик — скопировать">A 116 680 11 09</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/21 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809808" title="Клик — скопировать">A 116 680 98 08</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/23 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809707" title="Клик — скопировать">A 116 680 97 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/25 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809507" title="Клик — скопировать">A 116 680 95 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/54 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1166809607" title="Клик — скопировать">A 116 680 96 07</td><td>ПАНЕЛЬ</td><td>1</td><td>КОРПУС СНИЗУ Z  56.028/99 [031] ZEBRANO,CAUCASIAN WALNUT SHADE,VENEER NO.8273,CODES 001-006;101-106,201-206,301-306,401-406,901-906</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1166830123" title="Клик — скопировать">A 116 683 01 23</td><td>Защитная крышка</td><td>1</td><td>В КОРПУСЕ,СВЕРХУ Z  56.028/13</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1166800717" title="Клик — скопировать">A 116 680 07 17</td><td>ПАНЕЛЬ</td><td>1</td><td>ПОД ПЕРЕДН. ПАНЕЛЬЮ, СЛЕВА Рулевое управление: Влево Z  56.028/01, Z  56.028/04</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A0019886678" title="Клик — скопировать">A 001 988 66 78</td><td>СКОБА</td><td>2</td><td>Рулевое управление: Влево Z  56.028/01, Z  56.028/04</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 41 · подписано на схемах: 41 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05602800001.png", "poses": ["1", "10", "15", "20", "22"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

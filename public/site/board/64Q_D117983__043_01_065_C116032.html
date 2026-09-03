@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>01 КАРТЕР ДВИГАТЕЛЯ / 065 ГОЛОВКА БЛОКА ЦИЛИНДР.И КОМП.ПРОКЛАДОК</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116032">64Q SONDERSCHUTZ/SPECIAL PROTECTION</a> → 065 ГОЛОВКА БЛОКА ЦИЛИНДР.И КОМП.ПРОКЛАДОК</div>
+<h1>065 ГОЛОВКА БЛОКА ЦИЛИНДР.И КОМП.ПРОКЛАДОК</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B01065000023.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170102320" title="Клик — скопировать">A 117 010 23 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[005] UP TO ENGINE 982 026561 983 024286 992 000065 993 000057</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170106120" title="Клик — скопировать">A 117 010 61 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[014] FROM ENGINE 982 026562 983 024287 992 000066 993 000058 [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170100121" title="Клик — скопировать">A 117 010 01 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170100921" title="Клик — скопировать">A 117 010 09 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170103321" title="Клик — скопировать">A 117 010 33 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170108421" title="Клик — скопировать">A 117 010 84 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170102120" title="Клик — скопировать">A 117 010 21 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[005] UP TO ENGINE 982 026561 983 024286 992 000065 993 000057</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170106320" title="Клик — скопировать">A 117 010 63 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[014] FROM ENGINE 982 026562 983 024287 992 000066 993 000058 [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170100321" title="Клик — скопировать">A 117 010 03 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>[028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170101121" title="Клик — скопировать">A 117 010 11 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170103521" title="Клик — скопировать">A 117 010 35 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170106421" title="Клик — скопировать">A 117 010 64 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1170108621" title="Клик — скопировать">A 117 010 86 21</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1170530531" title="Клик — скопировать">A 117 053 05 31</td><td>- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>8</td><td>ВПУСК, НОРМАЛЬН. 46.10 MM</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1170530631" title="Клик — скопировать">A 117 053 06 31</td><td>- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>8</td><td>ВПУСК, РЕМОНТ. ИСПОЛНЕНИЕ 46.10 MM</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160530832" title="Клик — скопировать">A 116 053 08 32</td><td>- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>8</td><td>ВЫПУСК, НОРМАЛ. 40.10 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1160530932" title="Клик — скопировать">A 116 053 09 32</td><td>- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1170530332" title="Клик — скопировать">A 117 053 03 32</td><td>- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>8</td><td>ВЫПУСК, РЕМОНТ. ИСПОЛНЕНИЕ 41.30 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160503624" title="Клик — скопировать">A 116 050 36 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>ВПУСК, РЕМОНТНЫЙ РАЗМЕР I [007] 14.043-050 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160503724" title="Клик — скопировать">A 116 050 37 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160504924" title="Клик — скопировать">A 116 050 49 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>ВПУСК, РЕМОНТНЫЙ РАЗМЕР II 14.20 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160503824" title="Клик — скопировать">A 116 050 38 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160505024" title="Клик — скопировать">A 116 050 50 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>INTAKE,REPAIR SIZE III 14.40 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160504124" title="Клик — скопировать">A 116 050 41 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>ВЫПУСК, РЕМОНТНЫЙ РАЗМЕР I [011] 15.043-050 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160504224" title="Клик — скопировать">A 116 050 42 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>ВЫПУСК, РЕМОНТНЫЙ РАЗМЕР II 15.20 MM</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1160504324" title="Клик — скопировать">A 116 050 43 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>8</td><td>EXHAUST;REPAIR SIZE III 15.40 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009045014000" title="Клик — скопировать">N 009045 014000</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>ВПУСК</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009045016001" title="Клик — скопировать">N 009045 016001</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>ВЫПУСК</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N000007008202" title="Клик — скопировать">N 000007 008202</td><td>- Цилиндрический штифт</td><td>10</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1270160360" title="Клик — скопировать">A 127 016 03 60</td><td>- Водяной распределитель</td><td>14</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N007346005003" title="Клик — скопировать">N 007346 005003</td><td>- Зажимная гильза</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000908022010" title="Клик — скопировать">N 000908 022010</td><td>- Резьбовая пробка</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0949909507" title="Клик — скопировать">A 094 990 95 07</td><td>- Уплотнительное кольцо</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1160780083" title="Клик — скопировать">A 116 078 00 83</td><td>- ИЗОЛЯЦИЯ</td><td>8</td><td>[014] FROM ENGINE 982 026562 983 024287 992 000066 993 000058</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000908012003" title="Клик — скопировать">N 000908 012003</td><td>- Резьбовая пробка</td><td>-</td><td>M12X1,5</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000908012009" title="Клик — скопировать">N 000908 012009</td><td>- Резьбовая пробка</td><td>2</td><td>ЗАГЛУШКА СМАЗОЧНОГО КАНАЛА СЗАДИ; M12X1.5 [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N007603012405" title="Клик — скопировать">N 007603 012405</td><td>- Уплотнительное кольцо</td><td>2</td><td>ЗАГЛУШКА СМАЗОЧНОГО КАНАЛА СЗАДИ [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000835008065" title="Клик — скопировать">N 000835 008065</td><td>- Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000835008086" title="Клик — скопировать">N 000835 008086</td><td>- Винт</td><td>12</td><td>M8X25 [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000835008086" title="Клик — скопировать">N 000835 008086</td><td>- Винт</td><td>8</td><td>M8X25 [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000835008163" title="Клик — скопировать">N 000835 008163</td><td>- Винт</td><td>3</td><td>[026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N900421008002" title="Клик — скопировать">N 900421 008002</td><td>- Резьбовая вставка</td><td>8</td><td>[028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1819900168" title="Клик — скопировать">A 181 990 01 68</td><td>БОЛТОВОЕ СОЕДИНЕНИЕ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N007603010100" title="Клик — скопировать">N 007603 010100</td><td>Уплотнительное кольцо</td><td>1</td><td>10X13.5 AL</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0055421017" title="Клик — скопировать">A 005 542 10 17</td><td>Датчик температуры</td><td>1</td><td>ТЕРМОМЕТР ОЖ</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0055422617" title="Клик — скопировать">A 005 542 26 17</td><td>ДАТЧИК</td><td>1</td><td>ТЕРМОМЕТР ОЖ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005420184" title="Клик — скопировать">A 000 542 01 84</td><td>СОЕДИНИТЕЛЬ</td><td>1</td><td>[074] UP TO ENGINE 985 041166 986 047227</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18\-AL</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18\-AL [074] UP TO ENGINE 985 041166 986 047227</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1160162420" title="Клик — скопировать">A 116 016 24 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1160164620" title="Клик — скопировать">A 116 016 46 20</td><td>ПРОКЛАДКА ГБЦ</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1160162520" title="Клик — скопировать">A 116 016 25 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1160164720" title="Клик — скопировать">A 116 016 47 20</td><td>ПРОКЛАДКА ГБЦ</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N000912008203" title="Клик — скопировать">N 000912 008203</td><td>Цилиндрич. винт</td><td>4</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.; M8X30\-10.9 [018] UP TO ENGINE 982 12/52,22/62 028907 983 12/52,22/62 029151 992 12/52,22/62 000097 993 12/52,22/62 000094</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N000912008203" title="Клик — скопировать">N 000912 008203</td><td>Цилиндрич. винт</td><td>3</td><td>M8X30\-10.9</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N000912008103" title="Клик — скопировать">N 000912 008103</td><td>Винт</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000433008406" title="Клик — скопировать">N 000433 008406</td><td>Шайба</td><td>5</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ. [018] UP TO ENGINE 982 12/52,22/62 028907 983 12/52,22/62 029151 992 12/52,22/62 000097 993 12/52,22/62 000094</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000433008406" title="Клик — скопировать">N 000433 008406</td><td>Шайба</td><td>4</td><td>[019] FROM ENGINE 982 12/52,22/62 028908 983 12/52,22/62 029152 992 12/52,22/62 000098 993 12/52,22/62 000095</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N000912010107" title="Клик — скопировать">N 000912 010107</td><td>Винт</td><td>8</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N000912010027" title="Клик — скопировать">N 000912 010027</td><td>Винт</td><td>18</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1169900020" title="Клик — скопировать">A 116 990 00 20</td><td>БОЛТ</td><td>10</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1169901140" title="Клик — скопировать">A 116 990 11 40</td><td>Диск</td><td>36</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ.</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1165411040" title="Клик — скопировать">A 116 541 10 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ СПРАВА Рулевое управление: ВлевоАвтоматическая коробка переключения передач [069] UP TO ENGINE 985 029536</td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1171510045" title="Клик — скопировать">A 117 151 00 45</td><td>Экран защитный</td><td>1</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1165860405" title="Клик — скопировать">A 116 586 04 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>НОРМАЛЬНО [048] UP TO ENGINE 982 013667 983 002085</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1165860505" title="Клик — скопировать">A 116 586 05 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ПРОМЕЖУТОЧН.ГРУППА, ШИРИНА МЕНЬШЕ НА 0,1 MM [048] UP TO ENGINE 982 013667 983 002085</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1165860605" title="Клик — скопировать">A 116 586 06 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>РЕМОНТ.ГРУППА I;	ШИРИНА МЕНЬШЕ НА 0,25 MM [048] UP TO ENGINE 982 013667 983 002085</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1175860005" title="Клик — скопировать">A 117 586 00 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА, НОРМАЛЬН. [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612 [049] FROM ENGINE 982 013668 983 002086</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1175860305" title="Клик — скопировать">A 117 586 03 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА, НОРМАЛЬН. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1175860105" title="Клик — скопировать">A 117 586 01 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА НА 0,1 MM УЖЕ, ПРОМЕЖ.СТУП. [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612 [049] FROM ENGINE 982 013668 983 002086</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1175860205" title="Клик — скопировать">A 117 586 02 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА УЖЕ НА 0.25 MM, РЕМОНТН. ГРУППА I [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [026] UP TO ENGINE 982 035995 983 039155 [027] FROM ENGINE 982 036326 983 039612 [049] FROM ENGINE 982 013668 983 002086</td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1175860505" title="Клик — скопировать">A 117 586 05 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА УЖЕ НА 0.25 MM, РЕМОНТН. ГРУППА I [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="N000912010017" title="Клик — скопировать">N 000912 010017</td><td>Цилиндрич. винт</td><td>10</td><td>ОПОРА РАСПРЕДВАЛА НА ГБЦ</td><td class="restr"></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1169901140" title="Клик — скопировать">A 116 990 11 40</td><td>Диск</td><td>10</td><td>ОПОРА РАСПРЕДВАЛА НА ГБЦ</td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1800550175" title="Клик — скопировать">A 180 055 01 75</td><td>Центровочная втулка</td><td>10</td><td>ОПОРА РАСПРЕДВАЛА НА ГБЦ</td><td class="restr"></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1161870301" title="Клик — скопировать">A 116 187 03 01</td><td>МАСЛОПРОВОД</td><td>2</td><td>[058] UP TO ENGINE 985 024046 986 029711</td><td class="restr"></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1161800084" title="Клик — скопировать">A 116 180 00 84</td><td>Ремк-т подш.распредвала</td><td>2</td><td>ЭЛЕМЕНТ ПОДКЛЮЧЕНИЯ [058] UP TO ENGINE 985 024046 986 029711</td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1160100380" title="Клик — скопировать">A 116 010 03 80</td><td>КОМПЛЕКТ УПЛОТНЕНИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1160105520" title="Клик — скопировать">A 116 010 55 20</td><td>КОМПЛЕКТ УПЛОТНЕНИЙ</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1160100580" title="Клик — скопировать">A 116 010 05 80</td><td>КОМПЛЕКТ УПЛОТНЕНИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1160105620" title="Клик — скопировать">A 116 010 56 20</td><td>КОМПЛЕКТ УПЛОТНЕНИЙ</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ СПРАВА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160503524" title="Клик — скопировать">A 116 050 35 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160503624" title="Клик — скопировать">A 116 050 36 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td>ВПУСК [067] NO LONGER AVAILABLE,INSTAED 116 050 36 24 [006] 14.014-021 MM; 14.019-026 MM; 14.025-032 MM</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160504024" title="Клик — скопировать">A 116 050 40 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160504124" title="Клик — скопировать">A 116 050 41 24</td><td>- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>-</td><td>ВЫПУСК [068] NO LONGER AVAILABLE,INSTAED 116 050 41 24 [010] 15.014-021 MM; 15.019-026 MM; 15.025-032 MM</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160162220" title="Клик — скопировать">A 116 016 22 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160162420" title="Клик — скопировать">A 116 016 24 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td>СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160162320" title="Клик — скопировать">A 116 016 23 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1160162520" title="Клик — скопировать">A 116 016 25 20</td><td>ПРОКЛАДКА ГБЦ</td><td>-</td><td>СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1175860405" title="Клик — скопировать">A 117 586 04 05</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>ОПОРА РАСПРЕДВАЛА НА 0,1 MM УЖЕ, ПРОМЕЖ.СТУП. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [028] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 90 · подписано на схемах: 81 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01065000023.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "35", "44", "47", "50", "53", "65", "68", "77", "80", "86", "95", "98", "101", "104", "107", "110", "113", "122", "128", "131", "134", "137", "143", "149", "152"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

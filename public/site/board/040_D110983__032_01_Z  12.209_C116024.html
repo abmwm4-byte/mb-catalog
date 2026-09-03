@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>01 КАРТЕР ДВИГАТЕЛЯ / Z  12.209 ДЕТАЛИ ДВИГ. ПРИ РЕГУЛ.УРОВНЯ (M 102 1-РЕМЕНН.ПРИВОД СМ.СТАНДАРТ. МИКРОФИШУ)</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116024">040 STANDARD</a> → Z  12.209 ДЕТАЛИ ДВИГ. ПРИ РЕГУЛ.УРОВНЯ (M 102 1-РЕМЕНН.ПРИВОД СМ.СТАНДАРТ. МИКРОФИШУ)</div>
+<h1>Z  12.209 ДЕТАЛИ ДВИГ. ПРИ РЕГУЛ.УРОВНЯ (M 102 1-РЕМЕНН.ПРИВОД СМ.СТАНДАРТ. МИКРОФИШУ)</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">S01220900002 <span class="hint">(6)</span></button><button data-i="1" class="">S01220900001 <span class="hint">(2)</span></button><button data-i="2" class="">S01220900003 <span class="hint">(5)</span></button><button data-i="3" class="">S01220900004 <span class="hint">(6)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S01220900002.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 4
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0002363205" title="Клик — скопировать">A 000 236 32 05</td><td>ГИДРОНАСОС</td><td>-</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/09, Z  12.209/10 [014] УЧЕСТЬ ДОПОЛНИТ.ЗАКАЗ.ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1162300064" title="Клик — скопировать">A 116 230 00 64</td><td>ГИДРОНАСОС</td><td>-</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1162300564" title="Клик — скопировать">A 116 230 05 64</td><td>ГИДРОНАСОС</td><td>-</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1172300064" title="Клик — скопировать">A 117 230 00 64</td><td>Гидронасос</td><td>1</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10 [015] 114.920,923,980,981 115.920,923,924,926 130.923 180.954,955 ДОПОЛН. ИСПОЛЬЗОВАТЬ:1 ВЕДУЩ.ЭЛЕМЕНТ 116 236 01 16,4 БОЛТ 000  912 006076,4 ПРУЖИН.ШАЙБА 000137 006203 [016] 615.912,913 616.916 ДОПОЛН. ИСПОЛЬЗОВАТЬ:1 ВЕДУЩ.ЭЛЕМЕНТ 116 236 00 16,4 БОЛТ 000  912 006047,4 ПРУЖИН.ШАЙБА 000137 006203 [017] 110.921,922,931,932,981,982,983,984,985,986,991,992,993: ДОПОЛН. ИСПОЛЬЗОВАТЬ:1 ВЕДУЩ.ЭЛЕМЕНТ 4 116 236 02 16 БОЛТ 00   0912 006047,4 ПРУЖИН.ШАЙБА 000137 006203</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0049970147" title="Клик — скопировать">A 004 997 01 47</td><td>- Уплотнительное кольцо</td><td>1</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10 [013] ОТНОСИТСЯ К ПОРШН.НАСОСУ 116 230 00 64/116 230 05 64/117 23 0 00 64</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A0109974345" title="Клик — скопировать">A 010 997 43 45</td><td>- Уплотнительное кольцо</td><td>1</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10 [013] ОТНОСИТСЯ К ПОРШН.НАСОСУ 116 230 00 64/116 230 05 64/117 23 0 00 64</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000912006070" title="Клик — скопировать">N 000912 006070</td><td>Винт</td><td>4</td><td>Z  12.209/03, Z  12.209/04, Z  12.209/06, Z  12.209/09, Z  12.209/10 [012] ОТНОСИТСЯ К ПОРШНЕВ.НАСОСУ 000 236 32 05</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000912006047" title="Клик — скопировать">N 000912 006047</td><td>Винт</td><td>4</td><td>Z  12.209/03, Z  12.209/04, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10 [013] ОТНОСИТСЯ К ПОРШН.НАСОСУ 116 230 00 64/116 230 05 64/117 23 0 00 64</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N007980006003" title="Клик — скопировать">N 007980 006003</td><td>Пружинное кольцо</td><td>4</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/09, Z  12.209/10 [012] ОТНОСИТСЯ К ПОРШНЕВ.НАСОСУ 000 236 32 05</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>4</td><td>Z  12.209/01, Z  12.209/02, Z  12.209/03, Z  12.209/04, Z  12.209/05, Z  12.209/06, Z  12.209/07, Z  12.209/08, Z  12.209/09, Z  12.209/10 [013] ОТНОСИТСЯ К ПОРШН.НАСОСУ 116 230 00 64/116 230 05 64/117 23 0 00 64</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1100510053" title="Клик — скопировать">A 110 051 00 53</td><td>РАСПОРН. ТРУБКА</td><td>-</td><td>Z  12.209/06, Z  12.209/09 [035] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 110.921 10/50,20/60 008336 110.921 12/52,22/62 032743 110.922 10/50,20/60 013707 110.922 12/52,22/62 018360 110.931 10/50,20/60 000891 110.931 12/52,22/62 000116 110.932 10/50,20/60 001755 110.932 12/52,22/62 000266 110.981 10/50,20/60 009839 110.981 12/52,22/62 020190 110.982 10/50,20/60 000047 110.982 12/52,22/62 000111 110.983 10/50,20/60 010852 110.983 12/52,22/62 026299 110.991 10/50,20/60 000064 110.991 12/52,22/62 000029 110.993 10/50,20/60 000041 110.993 12/52,22/62 000009</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1100510553" title="Клик — скопировать">A 110 051 05 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ РАСПРЕДЕЛИТЕЛЬНОГО ВАЛА НА РАСПРЕДЕЛИТЕЛЬНОМ ВАЛУ Z  12.209/06, Z  12.209/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="142"><td>142</td><td class="pn" data-raw="A1100510005" title="Клик — скопировать">A 110 051 00 05</td><td>ПОВОДОК</td><td>1</td><td>Z  12.209/06, Z  12.209/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [012] ОТНОСИТСЯ К ПОРШНЕВ.НАСОСУ 000 236 32 05</td><td class="restr"></td></tr><tr data-pos="148"><td>148</td><td class="pn" data-raw="A1162360216" title="Клик — скопировать">A 116 236 02 16</td><td>ПОВОДОК</td><td>-</td><td>Z  12.209/06, Z  12.209/09</td><td class="restr"></td></tr><tr data-pos="148"><td>148</td><td class="pn" data-raw="A1102360116" title="Клик — скопировать">A 110 236 01 16</td><td>Поводок</td><td>1</td><td>Z  12.209/06, Z  12.209/09 [013] ОТНОСИТСЯ К ПОРШН.НАСОСУ 116 230 00 64/116 230 05 64/117 23 0 00 64</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1102300056" title="Клик — скопировать">A 110 230 00 56</td><td>ТРУБКА</td><td>-</td><td>Z  12.209/09 [067] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 923 10/50,20/60 006386 923 12/52,22/60 007711 984 10/50,20/60 005205 984 12/52,22/60 014014 986 10/50,20/60 000467 986 12/52,22/62 001005</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1102300256" title="Клик — скопировать">A 110 230 02 56</td><td>ТРУБКА</td><td>-</td><td>Z  12.209/09</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A6152301556" title="Клик — скопировать">A 615 230 15 56</td><td>Трубопровод всасывающий</td><td>1</td><td>ВСАСЫВАЮЩИЙ ТРУБОПРОВОД НА НАСОСЕ Z  12.209/09</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 18 · подписано на схемах: 18 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01220900002.png", "poses": ["10", "15", "19", "50", "60", "180"]}, {"png": "../../img_png/drawing_S01220900001.png", "poses": ["70", "148"]}, {"png": "../../img_png/drawing_S01220900003.png", "poses": ["10", "15", "19", "50", "60"]}, {"png": "../../img_png/drawing_S01220900004.png", "poses": ["10", "15", "19", "50", "60", "142"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>
