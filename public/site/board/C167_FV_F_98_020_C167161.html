@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678106805" title="Клик — скопировать">A 167 810 68 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678109905" title="Клик — скопировать">A 167 810 99 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678109905" title="Клик — скопировать">A 167 810 99 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678175300" title="Клик — скопировать">A 167 817 53 00</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>1</td><td>С подсветкой</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678172201" title="Клик — скопировать">A 167 817 22 01</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>1</td><td>С подсветкой</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678171901" title="Клик — скопировать">A 167 817 19 01</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>2</td><td>С подсветкой USA</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1678202503" title="Клик — скопировать">A 167 820 25 03</td><td>- Электрический жгут (ELEKTRISCHER LEITUNGSSATZ)</td><td>1</td><td>Звезда &quot;Mercedes&quot; с подсветкой</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2057604000" title="Клик — скопировать">A 205 760 40 00</td><td>Выемка под ручку (GRIFFMULDE)</td><td>2</td><td>Комплект деталей для двух дверей в хромированном исполнении</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1677255400" title="Клик — скопировать">A 167 725 54 00</td><td>Декоративная планка (ZIERLEISTE)</td><td>1</td><td>Комплект деталей (левая и правая сторона)</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1678902500" title="Клик — скопировать">A 167 890 25 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей (передний), с крепёжным материалом</td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1678902600" title="Клик — скопировать">A 167 890 26 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей (передний), с крепёжным материалом</td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1678902700" title="Клик — скопировать">A 167 890 27 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей сзади с крепежом</td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0004703201" title="Клик — скопировать">A 000 470 32 01</td><td>Крышка горл. топ. бака (TANKDECKEL)</td><td>1</td><td>С надписью AMG</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678106805" title="Клик — скопировать">A 167 810 68 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td><td class="restr" data-expr="(460/494)"><span class="icode">(460/494)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678109905" title="Клик — скопировать">A 167 810 99 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td><td class="restr" data-expr="(460/494)+804"><span class="icode">(460/494)+804</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1678109905" title="Клик — скопировать">A 167 810 99 05</td><td>Звезда Mercedes</td><td>1</td><td>Комплект деталей (с подсветкой)</td><td class="restr" data-expr="(460/494)+(804/805/806)"><span class="icode">(460/494)+(804/805/806)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678175300" title="Клик — скопировать">A 167 817 53 00</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>1</td><td>С подсветкой</td><td class="restr" data-expr="(460/494)"><span class="icode">(460/494)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678172201" title="Клик — скопировать">A 167 817 22 01</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>1</td><td>С подсветкой</td><td class="restr" data-expr="(460/494)+(804/805/806)"><span class="icode">(460/494)+(804/805/806)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1678171901" title="Клик — скопировать">A 167 817 19 01</td><td>- Звезда Mercedes (MERCEDES STERN)</td><td>2</td><td>С подсветкой USA</td><td class="restr" data-expr="(460/494)+804"><span class="icode">(460/494)+804</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1678202503" title="Клик — скопировать">A 167 820 25 03</td><td>- Электрический жгут (ELEKTRISCHER LEITUNGSSATZ)</td><td>1</td><td>Звезда &quot;Mercedes&quot; с подсветкой</td><td class="restr" data-expr="(460/494)"><span class="icode">(460/494)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2057604000" title="Клик — скопировать">A 205 760 40 00</td><td>Выемка под ручку (GRIFFMULDE)</td><td>2</td><td>Комплект деталей для двух дверей в хромированном исполнении</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1677255400" title="Клик — скопировать">A 167 725 54 00</td><td>Декоративная планка (ZIERLEISTE)</td><td>1</td><td>Комплект деталей (левая и правая сторона) [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E54"><span class="icode">E54</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1678902500" title="Клик — скопировать">A 167 890 25 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей (передний), с крепёжным материалом [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="-(M177+M40/772/773/830/846)"><span class="icode">-(M177+M40/772/773/830/846)</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1678902600" title="Клик — скопировать">A 167 890 26 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей (передний), с крепёжным материалом [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="846+-(M177+M40/772/773/830)"><span class="icode">846+-(M177+M40/772/773/830)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1678902700" title="Клик — скопировать">A 167 890 27 00</td><td>Брызговик (SCHMUTZFAENGER)</td><td>1</td><td>Комплект деталей сзади с крепежом [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0004703201" title="Клик — скопировать">A 000 470 32 01</td><td>Крышка горл. топ. бака (TANKDECKEL)</td><td>1</td><td>С надписью AMG</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 13 · подписано на схемах: 13 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

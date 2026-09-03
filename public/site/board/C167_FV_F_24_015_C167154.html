@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1672405100" title="Клик — скопировать">A 167 240 51 00</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>Передн. лев.</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1672406600" title="Клик — скопировать">A 167 240 66 00</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>Передн. прав.</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000000008865" title="Клик — скопировать">N 000000 008865</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>Опора двигателя (левая и правая) к ‌кронштейну опоры двигателя</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1672410700" title="Клик — скопировать">A 167 241 07 00</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>Справа</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>4</td><td>Защитный кожух (правый); M6X15</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N910105008014" title="Клик — скопировать">N 910105 008014</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>6</td><td>Опора двигателя (левая и правая) к ‌интегральной балке; M8X35</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1672406100" title="Клик — скопировать">A 167 240 61 00</td><td>Поперечная распорка (QUERSTREBE)</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1672404900" title="Клик — скопировать">A 167 240 49 00</td><td>Поперечная распорка (QUERSTREBE)</td><td>1</td><td></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0029903203" title="Клик — скопировать">A 002 990 32 03</td><td>Винт с неспадающей шайбой (KOMBISCHRAUBE)</td><td>4</td><td>Поперечина к остову кузова; M10X30</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0029903203" title="Клик — скопировать">A 002 990 32 03</td><td>Винт с неспадающей шайбой (KOMBISCHRAUBE)</td><td>4</td><td>Поперечина к лонжерону; M10X30</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1672406300" title="Клик — скопировать">A 167 240 63 00</td><td>TRANSMISSION BEARING (GETRIEBELAGER)</td><td>1</td><td></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N910143008004" title="Клик — скопировать">N 910143 008004</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>4</td><td>Крепление опоры; M8X35</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (MUTTER)</td><td>2</td><td>Крепление опоры; M10</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (MUTTER)</td><td>2</td><td>Крепление опоры; M10</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1672405100" title="Клик — скопировать">A 167 240 51 00</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>Передн. лев.</td><td class="restr" data-expr="M264/M274"><span class="icode">M264/M274</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1672406600" title="Клик — скопировать">A 167 240 66 00</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>Передн. прав.</td><td class="restr" data-expr="M264/M274"><span class="icode">M264/M274</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000000008865" title="Клик — скопировать">N 000000 008865</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>Опора двигателя (левая и правая) к ‌кронштейну опоры двигателя</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1672410700" title="Клик — скопировать">A 167 241 07 00</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>Справа</td><td class="restr" data-expr="M264/M274+ME05"><span class="icode">M264/M274+ME05</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>4</td><td>Защитный кожух (правый); M6X15</td><td class="restr" data-expr="M264/M274+ME05"><span class="icode">M264/M274+ME05</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N910105008014" title="Клик — скопировать">N 910105 008014</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>6</td><td>Опора двигателя (левая и правая) к ‌интегральной балке; M8X35</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1672406100" title="Клик — скопировать">A 167 240 61 00</td><td>Поперечная распорка (QUERSTREBE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1672404900" title="Клик — скопировать">A 167 240 49 00</td><td>Поперечная распорка (QUERSTREBE)</td><td>1</td><td></td><td class="restr" data-expr="(M274/M654)+ME05"><span class="icode">(M274/M654)+ME05</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0029903203" title="Клик — скопировать">A 002 990 32 03</td><td>Винт с неспадающей шайбой (KOMBISCHRAUBE)</td><td>4</td><td>Поперечина к остову кузова; M10X30</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0029903203" title="Клик — скопировать">A 002 990 32 03</td><td>Винт с неспадающей шайбой (KOMBISCHRAUBE)</td><td>4</td><td>Поперечина к лонжерону; M10X30</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1672406300" title="Клик — скопировать">A 167 240 63 00</td><td>TRANSMISSION BEARING (GETRIEBELAGER)</td><td>1</td><td></td><td class="restr" data-expr="ME05+(M274/M654)"><span class="icode">ME05+(M274/M654)</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N910143008004" title="Клик — скопировать">N 910143 008004</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>4</td><td>Крепление опоры; M8X35</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (MUTTER)</td><td>2</td><td>Крепление опоры; M10</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (MUTTER)</td><td>2</td><td>Крепление опоры; M10</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 14 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

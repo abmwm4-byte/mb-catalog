@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078205315" title="Клик — скопировать">A 107 820 53 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078206615" title="Клик — скопировать">A 107 820 66 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078207715" title="Клик — скопировать">A 107 820 77 15</td><td>- ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078209115" title="Клик — скопировать">A 107 820 91 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078206115" title="Клик — скопировать">A 107 820 61 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078209015" title="Клик — скопировать">A 107 820 90 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078202417" title="Клик — скопировать">A 107 820 24 17</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078207615" title="Клик — скопировать">A 107 820 76 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0035454728" title="Клик — скопировать">A 003 545 47 28</td><td>- ШТЕКЕР</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0085450828" title="Клик — скопировать">A 008 545 08 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>ДВУХПОЛЮСНЫЙ; 2\-PIN RK4</td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A0005455528" title="Клик — скопировать">A 000 545 55 28</td><td>- Штекер</td><td>1</td><td></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0005450745" title="Клик — скопировать">A 000 545 07 45</td><td>- Защитный колпачок</td><td>1</td><td></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0005450445" title="Клик — скопировать">A 000 545 04 45</td><td>- КОЛПАЧОК</td><td>2</td><td></td></tr><tr data-pos="198"><td>198</td><td class="pn" data-raw="A0015422219" title="Клик — скопировать">A 001 542 22 19</td><td>РЕЛЕ</td><td>1</td><td></td></tr><tr data-pos="198"><td>198</td><td class="pn" data-raw="A0015420219" title="Клик — скопировать">A 001 542 02 19</td><td>Реле</td><td>1</td><td></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>7X100 MM</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0029970790" title="Клик — скопировать">A 002 997 07 90</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ</td><td>-</td><td></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>7X100 MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1119972381" title="Клик — скопировать">A 111 997 23 81</td><td>КАБ. ВТУЛКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0089971781" title="Клик — скопировать">A 008 997 17 81</td><td>втулка</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078205315" title="Клик — скопировать">A 107 820 53 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Влево Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078206615" title="Клик — скопировать">A 107 820 66 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Влево Z  55.962/19 [082] UP TO CHASSIS: 107.022 002802 107.023 011264 107.024 015124 107.042 002187 107.043 012638 107.044 035459</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078207715" title="Клик — скопировать">A 107 820 77 15</td><td>- ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Влево Z  55.962/19 [083] FROM CHASSIS: 107.022 002803 107.023 011265 107.024 015125 107.042 002188 107.043 012639 107.044 035460</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078209115" title="Клик — скопировать">A 107 820 91 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Влево Z  55.962/19 [103] FROM CHASSIS SEE SA 11255</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078206115" title="Клик — скопировать">A 107 820 61 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Вправо Z  55.962/19 [082] UP TO CHASSIS: 107.022 002802 107.023 011264 107.024 015124 107.042 002187 107.043 012638 107.044 035459</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078209015" title="Клик — скопировать">A 107 820 90 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Вправо Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078202417" title="Клик — скопировать">A 107 820 24 17</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Вправо Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1078207615" title="Клик — скопировать">A 107 820 76 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>Рулевое управление: Вправо Z  55.962/19 [083] FROM CHASSIS: 107.022 002803 107.023 011265 107.024 015125 107.042 002188 107.043 012639 107.044 035460</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0035454728" title="Клик — скопировать">A 003 545 47 28</td><td>- ШТЕКЕР</td><td>-</td><td>Z  55.962/15, Z  55.962/18, Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0085450828" title="Клик — скопировать">A 008 545 08 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>ДВУХПОЛЮСНЫЙ; 2\-PIN RK4 Z  55.962/15, Z  55.962/18, Z  55.962/19 [067] FROM CHASSIS: 107.023 000429 107.043 006834 107.044 004104</td><td class="restr"></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A0005455528" title="Клик — скопировать">A 000 545 55 28</td><td>- Штекер</td><td>1</td><td>Z  55.962/15, Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0005450745" title="Клик — скопировать">A 000 545 07 45</td><td>- Защитный колпачок</td><td>1</td><td>Z  55.962/19, Z  55.962/20</td><td class="restr"></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0005450445" title="Клик — скопировать">A 000 545 04 45</td><td>- КОЛПАЧОК</td><td>2</td><td>Z  55.962/19, Z  55.962/20</td><td class="restr"></td></tr><tr data-pos="198"><td>198</td><td class="pn" data-raw="A0015422219" title="Клик — скопировать">A 001 542 22 19</td><td>РЕЛЕ</td><td>1</td><td>Z  55.962/15, Z  55.962/18, Z  55.962/19, Z  55.962/20 [067] FROM CHASSIS: 107.023 000429 107.043 006834 107.044 004104</td><td class="restr"></td></tr><tr data-pos="198"><td>198</td><td class="pn" data-raw="A0015420219" title="Клик — скопировать">A 001 542 02 19</td><td>Реле</td><td>1</td><td>Z  55.962/15, Z  55.962/18, Z  55.962/19, Z  55.962/20 [067] FROM CHASSIS: 107.023 000429 107.043 006834 107.044 004104</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>7X100 MM Z  55.962/11, Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0029970790" title="Клик — скопировать">A 002 997 07 90</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ</td><td>-</td><td>Z  55.962/11, Z  55.962/15, Z  55.962/19</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>7X100 MM Z  55.962/11, Z  55.962/19</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1119972381" title="Клик — скопировать">A 111 997 23 81</td><td>КАБ. ВТУЛКА</td><td>-</td><td>Z  55.962/18, Z  55.962/19, Z  55.962/20</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0089971781" title="Клик — скопировать">A 008 997 17 81</td><td>втулка</td><td>1</td><td>Z  55.962/18, Z  55.962/19, Z  55.962/20</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 20 · подписано на схемах: 18 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

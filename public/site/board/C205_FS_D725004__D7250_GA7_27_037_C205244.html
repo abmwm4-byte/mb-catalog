@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>27 Автоматическая коробка передач / 037 Фрикционное сцепление K81, планетарный ряд 1</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205244">C205_FS -/-</a> → 037 Фрикционное сцепление K81, планетарный ряд 1</div>
+<h1>037 Фрикционное сцепление K81, планетарный ряд 1</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.010.088.279_version_001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252723302" title="Клик — скопировать">A 725 272 33 02</td><td>- Ступица (HUB)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252721205" title="Клик — скопировать">A 725 272 12 05</td><td>- Ступица (HUB)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0249975545" title="Клик — скопировать">A 024 997 55 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>113X3.5</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0239972245" title="Клик — скопировать">A 023 997 22 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>110X3.5</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0009970924" title="Клик — скопировать">A 000 997 09 24</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>110MMX3.5MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0239972045" title="Клик — скопировать">A 023 997 20 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>67X3.05</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009970824" title="Клик — скопировать">A 000 997 08 24</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252702204" title="Клик — скопировать">A 725 270 22 04</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A0/3A4/3A9/4A7/A300"><span class="icode">3A0/3A4/3A9/4A7/A300</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252702204" title="Клик — скопировать">A 725 270 22 04</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A0/3A4/3A9/4A7/A300/A310"><span class="icode">3A0/3A4/3A9/4A7/A300/A310</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252700518" title="Клик — скопировать">A 725 270 05 18</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A0/3A4/3A9/4A7/A300/A310"><span class="icode">3A0/3A4/3A9/4A7/A300/A310</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252702104" title="Клик — скопировать">A 725 270 21 04</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308"><span class="icode">3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252700418" title="Клик — скопировать">A 725 270 04 18</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308"><span class="icode">3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252702004" title="Клик — скопировать">A 725 270 20 04</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A1/3A6"><span class="icode">3A1/3A6</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A7252702004" title="Клик — скопировать">A 725 270 20 04</td><td>- Поршень (PISTON)</td><td>1</td><td></td><td class="restr" data-expr="3A1/3A6/A306"><span class="icode">3A1/3A6/A306</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A7252721402" title="Клик — скопировать">A 725 272 14 02</td><td>- Тарелка пружины (SPRING RETAINER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A0239972245" title="Клик — скопировать">A 023 997 22 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>110X3.5</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A0009970924" title="Клик — скопировать">A 000 997 09 24</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>110MMX3.5MM</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019939226" title="Клик — скопировать">A 001 993 92 26</td><td>- Тарельчатая пружина (DISK SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019939226" title="Клик — скопировать">A 001 993 92 26</td><td>- Тарельчатая пружина (DISK SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A7252728900" title="Клик — скопировать">A 725 272 89 00</td><td>- Тарелка пружины (SPRING RETAINER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A7252725307" title="Клик — скопировать">A 725 272 53 07</td><td>- Тарелка пружины (SPRING RETAINER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0019939326" title="Клик — скопировать">A 001 993 93 26</td><td>- Волнистая шайба (CORRUGATED SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009937000" title="Клик — скопировать">A 000 993 70 00</td><td>- Волнистая шайба (CORRUGATED SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0029934726" title="Клик — скопировать">A 002 993 47 26</td><td>- Волнистая шайба (CORRUGATED SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0029934726" title="Клик — скопировать">A 002 993 47 26</td><td>- Волнистая шайба (CORRUGATED SPRING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0039946740" title="Клик — скопировать">A 003 994 67 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>62.5X1.5MM</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A7252723801" title="Клик — скопировать">A 725 272 38 01</td><td>- Внутр. фрикционный диск (INNER LAMELLAR RING)</td><td>6</td><td></td><td class="restr" data-expr="3A0/3A4/3A9/4A7/A300/A310"><span class="icode">3A0/3A4/3A9/4A7/A300/A310</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A7252723801" title="Клик — скопировать">A 725 272 38 01</td><td>- Внутр. фрикционный диск (INNER LAMELLAR RING)</td><td>4</td><td></td><td class="restr" data-expr="3A1/3A6"><span class="icode">3A1/3A6</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A7252723801" title="Клик — скопировать">A 725 272 38 01</td><td>- Внутр. фрикционный диск (INNER LAMELLAR RING)</td><td>4</td><td></td><td class="restr" data-expr="3A1/3A6/A306"><span class="icode">3A1/3A6/A306</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A7252723801" title="Клик — скопировать">A 725 272 38 01</td><td>- Внутр. фрикционный диск (INNER LAMELLAR RING)</td><td>5</td><td></td><td class="restr" data-expr="3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308"><span class="icode">3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A7252720537" title="Клик — скопировать">A 725 272 05 37</td><td>- Внешний фрикционный диск (OUTER LAMELLAR RING)</td><td>5</td><td></td><td class="restr" data-expr="3A0/3A4/3A9/4A7/A300/A310"><span class="icode">3A0/3A4/3A9/4A7/A300/A310</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A7252720537" title="Клик — скопировать">A 725 272 05 37</td><td>- Внешний фрикционный диск (OUTER LAMELLAR RING)</td><td>4</td><td></td><td class="restr" data-expr="3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308"><span class="icode">3A2/3A3/3A5/3A7/3A8/4A0/4A1/4A2/4A6/A305/A315/A307/A308</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A7252720537" title="Клик — скопировать">A 725 272 05 37</td><td>- Внешний фрикционный диск (OUTER LAMELLAR RING)</td><td>3</td><td></td><td class="restr" data-expr="3A1/3A6"><span class="icode">3A1/3A6</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A7252720537" title="Клик — скопировать">A 725 272 05 37</td><td>- Внешний фрикционный диск (OUTER LAMELLAR RING)</td><td>3</td><td></td><td class="restr" data-expr="3A1/3A6/A306"><span class="icode">3A1/3A6/A306</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A7252700249" title="Клик — скопировать">A 725 270 02 49</td><td>- Держ-ль внутр. фрикционов (INNER PLATE CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A7252700249" title="Клик — скопировать">A 725 270 02 49</td><td>- Держ-ль внутр. фрикционов (INNER PLATE CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A7252702116" title="Клик — скопировать">A 725 270 21 16</td><td>- Держ-ль внутр. фрикционов (INNER PLATE CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A7252702216" title="Клик — скопировать">A 725 270 22 16</td><td>- Держ-ль внутр. фрикционов (INNER PLATE CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039946840" title="Клик — скопировать">A 003 994 68 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>67.7/62.5/1.5</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947040" title="Клик — скопировать">A 003 994 70 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S1.60MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947140" title="Клик — скопировать">A 003 994 71 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S1.70MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947240" title="Клик — скопировать">A 003 994 72 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S1.80MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947340" title="Клик — скопировать">A 003 994 73 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S1.90MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947440" title="Клик — скопировать">A 003 994 74 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.00MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947540" title="Клик — скопировать">A 003 994 75 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.10MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947640" title="Клик — скопировать">A 003 994 76 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.20MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947740" title="Клик — скопировать">A 003 994 77 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.30MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0039947840" title="Клик — скопировать">A 003 994 78 40</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.40MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009942700" title="Клик — скопировать">A 000 994 27 00</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.60MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009942600" title="Клик — скопировать">A 000 994 26 00</td><td>- Пруж. стопорное кольцо (SNAP RING)</td><td>1</td><td>S2.50MM</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A7252700043" title="Клик — скопировать">A 725 270 00 43</td><td>- Водило планет. передачи (PLANET CARRIER)</td><td>1</td><td></td><td class="restr" data-expr="4A6/4A7"><span class="icode">4A6/4A7</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A7252701207" title="Клик — скопировать">A 725 270 12 07</td><td>- Водило планет. передачи (PLANET CARRIER)</td><td>1</td><td></td><td class="restr" data-expr="4A0/4A1/4A2/4A6/4A7/3A0/3A4/3A5/A300/A310/A305/A315"><span class="icode">4A0/4A1/4A2/4A6/4A7/3A0/3A4/3A5/A300/A310/A305/A315</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A7252701307" title="Клик — скопировать">A 725 270 13 07</td><td>- Водило планет. передачи (PLANET CARRIER)</td><td>1</td><td></td><td class="restr" data-expr="3A1/3A2/3A3/3A6/3A7/3A8/3A9"><span class="icode">3A1/3A2/3A3/3A6/3A7/3A8/3A9</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A7252701307" title="Клик — скопировать">A 725 270 13 07</td><td>- Водило планет. передачи (PLANET CARRIER)</td><td>1</td><td></td><td class="restr" data-expr="3A1/3A2/3A3/3A6/3A7/3A8/3A9/A306/A307/A308"><span class="icode">3A1/3A2/3A3/3A6/3A7/3A8/3A9/A306/A307/A308</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A7252727202" title="Клик — скопировать">A 725 272 72 02</td><td>	- Кольцо масл. коллектора (OIL THROWER)</td><td>1</td><td></td><td class="restr" data-expr="3A1/3A2/3A3/3A6/3A7/3A8/3A9/A306/A307/A308"><span class="icode">3A1/3A2/3A3/3A6/3A7/3A8/3A9/A306/A307/A308</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A7252727102" title="Клик — скопировать">A 725 272 71 02</td><td>	- Кольцо масл. коллектора (OIL THROWER)</td><td>1</td><td></td><td class="restr" data-expr="3A0/3A4/3A5/4A0/4A1/4A2/4A6/4A7/A300/A310/A305/A315"><span class="icode">3A0/3A4/3A5/4A0/4A1/4A2/4A6/4A7/A300/A310/A305/A315</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A7259812510" title="Клик — скопировать">A 725 981 25 10</td><td>	- Осевой игольчатый ролик (AXIAL NEEDLE CAGE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A7252700000" title="Клик — скопировать">A 725 270 00 00</td><td>- Коронная шестерня (RING GEAR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A7252700000" title="Клик — скопировать">A 725 270 00 00</td><td>- Коронная шестерня (RING GEAR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A7252700000" title="Клик — скопировать">A 725 270 00 00</td><td>- Коронная шестерня (RING GEAR)</td><td>1</td><td></td><td class="restr" data-expr="A117"><span class="icode">A117</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 60 · подписано на схемах: 60 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.088.279_version_001.png", "poses": ["10", "15", "20", "30", "40", "45", "50", "70", "80", "90", "100", "120", "130", "140", "150", "300", "310", "320", "360"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  applyRows();
+})();
+</script></body></html>

@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171421801" title="Клик — скопировать">A 117 142 18 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171400409" title="Клик — скопировать">A 117 140 04 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171420301" title="Клик — скопировать">A 117 142 03 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171403809" title="Клик — скопировать">A 117 140 38 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171403709" title="Клик — скопировать">A 117 140 37 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171421901" title="Клик — скопировать">A 117 142 19 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171400009" title="Клик — скопировать">A 117 140 00 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171420201" title="Клик — скопировать">A 117 142 02 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171404109" title="Клик — скопировать">A 117 140 41 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420260" title="Клик — скопировать">A 116 142 02 60</td><td>ФЛАНЕЦ ГЕРМЕТИЗИРУЮЩИЙ</td><td>-</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420460" title="Клик — скопировать">A 116 142 04 60</td><td>ФЛАНЕЦ ГЕРМЕТИЗИРУЮЩИЙ</td><td>-</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420280" title="Клик — скопировать">A 116 142 02 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ (GASKET)</td><td>8</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000933008153" title="Клик — скопировать">N 000933 008153</td><td>Винт</td><td>-</td><td>M8X25\-8.8</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N304017008034" title="Клик — скопировать">N 304017 008034</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>M8X25</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000931008251" title="Клик — скопировать">N 000931 008251</td><td>Винт (SCREW)</td><td>3</td><td>CYLINDERS NOS.4,5,8</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000931008246" title="Клик — скопировать">N 000931 008246</td><td>Винт</td><td>-</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N304017008028" title="Клик — скопировать">N 304017 008028</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>ЦИЛИНДР №1</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>Шайба</td><td>16</td><td>8 MM</td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1169901440" title="Клик — скопировать">A 116 990 14 40</td><td>ШАЙБА</td><td>16</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка (NUT)</td><td>16</td><td>M8</td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка (NUT)</td><td>8</td><td>M8</td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1161421120" title="Клик — скопировать">A 116 142 11 20</td><td>ЭКРАН (SCREENING PLATE)</td><td>2</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N000933006086" title="Клик — скопировать">N 000933 006086</td><td>Винт</td><td>4</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (WASHER)</td><td>4</td><td>6 MM</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171421801" title="Клик — скопировать">A 117 142 18 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171400409" title="Клик — скопировать">A 117 140 04 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СПРАВА Рулевое управление: ВлевоАвтоматическая коробка переключения передач [025] UP TO ENGINE 986 032395</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171420301" title="Клик — скопировать">A 117 142 03 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Рулевое управление: ВправоАвтоматическая коробка переключения передач [029] UP TO ENGINE 985 036216 986 042831</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171403809" title="Клик — скопировать">A 117 140 38 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СПРАВА Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1171403709" title="Клик — скопировать">A 117 140 37 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>СПРАВА Рулевое управление: ВправоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171421901" title="Клик — скопировать">A 117 142 19 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171400009" title="Клик — скопировать">A 117 140 00 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СЛЕВА Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171420201" title="Клик — скопировать">A 117 142 02 01</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Рулевое управление: ВправоАвтоматическая коробка переключения передач [029] UP TO ENGINE 985 036216 986 042831</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171404109" title="Клик — скопировать">A 117 140 41 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР (EXHAUST MANIFOLD)</td><td>1</td><td>СЛЕВА Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420260" title="Клик — скопировать">A 116 142 02 60</td><td>ФЛАНЕЦ ГЕРМЕТИЗИРУЮЩИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420460" title="Клик — скопировать">A 116 142 04 60</td><td>ФЛАНЕЦ ГЕРМЕТИЗИРУЮЩИЙ</td><td>-</td><td>[414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1161420280" title="Клик — скопировать">A 116 142 02 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ (GASKET)</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000933008153" title="Клик — скопировать">N 000933 008153</td><td>Винт</td><td>-</td><td>M8X25\-8.8</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N304017008034" title="Клик — скопировать">N 304017 008034</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>M8X25 [015] FROM ENGINE 982 035996-036325 983 039156-039611 [033] UP TO ENGINE 985 22/62 036216 986 12/52 042146 986 22/62 042831</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000931008251" title="Клик — скопировать">N 000931 008251</td><td>Винт (SCREW)</td><td>3</td><td>CYLINDERS NOS.4,5,8 [015] FROM ENGINE 982 035996-036325 983 039156-039611 [033] UP TO ENGINE 985 22/62 036216 986 12/52 042146 986 22/62 042831</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N000931008246" title="Клик — скопировать">N 000931 008246</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N304017008028" title="Клик — скопировать">N 304017 008028</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>ЦИЛИНДР №1 [015] FROM ENGINE 982 035996-036325 983 039156-039611 [033] UP TO ENGINE 985 22/62 036216 986 12/52 042146 986 22/62 042831</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>Шайба</td><td>16</td><td>8 MM [006] UP TO ENGINE 982 014897 983 003900</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1169901440" title="Клик — скопировать">A 116 990 14 40</td><td>ШАЙБА</td><td>16</td><td>[007] FROM ENGINE 982 014898 983 003901</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка (NUT)</td><td>16</td><td>M8 [013] ДО ДВИГ. [014] FROM ENGINE 982 036326 983 039612</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка (NUT)</td><td>8</td><td>M8 [015] FROM ENGINE 982 035996-036325 983 039156-039611</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1161421120" title="Клик — скопировать">A 116 142 11 20</td><td>ЭКРАН (SCREENING PLATE)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N000933006086" title="Клик — скопировать">N 000933 006086</td><td>Винт</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (WASHER)</td><td>4</td><td>6 MM</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 27 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

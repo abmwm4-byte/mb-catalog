@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201105" title="Клик — скопировать">A 107 620 11 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201705" title="Клик — скопировать">A 107 620 17 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202305" title="Клик — скопировать">A 107 620 23 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202705" title="Клик — скопировать">A 107 620 27 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203305" title="Клик — скопировать">A 107 620 33 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203705" title="Клик — скопировать">A 107 620 37 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204305" title="Клик — скопировать">A 107 620 43 05</td><td>Передняя часть кузова</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200805" title="Клик — скопировать">A 107 620 08 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201805" title="Клик — скопировать">A 107 620 18 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202405" title="Клик — скопировать">A 107 620 24 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202805" title="Клик — скопировать">A 107 620 28 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203205" title="Клик — скопировать">A 107 620 32 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203805" title="Клик — скопировать">A 107 620 38 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204405" title="Клик — скопировать">A 107 620 44 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201105" title="Клик — скопировать">A 107 620 11 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201705" title="Клик — скопировать">A 107 620 17 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево [030] ORDER ADDITIONALLY FOR MODELS 023,024,043,044:2X 123 240 10 48; 1X 116 223 46 04; 1X 116 223 47 04; 2X 107 241 08 34 022,042:2X 123 240 10 48; 1X 180 223 38 04; 1X 180 223 39 04; 1X 107 241 03 84;1X 107 241 09 34</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202305" title="Клик — скопировать">A 107 620 23 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево [026] EXHAUST STOCK OF OLD PARTS NUMBER FIRST ONMODEL 022,023,024,042,043,044</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202705" title="Клик — скопировать">A 107 620 27 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево [036] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ 022 008312 024 030180 042 007853 044 062307</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203305" title="Клик — скопировать">A 107 620 33 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево [043] FROM CHASSIS 022 009513 025 001633 026 002265 042 009827 045 003038 046 000478 [060] UP TO CHASSIS 042 013514 045 016366 046 001820</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203705" title="Клик — скопировать">A 107 620 37 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Влево [061] FROM CHASSIS 042 013515 045 016367 046 001821</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204305" title="Клик — скопировать">A 107 620 43 05</td><td>Передняя часть кузова</td><td>1</td><td>Рулевое управление: Влево [061] FROM CHASSIS 042 013515 045 016367 046 001821</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200805" title="Клик — скопировать">A 107 620 08 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076201805" title="Клик — скопировать">A 107 620 18 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо [030] ORDER ADDITIONALLY FOR MODELS 023,024,043,044:2X 123 240 10 48; 1X 116 223 46 04; 1X 116 223 47 04; 2X 107 241 08 34 022,042:2X 123 240 10 48; 1X 180 223 38 04; 1X 180 223 39 04; 1X 107 241 03 84;1X 107 241 09 34</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202405" title="Клик — скопировать">A 107 620 24 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо [026] EXHAUST STOCK OF OLD PARTS NUMBER FIRST ONMODEL 022,023,024,042,043,044</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076202805" title="Клик — скопировать">A 107 620 28 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо [036] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ 022 008312 024 030180 042 007853 044 062307</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203205" title="Клик — скопировать">A 107 620 32 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо [060] UP TO CHASSIS 042 013514 045 016366 046 001820</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076203805" title="Клик — скопировать">A 107 620 38 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076204405" title="Клик — скопировать">A 107 620 44 05</td><td>ПЕРЕДНЯЯ ЧАСТЬ КУЗОВА</td><td>1</td><td>Рулевое управление: Вправо [061] FROM CHASSIS 042 013515 045 016367 046 001821</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 14 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

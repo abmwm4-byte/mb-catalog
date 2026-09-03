@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076891091" title="Клик — скопировать">A 107 689 10 91</td><td>ВЕЩЕВОЙ ЯЩИК</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076891691" title="Клик — скопировать">A 107 689 16 91</td><td>Корпус перчаточного ящика</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076800198" title="Клик — скопировать">A 107 680 01 98</td><td>Крышка</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076890183" title="Клик — скопировать">A 107 689 01 83</td><td>Крышка</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N007982003201" title="Клик — скопировать">N 007982 003201</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076890052" title="Клик — скопировать">A 107 689 00 52</td><td>Петля</td><td>2</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1159940145" title="Клик — скопировать">A 115 994 01 45</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>HINGE TO INSTRUMENT PANEL</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N007981004219" title="Клик — скопировать">N 007981 004219</td><td>Шуруп</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>Шуруп</td><td>4</td><td>HINGE TO INSTRUMENT PANEL; MBN 10169 4.2 X 13</td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000125004311" title="Клик — скопировать">N 000125 004311</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000125004319" title="Клик — скопировать">N 000125 004319</td><td>Шайба</td><td>4</td><td>HINGE TO INSTRUMENT PANEL</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000546005000" title="Клик — скопировать">N 000546 005000</td><td>Гайка</td><td>2</td><td>ПЕТЛЯ НА КРЫШКЕ ВЕЩ.ЯЩИКА</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>2</td><td>ПЕТЛЯ НА КРЫШКЕ ВЕЩ.ЯЩИКА</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076891108" title="Клик — скопировать">A 107 689 11 08</td><td>Крышка</td><td>1</td><td>ВЕЩЕВОЙ ЯЩИК</td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1239900092" title="Клик — скопировать">A 123 990 00 92</td><td>Распорная заклепка</td><td>4</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076801684" title="Клик — скопировать">A 107 680 16 84</td><td>Крышка</td><td>1</td><td>С КЛЮЧЕМ</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076801584" title="Клик — скопировать">A 107 680 15 84</td><td>- Крышка</td><td>1</td><td>БЕЗ КЛЮЧА</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N007988004103" title="Клик — скопировать">N 007988 004103</td><td>БОЛТ</td><td>4</td><td>КРЫШКА ВЕЩЕВОГО ЯЩИКА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1076890134" title="Клик — скопировать">A 107 689 01 34</td><td>Нажимная пружина</td><td>1</td><td></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1076890058" title="Клик — скопировать">A 107 689 00 58</td><td>Кнопка</td><td>1</td><td></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1076890025" title="Клик — скопировать">A 107 689 00 25</td><td>Защелка замка</td><td>1</td><td></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1079940145" title="Клик — скопировать">A 107 994 01 45</td><td>гайка</td><td>1</td><td></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N007982004203" title="Клик — скопировать">N 007982 004203</td><td>Шуруп</td><td>2</td><td>4.2X13</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076890187" title="Клик — скопировать">A 107 689 01 87</td><td>Упор</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076890287" title="Клик — скопировать">A 107 689 02 87</td><td>Упор</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N000923004015" title="Клик — скопировать">N 000923 004015</td><td>Винт</td><td>2</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>99</td><td>ГЛАВН.КЛЮЧ СМ.ГРУППУ 72</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076891091" title="Клик — скопировать">A 107 689 10 91</td><td>ВЕЩЕВОЙ ЯЩИК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076891691" title="Клик — скопировать">A 107 689 16 91</td><td>Корпус перчаточного ящика</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076800198" title="Клик — скопировать">A 107 680 01 98</td><td>Крышка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076890183" title="Клик — скопировать">A 107 689 01 83</td><td>Крышка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N007982003201" title="Клик — скопировать">N 007982 003201</td><td>Шуруп</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076890052" title="Клик — скопировать">A 107 689 00 52</td><td>Петля</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1159940145" title="Клик — скопировать">A 115 994 01 45</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>HINGE TO INSTRUMENT PANEL</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N007981004219" title="Клик — скопировать">N 007981 004219</td><td>Шуруп</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>Шуруп</td><td>4</td><td>HINGE TO INSTRUMENT PANEL; MBN 10169 4.2 X 13</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000125004311" title="Клик — скопировать">N 000125 004311</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000125004319" title="Клик — скопировать">N 000125 004319</td><td>Шайба</td><td>4</td><td>HINGE TO INSTRUMENT PANEL</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000546005000" title="Клик — скопировать">N 000546 005000</td><td>Гайка</td><td>2</td><td>ПЕТЛЯ НА КРЫШКЕ ВЕЩ.ЯЩИКА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>2</td><td>ПЕТЛЯ НА КРЫШКЕ ВЕЩ.ЯЩИКА</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076891108" title="Клик — скопировать">A 107 689 11 08</td><td>Крышка</td><td>1</td><td>ВЕЩЕВОЙ ЯЩИК</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1239900092" title="Клик — скопировать">A 123 990 00 92</td><td>Распорная заклепка</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076801684" title="Клик — скопировать">A 107 680 16 84</td><td>Крышка</td><td>1</td><td>С КЛЮЧЕМ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076801584" title="Клик — скопировать">A 107 680 15 84</td><td>- Крышка</td><td>1</td><td>БЕЗ КЛЮЧА</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N007988004103" title="Клик — скопировать">N 007988 004103</td><td>БОЛТ</td><td>4</td><td>КРЫШКА ВЕЩЕВОГО ЯЩИКА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1076890134" title="Клик — скопировать">A 107 689 01 34</td><td>Нажимная пружина</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1076890058" title="Клик — скопировать">A 107 689 00 58</td><td>Кнопка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1076890025" title="Клик — скопировать">A 107 689 00 25</td><td>Защелка замка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1079940145" title="Клик — скопировать">A 107 994 01 45</td><td>гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N007982004203" title="Клик — скопировать">N 007982 004203</td><td>Шуруп</td><td>2</td><td>4.2X13</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076890187" title="Клик — скопировать">A 107 689 01 87</td><td>Упор</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076890287" title="Клик — скопировать">A 107 689 02 87</td><td>Упор</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N000923004015" title="Клик — скопировать">N 000923 004015</td><td>Винт</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>99</td><td>ГЛАВН.КЛЮЧ СМ.ГРУППУ 72</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 28 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

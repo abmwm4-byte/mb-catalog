@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>81 APPOINTMENTS / Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114062">028 -/-</a> → Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</div>
+<h1>Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_S05621800001.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1158100451" title="Клик — скопировать">A 115 810 04 51</td><td>ПОРУЧЕНЬ</td><td>1</td><td>Z  56.218/01 [800] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/79 123.000,023 157706 EXCEPT FOR 144100,  147196,  147780,  147785,  148473,  148483,  149826,  150547,  152057,  152059,  152062,  154612,  156255,  156340, 156343,  156366,  156482,  156502,  156518,  156532,  156541,  156643,  157389,  157411,  157413,  157416,  157419,  157422, 157425-  157427,  157429,  157430,  157433-  157435,  157437-  157439,  157441,  157443-  157445,  157448,  157451-  157454, 157456,  157458,  157461,  157463,  157464,  157468,  157470,  157471,  157473-  157475,  157477-  157479,  157481,  157482, 157484-  157486,  157488-  157501,  157504-  157511,  157513-  157519,  157521-  157597,  157599,  157600,  157602-  157604, 157606-  157609,  157611-  157613,  157615-  157620,  157622,  157624,  157625,  157627-  157705. 123.026 079146 EXCEPT FOR 074658,  074659,  074757,  075440,  075442,  075447,  075640,  075741,  075750,  075841,  075844,  076033,  076133-  076137, 076139,  076141,  076230,  076322,  076421,  076570,  076571,  076574,  076633,  076820,  077037-  077040,  077043,  077046, 077098,  077101,  077218,  077221,  077223,  077227,  077527,  077529,  078726,  078728,  078730,  078733,  078735,  078739, 078741-  078745,  078749-  078754,  078756-  078758,  078760-  078770,  078773,  078774,  078776,  078777,  078779,  078784, 078787-  078797,  078799-  078801,  078804,  078806,  078808-  078811,  078813-  078834,  078836-  078852,  078854,  078855, 078857-  078860,  078969-  078975,  078978-  079018,  079020-  079069,  079072,  079074-  079093,  079095,  079097,  079100- 079105,  079107,  079115,  079117-  079119, 079121-  079129,  079131-  079144. 123.033 063898 EXCEPT FOR 055239,  058241,  059300,  060116,  060962,  061638,  061696,  061807,  062286,  062350,  062935,  062964,  063285,  063290, 063503,  063760,  063779,  063794,  063799,  063802,  063803,  063808,  063813,  063815-  063819,  063828-  063830,  063835, 063841,  063845,  063851,  063854,  063856,  063858,  063861,  063864,  063865,  063867,  063870,  063871,  063874-  063878, 063881,  063886,  063889-  063892,  063894,  063896,  063897. 123.093     004376 EXCEPT FOR 003196,  003355,  003552,  003818,  003865,  004180,  004186-  004202,  004204,  004207-  004220,  004222-  004375. 123.123 149360 EXCEPT FOR 131225,  138661,  139668,  139941,  142621,  143256,  143516,  144274,  144275,  144277,  144302,  144557,  144819,  145496, 146608,  146832,  147929,  148394,  149114,  149115,  149129,  149133,  149134,  149138-  149141,  149143,  149146,  149147, 149150,  149154,  149157,  149159-  149161,  149163,  149164,  149168,  149171-  149175,  149177,  149180-  149183,  149185, 149186,  149188,  149191-  149198,  149200-  149207,  149211-  149219,  149222-  149233,  149235-  149238,  149240-  149247, 149249-  149256,  149258-  149263,  149266-  149285,  149287-  149295,  149297,  149298,  149301-  149313,  149315-  149319, 149322-  149336,  149338-  149340,  149342-  149359. 123.130 164483 EXCEPT FOR 146071,  149572,  156068,  157925,  157931,  157935,  158133,  158138,  158343,  158361,  158511,  158672,  158674,  158680, 158687,  158693,  158847,  158850,  158851,  159152,  159158,  159308,  159316,  159318,  159667,  160005,  160356,  160568, 160732,  160735,  160884,  161050,  161057,  161559,  161729,  161879,  164127,  164144,  164145,  164152,  164154,  164163, 164165,  164169,  164176,  164182,  164184,  164185,  164187,  164189,  164191-  164197,  164199,  164201-  164204,  164206, 164209,  164211-  164213,  164216-  164218,  164223,  164224,  164226,  164227,  164229,  164231-  164238,  164241-  164247, 164249-  164273,  164276-  164280,  164282-  164312,  164314-  164316,  164319-  164321,  164324-  164327,  164330-  164335, 164337-  164349,  164351-  164360, 164363-  164395,  164397-  164406,  164408-  164432,  164434-  164436,  164439-  164441,  164443-  164446,  164448-  164462, 164464-  164466,  164468-  164471,  164473-  164482. КРОМЕ ТОГО УСТАНОВЛЕН НА 164501,164580,165050 123.190 011485 EXCEPT FOR 009485,  009712,  009805,  009893,  009899,  009933,  009986,  010119,  010147,  010150,  010286,  010383,  010401,  010676, 010730,  010736,  011073,  011074,  011076-  011108,  011110-  011116,  011120-  011163,  011167-  011195,  011197-  011333, 011335-  011484.</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1269941345" title="Клик — скопировать">A 126 994 13 45</td><td>предохранитель</td><td>4</td><td>Z  56.218/01</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="N007976004215" title="Клик — скопировать">N 007976 004215</td><td>Шуруп</td><td>4</td><td>4.8X16 Z  56.218/01</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 3 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05621800001.png", "poses": ["5", "10", "15"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  applyRows();
+})();
+</script></body></html>

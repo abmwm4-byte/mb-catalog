@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073240304" title="Клик — скопировать">A 107 324 03 04</td><td>ЗАДНЯЯ ПРУЖИНА (REAR SPRING)</td><td>2</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252244" title="Клик — скопировать">A 115 325 22 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 1  (9,5 MM)</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252344" title="Клик — скопировать">A 115 325 23 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 2  (14 MM)</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252444" title="Клик — скопировать">A 115 325 24 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 3  (19 MM)</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200031" title="Клик — скопировать">A 126 320 00 31</td><td>АМОРТИЗАТОР</td><td>-</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200931" title="Клик — скопировать">A 126 320 09 31</td><td>АМОРТИЗАТОР</td><td>2</td><td>ОБЪЁМ ПОСТАВКИ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1153261668" title="Клик — скопировать">A 115 326 16 68</td><td>- Резиновое кольцо (RUBBER RING)</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1153261768" title="Клик — скопировать">A 115 326 17 68</td><td>- Резиновое кольцо (RUBBER RING)</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1153260176" title="Клик — скопировать">A 115 326 01 76</td><td>- ШАЙБА</td><td>-</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2023260076" title="Клик — скопировать">A 202 326 00 76</td><td>- Диск (WINDOW)</td><td>2</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000934010015" title="Клик — скопировать">N 000934 010015</td><td>- Гайка</td><td>-</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N308673010000" title="Клик — скопировать">N 308673 010000</td><td>- Шестигранная гайка (HEXAGON NUT)</td><td>4</td><td>АМОРТИЗАТОР К РАМЕ; M10X1</td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1153520171" title="Клик — скопировать">A 115 352 01 71</td><td>болт (SCREW)</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1073520676" title="Клик — скопировать">A 107 352 06 76</td><td>Диск (WINDOW)</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1153200056" title="Клик — скопировать">A 115 320 00 56</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1159900099" title="Клик — скопировать">A 115 990 00 99</td><td>Крепежные детали (FASTENING PARTS)</td><td>2</td><td>КРЕПЛЕНИЕ АМОРТИЗАТ. СЗАДИ</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1153200344" title="Клик — скопировать">A 115 320 03 44</td><td>Резиновый буфер (RUBBER BUMPER)</td><td>2</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008009" title="Клик — скопировать">N 000912 008009</td><td>Винт</td><td>-</td><td>M8X20\-8.8</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008200" title="Клик — скопировать">N 000912 008200</td><td>Цилиндрич. винт</td><td>-</td><td>M 8X20\-8.8</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008219" title="Клик — скопировать">N 000912 008219</td><td>Цилиндрич. винт (CAP SCREW)</td><td>2</td><td>БУФЕР НА РАМЕ; M8X20</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>2</td><td>БУФЕР НА РАМЕ</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073240304" title="Клик — скопировать">A 107 324 03 04</td><td>ЗАДНЯЯ ПРУЖИНА (REAR SPRING)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252244" title="Клик — скопировать">A 115 325 22 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 1  (9,5 MM)</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252344" title="Клик — скопировать">A 115 325 23 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 2  (14 MM)</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252444" title="Клик — скопировать">A 115 325 24 44</td><td>Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 3  (19 MM)</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200031" title="Клик — скопировать">A 126 320 00 31</td><td>АМОРТИЗАТОР</td><td>-</td><td>[408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200931" title="Клик — скопировать">A 126 320 09 31</td><td>АМОРТИЗАТОР</td><td>2</td><td>ОБЪЁМ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1153261668" title="Клик — скопировать">A 115 326 16 68</td><td>- Резиновое кольцо (RUBBER RING)</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1153261768" title="Клик — скопировать">A 115 326 17 68</td><td>- Резиновое кольцо (RUBBER RING)</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1153260176" title="Клик — скопировать">A 115 326 01 76</td><td>- ШАЙБА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2023260076" title="Клик — скопировать">A 202 326 00 76</td><td>- Диск (WINDOW)</td><td>2</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000934010015" title="Клик — скопировать">N 000934 010015</td><td>- Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N308673010000" title="Клик — скопировать">N 308673 010000</td><td>- Шестигранная гайка (HEXAGON NUT)</td><td>4</td><td>АМОРТИЗАТОР К РАМЕ; M10X1</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1153520171" title="Клик — скопировать">A 115 352 01 71</td><td>болт (SCREW)</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1073520676" title="Клик — скопировать">A 107 352 06 76</td><td>Диск (WINDOW)</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1153200056" title="Клик — скопировать">A 115 320 00 56</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1159900099" title="Клик — скопировать">A 115 990 00 99</td><td>Крепежные детали (FASTENING PARTS)</td><td>2</td><td>КРЕПЛЕНИЕ АМОРТИЗАТ. СЗАДИ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1153200344" title="Клик — скопировать">A 115 320 03 44</td><td>Резиновый буфер (RUBBER BUMPER)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008009" title="Клик — скопировать">N 000912 008009</td><td>Винт</td><td>-</td><td>M8X20\-8.8</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008200" title="Клик — скопировать">N 000912 008200</td><td>Цилиндрич. винт</td><td>-</td><td>M 8X20\-8.8</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008219" title="Клик — скопировать">N 000912 008219</td><td>Цилиндрич. винт (CAP SCREW)</td><td>2</td><td>БУФЕР НА РАМЕ; M8X20</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>2</td><td>БУФЕР НА РАМЕ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

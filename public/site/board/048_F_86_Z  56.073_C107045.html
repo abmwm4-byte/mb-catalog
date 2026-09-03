@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008600680" title="Клик — скопировать">A 000 860 06 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008601180" title="Клик — скопировать">A 000 860 11 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>-</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008602280" title="Клик — скопировать">A 000 860 22 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1078680612" title="Клик — скопировать">A 107 868 06 12</td><td>УГОЛ</td><td>1</td><td></td></tr><tr data-pos="69"><td>69</td><td class="pn" data-raw="A1078680212" title="Клик — скопировать">A 107 868 02 12</td><td>УГОЛ</td><td>2</td><td></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1078680412" title="Клик — скопировать">A 107 868 04 12</td><td>УГОЛ</td><td>1</td><td></td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="N007981004261" title="Клик — скопировать">N 007981 004261</td><td>Шуруп</td><td>5</td><td>КРОНШТЕЙН НА ПОДУШКЕ СИДЕНЬЯ</td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="A0008600014" title="Клик — скопировать">A 000 860 00 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1248600014" title="Клик — скопировать">A 124 860 00 14</td><td>ДЕРЖАТЕЛЬ (HOLDER)</td><td>1</td><td></td></tr><tr data-pos="159"><td>159</td><td class="pn" data-raw="A3019900042" title="Клик — скопировать">A 301 990 00 42</td><td>Диск (WINDOW)</td><td>2</td><td>КРОНШТЕЙН К УГЛОВОМУ КРОНШТЕЙНУ</td></tr><tr data-pos="163"><td>163</td><td class="pn" data-raw="N007987004145" title="Клик — скопировать">N 007987 004145</td><td>БОЛТ</td><td>2</td><td></td></tr><tr data-pos="169"><td>169</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>2</td><td></td></tr><tr data-pos="189"><td>189</td><td class="pn" data-raw="N007983004333" title="Клик — скопировать">N 007983 004333</td><td>Шуруп</td><td>2</td><td></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="A0019942845" title="Клик — скопировать">A 001 994 28 45</td><td>Пружинная гайка (CLIP-TYPE NUT)</td><td>2</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008600680" title="Клик — скопировать">A 000 860 06 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>-</td><td>Z  56.073/03 [021] UP TO CHASSIS 107.022 009152 107.025 000695 107.026 002046 107.042 009247 108.045 000770 107.046 003308 107.023,024 UNTIL PRODUCTION STOP 107.043,044 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008601180" title="Клик — скопировать">A 000 860 11 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>-</td><td>Z  56.073/02, Z  56.073/03, Z  56.073/05, Z  56.073/06, Z  56.073/07, Z  56.073/09, Z  56.073/10 [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008602280" title="Клик — скопировать">A 000 860 22 80</td><td>ОГНЕТУШИТЕЛЬ</td><td>1</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1078680612" title="Клик — скопировать">A 107 868 06 12</td><td>УГОЛ</td><td>1</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="69"><td>69</td><td class="pn" data-raw="A1078680212" title="Клик — скопировать">A 107 868 02 12</td><td>УГОЛ</td><td>2</td><td>Z  56.073/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [021] UP TO CHASSIS 107.022 009152 107.025 000695 107.026 002046 107.042 009247 108.045 000770 107.046 003308 107.023,024 UNTIL PRODUCTION STOP 107.043,044 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1078680412" title="Клик — скопировать">A 107 868 04 12</td><td>УГОЛ</td><td>1</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="N007981004261" title="Клик — скопировать">N 007981 004261</td><td>Шуруп</td><td>5</td><td>КРОНШТЕЙН НА ПОДУШКЕ СИДЕНЬЯ Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>2</td><td>Z  56.073/03</td><td class="restr"></td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="A0008600014" title="Клик — скопировать">A 000 860 00 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>Z  56.073/02, Z  56.073/03, Z  56.073/04, Z  56.073/05, Z  56.073/06, Z  56.073/07, Z  56.073/08, Z  56.073/09, Z  56.073/10 [019] UP TO CHASSIS 100.012,014,015,016 002621 116.020             121750 116.024,025         156215 116.028,029         055167 116.032,033         099613 116.036             007290 123.020         136906 123.000,023     173191 123.003,026,028 085923 123.030         028655 123.007,033     069712 123.043         017296 123.050         003599 123.053         018614 123.083             006081 123.086             004621 123.093             005619 123.102,103,123 125 168924 123.120             197028 123.105,130,132     181525 123.183             010014 123.190             015183 123.126             UNTIL PRODUCTION STOP [021] UP TO CHASSIS 107.022 009152 107.025 000695 107.026 002046 107.042 009247 108.045 000770 107.046 003308 107.023,024 UNTIL PRODUCTION STOP 107.043,044 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1248600014" title="Клик — скопировать">A 124 860 00 14</td><td>ДЕРЖАТЕЛЬ (HOLDER)</td><td>1</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="159"><td>159</td><td class="pn" data-raw="A3019900042" title="Клик — скопировать">A 301 990 00 42</td><td>Диск (WINDOW)</td><td>2</td><td>КРОНШТЕЙН К УГЛОВОМУ КРОНШТЕЙНУ Z  56.073/02, Z  56.073/03, Z  56.073/04, Z  56.073/05, Z  56.073/06, Z  56.073/07, Z  56.073/08, Z  56.073/09, Z  56.073/10</td><td class="restr"></td></tr><tr data-pos="163"><td>163</td><td class="pn" data-raw="N007987004145" title="Клик — скопировать">N 007987 004145</td><td>БОЛТ</td><td>2</td><td>Z  56.073/03</td><td class="restr"></td></tr><tr data-pos="169"><td>169</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>2</td><td>Z  56.073/02, Z  56.073/03, Z  56.073/04, Z  56.073/05, Z  56.073/06, Z  56.073/07, Z  56.073/08, Z  56.073/09, Z  56.073/10</td><td class="restr"></td></tr><tr data-pos="189"><td>189</td><td class="pn" data-raw="N007983004333" title="Клик — скопировать">N 007983 004333</td><td>Шуруп</td><td>2</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="A0019942845" title="Клик — скопировать">A 001 994 28 45</td><td>Пружинная гайка (CLIP-TYPE NUT)</td><td>2</td><td>Z  56.073/03 [022] FROM CHASSIS 107.022 009153 107.025 000696 107.026 002047 107.042 009248 107.045 000771 107.046 003309</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 15 · подписано на схемах: 15 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

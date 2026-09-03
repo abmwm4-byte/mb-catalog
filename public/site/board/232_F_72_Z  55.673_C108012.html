@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1157200235" title="Клик — скопировать">A 115 720 02 35</td><td>ЗАМОК</td><td>1</td><td>с  INTERIOR LOCKING MECHANISM,RIGHT</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1157200435" title="Клик — скопировать">A 115 720 04 35</td><td>ЗАМОК</td><td>1</td><td>СПРАВА,БЕЗ ФИКСИР.БЛОКИР.</td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1087200292" title="Клик — скопировать">A 108 720 02 92</td><td>ТЯГА</td><td>-</td><td></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1087230269" title="Клик — скопировать">A 108 723 02 69</td><td>ПРИВОДНАЯ ШТАНГА</td><td>2</td><td>(FRONT DOOR)</td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1157200204" title="Клик — скопировать">A 115 720 02 04</td><td>ПЕТЛЯ</td><td>-</td><td></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1157200604" title="Клик — скопировать">A 115 720 06 04</td><td>Скоба замка</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1087601159" title="Клик — скопировать">A 108 760 11 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>БЕЗ КЛЮЧА,СЛЕВА</td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1157300862" title="Клик — скопировать">A 115 730 08 62</td><td>Обшивка</td><td>1</td><td>СПРАВА,БЕЗ ФИКСИР.БЛОКИР.</td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1087300392" title="Клик — скопировать">A 108 730 03 92</td><td>ПРИВОДНАЯ ШТАНГА</td><td>-</td><td></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1087300592" title="Клик — скопировать">A 108 730 05 92</td><td>ПРИВОДНАЯ ШТАНГА</td><td>2</td><td>ЗАДНЯЯ ДВЕРЬ</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1157200204" title="Клик — скопировать">A 115 720 02 04</td><td>ПЕТЛЯ</td><td>-</td><td></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1157200604" title="Клик — скопировать">A 115 720 06 04</td><td>Скоба замка</td><td>1</td><td>ЗАДНЯЯ ПРАВАЯ ДВЕРЬ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200135" title="Клик — скопировать">A 115 720 01 35</td><td>ЗАМОК</td><td>1</td><td>с  INTERIOR LOCKING MECHANISM,LEFT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200335" title="Клик — скопировать">A 115 720 03 35</td><td>ЗАМОК</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР.</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007988006124" title="Клик — скопировать">N 007988 006124</td><td>БОЛТ</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200104" title="Клик — скопировать">A 115 720 01 04</td><td>ПЕТЛЯ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200504" title="Клик — скопировать">A 115 720 05 04</td><td>Скоба замка</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601559" title="Клик — скопировать">A 108 760 15 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>С КЛЮЧОМ,СЛЕВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601659" title="Клик — скопировать">A 108 760 16 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>С КЛЮЧОМ,СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601259" title="Клик — скопировать">A 108 760 12 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>БЕЗ КЛЮЧА,СПРАВА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157300762" title="Клик — скопировать">A 115 730 07 62</td><td>Обшивка</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР.</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157301735" title="Клик — скопировать">A 115 730 17 35</td><td>ЗАМОК ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157302135" title="Клик — скопировать">A 115 730 21 35</td><td>ЗАМОК ДВЕРИ</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР.</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157301835" title="Клик — скопировать">A 115 730 18 35</td><td>ЗАМОК ДВЕРИ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157302235" title="Клик — скопировать">A 115 730 22 35</td><td>ЗАМОК ДВЕРИ</td><td>1</td><td>RIGHT(LESS INTERIOR LOCKING MECHANISM,AT REAR DOOR</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007988006124" title="Клик — скопировать">N 007988 006124</td><td>БОЛТ</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200104" title="Клик — скопировать">A 115 720 01 04</td><td>ПЕТЛЯ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200504" title="Клик — скопировать">A 115 720 05 04</td><td>Скоба замка</td><td>1</td><td>ЗАДНЯЯ ЛЕВАЯ ДВЕРЬ</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1157200235" title="Клик — скопировать">A 115 720 02 35</td><td>ЗАМОК</td><td>1</td><td>с  INTERIOR LOCKING MECHANISM,RIGHT Рулевое управление: Вправо Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1157200435" title="Клик — скопировать">A 115 720 04 35</td><td>ЗАМОК</td><td>1</td><td>СПРАВА,БЕЗ ФИКСИР.БЛОКИР. Рулевое управление: Влево Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1087200292" title="Клик — скопировать">A 108 720 02 92</td><td>ТЯГА</td><td>-</td><td>Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1087230269" title="Клик — скопировать">A 108 723 02 69</td><td>ПРИВОДНАЯ ШТАНГА</td><td>2</td><td>(FRONT DOOR) Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1157200204" title="Клик — скопировать">A 115 720 02 04</td><td>ПЕТЛЯ</td><td>-</td><td>Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1157200604" title="Клик — скопировать">A 115 720 06 04</td><td>Скоба замка</td><td>1</td><td>СПРАВА Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1087601159" title="Клик — скопировать">A 108 760 11 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>БЕЗ КЛЮЧА,СЛЕВА Z  55.673/01 [407] ПРИ ЗАКАЗЕ УКАЗАТЬ НОМЕР КОМПЛЕКТА ЗАМКОВ</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1157300862" title="Клик — скопировать">A 115 730 08 62</td><td>Обшивка</td><td>1</td><td>СПРАВА,БЕЗ ФИКСИР.БЛОКИР. Z  55.673/01 [006] UP TO CHASSIS: 108.012 10/50,12/52 068089 108.012 20/50,22/62 067637</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1087300392" title="Клик — скопировать">A 108 730 03 92</td><td>ПРИВОДНАЯ ШТАНГА</td><td>-</td><td>Z  55.673/01 [004] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 108.012 053398 108.014 042066 108.015 002589</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1087300592" title="Клик — скопировать">A 108 730 05 92</td><td>ПРИВОДНАЯ ШТАНГА</td><td>2</td><td>ЗАДНЯЯ ДВЕРЬ Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1157200204" title="Клик — скопировать">A 115 720 02 04</td><td>ПЕТЛЯ</td><td>-</td><td>Z  55.673/01</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1157200604" title="Клик — скопировать">A 115 720 06 04</td><td>Скоба замка</td><td>1</td><td>ЗАДНЯЯ ПРАВАЯ ДВЕРЬ Z  55.673/01</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200135" title="Клик — скопировать">A 115 720 01 35</td><td>ЗАМОК</td><td>1</td><td>с  INTERIOR LOCKING MECHANISM,LEFT Рулевое управление: Влево Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200335" title="Клик — скопировать">A 115 720 03 35</td><td>ЗАМОК</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР. Рулевое управление: Вправо Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007988006124" title="Клик — скопировать">N 007988 006124</td><td>БОЛТ</td><td>4</td><td>Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200104" title="Клик — скопировать">A 115 720 01 04</td><td>ПЕТЛЯ</td><td>-</td><td>Z  55.673/01</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200504" title="Клик — скопировать">A 115 720 05 04</td><td>Скоба замка</td><td>1</td><td>СЛЕВА Z  55.673/01, Z  55.673/02, Z  55.673/03, Z  55.673/04, Z  55.673/05, Z  55.673/06, Z  55.673/07, Z  55.673/09, Z  55.673/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601559" title="Клик — скопировать">A 108 760 15 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>С КЛЮЧОМ,СЛЕВА Z  55.673/01 [021] WITH LOCK NUMBER UNDEFINED,FOR STORAGE PURPOSES ONLY</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601659" title="Клик — скопировать">A 108 760 16 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>С КЛЮЧОМ,СПРАВА Z  55.673/01 [021] WITH LOCK NUMBER UNDEFINED,FOR STORAGE PURPOSES ONLY</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1087601259" title="Клик — скопировать">A 108 760 12 59</td><td>РУЧКА ДВЕРИ</td><td>1</td><td>БЕЗ КЛЮЧА,СПРАВА Z  55.673/01 [407] ПРИ ЗАКАЗЕ УКАЗАТЬ НОМЕР КОМПЛЕКТА ЗАМКОВ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157300762" title="Клик — скопировать">A 115 730 07 62</td><td>Обшивка</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР. Z  55.673/01</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157301735" title="Клик — скопировать">A 115 730 17 35</td><td>ЗАМОК ДВЕРИ</td><td>-</td><td>Z  55.673/07 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157302135" title="Клик — скопировать">A 115 730 21 35</td><td>ЗАМОК ДВЕРИ</td><td>1</td><td>СЛЕВА,БЕЗ ПРЕДОХРАНИТ.БЛОКИР. Z  55.673/07, Z  55.673/09, Z  55.673/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157301835" title="Клик — скопировать">A 115 730 18 35</td><td>ЗАМОК ДВЕРИ</td><td>-</td><td>Z  55.673/07 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157302235" title="Клик — скопировать">A 115 730 22 35</td><td>ЗАМОК ДВЕРИ</td><td>1</td><td>RIGHT(LESS INTERIOR LOCKING MECHANISM,AT REAR DOOR Z  55.673/07, Z  55.673/09, Z  55.673/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007988006124" title="Клик — скопировать">N 007988 006124</td><td>БОЛТ</td><td>4</td><td>Z  55.673/01, Z  55.673/02, Z  55.673/03</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200104" title="Клик — скопировать">A 115 720 01 04</td><td>ПЕТЛЯ</td><td>-</td><td>Z  55.673/01</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1157200504" title="Клик — скопировать">A 115 720 05 04</td><td>Скоба замка</td><td>1</td><td>ЗАДНЯЯ ЛЕВАЯ ДВЕРЬ Z  55.673/01</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 28 · подписано на схемах: 12 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

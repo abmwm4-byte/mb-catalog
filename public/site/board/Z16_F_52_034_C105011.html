@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1803300083" title="Клик — скопировать">A 180 330 00 83</td><td>SLIDING PROTECTION,</td><td>1</td><td>FRONT TOWING CLAMP для  SUB\-FRAME, OIL PAN</td></tr><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1803310075" title="Клик — скопировать">A 180 331 00 75</td><td>SHACKLE</td><td>1</td><td>для  SLIDING PROTECTION AT SUB\-FRAME, FRONT</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1203300056" title="Клик — скопировать">A 120 330 00 56</td><td>LOCKING COVER, LATERAL</td><td>2</td><td>для  UNDERPAN, SUB\-FRAME</td></tr><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1203310175" title="Клик — скопировать">A 120 331 01 75</td><td>MOUNTING SHACKLE</td><td>2</td><td>для  COVER, LATERAL AT SUB\-FRAME</td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A1805240433" title="Клик — скопировать">A 180 524 04 33</td><td>COVER PLATE, LEFT</td><td>1</td><td>для  UNDERPAN BETWEEN FRONT CROSS TUBE AND SUBFRAME</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1805240333" title="Клик — скопировать">A 180 524 03 33</td><td>COVER PLATE, RIGHT</td><td>1</td><td>для  UNDERPAN BETWEEN FRONT CROSS TUBE AND SUBFRAME</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1205240212" title="Клик — скопировать">A 120 524 02 12</td><td>REINFORCEMENT PLATE</td><td>6</td><td>IS WELDED с  FRAME для  UNDERPAN AT FORKED SUPPORT TO 180 520 01 75 180 520 02 75 180 520 07 75 180 520 08 75</td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A1803500383" title="Клик — скопировать">A 180 350 03 83</td><td>UNDERPAN</td><td>1</td><td>для  REAR AXLE HOUSING</td></tr><tr data-pos="18a"><td>18a</td><td class="pn" data-raw="A0009876540" title="Клик — скопировать">A 000 987 65 40</td><td>	- РЕЗИНОВЫЙ УПОР</td><td>1</td><td></td></tr><tr data-pos="22" data-ch-from="8503453"><td>22</td><td class="pn" data-raw="A1803511540" title="Клик — скопировать">A 180 351 15 40</td><td>SUPPORT, REAR</td><td>1</td><td>для  UNDERPAN, REAR AXLE HOUSING с шасси 8503453 <span class="tag-r">с шасси 8503453</span></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1203500483" title="Клик — скопировать">A 120 350 04 83</td><td>UNDERPAN</td><td>2</td><td>для  THRUST ARM SUSPENSION AT BODY FLOOR</td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1804760446" title="Клик — скопировать">A 180 476 04 46</td><td>PROTECTIVE RAIL</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE SEE ALSO GROUP 47</td></tr><tr data-pos="35a"><td>35a</td><td class="pn" data-raw="A1204760846" title="Клик — скопировать">A 120 476 08 46</td><td>PROTECTIVE RAIL, FRONT</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE</td></tr><tr data-pos="35b"><td>35b</td><td class="pn" data-raw="A1804700148" title="Клик — скопировать">A 180 470 01 48</td><td>PROTECTIVE RAIL, REAR</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE</td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1363100008" title="Клик — скопировать">A 136 310 00 08</td><td>DRAW HOOK, FRONT AND REAR</td><td>2</td><td></td></tr><tr data-pos="46"><td>46</td><td class="pn" data-raw="A0009974182" title="Клик — скопировать">A 000 997 41 82</td><td>ШЛАНГ</td><td>2</td><td>ORDER BY THE METER</td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1203100363" title="Клик — скопировать">A 120 310 03 63</td><td>BASE, REAR LEFT</td><td>1</td><td>для  DRAW HOOK, REAR SCREWED DESIGN</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1203100463" title="Клик — скопировать">A 120 310 04 63</td><td>BASE, REAR RIGHT</td><td>1</td><td>для  DRAW HOOK, REAR SCREWED DESIGN</td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1203150404" title="Клик — скопировать">A 120 315 04 04</td><td>STRUT</td><td>2</td><td>для  BASE AT BODY FLOOR SCREWED DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1805240074" title="Клик — скопировать">A 180 524 00 74</td><td>WELDED BOLT</td><td>6</td><td>TO 180 520 12 75 180 520 13 75</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1805240076" title="Клик — скопировать">A 180 524 00 76</td><td>CERAMIC RING</td><td>6</td><td>для  PROTECTION WHEN WELDING THE BOLTS TO 180 520 12 75 180 520 13 75</td></tr><tr data-pos="" data-ch-to="8503452"><td></td><td class="pn" data-raw="A1803511240" title="Клик — скопировать">A 180 351 12 40</td><td>SUPPORT. REAR</td><td>1</td><td>для  UNDERPAN, REAR AXLE HOUSING до шасси 8503452 <span class="tag-r">до шасси 8503452</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100263" title="Клик — скопировать">A 120 310 02 63</td><td>BASE, REAR</td><td>2</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100157" title="Клик — скопировать">A 120 310 01 57</td><td>STIFFENING ANGLE, LEFT</td><td>1</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100257" title="Клик — скопировать">A 120 310 02 57</td><td>STIFFENING ANGLE, RIGHT</td><td>1</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1803300083" title="Клик — скопировать">A 180 330 00 83</td><td>SLIDING PROTECTION,</td><td>1</td><td>FRONT TOWING CLAMP для  SUB\-FRAME, OIL PAN</td><td class="restr"></td></tr><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1803310075" title="Клик — скопировать">A 180 331 00 75</td><td>SHACKLE</td><td>1</td><td>для  SLIDING PROTECTION AT SUB\-FRAME, FRONT</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1203300056" title="Клик — скопировать">A 120 330 00 56</td><td>LOCKING COVER, LATERAL</td><td>2</td><td>для  UNDERPAN, SUB\-FRAME</td><td class="restr"></td></tr><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1203310175" title="Клик — скопировать">A 120 331 01 75</td><td>MOUNTING SHACKLE</td><td>2</td><td>для  COVER, LATERAL AT SUB\-FRAME</td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A1805240433" title="Клик — скопировать">A 180 524 04 33</td><td>COVER PLATE, LEFT</td><td>1</td><td>для  UNDERPAN BETWEEN FRONT CROSS TUBE AND SUBFRAME</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1805240333" title="Клик — скопировать">A 180 524 03 33</td><td>COVER PLATE, RIGHT</td><td>1</td><td>для  UNDERPAN BETWEEN FRONT CROSS TUBE AND SUBFRAME</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1205240212" title="Клик — скопировать">A 120 524 02 12</td><td>REINFORCEMENT PLATE</td><td>6</td><td>IS WELDED с  FRAME для  UNDERPAN AT FORKED SUPPORT TO 180 520 01 75 180 520 02 75 180 520 07 75 180 520 08 75</td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A1803500383" title="Клик — скопировать">A 180 350 03 83</td><td>UNDERPAN</td><td>1</td><td>для  REAR AXLE HOUSING</td><td class="restr"></td></tr><tr data-pos="18a"><td>18a</td><td class="pn" data-raw="A0009876540" title="Клик — скопировать">A 000 987 65 40</td><td>	- РЕЗИНОВЫЙ УПОР</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="22" data-ch-from="8503453"><td>22</td><td class="pn" data-raw="A1803511540" title="Клик — скопировать">A 180 351 15 40</td><td>SUPPORT, REAR</td><td>1</td><td>для  UNDERPAN, REAR AXLE HOUSING с шасси 8503453 <span class="tag-r">с шасси 8503453</span></td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1203500483" title="Клик — скопировать">A 120 350 04 83</td><td>UNDERPAN</td><td>2</td><td>для  THRUST ARM SUSPENSION AT BODY FLOOR</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1804760446" title="Клик — скопировать">A 180 476 04 46</td><td>PROTECTIVE RAIL</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE SEE ALSO GROUP 47</td><td class="restr"></td></tr><tr data-pos="35a"><td>35a</td><td class="pn" data-raw="A1204760846" title="Клик — скопировать">A 120 476 08 46</td><td>PROTECTIVE RAIL, FRONT</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE</td><td class="restr"></td></tr><tr data-pos="35b"><td>35b</td><td class="pn" data-raw="A1804700148" title="Клик — скопировать">A 180 470 01 48</td><td>PROTECTIVE RAIL, REAR</td><td>1</td><td>для  FUEL PIPE AND BRAKE PIPE</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1363100008" title="Клик — скопировать">A 136 310 00 08</td><td>DRAW HOOK, FRONT AND REAR</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="46"><td>46</td><td class="pn" data-raw="A0009974182" title="Клик — скопировать">A 000 997 41 82</td><td>ШЛАНГ</td><td>2</td><td>ORDER BY THE METER</td><td class="restr"></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1203100363" title="Клик — скопировать">A 120 310 03 63</td><td>BASE, REAR LEFT</td><td>1</td><td>для  DRAW HOOK, REAR SCREWED DESIGN</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1203100463" title="Клик — скопировать">A 120 310 04 63</td><td>BASE, REAR RIGHT</td><td>1</td><td>для  DRAW HOOK, REAR SCREWED DESIGN</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1203150404" title="Клик — скопировать">A 120 315 04 04</td><td>STRUT</td><td>2</td><td>для  BASE AT BODY FLOOR SCREWED DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1805240074" title="Клик — скопировать">A 180 524 00 74</td><td>WELDED BOLT</td><td>6</td><td>TO 180 520 12 75 180 520 13 75</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1805240076" title="Клик — скопировать">A 180 524 00 76</td><td>CERAMIC RING</td><td>6</td><td>для  PROTECTION WHEN WELDING THE BOLTS TO 180 520 12 75 180 520 13 75</td><td class="restr"></td></tr><tr data-pos="" data-ch-to="8503452"><td></td><td class="pn" data-raw="A1803511240" title="Клик — скопировать">A 180 351 12 40</td><td>SUPPORT. REAR</td><td>1</td><td>для  UNDERPAN, REAR AXLE HOUSING до шасси 8503452 <span class="tag-r">до шасси 8503452</span></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100263" title="Клик — скопировать">A 120 310 02 63</td><td>BASE, REAR</td><td>2</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100157" title="Клик — скопировать">A 120 310 01 57</td><td>STIFFENING ANGLE, LEFT</td><td>1</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1203100257" title="Клик — скопировать">A 120 310 02 57</td><td>STIFFENING ANGLE, RIGHT</td><td>1</td><td>для  DRAW HOOK, REAR WELDED DESIGN</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 25 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

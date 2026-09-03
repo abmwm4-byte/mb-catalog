@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1158200661" title="Клик — скопировать">A 115 820 06 61</td><td>Модуль освещения</td><td>2</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1158260289" title="Клик — скопировать">A 115 826 02 89</td><td>ОБОДОК КРЫШКИ</td><td>-</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1158260189" title="Клик — скопировать">A 115 826 01 89</td><td>ОБОДОК КРЫШКИ</td><td>2</td><td>с  LAMP SOCKET</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008268289" title="Клик — скопировать">A 000 826 82 89</td><td>- Кольцо крышки</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260012" title="Клик — скопировать">A 115 826 00 12</td><td>УГОЛ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260489" title="Клик — скопировать">A 115 826 04 89</td><td>ОБОДОК КРЫШКИ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260589" title="Клик — скопировать">A 115 826 05 89</td><td>- Декоративная рамка</td><td>2</td><td>LESS LAMP SOCKET</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008263278" title="Клик — скопировать">A 000 826 32 78</td><td>- ОТРАЖАТЕЛЬ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008265082" title="Клик — скопировать">A 000 826 50 82</td><td>- ЛАМПОВЫЙ ПАТРОН</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008265482" title="Клик — скопировать">A 000 826 54 82</td><td>- Ламподержатель</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981003214" title="Клик — скопировать">N 007981 003214</td><td>Шуруп</td><td>4</td><td>B3,9X9,5</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260399" title="Клик — скопировать">A 115 826 03 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008263599" title="Клик — скопировать">A 000 826 35 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008266499" title="Клик — скопировать">A 000 826 64 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008266699" title="Клик — скопировать">A 000 826 66 99</td><td>ВСТАВКА ФАРЫ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008260599" title="Клик — скопировать">A 000 826 05 99</td><td>ВСТАВКА ФАРЫ</td><td>2</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1158200661" title="Клик — скопировать">A 115 820 06 61</td><td>Модуль освещения</td><td>2</td><td>Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1158260289" title="Клик — скопировать">A 115 826 02 89</td><td>ОБОДОК КРЫШКИ</td><td>-</td><td>Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1158260189" title="Клик — скопировать">A 115 826 01 89</td><td>ОБОДОК КРЫШКИ</td><td>2</td><td>с  LAMP SOCKET Z  55.620/09, Z  55.620/10 [043] UP TO CHASSIS: 114.015,017 036929 114.021     001893 114.022     002348 115.015     035901 115.115     038667</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008268289" title="Клик — скопировать">A 000 826 82 89</td><td>- Кольцо крышки</td><td>2</td><td>Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260012" title="Клик — скопировать">A 115 826 00 12</td><td>УГОЛ</td><td>2</td><td>Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260489" title="Клик — скопировать">A 115 826 04 89</td><td>ОБОДОК КРЫШКИ</td><td>-</td><td>Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260589" title="Клик — скопировать">A 115 826 05 89</td><td>- Декоративная рамка</td><td>2</td><td>LESS LAMP SOCKET Z  55.620/09, Z  55.620/10 [045] FROM CHASSIS: 114.015,017 036930 114.021     001894 114.022     002349 114.023     000001 115.015     035902 115.115     038668</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008263278" title="Клик — скопировать">A 000 826 32 78</td><td>- ОТРАЖАТЕЛЬ</td><td>2</td><td>Z  55.620/09, Z  55.620/10 [043] UP TO CHASSIS: 114.015,017 036929 114.021     001893 114.022     002348 115.015     035901 115.115     038667</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008265082" title="Клик — скопировать">A 000 826 50 82</td><td>- ЛАМПОВЫЙ ПАТРОН</td><td>2</td><td>Z  55.620/09, Z  55.620/10 [043] UP TO CHASSIS: 114.015,017 036929 114.021     001893 114.022     002348 115.015     035901 115.115     038667</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008265482" title="Клик — скопировать">A 000 826 54 82</td><td>- Ламподержатель</td><td>2</td><td>Z  55.620/09, Z  55.620/10 [045] FROM CHASSIS: 114.015,017 036930 114.021     001894 114.022     002349 114.023     000001 115.015     035902 115.115     038668</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007981003214" title="Клик — скопировать">N 007981 003214</td><td>Шуруп</td><td>4</td><td>B3,9X9,5 Z  55.620/09, Z  55.620/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158260399" title="Клик — скопировать">A 115 826 03 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td>Z  55.620/09 [408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ [046] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 114.010,011,021,022,023 UNTIL PRODUCTION STOP 114.060 013206 [047] UP TO CHASSIS: 114.073 003034 115.010 121100 115.110 326476</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008263599" title="Клик — скопировать">A 000 826 35 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td>Z  55.620/09</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008266499" title="Клик — скопировать">A 000 826 64 99</td><td>ВСТАВКА ФАРЫ</td><td>-</td><td>Z  55.620/09</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008266699" title="Клик — скопировать">A 000 826 66 99</td><td>ВСТАВКА ФАРЫ</td><td>2</td><td>Z  55.620/09 [046] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 114.010,011,021,022,023 UNTIL PRODUCTION STOP 114.060 013206 [047] UP TO CHASSIS: 114.073 003034 115.010 121100 115.110 326476</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008260599" title="Клик — скопировать">A 000 826 05 99</td><td>ВСТАВКА ФАРЫ</td><td>2</td><td>Z  55.620/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

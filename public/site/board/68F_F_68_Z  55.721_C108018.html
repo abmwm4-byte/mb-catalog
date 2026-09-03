@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1088400175" title="Клик — скопировать">A 108 840 01 75</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1098410290" title="Клик — скопировать">A 109 841 02 90</td><td>ОБИВКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086801148" title="Клик — скопировать">A 108 680 11 48</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086801648" title="Клик — скопировать">A 108 680 16 48</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086802048" title="Клик — скопировать">A 108 680 20 48</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086803048" title="Клик — скопировать">A 108 680 30 48</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086804048" title="Клик — скопировать">A 108 680 40 48</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096803745" title="Клик — скопировать">A 109 680 37 45</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096804145" title="Клик — скопировать">A 109 680 41 45</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086807940" title="Клик — скопировать">A 108 680 79 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096804840" title="Клик — скопировать">A 109 680 48 40</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400175" title="Клик — скопировать">A 109 840 01 75</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088400275" title="Клик — скопировать">A 108 840 02 75</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098410390" title="Клик — скопировать">A 109 841 03 90</td><td>ОБИВКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400275" title="Клик — скопировать">A 109 840 02 75</td><td>НАСТИЛ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098410290" title="Клик — скопировать">A 109 841 02 90</td><td>ОБИВКА</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400175" title="Клик — скопировать">A 109 840 01 75</td><td>НАСТИЛ</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1088400175" title="Клик — скопировать">A 108 840 01 75</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/24 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1098410290" title="Клик — скопировать">A 109 841 02 90</td><td>ОБИВКА</td><td>-</td><td>Z  55.721/25 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086801148" title="Клик — скопировать">A 108 680 11 48</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/18 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [010] UP TO CHASSIS: 108.016 065052 108.018 070916</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086801648" title="Клик — скопировать">A 108 680 16 48</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/18, Z  55.721/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [012] UP TO CHASSIS: 108.016 074465 108.018 081204 108.019 081730 108.057 000046 108.058 000128</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086802048" title="Клик — скопировать">A 108 680 20 48</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Влево Z  55.721/20 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [014] UP TO CHASSIS: 108.016     047745 108.018,019 050676</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086803048" title="Клик — скопировать">A 108 680 30 48</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Вправо Z  55.721/20 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [014] UP TO CHASSIS: 108.016     047745 108.018,019 050676</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086804048" title="Клик — скопировать">A 108 680 40 48</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/20 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [010] UP TO CHASSIS: 108.016 065052 108.018 070916 [015] FROM CHASSIS: 108.016     047746 108.018,019 050677</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096803745" title="Клик — скопировать">A 109 680 37 45</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Влево Z  55.721/20 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [012] UP TO CHASSIS: 108.016 074465 108.018 081204 108.019 081730 108.057 000046 108.058 000128 [011] FROM CHASSIS: 108.016             065053 108.018             070917 108.057,058,067,068 000001</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096804145" title="Клик — скопировать">A 109 680 41 45</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Вправо Z  55.721/20 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [012] UP TO CHASSIS: 108.016 074465 108.018 081204 108.019 081730 108.057 000046 108.058 000128 [011] FROM CHASSIS: 108.016             065053 108.018             070917 108.057,058,067,068 000001</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086807940" title="Клик — скопировать">A 108 680 79 40</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Вправо Z  55.721/22 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [012] UP TO CHASSIS: 108.016 074465 108.018 081204 108.019 081730 108.057 000046 108.058 000128 [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096804840" title="Клик — скопировать">A 109 680 48 40</td><td>НАСТИЛ</td><td>1</td><td>Рулевое управление: Вправо Z  55.721/23 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [012] UP TO CHASSIS: 108.016 074465 108.018 081204 108.019 081730 108.057 000046 108.058 000128 [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400175" title="Клик — скопировать">A 109 840 01 75</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/25 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088400275" title="Клик — скопировать">A 108 840 02 75</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/26 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098410390" title="Клик — скопировать">A 109 841 03 90</td><td>ОБИВКА</td><td>-</td><td>Z  55.721/27, Z  55.721/30</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400275" title="Клик — скопировать">A 109 840 02 75</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/27, Z  55.721/30 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [009] FROM CHASSIS 108.016 027655 108.018 028993 [034] FROM CHASSIS: 108.019 029326</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098410290" title="Клик — скопировать">A 109 841 02 90</td><td>ОБИВКА</td><td>-</td><td>Z  55.721/32, Z  55.721/33 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1098400175" title="Клик — скопировать">A 109 840 01 75</td><td>НАСТИЛ</td><td>1</td><td>Z  55.721/32, Z  55.721/33 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 17 · подписано на схемах: 2 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

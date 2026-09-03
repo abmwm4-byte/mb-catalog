@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 7
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="B67822532" title="Клик — скопировать">B67822532</td><td>АУДИОМОДУЛЬ К-Т</td><td>1</td><td>EUROPA CS,CODE</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N041662000002" title="Клик — скопировать">N 041662 000002</td><td>- Плавкая вставка (FUSE LINK)</td><td>1</td><td>6,3 A</td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0008270482" title="Клик — скопировать">A 000 827 04 82</td><td>ШАЙБА</td><td>1</td><td>TO 001 820 43 86</td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A1238270038" title="Клик — скопировать">A 123 827 00 38</td><td>РЫЧАГ</td><td>1</td><td>TO 001 820 43 86</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008200492" title="Клик — скопировать">A 000 820 04 92</td><td>КНОПКА (KNOB)</td><td>2</td><td>TO 001 820 43 86</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N073379009100" title="Клик — скопировать">N 073379 009100</td><td>- Шланг</td><td>1</td><td>12 MM</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1078201417" title="Клик — скопировать">A 107 820 14 17</td><td>- ЭЛ. ПРОВОД</td><td>1</td><td>ЭЛ.ПИТАНИЕ АУДИОСИСТ. TO 001 820 92 86</td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td>СОЕДИНЕНИЕ ПЕРЕДНИХ ДИНАМИКОВ</td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td></td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="B66828920" title="Клик — скопировать">B66828920</td><td>ДИНАМИК (LOUDSPEAKER)</td><td>2</td><td></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1078270140" title="Клик — скопировать">A 107 827 01 40</td><td>- ПАНЕЛЬ</td><td>2</td><td>ДИНАМИК СПЕРЕДИ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N007981004244" title="Клик — скопировать">N 007981 004244</td><td>- Шуруп</td><td>-</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>- Шуруп (TAPPING SCREW)</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; MBN 10169 4.2 X 13</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000433005304" title="Клик — скопировать">N 000433 005304</td><td>- Шайба (WASHER)</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; 5mm</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1158200032" title="Клик — скопировать">A 115 820 00 32</td><td>- СКОБА</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ</td></tr><tr data-pos="154"><td>154</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>- Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO 001 820 43 86</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>- Пружинное кольцо (SPRING LOCK WASHER)</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO  001 820 43 86</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1239942145" title="Клик — скопировать">A 123 994 21 45</td><td>- ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ</td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1158200029" title="Клик — скопировать">A 115 820 00 29</td><td>- ПОДПОРКА (SUPPORT)</td><td>1</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="B67822532" title="Клик — скопировать">B67822532</td><td>АУДИОМОДУЛЬ К-Т</td><td>1</td><td>EUROPA CS,CODE Z  56.328/01, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N041662000002" title="Клик — скопировать">N 041662 000002</td><td>- Плавкая вставка (FUSE LINK)</td><td>1</td><td>6,3 A Z  56.328/01, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0008270482" title="Клик — скопировать">A 000 827 04 82</td><td>ШАЙБА</td><td>1</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A1238270038" title="Клик — скопировать">A 123 827 00 38</td><td>РЫЧАГ</td><td>1</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008200492" title="Клик — скопировать">A 000 820 04 92</td><td>КНОПКА (KNOB)</td><td>2</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N073379009100" title="Клик — скопировать">N 073379 009100</td><td>- Шланг</td><td>1</td><td>12 MM Z  56.328/01 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1078201417" title="Клик — скопировать">A 107 820 14 17</td><td>- ЭЛ. ПРОВОД</td><td>1</td><td>ЭЛ.ПИТАНИЕ АУДИОСИСТ. TO 001 820 92 86 Z  56.328/01 [807] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/85 [419] ДЕТАЛЬ СЛЕДУЕТ ЗАДОКУМЕНТИРОВАТЬ В СИСТЕМЕ VEDOC</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td>СОЕДИНЕНИЕ ПЕРЕДНИХ ДИНАМИКОВ Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td>Z  56.328/01, Z  56.328/05, Z  56.328/08 [807] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/85 [419] ДЕТАЛЬ СЛЕДУЕТ ЗАДОКУМЕНТИРОВАТЬ В СИСТЕМЕ VEDOC</td><td class="restr"></td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="B66828920" title="Клик — скопировать">B66828920</td><td>ДИНАМИК (LOUDSPEAKER)</td><td>2</td><td>Z  56.328/01 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1078270140" title="Клик — скопировать">A 107 827 01 40</td><td>- ПАНЕЛЬ</td><td>2</td><td>ДИНАМИК СПЕРЕДИ Z  56.328/01</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N007981004244" title="Клик — скопировать">N 007981 004244</td><td>- Шуруп</td><td>-</td><td>Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>- Шуруп (TAPPING SCREW)</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; MBN 10169 4.2 X 13 Z  56.328/01, Z  56.328/05 [163] UP TO CHASSIS 123.026,028                   118153 123.033                       115267 123.053                       029143 123.093,183,190,193,280,283 F 000126 123.120                       360690 123.123,125                   415726 123.130,132                   310662 123.133                       036393 123.153                       004059 123.220                       157690 123.223                       174622 123.243                       022475</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000433005304" title="Клик — скопировать">N 000433 005304</td><td>- Шайба (WASHER)</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; 5mm Z  56.328/01, Z  56.328/02</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1158200032" title="Клик — скопировать">A 115 820 00 32</td><td>- СКОБА</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/08 [154] UP TO CHASSIS 107.022 009533 107.025 001704 107.026 002280 107.042 009859 107.045 003232 107.046 000488</td><td class="restr"></td></tr><tr data-pos="154"><td>154</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>- Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>- Пружинное кольцо (SPRING LOCK WASHER)</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO  001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1239942145" title="Клик — скопировать">A 123 994 21 45</td><td>- ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01 [155] FROM CHASSIS 107.022 009534 107.025 001705 107.026 002281 107.042 009860 107.045 003233 107.046 000489</td><td class="restr"></td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1158200029" title="Клик — скопировать">A 115 820 00 29</td><td>- ПОДПОРКА (SUPPORT)</td><td>1</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

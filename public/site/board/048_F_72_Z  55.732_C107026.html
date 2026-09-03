@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 4
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731110" title="Клик — скопировать">A 107 673 11 10</td><td>Стекло</td><td>1</td><td>LEFT REAR SIDE CRANK OPERATED WINDOW</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731210" title="Клик — скопировать">A 107 673 12 10</td><td>Стекло</td><td>1</td><td>RIGHT REAR SIDE CRANK OPERATED WINDOW</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700392" title="Клик — скопировать">A 107 670 03 92</td><td>ЖАЛЮЗИ</td><td>-</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701992" title="Клик — скопировать">A 107 670 19 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700492" title="Клик — скопировать">A 107 670 04 92</td><td>ЖАЛЮЗИ</td><td>-</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076702092" title="Клик — скопировать">A 107 670 20 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701392" title="Клик — скопировать">A 107 670 13 92</td><td>ЖАЛЮЗИ</td><td>-</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701792" title="Клик — скопировать">A 107 670 17 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701492" title="Клик — скопировать">A 107 670 14 92</td><td>ЖАЛЮЗИ</td><td>-</td><td></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701892" title="Клик — скопировать">A 107 670 18 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА</td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200718" title="Клик — скопировать">A 107 720 07 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202318" title="Клик — скопировать">A 107 720 23 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201518" title="Клик — скопировать">A 107 720 15 18</td><td>Опускное стекло</td><td>1</td><td>СЛЕВА</td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200818" title="Клик — скопировать">A 107 720 08 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202418" title="Клик — скопировать">A 107 720 24 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201618" title="Клик — скопировать">A 107 720 16 18</td><td>Опускное стекло</td><td>1</td><td>СПРАВА</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731110" title="Клик — скопировать">A 107 673 11 10</td><td>Стекло</td><td>1</td><td>LEFT REAR SIDE CRANK OPERATED WINDOW Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731210" title="Клик — скопировать">A 107 673 12 10</td><td>Стекло</td><td>1</td><td>RIGHT REAR SIDE CRANK OPERATED WINDOW Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700392" title="Клик — скопировать">A 107 670 03 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701992" title="Клик — скопировать">A 107 670 19 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551 [018] UP TO CHASSIS: COLOR,METALL GREY NO.9734 107.023 004501 107.024 000479 [019] 017 033477, AUSSERDEM EINGEBAUT IN: COLOR,ASTRAL SILVER NO.9735 107.023 004502 107.024 000480</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700492" title="Клик — скопировать">A 107 670 04 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076702092" title="Клик — скопировать">A 107 670 20 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551 [018] UP TO CHASSIS: COLOR,METALL GREY NO.9734 107.023 004501 107.024 000479 [019] 017 033477, AUSSERDEM EINGEBAUT IN: COLOR,ASTRAL SILVER NO.9735 107.023 004502 107.024 000480</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701392" title="Клик — скопировать">A 107 670 13 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [010] FROM CHASSIS: 107.023     008069 107.024     002552 [024] UP TO CHASSIS: 107.022 003474 107.023 011630 107.024 017252</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701792" title="Клик — скопировать">A 107 670 17 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА Z  55.732/17 [025] FROM CHASSIS: 107.022 003475 107.023 011631 107.024 017253 [026] COLOR,ASTRAL SILVER NO.9735</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701492" title="Клик — скопировать">A 107 670 14 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [010] FROM CHASSIS: 107.023     008069 107.024     002552 [024] UP TO CHASSIS: 107.022 003474 107.023 011630 107.024 017252</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701892" title="Клик — скопировать">A 107 670 18 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА Z  55.732/17 [025] FROM CHASSIS: 107.022 003475 107.023 011631 107.024 017253 [026] COLOR,ASTRAL SILVER NO.9735</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200718" title="Клик — скопировать">A 107 720 07 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202318" title="Клик — скопировать">A 107 720 23 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201518" title="Клик — скопировать">A 107 720 15 18</td><td>Опускное стекло</td><td>1</td><td>СЛЕВА Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200818" title="Клик — скопировать">A 107 720 08 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202418" title="Клик — скопировать">A 107 720 24 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201618" title="Клик — скопировать">A 107 720 16 18</td><td>Опускное стекло</td><td>1</td><td>СПРАВА Z  55.732/17</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

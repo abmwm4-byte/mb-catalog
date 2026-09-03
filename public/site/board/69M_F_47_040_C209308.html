@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2034701364" title="Клик — скопировать">A 203 470 13 64</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВОД ОТ БАКА</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2034704664" title="Клик — скопировать">A 203 470 46 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 15.5\-17.5 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0049972090" title="Клик — скопировать">A 004 997 20 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 14.5\-15.5 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ШЛАНГ НА НАГНЕТАТЕЛЬНОМ ТРУБОПРОВОДЕ; 15.5\-17.5 MM</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2034701464" title="Клик — скопировать">A 203 470 14 64</td><td>Топливопровод</td><td>1</td><td>ОБРАТН. ТРУБОПР. К ТОПЛ. БАКУ</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2034704764" title="Клик — скопировать">A 203 470 47 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ОБРАТНЫЙ ТРУБОПРОВОД НА ТРУБОПРОВОДЕ; 13\-14.5 MM</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 13\-14.5 MM</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2034761301" title="Клик — скопировать">A 203 476 13 01</td><td>ПРОВОД</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2034764101" title="Клик — скопировать">A 203 476 41 01</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2034761401" title="Клик — скопировать">A 203 476 14 01</td><td>Топливопровод</td><td>1</td><td>ОБРАТНАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2034764201" title="Клик — скопировать">A 203 476 42 01</td><td>Провод (LINE)</td><td>1</td><td>ОБРАТНАЯ МАГИСТРАЛЬ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2024766526" title="Клик — скопировать">A 202 476 65 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ПОДАЮЩИЙ ТРУБОПРОВОД К ДВИГАТЕЛЮ 573 MM; 15.3X3 MM</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ПОДАЮЩИЙ ТРУБОПРОВОД К ДВИГАТЕЛЮ; 15.5\-17.5 MM</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ОБРАТН. ТРУБОПРОВ. ОТ ДВИГ. 535 MM; 7,3 X 3 MM</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009958610" title="Клик — скопировать">A 000 995 86 10</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ОБРАТН. ТРУБОПРОВ. ОТ ДВИГ.</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>FROM PRESSURE VALVE TO TANK; 13\-14.5 MM</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>К НАПОРНОМУ ТРУБОПРОВОДУ; 13\-14.5 MM</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0029958201" title="Клик — скопировать">A 002 995 82 01</td><td>Крепежный хомут (FASTENING CLAMP)</td><td>1</td><td>для  FUEL LINE TO LONGITUDINAL MEMBER</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0039900251" title="Клик — скопировать">A 003 990 02 51</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>для  FUEL LINE TO LONGITUDINAL MEMBER</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2034701364" title="Клик — скопировать">A 203 470 13 64</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩ. ТРУБОПРОВОД ОТ БАКА [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2034704664" title="Клик — скопировать">A 203 470 46 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 15.5\-17.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0049972090" title="Клик — скопировать">A 004 997 20 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 14.5\-15.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ШЛАНГ НА НАГНЕТАТЕЛЬНОМ ТРУБОПРОВОДЕ; 15.5\-17.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2034701464" title="Клик — скопировать">A 203 470 14 64</td><td>Топливопровод</td><td>1</td><td>ОБРАТН. ТРУБОПР. К ТОПЛ. БАКУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2034704764" title="Клик — скопировать">A 203 470 47 64</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td></td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ОБРАТНЫЙ ТРУБОПРОВОД НА ТРУБОПРОВОДЕ; 13\-14.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ШЛАНГ НА ТОПЛИВНОМ БАКЕ; 13\-14.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2034761301" title="Клик — скопировать">A 203 476 13 01</td><td>ПРОВОД</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2034764101" title="Клик — скопировать">A 203 476 41 01</td><td>Провод (LINE)</td><td>1</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2034761401" title="Клик — скопировать">A 203 476 14 01</td><td>Топливопровод</td><td>1</td><td>ОБРАТНАЯ МАГИСТРАЛЬ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2034764201" title="Клик — скопировать">A 203 476 42 01</td><td>Провод (LINE)</td><td>1</td><td>ОБРАТНАЯ МАГИСТРАЛЬ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2024766526" title="Клик — скопировать">A 202 476 65 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ПОДАЮЩИЙ ТРУБОПРОВОД К ДВИГАТЕЛЮ 573 MM; 15.3X3 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (CLAMP)</td><td>1</td><td>ПОДАЮЩИЙ ТРУБОПРОВОД К ДВИГАТЕЛЮ; 15.5\-17.5 MM</td><td class="restr" data-expr="M612/M642/M646"><span class="icode">M612/M642/M646</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг (HOSE)</td><td>NB</td><td>ОБРАТН. ТРУБОПРОВ. ОТ ДВИГ. 535 MM; 7,3 X 3 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009958610" title="Клик — скопировать">A 000 995 86 10</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>ОБРАТН. ТРУБОПРОВ. ОТ ДВИГ.</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>FROM PRESSURE VALVE TO TANK; 13\-14.5 MM</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>К НАПОРНОМУ ТРУБОПРОВОДУ; 13\-14.5 MM</td><td class="restr" data-expr="M646"><span class="icode">M646</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0029958201" title="Клик — скопировать">A 002 995 82 01</td><td>Крепежный хомут (FASTENING CLAMP)</td><td>1</td><td>для  FUEL LINE TO LONGITUDINAL MEMBER</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0039900251" title="Клик — скопировать">A 003 990 02 51</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>для  FUEL LINE TO LONGITUDINAL MEMBER</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>09 FUEL PUMP, AIR CLEANER / 001 FUEL PUMP,AIR CLEANER</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114060">68B  Действительно для: CA, US</a> → 001 FUEL PUMP,AIR CLEANER</div>
+<h1>001 FUEL PUMP,AIR CLEANER</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B09001000243 <span class="hint">(8)</span></button><button data-i="1" class="">B09001000244 <span class="hint">(1)</span></button><button data-i="2" class="">B09001000245 <span class="hint">(2)</span></button><button data-i="3" class="">B09001000246 <span class="hint">(28)</span></button><button data-i="4" class="">B09001000247 <span class="hint">(7)</span></button><button data-i="5" class="">B09001000248 <span class="hint">(1)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B09001000243.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 6
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1150900050" title="Клик — скопировать">A 115 090 00 50</td><td>ТОПЛИВНЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1150900150" title="Клик — скопировать">A 115 090 01 50</td><td>ТОПЛИВНЫЙ</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0005861509" title="Клик — скопировать">A 000 586 15 09</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0000900251" title="Клик — скопировать">A 000 090 02 51</td><td>ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td>К\-Т ДЕТАЛЕЙ PIERBURG</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0005862209" title="Клик — скопировать">A 000 586 22 09</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td>ТОПЛИВНЫЙ DELCO</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1300910080" title="Клик — скопировать">A 130 091 00 80</td><td>Уплотнительная прокладка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1800910180" title="Клик — скопировать">A 180 091 01 80</td><td>Уплотнительная прокладка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1100910281" title="Клик — скопировать">A 110 091 02 81</td><td>Изоляционный фланец</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1100900244" title="Клик — скопировать">A 110 090 02 44</td><td>ФЛАНЕЦ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1100900344" title="Клик — скопировать">A 110 090 03 44</td><td>Фланец</td><td>1</td><td>[015] ВХОДИТ В ОБЪЕМ ПОСТАВКИ ТОПЛИВНОГО НАСОСА 115 090 00 50</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>2</td><td>ТОПЛИВНЫЙ НАСОС НА БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000933008116" title="Клик — скопировать">N 000933 008116</td><td>Винт</td><td>-</td><td>M8X28\-8.8</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000933008337" title="Клик — скопировать">N 000933 008337</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0099900101" title="Клик — скопировать">A 009 990 01 01</td><td>болт</td><td>2</td><td>ТОПЛИВНЫЙ НАСОС НА БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1100940182" title="Клик — скопировать">A 110 094 01 82</td><td>ШЛАНГ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1179970190" title="Клик — скопировать">A 117 997 01 90</td><td>Хомут для шланга</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="A1109971982" title="Клик — скопировать">A 110 997 19 82</td><td>ШЛАНГ</td><td>1</td><td>СОЕДИНЕНИЕ ВЕНТИЛЯЦИИ КАРТЕРА НА ВПУСКНОМ КОЛЛЕКТОРЕ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1100940085" title="Клик — скопировать">A 110 094 00 85</td><td>РЕЗИНОВЫЙ УПОР</td><td>1</td><td>AIR CLEANER TO CAMSHAFT HOUSING</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1109902240" title="Клик — скопировать">A 110 990 22 40</td><td>Диск</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0070947902" title="Клик — скопировать">A 007 094 79 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0070949302" title="Клик — скопировать">A 007 094 93 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0010945004" title="Клик — скопировать">A 001 094 50 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0010946904" title="Клик — скопировать">A 001 094 69 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td>TO 007 094 79 02</td><td class="restr"></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A0010946904" title="Клик — скопировать">A 001 094 69 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td>TO 007 094 93 02,009 094 36 02,         012 094 33 02</td><td class="restr"></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="A0010943580" title="Клик — скопировать">A 001 094 35 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="A0010943880" title="Клик — скопировать">A 001 094 38 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>TO 007 094 79 02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="A0010943880" title="Клик — скопировать">A 001 094 38 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>TO 007 094 93 02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A0000941355" title="Клик — скопировать">A 000 094 13 55</td><td>- Крышка</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="219"><td>219</td><td class="pn" data-raw="A0009900762" title="Клик — скопировать">A 000 990 07 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="219"><td>219</td><td class="pn" data-raw="A0009901762" title="Клик — скопировать">A 000 990 17 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="219"><td>219</td><td class="pn" data-raw="A0009900962" title="Клик — скопировать">A 000 990 09 62</td><td>- гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="227"><td>227</td><td class="pn" data-raw="A0000940464" title="Клик — скопировать">A 000 094 04 64</td><td>- РЕГУЛЯТОР</td><td>1</td><td>TO 007 094 79 02,012 094 33 02</td><td class="restr"></td></tr><tr data-pos="231"><td>231</td><td class="pn" data-raw="A0000940564" title="Клик — скопировать">A 000 094 05 64</td><td>- РЕГУЛЯТОР</td><td>1</td><td>TO 007 094 93 02,009 094 36 02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="235"><td>235</td><td class="pn" data-raw="A0019901991" title="Клик — скопировать">A 001 990 19 91</td><td>- ГАЙКОДЕРЖАТЕЛЬ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="239"><td>239</td><td class="pn" data-raw="N000439008211" title="Клик — скопировать">N 000439 008211</td><td>- Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="239"><td>239</td><td class="pn" data-raw="N304035008001" title="Клик — скопировать">N 304035 008001</td><td>- Шестигранная гайка</td><td>1</td><td>M8</td><td class="restr"></td></tr><tr data-pos="251"><td>251</td><td class="pn" data-raw="A0000940125" title="Клик — скопировать">A 000 094 01 25</td><td>- СТРЕМЯНКА РЕССОРЫ</td><td>1</td><td>TO 007 094 79 02</td><td class="restr"></td></tr><tr data-pos="255"><td>255</td><td class="pn" data-raw="A0000940274" title="Клик — скопировать">A 000 094 02 74</td><td>- БОЛТ</td><td>1</td><td>TO 007 094 93 02,009 094 36 02</td><td class="restr"></td></tr><tr data-pos="385"><td>385</td><td class="pn" data-raw="N000835006078" title="Клик — скопировать">N 000835 006078</td><td>Винт</td><td>1</td><td>ВОЗДУШ.ФИЛЬТР НА КАРБЮРАТ.</td><td class="restr"></td></tr><tr data-pos="389"><td>389</td><td class="pn" data-raw="A1239970145" title="Клик — скопировать">A 123 997 01 45</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>ВОЗДУШ.ФИЛЬТР НА КАРБЮРАТ.</td><td class="restr"></td></tr><tr data-pos="393"><td>393</td><td class="pn" data-raw="N007603006112" title="Клик — скопировать">N 007603 006112</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>ВОЗДУШ.ФИЛЬТР НА КАРБЮРАТ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="397"><td>397</td><td class="pn" data-raw="A0009900762" title="Клик — скопировать">A 000 990 07 62</td><td>ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="397"><td>397</td><td class="pn" data-raw="A0009901762" title="Клик — скопировать">A 000 990 17 62</td><td>ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="397"><td>397</td><td class="pn" data-raw="A0009900962" title="Клик — скопировать">A 000 990 09 62</td><td>гайка</td><td>1</td><td>ВОЗДУШ.ФИЛЬТР НА КАРБЮРАТ.</td><td class="restr"></td></tr><tr data-pos="472"><td>472</td><td class="pn" data-raw="A1100940008" title="Клик — скопировать">A 110 094 00 08</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ШЛАНГ ВОЗДУХОЗАБОРА</td><td class="restr"></td></tr><tr data-pos="501"><td>501</td><td class="pn" data-raw="A0019974290" title="Клик — скопировать">A 001 997 42 90</td><td>связующее вещество</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="501"><td>501</td><td class="pn" data-raw="A0019974390" title="Клик — скопировать">A 001 997 43 90</td><td>Кабельная стяжка</td><td>1</td><td>140mm; 9X250 MM</td><td class="restr"></td></tr><tr data-pos="501"><td>501</td><td class="pn" data-raw="A0019974390" title="Клик — скопировать">A 001 997 43 90</td><td>Кабельная стяжка</td><td>1</td><td>250 MM; 9X250 MM</td><td class="restr"></td></tr><tr data-pos="513"><td>513</td><td class="pn" data-raw="A0001420320" title="Клик — скопировать">A 000 142 03 20</td><td>ЭКРАН</td><td>1</td><td>EXHAUST MANIFOLD;CYLINDERS NOS. 4\-6 Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [015] ВХОДИТ В ОБЪЕМ ПОСТАВКИ ТОПЛИВНОГО НАСОСА 115 090 00 50</td><td class="restr"></td></tr><tr data-pos="519"><td>519</td><td class="pn" data-raw="A0001420120" title="Клик — скопировать">A 000 142 01 20</td><td>ЭКРАН</td><td>1</td><td>EXHAUST MANIFOLD;CYLINDERS NOS. 4\-6 Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="531"><td>531</td><td class="pn" data-raw="A0000943811" title="Клик — скопировать">A 000 094 38 11</td><td>ВОЗДУХОЗАБОРНИК</td><td>1</td><td>EXHAUST MANIFOLD;CYLINDERS NOS. 4\-6 Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="544"><td>544</td><td class="pn" data-raw="A0000942211" title="Клик — скопировать">A 000 094 22 11</td><td>ВОЗДУХОЗАБОРНИК</td><td>1</td><td>EXHAUST MANIFOLD;CYLINDERS NOS. 4\-6 Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>1</td><td>SCOOP UPPER PART TO SCREENING PLATE</td><td class="restr"></td></tr><tr data-pos="615"><td>615</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="615"><td>615</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>1</td><td>AIR CLEANER TO CAMSHAFT HOUSING RUBBER BUFFER</td><td class="restr"></td></tr><tr data-pos="621"><td>621</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>1</td><td>AIR CLEANER TO CAMSHAFT HOUSING RUBBER BUFFER</td><td class="restr"></td></tr><tr data-pos="627"><td>627</td><td class="pn" data-raw="A1100940140" title="Клик — скопировать">A 110 094 01 40</td><td>ФОРСУНКА</td><td>1</td><td>ВПУСК.ТРУБОПРОВ.ВОЗДУШ.ФИЛЬТРА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="633"><td>633</td><td class="pn" data-raw="A0010948382" title="Клик — скопировать">A 001 094 83 82</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="633"><td>633</td><td class="pn" data-raw="A0010948382" title="Клик — скопировать">A 001 094 83 82</td><td>ШЛАНГ</td><td>-</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010917901" title="Клик — скопировать">A 001 091 79 01</td><td>ТОПЛИВНЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0020910201" title="Клик — скопировать">A 002 091 02 01</td><td>ТОПЛИВНЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005860609" title="Клик — скопировать">A 000 586 06 09</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005860709" title="Клик — скопировать">A 000 586 07 09</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005860809" title="Клик — скопировать">A 000 586 08 09</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1300910081" title="Клик — скопировать">A 130 091 00 81</td><td>ФЛАНЕЦ ИЗОЛЯЦИОННЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1300910181" title="Клик — скопировать">A 130 091 01 81</td><td>ФЛАНЕЦ ИЗОЛЯЦИОННЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916002026100" title="Клик — скопировать">N 916002 026100</td><td>Хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010945904" title="Клик — скопировать">A 001 094 59 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0000941455" title="Клик — скопировать">A 000 094 14 55</td><td>- ЗАМКОВЫЙ БЛОК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0000940364" title="Клик — скопировать">A 000 094 03 64</td><td>- РЕГУЛЯТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019900791" title="Клик — скопировать">A 001 990 07 91</td><td>- ГАЙКОДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0000940174" title="Клик — скопировать">A 000 094 01 74</td><td>- БОЛТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809970045" title="Клик — скопировать">A 180 997 00 45</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0001420020" title="Клик — скопировать">A 000 142 00 20</td><td>ЭКРАН</td><td>-</td><td>Рулевое управление: Влево [001] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0000942111" title="Клик — скопировать">A 000 094 21 11</td><td>ВОЗДУХОЗАБОРНИК</td><td>-</td><td>Рулевое управление: Влево [001] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010941782" title="Клик — скопировать">A 001 094 17 82</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010944882" title="Клик — скопировать">A 001 094 48 82</td><td>ШЛАНГ</td><td>-</td><td>[415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1020945182" title="Клик — скопировать">A 102 094 51 82</td><td>Шланг</td><td>-</td><td>[404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1020945182" title="Клик — скопировать">A 102 094 51 82</td><td>Шланг</td><td>1</td><td>SCOOP UPPER PART,AIR CLEANER 340mm</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 80 · подписано на схемах: 60 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09001000243.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26"]}, {"png": "../../img_png/drawing_B09001000244.png", "poses": ["55"]}, {"png": "../../img_png/drawing_B09001000245.png", "poses": ["55", "472"]}, {"png": "../../img_png/drawing_B09001000246.png", "poses": ["34", "55", "63", "83", "87", "170", "185", "199", "215", "227", "235", "239", "251", "385", "389", "393", "397", "472", "501", "513", "519", "531", "544", "590", "615", "621", "627", "633"]}, {"png": "../../img_png/drawing_B09001000247.png", "poses": ["191", "215", "219", "231", "235", "239", "255"]}, {"png": "../../img_png/drawing_B09001000248.png", "poses": ["55"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  applyRows();
+})();
+</script></body></html>

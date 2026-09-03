@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500326" title="Клик — скопировать">A 116 050 03 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500426" title="Клик — скопировать">A 116 050 04 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500027" title="Клик — скопировать">A 116 050 00 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500127" title="Клик — скопировать">A 116 050 01 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>-</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500027" title="Клик — скопировать">A 116 050 00 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>8</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0000531635" title="Клик — скопировать">A 000 053 16 35</td><td>УС-ВО ПРОВОРОТА КЛАПАНА</td><td>16</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1100530120" title="Клик — скопировать">A 110 053 01 20</td><td>Пружина клапана</td><td>16</td><td>СНАРУЖИ</td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1300530022" title="Клик — скопировать">A 130 053 00 22</td><td>ПРУЖИНА КЛАПАНА</td><td>16</td><td>ВНУТР.</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1169902540" title="Клик — скопировать">A 116 990 25 40</td><td>ШАЙБА</td><td>-</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1169902640" title="Клик — скопировать">A 116 990 26 40</td><td>ШАЙБА</td><td>16</td><td>ПОВЫШ. СИЛЫ ПРУЖИНЫ КЛАПАНА В РЕМ. СЛУЧАЕ 1.25 MM</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1300530225" title="Клик — скопировать">A 130 053 02 25</td><td>ТАРЕЛКА ПРУЖИНЫ КЛАПАНА</td><td>16</td><td>СВЕРХУ</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1150530026" title="Клик — скопировать">A 115 053 00 26</td><td>Конический сухарь</td><td>32</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1175861005" title="Клик — скопировать">A 117 586 10 05</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1170500067" title="Клик — скопировать">A 117 050 00 67</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1170500167" title="Клик — скопировать">A 117 050 01 67</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>МАСЛОСЪЕМНЫЙ КОЛПАЧОК</td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1160551101" title="Клик — скопировать">A 116 055 11 01</td><td>КОРОМЫСЛО КЛАПАНА</td><td>-</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1160551501" title="Клик — скопировать">A 116 055 15 01</td><td>КОРОМЫСЛО КЛАПАНА</td><td>16</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1160500480" title="Клик — скопировать">A 116 050 04 80</td><td>ГИБРИДНЫЙ ЭЛЕМЕНТ</td><td>16</td><td></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530053" title="Клик — скопировать">A 117 053 00 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 3.7 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530153" title="Клик — скопировать">A 117 053 01 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.05 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530253" title="Клик — скопировать">A 117 053 02 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.4 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530353" title="Клик — скопировать">A 117 053 03 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.75 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530453" title="Клик — скопировать">A 117 053 04 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.1 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530553" title="Клик — скопировать">A 117 053 05 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.45 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530653" title="Клик — скопировать">A 117 053 06 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.8 MM</td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530753" title="Клик — скопировать">A 117 053 07 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 6.15 MM</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500326" title="Клик — скопировать">A 116 050 03 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500426" title="Клик — скопировать">A 116 050 04 26</td><td>ВПУСКНОЙ КЛАПАН</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500027" title="Клик — скопировать">A 116 050 00 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500127" title="Клик — скопировать">A 116 050 01 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1160500027" title="Клик — скопировать">A 116 050 00 27</td><td>ВЫПУСКНОЙ КЛАПАН</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0000531635" title="Клик — скопировать">A 000 053 16 35</td><td>УС-ВО ПРОВОРОТА КЛАПАНА</td><td>16</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1100530120" title="Клик — скопировать">A 110 053 01 20</td><td>Пружина клапана</td><td>16</td><td>СНАРУЖИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1300530022" title="Клик — скопировать">A 130 053 00 22</td><td>ПРУЖИНА КЛАПАНА</td><td>16</td><td>ВНУТР.</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1169902540" title="Клик — скопировать">A 116 990 25 40</td><td>ШАЙБА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1169902640" title="Клик — скопировать">A 116 990 26 40</td><td>ШАЙБА</td><td>16</td><td>ПОВЫШ. СИЛЫ ПРУЖИНЫ КЛАПАНА В РЕМ. СЛУЧАЕ 1.25 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1300530225" title="Клик — скопировать">A 130 053 02 25</td><td>ТАРЕЛКА ПРУЖИНЫ КЛАПАНА</td><td>16</td><td>СВЕРХУ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1150530026" title="Клик — скопировать">A 115 053 00 26</td><td>Конический сухарь</td><td>32</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1175861005" title="Клик — скопировать">A 117 586 10 05</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1170500067" title="Клик — скопировать">A 117 050 00 67</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1170500167" title="Клик — скопировать">A 117 050 01 67</td><td>РЕМКОМПЛЕКТ</td><td>2</td><td>МАСЛОСЪЕМНЫЙ КОЛПАЧОК</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1160551101" title="Клик — скопировать">A 116 055 11 01</td><td>КОРОМЫСЛО КЛАПАНА</td><td>-</td><td>[006] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 965 041320</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1160551501" title="Клик — скопировать">A 116 055 15 01</td><td>КОРОМЫСЛО КЛАПАНА</td><td>16</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1160500480" title="Клик — скопировать">A 116 050 04 80</td><td>ГИБРИДНЫЙ ЭЛЕМЕНТ</td><td>16</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530053" title="Клик — скопировать">A 117 053 00 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 3.7 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530153" title="Клик — скопировать">A 117 053 01 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.05 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530253" title="Клик — скопировать">A 117 053 02 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.4 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530353" title="Клик — скопировать">A 117 053 03 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 4.75 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530453" title="Клик — скопировать">A 117 053 04 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.1 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530553" title="Клик — скопировать">A 117 053 05 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.45 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530653" title="Клик — скопировать">A 117 053 06 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 5.8 MM</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1170530753" title="Клик — скопировать">A 117 053 07 53</td><td>ШАЙБА УПОРНАЯ</td><td>16</td><td>ПО НЕОБХОДИМОСТИ 6.15 MM</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

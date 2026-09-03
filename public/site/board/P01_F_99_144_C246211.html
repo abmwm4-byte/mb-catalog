@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2468700090" title="Клик — скопировать">A 246 870 00 90</td><td>К-т мультим. системы (PARTS KIT, MM SYSTEM)</td><td>1</td><td>BECKER MAP PILOT</td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2468700290" title="Клик — скопировать">A 246 870 02 90</td><td>К-т мультим. системы (PARTS KIT, MM SYSTEM)</td><td>1</td><td>BECKER MAP PILOT</td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2469053303" title="Клик — скопировать">A 246 905 33 03</td><td>Комплект антенны (PARTS KIT, ANTENNA)</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2469004716" title="Клик — скопировать">A 246 900 47 16</td><td>Блок управления (CONTROL UNIT)</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ BECKER MAP PILOT</td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453728" title="Клик — скопировать">A 053 545 37 28</td><td>Штекер (PLUG)</td><td>1</td><td>СИНИЙ BECKER MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453528" title="Клик — скопировать">A 053 545 35 28</td><td>Штекер (PLUG)</td><td>1</td><td>ЧЕРНЫЙ BECKER MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453828" title="Клик — скопировать">A 053 545 38 28</td><td>Штекер (PLUG)</td><td>1</td><td>БОРДО BECKER MAP PILOT; 1\-PIN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1234750120" title="Клик — скопировать">A 123 475 01 20</td><td>Подкладка (BASE)</td><td>1</td><td>BECKER MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1729006203" title="Клик — скопировать">A 172 900 62 03</td><td>Блок управления</td><td>1</td><td>BECKER MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063601" title="Клик — скопировать">A 218 906 36 01</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064001" title="Клик — скопировать">A 218 906 40 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063701" title="Клик — скопировать">A 218 906 37 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063801" title="Клик — скопировать">A 218 906 38 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064301" title="Клик — скопировать">A 218 906 43 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064401" title="Клик — скопировать">A 218 906 44 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063901" title="Клик — скопировать">A 218 906 39 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064101" title="Клик — скопировать">A 218 906 41 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064201" title="Клик — скопировать">A 218 906 42 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2468700090" title="Клик — скопировать">A 246 870 00 90</td><td>К-т мультим. системы (PARTS KIT, MM SYSTEM)</td><td>1</td><td>BECKER MAP PILOT Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="802+(510/523)+-(508/509)"><span class="icode">802+(510/523)+-(508/509)</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2468700290" title="Клик — скопировать">A 246 870 02 90</td><td>К-т мультим. системы (PARTS KIT, MM SYSTEM)</td><td>1</td><td>BECKER MAP PILOT Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(510/523)+-(508/509)"><span class="icode">(510/523)+-(508/509)</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2469053303" title="Клик — скопировать">A 246 905 33 03</td><td>Комплект антенны (PARTS KIT, ANTENNA)</td><td>1</td><td>GARMIN MAP PILOT [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(505/520)+3U1"><span class="icode">(505/520)+3U1</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2469004716" title="Клик — скопировать">A 246 900 47 16</td><td>Блок управления (CONTROL UNIT)</td><td>1</td><td>GARMIN MAP PILOT [426] ДЛЯ ЦИФРОВОГО РУКОВОДСТВА ПО ЭКСПЛУАТАЦИИ ЗАКАЗАТЬ ТАКЖЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ В КГ 58, TU300 [672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(505/520)+3U1"><span class="icode">(505/520)+3U1</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ BECKER MAP PILOT Рулевое управление: Влево</td><td class="restr" data-expr="-(510/523)"><span class="icode">-(510/523)</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ GARMIN MAP PILOT</td><td class="restr" data-expr="(505/520)+3U1"><span class="icode">(505/520)+3U1</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453728" title="Клик — скопировать">A 053 545 37 28</td><td>Штекер (PLUG)</td><td>1</td><td>СИНИЙ BECKER MAP PILOT</td><td class="restr" data-expr="802+(510/523)+-(508/509)"><span class="icode">802+(510/523)+-(508/509)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453528" title="Клик — скопировать">A 053 545 35 28</td><td>Штекер (PLUG)</td><td>1</td><td>ЧЕРНЫЙ BECKER MAP PILOT</td><td class="restr" data-expr="(510/523)+-(508/509)"><span class="icode">(510/523)+-(508/509)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0535453828" title="Клик — скопировать">A 053 545 38 28</td><td>Штекер (PLUG)</td><td>1</td><td>БОРДО BECKER MAP PILOT; 1\-PIN</td><td class="restr" data-expr="(510/523)+-(508/509)"><span class="icode">(510/523)+-(508/509)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1234750120" title="Клик — скопировать">A 123 475 01 20</td><td>Подкладка (BASE)</td><td>1</td><td>BECKER MAP PILOT</td><td class="restr" data-expr="(510/523)+-(508/509)"><span class="icode">(510/523)+-(508/509)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1729006203" title="Клик — скопировать">A 172 900 62 03</td><td>Блок управления</td><td>1</td><td>BECKER MAP PILOT Рулевое управление: Влево [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="-509"><span class="icode">-509</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063601" title="Клик — скопировать">A 218 906 36 01</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)"><span class="icode">(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064001" title="Клик — скопировать">A 218 906 40 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="7XXL+(701L/705L/737L/749L)"><span class="icode">7XXL+(701L/705L/737L/749L)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063701" title="Клик — скопировать">A 218 906 37 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="(6XXL/623/803L/833L/835L/853L/867L)"><span class="icode">(6XXL/623/803L/833L/835L/853L/867L)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063801" title="Клик — скопировать">A 218 906 38 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="9XXL"><span class="icode">9XXL</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064301" title="Клик — скопировать">A 218 906 43 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="(811L/813L/815L/831L/845L/851L/855L/857L/865L/868L/869L/875L/879L/882L/915L+9XXL)"><span class="icode">(811L/813L/815L/831L/845L/851L/855L/857L/865L/868L/869L/875L/879L/882L/915L+9XXL)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064401" title="Клик — скопировать">A 218 906 44 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="825L"><span class="icode">825L</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063901" title="Клик — скопировать">A 218 906 39 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="7XXL"><span class="icode">7XXL</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064101" title="Клик — скопировать">A 218 906 41 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="(819L/823L/824L)"><span class="icode">(819L/823L/824L)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064201" title="Клик — скопировать">A 218 906 42 01</td><td>Карта памяти</td><td>1</td><td>GARMIN MAP PILOT</td><td class="restr" data-expr="817L"><span class="icode">817L</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 20 · подписано на схемах: 6 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1085010501" title="Клик — скопировать">A 108 501 05 01</td><td>Радиатор</td><td>1</td><td>С РАДИАТОРОМ МАСЛА КП</td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0005010065" title="Клик — скопировать">A 000 501 00 65</td><td>- Спускной клапан</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1081800265" title="Клик — скопировать">A 108 180 02 65</td><td>Масляный охладитель</td><td>1</td><td>ВОЗДУШ. ОХЛАЖД.</td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1235010215" title="Клик — скопировать">A 123 501 02 15</td><td>Пробка радиатора</td><td>1</td><td></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td></tr><tr data-pos="81"><td>81</td><td class="pn" data-raw="A1145000012" title="Клик — скопировать">A 114 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА</td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1089870325" title="Клик — скопировать">A 108 987 03 25</td><td>ПРОФИЛЬ ПЛАСТИКОВЫЙ</td><td>2</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010101" title="Клик — скопировать">A 108 501 01 01</td><td>РАДИАТОР</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010001" title="Клик — скопировать">A 108 501 00 01</td><td>РАДИАТОР</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010901" title="Клик — скопировать">A 108 501 09 01</td><td>РАДИАТОР</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005010010" title="Клик — скопировать">A 000 501 00 10</td><td>- Сливная трубка ОЖ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1081800765" title="Клик — скопировать">A 108 180 07 65</td><td>МАСЛ. РАДИАТОР</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085000012" title="Клик — скопировать">A 108 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010582" title="Клик — скопировать">A 108 501 05 82</td><td>Шланг ОЖ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010782" title="Клик — скопировать">A 108 501 07 82</td><td>Шланг ОЖ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010682" title="Клик — скопировать">A 108 501 06 82</td><td>Шланг ОЖ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900262009100" title="Клик — скопировать">N 900262 009100</td><td>Стяжка</td><td>4</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900263009000" title="Клик — скопировать">N 900263 009000</td><td>Лента</td><td>NB</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1085010501" title="Клик — скопировать">A 108 501 05 01</td><td>Радиатор</td><td>1</td><td>С РАДИАТОРОМ МАСЛА КП [002] 016, 10/50,20/60 FROM CHASSIS 034804;018, 10/50,20/60 FROM CHASSIS 035803;019, 10/50,20/60 FROM CHASSIS 035746 [023] 016,10/50,20/60 UP TO CHASSIS 080381; 018,019,10/50,20/60 UP TO CHASSIS 086633 [006] 016, 12/52,22/62 FROM CHASSIS 036068;018, 12/52,22/62 FROM CHASSIS 037204;019, 12/52,22/62 FROM CHASSIS 036269 [017] 016, 12/52,22/62 UP TO CHASSIS 079912; 018,019, 12/52,22/62 UP TO CHASSIS 086141</td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0005010065" title="Клик — скопировать">A 000 501 00 65</td><td>- Спускной клапан</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1081800265" title="Клик — скопировать">A 108 180 02 65</td><td>Масляный охладитель</td><td>1</td><td>ВОЗДУШ. ОХЛАЖД. [023] 016,10/50,20/60 UP TO CHASSIS 080381; 018,019,10/50,20/60 UP TO CHASSIS 086633 [017] 016, 12/52,22/62 UP TO CHASSIS 079912; 018,019, 12/52,22/62 UP TO CHASSIS 086141</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1235010215" title="Клик — скопировать">A 123 501 02 15</td><td>Пробка радиатора</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="81"><td>81</td><td class="pn" data-raw="A1145000012" title="Клик — скопировать">A 114 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА [011] 016 UP TO CHASSIS 006641; 018,019 UP TO CHASSIS 005282;</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1089870325" title="Клик — скопировать">A 108 987 03 25</td><td>ПРОФИЛЬ ПЛАСТИКОВЫЙ</td><td>2</td><td>[025] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010101" title="Клик — скопировать">A 108 501 01 01</td><td>РАДИАТОР</td><td>-</td><td>Коробка передач [001] 016 UP TO CHASSIS 034803; 018 UP TO CHASSIS 035802; 019 UP TO CHASSIS 035745;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010001" title="Клик — скопировать">A 108 501 00 01</td><td>РАДИАТОР</td><td>-</td><td>Автоматическая коробка переключения передач [005] 016 UP TO CHASSIS 036067; 018 UP TO CHASSIS 037203; 019 UP TO CHASSIS 036268;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010901" title="Клик — скопировать">A 108 501 09 01</td><td>РАДИАТОР</td><td>1</td><td>[024] 016,10/50,20/60 FROM CHASSIS 080382; 018,019,10/50,20/60 FROM CHASSIS 086634 [018] 016, 12/52,22/62 FROM CHASSIS 079913; 018,019, 12/52,22/62 FROM CHASSIS 086142</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005010010" title="Клик — скопировать">A 000 501 00 10</td><td>- Сливная трубка ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1081800765" title="Клик — скопировать">A 108 180 07 65</td><td>МАСЛ. РАДИАТОР</td><td>1</td><td>[024] 016,10/50,20/60 FROM CHASSIS 080382; 018,019,10/50,20/60 FROM CHASSIS 086634 [018] 016, 12/52,22/62 FROM CHASSIS 079913; 018,019, 12/52,22/62 FROM CHASSIS 086142</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085000012" title="Клик — скопировать">A 108 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА [012] 016 FROM CHASSIS 006642; 018,019 FROM CHASSIS 005283;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010582" title="Клик — скопировать">A 108 501 05 82</td><td>Шланг ОЖ</td><td>1</td><td>[013] UP TO CHASSIS: 016,10/50,20/60 034803; 12/52,22/62 036067; 018,10/50,20/60 035802; SEE FOOTN.26 [026] UP TO CHASSIS: 018,12/52,22/62 037203; 019,10/50,20/60 035745; 12/52,22/62 036267</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010782" title="Клик — скопировать">A 108 501 07 82</td><td>Шланг ОЖ</td><td>1</td><td>[027] FROM CHASSIS: 016,10/50,20/60 034804; 12/52,22/62 036068; 018,10/50,20/60 035803; SEE FOOTN.28 [028] FROM CHASSIS: 018,12/52,22/62 037204; 019,10/50,20/60 035746; 12/52,22/62 036268</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010682" title="Клик — скопировать">A 108 501 06 82</td><td>Шланг ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900262009100" title="Клик — скопировать">N 900262 009100</td><td>Стяжка</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900263009000" title="Клик — скопировать">N 900263 009000</td><td>Лента</td><td>NB</td><td>[029] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="B66828001" title="Клик — скопировать">B66828001</td><td>АНТЕННА</td><td>1</td><td></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="B66828065" title="Клик — скопировать">B66828065</td><td>АНТЕННА</td><td>1</td><td></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="B66828009" title="Клик — скопировать">B66828009</td><td>АНТЕННА МЕХАНИЧЕСКАЯ</td><td>1</td><td>АНТЕННА МЕХАНИЧ.</td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A1078201114" title="Клик — скопировать">A 107 820 11 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>АНТЕННА</td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="B66828012" title="Клик — скопировать">B66828012</td><td>АНТЕННА АВТОМАТИЧЕСКАЯ</td><td>1</td><td>АНТЕННА АВТОМАТИЧЕСКАЯ</td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="B66828099" title="Клик — скопировать">B66828099</td><td>АНТЕННА</td><td>1</td><td></td></tr><tr data-pos="123"><td>123</td><td class="pn" data-raw="B66828034" title="Клик — скопировать">B66828034</td><td>- ТЕЛЕСКОП.</td><td>1</td><td>HIRSCHMANN</td></tr><tr data-pos="123"><td>123</td><td class="pn" data-raw="B66828037" title="Клик — скопировать">B66828037</td><td>- ТЕЛЕСКОП.</td><td>1</td><td>HIRSCHMANN</td></tr><tr data-pos="141"><td>141</td><td class="pn" data-raw="A0095454028" title="Клик — скопировать">A 009 545 40 28</td><td>- Сцепление, механическое</td><td>1</td><td>ДВОЙН.; 2\-PIN</td></tr><tr data-pos="157"><td>157</td><td class="pn" data-raw="A1078201214" title="Клик — скопировать">A 107 820 12 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>АНТЕННА</td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0009940845" title="Клик — скопировать">A 000 994 08 45</td><td>предохранитель</td><td>1</td><td></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="N000933006102" title="Клик — скопировать">N 000933 006102</td><td>Винт</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ</td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ</td></tr><tr data-pos="207"><td>207</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ</td></tr><tr data-pos="213"><td>213</td><td class="pn" data-raw="N914023005100" title="Клик — скопировать">N 914023 005100</td><td>Винт с неспадающей шайбой</td><td>1</td><td>BRACKET TO WHELHOUSE FLANGE</td></tr><tr data-pos="223"><td>223</td><td class="pn" data-raw="A1238270098" title="Клик — скопировать">A 123 827 00 98</td><td>уплотнение</td><td>1</td><td>UNDER ANTENNA CONNECTOR</td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1076902630" title="Клик — скопировать">A 107 690 26 30</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1076902630" title="Клик — скопировать">A 107 690 26 30</td><td>ПАНЕЛЬ</td><td>1</td><td></td></tr><tr data-pos="301"><td>301</td><td class="pn" data-raw="A1076930036" title="Клик — скопировать">A 107 693 00 36</td><td>- ПРУЖИНА</td><td>1</td><td></td></tr><tr data-pos="309"><td>309</td><td class="pn" data-raw="N000965005001" title="Клик — скопировать">N 000965 005001</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="309"><td>309</td><td class="pn" data-raw="N000965005001" title="Клик — скопировать">N 000965 005001</td><td>Винт</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="B66828001" title="Клик — скопировать">B66828001</td><td>АНТЕННА</td><td>1</td><td>Z  56.155/01, Z  56.155/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="B66828065" title="Клик — скопировать">B66828065</td><td>АНТЕННА</td><td>1</td><td>Z  56.155/02, Z  56.155/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [053] LESS BASE ANTENNA</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="B66828009" title="Клик — скопировать">B66828009</td><td>АНТЕННА МЕХАНИЧЕСКАЯ</td><td>1</td><td>АНТЕННА МЕХАНИЧ. Z  56.155/01, Z  56.155/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A1078201114" title="Клик — скопировать">A 107 820 11 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>АНТЕННА Z  56.155/01, Z  56.155/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="B66828012" title="Клик — скопировать">B66828012</td><td>АНТЕННА АВТОМАТИЧЕСКАЯ</td><td>1</td><td>АНТЕННА АВТОМАТИЧЕСКАЯ Z  56.155/02, Z  56.155/04</td><td class="restr"></td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="B66828099" title="Клик — скопировать">B66828099</td><td>АНТЕННА</td><td>1</td><td>Z  56.155/02, Z  56.155/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [054] BASE ANTENNA</td><td class="restr"></td></tr><tr data-pos="123"><td>123</td><td class="pn" data-raw="B66828034" title="Клик — скопировать">B66828034</td><td>- ТЕЛЕСКОП.</td><td>1</td><td>HIRSCHMANN Z  56.155/02, Z  56.155/04, Z  56.155/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="123"><td>123</td><td class="pn" data-raw="B66828037" title="Клик — скопировать">B66828037</td><td>- ТЕЛЕСКОП.</td><td>1</td><td>HIRSCHMANN Z  56.155/02, Z  56.155/04, Z  56.155/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="141"><td>141</td><td class="pn" data-raw="A0095454028" title="Клик — скопировать">A 009 545 40 28</td><td>- Сцепление, механическое</td><td>1</td><td>ДВОЙН.; 2\-PIN Z  56.155/02, Z  56.155/04</td><td class="restr"></td></tr><tr data-pos="157"><td>157</td><td class="pn" data-raw="A1078201214" title="Клик — скопировать">A 107 820 12 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>АНТЕННА Z  56.155/02, Z  56.155/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0009940845" title="Клик — скопировать">A 000 994 08 45</td><td>предохранитель</td><td>1</td><td>Z  56.155/01, Z  56.155/02, Z  56.155/03, Z  56.155/04, Z  56.155/05, Z  56.155/06, Z  56.155/07, Z  56.155/08, Z  56.155/09, Z  56.155/10</td><td class="restr"></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="N000933006102" title="Клик — скопировать">N 000933 006102</td><td>Винт</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ Z  56.155/02, Z  56.155/04, Z  56.155/06</td><td class="restr"></td></tr><tr data-pos="199"><td>199</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ Z  56.155/02, Z  56.155/04, Z  56.155/06</td><td class="restr"></td></tr><tr data-pos="207"><td>207</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ Z  56.155/02, Z  56.155/04, Z  56.155/06</td><td class="restr"></td></tr><tr data-pos="213"><td>213</td><td class="pn" data-raw="N914023005100" title="Клик — скопировать">N 914023 005100</td><td>Винт с неспадающей шайбой</td><td>1</td><td>BRACKET TO WHELHOUSE FLANGE Z  56.155/01, Z  56.155/02, Z  56.155/03, Z  56.155/04, Z  56.155/05, Z  56.155/06</td><td class="restr"></td></tr><tr data-pos="223"><td>223</td><td class="pn" data-raw="A1238270098" title="Клик — скопировать">A 123 827 00 98</td><td>уплотнение</td><td>1</td><td>UNDER ANTENNA CONNECTOR Z  56.155/01, Z  56.155/02, Z  56.155/03, Z  56.155/04, Z  56.155/05, Z  56.155/06</td><td class="restr"></td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1076902630" title="Клик — скопировать">A 107 690 26 30</td><td>ПАНЕЛЬ</td><td>1</td><td>Z  56.155/01, Z  56.155/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [001] FROM CHASSIS: 107.022 001419 107.023 010684 107.024 011787 107.042 001168 107.043 012127 107.044 029346</td><td class="restr"></td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1076902630" title="Клик — скопировать">A 107 690 26 30</td><td>ПАНЕЛЬ</td><td>1</td><td>Z  56.155/02, Z  56.155/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [002] FROM CHASSIS: 107.022 001476 107.023 010715 107.024 011937 107.042 001188 107.043 012139 107.044 029611</td><td class="restr"></td></tr><tr data-pos="301"><td>301</td><td class="pn" data-raw="A1076930036" title="Клик — скопировать">A 107 693 00 36</td><td>- ПРУЖИНА</td><td>1</td><td>Z  56.155/01, Z  56.155/02, Z  56.155/03, Z  56.155/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="309"><td>309</td><td class="pn" data-raw="N000965005001" title="Клик — скопировать">N 000965 005001</td><td>Винт</td><td>1</td><td>Z  56.155/01, Z  56.155/03 [001] FROM CHASSIS: 107.022 001419 107.023 010684 107.024 011787 107.042 001168 107.043 012127 107.044 029346</td><td class="restr"></td></tr><tr data-pos="309"><td>309</td><td class="pn" data-raw="N000965005001" title="Клик — скопировать">N 000965 005001</td><td>Винт</td><td>1</td><td>Z  56.155/02, Z  56.155/04 [002] FROM CHASSIS: 107.022 001476 107.023 010715 107.024 011937 107.042 001188 107.043 012139 107.044 029611</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

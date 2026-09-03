@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1204270086" title="Клик — скопировать">A 120 427 00 86</td><td>	- STOP RING</td><td>1</td><td></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A1209910061" title="Клик — скопировать">A 120 991 00 61</td><td>Просечной штифт</td><td>1</td><td>для  NOTCHED ROD IN GUIDE TUBE</td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1204201012" title="Клик — скопировать">A 120 420 10 12</td><td>BRAKE LEVER</td><td>1</td><td>с  BEARING BUSHING</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1204270450" title="Клик — скопировать">A 120 427 04 50</td><td>	- BUSHING</td><td>1</td><td></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1879900840" title="Клик — скопировать">A 187 990 08 40</td><td>ШАЙБА</td><td>1</td><td>для  BRAKE LEVER AT PIVOT PIN, BODY</td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1204270374" title="Клик — скопировать">A 120 427 03 74</td><td>Палец</td><td>1</td><td>для  BRAKE LEVER AT PIVOT PIN, BODY</td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1054200085" title="Клик — скопировать">A 105 420 00 85</td><td>BRAKE CABLE, MEDIUM</td><td>1</td><td></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A1204200486" title="Клик — скопировать">A 120 420 04 86</td><td>BRACKET</td><td>1</td><td>для  BRAKE CABLE, FRONT</td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A1874270019" title="Клик — скопировать">A 187 427 00 19</td><td>МАХОВИЧОК</td><td>1</td><td>для  HAND BRAKE ADJUSTMENT</td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1809931410" title="Клик — скопировать">A 180 993 14 10</td><td>ПРУЖИНА</td><td>1</td><td>для  COMPENSATING LEVER</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1204200591" title="Клик — скопировать">A 120 420 05 91</td><td>Уравнительный рычаг</td><td>1</td><td>для  HAND BRAKE</td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1804200690" title="Клик — скопировать">A 180 420 06 90</td><td>Запасовка троса</td><td>1</td><td></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1804200885" title="Клик — скопировать">A 180 420 08 85</td><td>REAR BRAKE CABLE</td><td>1</td><td></td></tr><tr data-pos="39"><td>39</td><td class="pn" data-raw="A1804200176" title="Клик — скопировать">A 180 420 01 76</td><td>КОНЦ. ЭЛЕМЕНТ</td><td>2</td><td>для  BRAKE CABLE, REAR REPAIRS DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009890175" title="Клик — скопировать">A 000 989 01 75</td><td>ПРОВОЛОКА КРЕПЕЖНАЯ</td><td>NB</td><td>ORDER BY THE METER для  SLEEVE AT BRAKE CABLE, REAR REPAIRS DESIGN</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1204270086" title="Клик — скопировать">A 120 427 00 86</td><td>	- STOP RING</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A1209910061" title="Клик — скопировать">A 120 991 00 61</td><td>Просечной штифт</td><td>1</td><td>для  NOTCHED ROD IN GUIDE TUBE</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1204201012" title="Клик — скопировать">A 120 420 10 12</td><td>BRAKE LEVER</td><td>1</td><td>с  BEARING BUSHING</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1204270450" title="Клик — скопировать">A 120 427 04 50</td><td>	- BUSHING</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1879900840" title="Клик — скопировать">A 187 990 08 40</td><td>ШАЙБА</td><td>1</td><td>для  BRAKE LEVER AT PIVOT PIN, BODY</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1204270374" title="Клик — скопировать">A 120 427 03 74</td><td>Палец</td><td>1</td><td>для  BRAKE LEVER AT PIVOT PIN, BODY</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1054200085" title="Клик — скопировать">A 105 420 00 85</td><td>BRAKE CABLE, MEDIUM</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A1204200486" title="Клик — скопировать">A 120 420 04 86</td><td>BRACKET</td><td>1</td><td>для  BRAKE CABLE, FRONT</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A1874270019" title="Клик — скопировать">A 187 427 00 19</td><td>МАХОВИЧОК</td><td>1</td><td>для  HAND BRAKE ADJUSTMENT</td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1809931410" title="Клик — скопировать">A 180 993 14 10</td><td>ПРУЖИНА</td><td>1</td><td>для  COMPENSATING LEVER</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1204200591" title="Клик — скопировать">A 120 420 05 91</td><td>Уравнительный рычаг</td><td>1</td><td>для  HAND BRAKE</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1804200690" title="Клик — скопировать">A 180 420 06 90</td><td>Запасовка троса</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1804200885" title="Клик — скопировать">A 180 420 08 85</td><td>REAR BRAKE CABLE</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="39"><td>39</td><td class="pn" data-raw="A1804200176" title="Клик — скопировать">A 180 420 01 76</td><td>КОНЦ. ЭЛЕМЕНТ</td><td>2</td><td>для  BRAKE CABLE, REAR REPAIRS DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009890175" title="Клик — скопировать">A 000 989 01 75</td><td>ПРОВОЛОКА КРЕПЕЖНАЯ</td><td>NB</td><td>ORDER BY THE METER для  SLEEVE AT BRAKE CABLE, REAR REPAIRS DESIGN</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 15 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

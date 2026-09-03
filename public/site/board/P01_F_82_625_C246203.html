@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2468200114" title="Клик — скопировать">A 246 820 01 14</td><td>Крепление (BRACKET)</td><td>1</td><td>ТАКСОМЕТР</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019846429" title="Клик — скопировать">A 001 984 64 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>2</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; 5X16</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2128200997" title="Клик — скопировать">A 212 820 09 97</td><td>Передатчик (TRANSMITTER)</td><td>1</td><td>ДИСТАНЦ.ВКЛЮЧ.РАЦИИ ДЛЯ АВАРИЙНОГО ВЫЗОВА ТАКСИ</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2108201235" title="Клик — скопировать">A 210 820 12 35</td><td>Микрофон (MICROPHONE)</td><td>1</td><td>РАЦИЯ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2128200714" title="Клик — скопировать">A 212 820 07 14</td><td>Крепление</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2128201014" title="Клик — скопировать">A 212 820 10 14</td><td>Держатель (HOLDER)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2128260114" title="Клик — скопировать">A 212 826 01 14</td><td>- Удерживающий рычаг (HOLDING ARM)</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009884643" title="Клик — скопировать">A 000 988 46 43</td><td>- Ригельный замок (LATCH-TYPE LOCK)</td><td>1</td><td>МЕХАНИЗМ БЛОКИРОВКИ ОПОЗНАВАТЕЛЬНОГО ЗНАКА ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000000008140" title="Клик — скопировать">N 000000 008140</td><td>Лампа накаливания (BULB)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ; 12V\-5W</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2468200014" title="Клик — скопировать">A 246 820 00 14</td><td>Крепление (BRACKET)</td><td>1</td><td>ЗНАК НА КРЫШЕ ТАКСИ</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2468200514" title="Клик — скопировать">A 246 820 05 14</td><td>Держатель (HOLDER)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2128200012" title="Клик — скопировать">A 212 820 00 12</td><td>Крышка (COVER)</td><td>1</td><td></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2108209610" title="Клик — скопировать">A 210 820 96 10</td><td>Переключатель (SWITCH)</td><td>1</td><td>КНОПКА УДАЛЕНИЯ</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2468205115" title="Клик — скопировать">A 246 820 51 15</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2468202115" title="Клик — скопировать">A 246 820 21 15</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛИ СМ.: 54/077</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2468200114" title="Клик — скопировать">A 246 820 01 14</td><td>Крепление (BRACKET)</td><td>1</td><td>ТАКСОМЕТР Рулевое управление: Влево</td><td class="restr" data-expr="336"><span class="icode">336</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019846429" title="Клик — скопировать">A 001 984 64 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>2</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; 5X16 Рулевое управление: Влево</td><td class="restr" data-expr="336"><span class="icode">336</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2128200997" title="Клик — скопировать">A 212 820 09 97</td><td>Передатчик (TRANSMITTER)</td><td>1</td><td>ДИСТАНЦ.ВКЛЮЧ.РАЦИИ ДЛЯ АВАРИЙНОГО ВЫЗОВА ТАКСИ Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2108201235" title="Клик — скопировать">A 210 820 12 35</td><td>Микрофон (MICROPHONE)</td><td>1</td><td>РАЦИЯ Рулевое управление: Влево</td><td class="restr" data-expr="938"><span class="icode">938</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2128200714" title="Клик — скопировать">A 212 820 07 14</td><td>Крепление</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ Рулевое управление: Влево</td><td class="restr" data-expr="341/341+P55"><span class="icode">341/341+P55</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2128201014" title="Клик — скопировать">A 212 820 10 14</td><td>Держатель (HOLDER)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ Рулевое управление: Влево</td><td class="restr" data-expr="341/341+P55"><span class="icode">341/341+P55</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2128260114" title="Клик — скопировать">A 212 826 01 14</td><td>- Удерживающий рычаг (HOLDING ARM)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="341/341+P55"><span class="icode">341/341+P55</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009884643" title="Клик — скопировать">A 000 988 46 43</td><td>- Ригельный замок (LATCH-TYPE LOCK)</td><td>1</td><td>МЕХАНИЗМ БЛОКИРОВКИ ОПОЗНАВАТЕЛЬНОГО ЗНАКА ТАКСИ НА КРЫШЕ Рулевое управление: Влево</td><td class="restr" data-expr="341/341+P55"><span class="icode">341/341+P55</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000000008140" title="Клик — скопировать">N 000000 008140</td><td>Лампа накаливания (BULB)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ; 12V\-5W Рулевое управление: Влево</td><td class="restr" data-expr="341"><span class="icode">341</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2468200014" title="Клик — скопировать">A 246 820 00 14</td><td>Крепление (BRACKET)</td><td>1</td><td>ЗНАК НА КРЫШЕ ТАКСИ</td><td class="restr" data-expr="342"><span class="icode">342</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2468200514" title="Клик — скопировать">A 246 820 05 14</td><td>Держатель (HOLDER)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ Рулевое управление: Влево</td><td class="restr" data-expr="340/341/341+P55"><span class="icode">340/341/341+P55</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2128200012" title="Клик — скопировать">A 212 820 00 12</td><td>Крышка (COVER)</td><td>1</td><td></td><td class="restr" data-expr="342"><span class="icode">342</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2108209610" title="Клик — скопировать">A 210 820 96 10</td><td>Переключатель (SWITCH)</td><td>1</td><td>КНОПКА УДАЛЕНИЯ Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2468205115" title="Клик — скопировать">A 246 820 51 15</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="341"><span class="icode">341</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2468202115" title="Клик — скопировать">A 246 820 21 15</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>ОПОЗНАВАТЕЛЬНЫЙ ЗНАК ТАКСИ НА КРЫШЕ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="342/342+P55"><span class="icode">342/342+P55</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛИ СМ.: 54/077</td><td class="restr" data-expr="965/Z90/Z97"><span class="icode">965/Z90/Z97</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

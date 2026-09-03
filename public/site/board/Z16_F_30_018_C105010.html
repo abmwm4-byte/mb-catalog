@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1839970081" title="Клик — скопировать">A 183 997 00 81</td><td>втулка</td><td>1</td><td>для  ACCELERATOR PEDAL THROUGH FRONT WALL</td></tr><tr data-pos="12" data-ch-from="7502432"><td>12</td><td class="pn" data-raw="A1273000086" title="Клик — скопировать">A 127 300 00 86</td><td>КОНЦ. ЭЛЕМЕНТ</td><td>1</td><td>с  SNAP RING с шасси 7502432 <span class="tag-r">с шасси 7502432</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1803010097" title="Клик — скопировать">A 180 301 00 97</td><td>Демпфирующее кольцо</td><td>1</td><td>для  PULL ROD TO CONTROL LEVER</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1803001830" title="Клик — скопировать">A 180 300 18 30</td><td>ПРОВОЛОЧНЫЙ ТРОС</td><td>1</td><td>без  KNOB, WIRE 1180\-MM LONG SHORTEN AS REQUIRED SPARE PART SIMPLIFICATION</td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A0009880172" title="Клик — скопировать">A 000 988 01 72</td><td>	- СПИРАЛЬ ТРОСОВАЯ</td><td>1</td><td>955\-MM LONG для  LEFT\-HAND DRIVE 850\-MM LONG FOR RIGHT\-HAND DRIVE ORDER BY THE METER</td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0009972040" title="Клик — скопировать">A 000 997 20 40</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>для  CHOKE CABLE AT INSTRUMENT PANEL</td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1203020401" title="Клик — скопировать">A 120 302 04 01</td><td>КНОПКА</td><td>1</td><td>для  CHOKE CABLE AT INSTRUMENT PANEL</td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A0009971881" title="Клик — скопировать">A 000 997 18 81</td><td>втулка</td><td>1</td><td>для  CHOKE CABLE THROUGH DASHBOARD</td></tr><tr data-pos="25" data-ch-to="7501979"><td>25</td><td class="pn" data-raw="A0009971881" title="Клик — скопировать">A 000 997 18 81</td><td>втулка</td><td>1</td><td>для  IGNITION TIMING THROUGH DASHBOARD до шасси 7501979 <span class="tag-r">до шасси 7501979</span></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1839970081" title="Клик — скопировать">A 183 997 00 81</td><td>втулка</td><td>1</td><td>для  ACCELERATOR PEDAL THROUGH FRONT WALL</td><td class="restr"></td></tr><tr data-pos="12" data-ch-from="7502432"><td>12</td><td class="pn" data-raw="A1273000086" title="Клик — скопировать">A 127 300 00 86</td><td>КОНЦ. ЭЛЕМЕНТ</td><td>1</td><td>с  SNAP RING с шасси 7502432 <span class="tag-r">с шасси 7502432</span></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1803010097" title="Клик — скопировать">A 180 301 00 97</td><td>Демпфирующее кольцо</td><td>1</td><td>для  PULL ROD TO CONTROL LEVER</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1803001830" title="Клик — скопировать">A 180 300 18 30</td><td>ПРОВОЛОЧНЫЙ ТРОС</td><td>1</td><td>без  KNOB, WIRE 1180\-MM LONG SHORTEN AS REQUIRED SPARE PART SIMPLIFICATION</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A0009880172" title="Клик — скопировать">A 000 988 01 72</td><td>	- СПИРАЛЬ ТРОСОВАЯ</td><td>1</td><td>955\-MM LONG для  LEFT\-HAND DRIVE 850\-MM LONG FOR RIGHT\-HAND DRIVE ORDER BY THE METER</td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0009972040" title="Клик — скопировать">A 000 997 20 40</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>для  CHOKE CABLE AT INSTRUMENT PANEL</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1203020401" title="Клик — скопировать">A 120 302 04 01</td><td>КНОПКА</td><td>1</td><td>для  CHOKE CABLE AT INSTRUMENT PANEL</td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A0009971881" title="Клик — скопировать">A 000 997 18 81</td><td>втулка</td><td>1</td><td>для  CHOKE CABLE THROUGH DASHBOARD</td><td class="restr"></td></tr><tr data-pos="25" data-ch-to="7501979"><td>25</td><td class="pn" data-raw="A0009971881" title="Клик — скопировать">A 000 997 18 81</td><td>втулка</td><td>1</td><td>для  IGNITION TIMING THROUGH DASHBOARD до шасси 7501979 <span class="tag-r">до шасси 7501979</span></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

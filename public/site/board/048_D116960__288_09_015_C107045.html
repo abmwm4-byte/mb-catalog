@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0100949602" title="Клик — скопировать">A 010 094 96 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>-</td><td></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0120942702" title="Клик — скопировать">A 012 094 27 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0010947804" title="Клик — скопировать">A 001 094 78 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0020946904" title="Клик — скопировать">A 002 094 69 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td>ДЛЯ СТРАН С ВЫСОКОЙ ЗАПЫЛЕННОСТЬЮ ВОЗДУХА</td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0019970841" title="Клик — скопировать">A 001 997 08 41</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0010942280" title="Клик — скопировать">A 001 094 22 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ (SEAL)</td><td>1</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0000941260" title="Клик — скопировать">A 000 094 12 60</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0010949580" title="Клик — скопировать">A 001 094 95 80</td><td>- уплотнение (SEAL)</td><td>1</td><td></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A0000941955" title="Клик — скопировать">A 000 094 19 55</td><td>- Крышка (CLOSURE)</td><td>6</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009900762" title="Клик — скопировать">A 000 990 07 62</td><td>- ГАЙКА</td><td>-</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009901762" title="Клик — скопировать">A 000 990 17 62</td><td>- ГАЙКА</td><td>-</td><td></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009900962" title="Клик — скопировать">A 000 990 09 62</td><td>- гайка (NUT)</td><td>1</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1235849321" title="Клик — скопировать">A 123 584 93 21</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>-</td><td></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A2105840047" title="Клик — скопировать">A 210 584 00 47</td><td>- Предупреждающая табличка</td><td>1</td><td>&quot;ОПАСНО ДЛЯ ЖИЗНИ! ВЫСОКОЕ НАПРЯЖЕНИЕ&quot;; ПО\-НЕМЕЦКИ, АНГЛИЙСКИ И ФРАНЦУЗСКИ</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N913017006000" title="Клик — скопировать">N 913017 006000</td><td>Гайка</td><td>-</td><td>M6</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>-</td><td>M6</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N913023006001" title="Клик — скопировать">N 913023 006001</td><td>Гайка (NUT)</td><td>2</td><td>M6</td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1160940791" title="Клик — скопировать">A 116 094 07 91</td><td>МАНЖЕТА (MOLDED HOSE)</td><td>1</td><td>ОТ КРЫШКИ ГБЦ К ДЕМПФЕР.ФИЛЬТРУ</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N916026023001" title="Клик — скопировать">N 916026 023001</td><td>Хомут</td><td>1</td><td>23\-30 MM</td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1030940411" title="Клик — скопировать">A 103 094 04 11</td><td>Воздухозаборник (SCOOP)</td><td>1</td><td></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>КОЖУХ НА КУЗОВЕ</td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (WASHER)</td><td>1</td><td>КОЖУХ НА КУЗОВЕ; 6 MM</td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0009904692" title="Клик — скопировать">A 000 990 46 92</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>2</td><td>КОЖУХ НА КУЗОВЕ</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0100949602" title="Клик — скопировать">A 010 094 96 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>-</td><td>[003] FIRST EXHAUST STOCK OF OLD PARTS UP TO IDENT NO. 960;107.025 002768 960;107.045 006074</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0120942702" title="Клик — скопировать">A 012 094 27 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0010947804" title="Клик — скопировать">A 001 094 78 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0020946904" title="Клик — скопировать">A 002 094 69 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td>ДЛЯ СТРАН С ВЫСОКОЙ ЗАПЫЛЕННОСТЬЮ ВОЗДУХА</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0019970841" title="Клик — скопировать">A 001 997 08 41</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0010942280" title="Клик — скопировать">A 001 094 22 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ (SEAL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0000941260" title="Клик — скопировать">A 000 094 12 60</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0010949580" title="Клик — скопировать">A 001 094 95 80</td><td>- уплотнение (SEAL)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A0000941955" title="Клик — скопировать">A 000 094 19 55</td><td>- Крышка (CLOSURE)</td><td>6</td><td></td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009900762" title="Клик — скопировать">A 000 990 07 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009901762" title="Клик — скопировать">A 000 990 17 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009900962" title="Клик — скопировать">A 000 990 09 62</td><td>- гайка (NUT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1235849321" title="Клик — скопировать">A 123 584 93 21</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A2105840047" title="Клик — скопировать">A 210 584 00 47</td><td>- Предупреждающая табличка</td><td>1</td><td>&quot;ОПАСНО ДЛЯ ЖИЗНИ! ВЫСОКОЕ НАПРЯЖЕНИЕ&quot;; ПО\-НЕМЕЦКИ, АНГЛИЙСКИ И ФРАНЦУЗСКИ</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N913017006000" title="Клик — скопировать">N 913017 006000</td><td>Гайка</td><td>-</td><td>M6</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>-</td><td>M6</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N913023006001" title="Клик — скопировать">N 913023 006001</td><td>Гайка (NUT)</td><td>2</td><td>M6</td><td class="restr"></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1160940791" title="Клик — скопировать">A 116 094 07 91</td><td>МАНЖЕТА (MOLDED HOSE)</td><td>1</td><td>ОТ КРЫШКИ ГБЦ К ДЕМПФЕР.ФИЛЬТРУ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N916026023001" title="Клик — скопировать">N 916026 023001</td><td>Хомут</td><td>1</td><td>23\-30 MM</td><td class="restr"></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1030940411" title="Клик — скопировать">A 103 094 04 11</td><td>Воздухозаборник (SCOOP)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>КОЖУХ НА КУЗОВЕ</td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (WASHER)</td><td>1</td><td>КОЖУХ НА КУЗОВЕ; 6 MM</td><td class="restr"></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0009904692" title="Клик — скопировать">A 000 990 46 92</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>2</td><td>КОЖУХ НА КУЗОВЕ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

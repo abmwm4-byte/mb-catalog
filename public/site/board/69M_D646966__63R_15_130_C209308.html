@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 2
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500233" title="Клик — скопировать">A 646 150 02 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500333" title="Клик — скопировать">A 646 150 03 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461501433" title="Клик — скопировать">A 646 150 14 33</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461501933" title="Клик — скопировать">A 646 150 19 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502433" title="Клик — скопировать">A 646 150 24 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502433" title="Клик — скопировать">A 646 150 24 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502033" title="Клик — скопировать">A 646 150 20 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502133" title="Клик — скопировать">A 646 150 21 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502133" title="Клик — скопировать">A 646 150 21 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502233" title="Клик — скопировать">A 646 150 22 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502233" title="Клик — скопировать">A 646 150 22 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502833" title="Клик — скопировать">A 646 150 28 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500833" title="Клик — скопировать">A 646 150 08 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461507333" title="Клик — скопировать">A 646 150 73 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461507333" title="Клик — скопировать">A 646 150 73 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя</td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1020781141" title="Клик — скопировать">A 102 078 11 41</td><td>Держатель (HOLDER)</td><td>1</td><td></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Крепление кабельной направляющей; M6X19</td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1020781141" title="Клик — скопировать">A 102 078 11 41</td><td>Держатель (HOLDER)</td><td>1</td><td></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005403805" title="Клик — скопировать">A 000 540 38 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 SLK2.8</td></tr><tr data-pos="918"><td>918</td><td class="pn" data-raw="A2205455528" title="Клик — скопировать">A 220 545 55 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>Разъем X22; 2\-PIN SLK2.8</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500233" title="Клик — скопировать">A 646 150 02 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево</td><td class="restr" data-expr="(F203/F209)+-926"><span class="icode">(F203/F209)+-926</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500333" title="Клик — скопировать">A 646 150 03 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо</td><td class="restr" data-expr="(F203/F209)+-926"><span class="icode">(F203/F209)+-926</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461501433" title="Клик — скопировать">A 646 150 14 33</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+-926"><span class="icode">(F203/F209)+-926</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461501933" title="Клик — скопировать">A 646 150 19 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+926+423+-(474/055/806/807)"><span class="icode">(F203/F209)+926+423+-(474/055/806/807)</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502433" title="Клик — скопировать">A 646 150 24 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево</td><td class="restr" data-expr="(F203/F209)+926+423+805+055+-474"><span class="icode">(F203/F209)+926+423+805+055+-474</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502433" title="Клик — скопировать">A 646 150 24 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево</td><td class="restr" data-expr="(F203/F209)+926+423+-474"><span class="icode">(F203/F209)+926+423+-474</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502033" title="Клик — скопировать">A 646 150 20 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203+-474/F209)+926+423"><span class="icode">(F203+-474/F209)+926+423</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502133" title="Клик — скопировать">A 646 150 21 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево</td><td class="restr" data-expr="(F203/F209)+926+805+055+-(423/474)/F209+806+926"><span class="icode">(F203/F209)+926+805+055+-(423/474)/F209+806+926</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502133" title="Клик — скопировать">A 646 150 21 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево</td><td class="restr" data-expr="(F203/F209)+926+-(423/474)"><span class="icode">(F203/F209)+926+-(423/474)</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502233" title="Клик — скопировать">A 646 150 22 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+926+805+055+-(423/474)"><span class="icode">(F203/F209)+926+805+055+-(423/474)</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502233" title="Клик — скопировать">A 646 150 22 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+926+-(423/474)"><span class="icode">(F203/F209)+926+-(423/474)</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461502833" title="Клик — скопировать">A 646 150 28 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+926+474+805+055/(F203/F209)+926+474"><span class="icode">(F203/F209)+926+474+805+055/(F203/F209)+926+474</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461500833" title="Клик — скопировать">A 646 150 08 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F203/F209)+926+474+-806"><span class="icode">(F203/F209)+926+474+-806</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461507333" title="Клик — скопировать">A 646 150 73 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо</td><td class="restr" data-expr="(F203/F209)+926+474+805+055"><span class="icode">(F203/F209)+926+474+805+055</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A6461507333" title="Клик — скопировать">A 646 150 73 33</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Жгут электропроводки двигателя Рулевое управление: Вправо</td><td class="restr" data-expr="(F203/F209)+926+474"><span class="icode">(F203/F209)+926+474</span></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1020781141" title="Клик — скопировать">A 102 078 11 41</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Крепление кабельной направляющей; M6X19</td><td class="restr" data-expr="F203/F209/F211"><span class="icode">F203/F209/F211</span></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="A1020781141" title="Клик — скопировать">A 102 078 11 41</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr" data-expr="F203/F209"><span class="icode">F203/F209</span></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005403805" title="Клик — скопировать">A 000 540 38 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 SLK2.8 [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="F203/F209/F211"><span class="icode">F203/F209/F211</span></td></tr><tr data-pos="918"><td>918</td><td class="pn" data-raw="A2205455528" title="Клик — скопировать">A 220 545 55 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>Разъем X22; 2\-PIN SLK2.8</td><td class="restr" data-expr="F203/F209/F211"><span class="icode">F203/F209/F211</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 20 · подписано на схемах: 20 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

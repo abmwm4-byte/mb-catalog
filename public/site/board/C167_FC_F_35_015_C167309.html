@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1673500301" title="Клик — скопировать">A 167 350 03 01</td><td>Редуктор заднего моста (HINTERACHSGETRIEBE)</td><td>1</td><td>1: 3.461</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1663510300" title="Клик — скопировать">A 166 351 03 00</td><td>- Запорная крышка (ABSCHLUSSDECKEL)</td><td>1</td><td>К картеру заднего моста</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910105010011" title="Клик — скопировать">N 910105 010011</td><td>- Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>8</td><td>Крышка к корпусу; M10X40</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1663510265" title="Клик — скопировать">A 166 351 02 65</td><td>- Воздушный патрубок (ENTLUEFTUNGSSTUTZEN)</td><td>1</td><td>К редуктору заднего моста</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2059970246" title="Клик — скопировать">A 205 997 02 46</td><td>- Сальник с пылезащ. кром. (RADIALWELLENDICHTRING)</td><td>2</td><td>Приводной вал слева и справа</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0009977932" title="Клик — скопировать">A 000 997 79 32</td><td>- Резьбовая пробка (VERSCHLUSSSCHRAUBE)</td><td>2</td><td>К картеру заднего моста</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0159974846" title="Клик — скопировать">A 015 997 48 46</td><td>- Радиальный сальник (RADIALWELLENDICHTRING)</td><td>1</td><td>К картеру заднего моста</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2223507500" title="Клик — скопировать">A 222 350 75 00</td><td>- Фланец шарнира (GELENKFLANSCH)</td><td>1</td><td>К картеру заднего моста</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2133530500" title="Клик — скопировать">A 213 353 05 00</td><td>- Гайка редукт. задн. моста (BUNDMUTTER HA-GETRIEBE)</td><td>1</td><td>Фланец шарнира</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2133530500" title="Клик — скопировать">A 213 353 05 00</td><td>- Гайка редукт. задн. моста (BUNDMUTTER HA-GETRIEBE)</td><td>1</td><td>Фланец шарнира</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1673510300" title="Клик — скопировать">A 167 351 03 00</td><td>- Опора редуктора зад.моста (HINTERACHSGETRIEBELAGER)</td><td>1</td><td></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1673514000" title="Клик — скопировать">A 167 351 40 00</td><td>- Опора редуктора зад.моста (HINTERACHSGETRIEBELAGER)</td><td>1</td><td>HAG 183</td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A0009979811" title="Клик — скопировать">A 000 997 98 11</td><td>Угловой штуцер (WINKELSTUTZEN)</td><td>1</td><td>Сапун корпуса коробки передач 90°</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1660160000" title="Клик — скопировать">A 166 016 00 00</td><td>Вентиляционный шланг (ENTLUEFTUNGSSCHLAUCH)</td><td>1</td><td>Вентиляция коробки передач</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009950900" title="Клик — скопировать">A 000 995 09 00</td><td>Крепеж (трубо)провода (LEITUNGSBEFESTIGER)</td><td>2</td><td></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1673515000" title="Клик — скопировать">A 167 351 50 00</td><td>Крышка сапуна (ENTLUEFTERKAPPE)</td><td>1</td><td>Сапун корпуса коробки передач</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1673500301" title="Клик — скопировать">A 167 350 03 01</td><td>Редуктор заднего моста (HINTERACHSGETRIEBE)</td><td>1</td><td>1: 3.461 [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1663510300" title="Клик — скопировать">A 166 351 03 00</td><td>- Запорная крышка (ABSCHLUSSDECKEL)</td><td>1</td><td>К картеру заднего моста</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910105010011" title="Клик — скопировать">N 910105 010011</td><td>- Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>8</td><td>Крышка к корпусу; M10X40</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1663510265" title="Клик — скопировать">A 166 351 02 65</td><td>- Воздушный патрубок (ENTLUEFTUNGSSTUTZEN)</td><td>1</td><td>К редуктору заднего моста</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2059970246" title="Клик — скопировать">A 205 997 02 46</td><td>- Сальник с пылезащ. кром. (RADIALWELLENDICHTRING)</td><td>2</td><td>Приводной вал слева и справа</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0009977932" title="Клик — скопировать">A 000 997 79 32</td><td>- Резьбовая пробка (VERSCHLUSSSCHRAUBE)</td><td>2</td><td>К картеру заднего моста</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0159974846" title="Клик — скопировать">A 015 997 48 46</td><td>- Радиальный сальник (RADIALWELLENDICHTRING)</td><td>1</td><td>К картеру заднего моста</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2223507500" title="Клик — скопировать">A 222 350 75 00</td><td>- Фланец шарнира (GELENKFLANSCH)</td><td>1</td><td>К картеру заднего моста</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2133530500" title="Клик — скопировать">A 213 353 05 00</td><td>- Гайка редукт. задн. моста (BUNDMUTTER HA-GETRIEBE)</td><td>1</td><td>Фланец шарнира</td><td class="restr" data-expr="M654+M20+M014+M006+9U5+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U5+(9U8/9U8+557)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2133530500" title="Клик — скопировать">A 213 353 05 00</td><td>- Гайка редукт. задн. моста (BUNDMUTTER HA-GETRIEBE)</td><td>1</td><td>Фланец шарнира</td><td class="restr" data-expr="M654+M20+M014+M006+9U4+(9U8/9U8+557)"><span class="icode">M654+M20+M014+M006+9U4+(9U8/9U8+557)</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1673510300" title="Клик — скопировать">A 167 351 03 00</td><td>- Опора редуктора зад.моста (HINTERACHSGETRIEBELAGER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1673514000" title="Клик — скопировать">A 167 351 40 00</td><td>- Опора редуктора зад.моста (HINTERACHSGETRIEBELAGER)</td><td>1</td><td>HAG 183</td><td class="restr"></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A0009979811" title="Клик — скопировать">A 000 997 98 11</td><td>Угловой штуцер (WINKELSTUTZEN)</td><td>1</td><td>Сапун корпуса коробки передач 90°</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1660160000" title="Клик — скопировать">A 166 016 00 00</td><td>Вентиляционный шланг (ENTLUEFTUNGSSCHLAUCH)</td><td>1</td><td>Вентиляция коробки передач</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009950900" title="Клик — скопировать">A 000 995 09 00</td><td>Крепеж (трубо)провода (LEITUNGSBEFESTIGER)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1673515000" title="Клик — скопировать">A 167 351 50 00</td><td>Крышка сапуна (ENTLUEFTERKAPPE)</td><td>1</td><td>Сапун корпуса коробки передач</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

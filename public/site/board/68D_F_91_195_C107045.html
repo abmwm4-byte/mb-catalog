@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1079701730" title="Клик — скопировать">A 107 970 17 30</td><td>Подлокотник</td><td>1</td><td></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1079702030" title="Клик — скопировать">A 107 970 20 30</td><td>Подлокотник</td><td>1</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1079700520" title="Клик — скопировать">A 107 970 05 20</td><td>Вкладыш подшипника (BEARING SHELL)</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702047" title="Клик — скопировать">A 107 970 20 47</td><td>ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702047" title="Клик — скопировать">A 107 970 20 47</td><td>ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702247" title="Клик — скопировать">A 107 970 22 47</td><td>ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702247" title="Клик — скопировать">A 107 970 22 47</td><td>ОБИВКА</td><td>1</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1079700000" title="Клик — скопировать">A 107 970 00 00</td><td>Крепежный материал (MOUNTING MATERIAL)</td><td>1</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079700720" title="Клик — скопировать">A 107 970 07 20</td><td>- ПОДШИПНИК</td><td>-</td><td></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079700820" title="Клик — скопировать">A 107 970 08 20</td><td>- Подшипник (BEARING)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1079730237" title="Клик — скопировать">A 107 973 02 37</td><td>Проставочная труба (SPACER TUBE)</td><td>1</td><td></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N040621018211" title="Клик — скопировать">N 040621 018211</td><td>Изоляционный шланг</td><td>1</td><td></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1169840156" title="Клик — скопировать">A 116 984 01 56</td><td>Диск (WINDOW)</td><td>1</td><td></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1099900140" title="Клик — скопировать">A 109 990 01 40</td><td>Диск (WINDOW)</td><td>1</td><td></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1099870041" title="Клик — скопировать">A 109 987 00 41</td><td>Диск (WINDOW)</td><td>1</td><td></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1099900160" title="Клик — скопировать">A 109 990 01 60</td><td>гайка (NUT)</td><td>1</td><td></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N000933005036" title="Клик — скопировать">N 000933 005036</td><td>Винт</td><td>1</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1079730311" title="Клик — скопировать">A 107 973 03 11</td><td>- ПЛАСТИНА</td><td>-</td><td></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1079730511" title="Клик — скопировать">A 107 973 05 11</td><td>Защитная пластина (COVER PANEL)</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1079701730" title="Клик — скопировать">A 107 970 17 30</td><td>Подлокотник</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1079702030" title="Клик — скопировать">A 107 970 20 30</td><td>Подлокотник</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1079700520" title="Клик — скопировать">A 107 970 05 20</td><td>Вкладыш подшипника (BEARING SHELL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702047" title="Клик — скопировать">A 107 970 20 47</td><td>ОБИВКА</td><td>1</td><td>[821] UP TO END OF MODEL YEAR'82</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702047" title="Клик — скопировать">A 107 970 20 47</td><td>ОБИВКА</td><td>1</td><td>[830] FROM MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702247" title="Клик — скопировать">A 107 970 22 47</td><td>ОБИВКА</td><td>1</td><td>[821] UP TO END OF MODEL YEAR'82</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079702247" title="Клик — скопировать">A 107 970 22 47</td><td>ОБИВКА</td><td>1</td><td>[830] FROM MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1079700000" title="Клик — скопировать">A 107 970 00 00</td><td>Крепежный материал (MOUNTING MATERIAL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079700720" title="Клик — скопировать">A 107 970 07 20</td><td>- ПОДШИПНИК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079700820" title="Клик — скопировать">A 107 970 08 20</td><td>- Подшипник (BEARING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1079730237" title="Клик — скопировать">A 107 973 02 37</td><td>Проставочная труба (SPACER TUBE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N040621018211" title="Клик — скопировать">N 040621 018211</td><td>Изоляционный шланг</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1169840156" title="Клик — скопировать">A 116 984 01 56</td><td>Диск (WINDOW)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1099900140" title="Клик — скопировать">A 109 990 01 40</td><td>Диск (WINDOW)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1099870041" title="Клик — скопировать">A 109 987 00 41</td><td>Диск (WINDOW)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1099900160" title="Клик — скопировать">A 109 990 01 60</td><td>гайка (NUT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N000933005036" title="Клик — скопировать">N 000933 005036</td><td>Винт</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1079730311" title="Клик — скопировать">A 107 973 03 11</td><td>- ПЛАСТИНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1079730511" title="Клик — скопировать">A 107 973 05 11</td><td>Защитная пластина (COVER PANEL)</td><td>1</td><td>[800] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/79 024 028330 FEDERAL EXCEPT FOR 028114,  028229,  028262,  028279,  028323. 024 028374 FEDERAL EXCEPT FOR 028352 044 058371 FEDERAL EXCEPT FOR 057628,  057975,  058260,  058280,  058284,  058289,  058296,  058297,  058305,  058324-  058326,  058328,  058329,  058332, 058333,  058335-  058337,  058339-  058345,  058350-  058352,  058360,  058362,  058365,  058368. 044 058396 CALIFORNIA EXCEPT FOR 058211,  058331,  058348,  058353,  058355-  058357,  058361,  058363,  058367,  058371,  058376,  058379,  058389,  058391.</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

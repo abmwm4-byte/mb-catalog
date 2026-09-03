@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540302" title="Клик — скопировать">A 640 154 03 02</td><td>Генератор</td><td>1</td><td>Valeo</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540402" title="Клик — скопировать">A 640 154 04 02</td><td>Генератор</td><td>1</td><td>Valeo</td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540502" title="Клик — скопировать">A 640 154 05 02</td><td>Генератор (ALTERNATOR)</td><td>1</td><td>14V/140A VALEO</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0031544806" title="Клик — скопировать">A 003 154 48 06</td><td>- Регулятор-выключатель (REGULATOR SWITCH)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02; Valeo</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0001545304" title="Клик — скопировать">A 000 154 53 04</td><td>- Крышка (CAP)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02; Valeo</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500560" title="Клик — скопировать">A 640 150 05 60</td><td>- Ременный шкив</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500660" title="Клик — скопировать">A 640 150 06 60</td><td>- Ременный шкив (BELT PULLEY, POLY-V-BELT)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500760" title="Клик — скопировать">A 640 150 07 60</td><td>- Ременный шкив</td><td>1</td><td>ГЕНЕРАТОР</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500960" title="Клик — скопировать">A 640 150 09 60</td><td>- К-т шкива ремня (PARTS KIT, BELT PULLEY)</td><td>1</td><td>ГЕНЕРАТОР</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0019901850" title="Клик — скопировать">A 001 990 18 50</td><td>- Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>1</td><td>ШКИВ НА ГЕНЕРАТОРЕ; Valeo</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6601560024" title="Клик — скопировать">A 660 156 00 24</td><td>- Экранирующая крышка (SHIELDING CAP)</td><td>1</td><td>ГЕНЕРАТОР</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0005480472" title="Клик — скопировать">A 000 548 04 72</td><td>гайка (NUT)</td><td>1</td><td>ПРОВОД НА ГЕНЕРАТОРЕ КЛ. 30; M8</td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0015466135" title="Клик — скопировать">A 001 546 61 35</td><td>Защитный колпачок (PROTECTIVE CAP)</td><td>1</td><td>ЗАЩИТА ОТ ПРИКАСАН. ДЛЯ КЛЕММЫ 30, ГЕНЕРАТОР; M8</td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A1685456528" title="Клик — скопировать">A 168 545 65 28</td><td>Корпус (HOUSING)</td><td>1</td><td>ГЕНЕРАТОР G2; 2\-PIN SLK2.8</td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0525454026" title="Клик — скопировать">A 052 545 40 26</td><td>Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>ГЕНЕРАТОР G2; 2\-PIN SLK2.8</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0095458026" title="Клик — скопировать">A 009 545 80 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ГЕНЕРАТОР G2; 0.22\-0.35 MM2 SLK2.8 ELA</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005457180" title="Клик — скопировать">A 000 545 71 80</td><td>Уплотнительная прокладка (GASKET)</td><td>NB</td><td>ГЕНЕРАТОР G2; 1.1\-2.1 MM SLK2.8</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005457880" title="Клик — скопировать">A 000 545 78 80</td><td>Уплотнение (SEAL)</td><td>NB</td><td>ГЕНЕРАТОР G2; 5.2 MM MLK1.2/SLK2.8/LKS1.5</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005454984" title="Клик — скопировать">A 000 545 49 84</td><td>Адаптер (ADAPTER)</td><td>NB</td><td>ГЕНЕРАТОР G2</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540302" title="Клик — скопировать">A 640 154 03 02</td><td>Генератор</td><td>1</td><td>Valeo [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22.</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540402" title="Клик — скопировать">A 640 154 04 02</td><td>Генератор</td><td>1</td><td>Valeo [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22.</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6401540502" title="Клик — скопировать">A 640 154 05 02</td><td>Генератор (ALTERNATOR)</td><td>1</td><td>14V/140A VALEO [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22.</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0031544806" title="Клик — скопировать">A 003 154 48 06</td><td>- Регулятор-выключатель (REGULATOR SWITCH)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02; Valeo [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0001545304" title="Клик — скопировать">A 000 154 53 04</td><td>- Крышка (CAP)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02; Valeo</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500560" title="Клик — скопировать">A 640 150 05 60</td><td>- Ременный шкив</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02 [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22. [002382] ПОЖАЛУЙСТА, ВСЕГДА ИСПОЛЬЗУЙТЕ ЭКРАНИРУЮЩИЙ КОЛПАЧОК</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500660" title="Клик — скопировать">A 640 150 06 60</td><td>- Ременный шкив (BELT PULLEY, POLY-V-BELT)</td><td>1</td><td>ГЕНЕРАТОР TO A 640 154 05 02 [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22. [002382] ПОЖАЛУЙСТА, ВСЕГДА ИСПОЛЬЗУЙТЕ ЭКРАНИРУЮЩИЙ КОЛПАЧОК</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500760" title="Клик — скопировать">A 640 150 07 60</td><td>- Ременный шкив</td><td>1</td><td>ГЕНЕРАТОР [002008] ВНИМАНИЕ! СОБЛЮДАТЬ УКАЗАНИЯ В ДОК. TIPS В КОНСТР. ГР. 13.22. [002382] ПОЖАЛУЙСТА, ВСЕГДА ИСПОЛЬЗУЙТЕ ЭКРАНИРУЮЩИЙ КОЛПАЧОК</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6401500960" title="Клик — скопировать">A 640 150 09 60</td><td>- К-т шкива ремня (PARTS KIT, BELT PULLEY)</td><td>1</td><td>ГЕНЕРАТОР</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0019901850" title="Клик — скопировать">A 001 990 18 50</td><td>- Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>1</td><td>ШКИВ НА ГЕНЕРАТОРЕ; Valeo</td><td class="restr" data-expr="-910+-B01"><span class="icode">-910+-B01</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6601560024" title="Клик — скопировать">A 660 156 00 24</td><td>- Экранирующая крышка (SHIELDING CAP)</td><td>1</td><td>ГЕНЕРАТОР</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0005480472" title="Клик — скопировать">A 000 548 04 72</td><td>гайка (NUT)</td><td>1</td><td>ПРОВОД НА ГЕНЕРАТОРЕ КЛ. 30; M8</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0015466135" title="Клик — скопировать">A 001 546 61 35</td><td>Защитный колпачок (PROTECTIVE CAP)</td><td>1</td><td>ЗАЩИТА ОТ ПРИКАСАН. ДЛЯ КЛЕММЫ 30, ГЕНЕРАТОР; M8</td><td class="restr" data-expr="-B01"><span class="icode">-B01</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A1685456528" title="Клик — скопировать">A 168 545 65 28</td><td>Корпус (HOUSING)</td><td>1</td><td>ГЕНЕРАТОР G2; 2\-PIN SLK2.8</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0525454026" title="Клик — скопировать">A 052 545 40 26</td><td>Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>ГЕНЕРАТОР G2; 2\-PIN SLK2.8</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0095458026" title="Клик — скопировать">A 009 545 80 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>ГЕНЕРАТОР G2; 0.22\-0.35 MM2 SLK2.8 ELA</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005457180" title="Клик — скопировать">A 000 545 71 80</td><td>Уплотнительная прокладка (GASKET)</td><td>NB</td><td>ГЕНЕРАТОР G2; 1.1\-2.1 MM SLK2.8</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005457880" title="Клик — скопировать">A 000 545 78 80</td><td>Уплотнение (SEAL)</td><td>NB</td><td>ГЕНЕРАТОР G2; 5.2 MM MLK1.2/SLK2.8/LKS1.5</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005454984" title="Клик — скопировать">A 000 545 49 84</td><td>Адаптер (ADAPTER)</td><td>NB</td><td>ГЕНЕРАТОР G2</td><td class="restr" data-expr="M640+-B01"><span class="icode">M640+-B01</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

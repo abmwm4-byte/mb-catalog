@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009971730" title="Клик — скопировать">A 000 997 17 30</td><td>	- LOCKING SCREW</td><td>3</td><td>для  CORE HOLES</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1800530732" title="Клик — скопировать">A 180 053 07 32</td><td>	- Кольцо седла клапана</td><td>6</td><td>для  EXHAUST</td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A1800160229" title="Клик — скопировать">A 180 016 02 29</td><td>	- Соединительный штуцер</td><td>1</td><td>для  THERMOSTAT</td></tr><tr data-pos="73b"><td>73b</td><td class="pn" data-raw="A1809901640" title="Клик — скопировать">A 180 990 16 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1210500024" title="Клик — скопировать">A 121 050 00 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1210501624" title="Клик — скопировать">A 121 050 16 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1869900940" title="Клик — скопировать">A 186 990 09 40</td><td>ШАЙБА</td><td>8</td><td>для  CYLINDER HEAD AT CYLINDER CRANKCASE</td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1800160338" title="Клик — скопировать">A 180 016 03 38</td><td>Скоба</td><td>3</td><td>для  CYLINDER HEAD COVER</td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1800101130" title="Клик — скопировать">A 180 010 11 30</td><td>CYLINDER HEAD COVER</td><td>1</td><td></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1365010054" title="Клик — скопировать">A 136 501 00 54</td><td>	- Запорная крышка</td><td>1</td><td>для  OIL FILLING IN</td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1809970240" title="Клик — скопировать">A 180 997 02 40</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>для  SCREWED COVER</td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1800100470" title="Клик — скопировать">A 180 010 04 70</td><td>	- ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1809950701" title="Клик — скопировать">A 180 995 07 01</td><td>	- TUBE CLAMP</td><td>2</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER UP TO ENGINE 6503167</td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1809970272" title="Клик — скопировать">A 180 997 02 72</td><td>	- Штуцер</td><td>1</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER</td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1800160280" title="Клик — скопировать">A 180 016 02 80</td><td>	- GASKET</td><td>1</td><td>для  CYLINDER HEAD COVER</td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1800100370" title="Клик — скопировать">A 180 010 03 70</td><td>ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800530832" title="Клик — скопировать">A 180 053 08 32</td><td>	- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>6</td><td>RING, DIA. 40.3\-MM для  EXHAUST REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901740" title="Клик — скопировать">A 180 990 17 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901840" title="Клик — скопировать">A 180 990 18 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500624" title="Клик — скопировать">A 121 050 06 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. = 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500224" title="Клик — скопировать">A 121 050 02 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500324" title="Клик — скопировать">A 121 050 03 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502124" title="Клик — скопировать">A 121 050 21 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502224" title="Клик — скопировать">A 121 050 22 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502324" title="Клик — скопировать">A 121 050 23 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800100570" title="Клик — скопировать">A 180 010 05 70</td><td>BREATHER TUBE</td><td>1</td><td>EXPORT, SPECIAL REQUEST (TROPICAL DESIGN)</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009971730" title="Клик — скопировать">A 000 997 17 30</td><td>	- LOCKING SCREW</td><td>3</td><td>для  CORE HOLES</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1800530732" title="Клик — скопировать">A 180 053 07 32</td><td>	- Кольцо седла клапана</td><td>6</td><td>для  EXHAUST</td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A1800160229" title="Клик — скопировать">A 180 016 02 29</td><td>	- Соединительный штуцер</td><td>1</td><td>для  THERMOSTAT</td><td class="restr"></td></tr><tr data-pos="73b"><td>73b</td><td class="pn" data-raw="A1809901640" title="Клик — скопировать">A 180 990 16 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1210500024" title="Клик — скопировать">A 121 050 00 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1210501624" title="Клик — скопировать">A 121 050 16 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1869900940" title="Клик — скопировать">A 186 990 09 40</td><td>ШАЙБА</td><td>8</td><td>для  CYLINDER HEAD AT CYLINDER CRANKCASE</td><td class="restr"></td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1800160338" title="Клик — скопировать">A 180 016 03 38</td><td>Скоба</td><td>3</td><td>для  CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1800101130" title="Клик — скопировать">A 180 010 11 30</td><td>CYLINDER HEAD COVER</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1365010054" title="Клик — скопировать">A 136 501 00 54</td><td>	- Запорная крышка</td><td>1</td><td>для  OIL FILLING IN</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1809970240" title="Клик — скопировать">A 180 997 02 40</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>для  SCREWED COVER</td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1800100470" title="Клик — скопировать">A 180 010 04 70</td><td>	- ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1809950701" title="Клик — скопировать">A 180 995 07 01</td><td>	- TUBE CLAMP</td><td>2</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER UP TO ENGINE 6503167</td><td class="restr"></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1809970272" title="Клик — скопировать">A 180 997 02 72</td><td>	- Штуцер</td><td>1</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1800160280" title="Клик — скопировать">A 180 016 02 80</td><td>	- GASKET</td><td>1</td><td>для  CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1800100370" title="Клик — скопировать">A 180 010 03 70</td><td>ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800530832" title="Клик — скопировать">A 180 053 08 32</td><td>	- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>6</td><td>RING, DIA. 40.3\-MM для  EXHAUST REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901740" title="Клик — скопировать">A 180 990 17 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901840" title="Клик — скопировать">A 180 990 18 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500624" title="Клик — скопировать">A 121 050 06 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. = 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500224" title="Клик — скопировать">A 121 050 02 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500324" title="Клик — скопировать">A 121 050 03 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502124" title="Клик — скопировать">A 121 050 21 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502224" title="Клик — скопировать">A 121 050 22 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502324" title="Клик — скопировать">A 121 050 23 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800100570" title="Клик — скопировать">A 180 010 05 70</td><td>BREATHER TUBE</td><td>1</td><td>EXPORT, SPECIAL REQUEST (TROPICAL DESIGN)</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 26 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

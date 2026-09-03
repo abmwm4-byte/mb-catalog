@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2035402107" title="Клик — скопировать">A 203 540 21 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ТОПЛИВНЫЙ НАСОС\-ДОЗАТОР</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0355458928" title="Клик — скопировать">A 035 545 89 28</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ШТЕКЕРНОЕ СОЕДИНЕНИЕ ДОЗИРУЮЩЕГО ТОПЛИВНОГО НАСОСА X74; 2\-PIN MQS</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005404605" title="Клик — скопировать">A 000 540 46 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 MQS SN</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>АВТОНОМНЫЙ ОТОПИТЕЛЬ</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>РАЗВЕТВ.УДАЛ.ПУСКА АВТОНОМ.ОТОПИТ.</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>РАЗВЕТВ.УДАЛ.ПУСКА АВТОНОМ.ОТОПИТ.</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0305452828" title="Клик — скопировать">A 030 545 28 28</td><td>- Штекер (PLUG)</td><td>1</td><td>ШИНА CAN B, СПРАВА X30/4; 2\-PIN MQS</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0325451928" title="Клик — скопировать">A 032 545 19 28</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ШТЕКЕРНОЕ СОЕДИНЕНИЕ ДОЗИРУЮЩЕГО ТОПЛИВНОГО НАСОСА X74; 2\-PIN MQS</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0015455140" title="Клик — скопировать">A 001 545 51 40</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>TELESTART CONTROL MODULE A6/1; 6\-PIN</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0005459403" title="Клик — скопировать">A 000 545 94 03</td><td>- Крышка</td><td>1</td><td>A6/1</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0005404505" title="Клик — скопировать">A 000 540 45 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.5 MM2 MQS SN</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0005404605" title="Клик — скопировать">A 000 540 46 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 MQS SN</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0025467940" title="Клик — скопировать">A 002 546 79 40</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>РАСПРЕДЕЛИТЕЛЬ ПОТЕНЦИАЛОВ CAN B X30/4; 22\-PIN</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2218200097" title="Клик — скопировать">A 221 820 00 97</td><td>Электрооборудование (ELECTRICAL SYSTEM)</td><td>1</td><td>ДОП. ОТОПЛЕНИЕ</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2218200497" title="Клик — скопировать">A 221 820 04 97</td><td>Передатчик (TRANSMITTER)</td><td>1</td><td>ДОП. ОТОПЛЕНИЕ</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N000000000995" title="Клик — скопировать">N 000000 000995</td><td>- Аккумуляторная батарея</td><td>2</td><td>ПЕРЕДАТОЧНОЕ УСТРОЙСТВО; IEC 86\-MN 21</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2035402107" title="Клик — скопировать">A 203 540 21 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ТОПЛИВНЫЙ НАСОС\-ДОЗАТОР</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0355458928" title="Клик — скопировать">A 035 545 89 28</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ШТЕКЕРНОЕ СОЕДИНЕНИЕ ДОЗИРУЮЩЕГО ТОПЛИВНОГО НАСОСА X74; 2\-PIN MQS</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005404605" title="Клик — скопировать">A 000 540 46 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 MQS SN [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>АВТОНОМНЫЙ ОТОПИТЕЛЬ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>РАЗВЕТВ.УДАЛ.ПУСКА АВТОНОМ.ОТОПИТ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="228+(273/386/388)+055"><span class="icode">228+(273/386/388)+055</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2095406407" title="Клик — скопировать">A 209 540 64 07</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>РАЗВЕТВ.УДАЛ.ПУСКА АВТОНОМ.ОТОПИТ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="228+(273/386/388)"><span class="icode">228+(273/386/388)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0305452828" title="Клик — скопировать">A 030 545 28 28</td><td>- Штекер (PLUG)</td><td>1</td><td>ШИНА CAN B, СПРАВА X30/4; 2\-PIN MQS</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0325451928" title="Клик — скопировать">A 032 545 19 28</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ШТЕКЕРНОЕ СОЕДИНЕНИЕ ДОЗИРУЮЩЕГО ТОПЛИВНОГО НАСОСА X74; 2\-PIN MQS</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0015455140" title="Клик — скопировать">A 001 545 51 40</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>TELESTART CONTROL MODULE A6/1; 6\-PIN</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0005459403" title="Клик — скопировать">A 000 545 94 03</td><td>- Крышка</td><td>1</td><td>A6/1</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0005404505" title="Клик — скопировать">A 000 540 45 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.5 MM2 MQS SN [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0005404605" title="Клик — скопировать">A 000 540 46 05</td><td>- Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 MQS SN [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0025467940" title="Клик — скопировать">A 002 546 79 40</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>РАСПРЕДЕЛИТЕЛЬ ПОТЕНЦИАЛОВ CAN B X30/4; 22\-PIN</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2218200097" title="Клик — скопировать">A 221 820 00 97</td><td>Электрооборудование (ELECTRICAL SYSTEM)</td><td>1</td><td>ДОП. ОТОПЛЕНИЕ</td><td class="restr" data-expr="228+055"><span class="icode">228+055</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2218200497" title="Клик — скопировать">A 221 820 04 97</td><td>Передатчик (TRANSMITTER)</td><td>1</td><td>ДОП. ОТОПЛЕНИЕ</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N000000000995" title="Клик — скопировать">N 000000 000995</td><td>- Аккумуляторная батарея</td><td>2</td><td>ПЕРЕДАТОЧНОЕ УСТРОЙСТВО; IEC 86\-MN 21</td><td class="restr" data-expr="228"><span class="icode">228</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100095" title="Клик — скопировать">A 246 310 00 95</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО С УМЕНЬШЕННОЙ НАГРУЗКОЙ (МАКС. 400 КГ)</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100500" title="Клик — скопировать">A 246 310 05 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО С УМЕНЬШЕННОЙ НАГРУЗКОЙ (МАКС. 400 КГ)</td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100095" title="Клик — скопировать">A 246 310 00 95</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100500" title="Клик — скопировать">A 246 310 05 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100600" title="Клик — скопировать">A 246 310 06 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1695849617" title="Клик — скопировать">A 169 584 96 17</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>ПОНИЖЕННАЯ МАССА ПРИЦЕПА</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2463100058" title="Клик — скопировать">A 246 310 00 58</td><td>Консоль (CONSOLE)</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019912898" title="Клик — скопировать">A 001 991 28 98</td><td>Скоба декоративной планки (TRIM STRIP CLIP)</td><td>3</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009913032" title="Клик — скопировать">A 000 991 30 32</td><td>Вытяжная заклепка (BLIND RIVET)</td><td>3</td><td>4,8MM</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465000064" title="Клик — скопировать">A 246 500 00 64</td><td>Вентилятор (FAN)</td><td>1</td><td>КРОМЕ А/М С ТЯГОВО\-СЦЕПНЫМ УСТРОЙСТВОМ С УМЕНЬШЕННОЙ НАГРУЗКОЙ</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465400083" title="Клик — скопировать">A 246 540 00 83</td><td>Поворотная кнопка (ROTARY KNOB)</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0049903600" title="Клик — скопировать">A 004 990 36 00</td><td>Винт с 6-гр.гол. и шайбой (HEXAGON HEAD SCREW)</td><td>2</td><td>M12X1,5X47,5</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000003275" title="Клик — скопировать">N 000000 003275</td><td>Гайка (NUT)</td><td>8</td><td>M10</td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2469000316" title="Клик — скопировать">A 246 900 03 16</td><td>Блок управления (CONTROL UNIT)</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465402001" title="Клик — скопировать">A 246 540 20 01</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2468853900" title="Клик — скопировать">A 246 885 39 00</td><td>Облицовка бампера (TRIM, BUMPER)</td><td>1</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2468854125" title="Клик — скопировать">A 246 885 41 25</td><td>Облицовка бампера (TRIM, BUMPER)</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100095" title="Клик — скопировать">A 246 310 00 95</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО С УМЕНЬШЕННОЙ НАГРУЗКОЙ (МАКС. 400 КГ) Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)"><span class="icode">(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100500" title="Клик — скопировать">A 246 310 05 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО С УМЕНЬШЕННОЙ НАГРУЗКОЙ (МАКС. 400 КГ) Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)"><span class="icode">(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100095" title="Клик — скопировать">A 246 310 00 95</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)"><span class="icode">(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100500" title="Клик — скопировать">A 246 310 05 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)"><span class="icode">(802/803/804/805+-055)+-(460/494/550/B56/B62/4U3)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A2463100600" title="Клик — скопировать">A 246 310 06 00</td><td>Тягово-сцепное устройство (TRAILER HITCH)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(805+055/806/807/808)+(M607+-4U3/M651/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807/808)+(M607+-4U3/M651/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ПРИ ДОП. УСТАНОВКЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1695849617" title="Клик — скопировать">A 169 584 96 17</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>ПОНИЖЕННАЯ МАССА ПРИЦЕПА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2463100058" title="Клик — скопировать">A 246 310 00 58</td><td>Консоль (CONSOLE)</td><td>1</td><td></td><td class="restr" data-expr="(802/803/804/805+-055)"><span class="icode">(802/803/804/805+-055)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019912898" title="Клик — скопировать">A 001 991 28 98</td><td>Скоба декоративной планки (TRIM STRIP CLIP)</td><td>3</td><td></td><td class="restr" data-expr="(802/803/804/805+-055)"><span class="icode">(802/803/804/805+-055)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009913032" title="Клик — скопировать">A 000 991 30 32</td><td>Вытяжная заклепка (BLIND RIVET)</td><td>3</td><td>4,8MM</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465000064" title="Клик — скопировать">A 246 500 00 64</td><td>Вентилятор (FAN)</td><td>1</td><td>КРОМЕ А/М С ТЯГОВО\-СЦЕПНЫМ УСТРОЙСТВОМ С УМЕНЬШЕННОЙ НАГРУЗКОЙ</td><td class="restr" data-expr="M270+M16+-M013/M270+M16+M013+429"><span class="icode">M270+M16+-M013/M270+M16+M013+429</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465400083" title="Клик — скопировать">A 246 540 00 83</td><td>Поворотная кнопка (ROTARY KNOB)</td><td>1</td><td></td><td class="restr" data-expr="(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0049903600" title="Клик — скопировать">A 004 990 36 00</td><td>Винт с 6-гр.гол. и шайбой (HEXAGON HEAD SCREW)</td><td>2</td><td>M12X1,5X47,5</td><td class="restr" data-expr="(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000003275" title="Клик — скопировать">N 000000 003275</td><td>Гайка (NUT)</td><td>8</td><td>M10</td><td class="restr" data-expr="(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2469000316" title="Клик — скопировать">A 246 900 03 16</td><td>Блок управления (CONTROL UNIT)</td><td>1</td><td>[672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО</td><td class="restr" data-expr="(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807/808/809/800)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2465402001" title="Клик — скопировать">A 246 540 20 01</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="(805+055/806/807)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)"><span class="icode">(805+055/806/807)+(M651/M607+-4U3/M270)+-(459/460/494/550/830/B56)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2468853900" title="Клик — скопировать">A 246 885 39 00</td><td>Облицовка бампера (TRIM, BUMPER)</td><td>1</td><td></td><td class="restr" data-expr="(805+055/806/807/808/809/800)+772"><span class="icode">(805+055/806/807/808/809/800)+772</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2468854125" title="Клик — скопировать">A 246 885 41 25</td><td>Облицовка бампера (TRIM, BUMPER)</td><td>1</td><td></td><td class="restr" data-expr="(805+055/806/807/808/809/800)+(P55/P59)+-(M20/M22/772)"><span class="icode">(805+055/806/807/808/809/800)+(P55/P59)+-(M20/M22/772)</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 18 · подписано на схемах: 6 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

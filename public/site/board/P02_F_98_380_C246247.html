@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008900294" title="Клик — скопировать">A 000 890 02 94</td><td>Стяжной ремень (LASHING STRAP)</td><td>1</td><td>5000 X 25 MM</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005830361" title="Клик — скопировать">A 000 583 03 61</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>Комплект из 2 светоотражающих жилетов</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823021" title="Клик — скопировать">A 000 982 30 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009822921" title="Клик — скопировать">A 000 982 29 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823121" title="Клик — скопировать">A 000 982 31 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823221" title="Клик — скопировать">A 000 982 32 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823421" title="Клик — скопировать">A 000 982 34 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823321" title="Клик — скопировать">A 000 982 33 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824503" title="Клик — скопировать">A 000 982 45 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824803" title="Клик — скопировать">A 000 982 48 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009820321" title="Клик — скопировать">A 000 982 03 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С карманом</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0008992561" title="Клик — скопировать">A 000 899 25 61</td><td>Сумка (BAG)</td><td>1</td><td>Для домкрата</td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1668205000" title="Клик — скопировать">A 166 820 50 00</td><td>Монт.ком. сист. эк.вызова</td><td>1</td><td>E\-Call</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0019829708" title="Клик — скопировать">A 001 982 97 08</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова</td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009828610" title="Клик — скопировать">A 000 982 86 10</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова</td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1669890000" title="Клик — скопировать">A 166 989 00 00</td><td>Отрез клейкой пленки (ADHESIVE FILM PRECUT PART)</td><td>1</td><td></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A9099890000" title="Клик — скопировать">A 909 989 00 00</td><td>TS Самокл. заготовка (PARTS KIT, PRECUT PART)</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008900294" title="Клик — скопировать">A 000 890 02 94</td><td>Стяжной ремень (LASHING STRAP)</td><td>1</td><td>5000 X 25 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005830361" title="Клик — скопировать">A 000 583 03 61</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>Комплект из 2 светоотражающих жилетов [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td><td class="restr" data-expr="(494/460/919L/625)"><span class="icode">(494/460/919L/625)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823021" title="Клик — скопировать">A 000 982 30 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL/2XXL/831L/873L/527L/875L)+-(512L/549L)"><span class="icode">(5XXL/2XXL/831L/873L/527L/875L)+-(512L/549L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009822921" title="Клик — скопировать">A 000 982 29 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(494/460)"><span class="icode">(494/460)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823121" title="Клик — скопировать">A 000 982 31 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL+(515L/517L/518L/528L/551L/571L)/601L/625L/671L/771L/825L/837L/879L)+-(512L/549L)"><span class="icode">(5XXL+(515L/517L/518L/528L/551L/571L)/601L/625L/671L/771L/825L/837L/879L)+-(512L/549L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823221" title="Клик — скопировать">A 000 982 32 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL+(537L/539L)/821L/822L/823L/824L/855L)"><span class="icode">(5XXL+(537L/539L)/821L/822L/823L/824L/855L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823421" title="Клик — скопировать">A 000 982 34 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(9XXL/625/919L)"><span class="icode">(9XXL/625/919L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823321" title="Клик — скопировать">A 000 982 33 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="830"><span class="icode">830</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824503" title="Клик — скопировать">A 000 982 45 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="623"><span class="icode">623</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824803" title="Клик — скопировать">A 000 982 48 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="498+-(512L/549L)"><span class="icode">498+-(512L/549L)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009820321" title="Клик — скопировать">A 000 982 03 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С карманом [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(5XXL/2XXL/831L/873L/527L/875L)+-830"><span class="icode">(5XXL/2XXL/831L/873L/527L/875L)+-830</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0008992561" title="Клик — скопировать">A 000 899 25 61</td><td>Сумка (BAG)</td><td>1</td><td>Для домкрата</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1668205000" title="Клик — скопировать">A 166 820 50 00</td><td>Монт.ком. сист. эк.вызова</td><td>1</td><td>E\-Call</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0019829708" title="Клик — скопировать">A 001 982 97 08</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009828610" title="Клик — скопировать">A 000 982 86 10</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1669890000" title="Клик — скопировать">A 166 989 00 00</td><td>Отрез клейкой пленки (ADHESIVE FILM PRECUT PART)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A9099890000" title="Клик — скопировать">A 909 989 00 00</td><td>TS Самокл. заготовка (PARTS KIT, PRECUT PART)</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

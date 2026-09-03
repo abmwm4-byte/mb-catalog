@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0005450527" title="Клик — скопировать">A 000 545 05 27</td><td>Преобразователь давления (PRESSURE TRANSDUCER)</td><td>1</td><td>УПРАВЛ. КОМПРЕСС.</td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0005450427" title="Клик — скопировать">A 000 545 04 27</td><td>Преобразователь давления (PRESSURE TRANSDUCER)</td><td>1</td><td>УПРАВЛ. КЛАПАНА,СЛЕВА</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,ПИТАЮЩИЙ ВАКУУМ AGR</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,АТМОСФЕР.ДАВЛЕНИЕ AGR</td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,УПРАВЛЯЮЩ.ВАКУУМ</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A6110780181" title="Клик — скопировать">A 611 078 01 81</td><td>Шланг (HOSE)</td><td>1</td><td>НА ВАКУУМ.КАМЕРЕ,РЕГУЛИР.НАПРАВЛ.ЛОПАТКИ; 5.5 MM</td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1170780181" title="Клик — скопировать">A 117 078 01 81</td><td>Шланг</td><td>1</td><td>НА ТРАНСФОРМ.,СПРАВА</td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1170780181" title="Клик — скопировать">A 117 078 01 81</td><td>Шланг</td><td>1</td><td>НА ТРАНСФОРМ.,СЛЕВА</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6179970882" title="Клик — скопировать">A 617 997 08 82</td><td>Шланг (HOSE)</td><td>NB</td><td>10X5.5</td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6179970882" title="Клик — скопировать">A 617 997 08 82</td><td>Шланг (HOSE)</td><td>NB</td><td>AGR; 10X5.5</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К ТУРБОНАГНЕТ.; 6mm</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К СМЕСИТ.КОРПУСУ; 6mm</td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К ТУРБОНАГНЕТ. AGR; 6mm</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0000780956" title="Клик — скопировать">A 000 078 09 56</td><td>Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td>AGR</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0000780956" title="Клик — скопировать">A 000 078 09 56</td><td>Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A6119970140" title="Клик — скопировать">A 611 997 01 40</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>НА ВЕНТИЛ.ФИЛЬТРЕ,СПРАВА</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N040621012200" title="Клик — скопировать">N 040621 012200</td><td>Изоляционный шланг (INSULATING TUBING)</td><td>NB</td><td>280mm</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2035452040" title="Клик — скопировать">A 203 545 20 40</td><td>Держатель (HOLDER)</td><td>1</td><td>К ЛОНЖЕРОНУ СЛЕВА</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N000000001022" title="Клик — скопировать">N 000000 001022</td><td>Шуруп (TAPPING SCREW)</td><td>2</td><td>КРОНШТЕЙН К ЛОНЖЕРОНУ; 6.3X13</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A6110780290" title="Клик — скопировать">A 611 078 02 90</td><td>Бак (CONTAINER)</td><td>1</td><td></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0049979890" title="Клик — скопировать">A 004 997 98 90</td><td>Кабельная стяжка (CABLE TIE)</td><td>1</td><td>ШЛАНГ НА ЖГУТЕ ПРОВОДКИ; 3.4 X 375 MM</td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009959006" title="Клик — скопировать">A 000 995 90 06</td><td>Кабельная стяжка (PARTS KIT, CABLE STRAP)</td><td>1</td><td>ШЛАНГ НА ЖГУТЕ ПРОВОДКИ; 310X5mm</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0005450527" title="Клик — скопировать">A 000 545 05 27</td><td>Преобразователь давления (PRESSURE TRANSDUCER)</td><td>1</td><td>УПРАВЛ. КОМПРЕСС.</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0005450427" title="Клик — скопировать">A 000 545 04 27</td><td>Преобразователь давления (PRESSURE TRANSDUCER)</td><td>1</td><td>УПРАВЛ. КЛАПАНА,СЛЕВА</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,ПИТАЮЩИЙ ВАКУУМ AGR</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,АТМОСФЕР.ДАВЛЕНИЕ AGR</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6020781181" title="Клик — скопировать">A 602 078 11 81</td><td>Шланг (HOSE)</td><td>1</td><td>ТРАНСФОРМ.,УПРАВЛЯЮЩ.ВАКУУМ</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A6110780181" title="Клик — скопировать">A 611 078 01 81</td><td>Шланг (HOSE)</td><td>1</td><td>НА ВАКУУМ.КАМЕРЕ,РЕГУЛИР.НАПРАВЛ.ЛОПАТКИ; 5.5 MM</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1170780181" title="Клик — скопировать">A 117 078 01 81</td><td>Шланг</td><td>1</td><td>НА ТРАНСФОРМ.,СПРАВА</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1170780181" title="Клик — скопировать">A 117 078 01 81</td><td>Шланг</td><td>1</td><td>НА ТРАНСФОРМ.,СЛЕВА</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6179970882" title="Клик — скопировать">A 617 997 08 82</td><td>Шланг (HOSE)</td><td>NB</td><td>10X5.5 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6179970882" title="Клик — скопировать">A 617 997 08 82</td><td>Шланг (HOSE)</td><td>NB</td><td>AGR; 10X5.5 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К ТУРБОНАГНЕТ.; 6mm</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К СМЕСИТ.КОРПУСУ; 6mm</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6030780047" title="Клик — скопировать">A 603 078 00 47</td><td>Адаптер (ADAPTER)</td><td>1</td><td>ШЛАНГ К ТУРБОНАГНЕТ. AGR; 6mm</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0000780956" title="Клик — скопировать">A 000 078 09 56</td><td>Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td>AGR</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0000780956" title="Клик — скопировать">A 000 078 09 56</td><td>Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A6119970140" title="Клик — скопировать">A 611 997 01 40</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>НА ВЕНТИЛ.ФИЛЬТРЕ,СПРАВА</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N040621012200" title="Клик — скопировать">N 040621 012200</td><td>Изоляционный шланг (INSULATING TUBING)</td><td>NB</td><td>280mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2035452040" title="Клик — скопировать">A 203 545 20 40</td><td>Держатель (HOLDER)</td><td>1</td><td>К ЛОНЖЕРОНУ СЛЕВА</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N000000001022" title="Клик — скопировать">N 000000 001022</td><td>Шуруп (TAPPING SCREW)</td><td>2</td><td>КРОНШТЕЙН К ЛОНЖЕРОНУ; 6.3X13</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A6110780290" title="Клик — скопировать">A 611 078 02 90</td><td>Бак (CONTAINER)</td><td>1</td><td></td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0049979890" title="Клик — скопировать">A 004 997 98 90</td><td>Кабельная стяжка (CABLE TIE)</td><td>1</td><td>ШЛАНГ НА ЖГУТЕ ПРОВОДКИ; 3.4 X 375 MM</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009959006" title="Клик — скопировать">A 000 995 90 06</td><td>Кабельная стяжка (PARTS KIT, CABLE STRAP)</td><td>1</td><td>ШЛАНГ НА ЖГУТЕ ПРОВОДКИ; 310X5mm</td><td class="restr" data-expr="M612+M27"><span class="icode">M612+M27</span></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 22 · подписано на схемах: 22 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

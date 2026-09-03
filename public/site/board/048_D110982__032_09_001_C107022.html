@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 6
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="39"><td>39</td><td class="pn" data-raw="A1100940582" title="Клик — скопировать">A 110 094 05 82</td><td>ШЛАНГ</td><td>1</td><td></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1179970190" title="Клик — скопировать">A 117 997 01 90</td><td>Хомут для шланга</td><td>1</td><td></td></tr><tr data-pos="67"><td>67</td><td class="pn" data-raw="A1109972082" title="Клик — скопировать">A 110 997 20 82</td><td>ШЛАНГ</td><td>1</td><td>СОЕДИНЕНИЕ ВЕНТИЛЯЦИИ КАРТЕРА НА ВПУСКНОМ КОЛЛЕКТОРЕ</td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A0149971982" title="Клик — скопировать">A 014 997 19 82</td><td>ШЛАНГ</td><td>-</td><td></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="N900271012018" title="Клик — скопировать">N 900271 012018</td><td>Шланг</td><td>1</td><td></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="N916026016001" title="Клик — скопировать">N 916026 016001</td><td>Хомут</td><td>-</td><td>16\-24MM</td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>1</td><td>14\-24 MM</td></tr><tr data-pos="117"><td>117</td><td class="pn" data-raw="A1100940091" title="Клик — скопировать">A 110 094 00 91</td><td>МАНЖЕТА</td><td>1</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N916026080000" title="Клик — скопировать">N 916026 080000</td><td>Хомут</td><td>-</td><td></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A0069970890" title="Клик — скопировать">A 006 997 08 90</td><td>хомут</td><td>1</td><td>80\-100 MM</td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A0015428817" title="Клик — скопировать">A 001 542 88 17</td><td>ДАТЧИК</td><td>1</td><td>ДАТЧИК ТЕМПЕРАТУРЫ</td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="N916026090000" title="Клик — скопировать">N 916026 090000</td><td>Хомут</td><td>1</td><td>BOOT TO THROTTLE HOUSING</td></tr><tr data-pos="147"><td>147</td><td class="pn" data-raw="A1100940409" title="Клик — скопировать">A 110 094 04 09</td><td>ВПУСКНАЯ ТРУБА</td><td>1</td><td>IDLE AIR HOSE TO ELBOW</td></tr><tr data-pos="286"><td>286</td><td class="pn" data-raw="A0070946102" title="Клик — скопировать">A 007 094 61 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0010943704" title="Клик — скопировать">A 001 094 37 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td></tr><tr data-pos="336"><td>336</td><td class="pn" data-raw="A0000940485" title="Клик — скопировать">A 000 094 04 85</td><td>- Резиновый буфер</td><td>1</td><td></td></tr><tr data-pos="341"><td>341</td><td class="pn" data-raw="A0000941255" title="Клик — скопировать">A 000 094 12 55</td><td>- Крышка</td><td>2</td><td></td></tr><tr data-pos="349"><td>349</td><td class="pn" data-raw="A0000942079" title="Клик — скопировать">A 000 094 20 79</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="422"><td>422</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td></tr><tr data-pos="683"><td>683</td><td class="pn" data-raw="A1100940308" title="Клик — скопировать">A 110 094 03 08</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ADDITIONAL AIR LINE</td></tr><tr data-pos="695"><td>695</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>-</td><td>20\-27 MM</td></tr><tr data-pos="695"><td>695</td><td class="pn" data-raw="N000000000667" title="Клик — скопировать">N 000000 000667</td><td>Хомут</td><td>4</td><td>23\-30 MM</td></tr><tr data-pos="707"><td>707</td><td class="pn" data-raw="A1270940791" title="Клик — скопировать">A 127 094 07 91</td><td>МАНЖЕТА</td><td>3</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916002026100" title="Клик — скопировать">N 916002 026100</td><td>Хомут</td><td>-</td><td></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1101410306" title="Клик — скопировать">A 110 141 03 06</td><td>ТРУБКА</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="39"><td>39</td><td class="pn" data-raw="A1100940582" title="Клик — скопировать">A 110 094 05 82</td><td>ШЛАНГ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1179970190" title="Клик — скопировать">A 117 997 01 90</td><td>Хомут для шланга</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="67"><td>67</td><td class="pn" data-raw="A1109972082" title="Клик — скопировать">A 110 997 20 82</td><td>ШЛАНГ</td><td>1</td><td>СОЕДИНЕНИЕ ВЕНТИЛЯЦИИ КАРТЕРА НА ВПУСКНОМ КОЛЛЕКТОРЕ</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A0149971982" title="Клик — скопировать">A 014 997 19 82</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="N900271012018" title="Клик — скопировать">N 900271 012018</td><td>Шланг</td><td>1</td><td>[404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="N916026016001" title="Клик — скопировать">N 916026 016001</td><td>Хомут</td><td>-</td><td>16\-24MM</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A0059970190" title="Клик — скопировать">A 005 997 01 90</td><td>Хомут для шланга</td><td>1</td><td>14\-24 MM</td><td class="restr"></td></tr><tr data-pos="117"><td>117</td><td class="pn" data-raw="A1100940091" title="Клик — скопировать">A 110 094 00 91</td><td>МАНЖЕТА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="N916026080000" title="Клик — скопировать">N 916026 080000</td><td>Хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A0069970890" title="Клик — скопировать">A 006 997 08 90</td><td>хомут</td><td>1</td><td>80\-100 MM</td><td class="restr"></td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A0015428817" title="Клик — скопировать">A 001 542 88 17</td><td>ДАТЧИК</td><td>1</td><td>ДАТЧИК ТЕМПЕРАТУРЫ</td><td class="restr"></td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="N916026090000" title="Клик — скопировать">N 916026 090000</td><td>Хомут</td><td>1</td><td>BOOT TO THROTTLE HOUSING</td><td class="restr"></td></tr><tr data-pos="147"><td>147</td><td class="pn" data-raw="A1100940409" title="Клик — скопировать">A 110 094 04 09</td><td>ВПУСКНАЯ ТРУБА</td><td>1</td><td>IDLE AIR HOSE TO ELBOW [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="286"><td>286</td><td class="pn" data-raw="A0070946102" title="Клик — скопировать">A 007 094 61 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0010943704" title="Клик — скопировать">A 001 094 37 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="311"><td>311</td><td class="pn" data-raw="A0000945804" title="Клик — скопировать">A 000 094 58 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="336"><td>336</td><td class="pn" data-raw="A0000940485" title="Клик — скопировать">A 000 094 04 85</td><td>- Резиновый буфер</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="341"><td>341</td><td class="pn" data-raw="A0000941255" title="Клик — скопировать">A 000 094 12 55</td><td>- Крышка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="349"><td>349</td><td class="pn" data-raw="A0000942079" title="Клик — скопировать">A 000 094 20 79</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td><td class="restr"></td></tr><tr data-pos="422"><td>422</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>4</td><td>ВОЗДУШН.ФИЛЬТР НА КОЛЕСН.АРКЕ СБОКУ</td><td class="restr"></td></tr><tr data-pos="683"><td>683</td><td class="pn" data-raw="A1100940308" title="Клик — скопировать">A 110 094 03 08</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ADDITIONAL AIR LINE [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="695"><td>695</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>-</td><td>20\-27 MM</td><td class="restr"></td></tr><tr data-pos="695"><td>695</td><td class="pn" data-raw="N000000000667" title="Клик — скопировать">N 000000 000667</td><td>Хомут</td><td>4</td><td>23\-30 MM</td><td class="restr"></td></tr><tr data-pos="707"><td>707</td><td class="pn" data-raw="A1270940791" title="Клик — скопировать">A 127 094 07 91</td><td>МАНЖЕТА</td><td>3</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N916002026100" title="Клик — скопировать">N 916002 026100</td><td>Хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1101410306" title="Клик — скопировать">A 110 141 03 06</td><td>ТРУБКА</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 29 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

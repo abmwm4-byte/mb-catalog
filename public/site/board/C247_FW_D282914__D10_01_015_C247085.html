@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2829900103" title="Клик — скопировать">A 282 990 01 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>10</td><td></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2829900500" title="Клик — скопировать">A 282 990 05 00</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>10</td><td></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2829920029" title="Клик — скопировать">A 282 992 00 29</td><td>Центровочная втулка (FITTING SLEEVE)</td><td>1</td><td>Центрирование стартера</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2819910063" title="Клик — скопировать">A 281 991 00 63</td><td>Установочный штифт (FITTING PIN)</td><td>1</td><td>Центрирование стартера</td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A6079920529" title="Клик — скопировать">A 607 992 05 29</td><td>Центровочная втулка (FITTING SLEEVE)</td><td>2</td><td></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2829920000" title="Клик — скопировать">A 282 992 00 00</td><td>Центровочная втулка</td><td>2</td><td></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2819910052" title="Клик — скопировать">A 281 991 00 52</td><td>Цилиндрический шрифт (CYLINDER PIN)</td><td>2</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340108" title="Клик — скопировать">A 282 034 01 08</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340400" title="Клик — скопировать">A 282 034 04 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340400" title="Клик — скопировать">A 282 034 04 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340000" title="Клик — скопировать">A 282 034 00 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N910143008002" title="Клик — скопировать">N 910143 008002</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>5</td><td>M8X25</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2819910063" title="Клик — скопировать">A 281 991 00 63</td><td>Установочный штифт (FITTING PIN)</td><td>2</td><td></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822035000" title="Клик — скопировать">A 282 203 50 00</td><td>Выпускной штуцер ОЖ (COOLANT OUTLET FITTING)</td><td>1</td><td></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822030031" title="Клик — скопировать">A 282 203 00 31</td><td>Выпускной штуцер ОЖ</td><td>1</td><td></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822034900" title="Клик — скопировать">A 282 203 49 00</td><td>Выпускной штуцер ОЖ</td><td>1</td><td></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2821800400" title="Клик — скопировать">A 282 180 04 00</td><td>Масляная форсунка (OIL SPRAY NOZZLE)</td><td>2</td><td>Цилиндр 1 и 2</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2821800500" title="Клик — скопировать">A 282 180 05 00</td><td>Масляная форсунка (OIL SPRAY NOZZLE)</td><td>2</td><td>Цилиндры 3 и 4</td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>M6X16</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2820340080" title="Клик — скопировать">A 282 034 00 80</td><td>Профильное уплотнение (PROFILE SEAL)</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2820170200" title="Клик — скопировать">A 282 017 02 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2820170800" title="Клик — скопировать">A 282 017 08 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2000170300" title="Клик — скопировать">A 200 017 03 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2829900103" title="Клик — скопировать">A 282 990 01 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>10</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2829900500" title="Клик — скопировать">A 282 990 05 00</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>10</td><td></td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2829920029" title="Клик — скопировать">A 282 992 00 29</td><td>Центровочная втулка (FITTING SLEEVE)</td><td>1</td><td>Центрирование стартера</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2819910063" title="Клик — скопировать">A 281 991 00 63</td><td>Установочный штифт (FITTING PIN)</td><td>1</td><td>Центрирование стартера</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A6079920529" title="Клик — скопировать">A 607 992 05 29</td><td>Центровочная втулка (FITTING SLEEVE)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2829920000" title="Клик — скопировать">A 282 992 00 00</td><td>Центровочная втулка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2819910052" title="Клик — скопировать">A 281 991 00 52</td><td>Цилиндрический шрифт (CYLINDER PIN)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340108" title="Клик — скопировать">A 282 034 01 08</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340400" title="Клик — скопировать">A 282 034 04 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340400" title="Клик — скопировать">A 282 034 04 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2820340000" title="Клик — скопировать">A 282 034 00 00</td><td>Шейка подшипника (BEARING BRIDGE)</td><td>1</td><td></td><td class="restr" data-expr="A701+830"><span class="icode">A701+830</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N910143008002" title="Клик — скопировать">N 910143 008002</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>5</td><td>M8X25</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2819910063" title="Клик — скопировать">A 281 991 00 63</td><td>Установочный штифт (FITTING PIN)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822035000" title="Клик — скопировать">A 282 203 50 00</td><td>Выпускной штуцер ОЖ (COOLANT OUTLET FITTING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822030031" title="Клик — скопировать">A 282 203 00 31</td><td>Выпускной штуцер ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2822034900" title="Клик — скопировать">A 282 203 49 00</td><td>Выпускной штуцер ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2821800400" title="Клик — скопировать">A 282 180 04 00</td><td>Масляная форсунка (OIL SPRAY NOZZLE)</td><td>2</td><td>Цилиндр 1 и 2</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2821800500" title="Клик — скопировать">A 282 180 05 00</td><td>Масляная форсунка (OIL SPRAY NOZZLE)</td><td>2</td><td>Цилиндры 3 и 4</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>M6X16</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2820340080" title="Клик — скопировать">A 282 034 00 80</td><td>Профильное уплотнение (PROFILE SEAL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2820170200" title="Клик — скопировать">A 282 017 02 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2820170800" title="Клик — скопировать">A 282 017 08 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2000170300" title="Клик — скопировать">A 200 017 03 00</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

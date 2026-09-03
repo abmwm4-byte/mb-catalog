@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1674300900" title="Клик — скопировать">A 167 430 09 00</td><td>Усилитель торм.привода (BREMSKRAFTVERSTAERKER)</td><td>1</td><td></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1674302600" title="Клик — скопировать">A 167 430 26 00</td><td>Усилитель торм.привода (BREMSKRAFTVERSTAERKER)</td><td>1</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019986101" title="Клик — скопировать">A 001 998 61 01</td><td>- Уплотнительная втулка (DICHTTUELLE)</td><td>2</td><td>К усилителю тормозной системы</td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1774310000" title="Клик — скопировать">A 177 431 00 00</td><td>Уплотнение по периметру (DICHTUNG UMLAUFEND)</td><td>1</td><td>Аппарат тормозной системы к моторному щиту</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051904" title="Клик — скопировать">A 000 905 19 04</td><td>Датчик давления (DRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051407" title="Клик — скопировать">A 000 905 14 07</td><td>Датчик разрежения (UNTERDRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051407" title="Клик — скопировать">A 000 905 14 07</td><td>Датчик разрежения (UNTERDRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1674301100" title="Клик — скопировать">A 167 430 11 00</td><td>Главный тормозной цилиндр (HAUPTBREMSZYLINDER)</td><td>1</td><td>Комплект деталей</td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0019984501" title="Клик — скопировать">A 001 998 45 01</td><td>- Проходная втулка (DURCHFUEHRUNGSTUELLE)</td><td>2</td><td>Расширительный бачок на главном цилиндре</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0259973345" title="Клик — скопировать">A 025 997 33 45</td><td>- Кольцевое уплотнение (FLACHDICHTRING)</td><td>1</td><td>Главный тормозной цилиндр к усилителю тормозного привода</td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1774306700" title="Клик — скопировать">A 177 430 67 00</td><td>Ремк-т усилителя торм. (REP.SATZ BREMSVERSTAERKER)</td><td>1</td><td>Главный тормозной цилиндр к усилителю тормозного привода</td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0004312271" title="Клик — скопировать">A 000 431 22 71</td><td>болт (SCHRAUBE KURBELGEHAEUSE)</td><td>1</td><td>Расширительный бачок на главном цилиндре</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1674301200" title="Клик — скопировать">A 167 430 12 00</td><td>Расширительный бачок (AUSGLEICHSBEHAELTER)</td><td>1</td><td></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1774320000" title="Клик — скопировать">A 177 432 00 00</td><td>- Резьбовая крышка (SCHRAUBDECKEL)</td><td>1</td><td>Ресивер</td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1779050902" title="Клик — скопировать">A 177 905 09 02</td><td>- Датчик уровня (FUELLSTANDSSENSOR)</td><td>1</td><td>Бачок тормозной жидкости</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1674304000" title="Клик — скопировать">A 167 430 40 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От усилителя тормозного привода к разъёму</td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1674304100" title="Клик — скопировать">A 167 430 41 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От усилителя тормозного привода к разъёму</td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1674304500" title="Клик — скопировать">A 167 430 45 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От места разъема до впускного коллектора</td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0009950800" title="Клик — скопировать">A 000 995 08 00</td><td>Крепеж (трубо)провода (LEITUNGSBEFESTIGER)</td><td>1</td><td>Крепление вакуумного трубопровода</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1674300900" title="Клик — скопировать">A 167 430 09 00</td><td>Усилитель торм.привода (BREMSKRAFTVERSTAERKER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1674302600" title="Клик — скопировать">A 167 430 26 00</td><td>Усилитель торм.привода (BREMSKRAFTVERSTAERKER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019986101" title="Клик — скопировать">A 001 998 61 01</td><td>- Уплотнительная втулка (DICHTTUELLE)</td><td>2</td><td>К усилителю тормозной системы</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1774310000" title="Клик — скопировать">A 177 431 00 00</td><td>Уплотнение по периметру (DICHTUNG UMLAUFEND)</td><td>1</td><td>Аппарат тормозной системы к моторному щиту</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051904" title="Клик — скопировать">A 000 905 19 04</td><td>Датчик давления (DRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td><td class="restr" data-expr="ME05/93B/94B/M177/M256+M016"><span class="icode">ME05/93B/94B/M177/M256+M016</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051407" title="Клик — скопировать">A 000 905 14 07</td><td>Датчик разрежения (UNTERDRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td><td class="restr" data-expr="807/808"><span class="icode">807/808</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009051407" title="Клик — скопировать">A 000 905 14 07</td><td>Датчик разрежения (UNTERDRUCKSENSOR)</td><td>1</td><td>Датчик разрежения в усилителе тормозного привода</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1674301100" title="Клик — скопировать">A 167 430 11 00</td><td>Главный тормозной цилиндр (HAUPTBREMSZYLINDER)</td><td>1</td><td>Комплект деталей</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0019984501" title="Клик — скопировать">A 001 998 45 01</td><td>- Проходная втулка (DURCHFUEHRUNGSTUELLE)</td><td>2</td><td>Расширительный бачок на главном цилиндре</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0259973345" title="Клик — скопировать">A 025 997 33 45</td><td>- Кольцевое уплотнение (FLACHDICHTRING)</td><td>1</td><td>Главный тормозной цилиндр к усилителю тормозного привода</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1774306700" title="Клик — скопировать">A 177 430 67 00</td><td>Ремк-т усилителя торм. (REP.SATZ BREMSVERSTAERKER)</td><td>1</td><td>Главный тормозной цилиндр к усилителю тормозного привода</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0004312271" title="Клик — скопировать">A 000 431 22 71</td><td>болт (SCHRAUBE KURBELGEHAEUSE)</td><td>1</td><td>Расширительный бачок на главном цилиндре</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1674301200" title="Клик — скопировать">A 167 430 12 00</td><td>Расширительный бачок (AUSGLEICHSBEHAELTER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1774320000" title="Клик — скопировать">A 177 432 00 00</td><td>- Резьбовая крышка (SCHRAUBDECKEL)</td><td>1</td><td>Ресивер</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1779050902" title="Клик — скопировать">A 177 905 09 02</td><td>- Датчик уровня (FUELLSTANDSSENSOR)</td><td>1</td><td>Бачок тормозной жидкости</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1674304000" title="Клик — скопировать">A 167 430 40 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От усилителя тормозного привода к разъёму Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1674304100" title="Клик — скопировать">A 167 430 41 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От усилителя тормозного привода к разъёму Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1674304500" title="Клик — скопировать">A 167 430 45 00</td><td>Вакуумный трубопровод (UNTERDRUCKLEITUNG)</td><td>1</td><td>От места разъема до впускного коллектора</td><td class="restr" data-expr="M274+ME05"><span class="icode">M274+ME05</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0009950800" title="Клик — скопировать">A 000 995 08 00</td><td>Крепеж (трубо)провода (LEITUNGSBEFESTIGER)</td><td>1</td><td>Крепление вакуумного трубопровода Рулевое управление: Влево</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

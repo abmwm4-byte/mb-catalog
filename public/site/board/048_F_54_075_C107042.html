@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075400473" title="Клик — скопировать">A 107 540 04 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ЭЛЕКТРОН. БУ</td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075400773" title="Клик — скопировать">A 107 540 07 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ЭЛЕКТРОН. БУ</td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N000934006013" title="Клик — скопировать">N 000934 006013</td><td>Гайка</td><td>-</td><td></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N304032006008" title="Клик — скопировать">N 304032 006008</td><td>Шестигранная гайка</td><td>2</td><td></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>2</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>2</td><td>6 MM</td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079870240" title="Клик — скопировать">A 107 987 02 40</td><td>Резиновый буфер</td><td>3</td><td></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0005452932" title="Клик — скопировать">A 000 545 29 32</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1075450097" title="Клик — скопировать">A 107 545 00 97</td><td>пружина</td><td>1</td><td></td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075400473" title="Клик — скопировать">A 107 540 04 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ЭЛЕКТРОН. БУ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075400773" title="Клик — скопировать">A 107 540 07 73</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ЭЛЕКТРОН. БУ Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N000934006013" title="Клик — скопировать">N 000934 006013</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N304032006008" title="Клик — скопировать">N 304032 006008</td><td>Шестигранная гайка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>2</td><td>6 MM</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1079870240" title="Клик — скопировать">A 107 987 02 40</td><td>Резиновый буфер</td><td>3</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0005452932" title="Клик — скопировать">A 000 545 29 32</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1075450097" title="Клик — скопировать">A 107 545 00 97</td><td>пружина</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>

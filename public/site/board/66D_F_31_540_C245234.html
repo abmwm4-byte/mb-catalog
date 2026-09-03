@@ -39,6 +39,8 @@ a { color: #1268c8; }
 .chassis-box { margin-left: 14px; }
 .chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
 .parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
 .tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
 .tile:hover { border-color: #1268c8; }
@@ -73,8 +75,8 @@ a { color: #1268c8; }
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
     <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
-      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"></span></div>
-    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695404608" title="Клик — скопировать">A 169 540 46 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО</td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0015407581" title="Клик — скопировать">A 001 540 75 81</td><td>Розетка (SOCKET-OUTLET)</td><td>1</td><td>13\-КОНТАКТ.;</td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N007981004263" title="Клик — скопировать">N 007981 004263</td><td>Шуруп (TAPPING SCREW)</td><td>3</td><td>РОЗЕТКА ТЯГОВО\-СЦЕПН. УСТР\-ВА</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695452032" title="Клик — скопировать">A 169 545 20 32</td><td>ЭБУ подключения прицепа</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695453932" title="Клик — скопировать">A 169 545 39 32</td><td>ЭБУ подключения прицепа</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695455632" title="Клик — скопировать">A 169 545 56 32</td><td>Блок управл. (CONTROL UNIT)</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1695457840" title="Клик — скопировать">A 169 545 78 40</td><td>Держатель (HOLDER)</td><td>1</td><td>БЛОК УПРАВЛЕНИЯ ТЯГОВО\-СЦЕПНОГО УСТРОЙСТВА</td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N910112005000" title="Клик — скопировать">N 910112 005000</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>КРЕПЛЕНИЕ БЛОКА УПРАВЛЕНИЯ; M5</td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2205453928" title="Клик — скопировать">A 220 545 39 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 4\-PIN SLK2.8</td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005404005" title="Клик — скопировать">A 000 540 40 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 2.5 MM2 SLK2.8</td></tr><tr data-pos="902"><td>902</td><td class="pn" data-raw="A2205454028" title="Клик — скопировать">A 220 545 40 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 4\-PIN SLK2.8</td></tr><tr data-pos="903"><td>903</td><td class="pn" data-raw="A0005404005" title="Клик — скопировать">A 000 540 40 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 2.5 MM2 SLK2.8</td></tr><tr data-pos="903"><td>903</td><td class="pn" data-raw="A0135451526" title="Клик — скопировать">A 013 545 15 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.5\-0.75 MM2 SLK2.8</td></tr><tr data-pos="904"><td>904</td><td class="pn" data-raw="A2205457128" title="Клик — скопировать">A 220 545 71 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 6\-PIN SLK2.8</td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0135451526" title="Клик — скопировать">A 013 545 15 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.5\-0.75 MM2 SLK2.8</td></tr><tr data-pos="906"><td>906</td><td class="pn" data-raw="A0025407581" title="Клик — скопировать">A 002 540 75 81</td><td>Розетка (SOCKET-OUTLET)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 8\-PIN MQS</td></tr><tr data-pos="907"><td>907</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.25\-0.35 MM2 MQS</td></tr></tbody></table>
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1695404608" title="Клик — скопировать">A 169 540 46 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ТЯГОВО\-СЦЕПНОЕ УСТРОЙСТВО Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0015407581" title="Клик — скопировать">A 001 540 75 81</td><td>Розетка (SOCKET-OUTLET)</td><td>1</td><td>13\-КОНТАКТ.;</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N007981004263" title="Клик — скопировать">N 007981 004263</td><td>Шуруп (TAPPING SCREW)</td><td>3</td><td>РОЗЕТКА ТЯГОВО\-СЦЕПН. УСТР\-ВА</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695452032" title="Клик — скопировать">A 169 545 20 32</td><td>ЭБУ подключения прицепа</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695453932" title="Клик — скопировать">A 169 545 39 32</td><td>ЭБУ подключения прицепа</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1695455632" title="Клик — скопировать">A 169 545 56 32</td><td>Блок управл. (CONTROL UNIT)</td><td>1</td><td>РЕЖИМ ЭКСПЛУАТ. С ПРИЦЕПОМ</td><td class="restr" data-expr="550"><span class="icode">550</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1695457840" title="Клик — скопировать">A 169 545 78 40</td><td>Держатель (HOLDER)</td><td>1</td><td>БЛОК УПРАВЛЕНИЯ ТЯГОВО\-СЦЕПНОГО УСТРОЙСТВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="550+B01"><span class="icode">550+B01</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N910112005000" title="Клик — скопировать">N 910112 005000</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>КРЕПЛЕНИЕ БЛОКА УПРАВЛЕНИЯ; M5</td><td class="restr" data-expr="550+B01"><span class="icode">550+B01</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2205453928" title="Клик — скопировать">A 220 545 39 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 4\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005404005" title="Клик — скопировать">A 000 540 40 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 2.5 MM2 SLK2.8 [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr"></td></tr><tr data-pos="902"><td>902</td><td class="pn" data-raw="A2205454028" title="Клик — скопировать">A 220 545 40 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 4\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="903"><td>903</td><td class="pn" data-raw="A0005404005" title="Клик — скопировать">A 000 540 40 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 2.5 MM2 SLK2.8 [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr"></td></tr><tr data-pos="903"><td>903</td><td class="pn" data-raw="A0135451526" title="Клик — скопировать">A 013 545 15 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.5\-0.75 MM2 SLK2.8</td><td class="restr"></td></tr><tr data-pos="904"><td>904</td><td class="pn" data-raw="A2205457128" title="Клик — скопировать">A 220 545 71 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 6\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0135451526" title="Клик — скопировать">A 013 545 15 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.5\-0.75 MM2 SLK2.8</td><td class="restr"></td></tr><tr data-pos="906"><td>906</td><td class="pn" data-raw="A0025407581" title="Клик — скопировать">A 002 540 75 81</td><td>Розетка (SOCKET-OUTLET)</td><td>1</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 8\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="907"><td>907</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>БУ ТЯГОВО\-СЦЕПНОГО УСТР\-ВА N28/3; 0.25\-0.35 MM2 MQS</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
 <p class="muted">Позиций: 17 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
@@ -125,21 +127,47 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
 
-  // фильтр «мой шасси»
+  // фильтр «мой шасси» + «коды авто»
   const chi=document.getElementById('chassis');
-  function applyChassis(){
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
     const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
     rows.forEach(tr=>{
-      tr.classList.remove('no-fit');
-      if(!q)return;
+      let bad=false;
       const f=tr.dataset.chFrom,t=tr.dataset.chTo;
-      if(!f&&!t)return;
-      const n=parseInt(q,10); if(isNaN(n))return;
-      if(f&&n<parseInt(f.replace(/\D/g,''),10))tr.classList.add('no-fit');
-      if(t&&n>parseInt(t.replace(/\D/g,''),10))tr.classList.add('no-fit');
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
     });
   }
-  if(chi)chi.addEventListener('input',applyChassis);
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
   applyRows();
 })();
 </script></body></html>
