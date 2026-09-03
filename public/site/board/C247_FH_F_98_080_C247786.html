@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>98 Аксессуары / 080 Оборудование салона</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C247786">C247_FH -/-</a> → 080 Оборудование салона</div>
+<h1>080 Оборудование салона</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.010.069.722_version_009.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2476804906" title="Клик — скопировать">A 247 680 49 06</td><td>Напольный коврик</td><td>1</td><td>Комплект для передней и задней части салона Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2476805106" title="Клик — скопировать">A 247 680 51 06</td><td>Напольный коврик</td><td>1</td><td>Комплект для передней и задней части салона Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1776809306" title="Клик — скопировать">A 177 680 93 06</td><td>Напольный коврик</td><td>1</td><td>Комплект для передней и задней части салона (с бортиками) Рулевое управление: Влево</td><td class="restr" data-expr="494"><span class="icode">494</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1776809706" title="Клик — скопировать">A 177 680 97 06</td><td>- Напольный коврик</td><td>1</td><td>Спереди слева Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1776800107" title="Клик — скопировать">A 177 680 01 07</td><td>- </td><td>1</td><td>Спереди слева Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1776800403" title="Клик — скопировать">A 177 680 04 03</td><td>Напольный коврик</td><td>1</td><td>Комплект передних репсовых деталей Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1776800303" title="Клик — скопировать">A 177 680 03 03</td><td>Напольный коврик</td><td>1</td><td>Комплект передних репсовых деталей Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1776806000" title="Клик — скопировать">A 177 680 60 00</td><td>Напольный коврик</td><td>1</td><td>Комплект передних велюровых деталей Рулевое управление: Вправо</td><td class="restr" data-expr="775K"><span class="icode">775K</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1776805900" title="Клик — скопировать">A 177 680 59 00</td><td>Напольный коврик</td><td>1</td><td>Комплект передних велюровых деталей Рулевое управление: Влево</td><td class="restr" data-expr="775K"><span class="icode">775K</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1776803204" title="Клик — скопировать">A 177 680 32 04</td><td>Напольный коврик</td><td>1</td><td>Комплект передних резиновых деталей, чашеобразн. Рулевое управление: Влево</td><td class="restr" data-expr="-U64"><span class="icode">-U64</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009981977" title="Клик — скопировать">A 000 998 19 77</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>2</td><td>Кнопка\-застежка Верхняя часть Напольный коврик Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009981977" title="Клик — скопировать">A 000 998 19 77</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>2</td><td>Кнопка\-застежка Верхняя часть Напольный коврик Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009982077" title="Клик — скопировать">A 000 998 20 77</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>2</td><td>Кнопка\-застежка Нижняя часть Напольный коврик Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009982077" title="Клик — скопировать">A 000 998 20 77</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>2</td><td>Кнопка\-застежка Нижняя часть Напольный коврик Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1776804404" title="Клик — скопировать">A 177 680 44 04</td><td>Напольный коврик</td><td>1</td><td>Комплект для задней части салона (с бортиками)</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2476800203" title="Клик — скопировать">A 247 680 02 03</td><td>Напольный коврик</td><td>1</td><td>Комплект деталей, задняя часть салона</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2436808000" title="Клик — скопировать">A 243 680 80 00</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой Mercedes\-Benz [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A1186807500" title="Клик — скопировать">A 118 680 75 00</td><td>- Защитная планка (COVER RAIL)</td><td>2</td><td>Накладка порога спереди слева и справа, с подсветкой Mercedes\-Benz</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A1778203101" title="Клик — скопировать">A 177 820 31 01</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Накладки порогов с подсветкой</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2229000308" title="Клик — скопировать">A 222 900 03 08</td><td>- Блок управления (CONTROL UNIT)</td><td>1</td><td>Накладки порогов с подсветкой [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804207" title="Клик — скопировать">A 177 680 42 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой Mercedes\-Benz</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804307" title="Клик — скопировать">A 177 680 43 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой AMG</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804407" title="Клик — скопировать">A 177 680 44 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой Mercedes\-Benz</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804507" title="Клик — скопировать">A 177 680 45 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой AMG</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804607" title="Клик — скопировать">A 177 680 46 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой AMG</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1776804707" title="Клик — скопировать">A 177 680 47 07</td><td>Защитная планка (COVER RAIL)</td><td>1</td><td>Комплект деталей (передняя левая и правая сторона), с подсветкой Stars</td><td class="restr" data-expr="U45"><span class="icode">U45</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0008103300" title="Клик — скопировать">A 000 810 33 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Опорный кронштейн</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008103400" title="Клик — скопировать">A 000 810 34 00</td><td>Вешалка (CLOTHES HANGER)</td><td>1</td><td>Чёрн., пластиков.</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008140000" title="Клик — скопировать">A 000 814 00 00</td><td>Крючок для одежды (CLOTHES HOOK)</td><td>1</td><td>Крючок для сумок (чёрный, пластиковый)</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0008140700" title="Клик — скопировать">A 000 814 07 00</td><td>Крючок для одежды (CLOTHES HOOK)</td><td>1</td><td>Крючок для сумок (чёрный, пластиковый)</td><td class="restr"></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1666940014" title="Клик — скопировать">A 166 694 00 14</td><td></td><td>2</td><td>Пол грузового отделения</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0008160000" title="Клик — скопировать">A 000 816 00 00</td><td>Складной стол (FOLDING TABLE)</td><td>1</td><td>Чёрн., пластиков.</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1778108103" title="Клик — скопировать">A 177 810 81 03</td><td>Вставка пепельницы (ASHTRAY INSERT)</td><td>1</td><td>Пепельница</td><td class="restr"></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A0008271900" title="Клик — скопировать">A 000 827 19 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Камера [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005800800" title="Клик — скопировать">A 000 580 08 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Комплект деталей iPad Air [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005800900" title="Клик — скопировать">A 000 580 09 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Комплект деталей iPad Air 2</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801000" title="Клик — скопировать">A 000 580 10 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Комплект деталей iPad Pro 9,7</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801100" title="Клик — скопировать">A 000 580 11 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Комплект деталей iPad Mini 3 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801200" title="Клик — скопировать">A 000 580 12 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Комплект деталей iPad Mini 4 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801300" title="Клик — скопировать">A 000 580 13 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Планшетный компьютер (модификация 6) TABLET\-PC VAR6 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801400" title="Клик — скопировать">A 000 580 14 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Планшет Samsung Galaxy А [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801500" title="Клик — скопировать">A 000 580 15 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Планшет Samsung Galaxy S2 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801600" title="Клик — скопировать">A 000 580 16 00</td><td>Защитная оболочка (PROTECTIVE COVERING)</td><td>1</td><td>Смартфон Samsung Galaxy Note [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0005801700" title="Клик — скопировать">A 000 580 17 00</td><td>Защитная оболочка</td><td>1</td><td>Планшет Surface Pro 3</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005851600" title="Клик — скопировать">A 000 585 16 00</td><td>- Защитная оболочка</td><td>1</td><td>iPad Air</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005851800" title="Клик — скопировать">A 000 585 18 00</td><td>- Защитная оболочка</td><td>1</td><td>iPad Air 2</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005852000" title="Клик — скопировать">A 000 585 20 00</td><td>- Защитная оболочка</td><td>1</td><td>iPad Pro 9,7</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005852200" title="Клик — скопировать">A 000 585 22 00</td><td>- Защитная оболочка</td><td>1</td><td>iPad Mini 3</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005852400" title="Клик — скопировать">A 000 585 24 00</td><td>- Защитная оболочка</td><td>1</td><td>iPad Mini 4</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005852600" title="Клик — скопировать">A 000 585 26 00</td><td>- Защитная оболочка</td><td>1</td><td>Планшетный компьютер (модификация 6)</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005852800" title="Клик — скопировать">A 000 585 28 00</td><td>- Защитная оболочка</td><td>1</td><td>Планшет Samsung Galaxy А</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005853000" title="Клик — скопировать">A 000 585 30 00</td><td>- Защитная оболочка</td><td>1</td><td>Планшет Samsung Galaxy S2</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005853200" title="Клик — скопировать">A 000 585 32 00</td><td>- Защитная оболочка</td><td>1</td><td>Смартфон Samsung Galaxy Note</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005853400" title="Клик — скопировать">A 000 585 34 00</td><td>- Защитная оболочка</td><td>1</td><td>Планшет Surface Pro 3</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005853600" title="Клик — скопировать">A 000 585 36 00</td><td>- Защитная оболочка</td><td>1</td><td>Планшет Lenovo А 10</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831500" title="Клик — скопировать">A 000 983 15 00</td><td>- Защитная пленка</td><td>1</td><td>iPad Air</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831500" title="Клик — скопировать">A 000 983 15 00</td><td>- Защитная пленка</td><td>1</td><td>iPad Air 2</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831500" title="Клик — скопировать">A 000 983 15 00</td><td>- Защитная пленка</td><td>1</td><td>iPad Pro 9,7</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831500" title="Клик — скопировать">A 000 983 15 00</td><td>- Защитная пленка</td><td>1</td><td>iPad Mini 3</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009832200" title="Клик — скопировать">A 000 983 22 00</td><td>- Защитная пленка</td><td>1</td><td>iPad Mini 4</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009832100" title="Клик — скопировать">A 000 983 21 00</td><td>- Защитная пленка</td><td>1</td><td>Планшетный компьютер (модификация 6)</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009832000" title="Клик — скопировать">A 000 983 20 00</td><td>- Защитная пленка</td><td>1</td><td>Планшет Samsung Galaxy А</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831900" title="Клик — скопировать">A 000 983 19 00</td><td>- Защитная пленка</td><td>1</td><td>Планшет Samsung Galaxy S2</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831800" title="Клик — скопировать">A 000 983 18 00</td><td>- Защитная пленка</td><td>1</td><td>Смартфон Samsung Galaxy Note</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831700" title="Клик — скопировать">A 000 983 17 00</td><td>- Защитная пленка</td><td>1</td><td>Планшет Surface Pro 3</td><td class="restr"></td></tr><tr data-pos="720"><td>720</td><td class="pn" data-raw="A0009831600" title="Клик — скопировать">A 000 983 16 00</td><td>- Защитная пленка</td><td>1</td><td>Планшет Lenovo А 10</td><td class="restr"></td></tr><tr data-pos="800"><td>800</td><td class="pn" data-raw="A2138140700" title="Клик — скопировать">A 213 814 07 00</td><td>Сетка для хранения (STORAGE NET)</td><td>1</td><td>Багажная сетка в пространстве для ног переднего пассажира</td><td class="restr"></td></tr><tr data-pos="810"><td>810</td><td class="pn" data-raw="A2088140007" title="Клик — скопировать">A 208 814 00 07</td><td>- Сетка для багажа (LUGGAGE NET)</td><td>1</td><td>Отдельная деталь</td><td class="restr"></td></tr><tr data-pos="820"><td>820</td><td class="pn" data-raw="A2208140101" title="Клик — скопировать">A 220 814 01 01</td><td>- Держатель</td><td>5</td><td>Крепление сетки</td><td class="restr"></td></tr><tr data-pos="850"><td>850</td><td class="pn" data-raw="A0009865500" title="Клик — скопировать">A 000 986 55 00</td><td>Тряпка для уборки (CLEANING CLOTH)</td><td>1</td><td>Микрофибровая салфетка</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 70 · подписано на схемах: 70 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.069.722_version_009.png", "poses": ["10", "20", "50", "60", "70", "100", "200", "220", "230", "240", "250", "300", "400", "450", "500", "580", "600", "700", "710", "720", "800", "810", "820", "850"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы
+  const qp=new URLSearchParams(location.search);
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>
