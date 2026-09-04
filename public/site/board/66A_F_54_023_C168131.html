@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54023000027.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B54023000027.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54023000027.png", "poses": ["5", "25", "115", "130", "140", "225"], "hs": {"11": [[421, 566, 25, 24]], "23": [[710, 728, 26, 24]], "35": [[280, 511, 26, 24]], "47": [[741, 645, 26, 25]], "225": [[917, 748, 48, 30], [290, 731, 48, 30]], "17": [[474, 583, 26, 25]], "7": [[376, 723, 21, 30]], "29": [[194, 420, 29, 25]], "41": [[634, 566, 28, 24]], "53": [[581, 451, 27, 25]]}, "w": 1326, "h": 938}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B54023000027.webp", "poses": ["5", "25", "115", "130", "140", "225"], "hs": {"11": [[421, 566, 25, 24]], "23": [[710, 728, 26, 24]], "35": [[280, 511, 26, 24]], "47": [[741, 645, 26, 25]], "225": [[917, 748, 48, 30], [290, 731, 48, 30]], "17": [[474, 583, 26, 25]], "7": [[376, 723, 21, 30]], "29": [[194, 420, 29, 25]], "41": [[634, 566, 28, 24]], "53": [[581, 451, 27, 25]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

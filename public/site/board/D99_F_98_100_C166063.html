@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B98100000078.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B98100000078.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B98100000078.png", "poses": ["10", "20", "30", "70", "80", "90", "95", "140", "220"], "hs": {"220": [[375, 476, 42, 25]], "90": [[842, 346, 29, 20]], "80": [[792, 526, 28, 19]], "70": [[754, 150, 29, 26]], "95": [[986, 145, 28, 23]], "140": [[1191, 150, 42, 26]], "30": [[535, 150, 29, 26]], "20": [[310, 151, 28, 26]], "10": [[87, 150, 28, 26]]}, "w": 1326, "h": 938}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B98100000078.webp", "poses": ["10", "20", "30", "70", "80", "90", "95", "140", "220"], "hs": {"220": [[375, 476, 42, 25]], "90": [[842, 346, 29, 20]], "80": [[792, 526, 28, 19]], "70": [[754, 150, 29, 26]], "95": [[986, 145, 28, 23]], "140": [[1191, 150, 42, 26]], "30": [[535, 150, 29, 26]], "20": [[310, 151, 28, 26]], "10": [[87, 150, 28, 26]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

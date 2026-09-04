@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>99 СПЕЦИАЛЬНЫЕ ВСТРОЕННЫЕ АГРЕГАТЫ / 125 ТЯГОВО-СЦЕПНОЕ УСТРОЙСТВО</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/125">C118_FX -/-</a> → 125 ТЯГОВО-СЦЕПНОЕ УСТРОЙСТВО</div>
+<h1>125 ТЯГОВО-СЦЕПНОЕ УСТРОЙСТВО</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_webp/drawing_PV000.003.460.859_version_002.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1183101300" title="Клик — скопировать">A 118 310 13 00</td><td>Тягово-сцепное устройство</td><td>1</td><td></td><td class="restr" data-expr="-B26+(821/822/2XXL/511L/512L/513L/515L/517L/520L/521L/523L/525L/526L/527L/529L/531L/535L/537L/539L/541L)"><span class="icode">-B26+(821/822/2XXL/511L/512L/513L/515L/517L/520L/521L/523L/525L/526L/527L/529L/531L/535L/537L/539L/541L)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1183101300" title="Клик — скопировать">A 118 310 13 00</td><td>Тягово-сцепное устройство</td><td>1</td><td></td><td class="restr" data-expr="-(B26)+(542L/543L/546L/547L/549L/550L/552L/553L/554L/555L/557L/558L/559L/561L/567L/569L/571L/576L/577L/580L)"><span class="icode">-(B26)+(542L/543L/546L/547L/549L/550L/552L/553L/554L/555L/557L/558L/559L/561L/567L/569L/571L/576L/577L/580L)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1183101300" title="Клик — скопировать">A 118 310 13 00</td><td>Тягово-сцепное устройство</td><td>1</td><td></td><td class="restr" data-expr="-B26+(581L/583L/601L/607L/634L/641L/643L/649L/661L/723L/725L/727L/729L/741L/753L/754L/757L/771L/777L/787L)"><span class="icode">-B26+(581L/583L/601L/607L/634L/641L/643L/649L/661L/723L/725L/727L/729L/741L/753L/754L/757L/771L/777L/787L)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1183101300" title="Клик — скопировать">A 118 310 13 00</td><td>Тягово-сцепное устройство</td><td>1</td><td></td><td class="restr" data-expr="-B26+(789L/805L/807L/808L/811L/815L/821L/822L/837L/849L/851L/861L/867L/869L/873L/878L/880L/882L/923L/924L)"><span class="icode">-B26+(789L/805L/807L/808L/811L/815L/821L/822L/837L/849L/851L/861L/867L/869L/873L/878L/880L/882L/923L/924L)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1183101300" title="Клик — скопировать">A 118 310 13 00</td><td>Тягово-сцепное устройство</td><td>1</td><td></td><td class="restr" data-expr="(516L/524L/528L/810L)+-(B26)"><span class="icode">(516L/524L/528L/810L)+-(B26)</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Дополнительно заказать при последующей установке</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185409935" title="Клик — скопировать">A 118 540 99 35</td><td>Электрический жгут</td><td>1</td><td>Слева Рулевое управление: Влево</td><td class="restr" data-expr="(804/805/806)+-(550/554/ME08/ME10)"><span class="icode">(804/805/806)+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185400036" title="Клик — скопировать">A 118 540 00 36</td><td>Электрический жгут</td><td>1</td><td>Провод электропитания PDC\-R Рулевое управление: Вправо</td><td class="restr" data-expr="(804/805/806)+-(550/554/ME08/ME10)"><span class="icode">(804/805/806)+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185404935" title="Клик — скопировать">A 118 540 49 35</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="890+(804/805/806)+-(550/554)"><span class="icode">890+(804/805/806)+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185405035" title="Клик — скопировать">A 118 540 50 35</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="890+(804/805/806)+-(550/554)"><span class="icode">890+(804/805/806)+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185400136" title="Клик — скопировать">A 118 540 01 36</td><td>Электрический жгут</td><td>1</td><td>Жгут проводов Рулевое управление: Влево</td><td class="restr" data-expr="(804/805/806)+-(550/554/ME08/ME10)"><span class="icode">(804/805/806)+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185400236" title="Клик — скопировать">A 118 540 02 36</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Вправо</td><td class="restr" data-expr="(804/805/806)+-(550/554/ME08/ME10)"><span class="icode">(804/805/806)+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2479069906" title="Клик — скопировать">A 247 906 99 06</td><td>Вентилятор</td><td>1</td><td>При отсутствии тягово\-сцепного устройства для а/м со сниженной допустимой полной массой (макс. 400 кг)</td><td class="restr" data-expr="M654+(805/806/807)+-(550/554)"><span class="icode">M654+(805/806/807)+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1186840200" title="Клик — скопировать">A 118 684 02 00</td><td>Накладка основания кузова</td><td>1</td><td>Основание кузова, сзади</td><td class="restr" data-expr="-(550+772)"><span class="icode">-(550+772)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1186805200" title="Клик — скопировать">A 118 680 52 00</td><td>Накладка основания кузова</td><td>1</td><td>Сзади</td><td class="restr" data-expr="772+-550+-(M260+M016/M139)"><span class="icode">772+-550+-(M260+M016/M139)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009914140" title="Клик — скопировать">A 000 991 41 40</td><td>Распорная заклепка</td><td>2</td><td>Заклепка</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000000548" title="Клик — скопировать">N 000000 000548</td><td>Шуруп</td><td>6</td><td>Крепление; 4.8X16</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000003337" title="Клик — скопировать">N 000000 003337</td><td>Шайба</td><td>6</td><td>Задняя часть кузова</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0039900251" title="Клик — скопировать">A 003 990 02 51</td><td>Шестигранная гайка</td><td>2</td><td>Шестиугольник</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0069900200" title="Клик — скопировать">A 006 990 02 00</td><td>Винт с 6-гр.гол. и шайбой</td><td>2</td><td>M12X1.5X47</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000008298" title="Клик — скопировать">N 000000 008298</td><td>ГАЙКА КОМБИНИРОВАННАЯ</td><td>6</td><td>M10</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1778212200" title="Клик — скопировать">A 177 821 22 00</td><td>Защитная рама</td><td>1</td><td>Рама</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1679059303" title="Клик — скопировать">A 167 905 93 03</td><td>Блок выключателей</td><td>1</td><td>Тягово\-сцепное устройство</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1188853702" title="Клик — скопировать">A 118 885 37 02</td><td>Держатель бампера</td><td>1</td><td>Модуль бесключевого открытия крышки багажника под задним бампером</td><td class="restr" data-expr="772+-(M139/M139+M016/M260+M016)+-(889+871/550)"><span class="icode">772+-(M139/M139+M016/M260+M016)+-(889+871/550)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1249900492" title="Клик — скопировать">A 124 990 04 92</td><td>Распорная заклепка</td><td>2</td><td>6.5X18</td><td class="restr" data-expr="772+-(M139/M139+M016/M260+M016)+-(889+871/550)"><span class="icode">772+-(M139/M139+M016/M260+M016)+-(889+871/550)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N910105014005" title="Клик — скопировать">N 910105 014005</td><td>Винт с 6-гранной головкой</td><td>6</td><td>M14X1,5X40\-10.9</td><td class="restr" data-expr="-550"><span class="icode">-550</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185402917" title="Клик — скопировать">A 118 540 29 17</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Влево</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403017" title="Клик — скопировать">A 118 540 30 17</td><td>Электрический жгут</td><td>1</td><td>Провод электропитания PDC\-R Рулевое управление: Вправо</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403017" title="Клик — скопировать">A 118 540 30 17</td><td>Электрический жгут</td><td>1</td><td>Провод электропитания PDC\-R Рулевое управление: Вправо</td><td class="restr" data-expr="(809/800/801)+-(550/554/084/ME08)"><span class="icode">(809/800/801)+-(550/554/084/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185402917" title="Клик — скопировать">A 118 540 29 17</td><td>Электрический жгут</td><td>1</td><td>Слева Рулевое управление: Влево</td><td class="restr" data-expr="(809/800/801)+-(550/554/084/ME08)"><span class="icode">(809/800/801)+-(550/554/084/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403117" title="Клик — скопировать">A 118 540 31 17</td><td>Электрический жгут</td><td>1</td><td>Жгут проводов Рулевое управление: Влево</td><td class="restr" data-expr="(809/800/801)+-(550/554/084/ME08)"><span class="icode">(809/800/801)+-(550/554/084/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403217" title="Клик — скопировать">A 118 540 32 17</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Вправо</td><td class="restr" data-expr="(809/800/801)+-(550/554/084/ME08)"><span class="icode">(809/800/801)+-(550/554/084/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1779061102" title="Клик — скопировать">A 177 906 11 02</td><td>Блок реле</td><td>1</td><td>Цоколь</td><td class="restr" data-expr="(809/800/(801+-051))+(M608/M654)+(890/913)+-(550/554)"><span class="icode">(809/800/(801+-051))+(M608/M654)+(890/913)+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1779061102" title="Клик — скопировать">A 177 906 11 02</td><td>Блок реле</td><td>1</td><td>Цоколь</td><td class="restr" data-expr="M654+-(809/800/(801+-051)/550/554)"><span class="icode">M654+-(809/800/(801+-051)/550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1779062602" title="Клик — скопировать">A 177 906 26 02</td><td>Блок реле</td><td>1</td><td>Кронштейн сзади</td><td class="restr" data-expr="(550/554)"><span class="icode">(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1779062702" title="Клик — скопировать">A 177 906 27 02</td><td>Блок реле</td><td>1</td><td>Модуль реле</td><td class="restr" data-expr="(550/554)"><span class="icode">(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0079970190" title="Клик — скопировать">A 007 997 01 90</td><td>CABLE STRAP WITH HOLDER</td><td>1</td><td>3,5X150 MM</td><td class="restr" data-expr="(550/554)"><span class="icode">(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1779060402" title="Клик — скопировать">A 177 906 04 02</td><td>Блок реле</td><td>1</td><td>Модуль реле</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185405517" title="Клик — скопировать">A 118 540 55 17</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185405617" title="Клик — скопировать">A 118 540 56 17</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403117" title="Клик — скопировать">A 118 540 31 17</td><td>Электрический жгут</td><td>1</td><td>Функция распознавания наличия прицепа Рулевое управление: Влево</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185403217" title="Клик — скопировать">A 118 540 32 17</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Вправо</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1679002604" title="Клик — скопировать">A 167 900 26 04</td><td>Блок управления</td><td>1</td><td>[672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО</td><td class="restr" data-expr="(809/800+-050)+-(550/554)"><span class="icode">(809/800+-050)+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1679001309" title="Клик — скопировать">A 167 900 13 09</td><td>Блок управления</td><td>1</td><td>[672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="-(809/800+-050/550/554)"><span class="icode">-(809/800+-050/550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1775454500" title="Клик — скопировать">A 177 545 45 00</td><td>Держатель</td><td>1</td><td>Соединение</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000008272" title="Клик — скопировать">N 000000 008272</td><td>Гайка</td><td>2</td><td>M6</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка</td><td>2</td><td>Крепление скобы; M6</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка</td><td>2</td><td>Гайка; M6</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2479060200" title="Клик — скопировать">A 247 906 02 00</td><td>Исполнительный элемент</td><td>1</td><td>ПРИ ОТСУТСТВИИ ТЯГОВО\-СЦЕПНОГО УСТРОЙСТВА ДЛЯ А/М СО СНИЖЕННОЙ ДОПУСТИМОЙ ПОЛНОЙ МАССОЙ: МАКС. 400 КГ; 600W</td><td class="restr" data-expr="M654+-(550/554)"><span class="icode">M654+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A6541409202" title="Клик — скопировать">A 654 140 92 02</td><td>Труб. рецирк. ОГ</td><td>1</td><td>Отработавшие газы</td><td class="restr" data-expr="M654+-(550/554)"><span class="icode">M654+-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009825126" title="Клик — скопировать">A 000 982 51 26</td><td>Контактная втулка</td><td>1</td><td>2.5\-4.0 MM2 MAK8/9.5</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0115450726" title="Клик — скопировать">A 011 545 07 26</td><td>Контактная втулка</td><td>1</td><td>4.0 MM2 SLK2.8</td><td class="restr" data-expr="-(550/554)"><span class="icode">-(550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1695849617" title="Клик — скопировать">A 169 584 96 17</td><td>Информационная табличка</td><td>1</td><td>ПРИ НАЛИЧИИ ТЯГОВО\-СЦЕПНОГО УСТРОЙСТВА ДЛЯ А/М СО СНИЖЕННОЙ ДОПУСТИМОЙ ПОЛНОЙ МАССОЙ: МАКС. 400 КГ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401325" title="Клик — скопировать">A 118 540 13 25</td><td>Электрический жгут</td><td>1</td><td>Слева Рулевое управление: Влево</td><td class="restr" data-expr="084+-(550/554/ME08)"><span class="icode">084+-(550/554/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401425" title="Клик — скопировать">A 118 540 14 25</td><td>Электрический жгут</td><td>1</td><td>Провод электропитания PDC\-R Рулевое управление: Вправо</td><td class="restr" data-expr="084+-(550/554/ME08)"><span class="icode">084+-(550/554/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401325" title="Клик — скопировать">A 118 540 13 25</td><td>Электрический жгут</td><td>1</td><td>Слева Рулевое управление: Влево</td><td class="restr" data-expr="(802/803)+-(550/554/ME08)"><span class="icode">(802/803)+-(550/554/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401425" title="Клик — скопировать">A 118 540 14 25</td><td>Электрический жгут</td><td>1</td><td>Провод электропитания PDC\-R Рулевое управление: Вправо</td><td class="restr" data-expr="(802/803)+-(550/554/ME08)"><span class="icode">(802/803)+-(550/554/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185405517" title="Клик — скопировать">A 118 540 55 17</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="890+-(804/805/806/550/554)"><span class="icode">890+-(804/805/806/550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185405617" title="Клик — скопировать">A 118 540 56 17</td><td>Электрический жгут</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="890+-(804/805/806/550/554)"><span class="icode">890+-(804/805/806/550/554)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401925" title="Клик — скопировать">A 118 540 19 25</td><td>Электрический жгут</td><td>1</td><td>Жгут проводов Рулевое управление: Влево</td><td class="restr" data-expr="084+-(550/554/ME08/ME10)"><span class="icode">084+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185401925" title="Клик — скопировать">A 118 540 19 25</td><td>Электрический жгут</td><td>1</td><td>Жгут проводов Рулевое управление: Влево</td><td class="restr" data-expr="(802/803)+-(550/554/ME08)"><span class="icode">(802/803)+-(550/554/ME08)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185402025" title="Клик — скопировать">A 118 540 20 25</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Вправо</td><td class="restr" data-expr="084+-(550/554/ME08/ME10)"><span class="icode">084+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1185402025" title="Клик — скопировать">A 118 540 20 25</td><td>Электрический жгут</td><td>1</td><td>Сбоку слева Рулевое управление: Вправо</td><td class="restr" data-expr="(802/803)+-(550/554/ME08/ME10)"><span class="icode">(802/803)+-(550/554/ME08/ME10)</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2479067806" title="Клик — скопировать">A 247 906 78 06</td><td>Вентилятор</td><td>1</td><td>При отсутствии тягово\-сцепного устройства для а/м со сниженной допустимой полной массой (макс. 400 кг); 650 W</td><td class="restr" data-expr="M654+-(805/806/807/550/554)"><span class="icode">M654+-(805/806/807/550/554)</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 64 · подписано на схемах: 6 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_PV000.003.460.859_version_002.webp", "poses": ["125"], "hs": {"125": [[1158, 148, 43, 28]]}, "w": 1326, "h": 881}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>

@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01110300001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_S01110300001.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 6 · подписано на схемах: 6 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01110300001.png", "poses": ["7", "13", "17", "19", "23"], "hs": {"33": [[146, 157, 33, 17]], "23": [[603, 158, 33, 17]], "13": [[582, 443, 33, 17]], "14": [[225, 491, 33, 17]], "36": [[732, 355, 33, 17]], "15": [[228, 449, 33, 17]], "16": [[336, 473, 33, 17]], "17": [[201, 99, 33, 17]], "28": [[626, 327, 33, 17]], "7": [[395, 431, 33, 17]], "19": [[248, 72, 33, 17]]}, "w": 890, "h": 592}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_S01110300001.webp", "poses": ["7", "13", "17", "19", "23"], "hs": {"33": [[146, 157, 33, 17]], "23": [[603, 158, 33, 17]], "13": [[582, 443, 33, 17]], "14": [[225, 491, 33, 17]], "36": [[732, 355, 33, 17]], "15": [[228, 449, 33, 17]], "16": [[336, 473, 33, 17]], "17": [[201, 99, 33, 17]], "28": [[626, 327, 33, 17]], "7": [[395, 431, 33, 17]], "19": [[248, 72, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

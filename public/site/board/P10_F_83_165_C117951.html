@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B83165000363.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B83165000363.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 39 · подписано на схемах: 39 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B83165000363.png", "poses": ["10", "30", "50", "100", "110", "120", "140", "150", "160", "170", "200", "250", "900", "910"], "hs": {"170": [[644, 451, 48, 30]], "160": [[411, 579, 48, 30]], "150": [[924, 406, 49, 30]], "140": [[898, 202, 48, 30]], "250": [[436, 698, 48, 29]], "120": [[724, 216, 48, 29]], "110": [[839, 795, 48, 30]], "100": [[674, 748, 48, 30]], "200": [[767, 591, 49, 30]], "910": [[352, 590, 48, 30]], "900": [[645, 495, 48, 29]], "50": [[941, 274, 34, 30]], "30": [[510, 427, 34, 29]], "10": [[805, 435, 35, 30]]}, "w": 1326, "h": 937}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B83165000363.webp", "poses": ["10", "30", "50", "100", "110", "120", "140", "150", "160", "170", "200", "250", "900", "910"], "hs": {"170": [[644, 451, 48, 30]], "160": [[411, 579, 48, 30]], "150": [[924, 406, 49, 30]], "140": [[898, 202, 48, 30]], "250": [[436, 698, 48, 29]], "120": [[724, 216, 48, 29]], "110": [[839, 795, 48, 30]], "100": [[674, 748, 48, 30]], "200": [[767, 591, 49, 30]], "910": [[352, 590, 48, 30]], "900": [[645, 495, 48, 29]], "50": [[941, 274, 34, 30]], "30": [[510, 427, 34, 29]], "10": [[805, 435, 35, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

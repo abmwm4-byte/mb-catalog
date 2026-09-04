@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B86400000020.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B86400000020.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B86400000020.png", "poses": ["100", "110", "120", "130", "160", "170", "175", "180", "190"], "hs": {"110": [[635, 561, 48, 30]], "100": [[706, 490, 48, 29]], "190": [[729, 604, 48, 29]], "180": [[473, 335, 48, 30]], "170": [[792, 466, 48, 30]], "160": [[728, 437, 48, 30]], "150": [[819, 664, 48, 30], [561, 473, 48, 30]], "130": [[506, 514, 48, 30]], "120": [[546, 429, 48, 30]], "175": [[593, 317, 48, 30]]}, "w": 1326, "h": 937}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B86400000020.webp", "poses": ["100", "110", "120", "130", "160", "170", "175", "180", "190"], "hs": {"110": [[635, 561, 48, 30]], "100": [[706, 490, 48, 29]], "190": [[729, 604, 48, 29]], "180": [[473, 335, 48, 30]], "170": [[792, 466, 48, 30]], "160": [[728, 437, 48, 30]], "150": [[819, 664, 48, 30], [561, 473, 48, 30]], "130": [[506, 514, 48, 30]], "120": [[546, 429, 48, 30]], "175": [[593, 317, 48, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

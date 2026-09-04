@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B07180000022.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B07180000022.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B07180000022.png", "poses": ["38", "41", "44", "47", "50", "74", "77", "80", "83", "92", "95", "98", "101", "131", "134"], "hs": {"77": [[88, 144, 33, 17]], "44": [[112, 362, 33, 17]], "47": [[164, 387, 33, 17]], "38": [[107, 434, 33, 17]], "131": [[331, 490, 33, 17]], "134": [[311, 478, 33, 17]], "101": [[353, 504, 33, 17]], "80": [[90, 176, 33, 17]], "92": [[272, 455, 33, 17]], "83": [[85, 258, 33, 17]], "50": [[184, 402, 33, 17]], "95": [[150, 529, 33, 17]], "74": [[34, 257, 33, 17]], "41": [[81, 344, 33, 17]], "98": [[180, 522, 33, 17]]}, "w": 876, "h": 584}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B07180000022.webp", "poses": ["38", "41", "44", "47", "50", "74", "77", "80", "83", "92", "95", "98", "101", "131", "134"], "hs": {"77": [[88, 144, 33, 17]], "44": [[112, 362, 33, 17]], "47": [[164, 387, 33, 17]], "38": [[107, 434, 33, 17]], "131": [[331, 490, 33, 17]], "134": [[311, 478, 33, 17]], "101": [[353, 504, 33, 17]], "80": [[90, 176, 33, 17]], "92": [[272, 455, 33, 17]], "83": [[85, 258, 33, 17]], "50": [[184, 402, 33, 17]], "95": [[150, 529, 33, 17]], "74": [[34, 257, 33, 17]], "41": [[81, 344, 33, 17]], "98": [[180, 522, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

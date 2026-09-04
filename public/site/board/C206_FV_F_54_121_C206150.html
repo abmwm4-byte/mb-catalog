@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>54 Электрическое оборудование и приборы / 121 Жгут электропроводки двигателя на кузове</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/450">C206_FV -/-</a> → 121 Жгут электропроводки двигателя на кузове</div>
+<h1>121 Жгут электропроводки двигателя на кузове</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">PV000.010.120.529_version_001 <span class="hint">(1)</span></button><button data-i="1" class="">PV000.010.109.628_version_004 <span class="hint">(5)</span></button><button data-i="2" class="">PV000.010.109.749_version_005 <span class="hint">(4)</span></button><button data-i="3" class="">PV000.010.126.243_version_004 <span class="hint">(6)</span></button><button data-i="4" class="">PV000.010.322.359_version_002 <span class="hint">(2)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_webp/drawing_PV000.010.120.529_version_001.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2065404553" title="Клик — скопировать">A 206 540 45 53</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя на кузове [-] В жгуте проводов предусмотрена возможность подключения соответствующих дополнительных опций согласно производственному номеру а/м [-] При заказе указать идент. номер</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2065402489" title="Клик — скопировать">A 206 540 24 89</td><td>Электрический жгут</td><td>1</td><td>Жгут электропроводки двигателя на кузове [-] В жгуте проводов предусмотрена возможность подключения соответствующих дополнительных опций согласно производственному номеру а/м [-] При заказе указать идент. номер</td><td class="restr" data-expr="700"><span class="icode">700</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Выключатель контроля тормозной жидкости Рулевое управление: Влево</td><td class="restr" data-expr="(805/806/807)"><span class="icode">(805/806/807)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Выключатель контроля тормозной жидкости Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Трансмиссия Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Датчик качества воздуха климатической системы Рулевое управление: Влево</td><td class="restr" data-expr="(830+580/581)"><span class="icode">(830+580/581)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Датчик мелкодисперсной пыли Рулевое управление: Влево</td><td class="restr" data-expr="P53"><span class="icode">P53</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Насос омывателя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Акустический генератор Рулевое управление: Влево</td><td class="restr" data-expr="B53/M139+ME10"><span class="icode">B53/M139+ME10</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Компрессор хладагента Рулевое управление: Влево</td><td class="restr" data-expr="M254+B01"><span class="icode">M254+B01</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Регулировка уровня кузова Рулевое управление: Влево</td><td class="restr" data-expr="480"><span class="icode">480</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Электронасос системы охлаждения высоковольтной АКБ Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Переключающий клапан системы охлаждения Рулевое управление: Влево</td><td class="restr" data-expr="(B01/ME10)"><span class="icode">(B01/ME10)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Насос охлаждающей жидкости Рулевое управление: Влево</td><td class="restr" data-expr="M254/M654+(ME10/B01)"><span class="icode">M254/M654+(ME10/B01)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Насос охлаждающей жидкости Рулевое управление: Влево</td><td class="restr" data-expr="M254"><span class="icode">M254</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Насос охлаждающей жидкости Рулевое управление: Влево</td><td class="restr" data-expr="(807/808/29X)+M254+1U2"><span class="icode">(807/808/29X)+M254+1U2</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Блок управления двигателя Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M254+1U2"><span class="icode">M254+1U2</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Провод электропитания электронного оборудования двигателя Рулевое управление: Влево</td><td class="restr" data-expr="M254"><span class="icode">M254</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Интегрированный стартер\-генератор (48 В) Рулевое управление: Влево</td><td class="restr" data-expr="M254+B01"><span class="icode">M254+B01</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Диагностика топливной системы Рулевое управление: Влево</td><td class="restr" data-expr="M254+(494/460/830/835/821)"><span class="icode">M254+(494/460/830/835/821)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Топливный бак Рулевое управление: Влево</td><td class="restr" data-expr="M254+(460/494/835/821/830)"><span class="icode">M254+(460/494/835/821/830)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Подсвеченная звезда на облицовке радиатора Рулевое управление: Влево</td><td class="restr" data-expr="(807/808)+24U"><span class="icode">(807/808)+24U</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065405872" title="Клик — скопировать">A 206 540 58 72</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065400176" title="Клик — скопировать">A 206 540 01 76</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr" data-expr="805/806/807"><span class="icode">805/806/807</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065400176" title="Клик — скопировать">A 206 540 01 76</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065400376" title="Клик — скопировать">A 206 540 03 76</td><td>- Электрический жгут</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr" data-expr="1U2"><span class="icode">1U2</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065408087" title="Клик — скопировать">A 206 540 80 87</td><td>- Электрический жгут</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr" data-expr="(807/808/29X)+1U2"><span class="icode">(807/808/29X)+1U2</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2065408087" title="Клик — скопировать">A 206 540 80 87</td><td>- Электрический жгут</td><td>1</td><td>Жгут электропроводки двигателя со стороны кузова, базовый объем Рулевое управление: Влево</td><td class="restr" data-expr="(807/808/29X)+1U2"><span class="icode">(807/808/29X)+1U2</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2065403468" title="Клик — скопировать">A 206 540 34 68</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Блок управления двигателя Рулевое управление: Влево</td><td class="restr" data-expr="M254"><span class="icode">M254</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2065403469" title="Клик — скопировать">A 206 540 34 69</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Рулевое управление Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2065405277" title="Клик — скопировать">A 206 540 52 77</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Рулевое управление Рулевое управление: Влево</td><td class="restr" data-expr="(807/808)"><span class="icode">(807/808)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2065401352" title="Клик — скопировать">A 206 540 13 52</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Дополнительный электроподогреватель F153/2 to X293/1 Рулевое управление: Влево</td><td class="restr" data-expr="8B2"><span class="icode">8B2</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2065408274" title="Клик — скопировать">A 206 540 82 74</td><td>- Электрический жгут</td><td>1</td><td>Дополнительный электроподогреватель F153/2 to X293/1 Рулевое управление: Влево</td><td class="restr" data-expr="A08+M254+B01+8B2+1U2"><span class="icode">A08+M254+B01+8B2+1U2</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2065402168" title="Клик — скопировать">A 206 540 21 68</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Преобразователь напряжения F150/3 to N83/12 Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2065403069" title="Клик — скопировать">A 206 540 30 69</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Насос охлаждающей жидкости Рулевое управление: Влево</td><td class="restr" data-expr="M254"><span class="icode">M254</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2065400187" title="Клик — скопировать">A 206 540 01 87</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Насос охлаждающей жидкости Рулевое управление: Влево</td><td class="restr" data-expr="(807/808)+M254+1U2"><span class="icode">(807/808)+M254+1U2</span></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2065405804" title="Клик — скопировать">A 206 540 58 04</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Вентилятор радиатора Рулевое управление: Влево</td><td class="restr" data-expr="(M254+700)"><span class="icode">(M254+700)</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A2065408107" title="Клик — скопировать">A 206 540 81 07</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Адаптер 48V</td><td class="restr" data-expr="8B2"><span class="icode">8B2</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A2065408107" title="Клик — скопировать">A 206 540 81 07</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Адаптер 48V</td><td class="restr" data-expr="8B2/(1U2+B01)"><span class="icode">8B2/(1U2+B01)</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A2065404572" title="Клик — скопировать">A 206 540 45 72</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Адаптер провода &quot;массы&quot; 48V Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A2065404858" title="Клик — скопировать">A 206 540 48 58</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Огнетушитель X25/7 to X278 Рулевое управление: Влево</td><td class="restr" data-expr="(807/808)+2U8+M254"><span class="icode">(807/808)+2U8+M254</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2065402152" title="Клик — скопировать">A 206 540 21 52</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Датчик угла поворота Рулевое управление: Влево</td><td class="restr" data-expr="(316/317/318)"><span class="icode">(316/317/318)</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2065403952" title="Клик — скопировать">A 206 540 39 52</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Задний датчик угла поворота Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="Q000000000002" title="Клик — скопировать">Q 000000000002</td><td>- Возможен заказ только отдельных компонентов жгута проводов</td><td>1</td><td>Противотуманная фара Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A2065403869" title="Клик — скопировать">A 206 540 38 69</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Противотуманная фара Рулевое управление: Влево</td><td class="restr" data-expr="(316/317/318)"><span class="icode">(316/317/318)</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2065408368" title="Клик — скопировать">A 206 540 83 68</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Отопление, вентиляция и кондиционирование, электропитание шины LIN Рулевое управление: Влево</td><td class="restr" data-expr="(830+580/581/228/ME10/P53/M654+B01)"><span class="icode">(830+580/581/228/ME10/P53/M654+B01)</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2065408568" title="Клик — скопировать">A 206 540 85 68</td><td>- Электрический жгут</td><td>1</td><td>Отопление, вентиляция и кондиционирование, массовый провод шины LIN Рулевое управление: Влево</td><td class="restr" data-expr="(830+580/581/228/ME10/P53/M654+B01)"><span class="icode">(830+580/581/228/ME10/P53/M654+B01)</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2065408768" title="Клик — скопировать">A 206 540 87 68</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Связь по шине данных LIN с климатической системой Рулевое управление: Влево</td><td class="restr" data-expr="(01T/830+580/581/228/ME10/P53/M654)"><span class="icode">(01T/830+580/581/228/ME10/P53/M654)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2065403169" title="Клик — скопировать">A 206 540 31 69</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Переключающий клапан автономного отопителя Рулевое управление: Влево</td><td class="restr" data-expr="M254+(ME10/228)"><span class="icode">M254+(ME10/228)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2065404069" title="Клик — скопировать">A 206 540 40 69</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Циркуляционный насос Рулевое управление: Влево</td><td class="restr" data-expr="M254+(228/ME10)"><span class="icode">M254+(228/ME10)</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A2065406281" title="Клик — скопировать">A 206 540 62 81</td><td>- Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Электронасос системы охлаждения \- бортовая сеть 48 В Рулевое управление: Влево</td><td class="restr" data-expr="(807/808)+B01"><span class="icode">(807/808)+B01</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 51 · подписано на схемах: 51 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_PV000.010.120.529_version_001.webp", "poses": ["10"], "hs": {"10": [[809, 410, 30, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_webp/drawing_PV000.010.109.628_version_004.webp", "poses": ["120", "150", "160", "170", "180"], "hs": {"180": [[1074, 566, 42, 28]], "170": [[1049, 723, 42, 28]], "160": [[440, 725, 43, 29]], "150": [[1070, 206, 43, 28]], "120": [[434, 211, 42, 28]]}, "w": 1326, "h": 881}, {"png": "../../img_webp/drawing_PV000.010.109.749_version_005.webp", "poses": ["220", "260", "280", "310"], "hs": {"220": [[329, 258, 42, 28]], "310": [[316, 642, 42, 28]], "280": [[968, 751, 42, 29]], "260": [[299, 712, 43, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_webp/drawing_PV000.010.126.243_version_004.webp", "poses": ["320", "340", "400", "410", "420", "440"], "hs": {"440": [[1059, 684, 42, 28]], "320": [[421, 277, 43, 29]], "420": [[354, 840, 43, 28]], "410": [[945, 307, 43, 29]], "400": [[328, 302, 43, 28]], "340": [[424, 701, 42, 28]]}, "w": 1326, "h": 881}, {"png": "../../img_webp/drawing_PV000.010.322.359_version_002.webp", "poses": ["450", "460"], "hs": {"460": [[1010, 304, 43, 29]], "450": [[424, 216, 42, 29]]}, "w": 1326, "h": 881}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>

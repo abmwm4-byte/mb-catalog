@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.163.149_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_PV000.010.163.149_version_001.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.163.149_version_001.png", "poses": ["50", "100", "150", "170", "200", "250", "300", "350"], "hs": {"100": [[472, 590, 42, 29]], "200": [[1073, 288, 43, 29]], "300": [[126, 86, 42, 28]], "170": [[246, 447, 42, 29]], "50": [[694, 348, 30, 28]], "150": [[204, 335, 43, 29]], "250": [[840, 136, 43, 29]], "350": [[260, 89, 43, 29]]}, "w": 1326, "h": 881}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_PV000.010.163.149_version_001.webp", "poses": ["50", "100", "150", "170", "200", "250", "300", "350"], "hs": {"100": [[472, 590, 42, 29]], "200": [[1073, 288, 43, 29]], "300": [[126, 86, 42, 28]], "170": [[246, 447, 42, 29]], "50": [[694, 348, 30, 28]], "150": [[204, 335, 43, 29]], "250": [[840, 136, 43, 29]], "350": [[260, 89, 43, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B52130000031.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B52130000031.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B52130000031.png", "poses": ["100", "102", "110", "120", "130"], "hs": {"50": [[355, 407, 28, 27]], "40": [[423, 468, 30, 24]], "30": [[236, 514, 28, 24]], "20": [[665, 205, 30, 25]], "10": [[165, 418, 28, 24]]}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B52130000052.png", "poses": ["290"], "hs": {}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B52130000054.png", "poses": ["400", "420", "430", "440", "450", "500", "510"], "hs": {"410": [[647, 332, 44, 26]], "490": [[727, 288, 44, 26]], "480": [[812, 266, 44, 24]], "470": [[795, 693, 44, 25]], "460": [[707, 817, 42, 27]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B52130000055.png", "poses": [], "hs": {"330": [[649, 614, 41, 26]], "320": [[799, 536, 41, 25]], "360": [[467, 393, 42, 27]], "350": [[930, 541, 42, 26]], "340": [[1084, 427, 42, 24]]}, "w": 1326, "h": 937}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B52130000031.webp", "poses": ["100", "102", "110", "120", "130"], "hs": {"50": [[355, 407, 28, 27]], "40": [[423, 468, 30, 24]], "30": [[236, 514, 28, 24]], "20": [[665, 205, 30, 25]], "10": [[165, 418, 28, 24]]}, "w": 1326, "h": 938}, {"png": "../../img_webp/drawing_B52130000052.webp", "poses": ["290"], "hs": {}, "w": 1326, "h": 938}, {"png": "../../img_webp/drawing_B52130000054.webp", "poses": ["400", "420", "430", "440", "450", "500", "510"], "hs": {"410": [[647, 332, 44, 26]], "490": [[727, 288, 44, 26]], "480": [[812, 266, 44, 24]], "470": [[795, 693, 44, 25]], "460": [[707, 817, 42, 27]]}, "w": 1326, "h": 937}, {"png": "../../img_webp/drawing_B52130000055.webp", "poses": [], "hs": {"330": [[649, 614, 41, 26]], "320": [[799, 536, 41, 25]], "360": [[467, 393, 42, 27]], "350": [[930, 541, 42, 26]], "340": [[1084, 427, 42, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

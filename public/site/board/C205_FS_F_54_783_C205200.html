@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54783000030.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B54783000030.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54783000030.png", "poses": ["100", "110", "200", "210", "900", "902"], "hs": {"110": [[504, 770, 42, 26]], "210": [[1234, 423, 42, 26]], "100": [[458, 687, 42, 26]], "200": [[1187, 589, 42, 27]], "900": [[346, 785, 42, 26]], "902": [[1080, 516, 42, 26]]}, "w": 1326, "h": 938}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B54783000030.webp", "poses": ["100", "110", "200", "210", "900", "902"], "hs": {"110": [[504, 770, 42, 26]], "210": [[1234, 423, 42, 26]], "100": [[458, 687, 42, 26]], "200": [[1187, 589, 42, 27]], "900": [[346, 785, 42, 26]], "902": [[1080, 516, 42, 26]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

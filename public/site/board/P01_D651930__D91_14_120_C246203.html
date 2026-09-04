@@ -77,7 +77,7 @@ tr.rowhl { background: #dbe9fa; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B14120000125.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+    <img id="scheme" src="../../img_webp/drawing_B14120000125.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -87,7 +87,7 @@ tr.rowhl { background: #dbe9fa; }
   </div>
 </div>
 <p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14120000125.png", "poses": ["100", "105", "120", "350", "390", "400", "405", "410"], "hs": {"100": [[544, 431, 48, 30]], "410": [[525, 669, 48, 29]], "400": [[808, 537, 48, 30]], "105": [[491, 522, 48, 29]], "405": [[815, 430, 48, 30]], "390": [[885, 607, 48, 30]], "350": [[678, 310, 48, 30]], "120": [[480, 340, 48, 29]]}, "w": 1326, "h": 937}];</script><script>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_B14120000125.webp", "poses": ["100", "105", "120", "350", "390", "400", "405", "410"], "hs": {"100": [[544, 431, 48, 30]], "410": [[525, 669, 48, 29]], "400": [[808, 537, 48, 30]], "105": [[491, 522, 48, 29]], "405": [[815, 430, 48, 30]], "390": [[885, 607, 48, 30]], "350": [[678, 310, 48, 30]], "120": [[480, 340, 48, 29]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};

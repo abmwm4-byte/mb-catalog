@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>46 РУЛЕВОЕ УПРАВЛЕНИЕ / 105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">D43 -/-</a> → 105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</div>
+<h1>105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_webp/drawing_PV000.001.640.510_version_002.webp" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314604703" title="Клик — скопировать">A 231 460 47 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="289+731+428+-(M152/Y96/P78)"><span class="icode">289+731+428+-(M152/Y96/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314605103" title="Клик — скопировать">A 231 460 51 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="289+731+428+476+-(M152/Y96/P78)"><span class="icode">289+731+428+476+-(M152/Y96/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724606003" title="Клик — скопировать">A 172 460 60 03</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="Y96+-(428/476/M152)"><span class="icode">Y96+-(428/476/M152)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724606203" title="Клик — скопировать">A 172 460 62 03</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="Y96+(428/M152)+-476"><span class="icode">Y96+(428/M152)+-476</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724606103" title="Клик — скопировать">A 172 460 61 03</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="Y96+476+-(428/M152)"><span class="icode">Y96+476+-(428/M152)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724606303" title="Клик — скопировать">A 172 460 63 03</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="Y96+476+(428/M152)"><span class="icode">Y96+476+(428/M152)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724608703" title="Клик — скопировать">A 172 460 87 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="(803/804/805/806)+(X00/X50)+-(Y96/M152/289/P78)"><span class="icode">(803/804/805/806)+(X00/X50)+-(Y96/M152/289/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314604603" title="Клик — скопировать">A 231 460 46 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="(803/804/805/806)+((X00/X50)+428)+-(Y96/M152/289/P78)"><span class="icode">(803/804/805/806)+((X00/X50)+428)+-(Y96/M152/289/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314604903" title="Клик — скопировать">A 231 460 49 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="(803/804/805/806)+((X00/X50)+476)+-(Y96/M152/289/P78)"><span class="icode">(803/804/805/806)+((X00/X50)+476)+-(Y96/M152/289/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314605003" title="Клик — скопировать">A 231 460 50 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="(803/804/805/806)+((X00/X50)+428+476)+-(Y96/M152/289/P78)"><span class="icode">(803/804/805/806)+((X00/X50)+428+476)+-(Y96/M152/289/P78)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1724608703" title="Клик — скопировать">A 172 460 87 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="P78+-(Y96/M152/289)"><span class="icode">P78+-(Y96/M152/289)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314604603" title="Клик — скопировать">A 231 460 46 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="P78+428+-(Y96/M152/289)"><span class="icode">P78+428+-(Y96/M152/289)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314604903" title="Клик — скопировать">A 231 460 49 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="P78+476+-(Y96/M152/289)"><span class="icode">P78+476+-(Y96/M152/289)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2314605003" title="Клик — скопировать">A 231 460 50 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="P78+476+428+-(Y96/M152/289)"><span class="icode">P78+476+428+-(Y96/M152/289)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0014601403" title="Клик — скопировать">A 001 460 14 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="L5D+731+431+-M152"><span class="icode">L5D+731+431+-M152</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004603403" title="Клик — скопировать">A 000 460 34 03</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5C+M276+M016+431+(751A/761A/771A)+-(PEJ/PEL/P66)"><span class="icode">L5C+M276+M016+431+(751A/761A/771A)+-(PEJ/PEL/P66)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004603603" title="Клик — скопировать">A 000 460 36 03</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5C+M276+M016+476+431+(751A/761A/771A)+-(PEJ/PEL/P66)"><span class="icode">L5C+M276+M016+476+431+(751A/761A/771A)+-(PEJ/PEL/P66)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004604103" title="Клик — скопировать">A 000 460 41 03</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5C+M276+M016+431+-(PEJ/PEL/P66)"><span class="icode">L5C+M276+M016+431+-(PEJ/PEL/P66)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004604203" title="Клик — скопировать">A 000 460 42 03</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5C+M276+M016+431+476+-(PEJ/PEL/P66)"><span class="icode">L5C+M276+M016+431+476+-(PEJ/PEL/P66)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004607100" title="Клик — скопировать">A 000 460 71 00</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5I+M276+M016+431"><span class="icode">L5I+M276+M016+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004607200" title="Клик — скопировать">A 000 460 72 00</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5I+M276+M016+476+431"><span class="icode">L5I+M276+M016+476+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1664601518" title="Клик — скопировать">A 166 460 15 18</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="L6K+M276+M016+431"><span class="icode">L6K+M276+M016+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1664601618" title="Клик — скопировать">A 166 460 16 18</td><td>Трехспицевое рул. колесо</td><td>1</td><td></td><td class="restr" data-expr="L6K+M276+M016+476+431"><span class="icode">L6K+M276+M016+476+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004602309" title="Клик — скопировать">A 000 460 23 09</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5B+P66"><span class="icode">L5B+P66</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004602409" title="Клик — скопировать">A 000 460 24 09</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5B+P66+431"><span class="icode">L5B+P66+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004602509" title="Клик — скопировать">A 000 460 25 09</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L5B+P66+476"><span class="icode">L5B+P66+476</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004602609" title="Клик — скопировать">A 000 460 26 09</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="(L5C+(PEJ/PEL)/L5B+P66)+476+431"><span class="icode">(L5C+(PEJ/PEL)/L5B+P66)+476+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0004602609" title="Клик — скопировать">A 000 460 26 09</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="L5B+P66+476+431"><span class="icode">L5B+P66+476+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1664601601" title="Клик — скопировать">A 166 460 16 01</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L6J+P63+431"><span class="icode">L6J+P63+431</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1664601701" title="Клик — скопировать">A 166 460 17 01</td><td>Рулевое колесо (LENKRAD)</td><td>1</td><td></td><td class="restr" data-expr="L6J+P63+431+476"><span class="icode">L6J+P63+431+476</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2185400662" title="Клик — скопировать">A 218 540 06 62</td><td>- Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="(802/803/804/805/806)+(428+-M152/Y96+428+M152)+-(L6K/L5C)"><span class="icode">(802/803/804/805/806)+(428+-M152/Y96+428+M152)+-(L6K/L5C)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0999051000" title="Клик — скопировать">A 099 905 10 00</td><td>- Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="L5C+428"><span class="icode">L5C+428</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0999053400" title="Клик — скопировать">A 099 905 34 00</td><td>- Блок выключателей (SCHALTERBLOCK)</td><td>1</td><td>Слева</td><td class="restr" data-expr="(L5C/L5D/L5I)+431"><span class="icode">(L5C/L5D/L5I)+431</span></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2185400762" title="Клик — скопировать">A 218 540 07 62</td><td>- Блок выключателей</td><td>1</td><td>Справа</td><td class="restr" data-expr="(802/803/804/805/806)+(428+-M152/Y96+428+M152)+-(L6K/L5C)"><span class="icode">(802/803/804/805/806)+(428+-M152/Y96+428+M152)+-(L6K/L5C)</span></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A0999051100" title="Клик — скопировать">A 099 905 11 00</td><td>- Блок выключателей</td><td>1</td><td>Справа</td><td class="restr" data-expr="L5C+428"><span class="icode">L5C+428</span></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A0999053500" title="Клик — скопировать">A 099 905 35 00</td><td>- Блок выключателей (SCHALTERBLOCK)</td><td>1</td><td>Справа</td><td class="restr" data-expr="(L5C/L5D/L5I)+431"><span class="icode">(L5C/L5D/L5I)+431</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0005453968" title="Клик — скопировать">A 000 545 39 68</td><td>- Подрул.переключатель пер. (SCHALTWIPPE)</td><td>1</td><td>Комплект деталей слева и справа</td><td class="restr" data-expr="L6K"><span class="icode">L6K</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0005453968" title="Клик — скопировать">A 000 545 39 68</td><td>- Подрул.переключатель пер. (SCHALTWIPPE)</td><td>1</td><td>Комплект деталей слева и справа</td><td class="restr" data-expr="L6J+P63"><span class="icode">L6J+P63</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N000000003251" title="Клик — скопировать">N 000000 003251</td><td>- Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Подрулевой переключатель передач слева к рулевому колесу; M5X12</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="N000000003251" title="Клик — скопировать">N 000000 003251</td><td>- Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Подрулевой переключатель передач справа к рулевому колесу; M5X12</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2174640013" title="Клик — скопировать">A 217 464 00 13</td><td>- Накладка рулевого колеса (BLENDE LENKRAD)</td><td>1</td><td>Верхняя часть AMG</td><td class="restr" data-expr="L6K"><span class="icode">L6K</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2174640013" title="Клик — скопировать">A 217 464 00 13</td><td>- Накладка рулевого колеса (BLENDE LENKRAD)</td><td>1</td><td>Верхняя часть AMG</td><td class="restr" data-expr="L6J+P63"><span class="icode">L6J+P63</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A2174640113" title="Клик — скопировать">A 217 464 01 13</td><td>- Накладка рулевого колеса (BLENDE LENKRAD)</td><td>1</td><td>Нижняя часть</td><td class="restr" data-expr="L6K"><span class="icode">L6K</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A2174640113" title="Клик — скопировать">A 217 464 01 13</td><td>- Накладка рулевого колеса (BLENDE LENKRAD)</td><td>1</td><td>Нижняя часть</td><td class="restr" data-expr="L6J+P63"><span class="icode">L6J+P63</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0994643013" title="Клик — скопировать">A 099 464 30 13</td><td>- Накладка рулевого колеса</td><td>1</td><td></td><td class="restr" data-expr="L5C/L5D/L5I/(807/808/809/800/801)+L6K"><span class="icode">L5C/L5D/L5I/(807/808/809/800/801)+L6K</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0994643113" title="Клик — скопировать">A 099 464 31 13</td><td>- Накладка рулевого колеса</td><td>1</td><td>Нижняя часть</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0994640417" title="Клик — скопировать">A 099 464 04 17</td><td>- Контактная плата (KONTAKTPLATTE)</td><td>1</td><td></td><td class="restr" data-expr="807/808/809"><span class="icode">807/808/809</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0994641000" title="Клик — скопировать">A 099 464 10 00</td><td>- Контактная плата (KONTAKTPLATTE)</td><td>1</td><td></td><td class="restr" data-expr="807/808/809"><span class="icode">807/808/809</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0994640517" title="Клик — скопировать">A 099 464 05 17</td><td>- Контактная плата (KONTAKTPLATTE)</td><td>1</td><td></td><td class="restr" data-expr="476"><span class="icode">476</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0994641100" title="Клик — скопировать">A 099 464 11 00</td><td>- Контактная плата (KONTAKTPLATTE)</td><td>1</td><td></td><td class="restr" data-expr="476"><span class="icode">476</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2185400162" title="Клик — скопировать">A 218 540 01 62</td><td>- Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="(802/803/804/805/806)+-(M152/L5C/L5D/L5I/L6K)"><span class="icode">(802/803/804/805/806)+-(M152/L5C/L5D/L5I/L6K)</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0999050600" title="Клик — скопировать">A 099 905 06 00</td><td>- Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="(807/808/809/800/801)"><span class="icode">(807/808/809/800/801)</span></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A0019845629" title="Клик — скопировать">A 001 984 56 29</td><td>- Болт с головкой торкс (SECHSRUNDSCHRAUBE)</td><td>2</td><td>Крепление накладки, из 1 части; 4X12</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A0019845629" title="Клик — скопировать">A 001 984 56 29</td><td>- Болт с головкой торкс (SECHSRUNDSCHRAUBE)</td><td>8</td><td>Крепление накладки, из 2 частей; 4X12</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2185400262" title="Клик — скопировать">A 218 540 02 62</td><td>- Блок выключателей</td><td>1</td><td>Справа</td><td class="restr" data-expr="(802/803/804/805/806)+-(M152/L5C/L5D/L5I/L6K)"><span class="icode">(802/803/804/805/806)+-(M152/L5C/L5D/L5I/L6K)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0999050700" title="Клик — скопировать">A 099 905 07 00</td><td>- Блок выключателей (SCHALTERBLOCK)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1729065600" title="Клик — скопировать">A 172 906 56 00</td><td>- Вибродвигатель (VIBRATIONSMOTOR)</td><td>1</td><td></td><td class="restr" data-expr="802/803/804/805/806+476+-(L5C/L5D)"><span class="icode">802/803/804/805/806+476+-(L5C/L5D)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009906239" title="Клик — скопировать">A 000 990 62 39</td><td>Винт потай с 6-гранником (SENKSCHRAUBE MIT ISK)</td><td>1</td><td>Рулевое колесо на рулевом валу; M16X26</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008605903" title="Клик — скопировать">A 000 860 59 03</td><td>НПБ водителя (FAHRERAIRBAG)</td><td>1</td><td></td><td class="restr" data-expr="-(665K/401E)"><span class="icode">-(665K/401E)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008601200" title="Клик — скопировать">A 000 860 12 00</td><td>НПБ водителя (FAHRERAIRBAG)</td><td>1</td><td></td><td class="restr" data-expr="(L5C/L5D/L5I/L6K)+-(665K/401E)"><span class="icode">(L5C/L5D/L5I/L6K)+-(665K/401E)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008602203" title="Клик — скопировать">A 000 860 22 03</td><td>НПБ водителя (FAHRERAIRBAG)</td><td>1</td><td></td><td class="restr" data-expr="-(802/803/804)"><span class="icode">-(802/803/804)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008603100" title="Клик — скопировать">A 000 860 31 00</td><td>НПБ водителя (FAHRERAIRBAG)</td><td>1</td><td></td><td class="restr" data-expr="(L5C/L5D/L5I/L6K)+(494/460)+-(665K/401E)"><span class="icode">(L5C/L5D/L5I/L6K)+(494/460)+-(665K/401E)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008601803" title="Клик — скопировать">A 000 860 18 03</td><td>НПБ водителя (FAHRERAIRBAG)</td><td>1</td><td></td><td class="restr" data-expr="(L5C/L5D/L5I/L6K)+(494/460)+-(665K/401E)"><span class="icode">(L5C/L5D/L5I/L6K)+(494/460)+-(665K/401E)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0995400005" title="Клик — скопировать">A 099 540 00 05</td><td>- Электрический жгут</td><td>1</td><td>Подушка безопасности водителя [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="802/803/804/805/806"><span class="icode">802/803/804/805/806</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0995401205" title="Клик — скопировать">A 099 540 12 05</td><td>- Ремк-т жгута электропров. (REP.SATZ EL. LEITUNGSSATZ)</td><td>1</td><td>Ремонтный комплект</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0004602910" title="Клик — скопировать">A 000 460 29 10</td><td>Ремк-т рул. колеса (REP.SATZ LENKRAD)</td><td>1</td><td>Ремонтный комплект крепления</td><td class="restr" data-expr="802/803/804/805/806"><span class="icode">802/803/804/805/806</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0004603010" title="Клик — скопировать">A 000 460 30 10</td><td>Ремк-т рул. колеса (REP.SATZ LENKRAD)</td><td>1</td><td>Ремонтный комплект крепления TAKATA</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0004609400" title="Клик — скопировать">A 000 460 94 00</td><td>Ремк-т рул. колеса (REP.SATZ LENKRAD)</td><td>1</td><td>Ремонтный комплект крепления AUTOLIV</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 68 · подписано на схемах: 68 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_webp/drawing_PV000.001.640.510_version_002.webp", "poses": ["10", "20", "25", "30", "40", "45", "50", "55", "60", "65", "68", "70", "75", "80", "90", "100", "150", "160", "170", "400"], "hs": {"55": [[884, 590, 30, 28]], "45": [[255, 439, 30, 29]], "68": [[843, 378, 30, 29]], "25": [[184, 462, 30, 29]], "170": [[824, 112, 42, 29]], "160": [[901, 189, 42, 29]], "150": [[1028, 70, 43, 28]], "100": [[763, 156, 43, 29]], "400": [[1130, 771, 43, 29]], "90": [[758, 242, 30, 29]], "80": [[614, 176, 30, 29]], "70": [[923, 317, 31, 28]], "60": [[725, 418, 30, 29]], "50": [[953, 538, 30, 28]], "40": [[391, 622, 30, 29]], "30": [[231, 626, 30, 29]], "20": [[427, 718, 30, 29]], "75": [[586, 373, 30, 28]], "10": [[568, 659, 30, 28]], "65": [[805, 638, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>
