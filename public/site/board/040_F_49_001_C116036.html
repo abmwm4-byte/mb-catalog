@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>49 СИСТЕМА ВЫПУСКА ОГ / 001 СИСТЕМА ВЫПУСКА ОГ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116036">040 STANDARD</a> → 001 СИСТЕМА ВЫПУСКА ОГ</div>
+<h1>001 СИСТЕМА ВЫПУСКА ОГ</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B49001000006 <span class="hint">(1)</span></button><button data-i="1" class="">B49001000007 <span class="hint">(12)</span></button><button data-i="2" class="">B49001000008 <span class="hint">(14)</span></button><button data-i="3" class="">B49001000009 <span class="hint">(35)</span></button><button data-i="4" class="">B49001000010 <span class="hint">(14)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B49001000006.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 5
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1074921409" title="Клик — скопировать">A 107 492 14 09</td><td>Соединительный элемент</td><td>2</td><td>[081] UP TO CHASSIS:036 12 004567,22 005000</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1164905919" title="Клик — скопировать">A 116 490 59 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>1</td><td>СПЕРЕДИ СЛЕВА Рулевое управление: ВлевоАвтоматическая коробка переключения передач [019] FROM CHASSIS: 036 001630</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1164904719" title="Клик — скопировать">A 116 490 47 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>1</td><td>СПЕРЕДИ СЛЕВА Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1074920345" title="Клик — скопировать">A 107 492 03 45</td><td>- Фланец</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1264920745" title="Клик — скопировать">A 126 492 07 45</td><td>- Фланец</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A1164906019" title="Клик — скопировать">A 116 490 60 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>1</td><td>СПЕРЕДИ СПРАВА Рулевое управление: ВлевоАвтоматическая коробка переключения передач [019] FROM CHASSIS: 036 001630</td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A1164904819" title="Клик — скопировать">A 116 490 48 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>1</td><td>СПЕРЕДИ СПРАВА Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1074920345" title="Клик — скопировать">A 107 492 03 45</td><td>- Фланец</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1264920745" title="Клик — скопировать">A 126 492 07 45</td><td>- Фланец</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="N000931008246" title="Клик — скопировать">N 000931 008246</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="N304017008028" title="Клик — скопировать">N 304017 008028</td><td>Винт с 6-гранной головкой</td><td>4</td><td>СПЕРЕДИ СЛЕВА И СПРАВА [019] FROM CHASSIS: 036 001630</td><td class="restr"></td></tr><tr data-pos="193"><td>193</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="193"><td>193</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>4</td><td>СПЕРЕДИ СЛЕВА И СПРАВА; M8 [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos="201"><td>201</td><td class="pn" data-raw="N000835008135" title="Клик — скопировать">N 000835 008135</td><td>ШПИЛЬКА</td><td>4</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="A1164920353" title="Клик — скопировать">A 116 492 03 53</td><td>втулка</td><td>4</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos="217"><td>217</td><td class="pn" data-raw="A1169937801" title="Клик — скопировать">A 116 993 78 01</td><td>пружина</td><td>4</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К ВЫПУСКНОМУ КОЛЛЕКТОРУ [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos="249"><td>249</td><td class="pn" data-raw="A1164901615" title="Клик — скопировать">A 116 490 16 15</td><td>ГЛУШИТЕЛЬ С ТРУБОЙ</td><td>1</td><td>CENTRAL,CLAMP\-ON VERSION</td><td class="restr"></td></tr><tr data-pos="273"><td>273</td><td class="pn" data-raw="A0004920440" title="Клик — скопировать">A 000 492 04 40</td><td>- ХОМУТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="273"><td>273</td><td class="pn" data-raw="A1244900041" title="Клик — скопировать">A 124 490 00 41</td><td>- хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="273"><td>273</td><td class="pn" data-raw="A0004900841" title="Клик — скопировать">A 000 490 08 41</td><td>- хомут</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="281"><td>281</td><td class="pn" data-raw="N000931008254" title="Клик — скопировать">N 000931 008254</td><td>	- Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="281"><td>281</td><td class="pn" data-raw="N304014008002" title="Клик — скопировать">N 304014 008002</td><td>	- Винт с 6-гранной головкой</td><td>2</td><td>M8X65\-8.8</td><td class="restr"></td></tr><tr data-pos="289"><td>289</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>	- Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="289"><td>289</td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>	- Шайба</td><td>4</td><td>8 MM</td><td class="restr"></td></tr><tr data-pos="297"><td>297</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>	- Гайка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="353"><td>353</td><td class="pn" data-raw="A1164911701" title="Клик — скопировать">A 116 491 17 01</td><td>ГЛУШИТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="353"><td>353</td><td class="pn" data-raw="A1164902515" title="Клик — скопировать">A 116 490 25 15</td><td>Глушитель</td><td>-</td><td>СВАРНОЕ ИСПОЛНЕНИЕ [017] NO LONGER AVAILABLE;INSTEAD: CLAMP-ON VERSION [023] FOR STRAIGHT TAIL PIPE</td><td class="restr"></td></tr><tr data-pos="353"><td>353</td><td class="pn" data-raw="A1164911401" title="Клик — скопировать">A 116 491 14 01</td><td>ГЛУШИТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="353"><td>353</td><td class="pn" data-raw="A1164909421" title="Клик — скопировать">A 116 490 94 21</td><td>ВЫПУСКНАЯ ТРУБА</td><td>-</td><td>СВАРНОЕ ИСПОЛНЕНИЕ [017] NO LONGER AVAILABLE;INSTEAD: CLAMP-ON VERSION [023] FOR STRAIGHT TAIL PIPE</td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1164909421" title="Клик — скопировать">A 116 490 94 21</td><td>ВЫПУСКНАЯ ТРУБА</td><td>-</td><td>[023] FOR STRAIGHT TAIL PIPE</td><td class="restr"></td></tr><tr data-pos="361"><td>361</td><td class="pn" data-raw="A1164902315" title="Клик — скопировать">A 116 490 23 15</td><td>Глушитель</td><td>1</td><td>REAR;CLAMP\-ON VERSION [024] FOR BENT TAIL PIPE [022] DELIVER ADDITIONALLY: 1 CLAMP 1164921343, 1 SPACER TUBE 1164920453, 1 NUT 999901 008000, FROM CHASSIS: 036     003490, ALSO INSTALLED ON: 003482-003488</td><td class="restr"></td></tr><tr data-pos="441"><td>441</td><td class="pn" data-raw="A1164920141" title="Клик — скопировать">A 116 492 01 41</td><td>Держатель</td><td>2</td><td>ПЕРЕДНЯЯ ВЫПУСКНАЯ ТРУБА К КП</td><td class="restr"></td></tr><tr data-pos="449"><td>449</td><td class="pn" data-raw="A1234920027" title="Клик — скопировать">A 123 492 00 27</td><td>Зажимная скоба</td><td>2</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="457"><td>457</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="457"><td>457</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>4</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ; M8</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="N002093016100" title="Клик — скопировать">N 002093 016100</td><td>Тарельчатая пружина</td><td>16</td><td>КРОНШТЕЙН К ВЫПУСКНОЙ ТРУБЕ СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="473"><td>473</td><td class="pn" data-raw="N000931008266" title="Клик — скопировать">N 000931 008266</td><td>Винт</td><td>3</td><td>ДЕРЖАТ. НА КРЕПЕЖН. ПЛАСТИНЕ</td><td class="restr"></td></tr><tr data-pos="481"><td>481</td><td class="pn" data-raw="N000440009103" title="Клик — скопировать">N 000440 009103</td><td>Шайба</td><td>9</td><td>ДЕРЖАТ. НА КРЕПЕЖН. ПЛАСТИНЕ</td><td class="restr"></td></tr><tr data-pos="489"><td>489</td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>3</td><td>ДЕРЖАТ. НА КРЕПЕЖН. ПЛАСТИНЕ</td><td class="restr"></td></tr><tr data-pos="505"><td>505</td><td class="pn" data-raw="A1164900044" title="Клик — скопировать">A 116 490 00 44</td><td>ПЛАСТИНА</td><td>1</td><td>КАРТЕР КП [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="521"><td>521</td><td class="pn" data-raw="A1211550181" title="Клик — скопировать">A 121 155 01 81</td><td>Эластомерная шайба</td><td>6</td><td>ДЕРЖАТ.НА ПЛАСТИНЕ КРЕПЛЕНИЯ ИЛИ КП</td><td class="restr"></td></tr><tr data-pos="529"><td>529</td><td class="pn" data-raw="A1084920053" title="Клик — скопировать">A 108 492 00 53</td><td>РАСПОРН. ТРУБКА</td><td>3</td><td>ДЕРЖАТ. НА КРЕПЕЖН. ПЛАСТИНЕ</td><td class="restr"></td></tr><tr data-pos="561"><td>561</td><td class="pn" data-raw="N000137008204" title="Клик — скопировать">N 000137 008204</td><td>Пружинная шайба</td><td>-</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="561"><td>561</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба</td><td>2</td><td>КРОНШТЕЙН К КП Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="569"><td>569</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>Винт</td><td>-</td><td>Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="569"><td>569</td><td class="pn" data-raw="N304017008027" title="Клик — скопировать">N 304017 008027</td><td>Винт с 6-гранной головкой</td><td>2</td><td>КРОНШТЕЙН К КП Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="577"><td>577</td><td class="pn" data-raw="A1094900343" title="Клик — скопировать">A 109 490 03 43</td><td>Удерживающая дуга</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА</td><td class="restr"></td></tr><tr data-pos="585"><td>585</td><td class="pn" data-raw="A1164920143" title="Клик — скопировать">A 116 492 01 43</td><td>Скоба</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА</td><td class="restr"></td></tr><tr data-pos="593"><td>593</td><td class="pn" data-raw="A0004920053" title="Клик — скопировать">A 000 492 00 53</td><td>втулка</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА [015] UP TO CHASSIS: 036 001995</td><td class="restr"></td></tr><tr data-pos="593"><td>593</td><td class="pn" data-raw="A1164920453" title="Клик — скопировать">A 116 492 04 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА [016] FROM CHASSIS: 036 001996</td><td class="restr"></td></tr><tr data-pos="617"><td>617</td><td class="pn" data-raw="A0004920483" title="Клик — скопировать">A 000 492 04 83</td><td>ИЗОЛЯЦИЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="617"><td>617</td><td class="pn" data-raw="A0004921683" title="Клик — скопировать">A 000 492 16 83</td><td>Изоляционная шайба</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА</td><td class="restr"></td></tr><tr data-pos="641"><td>641</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="641"><td>641</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА; M8</td><td class="restr"></td></tr><tr data-pos="657"><td>657</td><td class="pn" data-raw="A1164900243" title="Клик — скопировать">A 116 490 02 43</td><td>Удерживающая дуга</td><td>1</td><td>MAIN MUFFLER FRONT SUSPENSION</td><td class="restr"></td></tr><tr data-pos="673"><td>673</td><td class="pn" data-raw="A1164920343" title="Клик — скопировать">A 116 492 03 43</td><td>Скоба</td><td>1</td><td>BOTTOM, MAIN MUFFLER FRONT SUSPENSION</td><td class="restr"></td></tr><tr data-pos="697"><td>697</td><td class="pn" data-raw="A0004920053" title="Клик — скопировать">A 000 492 00 53</td><td>втулка</td><td>1</td><td>MAIN MUFFLER FRONT SUSPENSION [015] UP TO CHASSIS: 036 001995</td><td class="restr"></td></tr><tr data-pos="697"><td>697</td><td class="pn" data-raw="A1164920453" title="Клик — скопировать">A 116 492 04 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>MAIN MUFFLER FRONT SUSPENSION [016] FROM CHASSIS: 036 001996</td><td class="restr"></td></tr><tr data-pos="721"><td>721</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="721"><td>721</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>1</td><td>MAIN MUFFLER FRONT SUSPENSION; M8</td><td class="restr"></td></tr><tr data-pos="745"><td>745</td><td class="pn" data-raw="A1164920543" title="Клик — скопировать">A 116 492 05 43</td><td>Удерживающая дуга</td><td>1</td><td>ЗАДН. ПОДВЕСКА ГЛАВН.ГЛУШИТЕЛЯ [023] FOR STRAIGHT TAIL PIPE</td><td class="restr"></td></tr><tr data-pos="753"><td>753</td><td class="pn" data-raw="A1164921343" title="Клик — скопировать">A 116 492 13 43</td><td>Скоба</td><td>1</td><td>ЗАДН. ПОДВЕСКА ГЛАВН.ГЛУШИТЕЛЯ [024] FOR BENT TAIL PIPE [022] DELIVER ADDITIONALLY: 1 CLAMP 1164921343, 1 SPACER TUBE 1164920453, 1 NUT 999901 008000, FROM CHASSIS: 036     003490, ALSO INSTALLED ON: 003482-003488</td><td class="restr"></td></tr><tr data-pos="777"><td>777</td><td class="pn" data-raw="A1164920453" title="Клик — скопировать">A 116 492 04 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>MAIN MUFFLER REAR SUSPENSION 43 MM</td><td class="restr"></td></tr><tr data-pos="785"><td>785</td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="785"><td>785</td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>1</td><td>ЗАДН. ПОДВЕСКА ГЛАВН.ГЛУШИТЕЛЯ; M8</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1239870940" title="Клик — скопировать">A 123 987 09 40</td><td>Резиновый буфер</td><td>1</td><td>ЦЕНТР.ПОДВЕСКА [070] UP TO CHASSIS: 020     101831 024,025 114367 028,029 046258 032,033 080464 036     004221</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1239870940" title="Клик — скопировать">A 123 987 09 40</td><td>Резиновый буфер</td><td>2</td><td>ТРАВЕРСА ПОД ЗАДН. СИДЕНЬЕМ [070] UP TO CHASSIS: 020     101831 024,025 114367 028,029 046258 032,033 080464 036     004221</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1239870940" title="Клик — скопировать">A 123 987 09 40</td><td>Резиновый буфер</td><td>2</td><td>ПОДВЕСКА ГЛУШИТЕЛЯ [070] UP TO CHASSIS: 020     101831 024,025 114367 028,029 046258 032,033 080464 036     004221</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1129870140" title="Клик — скопировать">A 112 987 01 40</td><td>Резиновый буфер</td><td>1</td><td>[071] FROM CHASSIS: 020     101832 024,025 114368 028,029 046259 032,033 080465 036     004222</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1129870140" title="Клик — скопировать">A 112 987 01 40</td><td>Резиновый буфер</td><td>2</td><td>ТРАВЕРСА ПОД ЗАДН. СИДЕНЬЕМ [071] FROM CHASSIS: 020     101832 024,025 114368 028,029 046259 032,033 080465 036     004222</td><td class="restr"></td></tr><tr data-pos="793"><td>793</td><td class="pn" data-raw="A1129870140" title="Клик — скопировать">A 112 987 01 40</td><td>Резиновый буфер</td><td>2</td><td>ПОДВЕСКА ГЛУШИТЕЛЯ [071] FROM CHASSIS: 020     101832 024,025 114368 028,029 046259 032,033 080465 036     004222</td><td class="restr"></td></tr><tr data-pos="801"><td>801</td><td class="pn" data-raw="A1074920082" title="Клик — скопировать">A 107 492 00 82</td><td>Резиновое кольцо</td><td>4</td><td>ПОДВЕСКА ГЛУШИТЕЛЯ</td><td class="restr"></td></tr><tr data-pos="809"><td>809</td><td class="pn" data-raw="A1074920082" title="Клик — скопировать">A 107 492 00 82</td><td>Резиновое кольцо</td><td>2</td><td>ЦЕНТР.ПОДВЕСКА</td><td class="restr"></td></tr><tr data-pos="833"><td>833</td><td class="pn" data-raw="A1005860049" title="Клик — скопировать">A 100 586 00 49</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="833"><td>833</td><td class="pn" data-raw="A1244900041" title="Клик — скопировать">A 124 490 00 41</td><td>хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="833"><td>833</td><td class="pn" data-raw="A0004900841" title="Клик — скопировать">A 000 490 08 41</td><td>хомут</td><td>1</td><td>[023] FOR STRAIGHT TAIL PIPE [016] FROM CHASSIS: 036 001996</td><td class="restr"></td></tr><tr data-pos="841"><td>841</td><td class="pn" data-raw="A1005860249" title="Клик — скопировать">A 100 586 02 49</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td>[024] FOR BENT TAIL PIPE [022] DELIVER ADDITIONALLY: 1 CLAMP 1164921343, 1 SPACER TUBE 1164920453, 1 NUT 999901 008000, FROM CHASSIS: 036     003490, ALSO INSTALLED ON: 003482-003488</td><td class="restr"></td></tr><tr data-pos="857"><td>857</td><td class="pn" data-raw="A1234920714" title="Клик — скопировать">A 123 492 07 14</td><td>Выпускная труба глушителя</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="865"><td>865</td><td class="pn" data-raw="A1154920914" title="Клик — скопировать">A 115 492 09 14</td><td>Накладка</td><td>2</td><td>[002] FOR SUBSEQUENT INSTALLATION IN CASE OF TAIL SOILING, SHORTEN EXHAUST PIPE BY 75 MM</td><td class="restr"></td></tr><tr data-pos="873"><td>873</td><td class="pn" data-raw="N007981003203" title="Клик — скопировать">N 007981 003203</td><td>Шуруп</td><td>4</td><td>КОНЦЕВОЙ ЭЛЕМЕНТ К ВЫПУСКНОЙ ТРУБЕ [002] FOR SUBSEQUENT INSTALLATION IN CASE OF TAIL SOILING, SHORTEN EXHAUST PIPE BY 75 MM</td><td class="restr"></td></tr><tr data-pos="881"><td>881</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>4</td><td>КОНЦЕВОЙ ЭЛЕМЕНТ К ВЫПУСКНОЙ ТРУБЕ [002] FOR SUBSEQUENT INSTALLATION IN CASE OF TAIL SOILING, SHORTEN EXHAUST PIPE BY 75 MM</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164901919" title="Клик — скопировать">A 116 490 19 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>-</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164902019" title="Клик — скопировать">A 116 490 20 19</td><td>ВЫПУСКНАЯ ТРУБА</td><td>-</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач [018] UP TO CHASSIS: 036 001629</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164902721" title="Клик — скопировать">A 116 490 27 21</td><td>ВЫПУСКНАЯ ТРУБА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164901615" title="Клик — скопировать">A 116 490 16 15</td><td>ГЛУШИТЕЛЬ С ТРУБОЙ</td><td>-</td><td>CENTAL,с  FRONT AND CENTRAL MUFFLERS,   WELED VERSION [017] NO LONGER AVAILABLE;INSTEAD: CLAMP-ON VERSION</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164921604" title="Клик — скопировать">A 116 492 16 04</td><td>ВЫПУСКНАЯ ТРУБА ЗАД.</td><td>-</td><td>REAR, BETWEEN CENTRAL AND MAIN MUFFLERS,WELDED VERSION [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [017] NO LONGER AVAILABLE;INSTEAD: CLAMP-ON VERSION</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164921704" title="Клик — скопировать">A 116 492 17 04</td><td>ВЫПУСКНАЯ ТРУБА ЗАД.</td><td>-</td><td>REAR, BETWEEN CENTRAL AND MAIN MUFFLERS,WELDED VERSION [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [017] NO LONGER AVAILABLE;INSTEAD: CLAMP-ON VERSION</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0004920440" title="Клик — скопировать">A 000 492 04 40</td><td>- ХОМУТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1244900041" title="Клик — скопировать">A 124 490 00 41</td><td>- хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0004900841" title="Клик — скопировать">A 000 490 08 41</td><td>- хомут</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008254" title="Клик — скопировать">N 000931 008254</td><td>	- Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304014008002" title="Клик — скопировать">N 304014 008002</td><td>	- Винт с 6-гранной головкой</td><td>2</td><td>M8X65\-8.8</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>	- Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008443" title="Клик — скопировать">N 000125 008443</td><td>	- Шайба</td><td>4</td><td>8 MM</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>	- Гайка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>3</td><td>ДЕРЖАТ. НА КРЕПЕЖН. ПЛАСТИНЕ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164921243" title="Клик — скопировать">A 116 492 12 43</td><td>Удерживающая дуга</td><td>1</td><td>ЗАДН. ПОДВЕСКА ГЛАВН.ГЛУШИТЕЛЯ [024] FOR BENT TAIL PIPE</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164920253" title="Клик — скопировать">A 116 492 02 53</td><td>РАСПОРН. ТРУБКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1164920453" title="Клик — скопировать">A 116 492 04 53</td><td>РАСПОРН. ТРУБКА</td><td>-</td><td>MAIN MUFFLER REAR SUSPENSION 48 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1005860149" title="Клик — скопировать">A 100 586 01 49</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td>[024] FOR BENT TAIL PIPE</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 100 · подписано на схемах: 81 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49001000006.png", "poses": ["41"]}, {"png": "../../img_png/drawing_B49001000007.png", "poses": ["185", "441", "449", "457", "465", "473", "481", "489", "521", "529", "561", "569"]}, {"png": "../../img_png/drawing_B49001000008.png", "poses": ["105", "185", "193", "577", "585", "593", "617", "785", "793", "801", "809", "865", "873", "881"]}, {"png": "../../img_png/drawing_B49001000009.png", "poses": ["97", "105", "129", "137", "185", "193", "201", "209", "217", "249", "273", "281", "289", "297", "360", "441", "449", "505", "577", "585", "593", "617", "641", "657", "673", "697", "721", "745", "777", "785", "793", "801", "809", "833", "857"]}, {"png": "../../img_png/drawing_B49001000010.png", "poses": ["353", "361", "577", "585", "617", "657", "697", "753", "777", "785", "801", "809", "841", "873"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>61 Нижняя часть кузова / 015 Пол со стороны водителя</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253311">C253_FC -/-</a> → 015 Пол со стороны водителя</div>
+<h1>015 Пол со стороны водителя</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.002.739.893_version_002.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2136104902" title="Клик — скопировать">A 213 610 49 02</td><td>						- Основная панель днища (MAIN FLOOR)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2136105002" title="Клик — скопировать">A 213 610 50 02</td><td>						- Основная панель днища (MAIN FLOOR)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2136803125" title="Клик — скопировать">A 213 680 31 25</td><td>Шумоизоляция лонжерона (DAMPING, LONGITUD. MEMBER)</td><td>1</td><td>ОСНОВНОЙ ПОЛ СПЕРЕДИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A2056161300" title="Клик — скопировать">A 205 616 13 00</td><td>Угольник жесткости (REINFORCEMENT ANGLE)</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A2536161400" title="Клик — скопировать">A 253 616 14 00</td><td>Угольник жесткости (REINFORCEMENT ANGLE)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2056100331" title="Клик — скопировать">A 205 610 03 31</td><td>Консоль (CONSOLE)</td><td>1</td><td>ЭЛЕМЕНТ ЖЁСТКОСТИ НА ТУННЕЛЕ (ЛЕВ.)</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2056100431" title="Клик — скопировать">A 205 610 04 31</td><td>Консоль (CONSOLE)</td><td>1</td><td>ЭЛЕМЕНТ ЖЁСТКОСТИ НА ТУННЕЛЕ (ПРАВ.)</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2052670088" title="Клик — скопировать">A 205 267 00 88</td><td>Крышка (COVER)</td><td>1</td><td>ПРИВОД КП НА ЦЕНТР. КОНС.</td><td class="restr" data-expr="421/427"><span class="icode">421/427</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2136100123" title="Клик — скопировать">A 213 610 01 23</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>ПОД ОСНОВНЫМ ПОЛОМ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2136100223" title="Клик — скопировать">A 213 610 02 23</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>ПОД ОСНОВНЫМ ПОЛОМ СПРАВА</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2136103202" title="Клик — скопировать">A 213 610 32 02</td><td>Соединительный кронштейн (CONNECTING CARRIER)</td><td>1</td><td>ОСНОВНОЙ ПОЛ СПЕРЕДИ СЛЕВА Рулевое управление: Влево</td><td class="restr" data-expr="-700"><span class="icode">-700</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2136101410" title="Клик — скопировать">A 213 610 14 10</td><td>Соединительный кронштейн (CONNECTING CARRIER)</td><td>1</td><td>ОСНОВНОЙ ПОЛ СПЕРЕДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A2136108401" title="Клик — скопировать">A 213 610 84 01</td><td>Соединительный кронштейн (CONNECTING CARRIER)</td><td>1</td><td>ОСНОВНОЙ ПОЛ СПЕРЕДИ СЛЕВА Рулевое управление: Влево</td><td class="restr" data-expr="-700"><span class="icode">-700</span></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A2136108401" title="Клик — скопировать">A 213 610 84 01</td><td>Соединительный кронштейн (CONNECTING CARRIER)</td><td>1</td><td>ОСНОВНОЙ ПОЛ СПЕРЕДИ СЛЕВА Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2536101701" title="Клик — скопировать">A 253 610 17 01</td><td>Попереч. сиденье водителя (CROSSMEMBER, DRIVER SEAT)</td><td>1</td><td>ПОД ВОДИТЕЛЬСКИМ СИДЕНЬЕМ, СПЕРЕДИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2536101801" title="Клик — скопировать">A 253 610 18 01</td><td>Попереч. сиденье водителя (CROSSMEMBER, DRIVER SEAT)</td><td>1</td><td>ПОД ВОДИТЕЛЬСКИМ СИДЕНЬЕМ, СПЕРЕДИ СПРАВА [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2536101901" title="Клик — скопировать">A 253 610 19 01</td><td>Попереч. сиденье водителя (CROSSMEMBER, DRIVER SEAT)</td><td>1</td><td>ПОД ВОДИТЕЛЬСКИМ СИДЕНЬЕМ, ВНИЗУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2536102001" title="Клик — скопировать">A 253 610 20 01</td><td>Попереч. сиденье водителя (CROSSMEMBER, DRIVER SEAT)</td><td>1</td><td>ПОД ВОДИТЕЛЬСКИМ СИДЕНЬЕМ, ВНИЗУ СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2536190200" title="Клик — скопировать">A 253 619 02 00</td><td>Усиливающий элемент (STIFFENER)</td><td>1</td><td>ТУННЕЛЬ В ЦЕНТРЕ</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="N000000007876" title="Клик — скопировать">N 000000 007876</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>ЭЛЕМЕНТ ЖЁСТКОСТИ НА ТУННЕЛЕ (ЦЕНТР.); M10X40</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2536190100" title="Клик — скопировать">A 253 619 01 00</td><td>Усиливающий элемент (STIFFENER)</td><td>1</td><td>ТУННЕЛЬ СЗАДИ</td><td class="restr"></td></tr><tr data-pos="265"><td>265</td><td class="pn" data-raw="N000000009197" title="Клик — скопировать">N 000000 009197</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>Элемент жесткости к туннелю сзади; M10X40</td><td class="restr"></td></tr><tr data-pos="265"><td>265</td><td class="pn" data-raw="N910143010014" title="Клик — скопировать">N 910143 010014</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Элемент жесткости к туннелю сзади; M10X35</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2536805904" title="Клик — скопировать">A 253 680 59 04</td><td>Накладка основания кузова (COVER, SUBSTRUCTURE)</td><td>1</td><td>Основание кузова слева</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2536807205" title="Клик — скопировать">A 253 680 72 05</td><td>Накладка основания кузова (COVER, SUBSTRUCTURE)</td><td>1</td><td>Основание кузова справа</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>8</td><td>Крепление облицовки слева к остову кузова</td><td class="restr" data-expr="-(9O1/0B4)"><span class="icode">-(9O1/0B4)</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>8</td><td>Крепление облицовки слева к остову кузова</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>8</td><td>Крепление облицовки слева к остову кузова</td><td class="restr" data-expr="0B4"><span class="icode">0B4</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>8</td><td>Крепление облицовки справа к остову кузова</td><td class="restr" data-expr="-(9O1/0B4)"><span class="icode">-(9O1/0B4)</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>8</td><td>Крепление облицовки справа к остову кузова</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>8</td><td>Крепление облицовки справа к остову кузова</td><td class="restr" data-expr="0B4"><span class="icode">0B4</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>2</td><td>Крепление облицовки порога слева; 4.8X19</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога слева; 4.8X19</td><td class="restr" data-expr="M654/M656"><span class="icode">M654/M656</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>2</td><td>Крепление облицовки порога справа; 4.8X19</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>2</td><td>Крепление облицовки порога справа; 4.8X19</td><td class="restr" data-expr="M654/M654+ME05+550+998/M656/M656+550+998"><span class="icode">M654/M654+ME05+550+998/M656/M656+550+998</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога справа; 4.8X19</td><td class="restr" data-expr="(M654/M656)+998"><span class="icode">(M654/M656)+998</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0019902256" title="Клик — скопировать">A 001 990 22 56</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога слева</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0019902256" title="Клик — скопировать">A 001 990 22 56</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога слева</td><td class="restr" data-expr="M654/M656"><span class="icode">M654/M656</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0019902256" title="Клик — скопировать">A 001 990 22 56</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога справа</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0019902256" title="Клик — скопировать">A 001 990 22 56</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>2</td><td>Крепление облицовки порога справа</td><td class="restr" data-expr="M654/M654+ME05+550+998/M656/M656+550+998"><span class="icode">M654/M654+ME05+550+998/M656/M656+550+998</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0019902256" title="Клик — скопировать">A 001 990 22 56</td><td>Пружинная гайка самореза (CLIP NUT, TAPPING SCREW)</td><td>1</td><td>Крепление облицовки порога справа</td><td class="restr" data-expr="(M654/M656)+998"><span class="icode">(M654/M656)+998</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>1</td><td>Облицовка слева к кронштейну</td><td class="restr" data-expr="-0B4"><span class="icode">-0B4</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>1</td><td>Облицовка слева к кронштейну</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>1</td><td>Облицовка слева к кронштейну</td><td class="restr" data-expr="0B4"><span class="icode">0B4</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>1</td><td>Облицовка справа к кронштейну</td><td class="restr" data-expr="-0B4"><span class="icode">-0B4</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>1</td><td>Облицовка справа к кронштейну</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>1</td><td>Облицовка справа к кронштейну</td><td class="restr" data-expr="0B4"><span class="icode">0B4</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1249900492" title="Клик — скопировать">A 124 990 04 92</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>К колесной арке сзади слева; 6.5X18</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1249900492" title="Клик — скопировать">A 124 990 04 92</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>1</td><td>К колесной арке сзади справа; 6.5X18</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2136803103" title="Клик — скопировать">A 213 680 31 03</td><td>Держатель (HOLDER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="(ME05/M654+ME05)+-916"><span class="icode">(ME05/M654+ME05)+-916</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2536808900" title="Клик — скопировать">A 253 680 89 00</td><td>Держатель (HOLDER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2136803103" title="Клик — скопировать">A 213 680 31 03</td><td>Держатель (HOLDER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0009903662" title="Клик — скопировать">A 000 990 36 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>1</td><td>Держатель к остову кузова</td><td class="restr" data-expr="M654+-916"><span class="icode">M654+-916</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Защитная панель на днище задней части кузова (лев.); M6X12</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="417"><td>417</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>ЗАЩИТНАЯ ПАНЕЛЬ НА ДНИЩЕ ЗАДН. ЧАСТИ КУЗОВА (ЛЕВ.); M6X12</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2536802606" title="Клик — скопировать">A 253 680 26 06</td><td>Накладка основания кузова (COVER, SUBSTRUCTURE)</td><td>1</td><td>НИЖНЯЯ ЧАСТЬ КУЗОВА (ЦЕНТР. СЕКЦИЯ)</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A2536803506" title="Клик — скопировать">A 253 680 35 06</td><td>Накладка основания кузова (COVER, SUBSTRUCTURE)</td><td>1</td><td>НИЖНЯЯ ЧАСТЬ КУЗОВА (ЦЕНТР. СЕКЦИЯ)</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0019906036" title="Клик — скопировать">A 001 990 60 36</td><td>Винт с 6-гранной головкой (HEX. HEAD TAPPING SCREW)</td><td>4</td><td>КРЕПЛЕНИЕ НАКЛАДКИ (ЦЕНТР.); 4.8X19</td><td class="restr"></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0049943145" title="Клик — скопировать">A 004 994 31 45</td><td>Пружинная гайка (CLIP-TYPE NUT)</td><td>4</td><td>КРЕПЛЕНИЕ НАКЛАДКИ (ЦЕНТР.); 4,8</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 59 · подписано на схемах: 59 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.739.893_version_002.png", "poses": ["10", "15", "17", "20", "90", "100", "110", "115", "130", "140", "240", "245", "260", "265", "300", "320", "330", "340", "350", "360", "400", "410", "417", "420", "430", "440"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

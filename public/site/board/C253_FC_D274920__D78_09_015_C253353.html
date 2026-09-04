@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>09 Воздушный фильтр и система нагнетания двигателя / 015 Воздушный фильтр</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253353">C253_FC -/-</a> → 015 Воздушный фильтр</div>
+<h1>015 Воздушный фильтр</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.010.119.971_version_003.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740900001" title="Клик — скопировать">A 274 090 00 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="-(F447/F448/F907)"><span class="icode">-(F447/F448/F907)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740900101" title="Клик — скопировать">A 274 090 01 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="920+-(F447/F448)"><span class="icode">920+-(F447/F448)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740900201" title="Клик — скопировать">A 274 090 02 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205+-(631K/267K)/F212+924/F213/F253/M014"><span class="icode">F167/F172/F205+-(631K/267K)/F212+924/F213/F253/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901701" title="Клик — скопировать">A 274 090 17 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901801" title="Клик — скопировать">A 274 090 18 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901801" title="Клик — скопировать">A 274 090 18 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740902001" title="Клик — скопировать">A 274 090 20 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740902001" title="Клик — скопировать">A 274 090 20 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901801" title="Клик — скопировать">A 274 090 18 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="(F205+-(631K/267K)/F213/F238/F253/M014)+A185"><span class="icode">(F205+-(631K/267K)/F213/F238/F253/M014)+A185</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740900201" title="Клик — скопировать">A 274 090 02 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="(F205+-(631K/267K)/F213)+920"><span class="icode">(F205+-(631K/267K)/F213)+920</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901701" title="Клик — скопировать">A 274 090 17 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="(F205+-(631K/267K)/F213/F238)+920"><span class="icode">(F205+-(631K/267K)/F213/F238)+920</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740902001" title="Клик — скопировать">A 274 090 20 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="(F213/F238/F253/M014)+A701+382K/F205+A701+382K+-(631K/267K)"><span class="icode">(F213/F238/F253/M014)+A701+382K/F205+A701+382K+-(631K/267K)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901801" title="Клик — скопировать">A 274 090 18 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+A185+383K"><span class="icode">F205+M014+A185+383K</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901701" title="Клик — скопировать">A 274 090 17 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+267K"><span class="icode">F205+M014+267K</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740901801" title="Клик — скопировать">A 274 090 18 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+631K"><span class="icode">F205+M014+631K</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740900201" title="Клик — скопировать">A 274 090 02 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+631K"><span class="icode">F205+M014+631K</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К фильтру\-демпферу</td><td class="restr" data-expr="F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053"><span class="icode">F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К фильтру\-демпферу</td><td class="restr" data-expr="F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053"><span class="icode">F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0071530528" title="Клик — скопировать">A 007 153 05 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К фильтру\-демпферу</td><td class="restr" data-expr="F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053"><span class="icode">F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0071530528" title="Клик — скопировать">A 007 153 05 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К фильтру\-демпферу</td><td class="restr" data-expr="F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053"><span class="icode">F167/F172/F205/F212+924/F213/F238/F253/M014/F204+803+053</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К фильтру\-демпферу</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940004" title="Клик — скопировать">A 274 094 00 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940004" title="Клик — скопировать">A 274 094 00 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="F090/F218"><span class="icode">F090/F218</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940104" title="Клик — скопировать">A 274 094 01 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F212+924/F213/F238/F253/M014"><span class="icode">F167/F172/F205/F212+924/F213/F238/F253/M014</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940104" title="Клик — скопировать">A 274 094 01 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940104" title="Клик — скопировать">A 274 094 01 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2740940204" title="Клик — скопировать">A 274 094 02 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>- ВАЖНАЯ ИНФОРМАЦИЯ</td><td>0</td><td>Деталь см.: 52 / 140</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2740940200" title="Клик — скопировать">A 274 094 02 00</td><td>- Экран защитный (SCREENING PLATE)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2740940200" title="Клик — скопировать">A 274 094 02 00</td><td>- Экран защитный (SCREENING PLATE)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2740940300" title="Клик — скопировать">A 274 094 03 00</td><td>- Экран защитный (SCREENING PLATE)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2740940300" title="Клик — скопировать">A 274 094 03 00</td><td>- Экран защитный (SCREENING PLATE)</td><td>1</td><td></td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005410140" title="Клик — скопировать">A 000 541 01 40</td><td>- Держатель (HOLDER)</td><td>1</td><td>Крепление провода лямбда\-зонда; 18 X 24 MM</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6040940085" title="Клик — скопировать">A 604 094 00 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>3</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="-F447"><span class="icode">-F447</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6510940222" title="Клик — скопировать">A 651 094 02 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="F172/F205/F212+924/F213/F253/M014"><span class="icode">F172/F205/F212+924/F213/F253/M014</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940022" title="Клик — скопировать">A 274 094 00 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="F172/F205/F212+924/F213/F253/M014"><span class="icode">F172/F205/F212+924/F213/F253/M014</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940222" title="Клик — скопировать">A 274 094 02 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940222" title="Клик — скопировать">A 274 094 02 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940222" title="Клик — скопировать">A 274 094 02 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>1</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="(F205/F213/F238)+920"><span class="icode">(F205/F213/F238)+920</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940022" title="Клик — скопировать">A 274 094 00 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>2</td><td>Крепление фильтра\-шумоглушителя (задн.)</td><td class="restr" data-expr="F167/F172/F205/F213/F238/F253"><span class="icode">F167/F172/F205/F213/F238/F253</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2740940022" title="Клик — скопировать">A 274 094 00 22</td><td>- Обойма подшипника (BEARING RACE)</td><td>2</td><td>Крепление фильтра\-шумоглушителя (задн.)</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6040940085" title="Клик — скопировать">A 604 094 00 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>3</td><td>Крепление демпферного фильтра</td><td class="restr" data-expr="F447/F448/F907"><span class="icode">F447/F448/F907</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2740940048" title="Клик — скопировать">A 274 094 00 48</td><td>- Расходомер воздуха (MASS AIR FLOW SENSOR)</td><td>1</td><td></td><td class="restr" data-expr="920+-(F167/F172/F205/F213/F238/F253/F447/F448/F907)"><span class="icode">920+-(F167/F172/F205/F213/F238/F253/F447/F448/F907)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Детали см.: 01/130</td><td class="restr" data-expr="460/494/835/945"><span class="icode">460/494/835/945</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900229" title="Клик — скопировать">A 274 090 02 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="(460/494/835/945/F447/F448)/(F204/F207/F212)"><span class="icode">(460/494/835/945/F447/F448)/(F204/F207/F212)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900429" title="Клик — скопировать">A 274 090 04 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="(460/494/835/945/F447/F448)/(F204/F207/F212)"><span class="icode">(460/494/835/945/F447/F448)/(F204/F207/F212)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900029" title="Клик — скопировать">A 274 090 00 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F205/F212+924/F213/F238/F253)+-(460/494/835/945)"><span class="icode">(F172/F205/F212+924/F213/F238/F253)+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900029" title="Клик — скопировать">A 274 090 00 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="-(460/494/835/945)"><span class="icode">-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900929" title="Клик — скопировать">A 274 090 09 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="((F172/F205/F213/F238/F253)+M014)+-(460/494/835/945)"><span class="icode">((F172/F205/F213/F238/F253)+M014)+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900929" title="Клик — скопировать">A 274 090 09 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="((F172/F205/F213/F238/F253)+M014)+-(460/494/835/945)"><span class="icode">((F172/F205/F213/F238/F253)+M014)+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900929" title="Клик — скопировать">A 274 090 09 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="(F167/F205/F213/F253)+(ME05/ME06)+-(460/494/835/945)"><span class="icode">(F167/F205/F213/F253)+(ME05/ME06)+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740900929" title="Клик — скопировать">A 274 090 09 29</td><td>Впускной воздуховод (AIR INTAKE PIPE)</td><td>1</td><td></td><td class="restr" data-expr="(F167/F205/F213/F253)+(ME05/ME06/ME08)+-(460/494/835/945)"><span class="icode">(F167/F205/F213/F253)+(ME05/ME06/ME08)+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2740901029" title="Клик — скопировать">A 274 090 10 29</td><td>Впускной воздуховод</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="(F167/F205/F213/F253)+(ME05/ME06)+(460/494/835)"><span class="icode">(F167/F205/F213/F253)+(ME05/ME06)+(460/494/835)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A4475280400" title="Клик — скопировать">A 447 528 04 00</td><td>Трубопровод оч. воздуха (CLEAN AIR LINE)</td><td>1</td><td></td><td class="restr" data-expr="F907+-(460/494/835/945)"><span class="icode">F907+-(460/494/835/945)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A4475282900" title="Клик — скопировать">A 447 528 29 00</td><td>Трубопровод оч. воздуха (CLEAN AIR LINE)</td><td>1</td><td></td><td class="restr" data-expr="F907+-(460/494/835/945)"><span class="icode">F907+-(460/494/835/945)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A6510940051" title="Клик — скопировать">A 651 094 00 51</td><td>- Компенсационное кольцо (COMPENSATION RING)</td><td>1</td><td>К впускному трубопроводу</td><td class="restr" data-expr="-(F167/F172/F205/F213/F238/F253/460/494/835)"><span class="icode">-(F167/F172/F205/F213/F238/F253/460/494/835)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2740940151" title="Клик — скопировать">A 274 094 01 51</td><td>- Компенсационное кольцо (COMPENSATION RING)</td><td>1</td><td>К впускному трубопроводу</td><td class="restr" data-expr="(F167/F172/F205/F212+924/F213/F238/F253/M014)+-(460/494/835)"><span class="icode">(F167/F172/F205/F212+924/F213/F238/F253/M014)+-(460/494/835)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2740940151" title="Клик — скопировать">A 274 094 01 51</td><td>- Компенсационное кольцо (COMPENSATION RING)</td><td>1</td><td>К впускному трубопроводу</td><td class="restr" data-expr="(F167/F172/F205/F212+924/F213/F238/F253/M014)+-(460/494/835)"><span class="icode">(F167/F172/F205/F212+924/F213/F238/F253/M014)+-(460/494/835)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6510160030" title="Клик — скопировать">A 651 016 00 30</td><td>- Вентиляционная трубка</td><td>1</td><td>К впускному трубопроводу</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2740162100" title="Клик — скопировать">A 274 016 21 00</td><td>- Вентиляционная трубка (VENT TUBE)</td><td>1</td><td>К впускному трубопроводу [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [001548] БОЛЬШЕ НЕ ПОСТ. ЗАКАЗ. СЛЕД.БОЛЕЕ ВЫС. СОБР. КОНСТРУКЦ.</td><td class="restr" data-expr="460/494/945/835+(M014/ME05/ME06)"><span class="icode">460/494/945/835+(M014/ME05/ME06)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2740162100" title="Клик — скопировать">A 274 016 21 00</td><td>- Вентиляционная трубка (VENT TUBE)</td><td>1</td><td>К впускному трубопроводу [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [001548] БОЛЬШЕ НЕ ПОСТ. ЗАКАЗ. СЛЕД.БОЛЕЕ ВЫС. СОБР. КОНСТРУКЦ.</td><td class="restr" data-expr="460/494/945/835+(M014/ME05/ME06)"><span class="icode">460/494/945/835+(M014/ME05/ME06)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2740162100" title="Клик — скопировать">A 274 016 21 00</td><td>- Вентиляционная трубка (VENT TUBE)</td><td>1</td><td>К впускному трубопроводу [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ [001548] БОЛЬШЕ НЕ ПОСТ. ЗАКАЗ. СЛЕД.БОЛЕЕ ВЫС. СОБР. КОНСТРУКЦ.</td><td class="restr" data-expr="945/(M014/ME05/ME08)+(460/494/835/945)"><span class="icode">945/(M014/ME05/ME08)+(460/494/835/945)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2740162100" title="Клик — скопировать">A 274 016 21 00</td><td>- Вентиляционная трубка (VENT TUBE)</td><td>1</td><td>К впускному трубопроводу [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="F907"><span class="icode">F907</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0071530528" title="Клик — скопировать">A 007 153 05 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0071530528" title="Клик — скопировать">A 007 153 05 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td></td><td class="restr" data-expr="F090/F172"><span class="icode">F090/F172</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td></td><td class="restr" data-expr="F090/F172"><span class="icode">F090/F172</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0069972690" title="Клик — скопировать">A 006 997 26 90</td><td>- Шланговый хомут (HOSE CLAMP W. WORM DRIVE)</td><td>1</td><td>Крепление впускного трубопровода к турбонагнетателю; 50\-70/9 C7 W3</td><td class="restr" data-expr="-(F447/F448)"><span class="icode">-(F447/F448)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0019955210" title="Клик — скопировать">A 001 995 52 10</td><td>- Хомут для шланга (HOSE CLAMP)</td><td>1</td><td>Крепление впускного трубопровода к расходомеру воздуха</td><td class="restr" data-expr="-(F447/F448/F907)"><span class="icode">-(F447/F448/F907)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0005844147" title="Клик — скопировать">A 000 584 41 47</td><td>- Предупреждающая табличка (WARNING SIGN)</td><td>1</td><td>Высокое напряжение, на впускном коллекторе</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0008179006" title="Клик — скопировать">A 000 817 90 06</td><td>- Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Высокое напряжение, на впускном коллекторе</td><td class="restr" data-expr="F167/F172/F205/F213/F253"><span class="icode">F167/F172/F205/F213/F253</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0005844147" title="Клик — скопировать">A 000 584 41 47</td><td>- Предупреждающая табличка (WARNING SIGN)</td><td>1</td><td>Высокое напряжение, на впускном коллекторе</td><td class="restr" data-expr="-(F167/F172/F205/F213/F253)"><span class="icode">-(F167/F172/F205/F213/F253)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2740184001" title="Клик — скопировать">A 274 018 40 01</td><td>Теплоизоляц. скорлупа (INSULATING HALF SHELL)</td><td>1</td><td></td><td class="restr" data-expr="(824/830)"><span class="icode">(824/830)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2740183401" title="Клик — скопировать">A 274 018 34 01</td><td>Теплоизоляц. скорлупа (INSULATING HALF SHELL)</td><td>1</td><td></td><td class="restr" data-expr="(F167/F172/F205/F213/F238/F253)+(824/830)"><span class="icode">(F167/F172/F205/F213/F238/F253)+(824/830)</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2740184201" title="Клик — скопировать">A 274 018 42 01</td><td>Теплоизоляц. скорлупа (INSULATING HALF SHELL)</td><td>1</td><td></td><td class="restr" data-expr="(824/830)"><span class="icode">(824/830)</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2740183501" title="Клик — скопировать">A 274 018 35 01</td><td>Теплоизоляц. скорлупа (INSULATING HALF SHELL)</td><td>1</td><td></td><td class="restr" data-expr="(F167/F172/F205/F213/F238/F253)+(824/830)"><span class="icode">(F167/F172/F205/F213/F238/F253)+(824/830)</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 76 · подписано на схемах: 76 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.119.971_version_003.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "100", "110", "120", "130", "140", "150", "160", "200", "210"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

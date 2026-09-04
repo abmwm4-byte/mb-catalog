@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>47 Топливная система / 015 Топливный бак с навесными деталями</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253380">C253_FC -/-</a> → 015 Топливный бак с навесными деталями</div>
+<h1>015 Топливный бак с навесными деталями</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.002.739.945_version_007.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2534705700" title="Клик — скопировать">A 253 470 57 00</td><td>Топливный бак (FUEL TANK)</td><td>1</td><td></td><td class="restr" data-expr="(M264/M274/M276)+916"><span class="icode">(M264/M274/M276)+916</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2534704701" title="Клик — скопировать">A 253 470 47 01</td><td>Топливный бак (FUEL TANK)</td><td>1</td><td></td><td class="restr" data-expr="M264+(460/494/835/945)+916"><span class="icode">M264+(460/494/835/945)+916</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2534704701" title="Клик — скопировать">A 253 470 47 01</td><td>Топливный бак (FUEL TANK)</td><td>1</td><td></td><td class="restr" data-expr="802+M264+821+916"><span class="icode">802+M264+821+916</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2534704701" title="Клик — скопировать">A 253 470 47 01</td><td>Топливный бак (FUEL TANK)</td><td>1</td><td></td><td class="restr" data-expr="M264+821+916"><span class="icode">M264+821+916</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009870139" title="Клик — скопировать">A 000 987 01 39</td><td>- Резиновый буфер (RUBBER BUMPER)</td><td>5</td><td>Сверху</td><td class="restr" data-expr="-(ME05+(494/460/835))"><span class="icode">-(ME05+(494/460/835))</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2054730180" title="Клик — скопировать">A 205 473 01 80</td><td>- Профильное уплотнение (PROFILE SEAL)</td><td>1</td><td>Запорная крышка горловины топливного бака к остову кузова</td><td class="restr" data-expr="-(M274+ME05+(460/494/835))"><span class="icode">-(M274+ME05+(460/494/835))</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2054704900" title="Клик — скопировать">A 205 470 49 00</td><td>FUEL DELIVERY MODULE (FEED UNIT)</td><td>1</td><td>В топливном баке справа</td><td class="restr" data-expr="(M274+-ME05/M274+ME05+-(460/494/835/B10))/M276/M264"><span class="icode">(M274+-ME05/M274+ME05+-(460/494/835/B10))/M276/M264</span></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0009054006" title="Клик — скопировать">A 000 905 40 06</td><td>Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>Насосный модуль</td><td class="restr" data-expr="(M274+-(460/494/835/B10)/M276/M264/M177/(M274+ME05)+-(460/494/835/B10))"><span class="icode">(M274+-(460/494/835/B10)/M276/M264/M177/(M274+ME05)+-(460/494/835/B10))</span></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0009054006" title="Клик — скопировать">A 000 905 40 06</td><td>Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>Насосный модуль</td><td class="restr" data-expr="(M274+-(460/494/835/B10)/M276/M264/M177)"><span class="icode">(M274+-(460/494/835/B10)/M276/M264/M177)</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A2059052910" title="Клик — скопировать">A 205 905 29 10</td><td>Датчик уровня (FILL LEVEL SENSOR)</td><td>1</td><td>Датчик уровня [003958] ВНИМАНИЕ! НА А/М С ОКОНЧАНИЕМ НОМЕРА VIN В ПРЕДЕЛАХ HL070582 - HL075071 СЛЕДУЕТ ЗАКАЗАТЬ ДАТЧИК УРОВНЯ А 205 905 29 10 39 И УС ТАНОВИТЬ ЕГО.</td><td class="restr" data-expr="(M274/M276/M264)"><span class="icode">(M274/M276/M264)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0259971845" title="Клик — скопировать">A 025 997 18 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td>Насосный модуль к баку; 135.5X6</td><td class="restr" data-expr="M264/M274/M276/(M651/M654)+835+916"><span class="icode">M264/M274/M276/(M651/M654)+835+916</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0014711430" title="Клик — скопировать">A 001 471 14 30</td><td>Байонетный затвор (BAYONET TYPE FASTENER)</td><td>1</td><td>Насосный модуль к баку</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0004700800" title="Клик — скопировать">A 000 470 08 00</td><td>Крышка горл. топ. бака (FUEL FILLER CAP)</td><td>1</td><td></td><td class="restr" data-expr="-(M642/M651/M654/M656)"><span class="icode">-(M642/M651/M654/M656)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2224700205" title="Клик — скопировать">A 222 470 02 05</td><td>Крышка наливной горловины (FILLER CAP)</td><td>1</td><td></td><td class="restr" data-expr="M274+((460/494/835)+-ME05)/(M276/M264)+(460/494/835)"><span class="icode">M274+((460/494/835)+-ME05)/(M276/M264)+(460/494/835)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2224700205" title="Клик — скопировать">A 222 470 02 05</td><td>Крышка наливной горловины (FILLER CAP)</td><td>1</td><td></td><td class="restr" data-expr="802+M264+821"><span class="icode">802+M264+821</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0004700800" title="Клик — скопировать">A 000 470 08 00</td><td>Крышка горл. топ. бака (FUEL FILLER CAP)</td><td>1</td><td></td><td class="restr" data-expr="(M274/M276/M264)+945"><span class="icode">(M274/M276/M264)+945</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2224700205" title="Клик — скопировать">A 222 470 02 05</td><td>Крышка наливной горловины (FILLER CAP)</td><td>1</td><td></td><td class="restr" data-expr="M264+821"><span class="icode">M264+821</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2179970045" title="Клик — скопировать">A 217 997 00 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>Замок топливного бака к наливному патрубку</td><td class="restr" data-expr="-(M642/M651/M654/M656)"><span class="icode">-(M642/M651/M654/M656)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1684710679" title="Клик — скопировать">A 168 471 06 79</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>Замок топливного бака к наливному патрубку</td><td class="restr" data-expr="M274+((460/494/835)+-ME05/945)/(M264/M276)+(460/494/835/945)"><span class="icode">M274+((460/494/835)+-ME05/945)/(M264/M276)+(460/494/835/945)</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2054700040" title="Клик — скопировать">A 205 470 00 40</td><td>Хомут (TENSIONING STRAP)</td><td>1</td><td>Справа</td><td class="restr" data-expr="-((ME05+(494/460/835/B10))+FX)"><span class="icode">-((ME05+(494/460/835/B10))+FX)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2054700140" title="Клик — скопировать">A 205 470 01 40</td><td>Хомут (TENSIONING STRAP)</td><td>1</td><td>Слева</td><td class="restr" data-expr="916+-(654/656)+(460/494)"><span class="icode">916+-(654/656)+(460/494)</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0039909603" title="Клик — скопировать">A 003 990 96 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Топливный бак к кузову, справа; M8X43</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009909603" title="Клик — скопировать">A 000 990 96 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Топливный бак к кузову, слева спереди; M8X35</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0029908903" title="Клик — скопировать">A 002 990 89 03</td><td>Самонарезающий винт (SELF-TAPPING SCREW)</td><td>1</td><td>Топливный бак к кузову, слева сзади</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009909603" title="Клик — скопировать">A 000 990 96 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Топливный бак к кузову, посередине; M8X35</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0009909603" title="Клик — скопировать">A 000 990 96 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Заливной патрубок к продольному несущему элементу; M8X35</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0039901482" title="Клик — скопировать">A 003 990 14 82</td><td>Диск (WINDOW)</td><td>1</td><td>Заливной патрубок к продольному несущему элементу</td><td class="restr"></td></tr><tr data-pos="235"><td>235</td><td class="pn" data-raw="A2534750000" title="Клик — скопировать">A 253 475 00 00</td><td>Защитный экран (PROTECTIVE METAL SHEET)</td><td>1</td><td>К держателю наливного патрубка</td><td class="restr" data-expr="-(ME05+(460/494/835/B10)/(M654/M651/M642/M656)+(460/494))"><span class="icode">-(ME05+(460/494/835/B10)/(M654/M651/M642/M656)+(460/494))</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0019905403" title="Клик — скопировать">A 001 990 54 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Наливной патрубок к кузову сверху</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2534703300" title="Клик — скопировать">A 253 470 33 00</td><td>Консоль (CONSOLE)</td><td>1</td><td>Топливный бак к кузову, справа</td><td class="restr" data-expr="-(916/ME05+(460/494/835/945))"><span class="icode">-(916/ME05+(460/494/835/945))</span></td></tr><tr data-pos="255"><td>255</td><td class="pn" data-raw="N000000004011" title="Клик — скопировать">N 000000 004011</td><td>ГАЙКА КОМБИНИРОВАННАЯ (NUT-AND-WASHER ASSEMBLY)</td><td>2</td><td>Держатель к остову кузова; M6</td><td class="restr" data-expr="-(916/ME05+(460/494/835/945))"><span class="icode">-(916/ME05+(460/494/835/945))</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2534703000" title="Клик — скопировать">A 253 470 30 00</td><td>- Вентиляционная трубка (VENT LINE)</td><td>1</td><td>Заливной патрубок к угольному фильтру</td><td class="restr" data-expr="((M274/M276/M264)+(916/916+920))+-(460/494/835/945)"><span class="icode">((M274/M276/M264)+(916/916+920))+-(460/494/835/945)</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009956535" title="Клик — скопировать">A 000 995 65 35</td><td>Ушковый хомут (ONE-EAR CLAMP)</td><td>1</td><td></td><td class="restr" data-expr="(M274/M276/M264)"><span class="icode">(M274/M276/M264)</span></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.739.945_version_007.png", "poses": ["10", "20", "30", "50", "52", "55", "60", "70", "100", "110", "140", "150", "170", "180", "200", "210", "220", "230", "235", "240", "250", "255", "300", "310"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

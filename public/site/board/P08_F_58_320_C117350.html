@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>58 ИНСТРУМЕНТ И ДОП.ПРИНАДЛЕЖНОСТИ / 320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C117350">P08 -/-</a> → 320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</div>
+<h1>320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B58320000034.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175849503" title="Клик — скопировать">A 117 584 95 03</td><td>Брошюра с дополнениями</td><td>1</td><td>Мобильный телефон</td><td class="restr" data-expr="14U+(803/804/805/806/807)"><span class="icode">14U+(803/804/805/806/807)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842203" title="Клик — скопировать">A 205 584 22 03</td><td>Лист с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr" data-expr="829"><span class="icode">829</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842303" title="Клик — скопировать">A 205 584 23 03</td><td>Брошюра с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr" data-expr="805+055+(05B/18B/22B/23B/24B/25B/26B)"><span class="icode">805+055+(05B/18B/22B/23B/24B/25B/26B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2225840404" title="Клик — скопировать">A 222 584 04 04</td><td>Лист с дополнениями</td><td>1</td><td>АКП</td><td class="restr" data-expr="429+830"><span class="icode">429+830</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2225840701" title="Клик — скопировать">A 222 584 07 01</td><td>Доп. руководство</td><td>1</td><td>AMG ПАКЕТ ОБОРУДОВАНИЯ ДЛЯ ВОДИТЕЛЯ</td><td class="restr" data-expr="M133+M20+250+806"><span class="icode">M133+M20+250+806</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846003" title="Клик — скопировать">A 117 584 60 03</td><td>Доп. руководство</td><td>1</td><td>AMG ПАКЕТ ОБОРУДОВАНИЯ ДЛЯ ВОДИТЕЛЯ</td><td class="restr" data-expr="250+-(803/804/805/806)"><span class="icode">250+-(803/804/805/806)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840105" title="Клик — скопировать">A 117 584 01 05</td><td>Доп. руководство</td><td>1</td><td>РАЦИЯ ДЛЯ ТАКСИ</td><td class="restr" data-expr="229L/513L/515L/517L/523L/525L/527L/529L/531L/535L/537L/539L/542L/543L/546L/547L/549L/553L/557L/559L/561L/567L/569L/576L/577L/580L/583L/821L"><span class="icode">229L/513L/515L/517L/523L/525L/527L/529L/531L/535L/537L/539L/542L/543L/546L/547L/549L/553L/557L/559L/561L/567L/569L/576L/577L/580L/583L/821L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840105" title="Клик — скопировать">A 117 584 01 05</td><td>Доп. руководство</td><td>1</td><td>РАЦИЯ ДЛЯ ТАКСИ</td><td class="restr" data-expr="541L/555L/571L"><span class="icode">541L/555L/571L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840000" title="Клик — скопировать">A 117 584 00 00</td><td>Информационный бюллетень</td><td>1</td><td>COMAND</td><td class="restr" data-expr="805+(526/532)+498"><span class="icode">805+(526/532)+498</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1765842801" title="Клик — скопировать">A 176 584 28 01</td><td>Брошюра с дополнениями</td><td>1</td><td>СПЕЦАВТОМОБИЛИ</td><td class="restr" data-expr="(PEB/PQA)+806"><span class="icode">(PEB/PQA)+806</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845006" title="Клик — скопировать">A 217 584 50 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)+-059"><span class="icode">809+M133+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845006" title="Клик — скопировать">A 217 584 50 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+(18B/19B/20B/21B/24B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)+-059"><span class="icode">809+M133+(18B/19B/20B/21B/24B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845406" title="Клик — скопировать">A 217 584 54 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG, НА АНГЛИЙСКОМ ЯЗЫКЕ RACE</td><td class="restr" data-expr="809+M133+12B+-059"><span class="icode">809+M133+12B+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845606" title="Клик — скопировать">A 217 584 56 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+22B+-059"><span class="icode">809+M133+22B+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845706" title="Клик — скопировать">A 217 584 57 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+25B+-059"><span class="icode">809+M133+25B+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845806" title="Клик — скопировать">A 217 584 58 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+26B+-059"><span class="icode">809+M133+26B+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845506" title="Клик — скопировать">A 217 584 55 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG, НА ФРАНЦУЗСКОМ ЯЗЫКЕ RACE</td><td class="restr" data-expr="809+M133+460+-059"><span class="icode">809+M133+460+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2175845906" title="Клик — скопировать">A 217 584 59 06</td><td>Брошюра с дополнениями</td><td>1</td><td>AMG RACE</td><td class="restr" data-expr="809+M133+23B+-059"><span class="icode">809+M133+23B+-059</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848702" title="Клик — скопировать">A 117 584 87 02</td><td>Информационный бюллетень</td><td>1</td><td>COMAND</td><td class="restr" data-expr="(806+140)+(532+498)"><span class="icode">(806+140)+(532+498)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2125846371" title="Клик — скопировать">A 212 584 63 71</td><td>Информационный бюллетень</td><td>1</td><td>ФУНКЦИЯ ПУСКА\-ОСТАНОВКИ</td><td class="restr" data-expr="B03+460+804+-(054/411/420)"><span class="icode">B03+460+804+-(054/411/420)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848202" title="Клик — скопировать">A 117 584 82 02</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="(555/P84)+-(460/494/498/829/830/835/(806+140))"><span class="icode">(555/P84)+-(460/494/498/829/830/835/(806+140))</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055845502" title="Клик — скопировать">A 205 584 55 02</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="06U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)"><span class="icode">06U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848504" title="Клик — скопировать">A 205 584 85 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="06U+(01B/02B/05B/06B/07B/08B/16B/17B)"><span class="icode">06U+(01B/02B/05B/06B/07B/08B/16B/17B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848604" title="Клик — скопировать">A 205 584 86 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(806+140)+(06U+31B)"><span class="icode">(806+140)+(06U+31B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848704" title="Клик — скопировать">A 205 584 87 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(806+140)+(06U+37B)"><span class="icode">(806+140)+(06U+37B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2315846101" title="Клик — скопировать">A 231 584 61 01</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(06U/11U)+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)"><span class="icode">(06U/11U)+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2315846101" title="Клик — скопировать">A 231 584 61 01</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="11U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)"><span class="icode">11U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848302" title="Клик — скопировать">A 117 584 83 02</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="((555/P84)+498)+-(806+140)"><span class="icode">((555/P84)+498)+-(806+140)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848502" title="Клик — скопировать">A 117 584 85 02</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="((555/P84)+835)+-(806+140)"><span class="icode">((555/P84)+835)+-(806+140)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848602" title="Клик — скопировать">A 117 584 86 02</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="((555/P84)+829)+-(806+140)"><span class="icode">((555/P84)+829)+-(806+140)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175848402" title="Клик — скопировать">A 117 584 84 02</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="((555/P84)+830)+-(806+140)"><span class="icode">((555/P84)+830)+-(806+140)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175844905" title="Клик — скопировать">A 117 584 49 05</td><td>Брошюра с дополнениями</td><td>1</td><td>АВАРИЙНЫЙ ВЫЗОВ</td><td class="restr" data-expr="12B"><span class="icode">12B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1725848402" title="Клик — скопировать">A 172 584 84 02</td><td>Лист с дополнениями</td><td>1</td><td></td><td class="restr" data-expr="23B"><span class="icode">23B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175844704" title="Клик — скопировать">A 117 584 47 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B"><span class="icode">00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845105" title="Клик — скопировать">A 117 584 51 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B"><span class="icode">00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175844804" title="Клик — скопировать">A 117 584 48 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ, НА АНГЛИЙСКОМ ЯЗЫКЕ Quick Start Guide</td><td class="restr" data-expr="12B"><span class="icode">12B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845205" title="Клик — скопировать">A 117 584 52 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ, НА АНГЛИЙСКОМ ЯЗЫКЕ Quick Start Guide</td><td class="restr" data-expr="12B"><span class="icode">12B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175844904" title="Клик — скопировать">A 117 584 49 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ, НА ФРАНЦУЗСКОМ ЯЗЫКЕ Quick Start Guide</td><td class="restr" data-expr="460"><span class="icode">460</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845004" title="Клик — скопировать">A 117 584 50 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B+737L"><span class="icode">20B+737L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845405" title="Клик — скопировать">A 117 584 54 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B+737L"><span class="icode">20B+737L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845104" title="Клик — скопировать">A 117 584 51 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="18B"><span class="icode">18B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845505" title="Клик — скопировать">A 117 584 55 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="18B"><span class="icode">18B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845204" title="Клик — скопировать">A 117 584 52 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="19B"><span class="icode">19B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845605" title="Клик — скопировать">A 117 584 56 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="19B"><span class="icode">19B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845304" title="Клик — скопировать">A 117 584 53 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B+-737L"><span class="icode">20B+-737L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845705" title="Клик — скопировать">A 117 584 57 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B"><span class="icode">20B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845404" title="Клик — скопировать">A 117 584 54 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="21B"><span class="icode">21B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845805" title="Клик — скопировать">A 117 584 58 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="21B"><span class="icode">21B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845504" title="Клик — скопировать">A 117 584 55 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="22B"><span class="icode">22B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845905" title="Клик — скопировать">A 117 584 59 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="22B"><span class="icode">22B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845604" title="Клик — скопировать">A 117 584 56 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="23B"><span class="icode">23B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845704" title="Клик — скопировать">A 117 584 57 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="24B"><span class="icode">24B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846105" title="Клик — скопировать">A 117 584 61 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="24B"><span class="icode">24B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845804" title="Клик — скопировать">A 117 584 58 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="25B"><span class="icode">25B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846205" title="Клик — скопировать">A 117 584 62 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="25B"><span class="icode">25B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845904" title="Клик — скопировать">A 117 584 59 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="26B"><span class="icode">26B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846305" title="Клик — скопировать">A 117 584 63 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="26B"><span class="icode">26B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845305" title="Клик — скопировать">A 117 584 53 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ, НА ФРАНЦУЗСКОМ ЯЗЫКЕ Quick Start Guide</td><td class="restr" data-expr="460"><span class="icode">460</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846005" title="Клик — скопировать">A 117 584 60 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="23B"><span class="icode">23B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175842305" title="Клик — скопировать">A 117 584 23 05</td><td>Брошюра с дополнениями</td><td>1</td><td>ЭЛЕКТРОННЫЙ РЕГИСТРАТОР ДАННЫХ</td><td class="restr" data-expr="25B+(803/804/805/806/807/808+-058)"><span class="icode">25B+(803/804/805/806/807/808+-058)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175842603" title="Клик — скопировать">A 117 584 26 03</td><td>Брошюра с дополнениями</td><td>1</td><td>СПОРТИВНОЕ СИДЕНЬЕ</td><td class="restr" data-expr="(555/P84)+830"><span class="icode">(555/P84)+830</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1765841401" title="Клик — скопировать">A 176 584 14 01</td><td>Брошюра с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr" data-expr="830+806+140"><span class="icode">830+806+140</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840401" title="Клик — скопировать">A 117 584 04 01</td><td>Доп. руководство</td><td>1</td><td>Audio 20</td><td class="restr" data-expr="(3U1+(505/520/522))+(00B/01B/02B/03B/04B/05B/06B)"><span class="icode">(3U1+(505/520/522))+(00B/01B/02B/03B/04B/05B/06B)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1178272000" title="Клик — скопировать">A 117 827 20 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1178272500" title="Клик — скопировать">A 117 827 25 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1778273500" title="Клик — скопировать">A 177 827 35 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 66 · подписано на схемах: 66 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58320000034.png", "poses": ["10", "20"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>

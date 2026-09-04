@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>50 РАДИАТОР / 001 РАДИАТОР</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116036">68N  Действительно для: CA, US</a> → 001 РАДИАТОР</div>
+<h1>001 РАДИАТОР</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">B50001000796 <span class="hint">(19)</span></button><button data-i="1" class="">B50001000800 <span class="hint">(10)</span></button><button data-i="2" class="">B50001000797 <span class="hint">(0)</span></button><button data-i="3" class="">B50001000798 <span class="hint">(5)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B50001000796.png" alt="схема">
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 4
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="3"><td>3</td><td class="pn" data-raw="A1165012601" title="Клик — скопировать">A 116 501 26 01</td><td>РАДИАТОР</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="N007604014106" title="Клик — скопировать">N 007604 014106</td><td>- Резьбовая пробка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0949901608" title="Клик — скопировать">A 094 990 16 08</td><td>- Резьбовая пробка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="N007603014405" title="Клик — скопировать">N 007603 014405</td><td>- Уплотнительное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1075040012" title="Клик — скопировать">A 107 504 00 12</td><td>Планка</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1075040112" title="Клик — скопировать">A 107 504 01 12</td><td>Планка</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0039880678" title="Клик — скопировать">A 003 988 06 78</td><td>Скоба</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="A1165050455" title="Клик — скопировать">A 116 505 04 55</td><td>Кожух вент. радиатора</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="N000933005031" title="Клик — скопировать">N 000933 005031</td><td>Винт</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0019901840" title="Клик — скопировать">A 001 990 18 40</td><td>ШАЙБА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1269901440" title="Клик — скопировать">A 126 990 14 40</td><td>ШАЙБА</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0005050172" title="Клик — скопировать">A 000 505 01 72</td><td>гайка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1075040186" title="Клик — скопировать">A 107 504 01 86</td><td>Стремянка рессоры</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1265000349" title="Клик — скопировать">A 126 500 03 49</td><td>БАЧОК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1265001549" title="Клик — скопировать">A 126 500 15 49</td><td>Бак</td><td>1</td><td>[022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos="32B"><td>32B</td><td class="pn" data-raw="A0079972682" title="Клик — скопировать">A 007 997 26 82</td><td>ШЛАНГ</td><td>1</td><td>ВЕНТИЛЯЦИЯ</td><td class="restr"></td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="A1235010215" title="Клик — скопировать">A 123 501 02 15</td><td>Пробка радиатора</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N007976004207" title="Клик — скопировать">N 007976 004207</td><td>Винт</td><td>3</td><td></td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="N009021005202" title="Клик — скопировать">N 009021 005202</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="N009021005205" title="Клик — скопировать">N 009021 005205</td><td>Шайба</td><td>3</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0019877625" title="Клик — скопировать">A 001 987 76 25</td><td>Защита кромок</td><td>1</td><td>50 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="N900271008019" title="Клик — скопировать">N 900271 008019</td><td>Шланг</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="N000000000734" title="Клик — скопировать">N 000000 000734</td><td>Шланг</td><td>1</td><td>8 X 15 X 730 MM; 8X15 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="N916026010000" title="Клик — скопировать">N 916026 010000</td><td>Хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009953507" title="Клик — скопировать">A 000 995 35 07</td><td>Хомут</td><td>2</td><td>12\-22 MM</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1164661282" title="Клик — скопировать">A 116 466 12 82</td><td>Резиновое кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1165000275" title="Клик — скопировать">A 116 500 02 75</td><td>ШЛАНГ</td><td>1</td><td>[021] UP TO CHASSIS: 033 087666 036 005262</td><td class="restr"></td></tr><tr data-pos="66"><td>66</td><td class="pn" data-raw="A1165001275" title="Клик — скопировать">A 116 500 12 75</td><td>Шланг</td><td>1</td><td>[022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos="66C"><td>66C</td><td class="pn" data-raw="A1165012182" title="Клик — скопировать">A 116 501 21 82</td><td>- ШЛАНГ</td><td>1</td><td>[022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos="66D"><td>66D</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>1</td><td>20\-27 MM</td><td class="restr"></td></tr><tr data-pos="66D"><td>66D</td><td class="pn" data-raw="N916026020001" title="Клик — скопировать">N 916026 020001</td><td>Хомут</td><td>1</td><td>20\-27 MM [021] UP TO CHASSIS: 033 087666 036 005262</td><td class="restr"></td></tr><tr data-pos="66E"><td>66E</td><td class="pn" data-raw="N916026023001" title="Клик — скопировать">N 916026 023001</td><td>Хомут</td><td>-</td><td>23\-30 MM</td><td class="restr"></td></tr><tr data-pos="66E"><td>66E</td><td class="pn" data-raw="N000000000667" title="Клик — скопировать">N 000000 000667</td><td>Хомут</td><td>1</td><td>23\-30 MM [022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos="67D"><td>67D</td><td class="pn" data-raw="A1165012282" title="Клик — скопировать">A 116 501 22 82</td><td>Шланг ОЖ</td><td>1</td><td>СВЕРХУ</td><td class="restr"></td></tr><tr data-pos="71F"><td>71F</td><td class="pn" data-raw="A1165012382" title="Клик — скопировать">A 116 501 23 82</td><td>Шланг ОЖ</td><td>1</td><td>ВНИЗУ</td><td class="restr"></td></tr><tr data-pos="72D"><td>72D</td><td class="pn" data-raw="N916026045000" title="Клик — скопировать">N 916026 045000</td><td>Хомут</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="72D"><td>72D</td><td class="pn" data-raw="A0069970690" title="Клик — скопировать">A 006 997 06 90</td><td>Хомут для шланга</td><td>4</td><td>45\-55 MM</td><td class="restr"></td></tr><tr data-pos="91"><td>91</td><td class="pn" data-raw="A1165010220" title="Клик — скопировать">A 116 501 02 20</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="91"><td>91</td><td class="pn" data-raw="A1265010220" title="Клик — скопировать">A 126 501 02 20</td><td>Держатель</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0005004893" title="Клик — скопировать">A 000 500 48 93</td><td>ВЕНТИЛЯТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0005006093" title="Клик — скопировать">A 000 500 60 93</td><td>Вентилятор</td><td>1</td><td>[017] FROM CHASSIS: 020     070004 032,033 053036 [023] UP TO CHASSIS: 036 004582,EXCEPT FOR: 004580</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0005005093" title="Клик — скопировать">A 000 500 50 93</td><td>ВЕНТИЛЯТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0005007993" title="Клик — скопировать">A 000 500 79 93</td><td>Вентилятор</td><td>1</td><td>СМ. РИС.: 100 [024] UP TO CHASSIS: 036 004583,ALSO INSTALLED ON: 004580</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A0005031001" title="Клик — скопировать">A 000 503 10 01</td><td>Защитная решетка</td><td>1</td><td>[017] FROM CHASSIS: 020     070004 032,033 053036 [023] UP TO CHASSIS: 036 004582,EXCEPT FOR: 004580</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A1165030001" title="Клик — скопировать">A 116 503 00 01</td><td>Защитная решетка</td><td>1</td><td>СМ. РИС.: 103 [024] UP TO CHASSIS: 036 004583,ALSO INSTALLED ON: 004580</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1165012201" title="Клик — скопировать">A 116 501 22 01</td><td>РАДИАТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1165000249" title="Клик — скопировать">A 116 500 02 49</td><td>БАЧОК</td><td>-</td><td>[021] UP TO CHASSIS: 033 087666 036 005262</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1165000449" title="Клик — скопировать">A 116 500 04 49</td><td>БАЧОК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005010044" title="Клик — скопировать">A 000 501 00 44</td><td>Пробка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1265000084" title="Клик — скопировать">A 126 500 00 84</td><td>Комплект крышки</td><td>1</td><td>К\-Т ДЕТАЛЕЙ TO 1265001549 [022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0129970348" title="Клик — скопировать">A 012 997 03 48</td><td>- Уплотнительное кольцо</td><td>1</td><td>TO 1265001549 [022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000471030002" title="Клик — скопировать">N 000471 030002</td><td>- Стопорное кольцо</td><td>1</td><td>TO 1265001549; 30X1.5X7 [022] FROM CHASSIS: 033 087667 036 005263</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005011715" title="Клик — скопировать">A 000 501 17 15</td><td>ПРОБКА РАДИАТОРА.</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1235010015" title="Клик — скопировать">A 123 501 00 15</td><td>ПРОБКА РАДИАТОРА.</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1235010115" title="Клик — скопировать">A 123 501 01 15</td><td>ПРОБКА РАДИАТОРА.</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1079870341" title="Клик — скопировать">A 107 987 03 41</td><td>КОЛЬЦО РЕЗИНОВОЕ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1165000875" title="Клик — скопировать">A 116 500 08 75</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 58 · подписано на схемах: 46 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50001000796.png", "poses": ["5", "7", "11", "13", "21", "23", "25", "26", "28", "32", "32B", "33", "35", "36", "53", "55", "57", "59", "91"]}, {"png": "../../img_png/drawing_B50001000800.png", "poses": ["3", "19", "65", "66C", "66D", "67D", "71F", "72D", "100", "103"]}, {"png": "../../img_png/drawing_B50001000797.png", "poses": []}, {"png": "../../img_png/drawing_B50001000798.png", "poses": ["14", "32", "66", "66D", "66E"]}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+})();
+</script></body></html>
