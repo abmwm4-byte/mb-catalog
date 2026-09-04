@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107025">68D BIS 09/85 Действительно для: CA, US</a> → 045 SWITCH AND LIGHT GUIDE</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">68D BIS 09/85 Действительно для: CA, US</a> → 045 SWITCH AND LIGHT GUIDE</div>
 <h1>045 SWITCH AND LIGHT GUIDE</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82045000026.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82045000026.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0008205810" title="Клик — скопировать">A 000 820 58 10</td><td>Переключатель</td><td>1</td><td>ПЛАФОН ОСВЕЩЕНИЯ САЛОНА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0008206010" title="Клик — скопировать">A 000 820 60 10</td><td>Переключатель</td><td>1</td><td>ОБОГРЕВ ЗАДНЕГО СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N072601012230" title="Клик — скопировать">N 072601 012230</td><td>- Лампа накаливания</td><td>1</td><td>W5/1,2\-12V 1,2W; 12V\-1.2W</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1078200617" title="Клик — скопировать">A 107 820 06 17</td><td>ЭЛ. ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1238200017" title="Клик — скопировать">A 123 820 00 17</td><td>СВЕТОВОД</td><td>2</td><td>ROCKER SWITCH LIGHT GUIDE [811] UP TO END OF MODEL YEAR'81</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1078200117" title="Клик — скопировать">A 107 820 01 17</td><td>Световод</td><td>1</td><td>ОБОГРЕВ ЗАДНЕГО СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1078200317" title="Клик — скопировать">A 107 820 03 17</td><td>СВЕТОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1078200117" title="Клик — скопировать">A 107 820 01 17</td><td>Световод</td><td>1</td><td>ROCKER SWITCH LIGHT GUIDE</td><td class="restr"></td></tr><tr data-pos="27"><td>27</td><td class="pn" data-raw="A0005468440" title="Клик — скопировать">A 000 546 84 40</td><td>- Плоская штекерная втулка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1078210014" title="Клик — скопировать">A 107 821 00 14</td><td>Распределитель</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0008206910" title="Клик — скопировать">A 000 820 69 10</td><td>Переключатель</td><td>1</td><td>ДЛЯ АНТЕННЫ [058] FROM CHASSIS 024 015053 044 035344 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1238200005" title="Клик — скопировать">A 123 820 00 05</td><td>СВЕТОСИГНАЛЬНЫЙ ПРИБОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1238200405" title="Клик — скопировать">A 123 820 04 05</td><td>СВЕТОСИГНАЛЬНЫЙ ПРИБОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1238200805" title="Клик — скопировать">A 123 820 08 05</td><td>СВЕТОСИГНАЛЬНЫЙ ПРИБОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1238200505" title="Клик — скопировать">A 123 820 05 05</td><td>СВЕТОСИГНАЛЬНЫЙ ПРИБОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1238200205" title="Клик — скопировать">A 123 820 02 05</td><td>Переключатель</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ АВАРИЙНОЙ СВЕТОВОЙ СИГНАЛИЗАЦИИ [811] UP TO END OF MODEL YEAR'81</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0008209010" title="Клик — скопировать">A 000 820 90 10</td><td>Переключатель</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ АВАРИЙНОЙ СВЕТОВОЙ СИГНАЛИЗАЦИИ [820] FROM MODEL YEAR'82</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0008210963" title="Клик — скопировать">A 000 821 09 63</td><td>ДАТЧИК ИМПУЛЬСОВ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0008211063" title="Клик — скопировать">A 000 821 10 63</td><td>Импульсный датчик</td><td>1</td><td>(BLINKER/HAZARD\-WARNING\-LIGHT SENDER UNIT) [820] FROM MODEL YEAR'82</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0018214951" title="Клик — скопировать">A 001 821 49 51</td><td>Переключатель</td><td>1</td><td>FRONT\-DOOR/REAR\-SIDE WINDOW REGULATOR; BIPOLAR; с  SAFETY SWITCH</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0018215051" title="Клик — скопировать">A 001 821 50 51</td><td>Переключатель</td><td>1</td><td>FRONT\-DOOR/REAR\-SIDE WINDOW REGULATOR; BIPOLAR; LESS SAFETY SWITCH</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0018215151" title="Клик — скопировать">A 001 821 51 51</td><td>Переключатель</td><td>2</td><td>REAR SIDE WINDOW REGULATOR, IN LEFT AND RIGHT REAR SIDE PARTS</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1098210665" title="Клик — скопировать">A 109 821 06 65</td><td>КОРПУС</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1238210265" title="Клик — скопировать">A 123 821 02 65</td><td>Корпус</td><td>2</td><td>REAR SIDE PART,REAR</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0008213152" title="Клик — скопировать">A 000 821 31 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0008213252" title="Клик — скопировать">A 000 821 32 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A2018201110" title="Клик — скопировать">A 201 820 11 10</td><td>Переключатель</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A2018202110" title="Клик — скопировать">A 201 820 21 10</td><td>Переключатель</td><td>1</td><td>ПЛАФОН ОСВЕЩЕНИЯ ВЕЩЕВОГО ЯЩИКА</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1159840556" title="Клик — скопировать">A 115 984 05 56</td><td>Диск</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1169900065" title="Клик — скопировать">A 116 990 00 65</td><td>Шлицевая гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A0008211752" title="Клик — скопировать">A 000 821 17 52</td><td>Конт. выключатель двери</td><td>2</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82045000026.png", "poses": ["5", "8", "9", "26", "27", "28", "29", "32", "35", "50", "56", "59", "62", "65", "68"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82045000026.png", "poses": ["5", "8", "9", "26", "27", "28", "29", "32", "35", "50", "56", "59", "62", "65", "68"], "hs": {"89": [[829, 504, 33, 17]], "68": [[740, 518, 33, 17]], "26": [[197, 326, 33, 17]], "27": [[144, 307, 33, 17]], "28": [[94, 264, 33, 17]], "29": [[603, 96, 33, 17]], "92": [[829, 514, 33, 17]], "71": [[304, 537, 33, 17]], "50": [[763, 96, 33, 17]], "95": [[791, 459, 33, 17]], "96": [[758, 365, 33, 17]], "74": [[343, 526, 33, 17]], "32": [[649, 96, 33, 17]], "98": [[850, 383, 33, 17]], "77": [[275, 544, 33, 17]], "56": [[757, 232, 33, 17]], "35": [[159, 487, 33, 17]], "59": [[142, 179, 33, 17]], "5": [[429, 99, 33, 17]], "8": [[482, 96, 33, 17]], "80": [[254, 552, 33, 17]], "9": [[509, 124, 33, 17]], "83": [[662, 498, 33, 17]], "62": [[175, 171, 33, 17]], "86": [[829, 491, 33, 17]], "65": [[198, 165, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

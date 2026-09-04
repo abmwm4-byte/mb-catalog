@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107044">048 BIS 09/85</a> → 075 НАВЕСН. ДЕТАЛИ КОМПРЕССОРА ХЛАДАГЕНТА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/218">048 BIS 09/85</a> → 075 НАВЕСН. ДЕТАЛИ КОМПРЕССОРА ХЛАДАГЕНТА</div>
 <h1>075 НАВЕСН. ДЕТАЛИ КОМПРЕССОРА ХЛАДАГЕНТА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B13075000039.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B13075000039.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1161301157" title="Клик — скопировать">A 116 130 11 57</td><td>ВСАСЫВ. ТРУБКА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1158320085" title="Клик — скопировать">A 115 832 00 85</td><td>- Золотник клапана</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A2019880635" title="Клик — скопировать">A 201 988 06 35</td><td>- Колпачок</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1161300435" title="Клик — скопировать">A 116 130 04 35</td><td>КРОНШТЕЙН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1171300235" title="Клик — скопировать">A 117 130 02 35</td><td>КРОНШТЕЙН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1171300335" title="Клик — скопировать">A 117 130 03 35</td><td>КРОНШТЕЙН</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1169900220" title="Клик — скопировать">A 116 990 02 20</td><td>БОЛТ</td><td>2</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000125010518" title="Клик — скопировать">N 000125 010518</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000125010532" title="Клик — скопировать">N 000125 010532</td><td>Шайба</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0049900001" title="Клик — скопировать">A 004 990 00 01</td><td>БОЛТ</td><td>2</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804661051" title="Клик — скопировать">A 180 466 10 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>11.25 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660951" title="Клик — скопировать">A 180 466 09 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>11.50 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660851" title="Клик — скопировать">A 180 466 08 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>11.75 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660751" title="Клик — скопировать">A 180 466 07 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>12.00 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660651" title="Клик — скопировать">A 180 466 06 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>12.25 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660151" title="Клик — скопировать">A 180 466 01 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>12.50 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660251" title="Клик — скопировать">A 180 466 02 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>12.75 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660351" title="Клик — скопировать">A 180 466 03 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>13.00 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660451" title="Клик — скопировать">A 180 466 04 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660851" title="Клик — скопировать">A 180 466 08 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>13.25 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1804660551" title="Клик — скопировать">A 180 466 05 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>2</td><td>13.50 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A1161300360" title="Клик — скопировать">A 116 130 03 60</td><td>Ременный шкив</td><td>1</td><td>НАТЯЖН. РОЛИК КОМПРЕССОРА ХЛАДАГ.</td><td class="restr"></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1161300160" title="Клик — скопировать">A 116 130 01 60</td><td>- Ременный шкив</td><td>-</td><td>[036] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 985 040625 986 046655</td><td class="restr"></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="A1161300460" title="Клик — скопировать">A 116 130 04 60</td><td>- Ременный шкив</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1159900219" title="Клик — скопировать">A 115 990 02 19</td><td>- болт</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1151320053" title="Клик — скопировать">A 115 132 00 53</td><td>- Проставочная трубка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="N000960012154" title="Клик — скопировать">N 000960 012154</td><td>- Винт</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="164"><td>164</td><td class="pn" data-raw="N912004012100" title="Клик — скопировать">N 912004 012100</td><td>- Пружинное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A1161310152" title="Клик — скопировать">A 116 131 01 52</td><td>Компенсационная шайба</td><td>1</td><td>4 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A1161310252" title="Клик — скопировать">A 116 131 02 52</td><td>Компенсационная шайба</td><td>1</td><td>5 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="167"><td>167</td><td class="pn" data-raw="A1161310352" title="Клик — скопировать">A 116 131 03 52</td><td>РАСПОРНАЯ ШАЙБА</td><td>1</td><td>6 MM [005] ПО НЕОБХОДИМОСТИ</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N006912008020" title="Клик — скопировать">N 006912 008020</td><td>БОЛТ</td><td>2</td><td>КОМПРЕССОР ХЛАДАГЕНТ. НА БЛОКЕ ЦИЛ.</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N000933008147" title="Клик — скопировать">N 000933 008147</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N304017008021" title="Клик — скопировать">N 304017 008021</td><td>Винт с 6-гранной головкой</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТ. НА БЛОКЕ ЦИЛ.; M8X20</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="N304017008027" title="Клик — скопировать">N 304017 008027</td><td>Винт с 6-гранной головкой</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТ. НА БЛОКЕ ЦИЛ.</td><td class="restr"></td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>2</td><td>КОМПРЕССОР ХЛАДАГЕНТ. НА БЛОКЕ ЦИЛ.</td><td class="restr"></td></tr><tr data-pos="212"><td>212</td><td class="pn" data-raw="A1161310541" title="Клик — скопировать">A 116 131 05 41</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A0049900001" title="Клик — скопировать">A 004 990 00 01</td><td>БОЛТ</td><td>2</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="218"><td>218</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="221"><td>221</td><td class="pn" data-raw="N000931008058" title="Клик — скопировать">N 000931 008058</td><td>Винт</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="227"><td>227</td><td class="pn" data-raw="A1161310051" title="Клик — скопировать">A 116 131 00 51</td><td>ДИСТАНЦИОННОЕ КОЛЬЦО</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B13075000039.png", "poses": ["17", "26", "29", "101", "107", "110", "113", "119", "140", "143", "146", "149", "152", "155", "164", "167", "194", "197", "212", "215", "218", "221", "227"]}];</script><script>
+<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B13075000039.png", "poses": ["17", "26", "29", "101", "107", "110", "113", "119", "140", "143", "146", "149", "152", "155", "164", "167", "194", "197", "212", "215", "218", "221", "227"], "hs": {"26": [[536, 128, 33, 17]], "17": [[624, 226, 33, 17]], "29": [[517, 88, 33, 17]], "194": [[533, 296, 33, 17]], "140": [[419, 300, 33, 17]], "152": [[233, 407, 33, 17]], "197": [[508, 304, 33, 17]], "164": [[295, 459, 33, 17]], "110": [[376, 148, 33, 17]], "143": [[329, 448, 33, 17]], "221": [[85, 311, 33, 17]], "155": [[263, 468, 33, 17]], "101": [[304, 222, 33, 17]], "167": [[372, 438, 33, 17]], "113": [[333, 324, 33, 17]], "212": [[178, 372, 33, 17]], "146": [[202, 480, 33, 17]], "215": [[85, 359, 33, 17]], "149": [[137, 474, 33, 17]], "227": [[169, 284, 33, 17]], "107": [[339, 160, 33, 17]], "119": [[371, 316, 33, 17]], "218": [[108, 351, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

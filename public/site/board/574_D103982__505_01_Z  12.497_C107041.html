@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → Z  12.497 ВЫПУСКНОЙ КОЛЛЕКТОР</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/130">574 AB 09/85</a> → Z  12.497 ВЫПУСКНОЙ КОЛЛЕКТОР</div>
 <h1>Z  12.497 ВЫПУСКНОЙ КОЛЛЕКТОР</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S01249700002 <span class="hint">(2)</span></button><button data-i="1" class="">S01249700001 <span class="hint">(0)</span></button><button data-i="2" class="">S01249700003 <span class="hint">(10)</span></button><button data-i="3" class="">S01249700004 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01249700002.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01249700002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100302" title="Клик — скопировать">A 103 010 03 02</td><td>МОТОР</td><td>1</td><td>МЕХ. И АВТОМ.КП TO 103.940 Рулевое управление: Влево Z  12.497/02 [212] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 88 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100402" title="Клик — скопировать">A 103 010 04 02</td><td>МОТОР</td><td>1</td><td>МЕХАНИЧЕСКАЯ КП TO 103.942 Рулевое управление: Влево Z  12.497/02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [212] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 88 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030103902" title="Клик — скопировать">A 103 010 39 02</td><td>МОТОР</td><td>1</td><td>МЕХАНИЧЕСКАЯ КП TO 103.942 Рулевое управление: Влево Z  12.497/02 [212] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 88 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100502" title="Клик — скопировать">A 103 010 05 02</td><td>МОТОР</td><td>1</td><td>АКП TO 103.942 Рулевое управление: Влево Z  12.497/02 [212] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 88 98 [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100602" title="Клик — скопировать">A 103 010 06 02</td><td>МОТОР</td><td>1</td><td>МЕХ. И АВТОМ.КП TO 103.943 Рулевое управление: Влево Z  12.497/02 [214] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 90 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100702" title="Клик — скопировать">A 103 010 07 02</td><td>МОТОР</td><td>1</td><td>МЕХАНИЧЕСКАЯ КП TO 103.981 Рулевое управление: Влево Z  12.497/02 [216] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 92 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100802" title="Клик — скопировать">A 103 010 08 02</td><td>МОТОР</td><td>1</td><td>АКП TO 103.981 Рулевое управление: Влево Z  12.497/02 [216] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 92 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030100902" title="Клик — скопировать">A 103 010 09 02</td><td>МОТОР</td><td>1</td><td>МЕХАНИЧЕСКАЯ КП TO 103.982 Рулевое управление: Влево Z  12.497/02 [216] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 92 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030101002" title="Клик — скопировать">A 103 010 10 02</td><td>МОТОР</td><td>1</td><td>АКП TO 103.982 Рулевое управление: Влево Z  12.497/02 [216] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 92 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030101102" title="Клик — скопировать">A 103 010 11 02</td><td>МОТОР</td><td>1</td><td>МЕХ. И АВТОМ.КП TO 103.983 Рулевое управление: Влево Z  12.497/02 [216] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 92 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1030101202" title="Клик — скопировать">A 103 010 12 02</td><td>МОТОР</td><td>1</td><td>МЕХ. И АВТОМ.КП TO 103.985 Рулевое управление: Влево Z  12.497/02 [221] АЛЬТЕРНАТИВНО ИМЕЕТСЯ ДЛИН. БЛОК 103 010 97 98</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1030108802" title="Клик — скопировать">A 103 010 88 02</td><td>Двигатель без навесного</td><td>1</td><td>МЕХ. И АВТОМ.КП TO 103.942 Рулевое управление: Влево Z  12.497/02 [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1031401914" title="Клик — скопировать">A 103 140 19 14</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Z  12.497/02 [019] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 103.940 10/50,20/60 026998 103.940 12/52,22/62 066137 103.942 10/50,20/62 014363 103.942 12/52,22/62 029486 103.943 10/50,20/62 000437 103.943 12/52,22/62 001052 103.981 10/50,20/62 007174 103.981 12/52,22/62 088148 103.983 10/50,20/60 031823 103.983 12/52,22/62 168785 103.984 10/50,20/60 000092 103.984 12/52,22/62 000144 103.985 10/50,20/60 002137 103.985 12/52,22/62 007835</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1031404114" title="Клик — скопировать">A 103 140 41 14</td><td>Выпускной коллектор</td><td>1</td><td>ЦИЛИНДР NOS.:1\-3 Z  12.497/02</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1031402014" title="Клик — скопировать">A 103 140 20 14</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>Z  12.497/02, Z  12.497/05</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1031403414" title="Клик — скопировать">A 103 140 34 14</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ЦИЛИНДР NOS.:4\-6 Z  12.497/02, Z  12.497/05</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1179971072" title="Клик — скопировать">A 117 997 10 72</td><td>ШТУЦЕР</td><td>2</td><td>Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="N007603012120" title="Клик — скопировать">N 007603 012120</td><td>Уплотнительное кольцо</td><td>2</td><td>Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1031400612" title="Клик — скопировать">A 103 140 06 12</td><td>ТРУБОПРОВОД</td><td>1</td><td>ТРУБОПРОВ.НА ВЫПУСК.КОЛЛЕКТОРЕ 1\-3 Z  12.497/02, Z  12.497/05</td><td class="restr"></td></tr><tr data-pos="145"><td>145</td><td class="pn" data-raw="A1031400512" title="Клик — скопировать">A 103 140 05 12</td><td>ТРУБОПРОВОД</td><td>1</td><td>ТРУБОПРОВ.НА ВЫПУСК.КОЛЛЕКТОРЕ 4\-6 Z  12.497/02, Z  12.497/05 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1179900254" title="Клик — скопировать">A 117 990 02 54</td><td>ГАЙКА</td><td>2</td><td>ТРУБОПРОВ.НА ВЫПУСК.КОЛЛЕКТОРЕ Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N003861008006" title="Клик — скопировать">N 003861 008006</td><td>Врезное кольцо</td><td>2</td><td>ТРУБОПРОВ.НА ВЫПУСК.КОЛЛЕКТОРЕ Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09</td><td class="restr"></td></tr><tr data-pos="195"><td>195</td><td class="pn" data-raw="A1179870045" title="Клик — скопировать">A 117 987 00 45</td><td>Колпачок</td><td>2</td><td>ТРУБОПРОВОД Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N916026010000" title="Клик — скопировать">N 916026 010000</td><td>Хомут</td><td>-</td><td>Z  12.497/01, Z  12.497/02, Z  12.497/03, Z  12.497/04, Z  12.497/05, Z  12.497/06, Z  12.497/08, Z  12.497/09, Z  12.497/10</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009953507" title="Клик — скопировать">A 000 995 35 07</td><td>Хомут</td><td>2</td><td>ТРУБОПРОВОД; 12\-22 MM Z  12.497/02, Z  12.497/05, Z  12.497/08, Z  12.497/09</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01249700002.png", "poses": ["5", "11"]}, {"png": "../../img_png/drawing_S01249700001.png", "poses": []}, {"png": "../../img_png/drawing_S01249700003.png", "poses": ["30", "45", "80", "105", "130", "145", "170", "180", "195", "210"]}, {"png": "../../img_png/drawing_S01249700004.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01249700002.png", "poses": ["5", "11"], "hs": {"11": [[495, 511, 28, 25]], "5": [[1051, 780, 19, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01249700001.png", "poses": [], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01249700003.png", "poses": ["30", "45", "80", "105", "130", "145", "170", "180", "195", "210"], "hs": {"45": [[829, 398, 32, 25]], "210": [[1117, 268, 46, 24], [742, 379, 46, 24], [255, 434, 46, 26], [138, 622, 46, 25]], "145": [[1140, 456, 42, 24]], "105": [[655, 463, 42, 25]], "80": [[703, 477, 34, 24], [1021, 709, 33, 24]], "180": [[1096, 408, 43, 24], [797, 440, 44, 25], [466, 577, 44, 27], [1142, 770, 42, 25]], "170": [[1173, 362, 43, 24], [851, 448, 42, 24], [460, 546, 44, 24], [1091, 787, 44, 25]], "30": [[481, 477, 32, 24]], "195": [[1079, 241, 44, 24], [704, 343, 44, 27], [224, 398, 44, 25], [129, 594, 43, 24]], "130": [[772, 553, 44, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01249700004.png", "poses": [], "hs": {}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

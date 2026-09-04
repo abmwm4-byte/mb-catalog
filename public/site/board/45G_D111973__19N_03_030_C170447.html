@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 030 ШАТУН И ПОРШЕНЬ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">45G  Действительно для: CA, US</a> → 030 ШАТУН И ПОРШЕНЬ</div>
 <h1>030 ШАТУН И ПОРШЕНЬ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B03030000025.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B03030000025.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1040300620" title="Клик — скопировать">A 104 030 06 20</td><td>Шатун (PLEUEL)</td><td>4</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1110301220" title="Клик — скопировать">A 111 030 12 20</td><td>Шатун (PLEUEL)</td><td>4</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1020381050" title="Клик — скопировать">A 102 038 10 50</td><td>- ВТУЛКА ШАТУНА ВЕРХ.</td><td>-</td><td>[004] EXHAUST STOCK OF OLD PARTS UP TO ENGINE 961 12/52 016988</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1020381150" title="Клик — скопировать">A 102 038 11 50</td><td>- ВТУЛКА ШАТУНА ВЕРХ.</td><td>-</td><td>[004] EXHAUST STOCK OF OLD PARTS UP TO ENGINE 961 12/52 016988</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1110380150" title="Клик — скопировать">A 111 038 01 50</td><td>- Втулка шатуна (PLEUELBUCHSE)</td><td>4</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1029910341" title="Клик — скопировать">A 102 991 03 41</td><td>- Направляющая втулка (FUEHRUNGSBUCHSE)</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1110380071" title="Клик — скопировать">A 111 038 00 71</td><td>- болт (SCHRAUBE)</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1120380071" title="Клик — скопировать">A 112 038 00 71</td><td>- болт (SCHRAUBE)</td><td>8</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1020384210" title="Клик — скопировать">A 102 038 42 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>-</td><td>[005] EXHAUST STOCK OF OLD PARTS UP TO ENGINE 961 12/52 019009</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110380910" title="Клик — скопировать">A 111 038 09 10</td><td>Вкладыш шатун. подшипника (PLEUELLAGERSCHALE)</td><td>8</td><td>НОРМАЛЬНО 48.00 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110381510" title="Клик — скопировать">A 111 038 15 10</td><td>ВКЛАДЫШ ШАТУН. ПОДШИПНИКА</td><td>8</td><td>НОРМАЛЬНО 48.00 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1020384510" title="Клик — скопировать">A 102 038 45 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>-</td><td>[005] EXHAUST STOCK OF OLD PARTS UP TO ENGINE 961 12/52 019009</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110381010" title="Клик — скопировать">A 111 038 10 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>8</td><td>РЕМОНТНАЯ ГРУППА I 47.75 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110381610" title="Клик — скопировать">A 111 038 16 10</td><td>ВКЛАДЫШ ШАТУН. ПОДШИПНИКА</td><td>8</td><td>РЕМОНТНАЯ ГРУППА I 47.75 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1020384610" title="Клик — скопировать">A 102 038 46 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>-</td><td>[005] EXHAUST STOCK OF OLD PARTS UP TO ENGINE 961 12/52 019009</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110381110" title="Клик — скопировать">A 111 038 11 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>8</td><td>РЕМОНТНАЯ ГРУППА II 47.50 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110381710" title="Клик — скопировать">A 111 038 17 10</td><td>ВКЛАДЫШ ШАТУН. ПОДШИПНИКА</td><td>8</td><td>РЕМОНТНАЯ ГРУППА II 47.50 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1020384710" title="Клик — скопировать">A 102 038 47 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>8</td><td>РЕМОНТ. ГРУППА III 47.25 MM [421] УСТАНАВЛИВАТЬ В ЭТОМ МЕСТЕ СТАРУЮ ДЕТАЛЬ БОЛЕЕ НЕ ДОПУСКАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1020384810" title="Клик — скопировать">A 102 038 48 10</td><td>Шатунный подшипник (PLEUELLAGER)</td><td>8</td><td>РЕМОНТ. ГРУППА IV 47.00 MM [421] УСТАНАВЛИВАТЬ В ЭТОМ МЕСТЕ СТАРУЮ ДЕТАЛЬ БОЛЕЕ НЕ ДОПУСКАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1110302818" title="Клик — скопировать">A 111 030 28 18</td><td>Поршень</td><td>4</td><td>НОРМАЛЬНО 90.90 MM [200] ПРИ ЗАКАЗЕ ДОПОЛН.КЛЮЧА УКАЗАТЬ: I========================================================================================================================I  I ДИАМЕТР ЦИЛИНДРА I ПОРШЕНЬ I ДОПУСТИМ. I ДОПОЛНЯЮЩИЙ КЛЮЧ I  I МАРКИРОВКА I МАРКИРОВКА I ПОРШЕНЬ I ПРИ ЗАКАЗЕ ПОРШНЕЙ I  I=== =======================I================================I=============================I==============================I  I A I A I A ИЛИ X I 52 ДЛЯ ПОРШНЯ &quot;А&quot; I  I X I X I A ИЛИ X ИЛИ B I 54 ДЛЯ ПОРШНЯ &quot;X&quot; I  I B I B I B ИЛИ X I 56 ДЛЯ ПОРШНЯ &quot;B&quot; I  I== ======================================================================================================================I</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1110302918" title="Клик — скопировать">A 111 030 29 18</td><td>Поршень</td><td>4</td><td>РЕМОНТНАЯ ГРУППА II 91.40 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0030305424" title="Клик — скопировать">A 003 030 54 24</td><td>- КОЛЬЦО ПОРШНЕВОЕ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0030308724" title="Клик — скопировать">A 003 030 87 24</td><td>- Поршневое кольцо</td><td>4</td><td>КОМПЛЕКТ ДЕТАЛЕЙ, НОРМАЛЬН.</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0030305624" title="Клик — скопировать">A 003 030 56 24</td><td>- КОЛЬЦО ПОРШНЕВОЕ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0030309524" title="Клик — скопировать">A 003 030 95 24</td><td>- Комплект поршневых колец (TEILESATZ KOLBENRING)</td><td>4</td><td>КОМПЛЕКТ ДЕТАЛЕЙ, НОРМАЛЬН.</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0030308824" title="Клик — скопировать">A 003 030 88 24</td><td>- Поршневое кольцо</td><td>4</td><td>КОМПЛЕКТ ДЕТАЛЕЙ, РЕМ. РАЗМЕР II</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1029940135" title="Клик — скопировать">A 102 994 01 35</td><td>- Пруж. стопорное кольцо (SPRENGRING)</td><td>8</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 27 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B03030000025.png", "poses": ["5", "8", "11", "14", "23", "26", "29", "32"]}];</script><script>
+<p class="muted">Позиций: 27 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B03030000025.png", "poses": ["5", "8", "11", "14", "23", "26", "29", "32"], "hs": {"11": [[671, 724, 29, 25]], "23": [[758, 693, 32, 25]], "14": [[674, 796, 31, 27]], "26": [[583, 390, 32, 25]], "5": [[638, 665, 18, 24]], "29": [[781, 294, 32, 25]], "8": [[630, 597, 19, 26]], "32": [[531, 527, 32, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

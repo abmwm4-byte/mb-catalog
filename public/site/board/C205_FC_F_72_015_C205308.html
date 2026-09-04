@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205308">C205_FC -/-</a> → 015 Передние двери</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C205_FC -/-</a> → 015 Передние двери</div>
 <h1>015 Передние двери</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B72015000221.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B72015000221.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057202900" title="Клик — скопировать">A 205 720 29 00</td><td>Дверь водителя (DRIVER'S DOOR)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057209726" title="Клик — скопировать">A 205 720 97 26</td><td>Дверь водителя (DRIVER'S DOOR)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057203000" title="Клик — скопировать">A 205 720 30 00</td><td>Дверь водителя (DRIVER'S DOOR)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2057209826" title="Клик — скопировать">A 205 720 98 26</td><td>Дверь водителя (DRIVER'S DOOR)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2057270190" title="Клик — скопировать">A 205 727 01 90</td><td>Шумоизол. двери водителя (DAMPING, DRIVER'S DOOR)</td><td>1</td><td>Дверь спереди слева [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2057270190" title="Клик — скопировать">A 205 727 01 90</td><td>Шумоизол. двери водителя (DAMPING, DRIVER'S DOOR)</td><td>1</td><td>Дверь спереди справа [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2057201537" title="Клик — скопировать">A 205 720 15 37</td><td>Петля (HINGE)</td><td>1</td><td>Сверху слева</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2057201637" title="Клик — скопировать">A 205 720 16 37</td><td>Петля (HINGE)</td><td>1</td><td>Сверху справа</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0139902101" title="Клик — скопировать">A 013 990 21 01</td><td>- Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>1</td><td>Разъем частей петли слева</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0139902101" title="Клик — скопировать">A 013 990 21 01</td><td>- Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>1</td><td>Разъем частей петли справа</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2057200912" title="Клик — скопировать">A 205 720 09 12</td><td>Петля (HINGE)</td><td>1</td><td>Снизу слева</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2057201012" title="Клик — скопировать">A 205 720 10 12</td><td>Петля (HINGE)</td><td>1</td><td>Снизу справа</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A0139902101" title="Клик — скопировать">A 013 990 21 01</td><td>- Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>1</td><td>Разъем частей петли слева</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A0139902101" title="Клик — скопировать">A 013 990 21 01</td><td>- Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>1</td><td>Разъем частей петли справа</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2309840129" title="Клик — скопировать">A 230 984 01 29</td><td>Винт Torx потайной (COUNTERSUNK SCREW)</td><td>4</td><td>Для петли к двери слева; M8X36</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2309840129" title="Клик — скопировать">A 230 984 01 29</td><td>Винт Torx потайной (COUNTERSUNK SCREW)</td><td>4</td><td>Для петли к двери справа; M8X36</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009877945" title="Клик — скопировать">A 000 987 79 45</td><td>Колпачок (LOCKING CAP)</td><td>2</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009877945" title="Клик — скопировать">A 000 987 79 45</td><td>Колпачок (LOCKING CAP)</td><td>2</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0059902050" title="Клик — скопировать">A 005 990 20 50</td><td>Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>5</td><td>Для петли к передней стойке слева; M8</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0059902050" title="Клик — скопировать">A 005 990 20 50</td><td>Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>5</td><td>Для петли к передней стойке справа; M8</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0039975786" title="Клик — скопировать">A 003 997 57 86</td><td>Заглушка (BLANKING PLUG)</td><td>3</td><td>Дверь слева; 15 MM</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0039981350" title="Клик — скопировать">A 003 998 13 50</td><td>Пробка (STOP PLUG)</td><td>3</td><td>Дверь слева; 15 MM</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0039975786" title="Клик — скопировать">A 003 997 57 86</td><td>Заглушка (BLANKING PLUG)</td><td>3</td><td>Дверь справа; 15 MM</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0039981350" title="Клик — скопировать">A 003 998 13 50</td><td>Пробка (STOP PLUG)</td><td>3</td><td>Дверь справа; 15 MM</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2057270328" title="Клик — скопировать">A 205 727 03 28</td><td>Декоративная накладка (TRIM MOLDING)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2057270428" title="Клик — скопировать">A 205 727 04 28</td><td>Декоративная накладка (TRIM MOLDING)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2057270387" title="Клик — скопировать">A 205 727 03 87</td><td>Уплотнение двери (DOOR SEALING, CIRCUMF.)</td><td>1</td><td>Дверь слева</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2057270487" title="Клик — скопировать">A 205 727 04 87</td><td>Уплотнение двери (DOOR SEALING, CIRCUMF.)</td><td>1</td><td>Дверь справа</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2057208706" title="Клик — скопировать">A 205 720 87 06</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь слева, сзади</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2057206320" title="Клик — скопировать">A 205 720 63 20</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь слева, сзади</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2057208806" title="Клик — скопировать">A 205 720 88 06</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь справа, сзади</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2057206420" title="Клик — скопировать">A 205 720 64 20</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь справа, сзади</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2057208506" title="Клик — скопировать">A 205 720 85 06</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь слева, спереди</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2057208606" title="Клик — скопировать">A 205 720 86 06</td><td>Уплотнение двери водителя (SEAL, DRIVER'S DOOR)</td><td>1</td><td>Дверь справа</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2057223900" title="Клик — скопировать">A 205 722 39 00</td><td>Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Слева сзади</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2057224000" title="Клик — скопировать">A 205 722 40 00</td><td>Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Справа сзади</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2057225300" title="Клик — скопировать">A 205 722 53 00</td><td>Опора (BRACING)</td><td>1</td><td>Слева сзади, изнутри</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2057225400" title="Клик — скопировать">A 205 722 54 00</td><td>Опора (BRACING)</td><td>1</td><td>Справа сзади, изнутри</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0069893085" title="Клик — скопировать">A 006 989 30 85</td><td>Клейкая лента (ADHESIVE TAPE)</td><td>4</td><td>Дверь слева; 46 MM</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0069893085" title="Клик — скопировать">A 006 989 30 85</td><td>Клейкая лента (ADHESIVE TAPE)</td><td>4</td><td>Дверь справа; 46 MM</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0069893085" title="Клик — скопировать">A 006 989 30 85</td><td>Клейкая лента (ADHESIVE TAPE)</td><td>8</td><td>Дверь слева; 46 MM</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0069893085" title="Клик — скопировать">A 006 989 30 85</td><td>Клейкая лента (ADHESIVE TAPE)</td><td>8</td><td>Дверь справа; 46 MM</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2046820108" title="Клик — скопировать">A 204 682 01 08</td><td>Демпфирование (DAMPING)</td><td>1</td><td>Дверь слева; 500X100MM</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2046820108" title="Клик — скопировать">A 204 682 01 08</td><td>Демпфирование (DAMPING)</td><td>1</td><td>Дверь справа; 500X100MM</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 44 · подписано на схемах: 44 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B72015000221.png", "poses": ["10", "20", "30", "35", "50", "55", "60", "70", "80", "90", "100", "200", "210", "220", "230", "240", "250", "260", "280"]}];</script><script>
+<p class="muted">Позиций: 44 · подписано на схемах: 44 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B72015000221.png", "poses": ["10", "20", "30", "35", "50", "55", "60", "70", "80", "90", "100", "200", "210", "220", "230", "240", "250", "260", "280"], "hs": {"55": [[173, 506, 34, 29]], "35": [[173, 288, 35, 29]], "280": [[992, 766, 48, 30]], "260": [[620, 157, 48, 30]], "250": [[593, 492, 48, 30]], "240": [[714, 519, 48, 30]], "230": [[657, 483, 48, 30]], "220": [[677, 607, 48, 30]], "100": [[398, 216, 48, 30]], "210": [[782, 580, 48, 30]], "200": [[1028, 823, 48, 30]], "90": [[818, 242, 34, 30], [294, 465, 35, 30]], "80": [[267, 610, 35, 30], [249, 372, 34, 30]], "70": [[174, 484, 34, 30], [175, 263, 34, 30]], "60": [[142, 339, 34, 30], [142, 561, 35, 30]], "50": [[184, 592, 35, 30]], "30": [[188, 353, 38, 32]], "20": [[969, 654, 34, 30]], "10": [[470, 490, 34, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

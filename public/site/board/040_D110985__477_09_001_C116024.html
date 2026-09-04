@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116024">040 STANDARD</a> → 001 FUEL FILTER</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/297">040 STANDARD</a> → 001 FUEL FILTER</div>
 <h1>001 FUEL FILTER</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B09001000308 <span class="hint">(0)</span></button><button data-i="1" class="">B09001000309 <span class="hint">(2)</span></button><button data-i="2" class="">B09001000310 <span class="hint">(15)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B09001000308.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B09001000308.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="121"><td>121</td><td class="pn" data-raw="A0100949502" title="Клик — скопировать">A 010 094 95 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [003] FROM ENGINE 984 026779 ALSO INSTALLED ON 024375,024598,024599,025172 [006] UP TO ENGINE 984 087684 EXCEPT FOR 082747-  082750,  084595,  084882,  084888,  085129,  085130,  085404,  085405,  086012-  086019,  086093-  086095,  086162, 086163,  086231,  086232,  086958,  087538,  087539,  087614.</td><td class="restr"></td></tr><tr data-pos="129"><td>129</td><td class="pn" data-raw="A0020946204" title="Клик — скопировать">A 002 094 62 04</td><td>- Фил. элемент возд.фильтра</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="141"><td>141</td><td class="pn" data-raw="A0000941355" title="Клик — скопировать">A 000 094 13 55</td><td>- Крышка</td><td>6</td><td></td><td class="restr"></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A0010942380" title="Клик — скопировать">A 001 094 23 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0009900762" title="Клик — скопировать">A 000 990 07 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0009901762" title="Клик — скопировать">A 000 990 17 62</td><td>- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="153"><td>153</td><td class="pn" data-raw="A0009900962" title="Клик — скопировать">A 000 990 09 62</td><td>- гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="157"><td>157</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>- Пружинная шайба</td><td>1</td><td>[403] НЕ УСТАНОВЛЕНО</td><td class="restr"></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A0009975586" title="Клик — скопировать">A 000 997 55 86</td><td>- ЗАГЛУШКА</td><td>1</td><td>TO 009 094 30 02 [002] UP TO ENGINE 984 026778 EXCEPT FOR 024375,024598,024599,025172</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0010945180" title="Клик — скопировать">A 001 094 51 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A1020940060" title="Клик — скопировать">A 102 094 00 60</td><td>- уплотнение</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="249"><td>249</td><td class="pn" data-raw="A1100940008" title="Клик — скопировать">A 110 094 00 08</td><td>ВПУСКНОЙ КОЛЛЕКТОР</td><td>1</td><td>ШЛАНГ ВОЗДУХОЗАБОРА</td><td class="restr"></td></tr><tr data-pos="267"><td>267</td><td class="pn" data-raw="N916026060000" title="Клик — скопировать">N 916026 060000</td><td>Хомут</td><td>-</td><td>60\-80MM</td><td class="restr"></td></tr><tr data-pos="267"><td>267</td><td class="pn" data-raw="A0069972790" title="Клик — скопировать">A 006 997 27 90</td><td>Шланговый хомут</td><td>1</td><td>ШЛАНГ НА ВОЗДУШ. ФИЛЬТРЕ; 60\-80 MM</td><td class="restr"></td></tr><tr data-pos="293"><td>293</td><td class="pn" data-raw="A1100942482" title="Клик — скопировать">A 110 094 24 82</td><td>ШЛАНГ</td><td>1</td><td>КРЫШКА ГБЦ К ДЕМПФЕР.ФИЛЬТРУ</td><td class="restr"></td></tr><tr data-pos="313"><td>313</td><td class="pn" data-raw="A1109972782" title="Клик — скопировать">A 110 997 27 82</td><td>ШЛАНГ</td><td>1</td><td>СОЕДИНЕНИЕ ВЕНТИЛЯЦИИ КАРТЕРА НА ВПУСКНОМ КОЛЛЕКТОРЕ [006] UP TO ENGINE 984 087684 EXCEPT FOR 082747-  082750,  084595,  084882,  084888,  085129,  085130,  085404,  085405,  086012-  086019,  086093-  086095,  086162, 086163,  086231,  086232,  086958,  087538,  087539,  087614.</td><td class="restr"></td></tr><tr data-pos="361"><td>361</td><td class="pn" data-raw="A1100940140" title="Клик — скопировать">A 110 094 01 40</td><td>ФОРСУНКА</td><td>1</td><td>ВПУСК.ТРУБОПРОВ.ВОЗДУШ.ФИЛЬТРА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="385"><td>385</td><td class="pn" data-raw="A1100940441" title="Клик — скопировать">A 110 094 04 41</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ДЕМПФ. ФИЛЬТР [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="389"><td>389</td><td class="pn" data-raw="A1169880511" title="Клик — скопировать">A 116 988 05 11</td><td>Резиновый буфер</td><td>2</td><td>SCOOP AND AIR CLEANER TO AIR DUCT</td><td class="restr"></td></tr><tr data-pos="393"><td>393</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td><td class="restr"></td></tr><tr data-pos="397"><td>397</td><td class="pn" data-raw="N000315006004" title="Клик — скопировать">N 000315 006004</td><td>Гайка</td><td>1</td><td>AIR CLEANER TO RUBBER BUFFER</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0100942602" title="Клик — скопировать">A 010 094 26 02</td><td>ВОЗДУШНЫЙ ФИЛЬТР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010948904" title="Клик — скопировать">A 001 094 89 04</td><td>- ЭЛЕМЕНТ ФИЛЬТРУЮЩИЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0010945080" title="Клик — скопировать">A 001 094 50 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1100942082" title="Клик — скопировать">A 110 094 20 82</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1100940341" title="Клик — скопировать">A 110 094 03 41</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09001000308.png", "poses": []}, {"png": "../../img_png/drawing_B09001000309.png", "poses": ["249", "361"]}, {"png": "../../img_png/drawing_B09001000310.png", "poses": ["121", "129", "141", "149", "153", "157", "161", "165", "267", "293", "313", "385", "389", "393", "397"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09001000308.png", "poses": [], "hs": {"33": [[596, 318, 33, 17]], "13": [[551, 398, 33, 17]], "57": [[525, 514, 33, 17], [693, 366, 33, 17]], "25": [[792, 248, 33, 17], [728, 208, 33, 17]], "5": [[645, 255, 33, 17]], "29": [[756, 227, 33, 17]], "53": [[493, 528, 33, 17], [718, 375, 33, 17]], "21": [[559, 289, 33, 17]]}, "w": 876, "h": 584}, {"png": "../../img_png/drawing_B09001000309.png", "poses": ["249", "361"], "hs": {"89": [[439, 150, 33, 17]], "69": [[728, 186, 33, 17]], "373": [[379, 380, 33, 17]], "177": [[442, 75, 33, 17]], "377": [[379, 363, 33, 17]], "257": [[157, 222, 33, 17]], "337": [[663, 349, 33, 17]], "317": [[346, 524, 33, 17]], "93": [[252, 95, 33, 17]], "73": [[642, 207, 33, 17]], "97": [[230, 80, 33, 17]], "77": [[550, 34, 33, 17]], "181": [[444, 404, 33, 17]], "381": [[381, 343, 33, 17]], "185": [[479, 119, 33, 17]], "361": [[170, 448, 33, 17]], "285": [[332, 333, 33, 17]], "101": [[211, 72, 33, 17]], "365": [[213, 303, 33, 17]], "321": [[636, 491, 33, 17]], "189": [[432, 31, 33, 17]], "345": [[575, 362, 33, 17]], "369": [[379, 412, 33, 17]], "105": [[178, 54, 33, 17]], "249": [[96, 338, 33, 17]], "305": [[309, 292, 33, 17]], "81": [[682, 29, 33, 17]], "329": [[201, 470, 33, 17]], "61": [[540, 316, 33, 17]], "85": [[531, 370, 33, 17]]}, "w": 876, "h": 585}, {"png": "../../img_png/drawing_B09001000310.png", "poses": ["121", "129", "141", "149", "153", "157", "161", "165", "267", "293", "313", "385", "389", "393", "397"], "hs": {"297": [[526, 271, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

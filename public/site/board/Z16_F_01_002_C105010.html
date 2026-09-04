@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C105010">Z16 -/-</a> → 002 ENGINE HOUSING</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/87">Z16 -/-</a> → 002 ENGINE HOUSING</div>
 <h1>002 ENGINE HOUSING</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B01002Z16001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B01002Z16001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0009971730" title="Клик — скопировать">A 000 997 17 30</td><td>	- LOCKING SCREW</td><td>3</td><td>для  CORE HOLES</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1800530732" title="Клик — скопировать">A 180 053 07 32</td><td>	- Кольцо седла клапана</td><td>6</td><td>для  EXHAUST</td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A1800160229" title="Клик — скопировать">A 180 016 02 29</td><td>	- Соединительный штуцер</td><td>1</td><td>для  THERMOSTAT</td><td class="restr"></td></tr><tr data-pos="73b"><td>73b</td><td class="pn" data-raw="A1809901640" title="Клик — скопировать">A 180 990 16 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1210500024" title="Клик — скопировать">A 121 050 00 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1210501624" title="Клик — скопировать">A 121 050 16 24</td><td>	- НАПРАВЛЯЮЩАЯ КЛАПАНА</td><td>6</td><td>FROM ENGINE 6504200</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1869900940" title="Клик — скопировать">A 186 990 09 40</td><td>ШАЙБА</td><td>8</td><td>для  CYLINDER HEAD AT CYLINDER CRANKCASE</td><td class="restr"></td></tr><tr data-pos="84"><td>84</td><td class="pn" data-raw="A1800160338" title="Клик — скопировать">A 180 016 03 38</td><td>Скоба</td><td>3</td><td>для  CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1800101130" title="Клик — скопировать">A 180 010 11 30</td><td>CYLINDER HEAD COVER</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1365010054" title="Клик — скопировать">A 136 501 00 54</td><td>	- Запорная крышка</td><td>1</td><td>для  OIL FILLING IN</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1809970240" title="Клик — скопировать">A 180 997 02 40</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>для  SCREWED COVER</td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1800100470" title="Клик — скопировать">A 180 010 04 70</td><td>	- ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1809950701" title="Клик — скопировать">A 180 995 07 01</td><td>	- TUBE CLAMP</td><td>2</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER UP TO ENGINE 6503167</td><td class="restr"></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1809970272" title="Клик — скопировать">A 180 997 02 72</td><td>	- Штуцер</td><td>1</td><td>для  BREATHER TUBE AT CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1800160280" title="Клик — скопировать">A 180 016 02 80</td><td>	- GASKET</td><td>1</td><td>для  CYLINDER HEAD COVER</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1800100370" title="Клик — скопировать">A 180 010 03 70</td><td>ТРУБКА ВЕНТИЛЯЦИИ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800530832" title="Клик — скопировать">A 180 053 08 32</td><td>	- КОЛЬЦО СЕДЛА КЛАПАНА</td><td>6</td><td>RING, DIA. 40.3\-MM для  EXHAUST REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901740" title="Клик — скопировать">A 180 990 17 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809901840" title="Клик — скопировать">A 180 990 18 40</td><td>	- ШАЙБА</td><td>NB</td><td>OPTIONAL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500624" title="Клик — скопировать">A 121 050 06 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. = 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500224" title="Клик — скопировать">A 121 050 02 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210500324" title="Клик — скопировать">A 121 050 03 24</td><td>	- Направляющая клапана</td><td>6</td><td>INTAKE, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502124" title="Клик — скопировать">A 121 050 21 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.018\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502224" title="Клик — скопировать">A 121 050 22 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.20\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1210502324" title="Клик — скопировать">A 121 050 23 24</td><td>	- Направляющая клапана</td><td>6</td><td>EXHAUST, INTERIOR DIA. = STANDARD, EXTERIOR DIA. 14.40\-MM FROM ENGINE 6504200 REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800100570" title="Клик — скопировать">A 180 010 05 70</td><td>BREATHER TUBE</td><td>1</td><td>EXPORT, SPECIAL REQUEST (TROPICAL DESIGN)</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01002Z16001.png", "poses": ["57", "60", "73", "73b", "74", "75", "82", "84", "85", "86", "87", "88", "89", "93", "97", "101"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01002Z16001.png", "poses": ["57", "60", "73", "73b", "74", "75", "82", "84", "85", "86", "87", "88", "89", "93", "97", "101"], "hs": {"88": [[304, 342, 33, 17]], "89": [[436, 296, 33, 17]], "57": [[729, 282, 33, 17]], "73b": [[749, 463, 33, 17]], "101": [[262, 88, 33, 17]], "93": [[260, 141, 33, 17]], "82": [[869, 312, 33, 17]], "60": [[620, 510, 33, 17]], "84": [[539, 311, 33, 17]], "73": [[778, 484, 33, 17]], "85": [[404, 169, 33, 17]], "74": [[674, 283, 33, 17]], "86": [[116, 136, 33, 17]], "75": [[624, 283, 33, 17]], "97": [[412, 263, 33, 17]], "87": [[109, 174, 33, 17]]}, "w": 910, "h": 672}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

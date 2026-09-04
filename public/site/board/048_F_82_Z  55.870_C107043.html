@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107043">048 BIS 09/85</a> → Z  55.870 ГАЛОГЕНОВЫЕ ПРОТИВОТУМ.ФАРА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/63">048 BIS 09/85</a> → Z  55.870 ГАЛОГЕНОВЫЕ ПРОТИВОТУМ.ФАРА</div>
 <h1>Z  55.870 ГАЛОГЕНОВЫЕ ПРОТИВОТУМ.ФАРА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05587000001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05587000001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0008204756" title="Клик — скопировать">A 000 820 47 56</td><td>ФОНАРЬ НАРУЖНЫЙ</td><td>1</td><td>СЛЕВА Z  55.870/10</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0008204856" title="Клик — скопировать">A 000 820 48 56</td><td>ФОНАРЬ НАРУЖНЫЙ</td><td>1</td><td>СПРАВА Z  55.870/10</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A0018267090" title="Клик — скопировать">A 001 826 70 90</td><td>- РАССЕИВАТЕЛЬ</td><td>2</td><td>Z  55.870/10</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N072601012290" title="Клик — скопировать">N 072601 012290</td><td>Лампа накаливания</td><td>2</td><td>H3 12V\-55W Z  55.870/01, Z  55.870/02, Z  55.870/03, Z  55.870/04, Z  55.870/05, Z  55.870/06, Z  55.870/07, Z  55.870/08, Z  55.870/09, Z  55.870/10 [014] UP TO CHASSIS: EXCEPT FOR ITALY 114.005,007,015         20/60,22/62 054817 114.005,007,008,015,017 10/50,12/52 144770 114.008,017             20/60,22/62 055549 114.010                 20/60,22/62 047997 114.011                 10/50,12/52 020400 114.021                 20/60,22/62 004110 114.022                 20/60,22/62 008953 114.023                 10/50,12/52 010274 114.060                 10/50,12/52 013712 114.062                 10/50,12/52 010220 114.072                 10/50,12/52 006353 114.073                 10/50,12/52 003216 115.000,002,010         20/60,22/62 054893 115.000,002,010         10/50,12/52 121759 115.015                 20/60,22/62 057530 115.015                 10/50,12/52 161919 115.100,102,103,110,112 20/60,22/62 135996 115.100,102,103,110,112 10/50,12/52 329058 115.115                 20/60,22/62 063372 115.115                 10/50,12/52 171000 FROM CHASSIS:SEE SA 55570 [018] UP TO CHASSIS: ITALY 114.005,007,008,015,017 134600 114.011                 018323 114.060                 008296 114.062                 007265 114.023                 010040 114.072                 005010 114.073                 001729 115.000,002,010         114839 115.015                 149330 115.100,102,103,110,112 305332 115.115                 156900 FROM CHASSIS:SEE SA 55570</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009973181" title="Клик — скопировать">A 000 997 31 81</td><td>Проходная втулка</td><td>2</td><td>Z  55.870/01, Z  55.870/02, Z  55.870/03, Z  55.870/04, Z  55.870/05, Z  55.870/06, Z  55.870/07, Z  55.870/08, Z  55.870/09, Z  55.870/10 [014] UP TO CHASSIS: EXCEPT FOR ITALY 114.005,007,015         20/60,22/62 054817 114.005,007,008,015,017 10/50,12/52 144770 114.008,017             20/60,22/62 055549 114.010                 20/60,22/62 047997 114.011                 10/50,12/52 020400 114.021                 20/60,22/62 004110 114.022                 20/60,22/62 008953 114.023                 10/50,12/52 010274 114.060                 10/50,12/52 013712 114.062                 10/50,12/52 010220 114.072                 10/50,12/52 006353 114.073                 10/50,12/52 003216 115.000,002,010         20/60,22/62 054893 115.000,002,010         10/50,12/52 121759 115.015                 20/60,22/62 057530 115.015                 10/50,12/52 161919 115.100,102,103,110,112 20/60,22/62 135996 115.100,102,103,110,112 10/50,12/52 329058 115.115                 20/60,22/62 063372 115.115                 10/50,12/52 171000 FROM CHASSIS:SEE SA 55570 [018] UP TO CHASSIS: ITALY 114.005,007,008,015,017 134600 114.011                 018323 114.060                 008296 114.062                 007265 114.023                 010040 114.072                 005010 114.073                 001729 115.000,002,010         114839 115.015                 149330 115.100,102,103,110,112 305332 115.115                 156900 FROM CHASSIS:SEE SA 55570</td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="A0005454928" title="Клик — скопировать">A 000 545 49 28</td><td>ШТЕКЕР</td><td>-</td><td>Z  55.870/01, Z  55.870/02, Z  55.870/03, Z  55.870/04, Z  55.870/05, Z  55.870/06, Z  55.870/07, Z  55.870/08, Z  55.870/09, Z  55.870/10</td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="A0045458428" title="Клик — скопировать">A 004 545 84 28</td><td>ШТЕКЕР</td><td>-</td><td>Z  55.870/01, Z  55.870/02, Z  55.870/03, Z  55.870/04, Z  55.870/05, Z  55.870/06, Z  55.870/07, Z  55.870/08, Z  55.870/09, Z  55.870/10</td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="A1265401081" title="Клик — скопировать">A 126 540 10 81</td><td>Штекер</td><td>2</td><td>Z  55.870/01, Z  55.870/02, Z  55.870/03, Z  55.870/04, Z  55.870/05, Z  55.870/06, Z  55.870/07, Z  55.870/08, Z  55.870/09, Z  55.870/10 [014] UP TO CHASSIS: EXCEPT FOR ITALY 114.005,007,015         20/60,22/62 054817 114.005,007,008,015,017 10/50,12/52 144770 114.008,017             20/60,22/62 055549 114.010                 20/60,22/62 047997 114.011                 10/50,12/52 020400 114.021                 20/60,22/62 004110 114.022                 20/60,22/62 008953 114.023                 10/50,12/52 010274 114.060                 10/50,12/52 013712 114.062                 10/50,12/52 010220 114.072                 10/50,12/52 006353 114.073                 10/50,12/52 003216 115.000,002,010         20/60,22/62 054893 115.000,002,010         10/50,12/52 121759 115.015                 20/60,22/62 057530 115.015                 10/50,12/52 161919 115.100,102,103,110,112 20/60,22/62 135996 115.100,102,103,110,112 10/50,12/52 329058 115.115                 20/60,22/62 063372 115.115                 10/50,12/52 171000 FROM CHASSIS:SEE SA 55570 [018] UP TO CHASSIS: ITALY 114.005,007,008,015,017 134600 114.011                 018323 114.060                 008296 114.062                 007265 114.023                 010040 114.072                 005010 114.073                 001729 115.000,002,010         114839 115.015                 149330 115.100,102,103,110,112 305332 115.115                 156900 FROM CHASSIS:SEE SA 55570</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1078200914" title="Клик — скопировать">A 107 820 09 14</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td>Z  55.870/11</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05587000001.png", "poses": ["50", "55", "59", "60", "63", "70"]}];</script><script>
+<p class="muted">Позиций: 9 · подписано на схемах: 9 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05587000001.png", "poses": ["50", "55", "59", "60", "63", "70"], "hs": {"55": [[472, 488, 33, 17]], "59": [[589, 435, 33, 17]], "70": [[635, 507, 33, 17]], "60": [[326, 271, 33, 17]], "50": [[553, 463, 33, 17]], "63": [[214, 191, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

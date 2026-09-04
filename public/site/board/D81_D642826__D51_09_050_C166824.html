@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C166824">D81 -/-</a> → 050 Система впуска воздуха</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">D81 -/-</a> → 050 Система впуска воздуха</div>
 <h1>050 Система впуска воздуха</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.115.259_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.115.259_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420981907" title="Клик — скопировать">A 642 098 19 07</td><td>AIR MANIFOLD (LADELUFTLEITUNG)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="F166+M014"><span class="icode">F166+M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420982907" title="Клик — скопировать">A 642 098 29 07</td><td>AIR MANIFOLD (LADELUFTLEITUNG)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="(F166/F292)+M014"><span class="icode">(F166/F292)+M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420908937" title="Клик — скопировать">A 642 090 89 37</td><td>AIR MANIFOLD (LADELUFTLEITUNG)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="(F166/F292)+M014"><span class="icode">(F166/F292)+M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420982507" title="Клик — скопировать">A 642 098 25 07</td><td>AIR MANIFOLD</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="(F166/F292)+M014"><span class="icode">(F166/F292)+M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420908637" title="Клик — скопировать">A 642 090 86 37</td><td>AIR MANIFOLD (LADELUFTLEITUNG)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="(F166/F292)+M014"><span class="icode">(F166/F292)+M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420908937" title="Клик — скопировать">A 642 090 89 37</td><td>AIR MANIFOLD (LADELUFTLEITUNG)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="(F166/F292)+M014"><span class="icode">(F166/F292)+M014</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0149976445" title="Клик — скопировать">A 014 997 64 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td></td><td class="restr" data-expr="F164/F166/F204/F207/F212/F213/F218/F221/F222/F238/F251/F253/F292/F463/F639/F906/F470"><span class="icode">F164/F166/F204/F207/F212/F213/F218/F221/F222/F238/F251/F253/F292/F463/F639/F906/F470</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420901642" title="Клик — скопировать">A 642 090 16 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [003893] НЕДЕЙСТВИТЕЛЬНО ДЛЯ ТИПА 292</td><td class="restr" data-expr="F166+M014+(801/802/803/804/805)+-(460/494)/F166+M014+FV+806"><span class="icode">F166+M014+(801/802/803/804/805)+-(460/494)/F166+M014+FV+806</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420901642" title="Клик — скопировать">A 642 090 16 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(F164/F166/F204/F207/F212/F213/F218/F221/F222/F251/F253)+M014"><span class="icode">(F164/F166/F204/F207/F212/F213/F218/F221/F222/F251/F253)+M014</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420901642" title="Клик — скопировать">A 642 090 16 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="F166+M014+(460/494)/F221+M014+494"><span class="icode">F166+M014+(460/494)/F221+M014+494</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420901742" title="Клик — скопировать">A 642 090 17 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="F166+(460/494)+M014+(801/802/803/804/805)"><span class="icode">F166+(460/494)+M014+(801/802/803/804/805)</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420902242" title="Клик — скопировать">A 642 090 22 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [003839] ONLY VALID FOR MODEL SERIES 292</td><td class="restr" data-expr="F292+M014"><span class="icode">F292+M014</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420902242" title="Клик — скопировать">A 642 090 22 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="((F166/F292)+-(801/802/803/804/805/806))+M014/F166+(FV+056/FW)+M014+806"><span class="icode">((F166/F292)+-(801/802/803/804/805/806))+M014/F166+(FV+056/FW)+M014+806</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A6420902242" title="Клик — скопировать">A 642 090 22 42</td><td>Трубопровод оч. воздуха (REINLUFTLEITUNG)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [003893] НЕДЕЙСТВИТЕЛЬНО ДЛЯ ТИПА 292</td><td class="restr" data-expr="F166+(460/494)+M014+-(802/803/804/805)"><span class="icode">F166+(460/494)+M014+-(802/803/804/805)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6420940180" title="Клик — скопировать">A 642 094 01 80</td><td>- Уплотнение воздуховода (DICHTUNG REINLUFTLEITUNG)</td><td>1</td><td></td><td class="restr" data-expr="(F166/F204/F207/F212/F213/F218/F221/F222/F238/F251/F253/F292/F463/F470)+M014/F164+M014+M019"><span class="icode">(F166/F204/F207/F212/F213/F218/F221/F222/F238/F251/F253/F292/F463/F470)+M014/F164+M014+M019</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A6420940280" title="Клик — скопировать">A 642 094 02 80</td><td>- Уплотнение воздуховода (DICHTUNG REINLUFTLEITUNG)</td><td>2</td><td></td><td class="restr" data-expr="(F166/F213/F238/F253/F292/F470)+M014"><span class="icode">(F166/F213/F238/F253/F292/F470)+M014</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A6420940280" title="Клик — скопировать">A 642 094 02 80</td><td>- Уплотнение воздуховода (DICHTUNG REINLUFTLEITUNG)</td><td>2</td><td></td><td class="restr" data-expr="F164/F166/F204/F207/F212/F218/F221/F222/F251/F292/F463"><span class="icode">F164/F166/F204/F207/F212/F218/F221/F222/F251/F292/F463</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009959710" title="Клик — скопировать">A 000 995 97 10</td><td>- Хомут для шланга (SCHLAUCHSCHELLE)</td><td>2</td><td></td><td class="restr" data-expr="M014"><span class="icode">M014</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6420900048" title="Клик — скопировать">A 642 090 00 48</td><td>- Расходомер воздуха</td><td>2</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="(F164/F166/F204/F207/F213/F212/F218/F221/F222/F238/F251/F253/F292/F463)+M014"><span class="icode">(F164/F166/F204/F207/F213/F212/F218/F221/F222/F238/F251/F253/F292/F463)+M014</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6429050500" title="Клик — скопировать">A 642 905 05 00</td><td>- Расходомер воздуха (HEISSFILMLUFTMASSENSENSOR)</td><td>2</td><td></td><td class="restr" data-expr="(F213/F238/F253/F292/F463)+M014"><span class="icode">(F213/F238/F253/F292/F463)+M014</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6429050500" title="Клик — скопировать">A 642 905 05 00</td><td>- Расходомер воздуха (HEISSFILMLUFTMASSENSENSOR)</td><td>2</td><td></td><td class="restr" data-expr="F166+M014+FW+(806/807)/F292+M014+806"><span class="icode">F166+M014+FW+(806/807)/F292+M014+806</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6429050500" title="Клик — скопировать">A 642 905 05 00</td><td>- Расходомер воздуха (HEISSFILMLUFTMASSENSENSOR)</td><td>2</td><td></td><td class="restr" data-expr="F166+FW+498+M014+(806+056/807/808/809)"><span class="icode">F166+FW+498+M014+(806+056/807/808/809)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6429050500" title="Клик — скопировать">A 642 905 05 00</td><td>- Расходомер воздуха (HEISSFILMLUFTMASSENSENSOR)</td><td>2</td><td></td><td class="restr" data-expr="F166+FV+M014+(806+056/807/808/809)"><span class="icode">F166+FV+M014+(806+056/807/808/809)</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N000000002436" title="Клик — скопировать">N 000000 002436</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Крепление наддувочного трубопровода; M6X16</td><td class="restr" data-expr="M014"><span class="icode">M014</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Детали см.: 01/130</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2045840047" title="Клик — скопировать">A 204 584 00 47</td><td>Сигнальная полоса (WARNSTREIFEN)</td><td>1</td><td>Высокое напряжение</td><td class="restr" data-expr="F164/F166/F204/F207/F212/F213/F218/F221/F222/F251/F253/F463/F461/F292/F470"><span class="icode">F164/F166/F204/F207/F212/F213/F218/F221/F222/F251/F253/F463/F461/F292/F470</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.115.259_version_001.png", "poses": ["10", "20", "50", "60", "70", "80", "100", "170", "180", "200"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.115.259_version_001.png", "poses": ["10", "20", "50", "60", "70", "80", "100", "170", "180", "200"], "hs": {"100": [[343, 303, 43, 29]], "200": [[548, 63, 43, 29]], "80": [[645, 104, 30, 28]], "180": [[550, 110, 43, 29]], "70": [[469, 382, 30, 29]], "170": [[773, 244, 43, 28]], "60": [[726, 181, 30, 29]], "50": [[384, 161, 30, 29]], "20": [[865, 334, 30, 29]], "10": [[680, 392, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

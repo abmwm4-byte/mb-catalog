@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108016">232 -/-</a> → 001 РАДИАТОР</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/24">232 -/-</a> → 001 РАДИАТОР</div>
 <h1>001 РАДИАТОР</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B50001000016 <span class="hint">(0)</span></button><button data-i="1" class="">B50001000017 <span class="hint">(6)</span></button><button data-i="2" class="">B50001000018 <span class="hint">(2)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B50001000016.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B50001000016.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1085010501" title="Клик — скопировать">A 108 501 05 01</td><td>Радиатор</td><td>1</td><td>С РАДИАТОРОМ МАСЛА КП [002] 016, 10/50,20/60 FROM CHASSIS 034804;018, 10/50,20/60 FROM CHASSIS 035803;019, 10/50,20/60 FROM CHASSIS 035746 [023] 016,10/50,20/60 UP TO CHASSIS 080381; 018,019,10/50,20/60 UP TO CHASSIS 086633 [006] 016, 12/52,22/62 FROM CHASSIS 036068;018, 12/52,22/62 FROM CHASSIS 037204;019, 12/52,22/62 FROM CHASSIS 036269 [017] 016, 12/52,22/62 UP TO CHASSIS 079912; 018,019, 12/52,22/62 UP TO CHASSIS 086141</td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A0005010065" title="Клик — скопировать">A 000 501 00 65</td><td>- Спускной клапан</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1081800265" title="Клик — скопировать">A 108 180 02 65</td><td>Масляный охладитель</td><td>1</td><td>ВОЗДУШ. ОХЛАЖД. [023] 016,10/50,20/60 UP TO CHASSIS 080381; 018,019,10/50,20/60 UP TO CHASSIS 086633 [017] 016, 12/52,22/62 UP TO CHASSIS 079912; 018,019, 12/52,22/62 UP TO CHASSIS 086141</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1235010215" title="Клик — скопировать">A 123 501 02 15</td><td>Пробка радиатора</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="81"><td>81</td><td class="pn" data-raw="A1145000012" title="Клик — скопировать">A 114 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА [011] 016 UP TO CHASSIS 006641; 018,019 UP TO CHASSIS 005282;</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A1155040082" title="Клик — скопировать">A 115 504 00 82</td><td>Петля</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="93"><td>93</td><td class="pn" data-raw="A1089870325" title="Клик — скопировать">A 108 987 03 25</td><td>ПРОФИЛЬ ПЛАСТИКОВЫЙ</td><td>2</td><td>[025] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010101" title="Клик — скопировать">A 108 501 01 01</td><td>РАДИАТОР</td><td>-</td><td>Коробка передач [001] 016 UP TO CHASSIS 034803; 018 UP TO CHASSIS 035802; 019 UP TO CHASSIS 035745;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010001" title="Клик — скопировать">A 108 501 00 01</td><td>РАДИАТОР</td><td>-</td><td>Автоматическая коробка переключения передач [005] 016 UP TO CHASSIS 036067; 018 UP TO CHASSIS 037203; 019 UP TO CHASSIS 036268;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010901" title="Клик — скопировать">A 108 501 09 01</td><td>РАДИАТОР</td><td>1</td><td>[024] 016,10/50,20/60 FROM CHASSIS 080382; 018,019,10/50,20/60 FROM CHASSIS 086634 [018] 016, 12/52,22/62 FROM CHASSIS 079913; 018,019, 12/52,22/62 FROM CHASSIS 086142</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005010010" title="Клик — скопировать">A 000 501 00 10</td><td>- Сливная трубка ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1081800765" title="Клик — скопировать">A 108 180 07 65</td><td>МАСЛ. РАДИАТОР</td><td>1</td><td>[024] 016,10/50,20/60 FROM CHASSIS 080382; 018,019,10/50,20/60 FROM CHASSIS 086634 [018] 016, 12/52,22/62 FROM CHASSIS 079913; 018,019, 12/52,22/62 FROM CHASSIS 086142</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085000012" title="Клик — скопировать">A 108 500 00 12</td><td>К-т уплотнительной планки</td><td>1</td><td>КРЕПЛЕНИЕ РАДИАТОРА [012] 016 FROM CHASSIS 006642; 018,019 FROM CHASSIS 005283;</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010582" title="Клик — скопировать">A 108 501 05 82</td><td>Шланг ОЖ</td><td>1</td><td>[013] UP TO CHASSIS: 016,10/50,20/60 034803; 12/52,22/62 036067; 018,10/50,20/60 035802; SEE FOOTN.26 [026] UP TO CHASSIS: 018,12/52,22/62 037203; 019,10/50,20/60 035745; 12/52,22/62 036267</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010782" title="Клик — скопировать">A 108 501 07 82</td><td>Шланг ОЖ</td><td>1</td><td>[027] FROM CHASSIS: 016,10/50,20/60 034804; 12/52,22/62 036068; 018,10/50,20/60 035803; SEE FOOTN.28 [028] FROM CHASSIS: 018,12/52,22/62 037204; 019,10/50,20/60 035746; 12/52,22/62 036268</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085010682" title="Клик — скопировать">A 108 501 06 82</td><td>Шланг ОЖ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900262009100" title="Клик — скопировать">N 900262 009100</td><td>Стяжка</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N900263009000" title="Клик — скопировать">N 900263 009000</td><td>Лента</td><td>NB</td><td>[029] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50001000016.png", "poses": []}, {"png": "../../img_png/drawing_B50001000017.png", "poses": ["6", "21", "35", "51", "76", "81"]}, {"png": "../../img_png/drawing_B50001000018.png", "poses": ["87", "93"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50001000016.png", "poses": [], "hs": {"68": [[319, 373, 33, 17]], "168": [[342, 502, 33, 17]], "73": [[292, 356, 33, 17]], "152": [[296, 262, 33, 17]], "64": [[280, 476, 33, 17]]}, "w": 884, "h": 668}, {"png": "../../img_png/drawing_B50001000017.png", "poses": ["6", "21", "35", "51", "76", "81"], "hs": {"21": [[194, 456, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B50001000018.png", "poses": ["87", "93"], "hs": {"24": [[505, 201, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205042">C205_FW -/-</a> → 144 Навигационный блок / навигация с SD-карты памяти</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/144">C205_FW -/-</a> → 144 Навигационный блок / навигация с SD-карты памяти</div>
 <h1>144 Навигационный блок / навигация с SD-карты памяти</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B99144000038.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B99144000038.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2058204800" title="Клик — скопировать">A 205 820 48 00</td><td>К-т модуля подключения (PARTS KIT, CONN. UNIT)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="522+-(355/357)+-154"><span class="icode">522+-(355/357)+-154</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="A2538209000" title="Клик — скопировать">A 253 820 90 00</td><td>К-т модуля подключения (PARTS KIT, CONN. UNIT)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="522+-(355/357)+154"><span class="icode">522+-(355/357)+154</span></td></tr><tr data-pos="144"><td>144</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Дополнительно заказать при последующей установке</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005401302" title="Клик — скопировать">A 000 540 13 02</td><td>Корпус разъема (CONTACT SOCKET HOUSING)</td><td>1</td><td>MAX 1.4MM 2 MQS</td><td class="restr" data-expr="522+-(355/357)+154"><span class="icode">522+-(355/357)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060603" title="Клик — скопировать">A 213 906 06 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+7XXL+-154"><span class="icode">522+7XXL+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060703" title="Клик — скопировать">A 213 906 07 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+7XXL+(701L/705L/737L/749L)+-154"><span class="icode">522+7XXL+(701L/705L/737L/749L)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060503" title="Клик — скопировать">A 213 906 05 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+9XXL+-154"><span class="icode">522+9XXL+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060903" title="Клик — скопировать">A 213 906 09 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+817L+-154"><span class="icode">522+817L+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139061103" title="Клик — скопировать">A 213 906 11 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+825L+-154"><span class="icode">522+825L+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060803" title="Клик — скопировать">A 213 906 08 03</td><td>Карта памяти</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+(819L/823L/824L)+-154"><span class="icode">522+(819L/823L/824L)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060303" title="Клик — скопировать">A 213 906 03 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)+-154"><span class="icode">522+(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139060403" title="Клик — скопировать">A 213 906 04 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+(6XXL/623L/803L/833L/835L/853L/867L)+-154"><span class="icode">522+(6XXL/623L/803L/833L/835L/853L/867L)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2139061003" title="Клик — скопировать">A 213 906 10 03</td><td>Карта памяти</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+(865L/868L/869L/875L/879L/882L/9XXL+915L)+-154"><span class="icode">522+(865L/868L/869L/875L/879L/882L/9XXL+915L)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064903" title="Клик — скопировать">A 218 906 49 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+7XXL+154"><span class="icode">357+522+7XXL+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063003" title="Клик — скопировать">A 218 906 30 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+7XXL+(701L/705L/737L/724L/749L)+154"><span class="icode">357+522+7XXL+(701L/705L/737L/724L/749L)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064803" title="Клик — скопировать">A 218 906 48 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+9XXL+154"><span class="icode">357+522+9XXL+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189065003" title="Клик — скопировать">A 218 906 50 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+817L+154"><span class="icode">357+522+817L+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063103" title="Клик — скопировать">A 218 906 31 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+825L+154"><span class="icode">357+522+825L+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189063203" title="Клик — скопировать">A 218 906 32 03</td><td>Карта памяти</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+(819L/823L/824L)+154"><span class="icode">357+522+(819L/823L/824L)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189062903" title="Клик — скопировать">A 218 906 29 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)+154"><span class="icode">357+522+(2XXL/5XXL/808L/810L/812L/814L/816L/818L/820L/821L/837L/863L)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189064703" title="Клик — скопировать">A 218 906 47 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+(6XXL/623L/803L/833L/835L/853L/867L)+154"><span class="icode">357+522+(6XXL/623L/803L/833L/835L/853L/867L)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2189065103" title="Клик — скопировать">A 218 906 51 03</td><td>Карта памяти (MEMORY CARD)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="357+522+(865L/868L/869L/875L/879L/882L/9XXL+915L)+154"><span class="icode">357+522+(865L/868L/869L/875L/879L/882L/9XXL+915L)+154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2055401614" title="Клик — скопировать">A 205 540 16 14</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Рулевое управление: Влево [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+-(355/357)+-154"><span class="icode">522+-(355/357)+-154</span></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A2055401714" title="Клик — скопировать">A 205 540 17 14</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>Рулевое управление: Вправо [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="522+-(355/357)"><span class="icode">522+-(355/357)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 24 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B99144000038.png", "poses": ["144"]}];</script><script>
+<p class="muted">Позиций: 24 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B99144000038.png", "poses": ["144"], "hs": {"144": [[1235, 145, 42, 31]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

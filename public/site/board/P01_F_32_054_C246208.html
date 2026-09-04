@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C246208">P01 -/-</a> → 054 АМОРТИЗ. СТОЙКА ПЕРЕДНЯЯ И ЕЁ КРЕПЛЕНИЕ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/120">P01 -/-</a> → 054 АМОРТИЗ. СТОЙКА ПЕРЕДНЯЯ И ЕЁ КРЕПЛЕНИЕ</div>
 <h1>054 АМОРТИЗ. СТОЙКА ПЕРЕДНЯЯ И ЕЁ КРЕПЛЕНИЕ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B32054000058.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B32054000058.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463232900" title="Клик — скопировать">A 246 323 29 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СЛЕВА [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="485"><span class="icode">485</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463233000" title="Клик — скопировать">A 246 323 30 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СПРАВА [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="485"><span class="icode">485</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463233500" title="Клик — скопировать">A 246 323 35 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="677"><span class="icode">677</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463233600" title="Клик — скопировать">A 246 323 36 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="677"><span class="icode">677</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1563231700" title="Клик — скопировать">A 156 323 17 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1563231800" title="Клик — скопировать">A 156 323 18 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463233700" title="Клик — скопировать">A 246 323 37 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="459"><span class="icode">459</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2463233800" title="Клик — скопировать">A 246 323 38 00</td><td>Беспружинная стойка (SHOCK-ABSORBER STRUT)</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="459"><span class="icode">459</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2463220084" title="Клик — скопировать">A 246 322 00 84</td><td>Прокладка пружины (HELICAL SPRING SHIM)</td><td>2</td><td>ВНИЗУ СЛЕВА И СПРАВА</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210104" title="Клик — скопировать">A 246 321 01 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 1 X БЕЛ.</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210204" title="Клик — скопировать">A 246 321 02 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 2 X БЕЛ.</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210304" title="Клик — скопировать">A 246 321 03 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 3 X БЕЛ.</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210404" title="Клик — скопировать">A 246 321 04 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 4 X БЕЛ.</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210504" title="Клик — скопировать">A 246 321 05 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 1 X БЕЛЫЙ / 1 X КРАСН.</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463211704" title="Клик — скопировать">A 246 321 17 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 2 X КРАСНАЯ / 1 X БЕЛАЯ</td><td class="restr" data-expr="-486"><span class="icode">-486</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1563210104" title="Клик — скопировать">A 156 321 01 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ.ОБОЗНАЧ.:1 X СИН.</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1563210204" title="Клик — скопировать">A 156 321 02 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ.ОБОЗНАЧ.:2 X СИН.</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1563210304" title="Клик — скопировать">A 156 321 03 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 3 X СИН.</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1563210404" title="Клик — скопировать">A 156 321 04 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ.ОБОЗНАЧ.:4 X СИН.</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1563210504" title="Клик — скопировать">A 156 321 05 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТОВОЕ ОБОЗНАЧЕНИЕ: 1 X СИНИЙ / 1 X КРАСНЫЙ</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210704" title="Клик — скопировать">A 246 321 07 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 1 X ЖЕЛТАЯ</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210804" title="Клик — скопировать">A 246 321 08 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 2 X ЖЕЛТАЯ</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463210904" title="Клик — скопировать">A 246 321 09 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 3 X ЖЕЛТАЯ</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463211004" title="Клик — скопировать">A 246 321 10 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТ. ОБОЗНАЧ.: 4 X ЖЕЛТ.</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463211104" title="Клик — скопировать">A 246 321 11 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 1 X ЖЕЛТ. / 1 X КРАСН.</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2463211804" title="Клик — скопировать">A 246 321 18 04</td><td>Винтовая пружина (HELICAL SPRING)</td><td>2</td><td>ЦВЕТНАЯ МАРКИРОВКА: 1 X ЖЕЛТ. / 2 X КРАСН.</td><td class="restr" data-expr="459/677"><span class="icode">459/677</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2123230392" title="Клик — скопировать">A 212 323 03 92</td><td>Манжета (BOOT)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2463210206" title="Клик — скопировать">A 246 321 02 06</td><td>Упорный буфер амортизат. (STOP BUFFER, SH. ABS.)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr" data-expr="-482"><span class="icode">-482</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2463210306" title="Клик — скопировать">A 246 321 03 06</td><td>Упорный буфер амортизат. (STOP BUFFER, SH. ABS.)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr" data-expr="459/486+-M133/677/492"><span class="icode">459/486+-M133/677/492</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1563210006" title="Клик — скопировать">A 156 321 00 06</td><td>Дополнительная пружина (AUXILIARY SPRING)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr" data-expr="482"><span class="icode">482</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2123220184" title="Клик — скопировать">A 212 322 01 84</td><td>Прокладка пружины (HELICAL SPRING SHIM)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2049810025" title="Клик — скопировать">A 204 981 00 25</td><td>Шарикоподшипник (BALL BEARING)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2463230020" title="Клик — скопировать">A 246 323 00 20</td><td>Подпятник (SUPPORT BUSHING)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr" data-expr="-(M133/P84)"><span class="icode">-(M133/P84)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000002597" title="Клик — скопировать">N 000000 002597</td><td>Гайка (NUT)</td><td>2</td><td>СВЕРХУ СЛЕВА И СПРАВА; M14X1.5</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N910143010012" title="Клик — скопировать">N 910143 010012</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>6</td><td>АМОРТИЗАЦИОННАЯ СТОЙКА (ЛЕВАЯ И ПРАВАЯ) К КУЗОВУ; M10X30</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N910105014009" title="Клик — скопировать">N 910105 014009</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>4</td><td>АМОРТИЗАЦИОННАЯ СТОЙКА К ПОВОРОТНОМУ КУЛАКУ (ЛЕВ. И ПРАВ.); M14X1,5X70</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0059905050" title="Клик — скопировать">A 005 990 50 50</td><td>Гайка с фланцем (HEXAGON NUT WITH FLANGE)</td><td>4</td><td>АМОРТИЗАЦИОННАЯ СТОЙКА К ПОВОРОТНОМУ КУЛАКУ (ЛЕВ. И ПРАВ.); M14X1,5</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 37 · подписано на схемах: 37 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B32054000058.png", "poses": ["10", "20", "30", "50", "60", "70", "80", "90", "100", "110", "120", "130"]}];</script><script>
+<p class="muted">Позиций: 37 · подписано на схемах: 37 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B32054000058.png", "poses": ["10", "20", "30", "50", "60", "70", "80", "90", "100", "110", "120", "130"], "hs": {"110": [[696, 184, 48, 29]], "100": [[582, 172, 48, 30]], "90": [[560, 220, 35, 30]], "80": [[561, 284, 34, 30]], "70": [[555, 566, 35, 29]], "60": [[587, 504, 34, 29]], "50": [[578, 403, 34, 30]], "30": [[567, 686, 34, 30]], "20": [[562, 791, 34, 30]], "130": [[903, 753, 48, 30]], "10": [[902, 602, 34, 30]], "120": [[786, 785, 47, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

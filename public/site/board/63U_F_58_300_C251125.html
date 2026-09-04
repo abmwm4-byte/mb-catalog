@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251125">63U -/-</a> → 300 РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ И УПРАВЛЕНИЮ, ПАПКА С ДОКУМЕНТАМИ НА А/М</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">63U -/-</a> → 300 РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ И УПРАВЛЕНИЮ, ПАПКА С ДОКУМЕНТАМИ НА А/М</div>
 <h1>300 РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ И УПРАВЛЕНИЮ, ПАПКА С ДОКУМЕНТАМИ НА А/М</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B58300000065.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B58300000065.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515846082" title="Клик — скопировать">A 251 584 60 82</td><td>Руководство (OPERATOR'S MANUAL)</td><td>1</td><td>На английском</td><td class="restr" data-expr="494+-(806/807/808/809/800/801/802)"><span class="icode">494+-(806/807/808/809/800/801/802)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515842782" title="Клик — скопировать">A 251 584 27 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(211B/496/(-(494/498/205/205B/207/207B)))+808"><span class="icode">(211B/496/(-(494/498/205/205B/207/207B)))+808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515843582" title="Клик — скопировать">A 251 584 35 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(211B/496/(-(494/498/205/205B/207/207B)))+809"><span class="icode">(211B/496/(-(494/498/205/205B/207/207B)))+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844282" title="Клик — скопировать">A 251 584 42 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(211B/496/(-(460/494/498/205/205B/207/207B/214B/216B)))+809"><span class="icode">(211B/496/(-(460/494/498/205/205B/207/207B/214B/216B)))+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845382" title="Клик — скопировать">A 251 584 53 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(496/(-(460/494/498/830)))+800"><span class="icode">(496/(-(460/494/498/830)))+800</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844182" title="Клик — скопировать">A 251 584 41 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(496/(-(460/494/498/830)))+801"><span class="icode">(496/(-(460/494/498/830)))+801</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844781" title="Клик — скопировать">A 251 584 47 81</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(496/(-(460/494/498/830)))+801"><span class="icode">(496/(-(460/494/498/830)))+801</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844781" title="Клик — скопировать">A 251 584 47 81</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(496/(200B/201B/202/202B/203B/204B/205/205B/206/206B/207/207B/208/208B/209/209B/210/210B/211B/214B/216B))+801"><span class="icode">(496/(200B/201B/202/202B/203B/204B/205/205B/206/206B/207/207B/208/208B/209/209B/210/210B/211B/214B/216B))+801</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844281" title="Клик — скопировать">A 251 584 42 81</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="802+(496/(-(460/494/498/830)))+-052"><span class="icode">802+(496/(-(460/494/498/830)))+-052</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844281" title="Клик — скопировать">A 251 584 42 81</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="802+(496/(200B/201B/202/202B/203B/204B/205/205B/206/206B/207/207B/208/208B/209/209B/210/210B/211B/214B/216B))+-052"><span class="icode">802+(496/(200B/201B/202/202B/203B/204B/205/205B/206/206B/207/207B/208/208B/209/209B/210/210B/211B/214B/216B))+-052</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844281" title="Клик — скопировать">A 251 584 42 81</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(202/202B/205/205B/206/206B/207/207B/208/208B/209/209B/211B)+802+-052"><span class="icode">(202/202B/205/205B/206/206B/207/207B/208/208B/209/209B/211B)+802+-052</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845782" title="Клик — скопировать">A 251 584 57 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="802+052+(202/202B/205/205B/206/206B/207/207B/208/208B/209/209B/211B)"><span class="icode">802+052+(202/202B/205/205B/206/206B/207/207B/208/208B/209/209B/211B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845982" title="Клик — скопировать">A 251 584 59 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="803+-(218B/576L/217B/559L/546L/580L/460/494/498/830)"><span class="icode">803+-(218B/576L/217B/559L/546L/580L/460/494/498/830)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515847382" title="Клик — скопировать">A 251 584 73 82</td><td>Руководство (OPERATOR'S MANUAL)</td><td>1</td><td></td><td class="restr" data-expr="(218B/576L)+-(217B/559L/546L/580L/460/494/498/830)+803"><span class="icode">(218B/576L)+-(217B/559L/546L/580L/460/494/498/830)+803</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515847482" title="Клик — скопировать">A 251 584 74 82</td><td>Руководство (OPERATOR'S MANUAL)</td><td>1</td><td></td><td class="restr" data-expr="(217B/559L)+-(218B/576L/546L/580L/460/494/498/830)+803"><span class="icode">(217B/559L)+-(218B/576L/546L/580L/460/494/498/830)+803</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845782" title="Клик — скопировать">A 251 584 57 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(496/(200B/201B/203B/204B/210/210B/214B/216B))+(802+052)"><span class="icode">(496/(200B/201B/203B/204B/210/210B/214B/216B))+(802+052)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515842882" title="Клик — скопировать">A 251 584 28 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(205/205B)+808"><span class="icode">(205/205B)+808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515843682" title="Клик — скопировать">A 251 584 36 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(205/205B)+809"><span class="icode">(205/205B)+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844382" title="Клик — скопировать">A 251 584 43 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(205/205B)+809"><span class="icode">(205/205B)+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845182" title="Клик — скопировать">A 251 584 51 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="214B+-(205/205B/216B)+(806/807/808/809)"><span class="icode">214B+-(205/205B/216B)+(806/807/808/809)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845282" title="Клик — скопировать">A 251 584 52 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="216B+-(205/205B/214B)+(806/807/808/809)"><span class="icode">216B+-(205/205B/214B)+(806/807/808/809)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845382" title="Клик — скопировать">A 251 584 53 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(205/205B)+800"><span class="icode">(205/205B)+800</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845382" title="Клик — скопировать">A 251 584 53 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="214+800"><span class="icode">214+800</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845382" title="Клик — скопировать">A 251 584 53 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="216B+800"><span class="icode">216B+800</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515842982" title="Клик — скопировать">A 251 584 29 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(207/207B)+808"><span class="icode">(207/207B)+808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515843782" title="Клик — скопировать">A 251 584 37 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(207/207B)+809"><span class="icode">(207/207B)+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515844482" title="Клик — скопировать">A 251 584 44 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(207/207B)+809"><span class="icode">(207/207B)+809</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515845382" title="Клик — скопировать">A 251 584 53 82</td><td>Руководство</td><td>1</td><td></td><td class="restr" data-expr="(207/207B)+800"><span class="icode">(207/207B)+800</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515840600" title="Клик — скопировать">A 251 584 06 00</td><td>Руководство (OPERATOR'S MANUAL)</td><td>1</td><td></td><td class="restr" data-expr="830+(805+055)"><span class="icode">830+(805+055)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0008992461" title="Клик — скопировать">A 000 899 24 61</td><td>- Папка с документацией а/м (VEHICLE DOCUMENT WALLET)</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58300000065.png", "poses": ["10", "100"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58300000065.png", "poses": ["10", "100"], "hs": {"100": [[620, 333, 48, 29]], "10": [[276, 339, 35, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

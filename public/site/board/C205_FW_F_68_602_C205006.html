@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205006">C205_FW -/-</a> → 602 Задняя полка и шторка заднего стекла</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C205_FW -/-</a> → 602 Задняя полка и шторка заднего стекла</div>
 <h1>602 Задняя полка и шторка заднего стекла</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B68602000043.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B68602000043.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056902449" title="Клик — скопировать">A 205 690 24 49</td><td>Облицовка задней полки (TRIM, REAR SHELF)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="-(287/540/810)"><span class="icode">-(287/540/810)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056906049" title="Клик — скопировать">A 205 690 60 49</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="-(287/540/810)"><span class="icode">-(287/540/810)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056906149" title="Клик — скопировать">A 205 690 61 49</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="287"><span class="icode">287</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056901005" title="Клик — скопировать">A 205 690 10 05</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="540/287+540"><span class="icode">540/287+540</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056902649" title="Клик — скопировать">A 205 690 26 49</td><td>Облицовка задней полки (TRIM, REAR SHELF)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="540/810+540/540+287/810+540+287"><span class="icode">540/810+540/540+287/810+540+287</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056906249" title="Клик — скопировать">A 205 690 62 49</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="540/810+540/540+287/810+540+287"><span class="icode">540/810+540/540+287/810+540+287</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056901205" title="Клик — скопировать">A 205 690 12 05</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="810+540/810+540+287"><span class="icode">810+540/810+540+287</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056902549" title="Клик — скопировать">A 205 690 25 49</td><td>Облицовка задней полки (TRIM, REAR SHELF)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="810/810+287"><span class="icode">810/810+287</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2056906349" title="Клик — скопировать">A 205 690 63 49</td><td>Облицовка задней полки</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="810/810+287"><span class="icode">810/810+287</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0999067500" title="Клик — скопировать">A 099 906 75 00</td><td>Доп. фонарь стоп-сигнала (ADDITIONAL BRAKE LAMP)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="-840"><span class="icode">-840</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0999066404" title="Клик — скопировать">A 099 906 64 04</td><td>Доп. фонарь стоп-сигнала (ADDITIONAL BRAKE LAMP)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="-840"><span class="icode">-840</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0999067200" title="Клик — скопировать">A 099 906 72 00</td><td>Доп. фонарь стоп-сигнала (ADDITIONAL BRAKE LAMP)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="840"><span class="icode">840</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0999066404" title="Клик — скопировать">A 099 906 64 04</td><td>Доп. фонарь стоп-сигнала (ADDITIONAL BRAKE LAMP)</td><td>1</td><td>Задняя полка</td><td class="restr" data-expr="840"><span class="icode">840</span></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0029911570" title="Клик — скопировать">A 002 991 15 70</td><td>Скоба (CLAMP)</td><td>1</td><td>Крепление фонаря стоп\-сигнала</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2058200060" title="Клик — скопировать">A 205 820 00 60</td><td>Крышка заднего фонаря (COVER, REAR LAMP)</td><td>1</td><td>Дополнительный фонарь стоп\-сигнала</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2058200260" title="Клик — скопировать">A 205 820 02 60</td><td>Крышка заднего фонаря (COVER, REAR LAMP)</td><td>1</td><td>Дополнительный фонарь стоп\-сигнала</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2056940137" title="Клик — скопировать">A 205 694 01 37</td><td>Защитная решетка динамика (COVER GRILLE, SPEAKER)</td><td>1</td><td>Динамик слева</td><td class="restr" data-expr="810/540"><span class="icode">810/540</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2056940237" title="Клик — скопировать">A 205 694 02 37</td><td>Защитная решетка динамика (COVER GRILLE, SPEAKER)</td><td>1</td><td>Динамик справа</td><td class="restr" data-expr="810/540"><span class="icode">810/540</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2058680139" title="Клик — скопировать">A 205 868 01 39</td><td>Накладка креп. дет.кресла (COVER, CHILD SEAT ANCHOR)</td><td>2</td><td>Крепление детского сиденья</td><td class="restr" data-expr="(FW/FV)+-(460/494/625)/FC"><span class="icode">(FW/FV)+-(460/494/625)/FC</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2058680039" title="Клик — скопировать">A 205 868 00 39</td><td>Накладка креп. дет.кресла</td><td>3</td><td>Крепление детского сиденья</td><td class="restr" data-expr="460/494/625"><span class="icode">460/494/625</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2056930517" title="Клик — скопировать">A 205 693 05 17</td><td>Крышка задней полки (COVER, REAR SHELF)</td><td>1</td><td>Задняя полка посередине</td><td class="restr" data-expr="-(460/494/625)"><span class="icode">-(460/494/625)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2056950759" title="Клик — скопировать">A 205 695 07 59</td><td>Декоративная розетка (TRIM RING)</td><td>1</td><td>Выход ремня безопасности</td><td class="restr" data-expr="-287"><span class="icode">-287</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2056950057" title="Клик — скопировать">A 205 695 00 57</td><td>Декоративная накладка (COVER TRIM)</td><td>1</td><td>Выход ремня безопасности</td><td class="restr" data-expr="287"><span class="icode">287</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009980843" title="Клик — скопировать">A 000 998 08 43</td><td>Демпфер с отверстием (BUFFER W CLEARANCE HOLE)</td><td>3</td><td>Крепление облицовки к задней стенке</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2058100020" title="Клик — скопировать">A 205 810 00 20</td><td>Шторка</td><td>1</td><td>Заднее стекло</td><td class="restr" data-expr="540"><span class="icode">540</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2058100220" title="Клик — скопировать">A 205 810 02 20</td><td>Шторка</td><td>1</td><td>Заднее стекло</td><td class="restr" data-expr="540"><span class="icode">540</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2058101120" title="Клик — скопировать">A 205 810 11 20</td><td>Солнцезащитная шторка (ROLLER SUNBLIND)</td><td>1</td><td>Заднее стекло</td><td class="restr" data-expr="540+830"><span class="icode">540+830</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2205455228" title="Клик — скопировать">A 220 545 52 28</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>Задняя шторка; 6\-PIN SLK2.8</td><td class="restr" data-expr="540"><span class="icode">540</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="N910105006023" title="Клик — скопировать">N 910105 006023</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Облицовка к задней стенке кабины; M6X16</td><td class="restr" data-expr="540"><span class="icode">540</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0049941445" title="Клик — скопировать">A 004 994 14 45</td><td>SPRING NUT (SPRING LOCK NUT)</td><td>2</td><td>Облицовка к задней стенке кабины; M6</td><td class="restr" data-expr="540"><span class="icode">540</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68602000043.png", "poses": ["10", "30", "35", "50", "70", "90", "110", "130", "200", "210", "220", "230"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68602000043.png", "poses": ["10", "30", "35", "50", "70", "90", "110", "130", "200", "210", "220", "230"], "hs": {"220": [[1210, 509, 42, 26]], "110": [[220, 739, 42, 26]], "210": [[523, 151, 42, 27]], "200": [[1071, 186, 42, 26]], "35": [[612, 454, 28, 26]], "90": [[324, 814, 28, 26]], "70": [[176, 225, 28, 27]], "50": [[819, 458, 28, 26]], "30": [[704, 478, 28, 26]], "130": [[85, 639, 42, 26]], "230": [[1221, 460, 41, 27]], "10": [[622, 695, 29, 26]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

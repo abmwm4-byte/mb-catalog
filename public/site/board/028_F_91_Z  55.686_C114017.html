@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114017">028 -/-</a> → Z  55.686 U.S. VERSION SAFETY BELTS;PLEASE REFER ALSO TO SA55636</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/21">028 -/-</a> → Z  55.686 U.S. VERSION SAFETY BELTS;PLEASE REFER ALSO TO SA55636</div>
 <h1>Z  55.686 U.S. VERSION SAFETY BELTS;PLEASE REFER ALSO TO SA55636</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05568600001 <span class="hint">(0)</span></button><button data-i="1" class="">S05568600002 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05568600001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05568600001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos=""><td></td><td class="pn" data-raw="A1108602085" title="Клик — скопировать">A 110 860 20 85</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>2</td><td>Z  55.686/01 [023] FROM CHASSIS: 100.012,014,015,016 000953-000970 100.012,014,015,016 000977 108.012             055736-062132 108.012             067113 108.014             043769-047684 108.014             051456 108.015             002590-002651 108.015             002711 109.015             002131-002230 109.015             002337 110.010             189034-193356 110.010             196995 110.011             032599-035525 110.011             037934 110.110             354129-364319 110.110             374851 111.010             106833-108493 111.010             109606 111.021,023         088725-088925 111.021,023         089114 112.023             009796-009838 112.021,023         009866 113.043             002982-003839 113.043             004647 114.010             000191 114.015             000008 115.010             000008 115.015             000006 115.015             000004 115.110             000009 [017] UP TO CHASSIS: 100.012,014,015,016 001032 108.016             004914 108.018             004189 108.019             004322 109.016             000225 111.024,025         000217 [018] UP TO CHASSIS: 113.044 000655 114.010 005391 114.015 002131 115.010 001669 115.110 004605</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009872141" title="Клик — скопировать">A 000 987 21 41</td><td>Эластомерная шайба</td><td>2</td><td>Z  55.686/01 [004] FROM CHASSIS: 100.012,014,015,016 000953-000970 108.012             055736-062132 108.014             043769-047684 108.015             002590-002651 109.015             002131-002230 [005] FROM CHASSIS: 110.010 189034-193356 110.110 354129-364319 110.011 032599-035525 111.010 106833-108493 111.021 088725-088925 [006] FROM CHASSIS: 111.021 009796-009838 111.023 088725-088925 112.023 009796-009838 113.043 002982-003839</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009843555" title="Клик — скопировать">A 000 984 35 55</td><td>ШАЙБА</td><td>2</td><td>Z  55.686/01 [004] FROM CHASSIS: 100.012,014,015,016 000953-000970 108.012             055736-062132 108.014             043769-047684 108.015             002590-002651 109.015             002131-002230 [005] FROM CHASSIS: 110.010 189034-193356 110.110 354129-364319 110.011 032599-035525 111.010 106833-108493 111.021 088725-088925 [006] FROM CHASSIS: 111.021 009796-009838 111.023 088725-088925 112.023 009796-009838 113.043 002982-003839 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 3 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05568600001.png", "poses": []}, {"png": "../../img_png/drawing_S05568600002.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 3 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05568600001.png", "poses": [], "hs": {"11": [[814, 162, 33, 17]], "33": [[394, 526, 33, 17], [24, 311, 33, 17]], "35": [[410, 533, 33, 17], [11, 303, 33, 17]], "36": [[859, 354, 33, 17], [545, 195, 33, 17], [423, 540, 33, 17], [0, 293, 33, 17]], "20": [[821, 327, 33, 17], [507, 144, 33, 17], [383, 65, 33, 17]], "21": [[336, 492, 33, 17], [87, 347, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S05568600002.png", "poses": [], "hs": {"33": [[185, 596, 24, 20], [583, 690, 24, 20]], "35": [[604, 463, 25, 21], [168, 587, 24, 23], [566, 725, 24, 23], [1159, 837, 22, 21]], "36": [[585, 455, 24, 22], [164, 540, 24, 21], [584, 736, 22, 20], [1180, 852, 26, 22]], "20": [[452, 182, 25, 23], [700, 519, 25, 20], [1052, 776, 25, 21]], "21": [[229, 617, 21, 20], [536, 665, 22, 20]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">14F  Действительно для: AU</a> → 135 РЕГУЛИР. СИСТЕМЫ ВПРЫСКА КЕ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/86">14F  Действительно для: AU</a> → 135 РЕГУЛИР. СИСТЕМЫ ВПРЫСКА КЕ</div>
 <h1>135 РЕГУЛИР. СИСТЕМЫ ВПРЫСКА КЕ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B07135000077.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B07135000077.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1170700340" title="Клик — скопировать">A 117 070 03 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ТРОСОВЫЙ ПРИВОД</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1170701421" title="Клик — скопировать">A 117 070 14 21</td><td>РЫЧАГ</td><td>1</td><td>ПОВОРОТНЫЙ РЫЧАГ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1170701621" title="Клик — скопировать">A 117 070 16 21</td><td>РЫЧАГ</td><td>1</td><td>РЫЧАГ РЕГУЛИРВОЧНЫЙ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009941148" title="Клик — скопировать">A 000 994 11 48</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N912007009001" title="Клик — скопировать">N 912007 009001</td><td>Зажим</td><td>1</td><td>ПЕРЕКЛЮЧ.РЫЧАГ НА ДЕРЖАТ. ТРОС.ТЯГИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0000706075" title="Клик — скопировать">A 000 070 60 75</td><td>Нажимная штанга</td><td>1</td><td>РЫЧАГ КУЛИСЫ К ПЕРЕКЛЮЧ.РЫЧАГУ [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1170701324" title="Клик — скопировать">A 117 070 13 24</td><td>ОПОРА ПОДШИПНИКА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1170700422" title="Клик — скопировать">A 117 070 04 22</td><td>РЫЧАГ</td><td>1</td><td>УГЛОВ.РЫЧАГ, TEMPOMAT</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0119816610" title="Клик — скопировать">A 011 981 66 10</td><td>ПОДШИПНИК ИГОЛЬЧАТЫЙ</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N006799007007" title="Клик — скопировать">N 006799 007007</td><td>Стопорная шайба</td><td>1</td><td>УГЛ.РЫЧАГ НА ОПОР.ЭЛЕМ.</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1100706275" title="Клик — скопировать">A 110 070 62 75</td><td>Нажимная штанга</td><td>1</td><td>ШТУЦЕР ЗАСЛОНКИ К УГЛОВ.РЫЧАГУ</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>- Гайка</td><td>2</td><td>ШТУЦЕР ЗАСЛОНКИ К УГЛОВ.РЫЧАГУ; M5</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0009911622" title="Клик — скопировать">A 000 991 16 22</td><td>- Шаровой подпятник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A0009918922" title="Клик — скопировать">A 000 991 89 22</td><td>- ПОДПЯТНИК ШАРОВОЙ</td><td>2</td><td>ШТУЦЕР ЗАСЛОНКИ К УГЛОВ.РЫЧАГУ</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1160720240" title="Клик — скопировать">A 116 072 02 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ОТТЯГИВ. ПРУЖИНА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000912006004" title="Клик — скопировать">N 000912 006004</td><td>Винт</td><td>1</td><td>M6X12</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1179930310" title="Клик — скопировать">A 117 993 03 10</td><td>ПРУЖИНА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1170701675" title="Клик — скопировать">A 117 070 16 75</td><td>Нажимная штанга</td><td>1</td><td>УГЛОВ.РЫЧАГ К ИСПОЛ.ЭЛЕМЕН. [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>- Гайка</td><td>2</td><td>M5</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0009911622" title="Клик — скопировать">A 000 991 16 22</td><td>- Шаровой подпятник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A0009918922" title="Клик — скопировать">A 000 991 89 22</td><td>- ПОДПЯТНИК ШАРОВОЙ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1153000086" title="Клик — скопировать">A 115 300 00 86</td><td>- Шаровой подпятник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0009918822" title="Клик — скопировать">A 000 991 88 22</td><td>- Шаровой подпятник</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1170701875" title="Клик — скопировать">A 117 070 18 75</td><td>ТЯГА</td><td>1</td><td>РЕГУЛИР. РЫЧАГ К УГЛОВ. РЫЧАГУ [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="N000934005008" title="Клик — скопировать">N 000934 005008</td><td>- Гайка</td><td>1</td><td>M5</td><td class="restr"></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="N000934005010" title="Клик — скопировать">N 000934 005010</td><td>- Гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A0009911622" title="Клик — скопировать">A 000 991 16 22</td><td>- Шаровой подпятник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A0009918922" title="Клик — скопировать">A 000 991 89 22</td><td>- ПОДПЯТНИК ШАРОВОЙ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009911722" title="Клик — скопировать">A 000 991 17 22</td><td>- Шаровой подпятник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0009919022" title="Клик — скопировать">A 000 991 90 22</td><td>- Шаровой подпятник</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="152"><td>152</td><td class="pn" data-raw="A1170700824" title="Клик — скопировать">A 117 070 08 24</td><td>ОПОРА ПОДШИПНИКА</td><td>1</td><td>КУЛИСА [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="N000933008145" title="Клик — скопировать">N 000933 008145</td><td>Винт</td><td>2</td><td>ОПОРН.ЭЛЕМЕНТ НА ВЕРХН.ЧАСТИ ВПУСКН.КОЛЛЕКТ.; M8 X 18</td><td class="restr"></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A1170700321" title="Клик — скопировать">A 117 070 03 21</td><td>РЫЧАГ</td><td>1</td><td>РЫЧАГ РЕГУЛИРВОЧНЫЙ [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1170702321" title="Клик — скопировать">A 117 070 23 21</td><td>РЫЧАГ</td><td>1</td><td>РЫЧАГ КУЛИСНЫЙ [021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A1800720393" title="Клик — скопировать">A 180 072 03 93</td><td>Ролик</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="N006799007007" title="Клик — скопировать">N 006799 007007</td><td>Стопорная шайба</td><td>2</td><td>[021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr><tr data-pos="188"><td>188</td><td class="pn" data-raw="N006799004001" title="Клик — скопировать">N 006799 004001</td><td>Стопорная шайба</td><td>1</td><td>[021] НЕ ПРИ СИСТ. АНТИПРОБУКСОВ. РЕГУЛИР. (ASR)</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 37 · подписано на схемах: 37 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B07135000077.png", "poses": ["20", "47", "50", "56", "59", "74", "77", "80", "86", "89", "92", "95", "98", "101", "104", "107", "110", "113", "116", "128", "131", "134", "137", "140", "152", "158", "161", "170", "182", "185", "188"]}];</script><script>
+<p class="muted">Позиций: 37 · подписано на схемах: 37 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B07135000077.png", "poses": ["20", "47", "50", "56", "59", "74", "77", "80", "86", "89", "92", "95", "98", "101", "104", "107", "110", "113", "116", "128", "131", "134", "137", "140", "152", "158", "161", "170", "182", "185", "188"], "hs": {"89": [[411, 403, 33, 17]], "47": [[814, 238, 33, 17]], "170": [[665, 137, 33, 17]], "152": [[644, 270, 33, 17]], "131": [[627, 167, 33, 17]], "110": [[142, 284, 33, 17], [313, 225, 33, 17]], "134": [[376, 238, 33, 17]], "113": [[116, 291, 33, 17]], "158": [[745, 188, 33, 17]], "137": [[646, 155, 33, 17]], "116": [[343, 213, 33, 17]], "92": [[411, 450, 33, 17]], "50": [[837, 223, 33, 17]], "95": [[413, 485, 33, 17]], "74": [[304, 302, 33, 17]], "98": [[306, 329, 33, 17]], "77": [[425, 299, 33, 17]], "56": [[858, 212, 33, 17]], "59": [[788, 135, 33, 17]], "182": [[666, 90, 33, 17]], "161": [[653, 219, 33, 17]], "140": [[324, 265, 33, 17]], "185": [[732, 106, 33, 17]], "188": [[662, 71, 33, 17]], "101": [[308, 179, 33, 17]], "104": [[313, 376, 33, 17]], "128": [[505, 200, 33, 17]], "80": [[430, 358, 33, 17]], "107": [[225, 254, 33, 17]], "20": [[764, 376, 33, 17]], "86": [[454, 371, 33, 17]]}, "w": 892, "h": 593}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

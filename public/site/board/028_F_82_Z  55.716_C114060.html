@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114060">028 -/-</a> → Z  55.716 REAR DOOR CONTACT SWITCHES</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/21">028 -/-</a> → Z  55.716 REAR DOOR CONTACT SWITCHES</div>
 <h1>Z  55.716 REAR DOOR CONTACT SWITCHES</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05571600001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05571600001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0008212052" title="Клик — скопировать">A 000 821 20 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0008213152" title="Клик — скопировать">A 000 821 31 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0008213252" title="Клик — скопировать">A 000 821 32 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A2018201110" title="Клик — скопировать">A 201 820 11 10</td><td>Переключатель</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A2018202110" title="Клик — скопировать">A 201 820 21 10</td><td>Переключатель</td><td>2</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10 [022] FROM CHASSIS: 114.011,060,062 100001 114.015         200001 115.015,115     200001 115.110         400001 115.017,117     000001</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0008212852" title="Клик — скопировать">A 000 821 28 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A0025454928" title="Клик — скопировать">A 002 545 49 28</td><td>ШТЕКЕР</td><td>-</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A0025454928" title="Клик — скопировать">A 002 545 49 28</td><td>ШТЕКЕР</td><td>1</td><td>Z  55.716/08 [008] UP TO CHASSIS: 114.010 032046</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A0005454728" title="Клик — скопировать">A 000 545 47 28</td><td>Сцепление, механическое</td><td>-</td><td>Z  55.716/03, Z  55.716/04, Z  55.716/08, Z  55.716/09</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A0045458528" title="Клик — скопировать">A 004 545 85 28</td><td>ШТЕКЕР</td><td>1</td><td>Z  55.716/08 [008] UP TO CHASSIS: 114.010 032046</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0095454028" title="Клик — скопировать">A 009 545 40 28</td><td>Сцепление, механическое</td><td>1</td><td>2\-PIN Z  55.716/08 [008] UP TO CHASSIS: 114.010 032046 [010] FROM CHASSIS: 114.015 034795 115.010 035162 115.015 033261 115.110 079329 115.115 036209</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A0029883878" title="Клик — скопировать">A 002 988 38 78</td><td>Скоба</td><td>6</td><td>Z  55.716/08 [012] UP TO CHASSIS: 114.010 032026 114.015 034761 115.010 035121 115.015 033217 115.110 079214 115.115 036173</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0019974290" title="Клик — скопировать">A 001 997 42 90</td><td>связующее вещество</td><td>-</td><td>Z  55.716/08, Z  55.716/09</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0019974390" title="Клик — скопировать">A 001 997 43 90</td><td>Кабельная стяжка</td><td>1</td><td>140mm; 9X250 MM Z  55.716/08, Z  55.716/09 [012] UP TO CHASSIS: 114.010 032026 114.015 034761 115.010 035121 115.015 033217 115.110 079214 115.115 036173</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019884878" title="Клик — скопировать">A 001 988 48 78</td><td>Скоба</td><td>1</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008210652" title="Клик — скопировать">A 000 821 06 52</td><td>ВЫКЛЮЧАТЕЛЬ КОНТАКТНЫЙ</td><td>2</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10 [020] UP TO CHASSIS: 114.011,060,062 100000 114.015         200000 115.015,115     200000 115.110         400000 [021] 114.010;115.010 UNTIL PRODUCTION STOP;TYPES 108,109,110,111 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1208250096" title="Клик — скопировать">A 120 825 00 96</td><td>ПОДКЛАДКА</td><td>NB</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10 [020] UP TO CHASSIS: 114.011,060,062 100000 114.015         200000 115.015,115     200000 115.110         400000 [021] 114.010;115.010 UNTIL PRODUCTION STOP;TYPES 108,109,110,111 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007982002212" title="Клик — скопировать">N 007982 002212</td><td>Шуруп</td><td>4</td><td>Z  55.716/01, Z  55.716/03, Z  55.716/04, Z  55.716/06, Z  55.716/07, Z  55.716/08, Z  55.716/09, Z  55.716/10 [020] UP TO CHASSIS: 114.011,060,062 100000 114.015         200000 115.015,115     200000 115.110         400000 [021] 114.010;115.010 UNTIL PRODUCTION STOP;TYPES 108,109,110,111 UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0025454928" title="Клик — скопировать">A 002 545 49 28</td><td>ШТЕКЕР</td><td>-</td><td>Z  55.716/08, Z  55.716/09</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0085453728" title="Клик — скопировать">A 008 545 37 28</td><td>Сцепление, механическое</td><td>2</td><td>2\-PIN Z  55.716/08 [008] UP TO CHASSIS: 114.010 032046 [010] FROM CHASSIS: 114.015 034795 115.010 035162 115.015 033261 115.110 079329 115.115 036209</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008210625" title="Клик — скопировать">A 000 821 06 25</td><td>ШТЕКЕР</td><td>1</td><td>ДВУХПОЛЮСНЫЙ Z  55.716/03, Z  55.716/04, Z  55.716/08, Z  55.716/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [011] AB PRODUKTIONSBEGINN: 108.057,058,067,068 109.056,057 114.011 [010] FROM CHASSIS: 114.015 034795 115.010 035162 115.015 033261 115.110 079329 115.115 036209 [009] FROM CHASSIS: 108.016 032603 108.018 033345 108.019 035326 109.016 002167 109.018 002557 114.010 032047</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019889878" title="Клик — скопировать">A 001 988 98 78</td><td>Скоба</td><td>2</td><td>Z  55.716/08, Z  55.716/09 [012] UP TO CHASSIS: 114.010 032026 114.015 034761 115.010 035121 115.015 033217 115.110 079214 115.115 036173</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1149970190" title="Клик — скопировать">A 114 997 01 90</td><td>Кабельная стяжка</td><td>2</td><td>80mm Z  55.716/03, Z  55.716/08 [011] AB PRODUKTIONSBEGINN: 108.057,058,067,068 109.056,057 114.011 [030] FROM CHASSIS: 108.016     032561 108.018,019 033278 109.016     002126 109.018     002558 114.010     032027 114.015     034762 115.010     035122 115.015     033218 115.110     079215 115.115     036174</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05571600001.png", "poses": ["3", "9", "13", "14", "16", "17"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 14 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05571600001.png", "poses": ["3", "9", "13", "14", "16", "17"], "hs": {"11": [[88, 106, 33, 17]], "13": [[91, 140, 33, 17]], "3": [[581, 362, 33, 17]], "9": [[88, 194, 33, 17]], "21": [[271, 107, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

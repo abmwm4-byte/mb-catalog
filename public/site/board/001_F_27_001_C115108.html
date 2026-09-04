@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115108">001 -/-</a> → 001 АКП</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/528">001 -/-</a> → 001 АКП</div>
 <h1>001 АКП</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B27001000001 <span class="hint">(0)</span></button><button data-i="1" class="">B27001000002 <span class="hint">(0)</span></button><button data-i="2" class="">B27001000003 <span class="hint">(0)</span></button><button data-i="3" class="">B27001000004 <span class="hint">(0)</span></button><button data-i="4" class="">B27001000005 <span class="hint">(0)</span></button><button data-i="5" class="">B27001000006 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B27001000001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B27001000001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B27001000001.png", "poses": []}, {"png": "../../img_png/drawing_B27001000002.png", "poses": []}, {"png": "../../img_png/drawing_B27001000003.png", "poses": []}, {"png": "../../img_png/drawing_B27001000004.png", "poses": []}, {"png": "../../img_png/drawing_B27001000005.png", "poses": []}, {"png": "../../img_png/drawing_B27001000006.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B27001000001.png", "poses": [], "hs": {}, "w": 884, "h": 666}, {"png": "../../img_png/drawing_B27001000002.png", "poses": [], "hs": {"88": [[719, 191, 33, 17]], "68": [[156, 339, 33, 17]], "112": [[733, 364, 33, 17]], "113": [[702, 372, 33, 17]], "850": [[198, 176, 33, 17]], "114": [[763, 353, 33, 17]], "115": [[797, 351, 33, 17]], "90": [[130, 523, 33, 17]], "91": [[194, 509, 33, 17]], "71": [[280, 307, 33, 17]], "95": [[297, 509, 33, 17]], "96": [[98, 527, 33, 17]], "99": [[459, 436, 33, 17]], "78": [[312, 196, 33, 17]], "79": [[379, 259, 33, 17]], "100": [[481, 419, 33, 17]], "102": [[364, 459, 33, 17]], "124": [[137, 112, 33, 17]], "125": [[91, 81, 33, 17]], "104": [[598, 397, 33, 17]], "126": [[192, 54, 33, 17]], "127": [[230, 78, 33, 17]], "128": [[218, 120, 33, 17]], "129": [[198, 102, 33, 17]], "82": [[416, 250, 33, 17]], "83": [[512, 253, 33, 17]], "84": [[103, 360, 33, 17]], "85": [[586, 222, 33, 17]], "86": [[645, 209, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B27001000003.png", "poses": [], "hs": {"192": [[371, 469, 33, 17]], "193": [[532, 493, 33, 17]], "194": [[491, 471, 33, 17]], "150": [[771, 344, 33, 17]], "195": [[594, 524, 33, 17]], "151": [[752, 310, 33, 17]], "152": [[801, 352, 33, 17]], "153": [[823, 370, 33, 17]], "198": [[472, 128, 33, 17]], "155": [[813, 471, 33, 17]], "199": [[456, 102, 33, 17]], "156": [[717, 412, 33, 17]], "233": [[132, 24, 33, 17]], "234": [[263, 324, 33, 17]], "157": [[745, 424, 33, 17]], "235": [[362, 290, 33, 17]], "158": [[785, 448, 33, 17]], "236": [[563, 86, 33, 17]], "237": [[541, 93, 33, 17]], "239": [[511, 273, 33, 17]], "160": [[686, 385, 33, 17]], "162": [[765, 471, 33, 17]], "163": [[743, 458, 33, 17]], "164": [[740, 443, 33, 17]], "166": [[720, 303, 33, 17]], "167": [[780, 261, 33, 17]], "200": [[429, 87, 33, 17]], "168": [[754, 264, 33, 17]], "202": [[409, 28, 33, 17]], "325": [[783, 139, 33, 17]], "204": [[480, 43, 33, 17]], "205": [[444, 54, 33, 17], [400, 65, 33, 17]], "206": [[381, 71, 33, 17]], "208": [[146, 347, 33, 17]], "170": [[337, 360, 33, 17]], "171": [[437, 321, 33, 17]], "172": [[358, 371, 33, 17], [467, 336, 33, 17]], "173": [[374, 318, 33, 17]], "174": [[307, 338, 33, 17], [414, 303, 33, 17]], "177": [[216, 416, 33, 17]], "210": [[227, 200, 33, 17]], "178": [[216, 389, 33, 17]], "211": [[194, 182, 33, 17]], "179": [[195, 365, 33, 17], [114, 318, 33, 17]], "850": [[589, 427, 33, 17], [310, 70, 33, 17]], "135": [[607, 294, 33, 17]], "136": [[633, 61, 33, 17]], "213": [[141, 139, 33, 17]], "137": [[749, 244, 33, 17]], "335": [[719, 98, 33, 17]], "138": [[730, 249, 33, 17]], "336": [[735, 118, 33, 17]], "139": [[681, 300, 33, 17]], "337": [[758, 128, 33, 17]], "216": [[48, 203, 33, 17]], "217": [[9, 187, 33, 17]], "180": [[220, 463, 33, 17]], "181": [[80, 300, 33, 17]], "182": [[52, 285, 33, 17]], "140": [[656, 291, 33, 17]], "185": [[420, 507, 33, 17]], "141": [[574, 331, 33, 17]], "142": [[550, 314, 33, 17]], "187": [[297, 415, 33, 17]], "188": [[271, 395, 33, 17]], "189": [[455, 495, 33, 17]], "145": [[811, 192, 33, 17]], "146": [[764, 199, 33, 17]], "223": [[45, 95, 33, 17]], "147": [[859, 173, 33, 17]], "224": [[12, 75, 33, 17]], "148": [[835, 182, 33, 17]], "225": [[269, 102, 33, 17]], "226": [[321, 132, 33, 17]], "229": [[185, 55, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B27001000004.png", "poses": [], "hs": {"270": [[538, 245, 33, 17]], "271": [[708, 167, 33, 17]], "272": [[712, 184, 33, 17]], "273": [[566, 268, 33, 17]], "274": [[512, 114, 33, 17]], "275": [[740, 301, 33, 17]], "310": [[349, 188, 33, 17]], "278": [[749, 319, 33, 17]], "311": [[315, 363, 33, 17]], "279": [[633, 258, 33, 17]], "312": [[352, 352, 33, 17]], "313": [[294, 368, 33, 17]], "314": [[274, 376, 33, 17]], "315": [[250, 382, 33, 17]], "316": [[570, 93, 33, 17]], "317": [[591, 86, 33, 17]], "319": [[194, 347, 33, 17]], "280": [[609, 278, 33, 17]], "281": [[758, 184, 33, 17]], "282": [[650, 315, 33, 17]], "283": [[661, 338, 33, 17]], "284": [[647, 93, 33, 17]], "240": [[56, 264, 33, 17]], "285": [[639, 109, 33, 17]], "241": [[120, 422, 33, 17]], "286": [[732, 264, 33, 17]], "242": [[52, 441, 33, 17]], "287": [[763, 259, 33, 17]], "243": [[84, 433, 33, 17]], "322": [[294, 324, 33, 17]], "245": [[151, 410, 33, 17]], "323": [[234, 339, 33, 17]], "246": [[175, 437, 33, 17]], "324": [[357, 306, 33, 17]], "247": [[226, 403, 33, 17]], "248": [[269, 431, 33, 17]], "249": [[317, 447, 33, 17]], "290": [[682, 267, 33, 17]], "291": [[711, 366, 33, 17]], "292": [[694, 292, 33, 17]], "294": [[675, 215, 33, 17]], "250": [[319, 413, 33, 17]], "295": [[695, 231, 33, 17]], "251": [[343, 441, 33, 17]], "252": [[295, 424, 33, 17]], "253": [[354, 404, 33, 17]], "298": [[703, 202, 33, 17]], "299": [[735, 227, 33, 17]], "255": [[254, 487, 33, 17]], "850": [[736, 504, 33, 17], [253, 67, 33, 17]], "333": [[701, 85, 33, 17]], "256": [[386, 404, 33, 17]], "334": [[794, 86, 33, 17]], "257": [[385, 443, 33, 17]], "258": [[411, 436, 33, 17]], "338": [[615, 393, 33, 17]], "339": [[633, 435, 33, 17]], "340": [[599, 362, 33, 17]], "263": [[103, 240, 33, 17]], "341": [[186, 242, 33, 17]], "265": [[146, 324, 33, 17]], "266": [[219, 237, 33, 17]], "300": [[591, 339, 33, 17]], "267": [[245, 226, 33, 17]], "302": [[517, 165, 33, 17]], "303": [[491, 172, 33, 17]], "305": [[680, 378, 33, 17]], "334C": [[754, 99, 33, 17]], "307": [[277, 207, 33, 17]], "308": [[317, 197, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B27001000005.png", "poses": [], "hs": {}, "w": 884, "h": 666}, {"png": "../../img_png/drawing_B27001000006.png", "poses": [], "hs": {"490": [[121, 41, 33, 17]], "492": [[143, 56, 33, 17]], "470": [[255, 341, 33, 17]], "472": [[279, 330, 33, 17]], "495": [[380, 167, 33, 17]], "550": [[570, 38, 33, 17]], "474": [[297, 322, 33, 17]], "530": [[60, 520, 33, 17]], "553": [[448, 104, 33, 17]], "532": [[99, 521, 33, 17]], "554": [[809, 24, 33, 17]], "510": [[606, 451, 33, 17]], "533": [[123, 531, 33, 17]], "512": [[763, 527, 33, 17]], "535": [[67, 468, 33, 17]], "558": [[191, 528, 33, 17]], "518": [[658, 492, 33, 17]], "519": [[658, 468, 33, 17]], "480": [[84, 339, 33, 17]], "482": [[185, 202, 33, 17]], "485": [[167, 477, 33, 17]], "540": [[327, 499, 33, 17]], "486": [[165, 452, 33, 17]], "500": [[334, 33, 33, 17]], "522": [[409, 427, 33, 17]], "545": [[633, 58, 33, 17]], "502": [[306, 39, 33, 17]], "547": [[834, 40, 33, 17]], "525": [[526, 525, 33, 17]], "548": [[423, 115, 33, 17]], "505": [[415, 253, 33, 17]], "528": [[28, 504, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

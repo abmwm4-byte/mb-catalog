@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → 045 БАЛКА ЗАДНЕГО МОСТА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">574 AB 09/85</a> → 045 БАЛКА ЗАДНЕГО МОСТА</div>
 <h1>045 БАЛКА ЗАДНЕГО МОСТА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B35045000036.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B35045000036.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1073500908" title="Клик — скопировать">A 107 350 09 08</td><td>Балка моста</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0949871300" title="Клик — скопировать">A 094 987 13 00</td><td>- Резиновый буфер</td><td>2</td><td>17.5mm</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263514142" title="Клик — скопировать">A 126 351 41 42</td><td>Резиновая опора</td><td>2</td><td>КАРТЕР МОСТА НА БАЛКЕ ЗАДНЕГО МОСТА, СПЕРЕДИ СНИЗУ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1263514442" title="Клик — скопировать">A 126 351 44 42</td><td>Резиновая опора</td><td>2</td><td>КАРТЕР МОСТА НА БАЛКЕ ЗАДНЕГО МОСТА, СПЕРЕДИ СВЕРХУ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1269900512" title="Клик — скопировать">A 126 990 05 12</td><td>БОЛТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1269900812" title="Клик — скопировать">A 126 990 08 12</td><td>болт</td><td>2</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1263514342" title="Клик — скопировать">A 126 351 43 42</td><td>Резиновая опора</td><td>1</td><td>КАРТЕР МОСТА К БАЛКЕ ЗАДНЕГО МОСТА, СЗАДИ СНИЗУ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1263514242" title="Клик — скопировать">A 126 351 42 42</td><td>Резиновая опора</td><td>1</td><td>AXLE HOUSING TO REAR SUBFRAME,REAR TOP</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1263510171" title="Клик — скопировать">A 126 351 01 71</td><td>болт</td><td>1</td><td>СЗАДИ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1263510053" title="Клик — скопировать">A 126 351 00 53</td><td>Проставочная трубка</td><td>1</td><td>СЗАДИ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1233511142" title="Клик — скопировать">A 123 351 11 42</td><td>Резиновая опора</td><td>1</td><td>БАЛКА ЗАДНЕГО МОСТА К НЕСУЩЕМУ ОСНОВАНИЮ КУЗОВА СЗАДИ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N000961014018" title="Клик — скопировать">N 000961 014018</td><td>Винт</td><td>2</td><td>CENTRAL RUBBER MOUNTING TO REAR AXLE</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N912004014100" title="Клик — скопировать">N 912004 014100</td><td>Пружинное кольцо</td><td>2</td><td>CENTRAL RUBBER MOUNTING TO REAR AXLE</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1263500038" title="Клик — скопировать">A 126 350 00 38</td><td>Держатель</td><td>2</td><td>САЙЛЕНТ\-БЛОК (РЕЗИНОВАЯ ОПОРА) НА НЕСУЩЕМ ОСНОВАНИИ КУЗОВА</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000933008168" title="Клик — скопировать">N 000933 008168</td><td>Винт</td><td>4</td><td>САЙЛЕНТ\-БЛОК (РЕЗИНОВАЯ ОПОРА) НА НЕСУЩЕМ ОСНОВАНИИ КУЗОВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1073520325" title="Клик — скопировать">A 107 352 03 25</td><td>Подшипник</td><td>2</td><td>FRAME FLOOR UNIT,FRONT</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000933010128" title="Клик — скопировать">N 000933 010128</td><td>Винт</td><td>4</td><td>FRAME FLOOR UNIT,FRONT</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000137010201" title="Клик — скопировать">N 000137 010201</td><td>Пружинная шайба</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1153520069" title="Клик — скопировать">A 115 352 00 69</td><td>Стяжный болт</td><td>2</td><td>FRAME FLOOR UNIT,FRONT</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N912004016101" title="Клик — скопировать">N 912004 016101</td><td>Пружинное кольцо</td><td>2</td><td>FRAME FLOOR UNIT,FRONT</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1075860035" title="Клик — скопировать">A 107 586 00 35</td><td>ремкомплект</td><td>1</td><td>КРЕПЛ. КРОНШТ.ЗАДН.МОСТА</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B35045000036.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "50", "53", "56", "59", "62", "65"]}];</script><script>
+<p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B35045000036.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "50", "53", "56", "59", "62", "65"], "hs": {"44": [[621, 240, 33, 17]], "11": [[232, 314, 33, 17]], "23": [[719, 279, 33, 17]], "56": [[438, 486, 33, 17]], "35": [[774, 164, 33, 17]], "14": [[237, 275, 33, 17]], "26": [[709, 463, 33, 17]], "59": [[502, 517, 33, 17]], "38": [[736, 173, 33, 17]], "17": [[248, 367, 33, 17]], "29": [[707, 334, 33, 17]], "5": [[370, 177, 33, 17]], "8": [[687, 45, 33, 17]], "50": [[528, 419, 33, 17]], "62": [[503, 460, 33, 17]], "41": [[687, 86, 33, 17]], "20": [[722, 391, 33, 17]], "53": [[447, 528, 33, 17]], "32": [[631, 153, 33, 17]], "65": [[297, 398, 33, 17]]}, "w": 876, "h": 583}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

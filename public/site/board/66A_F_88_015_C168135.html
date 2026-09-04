@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168135">66A Standard Недействительно для: JP</a> → 015 ПЕРЕДНЕЕ КРЫЛО</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">66A Standard Недействительно для: JP</a> → 015 ПЕРЕДНЕЕ КРЫЛО</div>
 <h1>015 ПЕРЕДНЕЕ КРЫЛО</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B88015000091.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B88015000091.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688800718" title="Клик — скопировать">A 168 880 07 18</td><td>Крыло переднее (KOTFLUEGEL VORNE)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1688800818" title="Клик — скопировать">A 168 880 08 18</td><td>Крыло переднее (KOTFLUEGEL VORNE)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688810714" title="Клик — скопировать">A 168 881 07 14</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688800114" title="Клик — скопировать">A 168 880 01 14</td><td>Держатель (HALTER)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688810714" title="Клик — скопировать">A 168 881 07 14</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1688800114" title="Клик — скопировать">A 168 880 01 14</td><td>Держатель (HALTER)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688810914" title="Клик — скопировать">A 168 881 09 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688800514" title="Клик — скопировать">A 168 880 05 14</td><td>Держатель (HALTER)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688811014" title="Клик — скопировать">A 168 881 10 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1688800614" title="Клик — скопировать">A 168 880 06 14</td><td>Держатель (HALTER)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688811114" title="Клик — скопировать">A 168 881 11 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688800714" title="Клик — скопировать">A 168 880 07 14</td><td>Держатель (HALTER)</td><td>1</td><td>СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688811214" title="Клик — скопировать">A 168 881 12 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1688800814" title="Клик — скопировать">A 168 880 08 14</td><td>Держатель (HALTER)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1689900036" title="Клик — скопировать">A 168 990 00 36</td><td>болт (SCHRAUBE)</td><td>6</td><td>ДЕРЖАТЕЛЬ НА КРЫЛЕ; M6X18</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1689900036" title="Клик — скопировать">A 168 990 00 36</td><td>болт (SCHRAUBE)</td><td>6</td><td>ДЕРЖАТЕЛЬ НА КРЫЛЕ; M6X18</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1689900036" title="Клик — скопировать">A 168 990 00 36</td><td>болт (SCHRAUBE)</td><td>6</td><td>КРЫЛО НА КОЛЕСН. АРКЕ; M6X18</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1689900036" title="Клик — скопировать">A 168 990 00 36</td><td>болт (SCHRAUBE)</td><td>6</td><td>КРЫЛО НА КОЛЕСН. АРКЕ; M6X18</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A4149900051" title="Клик — скопировать">A 414 990 00 51</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>2</td><td>FENDER ON SIDE PANEL; M6</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A4149900051" title="Клик — скопировать">A 414 990 00 51</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>2</td><td>FENDER ON SIDE PANEL; M6</td><td class="restr" data-expr="-839"><span class="icode">-839</span></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1686870107" title="Клик — скопировать">A 168 687 01 07</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1686870207" title="Клик — скопировать">A 168 687 02 07</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0099885478" title="Клик — скопировать">A 009 988 54 78</td><td>Скоба (KLAMMER)</td><td>12</td><td>КОЖУХ НА КРЫЛЕ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1686902530" title="Клик — скопировать">A 168 690 25 30</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1686902630" title="Клик — скопировать">A 168 690 26 30</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1686988530" title="Клик — скопировать">A 168 698 85 30</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СЗАДИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1686988630" title="Клик — скопировать">A 168 698 86 30</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>СЗАДИ СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2019900050" title="Клик — скопировать">A 201 990 00 50</td><td>Пластмассовая гайка (KUNSTSTOFFMUTTER)</td><td>2</td><td>ПАНЕЛЬ К КУЗОВУ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2019900050" title="Клик — скопировать">A 201 990 00 50</td><td>Пластмассовая гайка (KUNSTSTOFFMUTTER)</td><td>6</td><td>КРЕПЛЕНИЕ КРЫШКИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1239900136" title="Клик — скопировать">A 123 990 01 36</td><td>болт (SCHRAUBE)</td><td>4</td><td>КРЕПЛЕНИЕ КРЫШКИ; 4.8X25</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1239900136" title="Клик — скопировать">A 123 990 01 36</td><td>болт (SCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ НАКЛАДКИ ПОРОГА; 4.8X25</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0029943945" title="Клик — скопировать">A 002 994 39 45</td><td>SPRING NUT (FEDERMUTTER)</td><td>4</td><td>КРЕПЛЕНИЕ КРЫШКИ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1239900136" title="Клик — скопировать">A 123 990 01 36</td><td>болт (SCHRAUBE)</td><td>4</td><td>КРЕПЛЕНИЕ КРЫШКИ; 4.8X25</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1249900492" title="Клик — скопировать">A 124 990 04 92</td><td>Распорная заклепка (SPREIZNIET)</td><td>4</td><td>КРЫШКА НА БАМПЕРЕ И КРОНШТЕЙН; 6.5X18</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1249900492" title="Клик — скопировать">A 124 990 04 92</td><td>Распорная заклепка (SPREIZNIET)</td><td>4</td><td>КРЫШКА НА БАМПЕРЕ И КРОНШТЕЙН AMG; 6.5X18</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2019900536" title="Клик — скопировать">A 201 990 05 36</td><td>Винт с 6-гранной головкой (SECHSKANT-BLECHSCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ НАКЛАДКИ ПОРОГА; 4.8X19</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0039948745" title="Клик — скопировать">A 003 994 87 45</td><td>SPRING NUT (FEDERMUTTER)</td><td>4</td><td>КРЕПЛЕНИЕ КРЫШКИ; 4.8 MM</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0029880542" title="Клик — скопировать">A 002 988 05 42</td><td>Крышка (VERSCHLUSS)</td><td>4</td><td>КРЫШКА НА ОБЛИЦОВКЕ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 38 · подписано на схемах: 38 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B88015000091.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56"]}];</script><script>
+<p class="muted">Позиций: 38 · подписано на схемах: 38 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B88015000091.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56"], "hs": {"11": [[789, 468, 31, 24]], "44": [[480, 437, 32, 24]], "23": [[942, 563, 32, 25]], "56": [[317, 251, 27, 25]], "35": [[443, 483, 32, 24]], "14": [[732, 778, 30, 24]], "47": [[390, 535, 32, 24]], "26": [[853, 498, 34, 25]], "38": [[571, 465, 34, 26]], "17": [[882, 722, 29, 25]], "29": [[294, 384, 32, 27]], "5": [[565, 670, 19, 25]], "8": [[842, 630, 21, 25]], "50": [[671, 476, 33, 27]], "41": [[442, 238, 31, 24]], "20": [[643, 747, 32, 24]], "53": [[730, 366, 26, 25]], "32": [[581, 231, 33, 27]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

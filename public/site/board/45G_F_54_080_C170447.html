@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 080 ПРИБОРНЫЙ ОТСЕК И БЛОКИ УПРАВЛЕНИЯ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">45G  Действительно для: CA, US</a> → 080 ПРИБОРНЫЙ ОТСЕК И БЛОКИ УПРАВЛЕНИЯ</div>
 <h1>080 ПРИБОРНЫЙ ОТСЕК И БЛОКИ УПРАВЛЕНИЯ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54080000250.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B54080000250.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1705400024" title="Клик — скопировать">A 170 540 00 24</td><td>Корпус (GEHAEUSE)</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1705400224" title="Клик — скопировать">A 170 540 02 24</td><td>Корпус (GEHAEUSE)</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК Рулевое управление: ВправоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [403] НЕ УСТАНОВЛЕНО</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1705400082" title="Клик — скопировать">A 170 540 00 82</td><td>Крышка (DECKEL)</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1705400182" title="Клик — скопировать">A 170 540 01 82</td><td>Крышка</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК Рулевое управление: ВправоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [403] НЕ УСТАНОВЛЕНО</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0005400382" title="Клик — скопировать">A 000 540 03 82</td><td>Крышка (DECKEL)</td><td>1</td><td>TO 170 540 00 82, 170 540 01 82</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A2105450195" title="Клик — скопировать">A 210 545 01 95</td><td>Вентилятор (GEBLAESE)</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1705450080" title="Клик — скопировать">A 170 545 00 80</td><td>Уплотнительная прокладка (DICHTBEILAGE)</td><td>1</td><td>ПРИБОРНЫЙ ОТСЕК</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1705450059" title="Клик — скопировать">A 170 545 00 59</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ВЕНТИЛЯТОР Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1705450159" title="Клик — скопировать">A 170 545 01 59</td><td>Шланг</td><td>1</td><td>ВЕНТИЛЯТОР Рулевое управление: ВправоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [403] НЕ УСТАНОВЛЕНО</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A2105400173" title="Клик — скопировать">A 210 540 01 73</td><td>Держатель (HALTER)</td><td>1</td><td>IN GERAETEBOX [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1705450259" title="Клик — скопировать">A 170 545 02 59</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1705400059" title="Клик — скопировать">A 170 540 00 59</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОТ КОРОБА АГРЕГАТОВ К ВЕНТИЛЯТ. САЛОНА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A2105400072" title="Клик — скопировать">A 210 540 00 72</td><td>Блок реле (RELAISEINHEIT)</td><td>1</td><td>ЭЛЕКТРОПИТАНИЕ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0025422019" title="Клик — скопировать">A 002 542 20 19</td><td>Реле (RELAIS)</td><td>1</td><td>РАЗДЕЛИТЕЛЬНОЕ РЕЛЕ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1708200726" title="Клик — скопировать">A 170 820 07 26</td><td>БЛОК УПРАВЛЕНИЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1708200926" title="Клик — скопировать">A 170 820 09 26</td><td>Блок управл. (STEUERGERAET)</td><td>1</td><td>УКАЗАТЕЛЬ ПОВОРОТА, ДАТЧИК АВАРИЙН. СИГНАЛИЗ., ОБОГРЕВ ЗАДН. СТЕКЛА, СТЕКЛООЧИСТ., КРЫША VARIO [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0205450932" title="Клик — скопировать">A 020 545 09 32</td><td>Переключатель</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0235452232" title="Клик — скопировать">A 023 545 22 32</td><td>Блок управл. (STEUERGERAET)</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0225452632" title="Клик — скопировать">A 022 545 26 32</td><td>Переключатель</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0235454132" title="Клик — скопировать">A 023 545 41 32</td><td>Блок управл. (STEUERGERAET)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0245455732" title="Клик — скопировать">A 024 545 57 32</td><td>Блок управл.</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020 [425] РАЗДЕЛЕНИЕ СМ. СЕРИЮ</td><td class="restr" data-expr="-923"><span class="icode">-923</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0235458332" title="Клик — скопировать">A 023 545 83 32</td><td>Блок управл.</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. Рулевое управление: ВлевоАвтоматическая коробка переключения передач [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr" data-expr="-923"><span class="icode">-923</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0285454432" title="Клик — скопировать">A 028 545 44 32</td><td>Блок управл.</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. Рулевое управление: ВлевоАвтоматическая коробка переключения передач [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr" data-expr="-923"><span class="icode">-923</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0285457832" title="Клик — скопировать">A 028 545 78 32</td><td>Блок управл.</td><td>1</td><td>БЛОК УПРАВЛ.ДВИГАТ. Рулевое управление: ВлевоАвтоматическая коробка переключения передач [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [130] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 153 020</td><td class="restr" data-expr="-923"><span class="icode">-923</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0285457832" title="Клик — скопировать">A 028 545 78 32</td><td>Блок управл.</td><td>1</td><td>Рулевое управление: ВлевоКоробка передач [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [140] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! № КОДА: 165 163 020 [622] ПРИ ЗАКАЗЕ УКАЗАТЬ ИДЕНТ.№</td><td class="restr" data-expr="-923"><span class="icode">-923</span></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0195453132" title="Клик — скопировать">A 019 545 31 32</td><td>Блок управления ASR (STEUERGERAET ASR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1705450232" title="Клик — скопировать">A 170 545 02 32</td><td>Блок управления ESP (STEUERGERAET ESP)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [810] НАЧИНАЯ С МОД. ГОДА 01, КОД 801</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>4</td><td>БУ В КОРОБЕ АГРЕГАТА HFM, ME.</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>2</td><td>БУ В КОРОБЕ АГРЕГАТА ASR</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0205458732" title="Клик — скопировать">A 020 545 87 32</td><td>Блок управл.</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0205459132" title="Клик — скопировать">A 020 545 91 32</td><td>Блок управл.</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0205459632" title="Клик — скопировать">A 020 545 96 32</td><td>Блок управл.</td><td>1</td><td>АКП [002] ВНИМАНИЕ! БУ ПОСЛЕ УСТАН. В А/М НЕОБХ. ЗАКОДИРОВАТЬ С ПОМОЩЬЮ  РУЧНОГО ТЕСТЕРА! [007] КОД ВАРИАНТА МОЖНО СРАВНИТЬ С ДАННЫМИ В СИСТЕМЕ FDOK (FADON)    ВРУЧНУЮ ЕСЛИ КОД ВАРИАНТА НЕЧИТАЕМ;НОВ.ДЕТАЛЬ С УКАЗ. E                ES1 26 И ИДЕНТ. № ЗАКАЗАТЬ.</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N007976004207" title="Клик — скопировать">N 007976 004207</td><td>Винт (SCHRAUBE)</td><td>2</td><td>БУ НА ПАНЕЛИ АГРЕГ. В ПРОСТР.НОГ ПЕРЕД.ПАСС. EGS</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1705400473" title="Клик — скопировать">A 170 540 04 73</td><td>Держатель (HALTER)</td><td>1</td><td>ДИАГНОСТИКА SONDE [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54080000250.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "41", "44", "47", "50", "53", "56"]}];</script><script>
+<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54080000250.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "41", "44", "47", "50", "53", "56"], "hs": {"11": [[580, 146, 30, 26]], "44": [[682, 495, 34, 26]], "23": [[574, 408, 31, 24]], "56": [[308, 571, 32, 24]], "35": [[281, 365, 32, 25]], "14": [[897, 812, 31, 25]], "47": [[657, 559, 30, 25]], "26": [[661, 812, 34, 25]], "17": [[692, 709, 30, 24]], "29": [[564, 316, 32, 24]], "5": [[390, 741, 18, 25]], "8": [[377, 210, 21, 25]], "50": [[1100, 149, 33, 24]], "41": [[772, 594, 31, 24]], "20": [[770, 772, 32, 25]], "53": [[1156, 222, 32, 24]], "32": [[281, 832, 32, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

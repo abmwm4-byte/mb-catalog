@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170466">66E  Недействительно для: CA, JP, US</a> → 045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">66E  Недействительно для: CA, JP, US</a> → 045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</div>
 <h1>045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B42045000070.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B42045000070.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0014203783" title="Клик — скопировать">A 001 420 37 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>К\-Т ЛЕВЫХ ДЕТАЛЕЙ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0014203883" title="Клик — скопировать">A 001 420 38 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>К\-Т ПРАВЫХ ДЕТАЛЕЙ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0019912760" title="Клик — скопировать">A 001 991 27 60</td><td>- Штифт (SPANNSTIFT)</td><td>2</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0004216491" title="Клик — скопировать">A 000 421 64 91</td><td>- пружина (FEDER)</td><td>2</td><td>С ДВУМЯ УДЕРЖ. ШТИФТАМИ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0004212765" title="Клик — скопировать">A 000 421 27 65</td><td>- Клапан выпуска воздуха</td><td>2</td><td></td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0004210887" title="Клик — скопировать">A 000 421 08 87</td><td>	- Защитный колпачок (SCHUTZKAPPE)</td><td>2</td><td></td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0039902200" title="Клик — скопировать">A 003 990 22 00</td><td>- Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>4</td><td>СКОБА ТОРМОЗНОГО МЕХАНИЗМА К КУЛАКУ ПОДВЕСКИ; M10 X 30</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0004217886" title="Клик — скопировать">A 000 421 78 86</td><td>ремкомплект (SCHUTZMANSCHETTE)</td><td>2</td><td>СКОБА ТОРМОЗН. МЕХАНИЗМА</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0024200520" title="Клик — скопировать">A 002 420 05 20</td><td>К-т тормозных колодок</td><td>1</td><td>К\-Т ДЕТАЛЕЙ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0034204820" title="Клик — скопировать">A 003 420 48 20</td><td>К-т тормозных колодок</td><td>1</td><td>К\-Т ДЕТАЛЕЙ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0034203020" title="Клик — скопировать">A 003 420 30 20</td><td>К-т тормозных колодок (TEILESATZ BREMSKLOTZ)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2104230812" title="Клик — скопировать">A 210 423 08 12</td><td>Тормозной диск (BREMSSCHEIBE)</td><td>1</td><td>СЛЕВА [408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2104230812" title="Клик — скопировать">A 210 423 08 12</td><td>Тормозной диск (BREMSSCHEIBE)</td><td>1</td><td>СПРАВА [408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2014210171" title="Клик — скопировать">A 201 421 01 71</td><td>Винт с внутр. 6-гранником (FLACHKOPFSCHRAUBE M. ISK)</td><td>1</td><td>ТОРМОЗН. ДИСК НА СТУПИЦЕ СЛЕВА; M6X15</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2204210171" title="Клик — скопировать">A 220 421 01 71</td><td>Болт призонный (PASSSCHRAUBE)</td><td>1</td><td>ТОРМОЗН. ДИСК НА СТУПИЦЕ СЛЕВА; M8X12</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2014210171" title="Клик — скопировать">A 201 421 01 71</td><td>Винт с внутр. 6-гранником (FLACHKOPFSCHRAUBE M. ISK)</td><td>1</td><td>ТОРМОЗН. ДИСК НА СТУПИЦЕ СПРАВА; M6X15</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2204210171" title="Клик — скопировать">A 220 421 01 71</td><td>Болт призонный (PASSSCHRAUBE)</td><td>1</td><td>ТОРМОЗН. ДИСК НА СТУПИЦЕ СПРАВА; M8X12</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1244200720" title="Клик — скопировать">A 124 420 07 20</td><td>К-т тормозной колодки (TEILESATZ BREMSBACKE)</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599 [001257] ВНИМАНИЕ!! ТАКЖЕ ЗАКАЗАТЬ БОЛТЫ КРЕПЛ.СЕДЕЛЬН.СЦЕПНОГО УС-ВА</td><td class="restr" data-expr="M112+M32+M001"><span class="icode">M112+M32+M001</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2014230592" title="Клик — скопировать">A 201 423 05 92</td><td>- Пружина растяжения (ZUGFEDER)</td><td>4</td><td>ТОРМОЗН. КОЛОДКИ НА ПАНЕЛИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2104230092" title="Клик — скопировать">A 210 423 00 92</td><td>- Пружина растяжения (ZUGFEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2014230692" title="Клик — скопировать">A 201 423 06 92</td><td>- пружина (FEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1714230092" title="Клик — скопировать">A 171 423 00 92</td><td>- Пружина растяжения (ZUGFEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0009937311" title="Клик — скопировать">A 000 993 73 11</td><td>- Пружина растяжения (ZUGFEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2014200373" title="Клик — скопировать">A 201 420 03 73</td><td>- Регулятор торм. механизма (BREMSNACHSTELLER)</td><td>2</td><td>РЕГУЛИРОВКА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1244230050" title="Клик — скопировать">A 124 423 00 50</td><td>Опорная втулка (STUETZBUCHSE)</td><td>2</td><td>РЕГУЛИРОВКА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2014230080" title="Клик — скопировать">A 201 423 00 80</td><td>Уплотнительная прокладка (DICHTBEILAGE)</td><td>1</td><td>УКРЫВ. ПАНЕЛЬ НА КРОНШТ. КОЛЕСА СПРАВА</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2014200589" title="Клик — скопировать">A 201 420 05 89</td><td>Разжимной механ. тормоза (SPREIZSCHLOSS BREMSE)</td><td>2</td><td>ЯЗЫЧОК ТОРМОЗН. БАЧКА</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1084270074" title="Клик — скопировать">A 108 427 00 74</td><td>Цилиндрический шрифт (ZYLINDERSTIFT)</td><td>2</td><td></td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2104201444" title="Клик — скопировать">A 210 420 14 44</td><td>Защитный экран (SCHUTZBLECH)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2104201544" title="Клик — скопировать">A 210 420 15 44</td><td>Защитный экран (SCHUTZBLECH)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N914125006502" title="Клик — скопировать">N 914125 006502</td><td>Винт (SCHRAUBE)</td><td>3</td><td>УКРЫВ. ПАНЕЛЬ НА КРОНШТ. КОЛЕСА СЛЕВА; M6X12</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="N914125006502" title="Клик — скопировать">N 914125 006502</td><td>Винт (SCHRAUBE)</td><td>3</td><td>УКРЫВ. ПАНЕЛЬ НА КРОНШТ. КОЛЕСА СПРАВА; M6X12</td><td class="restr" data-expr="(M111/M112)"><span class="icode">(M111/M112)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42045000070.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200", "210", "220", "230"]}];</script><script>
+<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42045000070.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200", "210", "220", "230"], "hs": {"190": [[259, 425, 40, 21]], "180": [[767, 454, 39, 21]], "170": [[715, 445, 38, 20], [380, 672, 40, 21], [689, 676, 40, 21]], "160": [[242, 835, 40, 21], [558, 841, 40, 20]], "150": [[342, 707, 40, 20], [651, 712, 38, 22]], "140": [[159, 693, 39, 21], [566, 728, 40, 20], [340, 764, 40, 21], [753, 799, 38, 20]], "130": [[457, 653, 40, 21]], "120": [[263, 747, 40, 21], [1145, 768, 40, 21], [709, 862, 38, 20]], "230": [[653, 345, 42, 21]], "110": [[989, 839, 38, 20]], "220": [[588, 257, 42, 21]], "210": [[706, 631, 40, 23]], "200": [[671, 560, 42, 23]], "80": [[997, 247, 25, 21]], "70": [[1093, 523, 29, 21]], "60": [[865, 469, 28, 21]], "50": [[886, 383, 29, 21]], "40": [[919, 402, 28, 21]], "30": [[1130, 276, 24, 21]], "20": [[1177, 316, 26, 21]], "10": [[920, 531, 26, 20]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

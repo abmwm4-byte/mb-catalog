@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114023">030 -/-</a> → Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/373">030 -/-</a> → Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</div>
 <h1>Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05600800001 <span class="hint">(6)</span></button><button data-i="1" class="">S05600800002 <span class="hint">(10)</span></button><button data-i="2" class="">S05600800003 <span class="hint">(6)</span></button><button data-i="3" class="">S05600800004 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05600800001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05600800001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1148601385" title="Клик — скопировать">A 114 860 13 85</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>2</td><td>MAKE REPA Z  56.008/21, Z  56.008/23</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1148602385" title="Клик — скопировать">A 114 860 23 85</td><td>Ремень безопасности</td><td>2</td><td>MAKE REPA Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="A1168602785" title="Клик — скопировать">A 116 860 27 85</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>1</td><td>FA.KLIPPAN Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0019924001" title="Клик — скопировать">A 001 992 40 01</td><td>- Диск</td><td>1</td><td>Z  56.008/25, Z  56.008/30 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1169840356" title="Клик — скопировать">A 116 984 03 56</td><td>- Диск</td><td>1</td><td>Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="67"><td>67</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>1</td><td>FA.KLIPPAN; M10X25 Z  56.008/25, Z  56.008/30</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A0039903601" title="Клик — скопировать">A 003 990 36 01</td><td>- болт</td><td>2</td><td>Z  56.008/21, Z  56.008/23, Z  56.008/24</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>1</td><td>FA.KLIPPAN; M10X25 Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A0039903701" title="Клик — скопировать">A 003 990 37 01</td><td>- болт</td><td>2</td><td>MAKE REPA; 7/16&quot;UNF\-2AX25 Z  56.008/21, Z  56.008/23</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A0039903701" title="Клик — скопировать">A 003 990 37 01</td><td>- болт</td><td>1</td><td>MAKE REPA; 7/16&quot;UNF\-2AX25 Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="162"><td>162</td><td class="pn" data-raw="A0019924201" title="Клик — скопировать">A 001 992 42 01</td><td>- ВТУЛКА</td><td>2</td><td>Z  56.008/21, Z  56.008/23 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1169840356" title="Клик — скопировать">A 116 984 03 56</td><td>- Диск</td><td>2</td><td>Z  56.008/21, Z  56.008/23</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1169840356" title="Клик — скопировать">A 116 984 03 56</td><td>- Диск</td><td>1</td><td>Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="241"><td>241</td><td class="pn" data-raw="A0039903701" title="Клик — скопировать">A 003 990 37 01</td><td>- болт</td><td>2</td><td>MAKE REPA; 7/16&quot;UNF\-2AX25 Z  56.008/21, Z  56.008/23</td><td class="restr"></td></tr><tr data-pos="241"><td>241</td><td class="pn" data-raw="A0039903701" title="Клик — скопировать">A 003 990 37 01</td><td>- болт</td><td>1</td><td>MAKE REPA; 7/16&quot;UNF\-2AX25 Z  56.008/25, Z  56.008/26</td><td class="restr"></td></tr><tr data-pos="284"><td>284</td><td class="pn" data-raw="A0008680022" title="Клик — скопировать">A 000 868 00 22</td><td>- НАПРАВЛЯЮЩАЯ</td><td>2</td><td>MAKE REPA Z  56.008/22 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="292"><td>292</td><td class="pn" data-raw="A0008680021" title="Клик — скопировать">A 000 868 00 21</td><td>- СЕРЬГА</td><td>2</td><td>ВЕРХ.ЧАСТЬ REPA Z  56.008/21, Z  56.008/22, Z  56.008/23 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0008680121" title="Клик — скопировать">A 000 868 01 21</td><td>- Зажимная серьга</td><td>2</td><td>Z  56.008/21, Z  56.008/22, Z  56.008/23</td><td class="restr"></td></tr><tr data-pos="308"><td>308</td><td class="pn" data-raw="A0008680630" title="Клик — скопировать">A 000 868 06 30</td><td>- Защитный колпачок</td><td>2</td><td>MAKE REPA Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="316"><td>316</td><td class="pn" data-raw="A0008680430" title="Клик — скопировать">A 000 868 04 30</td><td>- Защитный колпачок</td><td>2</td><td>MAKE REPA Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0008680530" title="Клик — скопировать">A 000 868 05 30</td><td>- Колпачок</td><td>2</td><td>MAKE REPA Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="334"><td>334</td><td class="pn" data-raw="A1159920201" title="Клик — скопировать">A 115 992 02 01</td><td>- ВТУЛКА</td><td>2</td><td>Z  56.008/21, Z  56.008/23 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1078600169" title="Клик — скопировать">A 107 860 01 69</td><td>- ЗАМКОВЫЙ БЛОК</td><td>2</td><td>FA.REPA Z  56.008/21, Z  56.008/23 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [050] FROM CHASSIS 114.011     107371 114.015,017 238223 114.060     115809 114.062     106509 114.023     100714 114.072     102981 114.073     105151 115.015     252506 115.017     039669 115.110     441015 115.114     007722 115.115     268074 115.117,119 077548 115.017     039669 115.110     441015 115.114     007722 115.115     268074 115.117,119 077548</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1078600169" title="Клик — скопировать">A 107 860 01 69</td><td>- ЗАМКОВЫЙ БЛОК</td><td>1</td><td>FA.REPA Z  56.008/25 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="374"><td>374</td><td class="pn" data-raw="A1159970940" title="Клик — скопировать">A 115 997 09 40</td><td>	- УПЛОТНИТ. КОЛЬЦО</td><td>2</td><td>Z  56.008/21, Z  56.008/23, Z  56.008/25</td><td class="restr"></td></tr><tr data-pos="378"><td>378</td><td class="pn" data-raw="A1148600669" title="Клик — скопировать">A 114 860 06 69</td><td>- ЗАМКОВЫЙ БЛОК</td><td>2</td><td>Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A1158680239" title="Клик — скопировать">A 115 868 02 39</td><td>ПАНЕЛЬ</td><td>2</td><td>FA.REPA Z  56.008/21, Z  56.008/23, Z  56.008/24 [062] FROM CHASSIS 100.012,014,016 002383 114.011         107184 114.015,017     237101 114.023         100697 114.060         115259 114.062         106425 114.072         102923 114.073         104995 [063] FROM CHASSIS 115.015     250522 115.017     038009 115.110     439925 115.114     006055 115.115     265624 115.117,119 075492</td><td class="restr"></td></tr><tr data-pos="414"><td>414</td><td class="pn" data-raw="A1148680022" title="Клик — скопировать">A 114 868 00 22</td><td>НАПРАВЛЯЮЩАЯ</td><td>2</td><td>Z  56.008/22</td><td class="restr"></td></tr><tr data-pos="418"><td>418</td><td class="pn" data-raw="A0039885978" title="Клик — скопировать">A 003 988 59 78</td><td>СКОБА</td><td>4</td><td>Z  56.008/22 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 29 · подписано на схемах: 29 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05600800001.png", "poses": ["31", "78", "162", "194", "370", "405"]}, {"png": "../../img_png/drawing_S05600800002.png", "poses": ["41", "292", "300", "308", "316", "320", "334", "378", "414", "418"]}, {"png": "../../img_png/drawing_S05600800003.png", "poses": ["63", "65", "67", "241", "370", "374"]}, {"png": "../../img_png/drawing_S05600800004.png", "poses": ["284"]}];</script><script>
+<p class="muted">Позиций: 29 · подписано на схемах: 29 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05600800001.png", "poses": ["31", "78", "162", "194", "370", "405"], "hs": {"78": [[697, 238, 31, 26], [697, 594, 31, 24]], "405": [[1005, 718, 42, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800002.png", "poses": ["41", "292", "300", "308", "316", "320", "334", "378", "414", "418"], "hs": {"41": [[905, 569, 30, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800003.png", "poses": ["63", "65", "67", "241", "370", "374"], "hs": {"374": [[673, 561, 43, 25]], "63": [[354, 155, 29, 27]], "241": [[1025, 763, 40, 24]], "373": [[786, 805, 42, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800004.png", "poses": ["284"], "hs": {}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

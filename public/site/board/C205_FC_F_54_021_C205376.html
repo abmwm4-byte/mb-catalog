@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205376">C205_FC -/-</a> → 021 Кабельные стяжки, детали крепления кабелей и втулки</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">C205_FC -/-</a> → 021 Кабельные стяжки, детали крепления кабелей и втулки</div>
 <h1>021 Кабельные стяжки, детали крепления кабелей и втулки</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54021000116.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B54021000116.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0019979490" title="Клик — скопировать">A 001 997 94 90</td><td>Кабельная стяжка (CABLE TIE)</td><td>NB</td><td>2,5X100 MM</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009959006" title="Клик — скопировать">A 000 995 90 06</td><td>Кабельная стяжка (PARTS KIT, CABLE STRAP)</td><td>NB</td><td>310X5mm</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0069973590" title="Клик — скопировать">A 006 997 35 90</td><td>Кабельная стяжка (CABLE TIE)</td><td>NB</td><td>2.5X100 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0079970190" title="Клик — скопировать">A 007 997 01 90</td><td>CABLE STRAP WITH HOLDER</td><td>NB</td><td>Для диаметра отверстия: 4.5\-5.0mm; 3,5X150 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0079975690" title="Клик — скопировать">A 007 997 56 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>Для диаметра отверстия: 6.5\-7.0mm; 202X4.6MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009951290" title="Клик — скопировать">A 000 995 12 90</td><td>Кабельный хомут растяжной (EXPANDABLE CABLE STRAP)</td><td>NB</td><td>Для диаметра отверстия: 8.0\-8.5mm; 4,6X202 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0059976290" title="Клик — скопировать">A 005 997 62 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>260X3.3MM</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2105461943" title="Клик — скопировать">A 210 546 19 43</td><td>Кабельная стяжка</td><td>NB</td><td>4.8 X 151 MM</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0079973590" title="Клик — скопировать">A 007 997 35 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>4.6 X 150 MM (D=5MM)</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0069972890" title="Клик — скопировать">A 006 997 28 90</td><td>связующее вещество (BINDER)</td><td>NB</td><td>4,6X155 MM</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0019952590" title="Клик — скопировать">A 001 995 25 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>5X300 MM</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0019951990" title="Клик — скопировать">A 001 995 19 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>5X300 MM</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A2119970290" title="Клик — скопировать">A 211 997 02 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>Для толщины листа: 1.0\-3.0 MM; 4,6X200 MM</td><td class="restr"></td></tr><tr data-pos="48"><td>48</td><td class="pn" data-raw="A0009957390" title="Клик — скопировать">A 000 995 73 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>Для толщины листа: 0.7\-3.0mm; 4,8X200 MM</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0009957590" title="Клик — скопировать">A 000 995 75 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>Для толщины листа: 0.7\-3.0mm; 4,8 X 200 MM</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0009956190" title="Клик — скопировать">A 000 995 61 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>Для толщины листа: 3\-6 MM; 4,6X200 MM</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A0009955490" title="Клик — скопировать">A 000 995 54 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td>4.5X131 MM</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0009959890" title="Клик — скопировать">A 000 995 98 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2119970190" title="Клик — скопировать">A 211 997 01 90</td><td>связующее вещество (CABLE STRAP)</td><td>NB</td><td>Кабель</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0005410340" title="Клик — скопировать">A 000 541 03 40</td><td>Держатель (HOLDER)</td><td>NB</td><td>Трубопровод</td><td class="restr"></td></tr><tr data-pos="145"><td>145</td><td class="pn" data-raw="A0099880878" title="Клик — скопировать">A 009 988 08 78</td><td>Скоба (CLAMP)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="175"><td>175</td><td class="pn" data-raw="A0005466943" title="Клик — скопировать">A 000 546 69 43</td><td>Держатель (HOLDER)</td><td>NB</td><td>Кабель</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0019958377" title="Клик — скопировать">A 001 995 83 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A0029952377" title="Клик — скопировать">A 002 995 23 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2045456040" title="Клик — скопировать">A 204 545 60 40</td><td>Держатель (HOLDER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A0029951377" title="Клик — скопировать">A 002 995 13 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1665463243" title="Клик — скопировать">A 166 546 32 43</td><td>Держатель (HOLDER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A2055463843" title="Клик — скопировать">A 205 546 38 43</td><td>Держатель кабеля (CABLE BRACKET)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0019832310" title="Клик — скопировать">A 001 983 23 10</td><td>Войлочная лента (FELT STRIP)</td><td>NB</td><td>40X2 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0029881681" title="Клик — скопировать">A 002 988 16 81</td><td>Кнопка-застежка (SNAP FASTENER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009911295" title="Клик — скопировать">A 000 991 12 95</td><td>Фиксатор вставной (PLUG-IN FASTENER)</td><td>NB</td><td>Для диаметра отверстия:; 6.5\-7 MM</td><td class="restr"></td></tr><tr data-pos="265"><td>265</td><td class="pn" data-raw="A0009950083" title="Клик — скопировать">A 000 995 00 83</td><td>Держатель разъема (PLUG HOLDER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0009950383" title="Клик — скопировать">A 000 995 03 83</td><td>Держатель разъема (PLUG HOLDER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="275"><td>275</td><td class="pn" data-raw="A6461500073" title="Клик — скопировать">A 646 150 00 73</td><td>Держатель (HOLDER)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>NB</td><td>Комплект деталей не поставляется, заказывать отдельные детали M6</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009912903" title="Клик — скопировать">A 000 991 29 03</td><td>Приварная шпилька (WELD STUD)</td><td>NB</td><td>Вывод соединения с массой; M8</td><td class="restr"></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A0029906850" title="Клик — скопировать">A 002 990 68 50</td><td>Гайка с фланцем (HEXAGON NUT WITH FLANGE)</td><td>NB</td><td>Вывод соединения с массой; M8</td><td class="restr"></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A0029906750" title="Клик — скопировать">A 002 990 67 50</td><td>Гайка с фланцем (HEXAGON NUT WITH FLANGE)</td><td>NB</td><td>Вывод соединения с массой; M6</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0009913203" title="Клик — скопировать">A 000 991 32 03</td><td>Приварная шпилька (WELD STUD)</td><td>NB</td><td>Вывод соединения с массой; M6</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 39 · подписано на схемах: 39 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54021000116.png", "poses": ["10", "15", "20", "25", "30", "35", "40", "45", "48", "50", "55", "65", "80", "140", "145", "175", "180", "185", "190", "205", "210", "215", "230", "250", "260", "265", "270", "275", "400", "405", "410"]}];</script><script>
+<p class="muted">Позиций: 39 · подписано на схемах: 39 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54021000116.png", "poses": ["10", "15", "20", "25", "30", "35", "40", "45", "48", "50", "55", "65", "80", "140", "145", "175", "180", "185", "190", "205", "210", "215", "230", "250", "260", "265", "270", "275", "400", "405", "410"], "hs": {"45": [[284, 389, 35, 30]], "25": [[725, 245, 35, 30]], "48": [[466, 346, 34, 29]], "190": [[235, 699, 48, 30]], "270": [[617, 837, 48, 30]], "250": [[213, 836, 48, 30]], "175": [[1088, 507, 48, 30]], "230": [[1143, 694, 48, 30]], "275": [[718, 870, 48, 30]], "210": [[843, 647, 48, 29]], "410": [[1101, 846, 48, 30]], "215": [[916, 706, 48, 30]], "50": [[491, 395, 34, 30]], "30": [[968, 245, 35, 30]], "10": [[204, 190, 35, 29]], "55": [[702, 339, 35, 30]], "35": [[1182, 246, 34, 30]], "15": [[241, 240, 34, 29]], "180": [[1170, 555, 48, 30]], "260": [[393, 842, 49, 29]], "140": [[389, 519, 48, 30]], "185": [[155, 655, 48, 30]], "265": [[499, 874, 48, 29]], "145": [[477, 549, 48, 30]], "400": [[1199, 804, 48, 30]], "205": [[666, 695, 48, 30]], "80": [[934, 381, 34, 29]], "405": [[1100, 782, 48, 30]], "40": [[263, 331, 34, 29]], "20": [[478, 245, 34, 30]], "65": [[735, 399, 34, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

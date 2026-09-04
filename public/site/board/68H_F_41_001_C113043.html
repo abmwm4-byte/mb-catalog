@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C113043">68H  Действительно для: CA, US</a> → 001 КАРДАННЫЙ ВАЛ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/9">68H  Действительно для: CA, US</a> → 001 КАРДАННЫЙ ВАЛ</div>
 <h1>001 КАРДАННЫЙ ВАЛ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B41001000310.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B41001000310.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1134101003" title="Клик — скопировать">A 113 410 10 03</td><td>КАРДАННЫЙ ВАЛ</td><td>1</td><td>Рулевое управление: ВлевоКоробка передач [412] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ ОТДЕЛЬНЫЕ ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1134101301" title="Клик — скопировать">A 113 410 13 01</td><td>- КАРДАННЫЙ ВАЛ</td><td>1</td><td>СПЕРЕДИ Рулевое управление: ВлевоКоробка передач</td><td class="restr"></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="N071412006200" title="Клик — скопировать">N 071412 006200</td><td>	- Пресс-масленка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1104110072" title="Клик — скопировать">A 110 411 00 72</td><td>	- ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1104110172" title="Клик — скопировать">A 110 411 01 72</td><td>	- Зажимная гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="A1229970087" title="Клик — скопировать">A 122 997 00 87</td><td>	- Клапан</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1134100002" title="Клик — скопировать">A 113 410 00 02</td><td>- КАРДАННЫЙ ВАЛ</td><td>1</td><td>ЗАДН., С ПОДШИПНИКОМ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1114100031" title="Клик — скопировать">A 111 410 00 31</td><td>	- Крестовина кард. шарнира</td><td>2</td><td>с  NEEDLES AND NEEDLE BEARING BUSHINGS, SERVICE\-FREE [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A1889940534" title="Клик — скопировать">A 188 994 05 34</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>1.45 MM [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A1114110044" title="Клик — скопировать">A 111 411 00 44</td><td>	- Фланец шарнира</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1104130401" title="Клик — скопировать">A 110 413 04 01</td><td>	- КОРПУС</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1104100422" title="Клик — скопировать">A 110 410 04 22</td><td>	- Опора карданного вала</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="A0039812325" title="Клик — скопировать">A 003 981 23 25</td><td>	- ШАРИКОПОДШИПНИК</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="N000472055000" title="Клик — скопировать">N 000472 055000</td><td>	- Стопорное кольцо</td><td>1</td><td>55X2 [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos="22"><td>22</td><td class="pn" data-raw="A1114100130" title="Клик — скопировать">A 111 410 01 30</td><td>Центрирующая звездочка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1364110118" title="Клик — скопировать">A 136 411 01 18</td><td>- Шаровой подпятник</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A1844110017" title="Клик — скопировать">A 184 411 00 17</td><td>- ШАРИК ЦЕНТРИРУЮЩАЯ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A1109933701" title="Клик — скопировать">A 110 993 37 01</td><td>- пружина</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N000984030000" title="Клик — скопировать">N 000984 030000</td><td>- Стопорное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1084100115" title="Клик — скопировать">A 108 410 01 15</td><td>Ремк-т эластичной муфты</td><td>1</td><td>К\-Т ДЕТАЛЕЙ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1104110171" title="Клик — скопировать">A 110 411 01 71</td><td>Болт призонный</td><td>3</td><td>FLEXIBLE JOINT DISC TO FRONT PROPELLER SHAFT OR TO TRANSMISSION RESP.</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1879901440" title="Клик — скопировать">A 187 990 14 40</td><td>Диск</td><td>6</td><td>FLEXIBLE JOINT DISC TO FRONT PROPELLER SHAFT OR TO TRANSMISSION RESP.</td><td class="restr"></td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="N913002012003" title="Клик — скопировать">N 913002 012003</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="33"><td>33</td><td class="pn" data-raw="N913002012002" title="Клик — скопировать">N 913002 012002</td><td>Гайка</td><td>6</td><td>FLEXIBLE JOINT DISC TO FRONT PROPELLER SHAFT OR TO TRANSMISSION RESP.</td><td class="restr"></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1204110060" title="Клик — скопировать">A 120 411 00 60</td><td>Уплотнительное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1114130012" title="Клик — скопировать">A 111 413 00 12</td><td>САЙЛЕНТ-БЛОК</td><td>1</td><td>ПРОМЕЖУТОЧНАЯ ОПОРА КАРДАННОГО ВАЛА</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1104130429" title="Клик — скопировать">A 110 413 04 29</td><td>ОПОРА ПОДШИПНИКА</td><td>1</td><td>ПРОМЕЖУТОЧНАЯ ОПОРА КАРДАННОГО ВАЛА</td><td class="restr"></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="N000933008108" title="Клик — скопировать">N 000933 008108</td><td>Винт</td><td>2</td><td>ПРОМЕЖУТ. ОПОРА НА ПОЛУ КАБИНЫ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>2</td><td>ПРОМЕЖУТ. ОПОРА НА ПОЛУ КАБИНЫ</td><td class="restr"></td></tr><tr data-pos="39"><td>39</td><td class="pn" data-raw="A1109900052" title="Клик — скопировать">A 110 990 00 52</td><td>гайка</td><td>2</td><td>ПРОМЕЖУТ. ОПОРА НА ПОЛУ КАБИНЫ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1134101103" title="Клик — скопировать">A 113 410 11 03</td><td>КАРДАННЫЙ ВАЛ</td><td>1</td><td>РАЗДЕЛЬН. Рулевое управление: ВлевоАвтоматическая коробка переключения передач [412] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ ОТДЕЛЬНЫЕ ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1134101401" title="Клик — скопировать">A 113 410 14 01</td><td>- КАРДАННЫЙ ВАЛ</td><td>1</td><td>СПЕРЕДИ Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1889940034" title="Клик — скопировать">A 188 994 00 34</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>1.50 77 [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1889940234" title="Клик — скопировать">A 188 994 02 34</td><td>	- СТОПОРН. КОЛЬЦО</td><td>8</td><td>1.60 MM [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1889940334" title="Клик — скопировать">A 188 994 03 34</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>1.65 MM [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1889940434" title="Клик — скопировать">A 188 994 04 34</td><td>	- Пруж. стопорное кольцо</td><td>8</td><td>1.70 MM [001] 10/50, 20/60 UP TO CHASSIS 002524; 12/52, 22/62 UP TO CHASSIS 002467</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809971040" title="Клик — скопировать">A 180 997 10 40</td><td>Уплотнительное кольцо</td><td>1</td><td>BETWEEN PROPELLER SHAFT AND CENTERING CROSS</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1804110615" title="Клик — скопировать">A 180 411 06 15</td><td>ДИСК ШАРНИРА</td><td>-</td><td>[002] ПО ОТДЕЛЬНОСТИ БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ,ТОЛЬКО В РЕМ.КОМПЛЕКТЕ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1104110071" title="Клик — скопировать">A 110 411 00 71</td><td>Болт призонный</td><td>3</td><td>FLEXIBLE JOINT DISC TO FRONT PROPELLER SHAFT OR TO TRANSMISSION RESP.</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1119900020" title="Клик — скопировать">A 111 990 00 20</td><td>БОЛТ</td><td>4</td><td>КАРДАННЫЙ ВАЛ К ЗАДНЕМУ МОСТУ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1119940209" title="Клик — скопировать">A 111 994 02 09</td><td>Стопорная шайба</td><td>2</td><td>КАРДАННЫЙ ВАЛ К ЗАДНЕМУ МОСТУ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N913021010001" title="Клик — скопировать">N 913021 010001</td><td>ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304035010001" title="Клик — скопировать">N 304035 010001</td><td>Шестигранная гайка</td><td>4</td><td>КАРДАННЫЙ ВАЛ К ЗАДНЕМУ МОСТУ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 43 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B41001000310.png", "poses": ["2", "5", "7", "8", "9", "10", "11", "12", "16", "17", "18", "19", "22", "23", "24", "25", "26", "28", "29", "32", "33", "34", "35", "36", "37", "38", "39"]}];</script><script>
+<p class="muted">Позиций: 43 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B41001000310.png", "poses": ["2", "5", "7", "8", "9", "10", "11", "12", "16", "17", "18", "19", "22", "23", "24", "25", "26", "28", "29", "32", "33", "34", "35", "36", "37", "38", "39"], "hs": {"22": [[106, 218, 33, 17]], "23": [[81, 152, 33, 17], [41, 163, 33, 17]], "24": [[55, 161, 33, 17]], "25": [[108, 146, 33, 17]], "26": [[145, 135, 33, 17]], "28": [[40, 450, 33, 17]], "29": [[198, 340, 33, 17]], "10": [[584, 342, 33, 17]], "32": [[162, 354, 33, 17]], "11": [[774, 348, 33, 17]], "33": [[129, 362, 33, 17]], "12": [[778, 389, 33, 17]], "34": [[0, 315, 33, 17]], "35": [[306, 105, 33, 17]], "36": [[374, 81, 33, 17]], "37": [[450, 103, 33, 17]], "16": [[781, 193, 33, 17]], "38": [[449, 84, 33, 17]], "39": [[476, 43, 33, 17]], "17": [[209, 372, 33, 17]], "18": [[269, 355, 33, 17]], "19": [[312, 345, 33, 17]], "2": [[576, 170, 33, 17]], "5": [[277, 500, 33, 17]], "7": [[216, 289, 33, 17]], "8": [[490, 443, 33, 17]], "9": [[208, 179, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

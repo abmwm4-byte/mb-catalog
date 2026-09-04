@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168032">69Y Brazil, Code 839</a> → 050 ЗАВОДСКАЯ ТАБЛИЧКА,ТАБЛИЧКИ С УКАЗАН.</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">69Y Brazil, Code 839</a> → 050 ЗАВОДСКАЯ ТАБЛИЧКА,ТАБЛИЧКИ С УКАЗАН.</div>
 <h1>050 ЗАВОДСКАЯ ТАБЛИЧКА,ТАБЛИЧКИ С УКАЗАН.</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B58050000110.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B58050000110.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688171820" title="Клик — скопировать">A 168 817 18 20</td><td>ЗАВОД. ТАБЛИЧКА</td><td>1</td><td>TO B\-PILLAR для  BRAZIL BRASILIEN [622] ПРИ ЗАКАЗЕ УКАЗАТЬ ИДЕНТ.№</td><td class="restr" data-expr="775L"><span class="icode">775L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688174020" title="Клик — скопировать">A 168 817 40 20</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>TO B\-PILLAR для  BRAZIL [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [622] ПРИ ЗАКАЗЕ УКАЗАТЬ ИДЕНТ.№</td><td class="restr" data-expr="775L"><span class="icode">775L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688171920" title="Клик — скопировать">A 168 817 19 20</td><td>ЗАВОД. ТАБЛИЧКА</td><td>1</td><td>К СРЕДН.СТОЙКЕ КУЗОВА SUEDAMERIKA [622] ПРИ ЗАКАЗЕ УКАЗАТЬ ИДЕНТ.№</td><td class="restr" data-expr="771L/773L/777L/723L/779L/747L/727L/733L/785L/737L/739L/741L/787L/789L/793L/795L"><span class="icode">771L/773L/777L/723L/779L/747L/727L/733L/785L/737L/739L/741L/787L/789L/793L/795L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688174120" title="Клик — скопировать">A 168 817 41 20</td><td>Информационная табличка</td><td>1</td><td>К СРЕДН.СТОЙКЕ КУЗОВА [622] ПРИ ЗАКАЗЕ УКАЗАТЬ ИДЕНТ.№</td><td class="restr" data-expr="771L/773L/777L/723L/779L/747L/727L/733L/785L/737L/739L/741L/787L/789L/793L/795L"><span class="icode">771L/773L/777L/723L/779L/747L/727L/733L/785L/737L/739L/741L/787L/789L/793L/795L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688173020" title="Клик — скопировать">A 168 817 30 20</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>НА СТОЙКЕ В СЛЕВА BRASILIEN</td><td class="restr" data-expr="775L"><span class="icode">775L</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1688172020" title="Клик — скопировать">A 168 817 20 20</td><td>ЗАВОД. ТАБЛИЧКА</td><td>1</td><td>К ПЕР.СТОЙКЕ КУЗОВА СПРАВА</td><td class="restr" data-expr="723L/727L/733L/737L/739L/741L/747L/771L/773L/775L/777L/779L/785L/787L/789L/793L/795L"><span class="icode">723L/727L/733L/737L/739L/741L/747L/771L/773L/775L/777L/779L/785L/787L/789L/793L/795L</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1688172020" title="Клик — скопировать">A 168 817 20 20</td><td>ЗАВОД. ТАБЛИЧКА</td><td>1</td><td>КОНСОЛЬ АМОРТ. СТОЙКИ СПРАВА</td><td class="restr" data-expr="723L/727L/733L/737L/739L/741L/747L/771L/773L/775L/777L/779L/785L/787L/789L/793L/795L"><span class="icode">723L/727L/733L/737L/739L/741L/747L/771L/773L/775L/777L/779L/785L/787L/789L/793L/795L</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1688172020" title="Клик — скопировать">A 168 817 20 20</td><td>ЗАВОД. ТАБЛИЧКА</td><td>1</td><td>КОРОБ АКБ</td><td class="restr" data-expr="771L"><span class="icode">771L</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1685840102" title="Клик — скопировать">A 168 584 01 02</td><td>Табличка с данными</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="989"><span class="icode">989</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1685840302" title="Клик — скопировать">A 168 584 03 02</td><td>Табличка с данными</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="989"><span class="icode">989</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1685840339" title="Клик — скопировать">A 168 584 03 39</td><td>ТАБЛИЧКА</td><td>1</td><td>ПРЕДПИСАНИЕ ПО ДАВЛ.ВОЗД. В ШИНАХ</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1685840539" title="Клик — скопировать">A 168 584 05 39</td><td>ТАБЛИЧКА</td><td>1</td><td>ПРЕДПИСАНИЕ ПО ДАВЛ.ВОЗД. В ШИНАХ</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1685840739" title="Клик — скопировать">A 168 584 07 39</td><td>Табличка (HINWEISSCHILD REIFENDRUCK)</td><td>1</td><td>ПРЕДПИСАНИЕ ПО ДАВЛ.ВОЗД. В ШИНАХ</td><td class="restr" data-expr="(M166+(M14/M14+922/M16/M19)/M668+(M013/M014))+768"><span class="icode">(M166+(M14/M14+922/M16/M19)/M668+(M013/M014))+768</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1685840639" title="Клик — скопировать">A 168 584 06 39</td><td>Табличка (HINWEISSCHILD REIFENDRUCK)</td><td>1</td><td>ПРЕДПИСАНИЕ ПО ДАВЛ.ВОЗД. В ШИНАХ</td><td class="restr" data-expr="M166+((M14/M16/M19)+949)/M668+(M013/M014)+949"><span class="icode">M166+((M14/M16/M19)+949)/M668+(M013/M014)+949</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1685841917" title="Клик — скопировать">A 168 584 19 17</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="M166+775L+839"><span class="icode">M166+775L+839</span></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1685842017" title="Клик — скопировать">A 168 584 20 17</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>ТАБЛИЧКА ЗАПРАВКИ;ПО\-ИСПАН. Рулевое управление: Влево</td><td class="restr" data-expr="M166+223B+839"><span class="icode">M166+223B+839</span></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1685842217" title="Клик — скопировать">A 168 584 22 17</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>ПО\-ПОРТУГАЛЬСКИ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1685842517" title="Клик — скопировать">A 168 584 25 17</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>ПО\-ПОРТУГАЛЬСКИ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1685840338" title="Клик — скопировать">A 168 584 03 38</td><td>Приклеивающаяся табличка (KLEBESCHILD)</td><td>1</td><td>ДЛЯ ЗАПАСН. КОЛЕСА</td><td class="restr" data-expr="669+(647/659)"><span class="icode">669+(647/659)</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2105840721" title="Клик — скопировать">A 210 584 07 21</td><td>Информационная табличка (HINWEISSCHILD)</td><td>1</td><td>БАЧОК ОЖ ИЛИ РАДИАТОР, ПО\-АНГЛ.</td><td class="restr" data-expr="221B"><span class="icode">221B</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2105849917" title="Клик — скопировать">A 210 584 99 17</td><td>Информационная табличка (HINWEISSCHILD)</td><td>1</td><td>БАЧОК ОЖ ИЛИ РАДИАТОР, ПО\-ПОРТУГ.</td><td class="restr" data-expr="209B"><span class="icode">209B</span></td></tr><tr data-pos="145"><td>145</td><td class="pn" data-raw="A1688172920" title="Клик — скопировать">A 168 817 29 20</td><td>ТАБЛИЧКА С УКАЗАНИЯМИ</td><td>1</td><td>УРОВЕНЬ МАСЛА</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1685840000" title="Клик — скопировать">A 168 584 00 00</td><td>Информационная табличка (HINWEISSCHILD)</td><td>1</td><td>НА ОТКИДНОЙ КРЫШКЕ ЗАПРАВОЧНОГО ЛЮКА И ПРОТИВОПОЛОЖНОЙ СТОЙКЕ КУЗОВА &quot;B&quot;; QR\-Code</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58050000110.png", "poses": ["10", "15", "50", "60", "65", "75", "85", "130", "140", "145", "160"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58050000110.png", "poses": ["10", "15", "50", "60", "65", "75", "85", "130", "140", "145", "160"], "hs": {"145": [[199, 555, 48, 29]], "15": [[523, 223, 34, 30]], "60": [[1097, 263, 34, 29]], "50": [[799, 241, 34, 29]], "160": [[406, 566, 48, 29]], "85": [[527, 404, 34, 30]], "140": [[1106, 423, 48, 29]], "75": [[239, 429, 34, 30]], "130": [[805, 399, 48, 30]], "10": [[242, 246, 35, 30]], "65": [[236, 358, 34, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

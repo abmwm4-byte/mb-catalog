@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">68D BIS 09/85 Действительно для: CA, US</a> → 405 ЭЛЕКТРОСТЕКЛОПОДЪЕМНИКИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/86">68D BIS 09/85 Действительно для: CA, US</a> → 405 ЭЛЕКТРОСТЕКЛОПОДЪЕМНИКИ</div>
 <h1>405 ЭЛЕКТРОСТЕКЛОПОДЪЕМНИКИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B82405000048 <span class="hint">(15)</span></button><button data-i="1" class="">B82405000047 <span class="hint">(14)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82405000048.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82405000048.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1078208315" title="Клик — скопировать">A 107 820 83 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>FRONT AND REAR DOOR WINDOW REGULATORS [811] UP TO END OF MODEL YEAR'81</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1078202017" title="Клик — скопировать">A 107 820 20 17</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>FRONT AND REAR DOOR WINDOW REGULATORS [820] FROM MODEL YEAR'82</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0008212026" title="Клик — скопировать">A 000 821 20 26</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>ЭЛЕКТРОМОТОР</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008210138" title="Клик — скопировать">A 000 821 01 38</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0065458028" title="Клик — скопировать">A 006 545 80 28</td><td>- CONTACT SUPPORT (CONTACT CARRIER)</td><td>1</td><td>РЕЛЕ; 6\-PIN</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0095453028" title="Клик — скопировать">A 009 545 30 28</td><td>- Верхняя часть корпуса (HOUSING UPPER PART)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>0.35\-4.0 MM2 RK4</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0045456628" title="Клик — скопировать">A 004 545 66 28</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0095454028" title="Клик — скопировать">A 009 545 40 28</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>2\-PIN</td><td class="restr"></td></tr><tr data-pos="54"><td>54</td><td class="pn" data-raw="A0095454128" title="Клик — скопировать">A 009 545 41 28</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0015453826" title="Клик — скопировать">A 001 545 38 26</td><td>- Контактный стержень (CONTACT PIN)</td><td>NB</td><td>4.0 MM2 RK4</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N007981003329" title="Клик — скопировать">N 007981 003329</td><td>Шуруп</td><td>4</td><td>CABLE CONNECTOR TO REAR SIDE</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="N007985004107" title="Клик — скопировать">N 007985 004107</td><td>Винт</td><td>4</td><td>Соединитель проводов; M4X10</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="N000085004127" title="Клик — скопировать">N 000085 004127</td><td>Винт</td><td>4</td><td>Соединитель проводов</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>Пружинное кольцо</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>4</td><td>Соединитель проводов</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо (SPRING LOCK WASHER)</td><td>4</td><td>Соединитель проводов</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0008201842" title="Клик — скопировать">A 000 820 18 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0008207242" title="Клик — скопировать">A 000 820 72 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0018204542" title="Клик — скопировать">A 001 820 45 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td>[409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0018207742" title="Клик — скопировать">A 001 820 77 42</td><td>Электродвигатель (ELECTRIC MOTOR)</td><td>1</td><td>ВОДИТЕЛЬСКАЯ ДВЕРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0008201942" title="Клик — скопировать">A 000 820 19 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0008207342" title="Клик — скопировать">A 000 820 73 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0018204442" title="Клик — скопировать">A 001 820 44 42</td><td>ЭЛЕКТРОМОТОР</td><td>-</td><td>[409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A0018207842" title="Клик — скопировать">A 001 820 78 42</td><td>Электродвигатель (ELECTRIC MOTOR)</td><td>1</td><td>ДВЕРЬ ВОДИТЕЛЯ СПРАВА</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82405000048.png", "poses": ["14", "17", "20", "29", "32", "35", "50", "53", "54", "59", "86", "89", "90", "92", "104"]}, {"png": "../../img_png/drawing_B82405000047.png", "poses": ["17", "20", "29", "32", "35", "50", "53", "54", "59", "86", "89", "90", "92", "104"]}];</script><script>
+<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82405000048.png", "poses": ["14", "17", "20", "29", "32", "35", "50", "53", "54", "59", "86", "89", "90", "92", "104"], "hs": {"89": [[822, 379, 33, 17]], "35": [[150, 264, 33, 17]], "59": [[572, 305, 33, 17]], "38": [[553, 225, 33, 17], [617, 239, 33, 17]], "113": [[691, 285, 33, 17]], "104": [[766, 282, 33, 17]], "107": [[751, 347, 33, 17]], "92": [[796, 367, 33, 17]], "71": [[437, 351, 33, 17]], "50": [[556, 253, 33, 17], [617, 268, 33, 17]], "83": [[663, 344, 33, 17]], "41": [[557, 242, 33, 17], [615, 253, 33, 17]], "86": [[738, 416, 33, 17]], "75": [[568, 477, 33, 17]], "53": [[573, 331, 33, 17]], "54": [[574, 318, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B82405000047.png", "poses": ["17", "20", "29", "32", "35", "50", "53", "54", "59", "86", "89", "90", "92", "104"], "hs": {"44": [[522, 233, 33, 17]], "89": [[794, 382, 33, 17]], "23": [[636, 250, 33, 17]], "47": [[525, 247, 33, 17]], "26": [[633, 261, 33, 17]], "113": [[678, 292, 33, 17]], "92": [[771, 367, 33, 17]], "71": [[434, 371, 33, 17]], "50": [[822, 291, 33, 17], [558, 163, 33, 17], [525, 258, 33, 17], [594, 253, 33, 17]], "74": [[800, 480, 33, 17]], "75": [[585, 518, 33, 17]], "53": [[409, 427, 33, 17], [519, 319, 33, 17]], "54": [[411, 441, 33, 17], [511, 305, 33, 17]], "11": [[301, 220, 33, 17]], "56": [[172, 207, 33, 17]], "57": [[171, 220, 33, 17]], "35": [[106, 173, 33, 17], [632, 274, 33, 17]], "59": [[407, 450, 33, 17], [171, 232, 33, 17], [520, 292, 33, 17]], "38": [[823, 264, 33, 17], [556, 136, 33, 17], [594, 227, 33, 17]], "104": [[757, 287, 33, 17]], "5": [[97, 203, 33, 17]], "8": [[144, 221, 33, 17]], "107": [[719, 350, 33, 17]], "83": [[645, 354, 33, 17]], "41": [[823, 274, 33, 17], [559, 150, 33, 17], [597, 241, 33, 17]], "86": [[709, 416, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

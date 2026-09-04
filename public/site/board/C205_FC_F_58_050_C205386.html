@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205386">WDD2053861F974785</a> → 050 Шильдик, указательные таблички</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/700">WDD2053861F974785</a> → 050 Шильдик, указательные таблички</div>
 <h1>050 Шильдик, указательные таблички</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">PV000.010.097.390_version_003 <span class="hint">(9)</span></button><button data-i="1" class="">PV000.010.097.391_version_003 <span class="hint">(6)</span></button><button data-i="2" class="">PV000.010.097.392_version_008 <span class="hint">(8)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.097.390_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.097.390_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0078170920" title="Клик — скопировать">A 007 817 09 20</td><td>Шильдик</td><td>1</td><td>К средней стойке [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0058179920" title="Клик — скопировать">A 005 817 99 20</td><td>Шильдик</td><td>1</td><td>К средней стойке [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="494"><span class="icode">494</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2208172920" title="Клик — скопировать">A 220 817 29 20</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Табличка с номером шасси [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="460/494/498"><span class="icode">460/494/498</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2045840102" title="Клик — скопировать">A 204 584 01 02</td><td>Идент. табличка</td><td>1</td><td>Под ветровым стеклом [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="989"><span class="icode">989</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2058175200" title="Клик — скопировать">A 205 817 52 00</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Заправочный объем кондиционера [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="M177+M40"><span class="icode">M177+M40</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2465840138" title="Клик — скопировать">A 246 584 01 38</td><td>Приклеивающаяся табличка (ADHESIVE LABEL)</td><td>1</td><td>На накачивающий компрессор [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="B51"><span class="icode">B51</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2055846719" title="Клик — скопировать">A 205 584 67 19</td><td>Инф. лист реле и предохр. (INFO SHT. RELAYS + FUSES)</td><td>1</td><td>К запасному колесу</td><td class="restr" data-expr="800"><span class="icode">800</span></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A2055844025" title="Клик — скопировать">A 205 584 40 25</td><td>Табл. с давлением в шинах (INFO LABEL, TIRE PRESSURE)</td><td>1</td><td>Предписание по давлению в шинах</td><td class="restr" data-expr="M177+M40"><span class="icode">M177+M40</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2055844325" title="Клик — скопировать">A 205 584 43 25</td><td>Табличка с давлением (INFO. LABEL, TIRE PRESS.)</td><td>1</td><td>Дополнительное предписание по давлению в шинах (на средней стойке кузова)</td><td class="restr" data-expr="M177+M40+(460/494)+(662/770/RSW)"><span class="icode">M177+M40+(460/494)+(662/770/RSW)</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0005842106" title="Клик — скопировать">A 000 584 21 06</td><td>Табличка с данными (FUELING LABEL)</td><td>1</td><td>Табличка с указанием о заправляемом топливе: бензин (октановое число 98) [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="M177/M274+M014/M276+M016"><span class="icode">M177/M274+M014/M276+M016</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0005849917" title="Клик — скопировать">A 000 584 99 17</td><td>Табличка с данными (FUELING LABEL)</td><td>1</td><td>Табличка заправочных данных; на английском языке [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="(M274+M014/M276+M016/M177)+(494/460)"><span class="icode">(M274+M014/M276+M016/M177)+(494/460)</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0005840807" title="Клик — скопировать">A 000 584 08 07</td><td>Табличка (PLATE)</td><td>1</td><td>Система охлаждения</td><td class="restr"></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1772211900" title="Клик — скопировать">A 177 221 19 00</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Система нейтрализации ОГ [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="M177+(460/494)"><span class="icode">M177+(460/494)</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A0035842438" title="Клик — скопировать">A 003 584 24 38</td><td>Приклеивающаяся табличка (ADHESIVE LABEL)</td><td>1</td><td>Дополнительная замена масла в блокируемом дифференциале Рулевое управление: Влево</td><td class="restr" data-expr="M177+M40+467"><span class="icode">M177+M40+467</span></td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A0005840613" title="Клик — скопировать">A 000 584 06 13</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Аккумуляторная батарея</td><td class="restr"></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A2055847901" title="Клик — скопировать">A 205 584 79 01</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>К крышке заправочного люка и противоположной средней стойке кузова; QR\-Code [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A0015847038" title="Клик — скопировать">A 001 584 70 38</td><td>Приклеивающаяся табличка (ADHESIVE LABEL)</td><td>1</td><td>Указание по обкатке Рулевое управление: Влево</td><td class="restr" data-expr="M177+M40"><span class="icode">M177+M40</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A0008178202" title="Клик — скопировать">A 000 817 82 02</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Боковое стекло</td><td class="restr" data-expr="494"><span class="icode">494</span></td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A0005840913" title="Клик — скопировать">A 000 584 09 13</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>Бензин ES E10</td><td class="restr" data-expr="(M177/M264/M274/M274+M014/M276/M276+M016)"><span class="icode">(M177/M264/M274/M274+M014/M276/M276+M016)</span></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A2118172021" title="Клик — скопировать">A 211 817 20 21</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>В моторном отсеке</td><td class="restr"></td></tr><tr data-pos="730"><td>730</td><td class="pn" data-raw="A0005846013" title="Клик — скопировать">A 000 584 60 13</td><td>Предупреждающая табличка (WARNING SIGN)</td><td>1</td><td>TIREFIT</td><td class="restr" data-expr="B51+(460/494/496)"><span class="icode">B51+(460/494/496)</span></td></tr><tr data-pos="760"><td>760</td><td class="pn" data-raw="A0005845415" title="Клик — скопировать">A 000 584 54 15</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td></td><td class="restr" data-expr="871"><span class="icode">871</span></td></tr><tr data-pos="770"><td>770</td><td class="pn" data-raw="A1772216400" title="Клик — скопировать">A 177 221 64 00</td><td>Информационная табличка (INFORMATION LABEL)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ</td><td class="restr" data-expr="M177+(460/494)"><span class="icode">M177+(460/494)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.097.390_version_003.png", "poses": ["10", "20", "80", "90", "170", "180", "200", "205", "210"]}, {"png": "../../img_png/drawing_PV000.010.097.391_version_003.png", "poses": ["240", "260", "340", "360", "490", "540"]}, {"png": "../../img_png/drawing_PV000.010.097.392_version_008.png", "poses": ["550", "580", "600", "620", "660", "730", "760", "770"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.097.390_version_003.png", "poses": ["10", "20", "80", "90", "170", "180", "200", "205", "210"], "hs": {"190": [[119, 846, 43, 29]], "180": [[918, 673, 42, 29]], "170": [[647, 673, 42, 29]], "160": [[394, 673, 43, 29]], "150": [[119, 673, 43, 29]], "140": [[1177, 500, 43, 29]], "130": [[914, 500, 42, 29]], "185": [[1178, 673, 42, 29]], "120": [[646, 500, 43, 29]], "110": [[390, 500, 43, 29]], "100": [[119, 500, 42, 29]], "200": [[710, 778, 43, 29]], "90": [[1167, 326, 30, 28]], "205": [[918, 846, 42, 29]], "80": [[907, 326, 31, 28]], "70": [[380, 326, 30, 28]], "60": [[120, 326, 30, 28]], "50": [[1176, 148, 30, 28]], "40": [[907, 148, 31, 28]], "30": [[644, 148, 30, 28]], "20": [[380, 148, 30, 28]], "75": [[644, 326, 30, 28]], "10": [[124, 148, 30, 28]]}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.097.391_version_003.png", "poses": ["240", "260", "340", "360", "490", "540"], "hs": {"290": [[914, 328, 43, 29]], "280": [[654, 328, 43, 29]], "270": [[387, 328, 42, 29]], "470": [[1180, 675, 43, 28]], "350": [[654, 502, 43, 28]], "460": [[914, 675, 43, 29]], "230": [[387, 151, 42, 29]], "340": [[387, 502, 42, 28]], "450": [[654, 675, 43, 29]], "310": [[1170, 328, 43, 29]], "420": [[115, 675, 43, 29]], "530": [[910, 848, 43, 29]], "235": [[654, 151, 43, 29]], "400": [[1170, 502, 43, 28]], "500": [[650, 848, 43, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.097.392_version_008.png", "poses": ["550", "580", "600", "620", "660", "730", "760", "770"], "hs": {"590": [[1174, 152, 43, 28]], "690": [[907, 499, 42, 28]], "570": [[647, 152, 42, 28]], "680": [[647, 499, 42, 29]], "560": [[379, 152, 43, 28]], "670": [[382, 499, 42, 28]], "550": [[123, 152, 43, 28]], "660": [[118, 499, 43, 28]], "650": [[1182, 325, 42, 29]], "760": [[385, 671, 43, 29]], "730": [[116, 671, 43, 29]], "610": [[384, 325, 43, 29]], "600": [[116, 326, 43, 29]], "700": [[1170, 499, 43, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

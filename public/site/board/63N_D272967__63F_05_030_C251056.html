@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251056">63N -/-</a> → 030 РАСПРЕДВАЛ И МЕХ-ЗМ ИЗМЕН.ФАЗ ГАЗОРАСПР.</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/120">63N -/-</a> → 030 РАСПРЕДВАЛ И МЕХ-ЗМ ИЗМЕН.ФАЗ ГАЗОРАСПР.</div>
 <h1>030 РАСПРЕДВАЛ И МЕХ-ЗМ ИЗМЕН.ФАЗ ГАЗОРАСПР.</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B05030000006.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B05030000006.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2720503601" title="Клик — скопировать">A 272 050 36 01</td><td>Распредвал</td><td>1</td><td>Впуск слева</td><td class="restr" data-expr="-(M012/M014/ME03/ME04)"><span class="icode">-(M012/M014/ME03/ME04)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2720505301" title="Клик — скопировать">A 272 050 53 01</td><td>Распредвал (CAMSHAFT)</td><td>1</td><td>Впуск слева</td><td class="restr" data-expr="-(M012/M014/ME03/ME04)"><span class="icode">-(M012/M014/ME03/ME04)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2720503801" title="Клик — скопировать">A 272 050 38 01</td><td>Распредвал (CAMSHAFT)</td><td>1</td><td>Впуск справа</td><td class="restr" data-expr="-(M012/M014/ME03/ME04)"><span class="icode">-(M012/M014/ME03/ME04)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2720503701" title="Клик — скопировать">A 272 050 37 01</td><td>Распредвал (CAMSHAFT)</td><td>1</td><td>Выпуск (левая сторона)</td><td class="restr" data-expr="-(M012/M014/ME03/ME04)"><span class="icode">-(M012/M014/ME03/ME04)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2720503901" title="Клик — скопировать">A 272 050 39 01</td><td>Распредвал (CAMSHAFT)</td><td>1</td><td>Выпуск (правая сторона)</td><td class="restr" data-expr="-(M012/M014/ME03/ME04)"><span class="icode">-(M012/M014/ME03/ME04)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2720510003" title="Клик — скопировать">A 272 051 00 03</td><td>Крышка (CAP)</td><td>2</td><td>Впуск слева</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2780510003" title="Клик — скопировать">A 278 051 00 03</td><td>Крышка подш. распредвала</td><td>2</td><td>Впуск слева</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2720510003" title="Клик — скопировать">A 272 051 00 03</td><td>Крышка (CAP)</td><td>2</td><td>Выпуск (левая сторона)</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2780510003" title="Клик — скопировать">A 278 051 00 03</td><td>Крышка подш. распредвала</td><td>2</td><td>Выпуск (левая сторона)</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2720510003" title="Клик — скопировать">A 272 051 00 03</td><td>Крышка (CAP)</td><td>2</td><td>Впуск справа</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2780510003" title="Клик — скопировать">A 278 051 00 03</td><td>Крышка подш. распредвала</td><td>2</td><td>Впуск справа</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2720510003" title="Клик — скопировать">A 272 051 00 03</td><td>Крышка (CAP)</td><td>2</td><td>Выпуск (правая сторона)</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2780510003" title="Клик — скопировать">A 278 051 00 03</td><td>Крышка подш. распредвала</td><td>2</td><td>Выпуск (правая сторона)</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000003291" title="Клик — скопировать">N 000000 003291</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крышка к головке блока цилиндров справа; M6X20</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000003358" title="Клик — скопировать">N 000000 003358</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крышка к головке блока цилиндров справа; M6X25</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000003291" title="Клик — скопировать">N 000000 003291</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крышка к головке блока цилиндров слева; M6X20</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000003358" title="Клик — скопировать">N 000000 003358</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Крышка к головке блока цилиндров слева; M6X25</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2720505247" title="Клик — скопировать">A 272 050 52 47</td><td>Регулятор (CAMSHAFT POSITIONER)</td><td>1</td><td>Распределительный вал; впускной слева [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2720504647" title="Клик — скопировать">A 272 050 46 47</td><td>Механизм изм.фаз газор.</td><td>1</td><td>Распределительный вал; впускной справа</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2720504447" title="Клик — скопировать">A 272 050 44 47</td><td>Механизм изм.фаз газор.</td><td>1</td><td>Распределительный вал; впускной справа</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2720505347" title="Клик — скопировать">A 272 050 53 47</td><td>Регулятор (CAMSHAFT POSITIONER)</td><td>1</td><td>Распределительный вал; впускной справа [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2720500478" title="Клик — скопировать">A 272 050 04 78</td><td>Клапан (VALVE)</td><td>2</td><td>Распределительный вал (впускной)</td><td class="restr"></td></tr><tr data-pos="195"><td>195</td><td class="pn" data-raw="A2720500578" title="Клик — скопировать">A 272 050 05 78</td><td>Клапан (VALVE)</td><td>2</td><td>Распределительный вал (выпускной)</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2720510039" title="Клик — скопировать">A 272 051 00 39</td><td>Импульсный диск</td><td>1</td><td>Впуск слева [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2720510539" title="Клик — скопировать">A 272 051 05 39</td><td>Импульсный диск (PULSE WHEEL)</td><td>1</td><td>Впуск слева</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2720510239" title="Клик — скопировать">A 272 051 02 39</td><td>Импульсный диск</td><td>1</td><td>Впуск справа [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2720510639" title="Клик — скопировать">A 272 051 06 39</td><td>Импульсный диск (PULSE WHEEL)</td><td>1</td><td>Впуск справа</td><td class="restr"></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A2720510139" title="Клик — скопировать">A 272 051 01 39</td><td>Импульсный диск</td><td>1</td><td>Выпуск (левая сторона) [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A2720510739" title="Клик — скопировать">A 272 051 07 39</td><td>Импульсный диск (PULSE WHEEL)</td><td>1</td><td>Выпуск (левая сторона)</td><td class="restr"></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A2720510339" title="Клик — скопировать">A 272 051 03 39</td><td>Импульсный диск</td><td>1</td><td>Выпуск (правая сторона) [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="205"><td>205</td><td class="pn" data-raw="A2720510839" title="Клик — скопировать">A 272 051 08 39</td><td>Импульсный диск (PULSE WHEEL)</td><td>1</td><td>Выпуск (правая сторона)</td><td class="restr"></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A2720506847" title="Клик — скопировать">A 272 050 68 47</td><td>Регулятор (CAMSHAFT POSITIONER)</td><td>1</td><td>Распредвал, выпускной слева [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A2720505047" title="Клик — скопировать">A 272 050 50 47</td><td>Механизм изм.фаз газор.</td><td>1</td><td>Распредвал, выпускной справа</td><td class="restr" data-expr="-(M014/ME03/ME04)"><span class="icode">-(M014/ME03/ME04)</span></td></tr><tr data-pos="215"><td>215</td><td class="pn" data-raw="A2720506847" title="Клик — скопировать">A 272 050 68 47</td><td>Регулятор (CAMSHAFT POSITIONER)</td><td>1</td><td>Распредвал, выпускной справа [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="-(M014/ME03/ME04)"><span class="icode">-(M014/ME03/ME04)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B05030000006.png", "poses": ["100", "110", "120", "130", "180", "190", "195", "200", "205", "215"]}];</script><script>
+<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B05030000006.png", "poses": ["100", "110", "120", "130", "180", "190", "195", "200", "205", "215"], "hs": {"110": [[806, 375, 46, 29]], "100": [[1125, 583, 46, 28]], "200": [[673, 752, 46, 29]], "215": [[502, 506, 46, 29]], "205": [[378, 541, 46, 29]], "190": [[563, 733, 46, 28]], "180": [[796, 722, 46, 28]], "195": [[253, 527, 46, 28]], "130": [[994, 409, 46, 28]], "120": [[1012, 492, 46, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

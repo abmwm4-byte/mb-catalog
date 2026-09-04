@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">68D BIS 09/85 Действительно для: CA, US</a> → 345 АНТЕННА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">68D BIS 09/85 Действительно для: CA, US</a> → 345 АНТЕННА</div>
 <h1>345 АНТЕННА</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B82345000041 <span class="hint">(9)</span></button><button data-i="1" class="">B82345000042 <span class="hint">(18)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82345000041.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82345000041.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0008203715" title="Клик — скопировать">A 000 820 37 15</td><td>ЭЛ. ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0008208015" title="Клик — скопировать">A 000 820 80 15</td><td>ЭЛ. ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1248201215" title="Клик — скопировать">A 124 820 12 15</td><td>Провод (LINE)</td><td>1</td><td>АНТЕННА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0018203115" title="Клик — скопировать">A 001 820 31 15</td><td>Электрический провод</td><td>1</td><td>CB\-РАДИОСТАНЦИЯ [079] UP TO CHASSIS 024 023726 044 050597 FROM CHASSIS 024 024539 044 051726 [107] UP TO CHASSIS 045 028550</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1079972981" title="Клик — скопировать">A 107 997 29 81</td><td>втулка (GROMMET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0009881878" title="Клик — скопировать">A 000 988 18 78</td><td>Скоба (CLAMP)</td><td>1</td><td>ANTENNA CABLE TO REAR WHEELHOUSE</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0029884878" title="Клик — скопировать">A 002 988 48 78</td><td>Скоба (CLAMP)</td><td>1</td><td>ANTENNA CABLE TO REAR INSIDE PILLAR</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0018271201" title="Клик — скопировать">A 001 827 12 01</td><td>АНТЕННА</td><td>-</td><td>[104] FIRST EXHAUST STOCK OF OLD PARTS UP TO IDENT NO. 045 018504</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1238201775" title="Клик — скопировать">A 123 820 17 75</td><td>АНТЕННА</td><td>1</td><td>с  PRE\-EQUIPMENT для  CB RADIO [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A2018200175" title="Клик — скопировать">A 201 820 01 75</td><td>АНТЕННА</td><td>1</td><td>REAR END MOUNTED,AUTOMATIC [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="B66828037" title="Клик — скопировать">B66828037</td><td>- ТЕЛЕСКОП. (EMERGENCY TELESCOPIC ROD)</td><td>1</td><td>ТЕЛЕСКОП. HIRSCHMANN [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0065457828" title="Клик — скопировать">A 006 545 78 28</td><td>- Корпус штекера (PLUG HOUSING)</td><td>1</td><td>ПЯТИПОЛЮСНЫЙ; 6\-PIN [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0095453028" title="Клик — скопировать">A 009 545 30 28</td><td>- Верхняя часть корпуса (HOUSING UPPER PART)</td><td>1</td><td>TO 006 545 78 28 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0015453826" title="Клик — скопировать">A 001 545 38 26</td><td>- Контактный стержень (CONTACT PIN)</td><td>6</td><td>TO 006 545 78 28; 4.0 MM2 RK4 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0085453728" title="Клик — скопировать">A 008 545 37 28</td><td>- Сцепление, механическое (COUPLING, MECHANICAL)</td><td>2</td><td>2\-PIN</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0085453828" title="Клик — скопировать">A 008 545 38 28</td><td>- Верхняя часть корпуса (HOUSING UPPER PART)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>4</td><td>0.35\-4.0 MM2 RK4</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0008270812" title="Клик — скопировать">A 000 827 08 12</td><td>УГОЛ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [079] UP TO CHASSIS 024 023726 044 050597 FROM CHASSIS 024 024539 044 051726 [107] UP TO CHASSIS 045 028550</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1078201914" title="Клик — скопировать">A 107 820 19 14</td><td>Держатель</td><td>1</td><td>АНТЕННА АВТОМАТИЧЕСКАЯ [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000933006102" title="Клик — скопировать">N 000933 006102</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N304017006016" title="Клик — скопировать">N 304017 006016</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ; M6X16 [058] FROM CHASSIS 024 015053 044 035344 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N000933005075" title="Клик — скопировать">N 000933 005075</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N304017005002" title="Клик — скопировать">N 304017 005002</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ; M5X16 [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ [058] FROM CHASSIS 024 015053 044 035344 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ [058] FROM CHASSIS 024 015053 044 035344 [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N913017005000" title="Клик — скопировать">N 913017 005000</td><td>Гайка (NUT)</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ; M5 [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N913017005000" title="Клик — скопировать">N 913017 005000</td><td>Гайка (NUT)</td><td>1</td><td>ДЕРЖАТ. НА АНТЕННЕ; M5 [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N914023005100" title="Клик — скопировать">N 914023 005100</td><td>Винт с неспадающей шайбой</td><td>1</td><td>GROUND CABLE TO REAR PILLAR [058] FROM CHASSIS 024 015053 044 035344</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1238270098" title="Клик — скопировать">A 123 827 00 98</td><td>уплотнение (SEAL)</td><td>1</td><td>UNDER ANTENNA CONNECTOR [831] UP TO END OF MODEL YEAR'83</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1268271498" title="Клик — скопировать">A 126 827 14 98</td><td>уплотнение (SEAL)</td><td>1</td><td>BETWEEN ANTENNA AND FENDER [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1239901191" title="Клик — скопировать">A 123 990 11 91</td><td>ГАЙКОДЕРЖАТЕЛЬ</td><td>1</td><td>GROUND CABLE TO REAR PILLAR [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N914025004000" title="Клик — скопировать">N 914025 004000</td><td>КОМБ.БОЛТ</td><td>1</td><td>GROUND CABLE TO REAR PILLAR [840] FROM MODEL YEAR'84</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0009940845" title="Клик — скопировать">A 000 994 08 45</td><td>предохранитель</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82345000041.png", "poses": ["5", "29", "32", "56", "62", "71", "80", "83", "86"]}, {"png": "../../img_png/drawing_B82345000042.png", "poses": ["8", "11", "14", "20", "26", "35", "38", "41", "44", "47", "50", "53", "59", "65", "68", "74", "77", "89"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82345000041.png", "poses": ["5", "29", "32", "56", "62", "71", "80", "83", "86"], "hs": {"5": [[373, 408, 33, 17]], "32": [[766, 149, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B82345000042.png", "poses": ["8", "11", "14", "20", "26", "35", "38", "41", "44", "47", "50", "53", "59", "65", "68", "74", "77", "89"], "hs": {"44": [[278, 305, 33, 17]], "89": [[542, 457, 33, 17]], "23": [[506, 342, 33, 17]], "68": [[775, 436, 33, 17]], "47": [[274, 296, 33, 17]], "26": [[821, 291, 33, 17]], "92": [[188, 58, 33, 17]], "50": [[280, 278, 33, 17]], "95": [[233, 115, 33, 17]], "74": [[333, 335, 33, 17]], "53": [[710, 410, 33, 17]], "98": [[78, 155, 33, 17]], "77": [[813, 138, 33, 17]], "11": [[211, 265, 33, 17]], "35": [[716, 237, 33, 17]], "14": [[406, 268, 33, 17]], "59": [[762, 379, 33, 17]], "38": [[721, 225, 33, 17]], "17": [[368, 176, 33, 17]], "101": [[370, 475, 33, 17]], "104": [[377, 424, 33, 17]], "8": [[248, 207, 33, 17]], "41": [[718, 213, 33, 17]], "20": [[310, 246, 33, 17]], "65": [[776, 413, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

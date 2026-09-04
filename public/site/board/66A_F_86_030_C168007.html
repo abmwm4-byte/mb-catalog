@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168007">66A Standard Недействительно для: JP</a> → 030 СТЕКЛООМЫВАТЕЛЬ, ФАРО ОЧИСТИТЕЛЬ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">66A Standard Недействительно для: JP</a> → 030 СТЕКЛООМЫВАТЕЛЬ, ФАРО ОЧИСТИТЕЛЬ</div>
 <h1>030 СТЕКЛООМЫВАТЕЛЬ, ФАРО ОЧИСТИТЕЛЬ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B86030000172.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B86030000172.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688690020" title="Клик — скопировать">A 168 869 00 20</td><td>БАЧОК</td><td>1</td><td>ОМЫВАТЕЛЬ СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688690220" title="Клик — скопировать">A 168 869 02 20</td><td>Бак (BEHAELTER)</td><td>1</td><td>ОМЫВАТЕЛЬ СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1248690172" title="Клик — скопировать">A 124 869 01 72</td><td>Крышка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2108691021" title="Клик — скопировать">A 210 869 10 21</td><td>Насос (PUMPE)</td><td>1</td><td>ОМЫВАТЕЛЬ СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1239973681" title="Клик — скопировать">A 123 997 36 81</td><td>втулка (TUELLE)</td><td>1</td><td>НАСОС К БАЧКУ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1159970681" title="Клик — скопировать">A 115 997 06 81</td><td>втулка (TUELLE)</td><td>1</td><td>НА БАЧКЕ ЖИДКОСТИ; 23 MM</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1688690394" title="Клик — скопировать">A 168 869 03 94</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>BETWEEN LEFT AND RIGHT NOZZLE [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="(M668/M166+(M14/M16/M19))+-839"><span class="icode">(M668/M166+(M14/M16/M19))+-839</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1688600047" title="Клик — скопировать">A 168 860 00 47</td><td>Форсунка стеклоомывателя (DUESE SCHEIBENWASCHANLAGE)</td><td>1</td><td>РАСПЫЛИТЕЛИ ОМЫВАТЕЛЯ С ПОДОГРЕВОМ [001262] ADAPT TO SUIT ON VEHICLES W/O HEATED WINDSHIELD WASHER SYSTEM WHEN ASSEMBLING</td><td class="restr" data-expr="M668/M166+(M14/M16/M19)"><span class="icode">M668/M166+(M14/M16/M19)</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1688600592" title="Клик — скопировать">A 168 860 05 92</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>КОМПЛЕКТ ФОРСУНОК ОМЫВАТ., СО ШЛАНГОМ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M668/M166+(M14/M16/M19/M21)"><span class="icode">M668/M166+(M14/M16/M19/M21)</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0049889678" title="Клик — скопировать">A 004 988 96 78</td><td>СКОБА</td><td>1</td><td>ШЛАНГ НА КУЗОВЕ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1689970086" title="Клик — скопировать">A 168 997 00 86</td><td>Пробка (STOPFEN)</td><td>1</td><td>ЗАГЛУШКА ПАТРУБКА ПОДАЮЩЕЙ И ОБРАТНОЙ МАГИСТРАЛИ ОХЛАЖДАЮЩЕЙ ЖИДКОСТИ ДЛЯ ВОЗДУШНОГО КОМПРЕССОРА</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688690320" title="Клик — скопировать">A 168 869 03 20</td><td>Бак (BEHAELTER)</td><td>1</td><td>ОБОГРЕВ СТЕКЛООМЫВАТЕЛЯ</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2108690308" title="Клик — скопировать">A 210 869 03 08</td><td>- Крышка (ABDECKUNG)</td><td>1</td><td></td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0109971381" title="Клик — скопировать">A 010 997 13 81</td><td>втулка (TUELLE)</td><td>2</td><td>КРЫШКА</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1688300461" title="Клик — скопировать">A 168 830 04 61</td><td>Нагревательный прибор (HEIZGERAET)</td><td>1</td><td></td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2108691021" title="Клик — скопировать">A 210 869 10 21</td><td>Насос (PUMPE)</td><td>1</td><td>ОМЫВАТЕЛЬ СТЕКЛА</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1239973681" title="Клик — скопировать">A 123 997 36 81</td><td>втулка (TUELLE)</td><td>1</td><td>НАСОС К БАЧКУ</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1159970681" title="Клик — скопировать">A 115 997 06 81</td><td>втулка (TUELLE)</td><td>1</td><td>НА БАЧКЕ ЖИДКОСТИ; 23 MM</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1688600492" title="Клик — скопировать">A 168 860 04 92</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>HEATED HOSE AND NOZZLE [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M668/M166+(M14/M16/M19/M21))+875"><span class="icode">(M668/M166+(M14/M16/M19/M21))+875</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B86030000172.png", "poses": ["10", "20", "30", "40", "50", "55", "60", "65", "70", "80", "100", "110", "120", "130", "140", "150", "160", "170"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B86030000172.png", "poses": ["10", "20", "30", "40", "50", "55", "60", "65", "70", "80", "100", "110", "120", "130", "140", "150", "160", "170"], "hs": {"55": [[614, 448, 35, 29]], "170": [[1144, 391, 57, 32]], "160": [[864, 672, 49, 25]], "150": [[804, 657, 56, 32]], "140": [[742, 580, 51, 30]], "130": [[755, 333, 58, 30]], "120": [[847, 217, 57, 32]], "110": [[763, 265, 47, 24]], "100": [[833, 481, 49, 24]], "80": [[298, 259, 35, 24]], "70": [[511, 676, 57, 29]], "60": [[369, 260, 34, 30]], "50": [[312, 670, 46, 34]], "40": [[239, 667, 46, 32]], "30": [[199, 578, 46, 26]], "20": [[372, 414, 47, 32]], "10": [[289, 480, 34, 26]], "65": [[498, 298, 35, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

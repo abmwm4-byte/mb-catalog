@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">14F  Действительно для: AU</a> → 120 ВАКУУМНАЯ СИСТЕМА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/98">14F  Действительно для: AU</a> → 120 ВАКУУМНАЯ СИСТЕМА</div>
 <h1>120 ВАКУУМНАЯ СИСТЕМА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B14120000031.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B14120000031.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0001407160" title="Клик — скопировать">A 000 140 71 60</td><td>Клапан</td><td>2</td><td>ТЕРМОКЛАПАН 50 ГРАД.</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0001407260" title="Клик — скопировать">A 000 140 72 60</td><td>КЛАПАН</td><td>2</td><td>ТЕРМОКЛАПАН 50 ГРАД.</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N007603010113" title="Клик — скопировать">N 007603 010113</td><td>Уплотнительное кольцо</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N007603010112" title="Клик — скопировать">N 007603 010112</td><td>Уплотнительное кольцо</td><td>2</td><td>ВЕРХН.ЧАСТЬ ВПУСКН.КОЛЛЕКТОРА; 10 X15\-CU</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1074700893" title="Клик — скопировать">A 107 470 08 93</td><td>Клапан</td><td>1</td><td>КЛАПАН РЕГЕНЕРАЦИИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0011407960" title="Клик — скопировать">A 001 140 79 60</td><td>КЛАПАН</td><td>1</td><td>КЛАПАН РЕГЕНЕРАЦИИ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1168000378" title="Клик — скопировать">A 116 800 03 78</td><td>Обратный клапан</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0011406660" title="Клик — скопировать">A 001 140 66 60</td><td>Клапан</td><td>1</td><td>ОБРАТН. УДАР</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0011401760" title="Клик — скопировать">A 001 140 17 60</td><td>КЛАПАН</td><td>1</td><td>ОБРАТН. УДАР</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0011402060" title="Клик — скопировать">A 001 140 20 60</td><td>КЛАПАН</td><td>-</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0011405560" title="Клик — скопировать">A 001 140 55 60</td><td>КЛАПАН</td><td>1</td><td>(УПРАВЛЯЮЩИЙ КЛАПАН) Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0011405560" title="Клик — скопировать">A 001 140 55 60</td><td>КЛАПАН</td><td>1</td><td>(УПРАВЛЯЮЩИЙ КЛАПАН)</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0001581435" title="Клик — скопировать">A 000 158 14 35</td><td>Трубопровод</td><td>1</td><td>ВЕРХН.ЧАСТЬ ВПУСКН.КОЛЛЕКТОРА 670 MM; 4X1mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0001588835" title="Клик — скопировать">A 000 158 88 35</td><td>ТРУБОПРОВОД</td><td>1</td><td>ПАТРУБОК ЗАСЛОНКИ К ТЕРМОКЛАПАНУ 370 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0001588835" title="Клик — скопировать">A 000 158 88 35</td><td>ТРУБОПРОВОД</td><td>1</td><td>ТЕРМОКЛАПАН К КЛАПАНУ РЕЦИРКУЛ.ОГ 350 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0001589035" title="Клик — скопировать">A 000 158 90 35</td><td>Вакуумный трубопровод</td><td>1</td><td>ШТУЦЕР ЗАСЛОНКИ К УПРАВЛ.КЛАПАНУ 190 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0001589135" title="Клик — скопировать">A 000 158 91 35</td><td>Вакуумный трубопровод</td><td>1</td><td>ВПУСКН. КОЛЛЕКТОР К ЭЛЕКТ. ПЕРЕКЛ. КЛАПАНУ 500mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0001589335" title="Клик — скопировать">A 000 158 93 35</td><td>ТРУБОПРОВОД</td><td>1</td><td>ПАТРУБОК ЗАСЛОНКИ К ТЕРМОКЛАПАНУ 350 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0001589635" title="Клик — скопировать">A 000 158 96 35</td><td>ТРУБОПРОВОД</td><td>1</td><td>КЛАПАН РЕЦИРКУЛ. ОГ К ТЕРМОКЛАПАНУ 150mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0001589935" title="Клик — скопировать">A 000 158 99 35</td><td>Вакуумный трубопровод</td><td>1</td><td>ОТКЛЮЧ.КЛАПАН К ЭЛЕКТРОПЕРЕКЛЮЧ.КЛАПАНУ 1100 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0011580135" title="Клик — скопировать">A 001 158 01 35</td><td>Трубопровод</td><td>1</td><td>ТЕРМОКЛАПАН К УГОЛЬН.ФИЛЬТРУ 740 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0089976082" title="Клик — скопировать">A 008 997 60 82</td><td>Шланг</td><td>1</td><td>КЛАП.РЕГЕНЕРАЦ.К ПАТРУБКУ ЗАСЛОНКИ 860 MM; 6X1MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1179970582" title="Клик — скопировать">A 117 997 05 82</td><td>Шланг</td><td>1</td><td>КЛАПАН РЕЦИРКУЛЯЦИИ ОГ 60mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг</td><td>1</td><td>ВЕРХН.ЧАСТЬ ВПУСКН.КОЛЛЕКТОРА 40 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг</td><td>1</td><td>ТЕРМОКЛАПАН К КЛАП.РЕГЕНЕРАЦ. 40 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг</td><td>1</td><td>ОТКЛЮЧ.КЛАПАН К ЭЛЕКТРОПЕРЕКЛЮЧ.КЛАПАНУ 40 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1170780281" title="Клик — скопировать">A 117 078 02 81</td><td>Шланг</td><td>2</td><td>КЛАПАН РЕЦИРКУЛ. ОГ К ТЕРМОКЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1170780281" title="Клик — скопировать">A 117 078 02 81</td><td>Шланг</td><td>1</td><td>ВЕРХ.ЧАСТЬ ВПУСК.КОЛЛЕКТ,КАНАЛ: 5 [881] ДО ОКОНЧ. МОДЕЛЬНОГО ГОДА '88</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1170780281" title="Клик — скопировать">A 117 078 02 81</td><td>Шланг</td><td>1</td><td>ОТКЛЮЧ.КЛАПАН К ЭЛЕКТРОПЕРЕКЛЮЧ.КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1170780481" title="Клик — скопировать">A 117 078 04 81</td><td>Шланг</td><td>1</td><td>КЛАП.РЕГЕНЕРАЦ.К ПАТРУБКУ ЗАСЛОНКИ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>4</td><td>ПАТРУБОК ЗАСЛОНКИ К ТЕРМОКЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>1</td><td>КЛАПАН РЕЦИРКУЛЯЦИИ ОГ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>2</td><td>ШТУЦЕР ЗАСЛОНКИ К УПРАВЛ.КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>1</td><td>ТЕРМОКЛАПАН К УГОЛЬН.ФИЛЬТРУ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>2</td><td>ВПУСКН. КОЛЛЕКТОР К ЭЛЕКТ. ПЕРЕКЛ. КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг</td><td>1</td><td>ОТКЛЮЧ.КЛАПАН К ЭЛЕКТРОПЕРЕКЛЮЧ.КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A1170780681" title="Клик — скопировать">A 117 078 06 81</td><td>Шланг</td><td>1</td><td>ВПУСКН. КОЛЛЕКТОР К ЭЛЕКТ. ПЕРЕКЛ. КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1170780781" title="Клик — скопировать">A 117 078 07 81</td><td>Шланг</td><td>1</td><td>КЛАП.РЕГЕНЕРАЦ.К ПАТРУБКУ ЗАСЛОНКИ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1170780881" title="Клик — скопировать">A 117 078 08 81</td><td>Шланг</td><td>1</td><td>ТЕРМОКЛАПАН К УГОЛЬН.ФИЛЬТРУ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 39 · подписано на схемах: 39 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14120000031.png", "poses": ["5", "8", "14", "17", "23", "29", "35", "41", "44", "47", "50", "59", "62", "65", "71", "80", "83", "92", "95", "98", "101", "104"]}];</script><script>
+<p class="muted">Позиций: 39 · подписано на схемах: 39 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14120000031.png", "poses": ["5", "8", "14", "17", "23", "29", "35", "41", "44", "47", "50", "59", "62", "65", "71", "80", "83", "92", "95", "98", "101", "104"], "hs": {"44": [[338, 81, 33, 17]], "23": [[704, 352, 33, 17]], "35": [[644, 196, 33, 17]], "14": [[322, 547, 33, 17]], "47": [[360, 383, 33, 17]], "59": [[245, 230, 33, 17]], "17": [[428, 244, 33, 17]], "29": [[530, 319, 33, 17], [394, 206, 33, 17], [440, 168, 33, 17], [252, 132, 33, 17], [174, 73, 33, 17]], "101": [[620, 431, 33, 17]], "104": [[765, 132, 33, 17]], "5": [[285, 403, 33, 17]], "80": [[765, 80, 33, 17], [477, 273, 33, 17], [400, 257, 33, 17], [412, 136, 33, 17]], "8": [[289, 425, 33, 17]], "92": [[360, 514, 33, 17]], "71": [[800, 333, 33, 17]], "50": [[717, 208, 33, 17]], "83": [[704, 420, 33, 17], [578, 262, 33, 17], [406, 42, 33, 17]], "95": [[622, 13, 33, 17], [673, 299, 33, 17], [643, 312, 33, 17], [554, 434, 33, 17], [226, 544, 33, 17], [251, 353, 33, 17], [268, 335, 33, 17], [544, 139, 33, 17], [506, 91, 33, 17], [48, 208, 33, 17], [96, 195, 33, 17]], "62": [[735, 21, 33, 17], [224, 442, 33, 17]], "41": [[601, 385, 33, 17]], "65": [[436, 487, 33, 17]], "98": [[429, 326, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

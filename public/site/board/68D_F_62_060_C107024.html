@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107024">68D BIS 09/85 Действительно для: CA, US</a> → 060 ПЕРЕД. ЭЛЕМ. ЖЕСТКОСТИ И ОПОРА РАДИАТОРА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">68D BIS 09/85 Действительно для: CA, US</a> → 060 ПЕРЕД. ЭЛЕМ. ЖЕСТКОСТИ И ОПОРА РАДИАТОРА</div>
 <h1>060 ПЕРЕД. ЭЛЕМ. ЖЕСТКОСТИ И ОПОРА РАДИАТОРА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B62060000146.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B62060000146.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200286" title="Клик — скопировать">A 107 620 02 86</td><td>- КРОНШТЕЙН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200686" title="Клик — скопировать">A 107 620 06 86</td><td>- Поперечина</td><td>1</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200486" title="Клик — скопировать">A 107 620 04 86</td><td>- КРОНШТЕЙН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200786" title="Клик — скопировать">A 107 620 07 86</td><td>- КРОНШТЕЙН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200686" title="Клик — скопировать">A 107 620 06 86</td><td>- Поперечина</td><td>1</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076200967" title="Клик — скопировать">A 107 620 09 67</td><td>- Ответная пластина замка</td><td>1</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076201067" title="Клик — скопировать">A 107 620 10 67</td><td>- ПАНЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1076261130" title="Клик — скопировать">A 107 626 11 30</td><td>- Ответная пластина замка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1076261116" title="Клик — скопировать">A 107 626 11 16</td><td>- Усиливающий элемент</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1076261216" title="Клик — скопировать">A 107 626 12 16</td><td>- Усиливающий элемент</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A1076200511" title="Клик — скопировать">A 107 620 05 11</td><td>- Крепежная пластина</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1076200414" title="Клик — скопировать">A 107 620 04 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1076201516" title="Клик — скопировать">A 107 620 15 16</td><td>- Усиливающий элемент</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1076201616" title="Клик — скопировать">A 107 620 16 16</td><td>- Усиливающий элемент</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1076201514" title="Клик — скопировать">A 107 620 15 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>СПЕРЕДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076200372" title="Клик — скопировать">A 107 620 03 72</td><td>- Усиливающий элемент</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076200672" title="Клик — скопировать">A 107 620 06 72</td><td>- Усиливающий элемент</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200536" title="Клик — скопировать">A 107 620 05 36</td><td>	- ДЕТАЛЬ УПРАВЛЕНИЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200736" title="Клик — скопировать">A 107 620 07 36</td><td>	- Проводящая деталь</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200636" title="Клик — скопировать">A 107 620 06 36</td><td>	- ДЕТАЛЬ УПРАВЛЕНИЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1076200836" title="Клик — скопировать">A 107 620 08 36</td><td>	- Проводящая деталь</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1076260133" title="Клик — скопировать">A 107 626 01 33</td><td>- СКОБА</td><td>1</td><td>(TOWING BRACKET) ON RIGHT FRONT SIDE MEMBER</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1076260040" title="Клик — скопировать">A 107 626 00 40</td><td>Крышка</td><td>1</td><td>ЗАМОК КАПОТА [016] FROM CHASSIS 024 000001 044 002411</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0009873360" title="Клик — скопировать">A 000 987 33 60</td><td>ПОДКЛАДНАЯ РЕЗИНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1076260097" title="Клик — скопировать">A 107 626 00 97</td><td>ПОДКЛАДКА</td><td>1</td><td>[016] FROM CHASSIS 024 000001 044 002411</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N007985006157" title="Клик — скопировать">N 007985 006157</td><td>Винт</td><td>1</td><td>M6X12 [016] FROM CHASSIS 024 000001 044 002411</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1076230419" title="Клик — скопировать">A 107 623 04 19</td><td>Распорка</td><td>1</td><td>МЕЖДУ ТРАВЕРСОЙ СПЕРЕДИ И УСИЛИТ.СПЕРЕДИ В ЦЕНТРЕ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N007985006128" title="Клик — скопировать">N 007985 006128</td><td>Винт</td><td>1</td><td>ПЕРЕБОРКА НА УСИЛИТ. СПЕРЕДИ В ЦЕНТРЕ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N914126006001" title="Клик — скопировать">N 914126 006001</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N910105006002" title="Клик — скопировать">N 910105 006002</td><td>Винт с 6-гранной головкой</td><td>1</td><td>ПЕРЕБОРКА НА УСИЛИТ. СПЕРЕДИ В ЦЕНТРЕ; M6X12</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N009021006205" title="Клик — скопировать">N 009021 006205</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба</td><td>1</td><td>6 MM [016] FROM CHASSIS 024 000001 044 002411</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>1</td><td>[016] FROM CHASSIS 024 000001 044 002411</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>2</td><td>ПЕРЕБОРКА НА УСИЛИТ. СПЕРЕДИ В ЦЕНТРЕ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1159840022" title="Клик — скопировать">A 115 984 00 22</td><td>ПЛОСКАЯ ГАЙКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="N913008006300" title="Клик — скопировать">N 913008 006300</td><td>Гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076200485" title="Клик — скопировать">A 107 620 04 85</td><td>РАСПОРКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1076200285" title="Клик — скопировать">A 107 620 02 85</td><td>Распорка</td><td>1</td><td>BETWEEN STIFFENING AND END PIECE</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N914126006001" title="Клик — скопировать">N 914126 006001</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N910105006002" title="Клик — скопировать">N 910105 006002</td><td>Винт с 6-гранной головкой</td><td>4</td><td>M6X12</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076262714" title="Клик — скопировать">A 107 626 27 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ФИЛЬТР С АКТИВИРОВАННЫМ УГЛЁМ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 41 · подписано на схемах: 41 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B62060000146.png", "poses": ["5", "8", "10", "12", "14", "15", "20", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "59", "62", "65", "68", "71"]}];</script><script>
+<p class="muted">Позиций: 41 · подписано на схемах: 41 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B62060000146.png", "poses": ["5", "8", "10", "12", "14", "15", "20", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "59", "62", "65", "68", "71"], "hs": {"44": [[169, 403, 33, 17]], "12": [[677, 373, 33, 17]], "56": [[55, 333, 33, 17]], "68": [[367, 152, 33, 17]], "35": [[369, 232, 33, 17]], "14": [[519, 158, 33, 17]], "47": [[86, 377, 33, 17]], "15": [[687, 316, 33, 17]], "59": [[65, 438, 33, 17]], "38": [[118, 373, 33, 17]], "29": [[62, 274, 33, 17]], "5": [[571, 400, 33, 17]], "8": [[517, 425, 33, 17]], "71": [[309, 413, 33, 17]], "50": [[26, 347, 33, 17]], "62": [[94, 434, 33, 17]], "41": [[182, 349, 33, 17]], "20": [[579, 187, 33, 17]], "53": [[29, 447, 33, 17]], "65": [[481, 290, 33, 17]], "10": [[729, 406, 33, 17]], "32": [[252, 437, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

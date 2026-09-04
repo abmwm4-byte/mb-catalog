@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107042">048 BIS 09/85</a> → Z  11.255 ELEC. PARTS FOR TEMPMATIK</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/96">048 BIS 09/85</a> → Z  11.255 ELEC. PARTS FOR TEMPMATIK</div>
 <h1>Z  11.255 ELEC. PARTS FOR TEMPMATIK</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S01125500001 <span class="hint">(7)</span></button><button data-i="1" class="">S01125500002 <span class="hint">(18)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01125500001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01125500001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="89"><td>89</td><td class="pn" data-raw="A0085453728" title="Клик — скопировать">A 008 545 37 28</td><td>- Сцепление, механическое</td><td>1</td><td>ИСПАРИТЕЛЬ; 2\-PIN Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="A0085453828" title="Клик — скопировать">A 008 545 38 28</td><td>- Верхняя часть корпуса</td><td>1</td><td>TO 008 545 37 28 Z  11.255/04, Z  11.255/05, Z  11.255/06</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>- Наружный круглый штекер</td><td>-</td><td>Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка</td><td>2</td><td>TO 008 545 37 28; 0.35\-4.0 MM2 RK4 Z  11.255/04, Z  11.255/05, Z  11.255/06</td><td class="restr"></td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0015453726" title="Клик — скопировать">A 001 545 37 26</td><td>- Розетка</td><td>-</td><td>Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>- Наружный круглый штекер</td><td>-</td><td>Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="166"><td>166</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка</td><td>NB</td><td>TO 006 545 80 28,011 545 85 28,         126 545 01 28; 0.35\-4.0 MM2 RK4 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="208"><td>208</td><td class="pn" data-raw="A0115455128" title="Клик — скопировать">A 011 545 51 28</td><td>- Сцепление, механическое</td><td>1</td><td>SWITCHGEAR, 4\-POLE; 4\-PIN RK2.5 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="243"><td>243</td><td class="pn" data-raw="A0015452826" title="Клик — скопировать">A 001 545 28 26</td><td>- Штекерная втулка</td><td>-</td><td>Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="243"><td>243</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>NB</td><td>TO 010 545 10 28,011 545 51 28; 0.35\-2.5 MM2 RK2.5 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="264"><td>264</td><td class="pn" data-raw="A0085450828" title="Клик — скопировать">A 008 545 08 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>INCREASE IN NUMBER OF REVOLUTIONS, 2\-POLE; 2\-PIN RK4 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/05, Z  11.255/06</td><td class="restr"></td></tr><tr data-pos="271"><td>271</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>- Крышка</td><td>1</td><td>TO 008 545 08 28; 2\-PIN RK4. Z  11.255/06</td><td class="restr"></td></tr><tr data-pos="279"><td>279</td><td class="pn" data-raw="A0008212626" title="Клик — скопировать">A 000 821 26 26</td><td>- Сцепление, механическое</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ КОМПРЕССОРА Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="279"><td>279</td><td class="pn" data-raw="A0008212626" title="Клик — скопировать">A 000 821 26 26</td><td>- Сцепление, механическое</td><td>1</td><td>CIRCULATING AIR SWITCH; 7\-POLE Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="284"><td>284</td><td class="pn" data-raw="A0008210738" title="Клик — скопировать">A 000 821 07 38</td><td>- Крышка</td><td>2</td><td>TO 000 821 26 26 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A0015454426" title="Клик — скопировать">A 001 545 44 26</td><td>- Контактная втулка</td><td>NB</td><td>TO 008 545 08 28,000 821 26 26; 0.35\-6.0 MM2 RK4.0 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="317"><td>317</td><td class="pn" data-raw="A0005460445" title="Клик — скопировать">A 000 546 04 45</td><td>- Изоляционная втулка</td><td>2</td><td>РЕЛЕ НИЗКОГО ДАВЛЕНИЯ Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="324"><td>324</td><td class="pn" data-raw="A0005468340" title="Клик — скопировать">A 000 546 83 40</td><td>- Штекерная втулка</td><td>2</td><td>РЕЛЕ НИЗКОГО ДАВЛЕНИЯ; 0.5\-1.0 MM2 FF6.3 Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="331"><td>331</td><td class="pn" data-raw="A0005460845" title="Клик — скопировать">A 000 546 08 45</td><td>- Изоляционная втулка</td><td>2</td><td>ВЫКЛЮЧАТ. ЗАЩИТЫ ОТ ОБЛЕДЕН. Z  11.255/04, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="338"><td>338</td><td class="pn" data-raw="A0005464340" title="Клик — скопировать">A 000 546 43 40</td><td>- ПЛОСКИЙ ШТЕКЕР</td><td>2</td><td>ВЫКЛЮЧАТ. ЗАЩИТЫ ОТ ОБЛЕДЕН.; 1\-2.5 MM2 Z  11.255/04, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="345"><td>345</td><td class="pn" data-raw="A1079971581" title="Клик — скопировать">A 107 997 15 81</td><td>- втулка</td><td>1</td><td>Рулевое управление: Влево Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="445"><td>445</td><td class="pn" data-raw="N007985005157" title="Клик — скопировать">N 007985 005157</td><td>Винт</td><td>1</td><td>ЖГУТ ЭЛ.ПРОВОДКИ К СОЕДИНИТ.ПРОВОДОВ; M5X10\-4.8 Z  11.255/01, Z  11.255/02, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="451"><td>451</td><td class="pn" data-raw="N912004005100" title="Клик — скопировать">N 912004 005100</td><td>Пружинное кольцо</td><td>1</td><td>ЖГУТ ЭЛ.ПРОВОДКИ К СОЕДИНИТ.ПРОВОДОВ Z  11.255/01, Z  11.255/02, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos="489"><td>489</td><td class="pn" data-raw="A0029884878" title="Клик — скопировать">A 002 988 48 78</td><td>Скоба</td><td>1</td><td>ЭЛЕКТРОРАЗЪЕМ МУФТЫ ВЕНТИЛЯТОРА Z  11.255/01, Z  11.255/02, Z  11.255/03, Z  11.255/04, Z  11.255/05, Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1075403408" title="Клик — скопировать">A 107 540 34 08</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>TEMPMATIK CABLE HARNESS Z  11.255/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1075409208" title="Клик — скопировать">A 107 540 92 08</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>TEMPMATIK CABLE HARNESS Z  11.255/06</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0005450745" title="Клик — скопировать">A 000 545 07 45</td><td>- Защитный колпачок</td><td>1</td><td>ВЫКЛЮЧАТ. ЗАЩИТЫ ОТ ОБЛЕДЕН. Z  11.255/06, Z  11.255/07</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 27 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01125500001.png", "poses": ["89", "96", "103", "264", "271", "290", "489"]}, {"png": "../../img_png/drawing_S01125500002.png", "poses": ["89", "96", "103", "166", "208", "243", "264", "271", "279", "284", "290", "317", "324", "331", "338", "345", "445", "451"]}];</script><script>
+<p class="muted">Позиций: 27 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01125500001.png", "poses": ["89", "96", "103", "264", "271", "290", "489"], "hs": {"264": [[186, 452, 33, 17]], "89": [[69, 406, 33, 17]], "103": [[127, 427, 33, 17]], "489": [[143, 475, 33, 17]], "290": [[263, 400, 33, 17]], "271": [[263, 436, 33, 17]], "96": [[63, 363, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S01125500002.png", "poses": ["89", "96", "103", "166", "208", "243", "264", "271", "279", "284", "290", "317", "324", "331", "338", "345", "445", "451"], "hs": {"89": [[39, 415, 33, 17]], "290": [[331, 45, 33, 17], [193, 409, 33, 17]], "271": [[229, 435, 33, 17]], "284": [[315, 69, 33, 17]], "264": [[155, 447, 33, 17]], "451": [[575, 194, 33, 17]], "166": [[28, 175, 33, 17], [479, 383, 33, 17]], "243": [[198, 35, 33, 17], [438, 52, 33, 17]], "331": [[259, 57, 33, 17], [129, 97, 33, 17]], "103": [[112, 384, 33, 17]], "345": [[437, 427, 33, 17]], "279": [[314, 22, 33, 17]], "324": [[106, 134, 33, 17]], "445": [[576, 176, 33, 17]], "338": [[286, 74, 33, 17], [149, 112, 33, 17]], "317": [[74, 120, 33, 17]], "208": [[186, 112, 33, 17]], "96": [[40, 382, 33, 17]]}, "w": 884, "h": 668}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

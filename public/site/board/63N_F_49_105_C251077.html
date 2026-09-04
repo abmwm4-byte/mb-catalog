@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251077">63N -/-</a> → 105 ВОЗДУШНЫЙ НАСОС</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/400">63N -/-</a> → 105 ВОЗДУШНЫЙ НАСОС</div>
 <h1>105 ВОЗДУШНЫЙ НАСОС</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B49105000024.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B49105000024.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0001404285" title="Клик — скопировать">A 000 140 42 85</td><td>Воздушный насос (AIR PUMP)</td><td>1</td><td>ВОЗДУШН. НАСОС ЭЛЕКТРИЧ.</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0001405785" title="Клик — скопировать">A 000 140 57 85</td><td>Воздушный насос (AIR PUMP)</td><td>1</td><td>ВОЗДУШН. НАСОС ЭЛЕКТРИЧ.</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A1709880011" title="Клик — скопировать">A 170 988 00 11</td><td>Буфер (BUFFER)</td><td>3</td><td>ВОЗДУШ. НАСОС НА КРОНШТЕЙН</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N913023006001" title="Клик — скопировать">N 913023 006001</td><td>Гайка (NUT)</td><td>3</td><td>КРОНШТЕЙН К КРОНШТЕЙНУ; M6</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0009880220" title="Клик — скопировать">A 000 988 02 20</td><td>Демпфер (DAMPER)</td><td>3</td><td>ОПОРА ВОЗДУШ. НАСОСА</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0001420353" title="Клик — скопировать">A 000 142 03 53</td><td>Проставочная трубка (SPACER TUBE)</td><td>3</td><td>ОПОРА ВОЗДУШ. НАСОСА</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="N910143006004" title="Клик — скопировать">N 910143 006004</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>3</td><td>ВОЗД.НАСОС К КРОНШТЕЙНУ; M6X30</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1562370240" title="Клик — скопировать">A 156 237 02 40</td><td>Держатель (HOLDER)</td><td>1</td><td>ВОЗДУШНЫЙ НАСОС [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A0001420253" title="Клик — скопировать">A 000 142 02 53</td><td>- РАСПОРН. ТРУБКА</td><td>3</td><td>ОПОРА ВОЗДУШ. НАСОСА [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1562370340" title="Клик — скопировать">A 156 237 03 40</td><td>Держатель (HOLDER)</td><td>1</td><td>ВОЗДУШНЫЙ НАСОС [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A1562300540" title="Клик — скопировать">A 156 230 05 40</td><td>Держатель (HOLDER)</td><td>1</td><td>ВОЗДУШ. НАСОС НА КОМПРЕССОР [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A1705060041" title="Клик — скопировать">A 170 506 00 41</td><td>- хомут (CLAMP)</td><td>1</td><td>ФАСОНН. ШЛАНГ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0059976290" title="Клик — скопировать">A 005 997 62 90</td><td>- Кабельная стяжка (CABLE STRAP)</td><td>1</td><td>К КРОНШТЕЙНУ; 260X3.3MM</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A6040940085" title="Клик — скопировать">A 604 094 00 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>К КРОНШТЕЙНУ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="N910112008000" title="Клик — скопировать">N 910112 008000</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>К КРОНШТЕЙНУ; M8</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="N000000005293" title="Клик — скопировать">N 000000 005293</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>К КРОНШТЕЙНУ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1562380782" title="Клик — скопировать">A 156 238 07 82</td><td>Шланг (HOSE)</td><td>1</td><td>ВТОРИЧ.ВОЗДУХ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1562380040" title="Клик — скопировать">A 156 238 00 40</td><td>Держатель (HOLDER)</td><td>1</td><td>КРЕПЛЕНИЕ ШЛАНГА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; M6X12</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0099880978" title="Клик — скопировать">A 009 988 09 78</td><td>Скоба (CLAMP)</td><td>1</td><td>КРЕПЛЕНИЕ ШЛАНГА</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A1705060041" title="Клик — скопировать">A 170 506 00 41</td><td>хомут (CLAMP)</td><td>1</td><td>КРЕПЛЕНИЕ ШЛАНГА</td><td class="restr" data-expr="M156+M63"><span class="icode">M156+M63</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49105000024.png", "poses": ["300", "310", "320", "330", "340", "350", "360", "365", "370", "380", "390", "400", "410", "420", "450", "460", "470", "480", "490"]}];</script><script>
+<p class="muted">Позиций: 21 · подписано на схемах: 21 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49105000024.png", "poses": ["300", "310", "320", "330", "340", "350", "360", "365", "370", "380", "390", "400", "410", "420", "450", "460", "470", "480", "490"], "hs": {"390": [[428, 417, 48, 30]], "380": [[551, 220, 48, 30]], "490": [[163, 323, 48, 30]], "370": [[970, 169, 48, 30]], "480": [[163, 214, 48, 29]], "360": [[1082, 456, 48, 30]], "470": [[319, 380, 48, 29]], "350": [[839, 301, 48, 29]], "460": [[258, 450, 48, 30]], "340": [[839, 349, 48, 29]], "450": [[370, 534, 48, 29]], "330": [[831, 410, 48, 30]], "320": [[743, 472, 48, 30]], "310": [[834, 588, 48, 30]], "365": [[1162, 537, 48, 30]], "420": [[673, 333, 48, 30]], "300": [[1082, 728, 48, 30]], "410": [[631, 220, 48, 29]], "400": [[435, 249, 48, 30]]}, "w": 1326, "h": 951}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

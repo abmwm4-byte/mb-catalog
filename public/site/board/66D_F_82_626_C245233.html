@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C245233">66D -/-</a> → 626 ЖГУТЫ ЭЛ.ПРОВОДКИ ДЛЯ А/М ТАКСИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/906">66D -/-</a> → 626 ЖГУТЫ ЭЛ.ПРОВОДКИ ДЛЯ А/М ТАКСИ</div>
 <h1>626 ЖГУТЫ ЭЛ.ПРОВОДКИ ДЛЯ А/М ТАКСИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82626000013.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82626000013.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2038201215" title="Клик — скопировать">A 203 820 12 15</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ЭКСТР. СИГНАЛИЗ. ТАКСИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0005453714" title="Клик — скопировать">A 000 545 37 14</td><td>- ВЫКЛЮЧАТЕЛЬ</td><td>1</td><td>ЭКСТР. СИГНАЛИЗ. ТАКСИ S62/6</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0019845929" title="Клик — скопировать">A 001 984 59 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>2</td><td>КРЕПЛЕНИЕ ВЫКЛЮЧАТЕЛЯ; M4X20 [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0019845829" title="Клик — скопировать">A 001 984 58 29</td><td>Болт с головкой торкс (HEXALOBULAR BOLT)</td><td>2</td><td>КРЕПЛЕНИЕ ВЫКЛЮЧАТЕЛЯ; 4X16</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1698202215" title="Клик — скопировать">A 169 820 22 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>ЗНАК НА КРЫШЕ ТАКСИ Рулевое управление: Влево</td><td class="restr" data-expr="342"><span class="icode">342</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A0019877346" title="Клик — скопировать">A 001 987 73 46</td><td>Уплотнительный шнур</td><td>NB</td><td>КРЕПЛЕНИЕ ПРОВОДКИ Рулевое управление: Влево</td><td class="restr" data-expr="342"><span class="icode">342</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2038200237" title="Клик — скопировать">A 203 820 02 37</td><td>Комплект штекера (PARTS KIT, PLUG)</td><td>1</td><td>ТАКСИ ИЛИ ПОДГОТОВКА ДЛЯ ПРОКАТН. А/М [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="450/965"><span class="icode">450/965</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0375451328" title="Клик — скопировать">A 037 545 13 28</td><td>Штекер (PLUG)</td><td>1</td><td>ТАКСИ ИЛИ ПОДГОТОВКА ДЛЯ ПРОКАТН. А/М; 2\-PIN SLK2.8 Рулевое управление: Влево</td><td class="restr" data-expr="(450/965)+810"><span class="icode">(450/965)+810</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0069890285" title="Клик — скопировать">A 006 989 02 85</td><td>Отрез клейкой ленты (ADHESIVE TAPE PRECUT PART)</td><td>3</td><td>КРЕПЛЕНИЕ АНТЕНН. ПРОВОДА; 75 X 40 MM</td><td class="restr" data-expr="356+(510/511/512/520/523/525/527/533)"><span class="icode">356+(510/511/512/520/523/525/527/533)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698201015" title="Клик — скопировать">A 169 820 10 15</td><td>Электрический жгут</td><td>1</td><td>АНТЕННЫЙ ПРОВОД РАДИОСТАНЦИИ ТАКСИ</td><td class="restr" data-expr="356"><span class="icode">356</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698203515" title="Клик — скопировать">A 169 820 35 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>АНТЕННЫЙ ПРОВОД РАДИОСТАНЦИИ ТАКСИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356"><span class="icode">356</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698204615" title="Клик — скопировать">A 169 820 46 15</td><td>Электрический провод</td><td>1</td><td>АНТЕННЫЙ ПРОВОД РАДИОСТАНЦИИ ТАКСИ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356+941+-386"><span class="icode">356+941+-386</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698204615" title="Клик — скопировать">A 169 820 46 15</td><td>Электрический провод</td><td>1</td><td>Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356+335+-386"><span class="icode">356+335+-386</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698202015" title="Клик — скопировать">A 169 820 20 15</td><td>Электрический жгут</td><td>1</td><td></td><td class="restr" data-expr="(450/965)+(525/527/356)+-941"><span class="icode">(450/965)+(525/527/356)+-941</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698205015" title="Клик — скопировать">A 169 820 50 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(450/965)+-(511/512/525/527)+356+941+-800"><span class="icode">(450/965)+-(511/512/525/527)+356+941+-800</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1698205015" title="Клик — скопировать">A 169 820 50 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>АНТЕНН. ПРОВОД Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(335/334+335)+356"><span class="icode">(335/334+335)+356</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1698202115" title="Клик — скопировать">A 169 820 21 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>АДАПТЕР ПРОВОДА АНТЕННЫ Рулевое управление: Влево</td><td class="restr" data-expr="356+(520/523/525/527/533)"><span class="icode">356+(520/523/525/527/533)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1698203215" title="Клик — скопировать">A 169 820 32 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>АДАПТЕР ПРОВОДА АНТЕННЫ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356+(520/523/525/527/533)"><span class="icode">356+(520/523/525/527/533)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1698204715" title="Клик — скопировать">A 169 820 47 15</td><td>Электрический провод (ELECTRIC LINE)</td><td>1</td><td>АДАПТЕР ПРОВОДА АНТЕННЫ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356+(510/511/512/520/523/525/527/533)"><span class="icode">356+(510/511/512/520/523/525/527/533)</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1688210397" title="Клик — скопировать">A 168 821 03 97</td><td>Шланг (HOSE)</td><td>1</td><td>АНТЕННЫЙ РАЗВЕТВИТЕЛЬ Рулевое управление: Влево</td><td class="restr" data-expr="356+(510/511/512/520/523/525/527/533)"><span class="icode">356+(510/511/512/520/523/525/527/533)</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0335456728" title="Клик — скопировать">A 033 545 67 28</td><td>Штекер (PLUG)</td><td>1</td><td>РАЗЪЕМ ЭКСТР. ТРЕВ. СИГНАЛ./КЛАВИШИ СРАБАТЫВАНИЯ X42/8; 2\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0305452828" title="Клик — скопировать">A 030 545 28 28</td><td>Штекер (PLUG)</td><td>1</td><td>РАЗЪЕМ ЭКСТР. ТРЕВ. СИГНАЛ./КЛАВИШИ СРАБАТЫВАНИЯ X42/8; 2\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0325453928" title="Клик — скопировать">A 032 545 39 28</td><td>Вилочный обжимной контакт (CRIMP TML. PIN CONTACT)</td><td>NB</td><td>РАЗЪЕМ ЭКСТР. ТРЕВ. СИГНАЛ./КЛАВИШИ СРАБАТЫВАНИЯ X42/8; 0.5\-0.75 MM2 MQS</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>РАЗЪЕМ ЭКСТР. ТРЕВ. СИГНАЛ./КЛАВИШИ СРАБАТЫВАНИЯ X42/8,TO A0305452828; 0.25\-0.35 MM2 MQS</td><td class="restr"></td></tr><tr data-pos="906"><td>906</td><td class="pn" data-raw="A0375451128" title="Клик — скопировать">A 037 545 11 28</td><td>Штекер (PLUG)</td><td>1</td><td>МЕСТО ОТСОЕДИН. ЗНАКА\-ФОНАРЯ НА КРЫШЕ X40/2; 2\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="907"><td>907</td><td class="pn" data-raw="A0135451526" title="Клик — скопировать">A 013 545 15 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>МЕСТО ОТСОЕДИН. ЗНАКА\-ФОНАРЯ НА КРЫШЕ X40/2; 0.5\-0.75 MM2 SLK2.8</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82626000013.png", "poses": ["10", "20", "30", "50", "55", "70", "80", "100", "120", "150", "200", "900", "905", "906", "907"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82626000013.png", "poses": ["10", "20", "30", "50", "55", "70", "80", "100", "120", "150", "200", "900", "905", "906", "907"], "hs": {"55": [[1224, 319, 34, 29]], "907": [[597, 385, 48, 30]], "150": [[934, 846, 48, 29]], "120": [[958, 644, 48, 30]], "100": [[699, 378, 48, 29]], "200": [[1154, 580, 48, 30]], "80": [[444, 815, 34, 29]], "70": [[232, 856, 34, 30]], "900": [[523, 321, 48, 30]], "50": [[859, 437, 35, 29]], "30": [[563, 805, 34, 30]], "20": [[553, 655, 34, 29]], "905": [[520, 288, 48, 30]], "10": [[459, 427, 34, 30]], "906": [[602, 417, 48, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

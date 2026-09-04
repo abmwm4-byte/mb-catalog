@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107025">048 BIS 09/85</a> → Z  56.426 BECKER RADIO SET &quot;GRAND PRIX CASSETTE ELECTRONIC&quot; AND &quot;ALPINE&quot; RADIO SET (FOR TYPE R 129 SEE STANDARD VERSION)</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/87">048 BIS 09/85</a> → Z  56.426 BECKER RADIO SET &quot;GRAND PRIX CASSETTE ELECTRONIC&quot; AND &quot;ALPINE&quot; RADIO SET (FOR TYPE R 129 SEE STANDARD VERSION)</div>
 <h1>Z  56.426 BECKER RADIO SET &quot;GRAND PRIX CASSETTE ELECTRONIC&quot; AND &quot;ALPINE&quot; RADIO SET (FOR TYPE R 129 SEE STANDARD VERSION)</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05642600001 <span class="hint">(8)</span></button><button data-i="1" class="">S05642600002 <span class="hint">(8)</span></button><button data-i="2" class="">S05642600003 <span class="hint">(6)</span></button><button data-i="3" class="">S05642600004 <span class="hint">(9)</span></button><button data-i="4" class="">S05642600005 <span class="hint">(16)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05642600001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05642600001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0028208686" title="Клик — скопировать">A 002 820 86 86</td><td>АУДИОМОДУЛЬ К-Т</td><td>1</td><td>Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A0015450434" title="Клик — скопировать">A 001 545 04 34</td><td>- ПРЕДОХРАНИТЕЛЬ</td><td>1</td><td>TO 001 820 66 86 Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/05, Z  56.426/06, Z  56.426/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1268208015" title="Клик — скопировать">A 126 820 80 15</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>ЭЛ.ПИТАНИЕ АУДИОСИСТ. Z  56.426/05, Z  56.426/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [851] UP TO END OF MODEL YEAR'85 [419] ДЕТАЛЬ СЛЕДУЕТ ЗАДОКУМЕНТИРОВАТЬ В СИСТЕМЕ VEDOC</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1238205104" title="Клик — скопировать">A 123 820 51 04</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>FRONT LOUDSPEAKER AND FADER CONTROL Z  56.426/02, Z  56.426/03, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="B66828920" title="Клик — скопировать">B66828920</td><td>ДИНАМИК</td><td>2</td><td>СПЕРЕДИ Z  56.426/05, Z  56.426/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1078270140" title="Клик — скопировать">A 107 827 01 40</td><td>ПАНЕЛЬ</td><td>2</td><td>ДИНАМИК СПЕРЕДИ Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N007981004244" title="Клик — скопировать">N 007981 004244</td><td>Шуруп</td><td>-</td><td>Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>Шуруп</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; MBN 10169 4.2 X 13 Z  56.426/01, Z  56.426/04, Z  56.426/05, Z  56.426/06 [005] UP TO CHASSIS 123.033       115267 123.053       029143 123.123       415726 123.130       310662 123.133       036393 123.153       004059 123.190,193 F 000126</td><td class="restr"></td></tr><tr data-pos="63"><td>63</td><td class="pn" data-raw="N000125005311" title="Клик — скопировать">N 000125 005311</td><td>Шайба</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1078201017" title="Клик — скопировать">A 107 820 10 17</td><td>ЭЛ. ПРОВОД</td><td>1</td><td>REAR END LOUDSPEAKER CONNECTION Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1869970681" title="Клик — скопировать">A 186 997 06 81</td><td>втулка</td><td>2</td><td>LOUDSPEAKER CABLE THRU REAR SEAT BACK PANEL; 28MM Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="B66828923" title="Клик — скопировать">B66828923</td><td>ДИНАМИК</td><td>2</td><td>ДИНАМИК СЗАДИ Z  56.426/02, Z  56.426/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="N007983002237" title="Клик — скопировать">N 007983 002237</td><td>Шуруп</td><td>-</td><td>Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="N007982003261" title="Клик — скопировать">N 007982 003261</td><td>Шуруп</td><td>6</td><td>LOUDSPEAKER с  COVERING TO HAT TRAY Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A0038204010" title="Клик — скопировать">A 003 820 40 10</td><td>Регулятор</td><td>1</td><td>Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A1239942145" title="Клик — скопировать">A 123 994 21 45</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="139"><td>139</td><td class="pn" data-raw="A1158200029" title="Клик — скопировать">A 115 820 00 29</td><td>ПОДПОРКА</td><td>1</td><td>АУДИОМОДУЛЬ Z  56.426/05, Z  56.426/06</td><td class="restr"></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>Винт с 6-гранной головкой</td><td>1</td><td>GROUND CONNECTION TO RADIO SET Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/05, Z  56.426/06, Z  56.426/07</td><td class="restr"></td></tr><tr data-pos="147"><td>147</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>1</td><td>GROUND CONNECTION TO RADIO SET Z  56.426/01, Z  56.426/02, Z  56.426/03, Z  56.426/04, Z  56.426/05, Z  56.426/06, Z  56.426/07</td><td class="restr"></td></tr><tr data-pos="151"><td>151</td><td class="pn" data-raw="A0008201612" title="Клик — скопировать">A 000 820 16 12</td><td>Крышка</td><td>2</td><td>ДИНАМИК СЗАДИ Z  56.426/06</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 20 · подписано на схемах: 20 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05642600001.png", "poses": ["5", "7", "23", "59", "131", "135", "143", "147"]}, {"png": "../../img_png/drawing_S05642600002.png", "poses": ["31", "59", "87", "131", "135", "143", "147", "151"]}, {"png": "../../img_png/drawing_S05642600003.png", "poses": ["31", "59", "131", "135", "143", "147"]}, {"png": "../../img_png/drawing_S05642600004.png", "poses": ["23", "51", "55", "59", "63", "135", "139", "143", "147"]}, {"png": "../../img_png/drawing_S05642600005.png", "poses": ["23", "31", "51", "55", "59", "63", "75", "79", "87", "103", "131", "135", "139", "143", "147", "151"]}];</script><script>
+<p class="muted">Позиций: 20 · подписано на схемах: 20 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05642600001.png", "poses": ["5", "7", "23", "59", "131", "135", "143", "147"], "hs": {"143": [[935, 578, 40, 25]], "23": [[527, 797, 29, 25]], "135": [[945, 842, 40, 27]], "59": [[408, 534, 28, 25]], "147": [[975, 599, 40, 26]], "5": [[1160, 558, 16, 27]], "7": [[1043, 601, 23, 25]], "131": [[872, 532, 40, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05642600002.png", "poses": ["31", "59", "87", "131", "135", "143", "147", "151"], "hs": {"143": [[903, 498, 42, 24]], "135": [[890, 819, 42, 27]], "59": [[293, 580, 28, 25]], "147": [[939, 517, 40, 28]], "151": [[278, 304, 42, 25]], "31": [[433, 716, 28, 26]], "87": [[272, 383, 31, 28]], "131": [[849, 536, 40, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05642600003.png", "poses": ["31", "59", "131", "135", "143", "147"], "hs": {"143": [[873, 494, 43, 24]], "135": [[885, 764, 44, 25]], "59": [[194, 552, 30, 24]], "147": [[913, 511, 42, 25]], "31": [[733, 757, 32, 24]], "131": [[849, 569, 41, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05642600004.png", "poses": ["23", "51", "55", "59", "63", "135", "139", "143", "147"], "hs": {"55": [[384, 521, 30, 24]], "143": [[549, 575, 40, 24]], "23": [[660, 760, 28, 26]], "135": [[497, 785, 40, 26]], "59": [[580, 508, 30, 27]], "147": [[587, 598, 40, 24]], "139": [[442, 746, 42, 27]], "51": [[285, 362, 28, 24]], "63": [[510, 499, 28, 26]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05642600005.png", "poses": ["23", "31", "51", "55", "59", "63", "75", "79", "87", "103", "131", "135", "139", "143", "147", "151"], "hs": {"55": [[375, 578, 33, 25]], "23": [[960, 780, 32, 24]], "79": [[1141, 394, 32, 25]], "59": [[435, 626, 32, 25]], "151": [[280, 254, 42, 25]], "131": [[774, 479, 41, 24]], "143": [[853, 467, 42, 25]], "135": [[904, 786, 44, 24]], "103": [[189, 183, 44, 25]], "147": [[893, 486, 44, 25]], "139": [[827, 803, 44, 24]], "51": [[192, 536, 30, 25]], "63": [[402, 605, 33, 25]], "31": [[474, 701, 31, 25]], "75": [[422, 385, 31, 24]], "87": [[147, 367, 32, 25]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

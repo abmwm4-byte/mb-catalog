@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253384">C253_FC -/-</a> → 015 Дверь задней стенки</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C253_FC -/-</a> → 015 Дверь задней стенки</div>
 <h1>015 Дверь задней стенки</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.002.737.934_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.002.737.934_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2537400105" title="Клик — скопировать">A 253 740 01 05</td><td>REAR DOOR (REAR-END DOOR)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0029981650" title="Клик — скопировать">A 002 998 16 50</td><td>Пробка (STOP PLUG)</td><td>2</td><td>Слева и справа; 10MM</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2537402600" title="Клик — скопировать">A 253 740 26 00</td><td>Уплотнение, дверь багаж. (SEAL, REAR-END DOOR)</td><td>1</td><td>Дверь задней стенки</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2537403001" title="Клик — скопировать">A 253 740 30 01</td><td>Уплотнение, дверь багаж. (SEAL, REAR-END DOOR)</td><td>1</td><td>Дверь задней стенки</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2537405900" title="Клик — скопировать">A 253 740 59 00</td><td>Петля (HINGE)</td><td>1</td><td>Дверь задней стенки слева</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2537406000" title="Клик — скопировать">A 253 740 60 00</td><td>Петля (HINGE)</td><td>1</td><td>Дверь задней стенки справа</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2535461800" title="Клик — скопировать">A 253 546 18 00</td><td>Держатель трубопровода (LINE BRACKET)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2535461900" title="Клик — скопировать">A 253 546 19 00</td><td>Держатель трубопровода (LINE BRACKET)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0189900301" title="Клик — скопировать">A 018 990 03 01</td><td>Винт 6-гранный с фланцем (HEX. HEAD SCREW W FLANGE)</td><td>4</td><td>Петля к раме крыши</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2119900301" title="Клик — скопировать">A 211 990 03 01</td><td>Винт с 6-гранной головкой (HEXAGON HEAD SCREW)</td><td>4</td><td>Петля к двери задней стенки</td><td class="restr" data-expr="-700"><span class="icode">-700</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0009938360" title="Клик — скопировать">A 000 993 83 60</td><td>Шаровая цапфа (BALL PIN)</td><td>2</td><td>Газовый упор к двери задней стенки слева и справа</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538900600" title="Клик — скопировать">A 253 890 06 00</td><td>Приводной шпиндель (DRIVE SPINDLE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538902300" title="Клик — скопировать">A 253 890 23 00</td><td>Приводной шпиндель (DRIVE SPINDLE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2539801064" title="Клик — скопировать">A 253 980 10 64</td><td>Газовый упор (PNEUMATIC SPRING)</td><td>1</td><td>Слева и справа</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009938360" title="Клик — скопировать">A 000 993 83 60</td><td>Шаровая цапфа (BALL PIN)</td><td>2</td><td>Газовый упор к боковине слева и справа</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A2537430300" title="Клик — скопировать">A 253 743 03 00</td><td>Упор двери (DOOR END STOP)</td><td>2</td><td>Дверь задней стенки</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A2048891995" title="Клик — скопировать">A 204 889 19 95</td><td>Промежуточная прокладка (INTERMEDIATE LAYER)</td><td>2</td><td>Защита от перетирания, дверь багажника</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A2059980301" title="Клик — скопировать">A 205 998 03 01</td><td>Проходная втулка (FEED-THROUGH GROMMET)</td><td>2</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2046824641" title="Клик — скопировать">A 204 682 46 41</td><td>Шумоизоляция поддона зап. (DAMPING SPARE WHEEL WELL)</td><td>2</td><td>Дверь в задней стенке, изнутри</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.737.934_version_003.png", "poses": ["10", "20", "30", "50", "60", "80", "90", "120", "150", "160", "180", "220", "230", "250", "260"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.737.934_version_003.png", "poses": ["10", "20", "30", "50", "60", "80", "90", "120", "150", "160", "180", "220", "230", "250", "260"], "hs": {"180": [[187, 420, 43, 28]], "160": [[1006, 197, 43, 28]], "150": [[239, 538, 43, 28]], "260": [[761, 423, 42, 29]], "250": [[454, 89, 42, 29]], "120": [[593, 574, 43, 28]], "230": [[649, 774, 42, 28]], "220": [[727, 773, 43, 28]], "90": [[246, 265, 30, 28]], "80": [[171, 197, 30, 28]], "60": [[146, 278, 30, 28]], "50": [[295, 173, 30, 29]], "30": [[566, 694, 30, 28]], "20": [[1123, 568, 30, 28], [925, 713, 30, 28]], "10": [[1009, 641, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

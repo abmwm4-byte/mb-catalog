@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114023">68C  Действительно для: CA, US</a> → Z  55.705 КОНДИЦИОНЕР BEHR</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/211">68C  Действительно для: CA, US</a> → Z  55.705 КОНДИЦИОНЕР BEHR</div>
 <h1>Z  55.705 КОНДИЦИОНЕР BEHR</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05570500001 <span class="hint">(0)</span></button><button data-i="1" class="">S05570500002 <span class="hint">(0)</span></button><button data-i="2" class="">S05570500003 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05570500001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05570500001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05570500001.png", "poses": []}, {"png": "../../img_png/drawing_S05570500002.png", "poses": []}, {"png": "../../img_png/drawing_S05570500003.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05570500001.png", "poses": [], "hs": {"190": [[56, 187, 33, 17]], "191": [[160, 141, 33, 17]], "170": [[837, 65, 33, 17]], "193": [[98, 104, 33, 17]], "172": [[545, 472, 33, 17]], "130": [[741, 40, 33, 17]], "196": [[492, 389, 33, 17]], "131": [[768, 93, 33, 17]], "197": [[534, 401, 33, 17]], "110": [[279, 195, 33, 17]], "210": [[362, 494, 33, 17]], "134": [[801, 30, 33, 17]], "135": [[349, 218, 33, 17]], "137": [[345, 148, 33, 17]], "115": [[196, 176, 33, 17]], "215": [[657, 402, 33, 17]], "138": [[9, 338, 33, 17]], "117": [[216, 141, 33, 17]], "119": [[410, 183, 33, 17]], "70": [[632, 288, 33, 17]], "180": [[503, 87, 33, 17]], "182": [[573, 100, 33, 17]], "160": [[255, 83, 33, 17]], "140": [[168, 228, 33, 17]], "185": [[498, 22, 33, 17]], "187": [[602, 51, 33, 17]], "165": [[305, 125, 33, 17]], "121": [[758, 320, 33, 17]], "122": [[757, 227, 33, 17]], "100": [[522, 355, 33, 17]], "1": [[255, 383, 33, 17]], "188": [[144, 556, 33, 17]], "167": [[835, 9, 33, 17]], "2": [[435, 41, 33, 17]], "123": [[730, 213, 33, 17]], "222": [[650, 450, 33, 17]], "200": [[588, 469, 33, 17]], "168": [[834, 20, 33, 17]], "4": [[391, 92, 33, 17]], "202": [[437, 152, 33, 17]], "125": [[81, 504, 33, 17]], "126": [[123, 192, 33, 17]], "225": [[604, 407, 33, 17]], "127": [[682, 109, 33, 17]], "205": [[213, 436, 33, 17], [228, 457, 33, 17]], "207": [[671, 364, 33, 17]], "60": [[448, 490, 33, 17]], "208": [[228, 475, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S05570500002.png", "poses": [], "hs": {"143": [[456, 516, 33, 17]], "145": [[439, 47, 33, 17]], "146": [[441, 256, 33, 17], [364, 231, 33, 17]], "157": [[565, 482, 33, 17]], "150": [[338, 239, 33, 17]], "152": [[426, 241, 33, 17]], "153": [[392, 56, 33, 17]], "142": [[531, 492, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S05570500003.png", "poses": [], "hs": {"211": [[485, 244, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

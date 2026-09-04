@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C209308">69M -/-</a> → 600 ОХЛАЖДЕНИЕ МАСЛА КП</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/125">69M -/-</a> → 600 ОХЛАЖДЕНИЕ МАСЛА КП</div>
 <h1>600 ОХЛАЖДЕНИЕ МАСЛА КП</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B50600000028 <span class="hint">(13)</span></button><button data-i="1" class="">B50600000086 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B50600000028.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B50600000028.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6461801130" title="Клик — скопировать">A 646 180 11 30</td><td>Маслопровод (OIL LINE)</td><td>1</td><td>КОРПУС ТРАНСФОРМАТОРА К МАСЛ. РАДИАТОРУ СЛЕВА</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6461801630" title="Клик — скопировать">A 646 180 16 30</td><td>Маслопровод</td><td>1</td><td>КОРПУС ТРАНСФОРМАТОРА К МАСЛ. РАДИАТОРУ СПРАВА</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A6461803430" title="Клик — скопировать">A 646 180 34 30</td><td>Маслопровод (OIL LINE)</td><td>1</td><td>КОРПУС ТРАНСФОРМАТОРА К МАСЛ. РАДИАТОРУ СПРАВА</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0289976248" title="Клик — скопировать">A 028 997 62 48</td><td>- Кольцевая прокладка</td><td>1</td><td>МАСЛОПРОВОД НА МАСЛ. РАДИАТОРЕ СПРАВА</td><td class="restr" data-expr="(M271/M112/M646)+423/M113"><span class="icode">(M271/M112/M646)+423/M113</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6460140140" title="Клик — скопировать">A 646 014 01 40</td><td>Держатель (HOLDER)</td><td>2</td><td>КРОНШТЕЙН НА МАСЛЯНОМ КАРТЕРЕ СЗАДИ</td><td class="restr" data-expr="M646+926"><span class="icode">M646+926</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A6460140140" title="Клик — скопировать">A 646 014 01 40</td><td>Держатель (HOLDER)</td><td>2</td><td>КРОНШТЕЙН НА МАСЛЯНОМ КАРТЕРЕ (ПЕРЕДН.)</td><td class="restr" data-expr="M646+926/M646+926+474"><span class="icode">M646+926/M646+926+474</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A0009952032" title="Клик — скопировать">A 000 995 20 32</td><td>хомут (CLAMP)</td><td>1</td><td>МАСЛОПРОВОД К МАСЛ.РАДИАТОРУ</td><td class="restr" data-expr="(M646/M273)+(423/427)"><span class="icode">(M646/M273)+(423/427)</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009952632" title="Клик — скопировать">A 000 995 26 32</td><td>хомут (CLAMP)</td><td>1</td><td>МАСЛОПРОВОД НА РАДИАТОРЕ</td><td class="restr" data-expr="M646+(423/427)"><span class="icode">M646+(423/427)</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N000000003036" title="Клик — скопировать">N 000000 003036</td><td>Полый болт</td><td>2</td><td>МАСЛОПРОВОД К КАРТЕРУ ГИДРОТРАНСФ\-РА</td><td class="restr" data-expr="M612+M27+423/M646+423"><span class="icode">M612+M27+423/M646+423</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N000000004748" title="Клик — скопировать">N 000000 004748</td><td>Полый болт (BANJO BOLT)</td><td>2</td><td>МАСЛОПРОВОД К КАРТЕРУ ГИДРОТРАНСФ\-РА</td><td class="restr" data-expr="M612+M27+423/M646+423"><span class="icode">M612+M27+423/M646+423</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0000171260" title="Клик — скопировать">A 000 017 12 60</td><td>Уплотнительное кольцо</td><td>4</td><td>МАСЛОПРОВОД К КАРТЕРУ ГИДРОТРАНСФ\-РА; 14X18</td><td class="restr" data-expr="M612+M27+423/M646+423"><span class="icode">M612+M27+423/M646+423</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0002711160" title="Клик — скопировать">A 000 271 11 60</td><td>Уплотнительное кольцо (SEALING RING)</td><td>4</td><td>МАСЛОПРОВОД К КАРТЕРУ ГИДРОТРАНСФ\-РА; 14X18</td><td class="restr" data-expr="M612+M27+423/M646+423"><span class="icode">M612+M27+423/M646+423</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N000000001045" title="Клик — скопировать">N 000000 001045</td><td>Хомут (CLAMP)</td><td>3</td><td>МАСЛОПРОВОД СЛЕВА НА МАСЛ. КАРТЕРЕ; 10/15</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N916016012200" title="Клик — скопировать">N 916016 012200</td><td>Хомут (CLAMP)</td><td>3</td><td>МАСЛОПРОВОД СЛЕВА И СПРАВА НА МАСЛ. КАРТЕРЕ; 12\-15 MM</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009959342" title="Клик — скопировать">A 000 995 93 42</td><td>Хомут (MOUNTING CLAMP)</td><td>3</td><td>МАСЛОПРОВОД СЛЕВА И СПРАВА НА МАСЛ. КАРТЕРЕ; 12/15 W3</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N916016012200" title="Клик — скопировать">N 916016 012200</td><td>Хомут (CLAMP)</td><td>2</td><td>МАСЛОПРОВОД СПРАВА НА МАСЛ. КАРТЕРЕ; 12\-15 MM</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009959342" title="Клик — скопировать">A 000 995 93 42</td><td>Хомут (MOUNTING CLAMP)</td><td>2</td><td>МАСЛОПРОВОД СПРАВА НА МАСЛ. КАРТЕРЕ; 12/15 W3</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="N000000001114" title="Клик — скопировать">N 000000 001114</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>МАСЛОПРОВОД СЛЕВА НА МАСЛ. КАРТЕРЕ; M6X15</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="N910105006011" title="Клик — скопировать">N 910105 006011</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>МАСЛОПРОВОД СЛЕВА НА МАСЛ. КАРТЕРЕ; M6X70</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A1232770050" title="Клик — скопировать">A 123 277 00 50</td><td>Проставочная трубка (SPACER TUBE)</td><td>1</td><td>МАСЛОПРОВОД СЛЕВА НА МАСЛ. КАРТЕРЕ</td><td class="restr" data-expr="M646+423"><span class="icode">M646+423</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2092704496" title="Клик — скопировать">A 209 270 44 96</td><td>Маслопровод</td><td>1</td><td>СВЕРХУ</td><td class="restr" data-expr="M646+(423/427)"><span class="icode">M646+(423/427)</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2092707096" title="Клик — скопировать">A 209 270 70 96</td><td>Провод (OIL LINE)</td><td>1</td><td>СВЕРХУ</td><td class="restr" data-expr="M646+(423/427)"><span class="icode">M646+(423/427)</span></td></tr><tr data-pos="305"><td>305</td><td class="pn" data-raw="A0289976248" title="Клик — скопировать">A 028 997 62 48</td><td>- Кольцевая прокладка</td><td>1</td><td>НА ПРОВОДЕ</td><td class="restr" data-expr="(M271/M646)+(423/427)"><span class="icode">(M271/M646)+(423/427)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50600000028.png", "poses": ["10", "60", "65", "120", "125", "130", "160", "170", "180", "190", "240", "300", "305"]}, {"png": "../../img_png/drawing_B50600000086.png", "poses": ["125"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50600000028.png", "poses": ["10", "60", "65", "120", "125", "130", "160", "170", "180", "190", "240", "300", "305"], "hs": {"190": [[859, 252, 42, 25]], "180": [[875, 325, 43, 24]], "170": [[1183, 459, 42, 25]], "160": [[1213, 488, 44, 24]], "130": [[1018, 644, 48, 29]], "240": [[863, 290, 48, 29]], "120": [[536, 394, 48, 29]], "300": [[334, 279, 48, 29]], "125": [[961, 622, 48, 30]], "305": [[252, 158, 48, 30]], "60": [[564, 478, 34, 30]], "10": [[684, 651, 35, 29]], "65": [[272, 549, 35, 29]]}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B50600000086.png", "poses": ["125"], "hs": {"125": [[908, 639, 48, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

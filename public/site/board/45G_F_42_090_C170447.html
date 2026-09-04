@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 090 ТОРМОЗНЫЕ ТРУБКИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/53">45G  Действительно для: CA, US</a> → 090 ТОРМОЗНЫЕ ТРУБКИ</div>
 <h1>090 ТОРМОЗНЫЕ ТРУБКИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B42090000258 <span class="hint">(14)</span></button><button data-i="1" class="">PV000.000.544.702_version_001 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B42090000258.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B42090000258.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1234206028" title="Клик — скопировать">A 123 420 60 28</td><td>Провод (LEITUNG)</td><td>1</td><td>РАЗЪЕМ ГЛАВНОГО ЦИЛИНДРА &quot;V&quot; К РАЗЪЕМУ ГИДРОБЛОКА: &quot;V&quot;; 580 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [871] ДО МОДЕЛЬН. ГОДА 97</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1704201926" title="Клик — скопировать">A 170 420 19 26</td><td>ПРОВОД</td><td>-</td><td>[880] С МОДЕЛЬНОГО ГОДА 98</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1234206128" title="Клик — скопировать">A 123 420 61 28</td><td>Провод (LEITUNG)</td><td>1</td><td>РАЗЪЕМ ГЛАВНОГО ЦИЛИНДРА &quot;V&quot; К РАЗЪЕМУ ГИДРОБЛОКА: &quot;V&quot; [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [880] С МОДЕЛЬНОГО ГОДА 98</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1704200326" title="Клик — скопировать">A 170 420 03 26</td><td>Провод (LEITUNG)</td><td>1</td><td>РАЗЪЕМ ГЛАВНОГО ЦИЛИНДРА &quot;H&quot; К РАЗЪЕМУ ГИДРОБЛОКА: &quot;H&quot; [871] ДО МОДЕЛЬН. ГОДА 97</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1234206128" title="Клик — скопировать">A 123 420 61 28</td><td>Провод (LEITUNG)</td><td>1</td><td>РАЗЪЕМ ГЛАВНОГО ЦИЛИНДРА &quot;H&quot; К РАЗЪЕМУ ГИДРОБЛОКА: &quot;H&quot; [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [880] С МОДЕЛЬНОГО ГОДА 98</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1234206128" title="Клик — скопировать">A 123 420 61 28</td><td>Провод (LEITUNG)</td><td>1</td><td>ГИДРАВЛИЧЕСКИЙ БЛОК К ПЕРЕДНЕМУ ЛЕВОМУ КОЛЕСУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1234207628" title="Клик — скопировать">A 123 420 76 28</td><td>Провод (LEITUNG)</td><td>1</td><td>ГИДРАВЛИЧЕСКИЙ БЛОК К ПЕРЕДНЕМУ ПРАВОМУ КОЛЕСУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [871] ДО МОДЕЛЬН. ГОДА 97</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1234207428" title="Клик — скопировать">A 123 420 74 28</td><td>Провод (LEITUNG)</td><td>1</td><td>ГИДРАВЛИЧЕСКИЙ БЛОК К ПЕРЕДНЕМУ ПРАВОМУ КОЛЕСУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [880] С МОДЕЛЬНОГО ГОДА 98</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1234206528" title="Клик — скопировать">A 123 420 65 28</td><td>Провод (LEITUNG)</td><td>2</td><td>ГИДРОБЛОК К ПЕРЕХОДНИКУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [871] ДО МОДЕЛЬН. ГОДА 97</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1234206428" title="Клик — скопировать">A 123 420 64 28</td><td>Провод (LEITUNG)</td><td>2</td><td>ГИДРОБЛОК К ПЕРЕХОДНИКУ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [880] С МОДЕЛЬНОГО ГОДА 98</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1234208028" title="Клик — скопировать">A 123 420 80 28</td><td>Провод (LEITUNG)</td><td>1</td><td>ПЕРЕХОДН. ЭЛЕМЕНТ К ТОРМОЗН. ШЛАНГУ СЗАДИ СЛЕВА; 4.75X0.7X2960 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1234208528" title="Клик — скопировать">A 123 420 85 28</td><td>Провод (LEITUNG)</td><td>1</td><td>ПЕРЕХОДН. ЭЛЕМЕНТ К ТОРМОЗН. ШЛАНГУ СЗАДИ СПРАВА; 4.75X0.7X3450 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1214290134" title="Клик — скопировать">A 121 429 01 34</td><td>6-гр. распорный элемент (SECHSKANT-ABSTANDSELEMENT)</td><td>2</td><td>M10</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A2024280735" title="Клик — скопировать">A 202 428 07 35</td><td>Тормозной шланг</td><td>2</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A2104280035" title="Клик — скопировать">A 210 428 00 35</td><td>Тормозной шланг</td><td>2</td><td>СЗАДИ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0004280673" title="Клик — скопировать">A 000 428 06 73</td><td>Удерживающая пружина (HALTEFEDER)</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A0004280472" title="Клик — скопировать">A 000 428 04 72</td><td>Полый болт (UEBERWURFSCHRAUBE)</td><td>2</td><td>M10X1</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A2104210494" title="Клик — скопировать">A 210 421 04 94</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A2104210794" title="Клик — скопировать">A 210 421 07 94</td><td>Держатель (HALTER)</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A2104210594" title="Клик — скопировать">A 210 421 05 94</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A2104210894" title="Клик — скопировать">A 210 421 08 94</td><td>Держатель (HALTER)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009972881" title="Клик — скопировать">A 000 997 28 81</td><td>Проходная втулка (DURCHFUEHRUNGSTUELLE)</td><td>2</td><td>ТОРМОЗ. ШЛАНГ НА ДЕРЖАТЕЛЕ [871] ДО МОДЕЛЬН. ГОДА 97</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1709950165" title="Клик — скопировать">A 170 995 01 65</td><td>Держатель (HALTER)</td><td>8</td><td>ТОРМОЗН. ТРУБКА</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1709950265" title="Клик — скопировать">A 170 995 02 65</td><td>ХОМУТ СТЯЖНОЙ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A2109950065" title="Клик — скопировать">A 210 995 00 65</td><td>хомут (SCHELLE)</td><td>2</td><td>ТОРМОЗН. ТРУБОПРОВОД НА ПОЛУ ЗАДН. ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A2014761126" title="Клик — скопировать">A 201 476 11 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ТОРМ.ТРУБОПР.НА ТРАВЕРСЕ ПЕРЕД.МОСТА 20 MM; 4.5X3 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42090000258.png", "poses": ["5", "8", "11", "14", "17", "23", "26", "29", "44", "50", "51", "53", "56", "59"]}, {"png": "../../img_png/drawing_PV000.000.544.702_version_001.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42090000258.png", "poses": ["5", "8", "11", "14", "17", "23", "26", "29", "44", "50", "51", "53", "56", "59"], "hs": {"11": [[741, 542, 24, 21]], "44": [[368, 576, 28, 21], [681, 701, 28, 21]], "23": [[1085, 585, 28, 23]], "56": [[308, 307, 28, 22]], "14": [[579, 603, 29, 21]], "26": [[1091, 509, 28, 21]], "59": [[504, 555, 29, 21]], "17": [[912, 477, 24, 20], [857, 505, 26, 21]], "29": [[952, 498, 29, 20], [921, 586, 29, 21]], "5": [[976, 331, 15, 21]], "8": [[981, 248, 17, 21]], "50": [[470, 496, 28, 20], [687, 640, 28, 20]], "51": [[505, 439, 27, 27]], "53": [[820, 638, 27, 20]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_PV000.000.544.702_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 995}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

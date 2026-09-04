@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107026">048 BIS 09/85</a> → 090 ТОРМОЗНЫЕ ТРУБКИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/76">048 BIS 09/85</a> → 090 ТОРМОЗНЫЕ ТРУБКИ</div>
 <h1>090 ТОРМОЗНЫЕ ТРУБКИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B42090000076 <span class="hint">(17)</span></button><button data-i="1" class="">B42090000177 <span class="hint">(10)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B42090000076.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B42090000076.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1074204928" title="Клик — скопировать">A 107 420 49 28</td><td>ПРОВОД</td><td>-</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1074209228" title="Клик — скопировать">A 107 420 92 28</td><td>Тормозная трубка</td><td>1</td><td>FROM MASTER CYLINDER TO FRONT LEFT BRAKE HOSE Рулевое управление: Влево [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1234207328" title="Клик — скопировать">A 123 420 73 28</td><td>Провод</td><td>1</td><td>FROM MASTER CYLINDER TO FRONT LEFT BRAKE HOSE Рулевое управление: Вправо [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1234207228" title="Клик — скопировать">A 123 420 72 28</td><td>Провод</td><td>1</td><td>FROM MASTER CYLINDER TO FRONT RIGHT BRAKE HOSE Рулевое управление: Влево [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1074204628" title="Клик — скопировать">A 107 420 46 28</td><td>ПРОВОД</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1074209228" title="Клик — скопировать">A 107 420 92 28</td><td>Тормозная трубка</td><td>1</td><td>FROM MASTER CYLINDER TO FRONT RIGHT BRAKE HOSE Рулевое управление: Вправо [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1234280535" title="Клик — скопировать">A 123 428 05 35</td><td>Тормозной шланг</td><td>2</td><td>СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0004280673" title="Клик — скопировать">A 000 428 06 73</td><td>Удерживающая пружина</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1009950042" title="Клик — скопировать">A 100 995 00 42</td><td>ХОМУТ</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1119950042" title="Клик — скопировать">A 111 995 00 42</td><td>ХОМУТ</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1409950222" title="Клик — скопировать">A 140 995 02 22</td><td>хомут</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1114760081" title="Клик — скопировать">A 111 476 00 81</td><td>Резиновая вставка</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N007976005203" title="Клик — скопировать">N 007976 005203</td><td>Шуруп</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019971481" title="Клик — скопировать">A 001 997 14 81</td><td>резиновая втулка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1074205228" title="Клик — скопировать">A 107 420 52 28</td><td>ПРОВОД</td><td>1</td><td>ГЛАВН. ЦИЛ. К РАСПРЕДЕЛ. Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1074204728" title="Клик — скопировать">A 107 420 47 28</td><td>ПРОВОД</td><td>-</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1234207028" title="Клик — скопировать">A 123 420 70 28</td><td>Провод</td><td>1</td><td>ГЛАВН. ЦИЛ. К СОЕДИНИТ. ЭЛЕМЕНТУ; 4.75X0.7X1495MM Рулевое управление: Вправо [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="64"><td>64</td><td class="pn" data-raw="A1214290134" title="Клик — скопировать">A 121 429 01 34</td><td>6-гр. распорный элемент</td><td>1</td><td>M10 Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="67"><td>67</td><td class="pn" data-raw="A1074201828" title="Клик — скопировать">A 107 420 18 28</td><td>ПРОВОД</td><td>1</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ К РАСПРЕДЕЛИТЕЛЮ Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0004284224" title="Клик — скопировать">A 000 428 42 24</td><td>Распределитель</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="N007976006204" title="Клик — скопировать">N 007976 006204</td><td>Шуруп</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A1074202228" title="Клик — скопировать">A 107 420 22 28</td><td>ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="76"><td>76</td><td class="pn" data-raw="A1234205428" title="Клик — скопировать">A 123 420 54 28</td><td>Провод</td><td>1</td><td>ОТ РАСПРЕДЕЛИТ.К ТОРМОЗ.ШЛАНГУ СЗАДИ СЛЕВА; 4.75X0.7X300 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1074202328" title="Клик — скопировать">A 107 420 23 28</td><td>ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="79"><td>79</td><td class="pn" data-raw="A1234206528" title="Клик — скопировать">A 123 420 65 28</td><td>Провод</td><td>1</td><td>ОТ РАСПРЕДЕЛИТ.К ТОРМОЗ.ШЛАНГУ СЗАДИ СПРАВА [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1164280135" title="Клик — скопировать">A 116 428 01 35</td><td>ТОРМОЗНОЙ ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A1264280135" title="Клик — скопировать">A 126 428 01 35</td><td>Тормозной шланг</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A0004280673" title="Клик — скопировать">A 000 428 06 73</td><td>Удерживающая пружина</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1074201928" title="Клик — скопировать">A 107 420 19 28</td><td>ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1234205428" title="Клик — скопировать">A 123 420 54 28</td><td>Провод</td><td>1</td><td>FROM LEFT CALIPER TO LEFT REAR BRAKE HOSE; 4.75X0.7X300 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1074202028" title="Клик — скопировать">A 107 420 20 28</td><td>ПРОВОД</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A1234205428" title="Клик — скопировать">A 123 420 54 28</td><td>Провод</td><td>1</td><td>FROM RIGHT CALIPER TO RIGHT REAR BRAKE HOSE; 4.75X0.7X300 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="A1159950101" title="Клик — скопировать">A 115 995 01 01</td><td>ХОМУТ</td><td>2</td><td>ТОРМОЗН. ТРУБОПРОВОД НА ПЕРЕГОРОДКЕ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="N007976005202" title="Клик — скопировать">N 007976 005202</td><td>Шуруп</td><td>2</td><td>ТОРМОЗН. ТРУБОПРОВОД НА ПЕРЕГОРОДКЕ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1263280181" title="Клик — скопировать">A 126 328 01 81</td><td>Резиновая опора</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A1079971982" title="Клик — скопировать">A 107 997 19 82</td><td>ШЛАНГ</td><td>2</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="103"><td>103</td><td class="pn" data-raw="A1079971982" title="Клик — скопировать">A 107 997 19 82</td><td>ШЛАНГ</td><td>2</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="106"><td>106</td><td class="pn" data-raw="A1089950520" title="Клик — скопировать">A 108 995 05 20</td><td>хомут</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="109"><td>109</td><td class="pn" data-raw="N007976005203" title="Клик — скопировать">N 007976 005203</td><td>Шуруп</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="121"><td>121</td><td class="pn" data-raw="A0019974290" title="Клик — скопировать">A 001 997 42 90</td><td>связующее вещество</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="121"><td>121</td><td class="pn" data-raw="A0019974390" title="Клик — скопировать">A 001 997 43 90</td><td>Кабельная стяжка</td><td>1</td><td>140mm; 9X250 MM</td><td class="restr"></td></tr><tr data-pos="127"><td>127</td><td class="pn" data-raw="A1004760081" title="Клик — скопировать">A 100 476 00 81</td><td>ВСТАВКА РЕЗИНОВАЯ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="127"><td>127</td><td class="pn" data-raw="A1204760184" title="Клик — скопировать">A 120 476 01 84</td><td>Резиновое крепление</td><td>3</td><td>ТОРМОЗН. ТРУБОПРОВОД НА ПЕРЕГОРОДКЕ Рулевое управление: Вправо</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42090000076.png", "poses": ["29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "64", "67", "94", "97", "100", "121", "127"]}, {"png": "../../img_png/drawing_B42090000177.png", "poses": ["70", "73", "76", "79", "82", "85", "88", "103", "106", "109"]}];</script><script>
+<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42090000076.png", "poses": ["29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "64", "67", "94", "97", "100", "121", "127"], "hs": {"56": [[639, 383, 33, 17]], "67": [[803, 336, 33, 17]], "35": [[122, 221, 33, 17], [310, 402, 33, 17]], "38": [[170, 284, 33, 17], [346, 379, 33, 17]], "29": [[316, 313, 33, 17]], "130": [[560, 119, 33, 17]], "121": [[589, 52, 33, 17]], "100": [[382, 181, 33, 17]], "133": [[557, 175, 33, 17]], "136": [[559, 145, 33, 17]], "5": [[434, 241, 33, 17]], "127": [[511, 68, 33, 17]], "50": [[253, 386, 33, 17]], "94": [[352, 146, 33, 17]], "97": [[310, 152, 33, 17]], "64": [[725, 362, 33, 17]], "53": [[726, 300, 33, 17]], "32": [[230, 290, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_B42090000177.png", "poses": ["70", "73", "76", "79", "82", "85", "88", "103", "106", "109"], "hs": {"79": [[511, 203, 33, 17]], "103": [[589, 255, 33, 17]], "106": [[610, 220, 33, 17]], "70": [[440, 259, 33, 17]], "82": [[357, 252, 33, 17], [557, 382, 33, 17]], "109": [[583, 191, 33, 17]], "73": [[443, 234, 33, 17]], "85": [[317, 239, 33, 17], [597, 413, 33, 17]], "76": [[479, 327, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

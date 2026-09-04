@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253343">C253_FC -/-</a> → 300 Экраны</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/30">C253_FC -/-</a> → 300 Экраны</div>
 <h1>300 Экраны</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.068.784_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.068.784_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2056822471" title="Клик — скопировать">A 205 682 24 71</td><td>Экран (SHIELDING)</td><td>1</td><td>Интегральная балка, справа</td><td class="restr" data-expr="-ME05"><span class="icode">-ME05</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0009901617" title="Клик — скопировать">A 000 990 16 17</td><td>болт (SCREW)</td><td>3</td><td>Экран к интегральной балке справа; M6X12</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2536824600" title="Клик — скопировать">A 253 682 46 00</td><td>Экран (SHIELDING)</td><td>1</td><td>К моторному щиту справа Рулевое управление: Влево</td><td class="restr" data-expr="-(M654+ME05/M177/M276+2U8)"><span class="icode">-(M654+ME05/M177/M276+2U8)</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2536824400" title="Клик — скопировать">A 253 682 44 00</td><td>Экран (SHIELDING)</td><td>1</td><td>К моторному щиту справа Рулевое управление: Вправо</td><td class="restr" data-expr="-(M654+ME05/M177/M276+2U8)"><span class="icode">-(M654+ME05/M177/M276+2U8)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="N000000001452" title="Клик — скопировать">N 000000 001452</td><td>Шуруп (TAPPING SCREW)</td><td>1</td><td>Экран к перегородке посередине; 4.8X13</td><td class="restr" data-expr="-M177/M276"><span class="icode">-M177/M276</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>3</td><td>Экран к лонжерону справа; 5 MM</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>1</td><td>Экран к моторному щиту справа; 5 MM</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0049900050" title="Клик — скопировать">A 004 990 00 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>1</td><td>Экран к перегородке справа</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009909008" title="Клик — скопировать">A 000 990 90 08</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>1</td><td>Экран к перегородке справа</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2054700347" title="Клик — скопировать">A 205 470 03 47</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Под топливным баком</td><td class="restr" data-expr="M264/M274+-9O1"><span class="icode">M264/M274+-9O1</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A2054700038" title="Клик — скопировать">A 205 470 00 38</td><td>Запорная крышка (CLOSING CAP)</td><td>1</td><td>К экрану топливного бака</td><td class="restr" data-expr="(M274/M276/M264/M177/(M654/M656/M642)+-(460/494))"><span class="icode">(M274/M276/M264/M177/(M654/M656/M642)+-(460/494))</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A2536820400" title="Клик — скопировать">A 253 682 04 00</td><td>Экран (SHIELDING)</td><td>1</td><td>К экрану дополнительного глушителя</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="N000000001457" title="Клик — скопировать">N 000000 001457</td><td>Шуруп (TAPPING SCREW)</td><td>2</td><td>Экран к экрану над катализатором; 6,3X13</td><td class="restr"></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A2536820771" title="Клик — скопировать">A 253 682 07 71</td><td>Экран (SHIELDING)</td><td>1</td><td>Основное днище слева</td><td class="restr" data-expr="M177/M264/M274/M276"><span class="icode">M177/M264/M274/M276</span></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>2</td><td>Экран слева к основному днищу; 5 MM</td><td class="restr" data-expr="M264/M274"><span class="icode">M264/M274</span></td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="A2536820871" title="Клик — скопировать">A 253 682 08 71</td><td>Экран (SHIELDING)</td><td>1</td><td>Основное днище справа</td><td class="restr"></td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>2</td><td>Экран справа к основному днищу; 5 MM</td><td class="restr"></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A2056822700" title="Клик — скопировать">A 205 682 27 00</td><td>Экран (SHIELDING)</td><td>1</td><td>Продольный несущий элемент внизу справа</td><td class="restr" data-expr="M274/M264"><span class="icode">M274/M264</span></td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>1</td><td>Экран к лонжерону справа; 5 MM</td><td class="restr" data-expr="M274/M264"><span class="icode">M274/M264</span></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A2536800000" title="Клик — скопировать">A 253 680 00 00</td><td>Экран (SHIELDING)</td><td>1</td><td>Над катализатором</td><td class="restr" data-expr="-(598/961)"><span class="icode">-(598/961)</span></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A2536802305" title="Клик — скопировать">A 253 680 23 05</td><td>Экран (SHIELDING)</td><td>1</td><td>Над катализатором</td><td class="restr" data-expr="(M264/M274/M276)+(598/961)"><span class="icode">(M264/M274/M276)+(598/961)</span></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A2536802305" title="Клик — скопировать">A 253 680 23 05</td><td>Экран (SHIELDING)</td><td>1</td><td>Над катализатором</td><td class="restr" data-expr="(M264/M274/M276)+(598/961/999)"><span class="icode">(M264/M274/M276)+(598/961/999)</span></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A2536802305" title="Клик — скопировать">A 253 680 23 05</td><td>Экран (SHIELDING)</td><td>1</td><td>Над катализатором</td><td class="restr" data-expr="(M264/M274/M276)+(961/999)"><span class="icode">(M264/M274/M276)+(961/999)</span></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A0009940945" title="Клик — скопировать">A 000 994 09 45</td><td>- Вставная гайка (SOCKET NUT)</td><td>2</td><td>К экрану катализатора</td><td class="restr" data-expr="-9O1"><span class="icode">-9O1</span></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>4</td><td>Экран катализатора к днищу; 5 MM</td><td class="restr"></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A2536821671" title="Клик — скопировать">A 253 682 16 71</td><td>Экран (SHIELDING)</td><td>1</td><td>Экран основного глушителя</td><td class="restr" data-expr="M264/M274/M276+-M016/(M651/M654)+926"><span class="icode">M264/M274/M276+-M016/(M651/M654)+926</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A2536820500" title="Клик — скопировать">A 253 682 05 00</td><td>Экран (SHIELDING)</td><td>1</td><td>Экран основного глушителя</td><td class="restr" data-expr="(900/772)+(M264/M274/M276/(M651/M654)+926)"><span class="icode">(900/772)+(M264/M274/M276/(M651/M654)+926)</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A2536820500" title="Клик — скопировать">A 253 682 05 00</td><td>Экран (SHIELDING)</td><td>1</td><td>Экран основного глушителя</td><td class="restr" data-expr="(900/772)+(M264/M274/M276+-M016/M654+926)+-(806/807/808/809)"><span class="icode">(900/772)+(M264/M274/M276+-M016/M654+926)+-(806/807/808/809)</span></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>10</td><td>Экран над основным глушителем; 5 MM</td><td class="restr" data-expr="M264/M274/M276/M177/(M651/M654)+926"><span class="icode">M264/M274/M276/M177/(M651/M654)+926</span></td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A0129903082" title="Клик — скопировать">A 012 990 30 82</td><td>Дистанционная шайба (SPACER DISK)</td><td>6</td><td>Экран к днищу задней части кузова; 4,7X28X1,5</td><td class="restr" data-expr="M264/M274/M276/M177/(M651/M654)+926"><span class="icode">M264/M274/M276/M177/(M651/M654)+926</span></td></tr><tr data-pos="630"><td>630</td><td class="pn" data-raw="N000000001459" title="Клик — скопировать">N 000000 001459</td><td>Шуруп (TAPPING SCREW)</td><td>2</td><td>Облицовка к несущему элементу</td><td class="restr" data-expr="M264/M274/M276/M177/(M651/M654)+926"><span class="icode">M264/M274/M276/M177/(M651/M654)+926</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.068.784_version_003.png", "poses": ["30", "40", "140", "150", "160", "170", "180", "400", "430", "490", "500", "510", "520", "530", "540", "550", "560", "570", "580", "590", "600", "610", "620", "630"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.068.784_version_003.png", "poses": ["30", "40", "140", "150", "160", "170", "180", "400", "430", "490", "500", "510", "520", "530", "540", "550", "560", "570", "580", "590", "600", "610", "620", "630"], "hs": {"180": [[110, 444, 42, 29]], "170": [[350, 636, 43, 28]], "160": [[105, 640, 43, 28]], "490": [[760, 549, 42, 29]], "150": [[294, 489, 43, 29]], "590": [[581, 514, 42, 29]], "140": [[186, 468, 43, 28]], "580": [[640, 406, 43, 29]], "570": [[715, 496, 42, 28]], "560": [[381, 580, 42, 28]], "550": [[326, 540, 43, 29]], "430": [[826, 308, 43, 28]], "540": [[472, 534, 42, 29]], "530": [[415, 475, 42, 29]], "630": [[1237, 412, 43, 28]], "520": [[626, 655, 42, 29]], "400": [[940, 314, 42, 29]], "620": [[1237, 284, 43, 28]], "510": [[508, 652, 42, 28]], "500": [[743, 623, 42, 29]], "610": [[1139, 406, 42, 29]], "600": [[1063, 254, 42, 29]], "40": [[176, 728, 30, 28]], "30": [[251, 694, 31, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

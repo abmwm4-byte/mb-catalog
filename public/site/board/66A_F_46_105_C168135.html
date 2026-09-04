@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168135">66A Standard Недействительно для: JP</a> → 105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">66A Standard Недействительно для: JP</a> → 105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</div>
 <h1>105 РУЛ. КОЛЕСО И ЗАМОК БЛОКИРОВ. РУЛ. ВАЛА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B46105000159.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B46105000159.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="3"><td>3</td><td class="pn" data-raw="A1634600004" title="Клик — скопировать">A 163 460 00 04</td><td>К-т замкового цилиндра (TEILESATZ SCHLIESSZYLIND.)</td><td>1</td><td>БЕЗ ОПРЕДЕЛЕН. ЗАКРЫТИЯ</td><td class="restr" data-expr="880"><span class="icode">880</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1684600304" title="Клик — скопировать">A 168 460 03 04</td><td>Замок рулевого вала (LENKSCHLOSS)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1685450204" title="Клик — скопировать">A 168 545 02 04</td><td>- ВЫКЛЮЧАТЕЛЬ</td><td>1</td><td>ВЫКЛ\-ТЕЛЬ ПУСКА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1685451004" title="Клик — скопировать">A 168 545 10 04</td><td>- Переключатель (SCHALTER)</td><td>1</td><td>ВЫКЛ\-ТЕЛЬ ПУСКА</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1684620151" title="Клик — скопировать">A 168 462 01 51</td><td>Кольцо (RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1684620079" title="Клик — скопировать">A 168 462 00 79</td><td>Замковый цилиндр (SCHLIESSZYLINDER)</td><td>1</td><td>БЕЗ КЛЮЧА [429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [407] ПРИ ЗАКАЗЕ УКАЗАТЬ НОМЕР КОМПЛЕКТА ЗАМКОВ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1684620123" title="Клик — скопировать">A 168 462 01 23</td><td>Крышка (DECKEL)</td><td>1</td><td>ЛИЧИНКА ЗАМКА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1684620253" title="Клик — скопировать">A 168 462 02 53</td><td>Транспондер (TRANSPONDER)</td><td>1</td><td>КАТУШКА ДЛЯ ТРАНСПОНДЕРА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1684601903" title="Клик — скопировать">A 168 460 19 03</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="M166+M21/M166+M21+(421/423/580)"><span class="icode">M166+M21/M166+M21+(421/423/580)</span></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1684601803" title="Клик — скопировать">A 168 460 18 03</td><td>Рулевое колесо</td><td>1</td><td>DESIGNO</td><td class="restr" data-expr="X11"><span class="icode">X11</span></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1684602203" title="Клик — скопировать">A 168 460 22 03</td><td>РУЛЕВОЕ КОЛЕСО</td><td>1</td><td>DESIGNO</td><td class="restr" data-expr="M166+M21+(X24/X40/X41)"><span class="icode">M166+M21+(X24/X40/X41)</span></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1684600298" title="Клик — скопировать">A 168 460 02 98</td><td>НПБ водителя</td><td>1</td><td>ПЛАСТИК</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1269900312" title="Клик — скопировать">A 126 990 03 12</td><td>Винт потай с 6-гранником (SENKSCHRAUBE MIT ISK)</td><td>1</td><td>РУЛ. КОЛЕСО НА РУЛ. ВАЛУ; M16</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1684600349" title="Клик — скопировать">A 168 460 03 49</td><td>Контактная спираль (KONTAKTSPIRALE)</td><td>1</td><td>КОНТАКТНАЯ СПИРАЛЬ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0039909412" title="Клик — скопировать">A 003 990 94 12</td><td>болт (SCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ ПОДУШ. БЕЗОПАСН. РУЛ. КОЛЕСА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0025426518" title="Клик — скопировать">A 002 542 65 18</td><td>Датчик угла (WINKELSENSOR)</td><td>1</td><td>STEERING ANGLE SENSOR</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B46105000159.png", "poses": ["3", "5", "8", "11", "14", "17", "20", "29", "32", "35", "38", "41", "50"]}];</script><script>
+<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B46105000159.png", "poses": ["3", "5", "8", "11", "14", "17", "20", "29", "32", "35", "38", "41", "50"], "hs": {"11": [[433, 518, 34, 30]], "23": [[539, 606, 35, 30]], "24": [[589, 836, 34, 30]], "35": [[1075, 501, 35, 30]], "14": [[580, 357, 34, 30]], "26": [[293, 862, 34, 30]], "38": [[765, 709, 34, 29]], "17": [[595, 164, 35, 30]], "29": [[1040, 672, 34, 30]], "3": [[479, 351, 21, 30]], "5": [[548, 509, 21, 30]], "8": [[354, 547, 20, 30]], "50": [[651, 773, 34, 30]], "41": [[888, 693, 34, 30]], "20": [[600, 226, 35, 29]], "32": [[1194, 441, 34, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

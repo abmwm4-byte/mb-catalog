@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>26 КП; ШЕСТИСТУПЕНЧАТАЯ / 545 ВАЛЫ КП И ШЕСТЕРНИ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/40">D43 -/-</a> → 545 ВАЛЫ КП И ШЕСТЕРНИ</div>
+<h1>545 ВАЛЫ КП И ШЕСТЕРНИ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B26545000073.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1642620402" title="Клик — скопировать">A 164 262 04 02</td><td>- Приводной вал (ANTRIEBSWELLE)</td><td>1</td><td>Z 515.403/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1642621002" title="Клик — скопировать">A 164 262 10 02</td><td>- Приводной вал (ANTRIEBSWELLE)</td><td>1</td><td>Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2112621235" title="Клик — скопировать">A 211 262 12 35</td><td>- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.403/07, Z 515.403/15 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0219819510" title="Клик — скопировать">A 021 981 95 10</td><td>- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ПРИВОДНОЙ ВАЛ Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941141" title="Клик — скопировать">A 164 994 11 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 1.80 MM; 1,80MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941241" title="Клик — скопировать">A 164 994 12 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 1.85 MM; 1,85MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941341" title="Клик — скопировать">A 164 994 13 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 1.90 MM; 1,90MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941441" title="Клик — скопировать">A 164 994 14 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 1.95 MM; 1,95MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941541" title="Клик — скопировать">A 164 994 15 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 2.00 MM; 2,00MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941641" title="Клик — скопировать">A 164 994 16 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 2.05 MM; 2,05MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1649941741" title="Клик — скопировать">A 164 994 17 41</td><td>- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>ПЕРВИЧНЫЙ ВАЛ; ПО НЕОБХОДИМОСТИ 2.10 MM; 2,10MM Z 515.403/07, Z 515.403/15</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1642601022" title="Клик — скопировать">A 164 260 10 22</td><td>- Вторичный вал (HAUPTWELLE)</td><td>1</td><td>Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1642601200" title="Клик — скопировать">A 164 260 12 00</td><td>- Вторичный вал</td><td>1</td><td>Z 515.404/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1642620051" title="Клик — скопировать">A 164 262 00 51</td><td>- Проставочное кольцо (ABSTANDSRING)</td><td>1</td><td>ШЕСТЕРНЯ ШЕСТОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A0229811810" title="Клик — скопировать">A 022 981 18 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ШЕСТОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="73"><td>73</td><td class="pn" data-raw="A0229815210" title="Клик — скопировать">A 022 981 52 10</td><td>	- Игольчатый венец</td><td>1</td><td>ШЕСТЕРНЯ ШЕСТОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A1642620216" title="Клик — скопировать">A 164 262 02 16</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A2112620635" title="Клик — скопировать">A 211 262 06 35</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A2042620134" title="Клик — скопировать">A 204 262 01 34</td><td>	- Кольцо синхронизатора</td><td>2</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="88"><td>88</td><td class="pn" data-raw="A2042620234" title="Клик — скопировать">A 204 262 02 34</td><td>	- Кольцо синхронизатора (SYNCHRONRING)</td><td>2</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1642601645" title="Клик — скопировать">A 164 260 16 45</td><td>	- Корпус синхронизатора</td><td>1</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1642601745" title="Клик — скопировать">A 164 260 17 45</td><td>	- Корпус синхронизатора (GLE.LAUFKOERPER)</td><td>1</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A1649940141" title="Клик — скопировать">A 164 994 01 41</td><td>	- Стопорное кольцо (SICHERUNGSRING)</td><td>1</td><td>СИНХРОНИЗАТОР; ПО НЕОБХОДИМОСТИ 1.80 MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="118"><td>118</td><td class="pn" data-raw="A1683600118" title="Клик — скопировать">A 168 360 01 18</td><td>		- Нажимной упор (DRUCKSTUECK)</td><td>3</td><td>ПЯТАЯ И ШЕСТАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0229811610" title="Клик — скопировать">A 022 981 16 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ВТОРОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0229815010" title="Клик — скопировать">A 022 981 50 10</td><td>	- Игольчатый подшипник</td><td>1</td><td>ШЕСТЕРНЯ ВТОРОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1642620262" title="Клик — скопировать">A 164 262 02 62</td><td>	- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ ВТОРОЙ ПЕРЕДАЧИ Z 515.404/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1642600108" title="Клик — скопировать">A 164 260 01 08</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ВТОРАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A2112603245" title="Клик — скопировать">A 211 260 32 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ВТОРАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1642600745" title="Клик — скопировать">A 164 260 07 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ПЕРВАЯ И ВТОРАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1642600845" title="Клик — скопировать">A 164 260 08 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ПЕРВАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A0009804910" title="Клик — скопировать">A 000 980 49 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ПЕРВОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A0009805110" title="Клик — скопировать">A 000 980 51 10</td><td>	- Игольчатый подшипник</td><td>1</td><td>ШЕСТЕРНЯ ПЕРВОЙ ПЕРЕДАЧИ Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="235"><td>235</td><td class="pn" data-raw="A1642601008" title="Клик — скопировать">A 164 260 10 08</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ПЕРВАЯ ПЕРЕДАЧА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622462" title="Клик — скопировать">A 164 262 24 62</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.70 MM; 5,70MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622562" title="Клик — скопировать">A 164 262 25 62</td><td>- ШАЙБА УПОРНАЯ</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.75 MM; 5,75MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622662" title="Клик — скопировать">A 164 262 26 62</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.80 MM; 5,80MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622762" title="Клик — скопировать">A 164 262 27 62</td><td>- ШАЙБА УПОРНАЯ</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.85 MM; 5,85MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622862" title="Клик — скопировать">A 164 262 28 62</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.90 MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642622962" title="Клик — скопировать">A 164 262 29 62</td><td>- ШАЙБА УПОРНАЯ</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 5.95 MM; 5,95MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642623062" title="Клик — скопировать">A 164 262 30 62</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 6.00 MM; 6,00MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642623162" title="Клик — скопировать">A 164 262 31 62</td><td>- ШАЙБА УПОРНАЯ</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 6.05 MM; 6,05MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642623262" title="Клик — скопировать">A 164 262 32 62</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 6.10 MM; 6,10MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="245"><td>245</td><td class="pn" data-raw="A1642623362" title="Клик — скопировать">A 164 262 33 62</td><td>- ШАЙБА УПОРНАЯ</td><td>1</td><td>ШЕСТЕРНЯ; ПО НЕОБХОДИМОСТИ 6.15 MM; 6,15MM Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009804310" title="Клик — скопировать">A 000 980 43 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ПЕРЕДАЧИ ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009804510" title="Клик — скопировать">A 000 980 45 10</td><td>	- Игольчатый подшипник</td><td>1</td><td>ШЕСТЕРНЯ ПЕРЕДАЧИ ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="275"><td>275</td><td class="pn" data-raw="A1642601108" title="Клик — скопировать">A 164 260 11 08</td><td>	- Св. вращ. шестерня (LOSRAD)</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="285"><td>285</td><td class="pn" data-raw="A2112620734" title="Клик — скопировать">A 211 262 07 34</td><td>	- Кольцо синхронизатора (SYNCHRONRING)</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="295"><td>295</td><td class="pn" data-raw="A1642621735" title="Клик — скопировать">A 164 262 17 35</td><td>	- Элемент сцепления (KUPPLUNGSKOERPER)</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="305"><td>305</td><td class="pn" data-raw="A2032621018" title="Клик — скопировать">A 203 262 10 18</td><td>		- Нажимной упор (DRUCKSTUECK)</td><td>3</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.404/07</td><td class="restr"></td></tr><tr data-pos="325"><td>325</td><td class="pn" data-raw="A1642602024" title="Клик — скопировать">A 164 260 20 24</td><td>- Промвал коробки передач (VORGELEGEWELLE)</td><td>1</td><td>Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="355"><td>355</td><td class="pn" data-raw="A0229811710" title="Клик — скопировать">A 022 981 17 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ЧЕТВЁРТОЙ ПЕРЕДАЧИ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="355"><td>355</td><td class="pn" data-raw="A0229815110" title="Клик — скопировать">A 022 981 51 10</td><td>	- ПОДШИПНИК ИГОЛЬЧАТЫЙ</td><td>1</td><td>ШЕСТЕРНЯ ЧЕТВЁРТОЙ ПЕРЕДАЧИ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="365"><td>365</td><td class="pn" data-raw="A1642630014" title="Клик — скопировать">A 164 263 00 14</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ЧЕТВЁРТАЯ ПЕРЕДАЧА Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="375"><td>375</td><td class="pn" data-raw="A2112631320" title="Клик — скопировать">A 211 263 13 20</td><td>	- Корпус подшипника (LAGERKOERPER)</td><td>1</td><td>ТРЕТЬЯ И ЧЕТВЁРТАЯ ПЕРЕДАЧА Z 515.405/07 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A2112603145" title="Клик — скопировать">A 211 260 31 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ЧЕТВЁРТАЯ ПЕРЕДАЧА Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="385"><td>385</td><td class="pn" data-raw="A1642601145" title="Клик — скопировать">A 164 260 11 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ТРЕТЬЯ И ЧЕТВЁРТАЯ ПЕРЕДАЧА Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A2112630261" title="Клик — скопировать">A 211 263 02 61</td><td>		- Упор (ANSCHLAG)</td><td>3</td><td>ТРЕТЬЯ И ЧЕТВЁРТАЯ ПЕРЕДАЧА Z 515.405/07 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A2112603145" title="Клик — скопировать">A 211 260 31 45</td><td>	- Синхронизатор (SYNCHRONKOERPER)</td><td>1</td><td>ТРЕТЬЯ ПЕРЕДАЧА Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A1642630151" title="Клик — скопировать">A 164 263 01 51</td><td>	- Проставочное кольцо (ABSTANDSRING)</td><td>1</td><td>СИНХРОНИЗАТОР Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="435"><td>435</td><td class="pn" data-raw="A0009804310" title="Клик — скопировать">A 000 980 43 10</td><td>	- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ТРЕТЬЕЙ ПЕРЕДАЧИ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="435"><td>435</td><td class="pn" data-raw="A0009804510" title="Клик — скопировать">A 000 980 45 10</td><td>	- Игольчатый подшипник</td><td>1</td><td>ШЕСТЕРНЯ ТРЕТЬЕЙ ПЕРЕДАЧИ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="445"><td>445</td><td class="pn" data-raw="A2112631320" title="Клик — скопировать">A 211 263 13 20</td><td>	- Корпус подшипника (LAGERKOERPER)</td><td>1</td><td>ШЕСТЕРНЯ ТРЕТЬЕЙ ПЕРЕДАЧИ Z 515.405/07 [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2112630113" title="Клик — скопировать">A 211 263 01 13</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ТРЕТЬЯ ПЕРЕДАЧА Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1642630216" title="Клик — скопировать">A 164 263 02 16</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ШЕСТАЯ ПЕРЕДАЧА Z 515.405/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="A1642630310" title="Клик — скопировать">A 164 263 03 10</td><td>	- Шестерня (ZAHNRAD)</td><td>1</td><td>ПОСТОЯННО Z 515.405/07 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="475"><td>475</td><td class="pn" data-raw="A2119940935" title="Клик — скопировать">A 211 994 09 35</td><td>	- Пруж. стопорное кольцо (SPRENGRING)</td><td>1</td><td>ШЕСТЕРНЯ ПОСТОЯННОГО ЗАЦЕПЛЕНИЯ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A1642630066" title="Клик — скопировать">A 164 263 00 66</td><td>	- Маслозащитное кольцо (OELRING)</td><td>1</td><td>ШЕСТЕРНЯ ПОСТОЯННОГО ЗАЦЕПЛЕНИЯ Z 515.405/07</td><td class="restr"></td></tr><tr data-pos="485"><td>485</td><td class="pn" data-raw="A9062630030" title="Клик — скопировать">A 906 263 00 30</td><td>- Ось шестерни заднего хода (RUECKLAUFACHSE)</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="495"><td>495</td><td class="pn" data-raw="A0229812410" title="Клик — скопировать">A 022 981 24 10</td><td>- Игольчатый подшипник (NADELLAGER)</td><td>1</td><td>ШЕСТЕРНЯ ПЕРЕДАЧИ ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="495"><td>495</td><td class="pn" data-raw="A0229814910" title="Клик — скопировать">A 022 981 49 10</td><td>- ПОДШИПНИК ИГОЛЬЧАТЫЙ</td><td>1</td><td>ШЕСТЕРНЯ ПЕРЕДАЧИ ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="505"><td>505</td><td class="pn" data-raw="A1642620010" title="Клик — скопировать">A 164 262 00 10</td><td>- Шестерня (ZAHNRAD)</td><td>1</td><td>ПЕРЕДАЧА ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="515"><td>515</td><td class="pn" data-raw="A2032630062" title="Клик — скопировать">A 203 263 00 62</td><td>- Прижимная шайба (DRUCKSCHEIBE)</td><td>1</td><td>ШЕСТЕРНЯ ПЕРЕДАЧИ ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="525"><td>525</td><td class="pn" data-raw="A9062630047" title="Клик — скопировать">A 906 263 00 47</td><td>- Вкладыш подшипника (LAGERSCHALE)</td><td>1</td><td>ОСЬ ШЕСТЕРНИ ЗАДНЕГО ХОДА Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr><tr data-pos="535"><td>535</td><td class="pn" data-raw="N000000005958" title="Клик — скопировать">N 000000 005958</td><td>- Винт с 6-гр. глвк</td><td>1</td><td>ОСЬ ШЕСТЕРНИ ЗАДНЕГО ХОДА НА КОРПУСЕ КП M8X65 Z 515.402/12, Z 515.402/21, Z 515.402/26, Z 515.402/36</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 75 · подписано на схемах: 75 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26545000073.png", "poses": ["10", "15", "20", "30", "55", "70", "73", "78", "83", "88", "90", "105", "118", "140", "150", "155", "165", "170", "210", "225", "235", "245", "260", "275", "285", "295", "305", "325", "355", "365", "375", "380", "385", "405", "410", "430", "435", "445", "450", "460", "465", "475", "480", "485", "495", "505", "515", "525", "535"], "hs": {"88": [[599, 324, 34, 30]], "190": [[488, 487, 47, 30]], "395": [[743, 626, 48, 30]], "110": [[548, 170, 48, 30]], "275": [[972, 427, 48, 30]], "155": [[323, 593, 48, 30]], "475": [[211, 859, 48, 30]], "355": [[979, 661, 48, 29]], "235": [[817, 479, 48, 29]], "115": [[490, 232, 48, 30]], "435": [[515, 787, 48, 30]], "90": [[533, 349, 34, 30]], "118": [[560, 205, 48, 30]], "515": [[1076, 720, 48, 29]], "10": [[208, 414, 34, 30]], "55": [[895, 241, 34, 30]], "15": [[360, 386, 34, 30]], "285": [[1032, 392, 48, 30]], "485": [[999, 753, 48, 30]], "365": [[917, 695, 48, 30]], "245": [[865, 432, 48, 30]], "400": [[748, 698, 48, 30]], "445": [[471, 805, 48, 30]], "325": [[1115, 637, 48, 29]], "525": [[1053, 845, 48, 30]], "405": [[760, 745, 48, 29]], "20": [[315, 381, 35, 29]], "25": [[141, 429, 34, 29]], "170": [[450, 559, 48, 29]], "295": [[1095, 380, 48, 29]], "450": [[418, 823, 48, 30]], "495": [[1196, 692, 48, 30]], "210": [[632, 509, 48, 29]], "375": [[858, 698, 48, 29]], "410": [[638, 766, 48, 29]], "535": [[1182, 864, 48, 29]], "73": [[745, 269, 35, 30]], "78": [[701, 291, 34, 30]], "180": [[481, 417, 48, 29]], "380": [[806, 725, 48, 30]], "260": [[912, 414, 47, 30]], "140": [[187, 614, 48, 30]], "460": [[352, 848, 48, 30]], "220": [[684, 480, 48, 30]], "385": [[698, 758, 48, 30]], "420": [[580, 694, 48, 30]], "465": [[267, 873, 48, 30]], "225": [[739, 463, 48, 29]], "105": [[469, 341, 48, 29]], "305": [[1106, 259, 48, 30]], "505": [[1124, 694, 48, 30]], "83": [[646, 306, 35, 30]], "40": [[430, 368, 35, 29]]}, "w": 1326, "h": 938}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>

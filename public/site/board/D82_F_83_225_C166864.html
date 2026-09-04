@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C166864">D82 -/-</a> → 225 Кондиционер в задней части салона</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/905">D82 -/-</a> → 225 Кондиционер в задней части салона</div>
 <h1>225 Кондиционер в задней части салона</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B83225000028.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B83225000028.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1668301660" title="Клик — скопировать">A 166 830 16 60</td><td>Кондиционер (KLIMAANLAGE)</td><td>1</td><td></td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1669060012" title="Клик — скопировать">A 166 906 00 12</td><td>- Вентилятор (GEBLAESE)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1669064001" title="Клик — скопировать">A 166 906 40 01</td><td>- Регулятор вентилятора (GEBLAESEREGLER)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A0019845829" title="Клик — скопировать">A 001 984 58 29</td><td>- Болт с головкой торкс (SECHSRUNDSCHRAUBE)</td><td>24</td><td>КОРОБ СИСТ. КОНДИЦ.; 4X16</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1648300258" title="Клик — скопировать">A 164 830 02 58</td><td>- Испаритель (VERDAMPFER)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1648300184" title="Клик — скопировать">A 164 830 01 84</td><td>	- Клапан (VENTIL)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582+-1U6"><span class="icode">582+-1U6</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1648350598" title="Клик — скопировать">A 164 835 05 98</td><td>- К-т уплотнит. кольца (TEILESATZ DICHTRING)</td><td>1</td><td>МЕЖДУ ИСПАРИТЕЛЕМ И РАСШИРИТ. КЛАПАНОМ</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1718300272" title="Клик — скопировать">A 171 830 02 72</td><td>- Датчик температуры (TEMPERATURSENSOR)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; M6X12</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1668300014" title="Клик — скопировать">A 166 830 00 14</td><td>Держатель (HALTER)</td><td>1</td><td>КРЕПЛ. КОРПУСА КЛИМАТ. УСТАНОВКИ</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0009909556" title="Клик — скопировать">A 000 990 95 56</td><td>SPRING NUT (FEDERMUTTER)</td><td>1</td><td>К КОРОБУ СИСТЕМЫ КОНДИЦИОН.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N000000006037" title="Клик — скопировать">N 000000 006037</td><td>ГАЙКА КОМБИНИРОВАННАЯ (KOMBIMUTTER)</td><td>1</td><td>КРЕПЛ. КОРПУСА КЛИМАТ. УСТАНОВКИ; M6</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="175"><td>175</td><td class="pn" data-raw="N304017006019" title="Клик — скопировать">N 304017 006019</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>К КОРОБУ СИСТЕМЫ КОНДИЦИОН.; M6X25</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="177"><td>177</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (SCHEIBE)</td><td>1</td><td>К КОРОБУ СИСТЕМЫ КОНДИЦИОН.; 6 MM</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2518320194" title="Клик — скопировать">A 251 832 01 94</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1668310145" title="Клик — скопировать">A 166 831 01 45</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1668314100" title="Клик — скопировать">A 166 831 41 00</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КОРОБ СИСТ. КОНДИЦ.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0039976686" title="Клик — скопировать">A 003 997 66 86</td><td>Пробка (VERSCHLUSSSTOPFEN)</td><td>1</td><td>К КОРОБУ СИСТЕМЫ КОНДИЦИОН.; 25 MM</td><td class="restr" data-expr="-582"><span class="icode">-582</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0029978886" title="Клик — скопировать">A 002 997 88 86</td><td>Пробка (VERSCHLUSSSTOPFEN)</td><td>1</td><td>К КОРОБУ СИСТЕМЫ КОНДИЦИОН.</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1668312746" title="Клик — скопировать">A 166 831 27 46</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>СЗАДИ СЛЕВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1668312200" title="Клик — скопировать">A 166 831 22 00</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>СЗАДИ СЛЕВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0019916398" title="Клик — скопировать">A 001 991 63 98</td><td>Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>3</td><td>КРЕПЛЕНИЕ ВОЗДУХОВОДА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1668312946" title="Клик — скопировать">A 166 831 29 46</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СЛЕВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1668312400" title="Клик — скопировать">A 166 831 24 00</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СЛЕВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0019916398" title="Клик — скопировать">A 001 991 63 98</td><td>Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>КРЕПЛЕНИЕ ВОЗДУХОВОДА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A1668313046" title="Клик — скопировать">A 166 831 30 46</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A1668312500" title="Клик — скопировать">A 166 831 25 00</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A0019916398" title="Клик — скопировать">A 001 991 63 98</td><td>Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>4</td><td>КРЕПЛЕНИЕ ВОЗДУХОВОДА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1668312846" title="Клик — скопировать">A 166 831 28 46</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СПРАВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1668312300" title="Клик — скопировать">A 166 831 23 00</td><td>Воздушный канал (LUFTKANAL)</td><td>1</td><td>КРЫША СПРАВА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A0019916398" title="Клик — скопировать">A 001 991 63 98</td><td>Клипса обшивки (VERKLEIDUNGSCLIP)</td><td>2</td><td>КРЕПЛЕНИЕ ВОЗДУХОВОДА</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A1638300272" title="Клик — скопировать">A 163 830 02 72</td><td>Датчик температуры (TEMPERATURSENSOR)</td><td>1</td><td>НА ВОЗДУШНОМ КАНАЛЕ</td><td class="restr" data-expr="582"><span class="icode">582</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0175450826" title="Клик — скопировать">A 017 545 08 26</td><td>Штекерная втулка (STECKHUELSE)</td><td>1</td><td>ДАТЧИК ТЕМПЕРАТУРЫ B10/37; 2\-PIN AFK</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A2205453928" title="Клик — скопировать">A 220 545 39 28</td><td>Корпус штекерной втулки (STECKHUELSENGEHAEUSE)</td><td>1</td><td>РАЗЪЕМ КЛИМ. УСТАНОВКИ X122/3; 4\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0255451826" title="Клик — скопировать">A 025 545 18 26</td><td>Сцепление, механическое (KUPPLUNG, MECHANISCH)</td><td>1</td><td>РАЗЪЕМ КЛИМ. УСТАНОВКИ X122/3; 4\-PIN MQS</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B83225000028.png", "poses": ["10", "15", "20", "25", "40", "50", "60", "80", "120", "140", "160", "170", "175", "177", "180", "190", "200", "210", "300", "310", "320", "330", "340", "350", "360", "370", "380", "900", "905"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B83225000028.png", "poses": ["10", "15", "20", "25", "40", "50", "60", "80", "120", "140", "160", "170", "175", "177", "180", "190", "200", "210", "300", "310", "320", "330", "340", "350", "360", "370", "380", "900", "905"], "hs": {"25": [[889, 541, 35, 30]], "190": [[727, 456, 48, 29]], "170": [[950, 822, 48, 30]], "370": [[387, 278, 48, 30]], "350": [[696, 248, 48, 30]], "175": [[850, 568, 48, 30]], "330": [[604, 507, 48, 29]], "177": [[891, 589, 48, 30]], "210": [[954, 553, 48, 30]], "310": [[950, 450, 48, 30]], "50": [[892, 434, 34, 30]], "10": [[1078, 762, 35, 30]], "15": [[720, 795, 34, 30]], "180": [[1048, 849, 48, 30]], "160": [[1078, 554, 48, 30]], "380": [[469, 154, 48, 30]], "140": [[1200, 725, 48, 30]], "360": [[506, 222, 48, 30]], "120": [[1166, 596, 49, 30]], "340": [[798, 166, 48, 30]], "320": [[722, 351, 48, 30]], "200": [[1046, 812, 48, 29]], "300": [[992, 362, 48, 30]], "80": [[732, 587, 34, 29]], "900": [[318, 189, 48, 29]], "60": [[825, 407, 34, 30]], "40": [[858, 505, 34, 30]], "20": [[567, 703, 34, 30]], "905": [[855, 706, 48, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

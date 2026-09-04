@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107045">048 BIS 09/85</a> → 375 ЭЛ. ДЕТАЛИ ДЛЯ КП</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/209">048 BIS 09/85</a> → 375 ЭЛ. ДЕТАЛИ ДЛЯ КП</div>
 <h1>375 ЭЛ. ДЕТАЛИ ДЛЯ КП</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B54375000023 <span class="hint">(25)</span></button><button data-i="1" class="">B54375000021 <span class="hint">(7)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54375000023.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B54375000023.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075407608" title="Клик — скопировать">A 107 540 76 08</td><td>Провод (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>AUTOMATIC TRANSMISSION с  INDUCTIVE PICKUP Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1075407408" title="Клик — скопировать">A 107 540 74 08</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>AUTOMATIC TRANSMISSION с  INDUCTIVE PICKUP</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0085450828" title="Клик — скопировать">A 008 545 08 28</td><td>- Корпус штекерной втулки</td><td>2</td><td>ЭЛ.ПРОВОД НА ВЫКЛЮЧАТ. KICK\-DOWN; 2\-PIN RK4 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>- Крышка</td><td>-</td><td>2\-PIN RK4. Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0005457903" title="Клик — скопировать">A 000 545 79 03</td><td>- КРЫШКА</td><td>2</td><td>TO 008 545 08 28 Автоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0015454426" title="Клик — скопировать">A 001 545 44 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>4 MM; 0.35\-6.0 MM2 RK4.0 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>4 MM; 0.35\-4.0 MM2 RK4 Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A0125453528" title="Клик — скопировать">A 012 545 35 28</td><td>- Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>МАГНИТ.КЛАПАН KICK\-DOWN Автоматическая коробка переключения передач [116] FROM CHASSIS 042014804 EXCEPT FOR 014809</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0025454226" title="Клик — скопировать">A 002 545 42 26</td><td>- Контактная втулка (CONTACT SOCKET)</td><td>1</td><td>TO 012 545 35 28 Автоматическая коробка переключения передач [116] FROM CHASSIS 042014804 EXCEPT FOR 014809</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0065457828" title="Клик — скопировать">A 006 545 78 28</td><td>- Корпус штекера (PLUG HOUSING)</td><td>1</td><td>ADDITIONAL CABLE HARNESS TO MAIN CABLE HARNESS; 6\-PIN Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0095455328" title="Клик — скопировать">A 009 545 53 28</td><td>- Корпус штекера (PLUG HOUSING)</td><td>1</td><td>ADDITIONAL CABLE HARNESS TO MAIN CABLE HARNESS; 8\-PIN RK4.0 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0095453028" title="Клик — скопировать">A 009 545 30 28</td><td>- Верхняя часть корпуса (HOUSING UPPER PART)</td><td>1</td><td>TO 006 545 78 28 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0095453728" title="Клик — скопировать">A 009 545 37 28</td><td>- Крышка (CAP)</td><td>1</td><td>TO 009 545 53 28 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0015453826" title="Клик — скопировать">A 001 545 38 26</td><td>- Контактный стержень (CONTACT PIN)</td><td>NB</td><td>4 MM; 4.0 MM2 RK4 Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1149970581" title="Клик — скопировать">A 114 997 05 81</td><td>- втулка (GROMMET)</td><td>1</td><td>ЭЛЕКТРИЧ.ПРОВОД ЧЕРЕЗ ТУННЕЛЬ Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0085450828" title="Клик — скопировать">A 008 545 08 28</td><td>Корпус штекерной втулки</td><td>1</td><td>KICK\-DOWN SWITCH ADDITIONAL CABLE; 2\-PIN RK4 Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0085450928" title="Клик — скопировать">A 008 545 09 28</td><td>Корпус штекера</td><td>1</td><td>KICK\-DOWN SWITCH ADDITIONAL CABLE; 2\-PIN Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0085451128" title="Клик — скопировать">A 008 545 11 28</td><td>Крышка</td><td>-</td><td>2\-PIN RK4. Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0005457903" title="Клик — скопировать">A 000 545 79 03</td><td>КРЫШКА</td><td>NB</td><td>TO 008 545 08 28,008 545 09 28 Рулевое управление: ВправоАвтоматическая коробка переключения передач [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0015454426" title="Клик — скопировать">A 001 545 44 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>TO 008 545 08 28; 0.35\-6.0 MM2 RK4.0 Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0135457928" title="Клик — скопировать">A 013 545 79 28</td><td>Штекерный штифт (PLUG PIN)</td><td>NB</td><td>TO 008 545 09 28; 4.0mm2 Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0005463335" title="Клик — скопировать">A 000 546 33 35</td><td>Защитный колпачок (PROTECTIVE CAP)</td><td>1</td><td>ЭЛ.ПРОВОД НА ВЫКЛЮЧАТ. KICK\-DOWN Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="179"><td>179</td><td class="pn" data-raw="N000933006130" title="Клик — скопировать">N 000933 006130</td><td>Винт (SCREW)</td><td>1</td><td>ИМПУЛЬСН. ДАТЧИК НА КП</td><td class="restr"></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>1</td><td>ИМПУЛЬСН. ДАТЧИК НА КП</td><td class="restr"></td></tr><tr data-pos="191"><td>191</td><td class="pn" data-raw="A1265460643" title="Клик — скопировать">A 126 546 06 43</td><td>ДЕРЖАТЕЛЬ</td><td>2</td><td>ЖГУТ ЭЛ.\-ПРОВОДКИ</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1235454940" title="Клик — скопировать">A 123 545 49 40</td><td>Держатель (HOLDER)</td><td>1</td><td>РАЗЪЕМ БЛОКИР.ПУСКА И ВЫКЛ.СВЕТА ЗАДН.ХОДА Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="197"><td>197</td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>2</td><td>ДЕРЖАТЕЛЬ НА ПЕРЕГОРОДКЕ</td><td class="restr"></td></tr><tr data-pos="203"><td>203</td><td class="pn" data-raw="A1109870944" title="Клик — скопировать">A 110 987 09 44</td><td>Диск (WINDOW)</td><td>1</td><td>SOLENOID SWITCH BRANCH\-OFF; 26.5 MM Автоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="209"><td>209</td><td class="pn" data-raw="A0009957401" title="Клик — скопировать">A 000 995 74 01</td><td>хомут (CLAMP)</td><td>1</td><td>Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="212"><td>212</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>Шуруп (TAPPING SCREW)</td><td>1</td><td>MBN 10169 4.2 X 13 Рулевое управление: ВправоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54375000023.png", "poses": ["5", "14", "17", "20", "50", "53", "56", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "179", "182", "191", "194", "197", "203", "209", "212"]}, {"png": "../../img_png/drawing_B54375000021.png", "poses": ["179", "182", "191", "194", "197", "209", "212"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54375000023.png", "poses": ["5", "14", "17", "20", "50", "53", "56", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "179", "182", "191", "194", "197", "203", "209", "212"], "hs": {"89": [[500, 506, 33, 17]], "68": [[520, 281, 33, 17]], "191": [[160, 387, 33, 17]], "194": [[280, 346, 33, 17]], "197": [[242, 395, 33, 17]], "212": [[264, 441, 33, 17]], "179": [[419, 463, 33, 17]], "92": [[495, 463, 33, 17]], "71": [[681, 471, 33, 17]], "50": [[578, 417, 33, 17]], "74": [[645, 479, 33, 17]], "32": [[580, 395, 33, 17]], "77": [[680, 483, 33, 17], [645, 492, 33, 17]], "35": [[580, 406, 33, 17]], "14": [[627, 417, 33, 17]], "59": [[584, 250, 33, 17]], "17": [[629, 428, 33, 17]], "182": [[393, 447, 33, 17]], "185": [[115, 388, 33, 17]], "188": [[82, 383, 33, 17]], "200": [[194, 495, 33, 17]], "203": [[165, 501, 33, 17]], "5": [[463, 336, 33, 17]], "80": [[681, 494, 33, 17]], "209": [[285, 471, 33, 17]], "83": [[643, 505, 33, 17]], "62": [[586, 265, 33, 17]], "20": [[706, 293, 33, 17], [625, 441, 33, 17]], "86": [[596, 526, 33, 17]], "65": [[586, 277, 33, 17], [644, 316, 33, 17]]}, "w": 876, "h": 584}, {"png": "../../img_png/drawing_B54375000021.png", "poses": ["179", "182", "191", "194", "197", "209", "212"], "hs": {"191": [[260, 142, 33, 17]], "170": [[675, 370, 33, 17]], "194": [[392, 93, 33, 17]], "173": [[677, 383, 33, 17]], "152": [[755, 213, 33, 17]], "197": [[351, 142, 33, 17]], "176": [[764, 333, 33, 17]], "155": [[644, 340, 33, 17]], "134": [[412, 234, 33, 17]], "179": [[660, 491, 33, 17]], "212": [[519, 25, 33, 17]], "158": [[643, 352, 33, 17]], "137": [[300, 256, 33, 17]], "182": [[621, 473, 33, 17]], "161": [[645, 363, 33, 17]], "140": [[303, 272, 33, 17]], "185": [[183, 155, 33, 17]], "164": [[726, 437, 33, 17]], "143": [[302, 285, 33, 17]], "188": [[137, 108, 33, 17]], "167": [[678, 360, 33, 17]], "146": [[757, 194, 33, 17]], "149": [[757, 204, 33, 17]], "206": [[449, 86, 33, 17]], "209": [[560, 83, 33, 17]]}, "w": 876, "h": 583}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

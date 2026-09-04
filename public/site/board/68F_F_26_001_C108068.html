@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108068">68F  Действительно для: CA, US</a> → 001 КОРОБКА ПЕРЕДАЧ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/508">68F  Действительно для: CA, US</a> → 001 КОРОБКА ПЕРЕДАЧ</div>
 <h1>001 КОРОБКА ПЕРЕДАЧ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B26001001377 <span class="hint">(0)</span></button><button data-i="1" class="">B26001001378 <span class="hint">(0)</span></button><button data-i="2" class="">B26001001379 <span class="hint">(0)</span></button><button data-i="3" class="">B26001001380 <span class="hint">(0)</span></button><button data-i="4" class="">B26001001382 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B26001001377.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B26001001377.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26001001377.png", "poses": []}, {"png": "../../img_png/drawing_B26001001378.png", "poses": []}, {"png": "../../img_png/drawing_B26001001379.png", "poses": []}, {"png": "../../img_png/drawing_B26001001380.png", "poses": []}, {"png": "../../img_png/drawing_B26001001382.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26001001377.png", "poses": [], "hs": {"44": [[674, 353, 33, 17]], "89": [[11, 342, 33, 17]], "46": [[411, 57, 33, 17]], "48": [[315, 39, 33, 17]], "151": [[693, 398, 33, 17]], "153": [[743, 269, 33, 17]], "111": [[556, 20, 33, 17]], "155": [[765, 230, 33, 17]], "113": [[589, 8, 33, 17]], "157": [[634, 398, 33, 17]], "115": [[492, 100, 33, 17]], "159": [[737, 512, 33, 17]], "117": [[363, 176, 33, 17]], "91": [[345, 158, 33, 17]], "119": [[632, 147, 33, 17]], "93": [[453, 216, 33, 17]], "51": [[213, 64, 33, 17]], "95": [[439, 124, 33, 17]], "53": [[150, 99, 33, 17]], "97": [[490, 192, 33, 17]], "11": [[562, 327, 33, 17]], "55": [[280, 41, 33, 17]], "13": [[587, 315, 33, 17]], "57": [[253, 54, 33, 17]], "15": [[636, 299, 33, 17]], "59": [[169, 77, 33, 17]], "17": [[565, 238, 33, 17]], "19": [[604, 265, 33, 17]], "161": [[704, 519, 33, 17]], "163": [[776, 473, 33, 17]], "121": [[659, 138, 33, 17]], "165": [[805, 443, 33, 17]], "123": [[712, 141, 33, 17]], "167": [[831, 435, 33, 17]], "2": [[219, 410, 33, 17]], "125": [[741, 111, 33, 17]], "169": [[403, 471, 33, 17]], "127": [[776, 107, 33, 17]], "7": [[577, 452, 33, 17]], "129": [[811, 101, 33, 17]], "9": [[465, 256, 33, 17]], "61": [[362, 235, 33, 17]], "63": [[268, 267, 33, 17]], "21": [[587, 250, 33, 17]], "65": [[225, 284, 33, 17]], "23": [[483, 273, 33, 17]], "67": [[202, 285, 33, 17]], "25": [[519, 245, 33, 17]], "69": [[174, 304, 33, 17], [91, 331, 33, 17]], "27": [[505, 312, 33, 17]], "29": [[568, 386, 33, 17]], "171": [[516, 643, 33, 17]], "173": [[516, 623, 33, 17]], "131": [[842, 86, 33, 17]], "133": [[704, 240, 33, 17]], "135": [[267, 625, 33, 17]], "137": [[377, 619, 33, 17]], "71": [[132, 324, 33, 17]], "73": [[110, 179, 33, 17]], "31": [[486, 337, 33, 17]], "76": [[142, 173, 33, 17]], "33": [[439, 359, 33, 17]], "79": [[143, 161, 33, 17]], "35": [[386, 373, 33, 17]], "37": [[360, 448, 33, 17]], "39": [[614, 374, 33, 17]], "140": [[213, 636, 33, 17]], "142": [[236, 628, 33, 17]], "144": [[314, 646, 33, 17]], "146": [[336, 641, 33, 17]], "103": [[601, 162, 33, 17], [522, 188, 33, 17]], "148": [[676, 544, 33, 17]], "105": [[557, 185, 33, 17]], "107": [[600, 75, 33, 17]], "81": [[142, 148, 33, 17]], "109": [[587, 28, 33, 17]], "83": [[73, 186, 33, 17]], "85": [[60, 335, 33, 17]], "42": [[646, 365, 33, 17]], "87": [[37, 338, 33, 17]]}, "w": 884, "h": 668}, {"png": "../../img_png/drawing_B26001001378.png", "poses": [], "hs": {}, "w": 884, "h": 668}, {"png": "../../img_png/drawing_B26001001379.png", "poses": [], "hs": {}, "w": 876, "h": 585}, {"png": "../../img_png/drawing_B26001001380.png", "poses": [], "hs": {"591": [[261, 141, 33, 17]], "470": [[573, 137, 33, 17]], "593": [[230, 129, 33, 17]], "472": [[665, 251, 33, 17]], "671": [[262, 355, 33, 17]], "550": [[525, 544, 33, 17]], "595": [[196, 104, 33, 17]], "474": [[732, 194, 33, 17]], "673": [[299, 369, 33, 17]], "630": [[107, 306, 33, 17]], "597": [[172, 524, 33, 17]], "553": [[464, 309, 33, 17]], "477": [[666, 190, 33, 17]], "511": [[659, 333, 33, 17]], "676": [[458, 252, 33, 17]], "633": [[92, 296, 33, 17]], "479": [[714, 219, 33, 17]], "556": [[419, 311, 33, 17]], "679": [[558, 411, 33, 17]], "514": [[803, 470, 33, 17]], "558": [[412, 341, 33, 17]], "636": [[62, 298, 33, 17]], "517": [[780, 533, 33, 17]], "639": [[317, 530, 33, 17]], "481": [[733, 229, 33, 17]], "484": [[750, 239, 33, 17], [617, 199, 33, 17]], "561": [[528, 69, 33, 17]], "683": [[441, 417, 33, 17]], "563": [[611, 61, 33, 17]], "685": [[412, 423, 33, 17]], "520": [[676, 442, 33, 17]], "487": [[596, 186, 33, 17]], "642": [[345, 547, 33, 17]], "565": [[575, 74, 33, 17]], "522": [[810, 449, 33, 17]], "600": [[105, 429, 33, 17]], "688": [[622, 358, 33, 17], [526, 277, 33, 17]], "567": [[638, 61, 33, 17]], "645": [[125, 481, 33, 17]], "525": [[785, 425, 33, 17]], "569": [[631, 21, 33, 17]], "603": [[253, 442, 33, 17]], "648": [[68, 409, 33, 17]], "527": [[734, 484, 33, 17]], "606": [[361, 458, 33, 17]], "529": [[653, 459, 33, 17]], "609": [[348, 494, 33, 17]], "490": [[578, 175, 33, 17]], "492": [[765, 251, 33, 17]], "571": [[334, 319, 33, 17]], "494": [[722, 66, 33, 17]], "573": [[461, 103, 33, 17]], "496": [[724, 39, 33, 17]], "651": [[77, 475, 33, 17]], "531": [[707, 491, 33, 17]], "575": [[475, 74, 33, 17], [480, 63, 33, 17]], "653": [[99, 467, 33, 17]], "499": [[761, 23, 33, 17]], "533": [[744, 363, 33, 17]], "577": [[482, 49, 33, 17]], "656": [[88, 420, 33, 17]], "612": [[231, 511, 33, 17]], "535": [[793, 369, 33, 17]], "458": [[452, 363, 33, 17]], "579": [[489, 35, 33, 17]], "537": [[718, 354, 33, 17]], "659": [[34, 394, 33, 17]], "615": [[253, 502, 33, 17]], "539": [[713, 541, 33, 17], [814, 414, 33, 17]], "618": [[251, 525, 33, 17]], "581": [[449, 126, 33, 17]], "460": [[796, 158, 33, 17]], "583": [[443, 156, 33, 17]], "462": [[688, 105, 33, 17]], "662": [[14, 381, 33, 17]], "541": [[660, 424, 33, 17]], "464": [[652, 112, 33, 17]], "586": [[312, 228, 33, 17]], "543": [[800, 86, 33, 17]], "466": [[622, 125, 33, 17]], "665": [[227, 401, 33, 17]], "621": [[204, 340, 33, 17]], "589": [[312, 165, 33, 17]], "545": [[796, 297, 33, 17]], "468": [[602, 133, 33, 17]], "668": [[284, 393, 33, 17]], "624": [[163, 330, 33, 17]], "547": [[753, 327, 33, 17]], "503": [[828, 42, 33, 17]], "505": [[650, 273, 33, 17]], "627": [[144, 324, 33, 17]], "508": [[662, 316, 33, 17]]}, "w": 876, "h": 585}, {"png": "../../img_png/drawing_B26001001382.png", "poses": [], "hs": {}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

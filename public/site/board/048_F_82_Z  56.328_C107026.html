@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107026">048 BIS 09/85</a> → Z  56.328 BECKER RADIO &quot;EUROPA CASSETTE VOLLSTEREO&quot;,LW/MW/SW/USW (FOR TYPE 129 SEE STANDAR</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/170">048 BIS 09/85</a> → Z  56.328 BECKER RADIO &quot;EUROPA CASSETTE VOLLSTEREO&quot;,LW/MW/SW/USW (FOR TYPE 129 SEE STANDAR</div>
 <h1>Z  56.328 BECKER RADIO &quot;EUROPA CASSETTE VOLLSTEREO&quot;,LW/MW/SW/USW (FOR TYPE 129 SEE STANDAR</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05632800001 <span class="hint">(16)</span></button><button data-i="1" class="">S05632800002 <span class="hint">(5)</span></button><button data-i="2" class="">S05632800003 <span class="hint">(0)</span></button><button data-i="3" class="">S05632800004 <span class="hint">(6)</span></button><button data-i="4" class="">S05632800005 <span class="hint">(3)</span></button><button data-i="5" class="">S05632800006 <span class="hint">(3)</span></button><button data-i="6" class="">S05632800007 <span class="hint">(5)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05632800001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05632800001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="B67822532" title="Клик — скопировать">B67822532</td><td>АУДИОМОДУЛЬ К-Т</td><td>1</td><td>EUROPA CS,CODE Z  56.328/01, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N041662000002" title="Клик — скопировать">N 041662 000002</td><td>- Плавкая вставка</td><td>1</td><td>6,3 A Z  56.328/01, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0008270482" title="Клик — скопировать">A 000 827 04 82</td><td>ШАЙБА</td><td>1</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="A1238270038" title="Клик — скопировать">A 123 827 00 38</td><td>РЫЧАГ</td><td>1</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008200492" title="Клик — скопировать">A 000 820 04 92</td><td>КНОПКА</td><td>2</td><td>TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N073379009100" title="Клик — скопировать">N 073379 009100</td><td>- Шланг</td><td>1</td><td>12 MM Z  56.328/01 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1078201417" title="Клик — скопировать">A 107 820 14 17</td><td>- ЭЛ. ПРОВОД</td><td>1</td><td>ЭЛ.ПИТАНИЕ АУДИОСИСТ. TO 001 820 92 86 Z  56.328/01 [807] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/85 [419] ДЕТАЛЬ СЛЕДУЕТ ЗАДОКУМЕНТИРОВАТЬ В СИСТЕМЕ VEDOC</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td>СОЕДИНЕНИЕ ПЕРЕДНИХ ДИНАМИКОВ Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="82"><td>82</td><td class="pn" data-raw="A0008272204" title="Клик — скопировать">A 000 827 22 04</td><td>- Электрический провод</td><td>1</td><td>Z  56.328/01, Z  56.328/05, Z  56.328/08 [807] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/85 [419] ДЕТАЛЬ СЛЕДУЕТ ЗАДОКУМЕНТИРОВАТЬ В СИСТЕМЕ VEDOC</td><td class="restr"></td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="B66828920" title="Клик — скопировать">B66828920</td><td>ДИНАМИК</td><td>2</td><td>Z  56.328/01 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="A1078270140" title="Клик — скопировать">A 107 827 01 40</td><td>- ПАНЕЛЬ</td><td>2</td><td>ДИНАМИК СПЕРЕДИ Z  56.328/01</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N007981004244" title="Клик — скопировать">N 007981 004244</td><td>- Шуруп</td><td>-</td><td>Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000000453" title="Клик — скопировать">N 000000 000453</td><td>- Шуруп</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; MBN 10169 4.2 X 13 Z  56.328/01, Z  56.328/05 [163] UP TO CHASSIS 123.026,028                   118153 123.033                       115267 123.053                       029143 123.093,183,190,193,280,283 F 000126 123.120                       360690 123.123,125                   415726 123.130,132                   310662 123.133                       036393 123.153                       004059 123.220                       157690 123.223                       174622 123.243                       022475</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="N000433005304" title="Клик — скопировать">N 000433 005304</td><td>- Шайба</td><td>4</td><td>ДИНАМИК К ПЕРЕДНЕЙ ПАНЕЛИ; 5mm Z  56.328/01, Z  56.328/02</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1158200032" title="Клик — скопировать">A 115 820 00 32</td><td>- СКОБА</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/08 [154] UP TO CHASSIS 107.022 009533 107.025 001704 107.026 002280 107.042 009859 107.045 003232 107.046 000488</td><td class="restr"></td></tr><tr data-pos="154"><td>154</td><td class="pn" data-raw="N304017006034" title="Клик — скопировать">N 304017 006034</td><td>- Винт с 6-гранной головкой</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO 001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="158"><td>158</td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>- Пружинное кольцо</td><td>1</td><td>GROUND CONNECTION TO RADIO SET TO  001 820 43 86 Z  56.328/01, Z  56.328/02, Z  56.328/03, Z  56.328/05, Z  56.328/08</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1239942145" title="Клик — скопировать">A 123 994 21 45</td><td>- ПРЕДОХРАНИТЕЛЬ</td><td>2</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01 [155] FROM CHASSIS 107.022 009534 107.025 001705 107.026 002281 107.042 009860 107.045 003233 107.046 000489</td><td class="restr"></td></tr><tr data-pos="174"><td>174</td><td class="pn" data-raw="A1158200029" title="Клик — скопировать">A 115 820 00 29</td><td>- ПОДПОРКА</td><td>1</td><td>КРЕПЛ.АУДИОУСТР. В КОРПУСЕ Z  56.328/01</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05632800001.png", "poses": ["5", "8", "12", "16", "20", "60", "70", "82", "94", "97", "100", "101", "154", "158", "170", "174"]}, {"png": "../../img_png/drawing_S05632800002.png", "poses": ["82", "150", "154", "158", "170"]}, {"png": "../../img_png/drawing_S05632800003.png", "poses": []}, {"png": "../../img_png/drawing_S05632800004.png", "poses": ["82", "100", "101", "150", "154", "158"]}, {"png": "../../img_png/drawing_S05632800005.png", "poses": ["82", "154", "158"]}, {"png": "../../img_png/drawing_S05632800006.png", "poses": ["82", "154", "158"]}, {"png": "../../img_png/drawing_S05632800007.png", "poses": ["82", "100", "154", "158", "170"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05632800001.png", "poses": ["5", "8", "12", "16", "20", "60", "70", "82", "94", "97", "100", "101", "154", "158", "170", "174"], "hs": {"12": [[931, 814, 28, 25]], "16": [[898, 799, 29, 24]], "170": [[897, 656, 49, 30]], "174": [[827, 600, 47, 27]], "154": [[436, 568, 42, 26]], "100": [[776, 369, 42, 25]], "101": [[688, 367, 42, 25]], "158": [[482, 619, 42, 24]], "5": [[1164, 784, 15, 24]], "8": [[1115, 609, 17, 25]], "70": [[544, 675, 34, 31]], "60": [[660, 542, 28, 24]], "82": [[430, 482, 30, 25]], "94": [[713, 210, 30, 25], [321, 321, 30, 25]], "20": [[960, 851, 28, 24]], "97": [[315, 402, 38, 28], [709, 295, 42, 32]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800002.png", "poses": ["82", "150", "154", "158", "170"], "hs": {"154": [[541, 558, 40, 27]], "158": [[574, 569, 41, 24]], "82": [[711, 483, 30, 27]], "170": [[1033, 650, 48, 27]], "150": [[1092, 748, 42, 27]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800003.png", "poses": [], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800004.png", "poses": ["82", "100", "101", "150", "154", "158"], "hs": {"154": [[911, 573, 42, 24]], "100": [[612, 179, 40, 25], [278, 273, 42, 25]], "101": [[607, 214, 42, 24], [281, 312, 40, 24]], "158": [[950, 599, 40, 26]], "82": [[584, 496, 30, 24]], "150": [[643, 747, 40, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800005.png", "poses": ["82", "154", "158"], "hs": {"154": [[559, 578, 42, 25]], "158": [[597, 597, 40, 26]], "82": [[683, 446, 28, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800006.png", "poses": ["82", "154", "158"], "hs": {"154": [[624, 481, 40, 24]], "158": [[659, 510, 42, 27]], "82": [[747, 456, 31, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05632800007.png", "poses": ["82", "100", "154", "158", "170"], "hs": {"154": [[658, 552, 40, 24]], "100": [[802, 213, 40, 26], [281, 330, 40, 26]], "158": [[760, 571, 40, 24]], "82": [[737, 492, 28, 25]], "170": [[1137, 729, 44, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

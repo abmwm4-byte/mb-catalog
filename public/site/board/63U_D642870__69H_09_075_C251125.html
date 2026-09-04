@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251125">63U -/-</a> → 075 Турбонагнетатель</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">63U -/-</a> → 075 Турбонагнетатель</div>
 <h1>075 Турбонагнетатель</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B09075000309.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B09075000309.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420906280" title="Клик — скопировать">A 642 090 62 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(F164/F251)+M019+-M014"><span class="icode">(F164/F251)+M019+-M014</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420905880" title="Клик — скопировать">A 642 090 58 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="F164+M019+-M014/F204/F207/F212/F251+M019+-M014/F463"><span class="icode">F164+M019+-M014/F204/F207/F212/F251+M019+-M014/F463</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420908680" title="Клик — скопировать">A 642 090 86 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="F164+M019+-M014/F204/F207/F212/F251+M019+-M014"><span class="icode">F164+M019+-M014/F204/F207/F212/F251+M019+-M014</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420905380" title="Клик — скопировать">A 642 090 53 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(F164/F251)+494+U42"><span class="icode">(F164/F251)+494+U42</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420905880" title="Клик — скопировать">A 642 090 58 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(F164/F251)+U42+494/F463"><span class="icode">(F164/F251)+U42+494/F463</span></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A6420908680" title="Клик — скопировать">A 642 090 86 80</td><td>Турбокомпрессор (EXHAUST GAS TURBOCHARGER)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="(F164/F251)+U42+494/F463"><span class="icode">(F164/F251)+U42+494/F463</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009906803" title="Клик — скопировать">A 000 990 68 03</td><td>- Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>3</td><td>Турбокомпрессор к выпускному коллектору; M8X25</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0109946741" title="Клик — скопировать">A 010 994 67 41</td><td>- Стопорное кольцо (RETAINING RING)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A6421420481" title="Клик — скопировать">A 642 142 04 81</td><td>- Полуметал. уплотнение (METAL-SOFT-MATERIAL SEAL)</td><td>1</td><td>Турбокомпрессор к кронштейну</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6421420309" title="Клик — скопировать">A 642 142 03 09</td><td>- Коллектор выпуска ОГ (EXH. GAS COLLECTOR PIPE)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(F164/F251)+494/F164+498/(F164/F251)+U42/F463"><span class="icode">(F164/F251)+494/F164+498/(F164/F251)+U42/F463</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6421410606" title="Клик — скопировать">A 642 141 06 06</td><td>- Коллектор выпуска ОГ (EXH. GAS COLLECTOR PIPE)</td><td>1</td><td></td><td class="restr" data-expr="-M014"><span class="icode">-M014</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6421410100" title="Клик — скопировать">A 642 141 01 00</td><td>- Коллектор выпуска ОГ (EXH. GAS COLLECTOR PIPE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A0009906803" title="Клик — скопировать">A 000 990 68 03</td><td>- Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>2</td><td>Крепление держателя; M8X25</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A6420960845" title="Клик — скопировать">A 642 096 08 45</td><td>- Подпорка (SUPPORT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N000000000276" title="Клик — скопировать">N 000000 000276</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Опора к блоку цилиндров; M8X20</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A6420960345" title="Клик — скопировать">A 642 096 03 45</td><td>Кронштейн</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A6420961745" title="Клик — скопировать">A 642 096 17 45</td><td>Кронштейн (CARRIER)</td><td>1</td><td></td><td class="restr" data-expr="-A40+-M014"><span class="icode">-A40+-M014</span></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A6420960100" title="Клик — скопировать">A 642 096 01 00</td><td>Кронштейн (CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019900314" title="Клик — скопировать">A 001 990 03 14</td><td>болт (FIT SCREW)</td><td>2</td><td>Турбокомпрессор к кронштейну; M8X27 [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019903107" title="Клик — скопировать">A 001 990 31 07</td><td>Болт призонный (FIT SCREW)</td><td>2</td><td>Турбокомпрессор к кронштейну</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A6421420980" title="Клик — скопировать">A 642 142 09 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>Опора к головке блока цилиндров</td><td class="restr" data-expr="F164+-M014/F166/F204/F207/F212/F251/F461/F463/F470+-M014/F906/F639"><span class="icode">F164+-M014/F166/F204/F207/F212/F251/F461/F463/F470+-M014/F906/F639</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A6421420781" title="Клик — скопировать">A 642 142 07 81</td><td>Металлическое уплотнение (METAL SEAL)</td><td>1</td><td>Опора к головке блока цилиндров</td><td class="restr" data-expr="F164+-M014/F166/F204/F207/F212/F251/F461/F463/F470+-M014/F906/F907/F639"><span class="icode">F164+-M014/F166/F204/F207/F212/F251/F461/F463/F470+-M014/F906/F907/F639</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N910143008017" title="Клик — скопировать">N 910143 008017</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Кронштейн к блоку цилиндров; M8X55</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A6421420280" title="Клик — скопировать">A 642 142 02 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td></td><td class="restr" data-expr="-F470+-M014"><span class="icode">-F470+-M014</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A6421420681" title="Клик — скопировать">A 642 142 06 81</td><td>Металлическое уплотнение (METAL SEAL)</td><td>1</td><td></td><td class="restr" data-expr="-F470+-M014"><span class="icode">-F470+-M014</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2205454628" title="Клик — скопировать">A 220 545 46 28</td><td>Штекер (PLUG)</td><td>1</td><td>Сервомеханизм регулировки давления наддува Y77/1; 5\-PIN SLK2.8</td><td class="restr"></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0095458126" title="Клик — скопировать">A 009 545 81 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>0.5\-0.75 MM2 SLK2.8</td><td class="restr"></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0005457180" title="Клик — скопировать">A 000 545 71 80</td><td>Уплотнительная прокладка (GASKET)</td><td>NB</td><td>Темно\-синий; 1.1\-2.1 MM SLK2.8</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09075000309.png", "poses": ["5", "10", "12", "15", "20", "25", "30", "35", "45", "50", "55", "60", "65", "900", "901"]}];</script><script>
+<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09075000309.png", "poses": ["5", "10", "12", "15", "20", "25", "30", "35", "45", "50", "55", "60", "65", "900", "901"], "hs": {"55": [[397, 518, 35, 30]], "12": [[457, 161, 34, 30]], "45": [[395, 680, 35, 29]], "35": [[1108, 502, 35, 30]], "25": [[1163, 606, 35, 30]], "15": [[868, 495, 34, 30]], "5": [[668, 275, 21, 30]], "900": [[266, 390, 48, 29]], "60": [[575, 623, 35, 30]], "901": [[216, 386, 48, 30]], "50": [[533, 196, 35, 30]], "30": [[1077, 634, 35, 30]], "20": [[1086, 405, 35, 30]], "10": [[1016, 321, 34, 30], [575, 563, 35, 30]], "65": [[368, 840, 34, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

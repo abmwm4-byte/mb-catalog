@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107024">048 BIS 09/85</a> → Z  55.732 SIDE WINDOW PANES,HEAT-ABSORBING GLASS</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/190">048 BIS 09/85</a> → Z  55.732 SIDE WINDOW PANES,HEAT-ABSORBING GLASS</div>
 <h1>Z  55.732 SIDE WINDOW PANES,HEAT-ABSORBING GLASS</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05573200004 <span class="hint">(3)</span></button><button data-i="1" class="">S05573200001 <span class="hint">(0)</span></button><button data-i="2" class="">S05573200002 <span class="hint">(0)</span></button><button data-i="3" class="">S05573200003 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05573200004.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05573200004.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731110" title="Клик — скопировать">A 107 673 11 10</td><td>Стекло</td><td>1</td><td>LEFT REAR SIDE CRANK OPERATED WINDOW Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1076731210" title="Клик — скопировать">A 107 673 12 10</td><td>Стекло</td><td>1</td><td>RIGHT REAR SIDE CRANK OPERATED WINDOW Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700392" title="Клик — скопировать">A 107 670 03 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701992" title="Клик — скопировать">A 107 670 19 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551 [018] UP TO CHASSIS: COLOR,METALL GREY NO.9734 107.023 004501 107.024 000479 [019] 017 033477, AUSSERDEM EINGEBAUT IN: COLOR,ASTRAL SILVER NO.9735 107.023 004502 107.024 000480</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076700492" title="Клик — скопировать">A 107 670 04 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076702092" title="Клик — скопировать">A 107 670 20 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА Z  55.732/17 [009] UP TO CHASSIS: 107.023     008068 107.024     002551 [018] UP TO CHASSIS: COLOR,METALL GREY NO.9734 107.023 004501 107.024 000479 [019] 017 033477, AUSSERDEM EINGEBAUT IN: COLOR,ASTRAL SILVER NO.9735 107.023 004502 107.024 000480</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701392" title="Клик — скопировать">A 107 670 13 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [010] FROM CHASSIS: 107.023     008069 107.024     002552 [024] UP TO CHASSIS: 107.022 003474 107.023 011630 107.024 017252</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701792" title="Клик — скопировать">A 107 670 17 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СЛЕВА Z  55.732/17 [025] FROM CHASSIS: 107.022 003475 107.023 011631 107.024 017253 [026] COLOR,ASTRAL SILVER NO.9735</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701492" title="Клик — скопировать">A 107 670 14 92</td><td>ЖАЛЮЗИ</td><td>-</td><td>Z  55.732/17 [010] FROM CHASSIS: 107.023     008069 107.024     002552 [024] UP TO CHASSIS: 107.022 003474 107.023 011630 107.024 017252</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1076701892" title="Клик — скопировать">A 107 670 18 92</td><td>ЖАЛЮЗИ</td><td>1</td><td>СПРАВА Z  55.732/17 [025] FROM CHASSIS: 107.022 003475 107.023 011631 107.024 017253 [026] COLOR,ASTRAL SILVER NO.9735</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200718" title="Клик — скопировать">A 107 720 07 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202318" title="Клик — скопировать">A 107 720 23 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201518" title="Клик — скопировать">A 107 720 15 18</td><td>Опускное стекло</td><td>1</td><td>СЛЕВА Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077200818" title="Клик — скопировать">A 107 720 08 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077202418" title="Клик — скопировать">A 107 720 24 18</td><td>СТЕКЛО БОКОВОЕ</td><td>-</td><td>Z  55.732/17</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A1077201618" title="Клик — скопировать">A 107 720 16 18</td><td>Опускное стекло</td><td>1</td><td>СПРАВА Z  55.732/17</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05573200004.png", "poses": ["250", "260", "268"]}, {"png": "../../img_png/drawing_S05573200001.png", "poses": []}, {"png": "../../img_png/drawing_S05573200002.png", "poses": []}, {"png": "../../img_png/drawing_S05573200003.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05573200004.png", "poses": ["250", "260", "268"], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05573200001.png", "poses": [], "hs": {"220": [[771, 203, 34, 23], [1099, 418, 35, 23]], "100": [[219, 369, 34, 21], [297, 653, 32, 21]], "122": [[353, 314, 35, 20], [435, 594, 32, 20]], "190": [[552, 264, 33, 20]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05573200002.png", "poses": [], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05573200003.png", "poses": [], "hs": {}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

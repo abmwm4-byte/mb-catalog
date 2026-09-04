@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205237">C205_FS -/-</a> → 135 Система впуска воздуха дизельных а/м</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/2310">C205_FS -/-</a> → 135 Система впуска воздуха дизельных а/м</div>
 <h1>135 Система впуска воздуха дизельных а/м</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.002.072.149_version_002.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.002.072.149_version_002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2055000055" title="Клик — скопировать">A 205 500 00 55</td><td>Впуск холодного воздуха (COLD AIR INTAKE)</td><td>1</td><td></td><td class="restr" data-expr="-(M177/M654/M276/M264)"><span class="icode">-(M177/M654/M276/M264)</span></td></tr><tr data-pos="305"><td>305</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td><td class="restr" data-expr="-M177"><span class="icode">-M177</span></td></tr><tr data-pos="2000"><td>2000</td><td class="pn" data-raw="A6260900101" title="Клик — скопировать">A 626 090 01 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2000"><td>2000</td><td class="pn" data-raw="A6260900201" title="Клик — скопировать">A 626 090 02 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td>RENAULT OM626</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2000"><td>2000</td><td class="pn" data-raw="A6260900301" title="Клик — скопировать">A 626 090 03 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2010"><td>2010</td><td class="pn" data-raw="A6260940004" title="Клик — скопировать">A 626 094 00 04</td><td>- Фил. элемент возд.фильтра (AIR FILTER ELEMENT)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2020"><td>2020</td><td class="pn" data-raw="A6260900441" title="Клик — скопировать">A 626 090 04 41</td><td>Держатель (HOLDER)</td><td>1</td><td>Фильтр с глушением шума впуска</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2030"><td>2030</td><td class="pn" data-raw="N910105010011" title="Клик — скопировать">N 910105 010011</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>3</td><td>Держатель к двигателю; M10X40</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2050"><td>2050</td><td class="pn" data-raw="A6450900048" title="Клик — скопировать">A 645 090 00 48</td><td>Расходомер воздуха (MASS AIR FLOW SENSOR)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2060"><td>2060</td><td class="pn" data-raw="A0019848029" title="Клик — скопировать">A 001 984 80 29</td><td>болт (SCREW)</td><td>2</td><td>Расходомер воздуха к корпусу воздушного фильтра; 6X20</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2070"><td>2070</td><td class="pn" data-raw="A6260900137" title="Клик — скопировать">A 626 090 01 37</td><td>Трубопровод оч. воздуха (CLEAN AIR LINE)</td><td>1</td><td>[697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2080"><td>2080</td><td class="pn" data-raw="A0000160030" title="Клик — скопировать">A 000 016 00 30</td><td>- Вентиляционная трубка (VENT TUBE)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2090"><td>2090</td><td class="pn" data-raw="A0009980742" title="Клик — скопировать">A 000 998 07 42</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>1</td><td>Крепление патрубка подачи очищенного воздуха</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2100"><td>2100</td><td class="pn" data-raw="A0009931260" title="Клик — скопировать">A 000 993 12 60</td><td>Шаровая цапфа (BALL PIN)</td><td>1</td><td>Крепление патрубка подачи очищенного воздуха</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2110"><td>2110</td><td class="pn" data-raw="A0081534428" title="Клик — скопировать">A 008 153 44 28</td><td>Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>В патрубок подачи очищенного воздуха</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2120"><td>2120</td><td class="pn" data-raw="A6260100100" title="Клик — скопировать">A 626 010 01 00</td><td>Вентиляционный шланг (VENT HOSE)</td><td>1</td><td>Между маслоотделителем и патрубком подачи очищенного воздуха</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2200"><td>2200</td><td class="pn" data-raw="A6260900037" title="Клик — скопировать">A 626 090 00 37</td><td>Впускная труба (RAW AIR LINE)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2210"><td>2210</td><td class="pn" data-raw="A0029880542" title="Клик — скопировать">A 002 988 05 42</td><td>Крышка (CLOSURE)</td><td>1</td><td>Воздуховод неочищенного воздуха к впуску холодного воздуха</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2250"><td>2250</td><td class="pn" data-raw="A2055000055" title="Клик — скопировать">A 205 500 00 55</td><td>Впуск холодного воздуха (COLD AIR INTAKE)</td><td>1</td><td></td><td class="restr" data-expr="-(M177/M654/M276/M264)"><span class="icode">-(M177/M654/M276/M264)</span></td></tr><tr data-pos="2260"><td>2260</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td><td class="restr" data-expr="-M177"><span class="icode">-M177</span></td></tr><tr data-pos="2300"><td>2300</td><td class="pn" data-raw="A6260100067" title="Клик — скопировать">A 626 010 00 67</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td></td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2310"><td>2310</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Крепление защитного кожуха двигателя; M6X25</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="2320"><td>2320</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление защитного кожуха двигателя; M6</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="3410"><td>3410</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>3</td><td>Крепление облицовки</td><td class="restr" data-expr="-M177"><span class="icode">-M177</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.072.149_version_002.png", "poses": ["2000", "2010", "2020", "2030", "2050", "2060", "2070", "2080", "2090", "2100", "2110", "2120", "2200", "2210", "2250", "2260", "2300", "2310", "2320"]}];</script><script>
+<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.072.149_version_002.png", "poses": ["2000", "2010", "2020", "2030", "2050", "2060", "2070", "2080", "2090", "2100", "2110", "2120", "2200", "2210", "2250", "2260", "2300", "2310", "2320"], "hs": {"2070": [[948, 28, 55, 28]], "2080": [[762, 54, 55, 29]], "2090": [[1067, 147, 55, 29]], "2100": [[1061, 180, 55, 28]], "2210": [[280, 249, 55, 29]], "2320": [[477, 164, 55, 28]], "2000": [[408, 221, 55, 29]], "2110": [[1087, 94, 55, 28]], "2010": [[657, 574, 55, 28]], "2120": [[494, 42, 55, 29]], "2020": [[594, 735, 55, 28]], "2030": [[291, 579, 55, 29]], "2250": [[384, 819, 55, 29]], "2260": [[66, 549, 55, 29]], "2050": [[922, 303, 55, 29]], "2060": [[1084, 248, 55, 28]], "2300": [[680, 110, 55, 28]], "2200": [[216, 368, 55, 29]], "2310": [[568, 114, 55, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

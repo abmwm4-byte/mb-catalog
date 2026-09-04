@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115017">001 -/-</a> → Z  55.410 TRUNK SET</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">001 -/-</a> → Z  55.410 TRUNK SET</div>
 <h1>Z  55.410 TRUNK SET</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05541000001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05541000001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0008410701" title="Клик — скопировать">A 000 841 07 01</td><td>- ЧЕМОДАН</td><td>-</td><td>Z  55.410/01, Z  55.410/02, Z  55.410/03, Z  55.410/05, Z  55.410/06, Z  55.410/07, Z  55.410/08, Z  55.410/09, Z  55.410/10</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0008411201" title="Клик — скопировать">A 000 841 12 01</td><td>- ЧЕМОДАН</td><td>3</td><td>Z  55.410/01, Z  55.410/02, Z  55.410/06, Z  55.410/07, Z  55.410/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [003] UP TO CHASSIS: 100.012,014,015,016 001555 108.016             043448 108.018             044549 108.019             044488 109.016             002466 [004] UP TO CHASSIS: 109.018     003466 109.056     000033 111.024,025 004366 111.026,027 000023 113.044     014263 [005] UP TO CHASSIS: 114.010     039371 114.015,017 043539 114.021     002616 114.022     004719 114.023     000862 [006] UP TO CHASSIS: 115.010     043782 115.015     043854 115.110,112 103122 115.115     047294</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0008411201" title="Клик — скопировать">A 000 841 12 01</td><td>- ЧЕМОДАН</td><td>3</td><td>Z  55.410/02, Z  55.410/06, Z  55.410/07, Z  55.410/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [007] FROM CHASSIS: 100.012,014,015,016 001556 108.016             043449 108.018             044550 108.019             044489 109.016             002467 [008] FROM CHASSIS: 109.018     003467 109.056     000034 111.024,025 004367 111.026,027 000024 113.044     014264 [009] FROM CHASSIS: 114.010     039372 114.015,017 043540 114.021     002617 114.022     004720 114.023     000863 114.072,073 000001 [010] FROM CHASSIS: 115.010     043783 115.015     043855 115.110,112 103123 115.115     047295 114.011         000001</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008410801" title="Клик — скопировать">A 000 841 08 01</td><td>- ЧЕМОДАН</td><td>-</td><td>Z  55.410/01, Z  55.410/02, Z  55.410/03, Z  55.410/05, Z  55.410/06, Z  55.410/07, Z  55.410/08, Z  55.410/09, Z  55.410/10</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008411301" title="Клик — скопировать">A 000 841 13 01</td><td>- ЧЕМОДАН</td><td>2</td><td>Z  55.410/01, Z  55.410/03, Z  55.410/05, Z  55.410/07, Z  55.410/08, Z  55.410/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [003] UP TO CHASSIS: 100.012,014,015,016 001555 108.016             043448 108.018             044549 108.019             044488 109.016             002466 [004] UP TO CHASSIS: 109.018     003466 109.056     000033 111.024,025 004366 111.026,027 000023 113.044     014263 [005] UP TO CHASSIS: 114.010     039371 114.015,017 043539 114.021     002616 114.022     004719 114.023     000862 [006] UP TO CHASSIS: 115.010     043782 115.015     043854 115.110,112 103122 115.115     047294</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0008411301" title="Клик — скопировать">A 000 841 13 01</td><td>- ЧЕМОДАН</td><td>2</td><td>Z  55.410/03, Z  55.410/05, Z  55.410/07, Z  55.410/08, Z  55.410/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [007] FROM CHASSIS: 100.012,014,015,016 001556 108.016             043449 108.018             044550 108.019             044489 109.016             002467 [008] FROM CHASSIS: 109.018     003467 109.056     000034 111.024,025 004367 111.026,027 000024 113.044     014264 [009] FROM CHASSIS: 114.010     039372 114.015,017 043540 114.021     002617 114.022     004720 114.023     000863 114.072,073 000001 [010] FROM CHASSIS: 115.010     043783 115.015     043855 115.110,112 103123 115.115     047295 114.011         000001</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008411501" title="Клик — скопировать">A 000 841 15 01</td><td>- ЧЕМОДАН</td><td>-</td><td>Z  55.410/02, Z  55.410/03, Z  55.410/07, Z  55.410/08, Z  55.410/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0008411801" title="Клик — скопировать">A 000 841 18 01</td><td>- ЧЕМОДАН</td><td>1</td><td>(TRAVELLING BAG) Z  55.410/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [021] FROM CHASSIS: 100.012,014,015,016 002336 [019] FROM CHASSIS: 114.011     102864 114.015,017 212920 114.060     104053 114.062     102911 115.015     214736 115.017     009642 115.110,112 413514 115.115     217472 115.117,119 016663</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158400001" title="Клик — скопировать">A 115 840 00 01</td><td>ЧЕМОДАН</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ Z  55.410/08 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008411001" title="Клик — скопировать">A 000 841 10 01</td><td>- ЧЕМОДАН</td><td>1</td><td>Z  55.410/01, Z  55.410/02, Z  55.410/03, Z  55.410/07, Z  55.410/08, Z  55.410/09 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [003] UP TO CHASSIS: 100.012,014,015,016 001555 108.016             043448 108.018             044549 108.019             044488 109.016             002466 [004] UP TO CHASSIS: 109.018     003466 109.056     000033 111.024,025 004366 111.026,027 000023 113.044     014263 [005] UP TO CHASSIS: 114.010     039371 114.015,017 043539 114.021     002616 114.022     004719 114.023     000862 [006] UP TO CHASSIS: 115.010     043782 115.015     043854 115.110,112 103122 115.115     047294</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 10 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05541000001.png", "poses": ["15", "20", "30"]}];</script><script>
+<p class="muted">Позиций: 10 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05541000001.png", "poses": ["15", "20", "30"], "hs": {"25": [[781, 828, 25, 20], [348, 818, 25, 21], [473, 484, 25, 21]], "15": [[1208, 713, 20, 20], [1117, 736, 21, 20], [1028, 759, 23, 20], [829, 388, 21, 21]], "40": [[1098, 367, 25, 21]], "20": [[944, 784, 25, 20], [870, 804, 23, 22], [454, 787, 25, 21], [566, 459, 24, 21]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

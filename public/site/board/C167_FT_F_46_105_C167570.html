@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C167570">C167_FT -/-</a> → 105 Рулевое колесо и замок блокировки рулевого управления</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/450">C167_FT -/-</a> → 105 Рулевое колесо и замок блокировки рулевого управления</div>
 <h1>105 Рулевое колесо и замок блокировки рулевого управления</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.337.104_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.337.104_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0994608913" title="Клик — скопировать">A 099 460 89 13</td><td>Рулевое колесо</td><td>1</td><td></td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0994631600" title="Клик — скопировать">A 099 463 16 00</td><td>Крепежная пластина</td><td>1</td><td></td><td class="restr" data-expr="700"><span class="icode">700</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0999052710" title="Клик — скопировать">A 099 905 27 10</td><td>Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0999052710" title="Клик — скопировать">A 099 905 27 10</td><td>Блок выключателей</td><td>1</td><td>Слева</td><td class="restr" data-expr="(807/808/29X)+L2B"><span class="icode">(807/808/29X)+L2B</span></td></tr><tr data-pos="435"><td>435</td><td class="pn" data-raw="A0999053610" title="Клик — скопировать">A 099 905 36 10</td><td>Блок выключателей</td><td>1</td><td>Справа</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="435"><td>435</td><td class="pn" data-raw="A0999053610" title="Клик — скопировать">A 099 905 36 10</td><td>Блок выключателей</td><td>1</td><td>Справа</td><td class="restr" data-expr="(807/808/29X)+L2B"><span class="icode">(807/808/29X)+L2B</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0999001305" title="Клик — скопировать">A 099 900 13 05</td><td>Блок управления</td><td>1</td><td>Блок выключателей рулевого колеса [672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0999002405" title="Клик — скопировать">A 099 900 24 05</td><td>Блок управления</td><td>1</td><td>Блок выключателей рулевого колеса [672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A0994649013" title="Клик — скопировать">A 099 464 90 13</td><td>Крышка рулевого колеса</td><td>1</td><td>Сзади</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="455"><td>455</td><td class="pn" data-raw="A0994649211" title="Клик — скопировать">A 099 464 92 11</td><td>Накладка рулевого колеса</td><td>1</td><td>Посередине</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0995403400" title="Клик — скопировать">A 099 540 34 00</td><td>Электрический жгут (ELEKTRISCHER LEITUNGSSATZ)</td><td>2</td><td>Для левой и правой панели переключателей</td><td class="restr" data-expr="(807/808)+(L2B/L2D/L2M)"><span class="icode">(807/808)+(L2B/L2D/L2M)</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A0995405800" title="Клик — скопировать">A 099 540 58 00</td><td>Электрический жгут</td><td>2</td><td>Для левой и правой панели переключателей</td><td class="restr" data-expr="(807/808/29X)+L2B+700"><span class="icode">(807/808/29X)+L2B+700</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="A0994649111" title="Клик — скопировать">A 099 464 91 11</td><td>Накладка рулевого колеса</td><td>1</td><td>Передн.</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A0009906239" title="Клик — скопировать">A 000 990 62 39</td><td>Винт потай с 6-гранником (SENKSCHRAUBE MIT ISK)</td><td>1</td><td>Рулевое колесо к рулевой колонке; M16X26</td><td class="restr"></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A0999058310" title="Клик — скопировать">A 099 905 83 10</td><td>Панель переключателей (SCHALTERFELD)</td><td>1</td><td>Слева и справа</td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A0008608406" title="Клик — скопировать">A 000 860 84 06</td><td>НПБ водителя</td><td>1</td><td></td><td class="restr" data-expr="L2B+700"><span class="icode">L2B+700</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.337.104_version_003.png", "poses": ["410", "420", "430", "435", "440", "450", "455", "460", "490", "520", "580", "600"]}];</script><script>
+<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.337.104_version_003.png", "poses": ["410", "420", "430", "435", "440", "450", "455", "460", "490", "520", "580", "600"], "hs": {"440": [[746, 418, 43, 29]], "430": [[285, 331, 43, 28]], "420": [[558, 555, 43, 28]], "410": [[517, 156, 42, 28]], "520": [[650, 323, 42, 28]], "455": [[866, 655, 43, 29]], "435": [[395, 162, 42, 29]], "600": [[1027, 489, 43, 29]], "490": [[721, 650, 42, 28]], "580": [[883, 415, 43, 29]], "460": [[832, 306, 42, 29]], "450": [[314, 535, 43, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

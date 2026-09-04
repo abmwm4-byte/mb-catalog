@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107025">68D BIS 09/85 Действительно для: CA, US</a> → 030 КОНЦЕВЫЕ ШАЙБЫ,ВТУЛКИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">68D BIS 09/85 Действительно для: CA, US</a> → 030 КОНЦЕВЫЕ ШАЙБЫ,ВТУЛКИ</div>
 <h1>030 КОНЦЕВЫЕ ШАЙБЫ,ВТУЛКИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B68030000120.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B68030000120.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1109870044" title="Клик — скопировать">A 110 987 00 44</td><td>ДИСК</td><td>1</td><td>HYDRAULIC CLUTCH LINE IN FIRE WALL</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1109870044" title="Клик — скопировать">A 110 987 00 44</td><td>ДИСК</td><td>2</td><td>HOLES OF ELECTRICALLY OPERATED REAR SIDE WINDOW REGULATOR</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009871840" title="Клик — скопировать">A 000 987 18 40</td><td>Резиновый буфер</td><td>2</td><td>КОРПУС ФАРЫ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009871840" title="Клик — скопировать">A 000 987 18 40</td><td>Резиновый буфер</td><td>2</td><td>PAINT RUN\-OFF HOLES IN STEP BEARING COVERING</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009871840" title="Клик — скопировать">A 000 987 18 40</td><td>Резиновый буфер</td><td>4</td><td>CABLE STRAP MOUNTING HOLES</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0949871300" title="Клик — скопировать">A 094 987 13 00</td><td>Резиновый буфер</td><td>1</td><td>FILLER NECK FLAP HOLE;ON VEHICLES EQUIPPED с  CENTRAL LOCKING MECHAN.; 17.5mm</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1109870039" title="Клик — скопировать">A 110 987 00 39</td><td>Пробка</td><td>-</td><td>10mm</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0009973320" title="Клик — скопировать">A 000 997 33 20</td><td>Запорная крышка</td><td>1</td><td>ОТВЕРСТИЕ ДЛЯ СТОКА КРАСКИ В НИШЕ ЗАП. КОЛЕСА; 10 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>2</td><td>ПОЛ ОСНОВНОЙ; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>20</td><td>AT SIDE MEMBER, OUTSIDE, INNER SHELL; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>8</td><td>КОЛЕСН. АРКА СПЕРЕДИ; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>2</td><td>REAR SIDE MEMBER UNDER THE LEFT OF LUGGAGE COMPARTMENT FLOOR; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>2</td><td>REAR SIDE MEMBER,SHOCK ABSORBER; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>8</td><td>REAR SEAT CROSS MEMBER, REAR SHEEL; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1079870244" title="Клик — скопировать">A 107 987 02 44</td><td>Диск</td><td>1</td><td>ТРАВЕРСА СЗАДИ,СПРАВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1109870744" title="Клик — скопировать">A 110 987 07 44</td><td>Запорная шайба</td><td>1</td><td>ПРОХОДН. ОТВЕРСТИЯ В ТУННЕЛЕ СПЕРЕДИ; 34 MM</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1249970786" title="Клик — скопировать">A 124 997 07 86</td><td>Пробка</td><td>4</td><td>36X15 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1109870844" title="Клик — скопировать">A 110 987 08 44</td><td>Диск</td><td>1</td><td>ПРОХОДН. ОТВЕРСТИЯ В ТУННЕЛЕ СПЕРЕДИ; 18.5 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1109870844" title="Клик — скопировать">A 110 987 08 44</td><td>Диск</td><td>2</td><td>WASTE WATER HOSE; 18.5 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1109870844" title="Клик — скопировать">A 110 987 08 44</td><td>Диск</td><td>2</td><td>СТОЙКА ЗАДНЯЯ; 18.5 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1109870844" title="Клик — скопировать">A 110 987 08 44</td><td>Диск</td><td>2</td><td>REAR SEAT CROSS MEMBER, REAR SHEEL; 18.5 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1109870844" title="Клик — скопировать">A 110 987 08 44</td><td>Диск</td><td>2</td><td>ENGINE CABLE PASSAGE HOLE; 18.5 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1169871144" title="Клик — скопировать">A 116 987 11 44</td><td>ДИСК</td><td>2</td><td>PASSAGE HOLES IN LIGHTING UNIT SHELLS; 35 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1009870044" title="Клик — скопировать">A 100 987 00 44</td><td>Диск</td><td>2</td><td>PASSAGE HOLES IN REAR PILLARS,INSIDE; 42 MM</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1009870044" title="Клик — скопировать">A 100 987 00 44</td><td>Диск</td><td>1</td><td>ELECTRONICALLY CONTROLLED GASOLINE INJECTION LEAD THRU FIRE WALL,RIGHT; 42 MM</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1239870744" title="Клик — скопировать">A 123 987 07 44</td><td>Диск</td><td>2</td><td>ПОПЕРЕЧ. РЫЧАГ НА ЗАДН. МОСТУ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1109870145" title="Клик — скопировать">A 110 987 01 45</td><td>Колпачок</td><td>2</td><td>SHOCK ABSORBER ASSEMBLY</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1119971281" title="Клик — скопировать">A 111 997 12 81</td><td>втулка</td><td>2</td><td>LIGHTING UNIT SHELL WATER DRAIN</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1079972781" title="Клик — скопировать">A 107 997 27 81</td><td>втулка</td><td>1</td><td>ВОДОСТОК НИШИ ЗАПАСН. КОЛЕСА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1079972781" title="Клик — скопировать">A 107 997 27 81</td><td>втулка</td><td>1</td><td>ВОДОСТОК, ПОЛ СБОКУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0009971986" title="Клик — скопировать">A 000 997 19 86</td><td>Пробка</td><td>NB</td><td>AT SIDE MEMBER,для  ELECTROLYTIC IMMERSION\-PAINT HOLES</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009901322" title="Клик — скопировать">A 000 990 13 22</td><td>болт</td><td>6</td><td>ПОЛ ЗАДН. ЧАСТИ КУЗОВА</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009901322" title="Клик — скопировать">A 000 990 13 22</td><td>болт</td><td>2</td><td>ТУННЕЛЬ, СПРАВА</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009901322" title="Клик — скопировать">A 000 990 13 22</td><td>болт</td><td>2</td><td>AT SIDE MEMBER, OUTSIDE, INNER SHELL</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009901322" title="Клик — скопировать">A 000 990 13 22</td><td>болт</td><td>2</td><td>REAR SIDE PART,REAR</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0009901322" title="Клик — скопировать">A 000 990 13 22</td><td>болт</td><td>4</td><td>BELT REEL DEVICE MOUNTING HOLE</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0009908522" title="Клик — скопировать">A 000 990 85 22</td><td>болт</td><td>5</td><td>AT TUNNEL AND SIDE MEMBER,RIGHT [811] UP TO END OF MODEL YEAR'81</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1136830110" title="Клик — скопировать">A 113 683 01 10</td><td>Крышка</td><td>2</td><td>TO COVER IMMERSION HOLE IN SPARE WHEEL WELL</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1079972081" title="Клик — скопировать">A 107 997 20 81</td><td>КАБ. ВТУЛКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>2</td><td>AT SIDE MEMBER INNER SHELL; 20.5 MM</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1076830636" title="Клик — скопировать">A 107 683 06 36</td><td>ПАНЕЛЬ</td><td>2</td><td>REAR END PILLAR,TOP [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 41 · подписано на схемах: 41 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68030000120.png", "poses": ["5", "8", "17", "20", "23", "29", "38", "44", "47", "50", "56", "59", "65", "68", "77", "80"]}];</script><script>
+<p class="muted">Позиций: 41 · подписано на схемах: 41 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68030000120.png", "poses": ["5", "8", "17", "20", "23", "29", "38", "44", "47", "50", "56", "59", "65", "68", "77", "80"], "hs": {"44": [[755, 73, 33, 17]], "77": [[512, 189, 33, 17]], "23": [[383, 78, 33, 17]], "56": [[119, 184, 33, 17]], "68": [[385, 181, 33, 17]], "47": [[838, 64, 33, 17]], "59": [[207, 187, 33, 17]], "38": [[571, 76, 33, 17]], "17": [[195, 73, 33, 17]], "29": [[475, 66, 33, 17]], "5": [[17, 79, 33, 17]], "8": [[120, 75, 33, 17]], "80": [[568, 188, 33, 17]], "50": [[23, 187, 33, 17]], "20": [[281, 81, 33, 17]], "65": [[283, 182, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

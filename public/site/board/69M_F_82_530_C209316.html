@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C209316">69M -/-</a> → 530 СИСТ. ПРОТИВОУГОНН. СИГНАЛИЗАЦИИ, ЗАЩИТАОТ БУКСИРОВКИ, СИСТЕМА ОХРАНЫ САЛОНА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/200">69M -/-</a> → 530 СИСТ. ПРОТИВОУГОНН. СИГНАЛИЗАЦИИ, ЗАЩИТАОТ БУКСИРОВКИ, СИСТЕМА ОХРАНЫ САЛОНА</div>
 <h1>530 СИСТ. ПРОТИВОУГОНН. СИГНАЛИЗАЦИИ, ЗАЩИТАОТ БУКСИРОВКИ, СИСТЕМА ОХРАНЫ САЛОНА</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B82530000030 <span class="hint">(13)</span></button><button data-i="1" class="">B82530000031 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82530000030.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82530000030.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2038203826" title="Клик — скопировать">A 203 820 38 26</td><td>- Сигнальное устройство</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1718202526" title="Клик — скопировать">A 171 820 25 26</td><td>- Сигнальное устройство</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2198203226" title="Клик — скопировать">A 219 820 32 26</td><td>- Сигнальное устройство (ALARM SIREN)</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1718205326" title="Клик — скопировать">A 171 820 53 26</td><td>- Сигнальное устройство</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="551+(494/460/498)"><span class="icode">551+(494/460/498)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0048201926" title="Клик — скопировать">A 004 820 19 26</td><td>- Сигнальное устройство</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="551+(494/460/498)"><span class="icode">551+(494/460/498)</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2038220614" title="Клик — скопировать">A 203 822 06 14</td><td>- Держатель (HOLDER)</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ Рулевое управление: Влево</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2038220814" title="Клик — скопировать">A 203 822 08 14</td><td>- Держатель (HOLDER)</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1686820060" title="Клик — скопировать">A 168 682 00 60</td><td>- ШУМОИЗОЛЯЦИЯ</td><td>1</td><td>К КРОНШТЕЙНУ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0019907920" title="Клик — скопировать">A 001 990 79 20</td><td>- болт (SCREW)</td><td>1</td><td>СИРЕНА К КРОНШТЕЙНУ; M8X16</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="N000000003175" title="Клик — скопировать">N 000000 003175</td><td>- Гайка (NUT)</td><td>1</td><td>СИРЕНА К КРОНШТЕЙНУ; M8</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>2</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; 5 MM Рулевое управление: Влево</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2109900150" title="Клик — скопировать">A 210 990 01 50</td><td>Гайка 6-гранная с пояском (HEXAGON NUT WITH COLLAR)</td><td>1</td><td>КРЕПЛЕНИЕ КРОНШТЕЙНА; 5 MM</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2038219251" title="Клик — скопировать">A 203 821 92 51</td><td>Переключатель (SWITCH)</td><td>1</td><td>КАПОТ</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2118209126" title="Клик — скопировать">A 211 820 91 26</td><td>Сигнальное устройство (ALARM EQUIPMENT)</td><td>1</td><td>ДАТЧИК ЗАЩИТЫ ОТ БУКСИРОВКИ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095405205" title="Клик — скопировать">A 209 540 52 05</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095406608" title="Клик — скопировать">A 209 540 66 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ПРОТИВОУГОН. СИСТЕМА (EDW) Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="805+551"><span class="icode">805+551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095406608" title="Клик — скопировать">A 209 540 66 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ПРОТИВОУГОН. СИСТЕМА (EDW) Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095405205" title="Клик — скопировать">A 209 540 52 05</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>СИСТЕМА ПРОТИВОУГОННОЙ СИГНАЛИЗАЦИИ Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095406708" title="Клик — скопировать">A 209 540 67 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ПРОТИВОУГОН. СИСТЕМА (EDW) Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="805+551"><span class="icode">805+551</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2095406708" title="Клик — скопировать">A 209 540 67 08</td><td>Жгут электропроводки (WIRING HARNESS)</td><td>1</td><td>ПРОТИВОУГОН. СИСТЕМА (EDW) Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2105402181" title="Клик — скопировать">A 210 540 21 81</td><td>Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>СИГНАЛЬНОЕ УСТРОЙСТВО H3/1; 3\-PIN MQS</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="725"><td>725</td><td class="pn" data-raw="A2035400481" title="Клик — скопировать">A 203 540 04 81</td><td>Розетка (SOCKET-OUTLET)</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ СИСТ.ПРОТИВОУГОННОЙ СИГНАЛИЗ.В КАПОТЕ S62; 2\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="788"><td>788</td><td class="pn" data-raw="A0015455140" title="Клик — скопировать">A 001 545 51 40</td><td>Сцепление, механическое (COUPLING, MECHANICAL)</td><td>1</td><td>ДАТЧИК НАКЛОНА ПРОТИВОУГОН. СИСТЕМА (EDW) B33; 6\-PIN</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="788"><td>788</td><td class="pn" data-raw="A0005459403" title="Клик — скопировать">A 000 545 94 03</td><td>Крышка</td><td>1</td><td>TO A 001 545 51 40</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="833"><td>833</td><td class="pn" data-raw="A0005402305" title="Клик — скопировать">A 000 540 23 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.5 MM2 MQS [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr><tr data-pos="899"><td>899</td><td class="pn" data-raw="A0005404505" title="Клик — скопировать">A 000 540 45 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.5 MM2 MQS SN [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS.</td><td class="restr" data-expr="551"><span class="icode">551</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82530000030.png", "poses": ["20", "30", "40", "50", "55", "60", "70", "100", "500", "725", "788", "833", "899"]}, {"png": "../../img_png/drawing_B82530000031.png", "poses": ["200"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82530000030.png", "poses": ["20", "30", "40", "50", "55", "60", "70", "100", "500", "725", "788", "833", "899"], "hs": {"55": [[210, 502, 35, 29]], "100": [[1086, 662, 48, 30]], "500": [[318, 542, 45, 25]], "788": [[919, 664, 48, 30]], "833": [[270, 544, 44, 24]], "899": [[881, 677, 48, 30]], "70": [[300, 706, 32, 24]], "60": [[275, 304, 32, 24]], "725": [[284, 744, 46, 24]], "50": [[191, 427, 32, 27]], "30": [[289, 468, 32, 25]], "20": [[404, 340, 32, 25]]}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B82530000031.png", "poses": ["200"], "hs": {"200": [[702, 494, 43, 25]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

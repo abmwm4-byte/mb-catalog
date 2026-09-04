@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C169306">66C -/-</a> → 015 ПОДВЕСКА ДВИГАТЕЛЯ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">66C -/-</a> → 015 ПОДВЕСКА ДВИГАТЕЛЯ</div>
 <h1>015 ПОДВЕСКА ДВИГАТЕЛЯ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B24015000184.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B24015000184.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1692410301" title="Клик — скопировать">A 169 241 03 01</td><td>Кронштейн опоры двигателя (MOTORTRAEGER)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="(M266+(M15/M17/M20+-M002)/M640+M20+M013)+410"><span class="icode">(M266+(M15/M17/M20+-M002)/M640+M20+M013)+410</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1692410601" title="Клик — скопировать">A 169 241 06 01</td><td>Кронштейн опоры двигателя (MOTORTRAEGER)</td><td>1</td><td>СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="426"><span class="icode">426</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0949903310" title="Клик — скопировать">A 094 990 33 10</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>2</td><td>КРОНШТ. СПЕРЕДИ, НА КП; M10X110</td><td class="restr" data-expr="-ME01"><span class="icode">-ME01</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="N000000000428" title="Клик — скопировать">N 000000 000428</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>КРОНШТ. СПЕРЕДИ, НА КП; M10X35</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1692420401" title="Клик — скопировать">A 169 242 04 01</td><td>Кронштейн опоры двигателя (MOTORTRAEGER)</td><td>1</td><td>СЗАДИ СЛЕВА</td><td class="restr" data-expr="410/411"><span class="icode">410/411</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1692420301" title="Клик — скопировать">A 169 242 03 01</td><td>Кронштейн опоры двигателя (MOTORTRAEGER)</td><td>1</td><td>СЗАДИ СЛЕВА</td><td class="restr" data-expr="426"><span class="icode">426</span></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N000000000428" title="Клик — скопировать">N 000000 000428</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>2</td><td>КРОНШТ. СЗАДИ, НА КП; M10X35</td><td class="restr" data-expr="410/411"><span class="icode">410/411</span></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N000000000428" title="Клик — скопировать">N 000000 000428</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>3</td><td>КРОНШТ. СЗАДИ, НА КП; M10X35</td><td class="restr" data-expr="426"><span class="icode">426</span></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="N304017010035" title="Клик — скопировать">N 304017 010035</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>КРОНШТ. СЗАДИ, НА КП; M10X45</td><td class="restr" data-expr="410/411"><span class="icode">410/411</span></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="N000000001427" title="Клик — скопировать">N 000000 001427</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>КРЕПЛЕНИЕ УПОРА; M8X20</td><td class="restr" data-expr="M640"><span class="icode">M640</span></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="N000000001592" title="Клик — скопировать">N 000000 001592</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>УПОР НА КРОНШТЕЙНЕ; M10DTX25</td><td class="restr" data-expr="426"><span class="icode">426</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1682420043" title="Клик — скопировать">A 168 242 00 43</td><td>Упор (ANSCHLAG)</td><td>1</td><td>КРОНШТ. ДВИГ. НА МАСЛ. КАРТЕРЕ</td><td class="restr" data-expr="M640"><span class="icode">M640</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1682420043" title="Клик — скопировать">A 168 242 00 43</td><td>Упор (ANSCHLAG)</td><td>1</td><td>НА КП СЗАДИ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1692401317" title="Клик — скопировать">A 169 240 13 17</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>ОПОРА ДВИГ. СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="M640+M20+M013+410"><span class="icode">M640+M20+M013+410</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1692401317" title="Клик — скопировать">A 169 240 13 17</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>ОПОРА ДВИГ. СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="M640+M20+M013+410"><span class="icode">M640+M20+M013+410</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1692401317" title="Клик — скопировать">A 169 240 13 17</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>ОПОРА ДВИГ. СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="M640+426"><span class="icode">M640+426</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1692401317" title="Клик — скопировать">A 169 240 13 17</td><td>Опора двигателя (MOTORLAGER)</td><td>1</td><td>ОПОРА ДВИГ. СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="M640+426"><span class="icode">M640+426</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="N910105010027" title="Клик — скопировать">N 910105 010027</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ОПОРА ДВИГ. НА КРОНШТ. ДВИГ., СПЕРЕДИ СЛЕВА; M10X100</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="N910105010027" title="Клик — скопировать">N 910105 010027</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ОПОРА ДВИГ. НА КРОНШТ. ДВИГ., СПЕРЕДИ СПРАВА; M10X100</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0029901850" title="Клик — скопировать">A 002 990 18 50</td><td>Гайка с фланцем (SECHSKANTMUTTER M FLANSCH)</td><td>2</td><td>РЕЗИН. ОПОРА НА ЛОНЖЕРОНЕ</td><td class="restr" data-expr="-ME01"><span class="icode">-ME01</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1692400918" title="Клик — скопировать">A 169 240 09 18</td><td>Резиновая опора (GUMMILAGER)</td><td>1</td><td>ОПОРА ДВИГАТЕЛЯ СЗАДИ СЛЕВА</td><td class="restr" data-expr="M640+M20+M013+410"><span class="icode">M640+M20+M013+410</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1692400918" title="Клик — скопировать">A 169 240 09 18</td><td>Резиновая опора (GUMMILAGER)</td><td>1</td><td>ОПОРА ДВИГАТЕЛЯ СЗАДИ СЛЕВА</td><td class="restr" data-expr="M640+426"><span class="icode">M640+426</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1692401018" title="Клик — скопировать">A 169 240 10 18</td><td>Резиновая опора (GUMMILAGER)</td><td>1</td><td>ОПОРА ДВИГАТЕЛЯ СЗАДИ СПРАВА</td><td class="restr" data-expr="M640+M20+M013+410"><span class="icode">M640+M20+M013+410</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1692401018" title="Клик — скопировать">A 169 240 10 18</td><td>Резиновая опора (GUMMILAGER)</td><td>1</td><td>ОПОРА ДВИГАТЕЛЯ СЗАДИ СПРАВА</td><td class="restr" data-expr="M640+426"><span class="icode">M640+426</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N910105012005" title="Клик — скопировать">N 910105 012005</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ОПОРА ДВИГ. СЗАДИ К КРОНШТЕЙНУ КОР.ПЕРЕДАЧ; M12X1,5X110</td><td class="restr" data-expr="-ME01"><span class="icode">-ME01</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N910105012005" title="Клик — скопировать">N 910105 012005</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ОПОРА ДВИГ. СЗАДИ НА КРОНШТ. ДВИГ.; M12X1,5X110</td><td class="restr" data-expr="-ME01"><span class="icode">-ME01</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000000002110" title="Клик — скопировать">N 000000 002110</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>6</td><td>ОПОРА ДВИГ. СЗАДИ НА РАМЕ; M8X12</td><td class="restr" data-expr="-ME01"><span class="icode">-ME01</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1693711740" title="Клик — скопировать">A 169 371 17 40</td><td>Подпорка (STUETZE)</td><td>1</td><td>КП К ДВИГ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M640+(426/M013+426)"><span class="icode">M640+(426/M013+426)</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1693711840" title="Клик — скопировать">A 169 371 18 40</td><td>Подпорка (STUETZE)</td><td>1</td><td>КП К ДВИГ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M640+(426/M013+426)"><span class="icode">M640+(426/M013+426)</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0089905604" title="Клик — скопировать">A 008 990 56 04</td><td>Винт с внутр. звездочкой (FLACHKOPFSCHRAUBE MIT ISR)</td><td>4</td><td>КРЕПЛЕНИЕ ОПОРЫ; 8X20</td><td class="restr" data-expr="M640+-M013/M266+M002/(M266/M640+M013)+426"><span class="icode">M640+-M013/M266+M002/(M266/M640+M013)+426</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0089905604" title="Клик — скопировать">A 008 990 56 04</td><td>Винт с внутр. звездочкой (FLACHKOPFSCHRAUBE MIT ISR)</td><td>4</td><td>КРЕПЛЕНИЕ ОПОРЫ; 8X20</td><td class="restr" data-expr="M640+-M013/M266+M002/M640+M013+426"><span class="icode">M640+-M013/M266+M002/M640+M013+426</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B24015000184.png", "poses": ["10", "15", "30", "35", "45", "50", "80", "90", "100", "110", "120", "130", "140", "250", "260", "270"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B24015000184.png", "poses": ["10", "15", "30", "35", "45", "50", "80", "90", "100", "110", "120", "130", "140", "250", "260", "270"], "hs": {"45": [[1002, 757, 35, 30]], "35": [[1018, 624, 34, 30]], "15": [[948, 776, 35, 30]], "270": [[886, 390, 48, 29], [441, 685, 48, 30]], "260": [[525, 741, 48, 29]], "140": [[607, 262, 48, 30], [721, 310, 48, 30]], "250": [[963, 494, 48, 29]], "130": [[648, 161, 48, 30], [1163, 805, 48, 30]], "120": [[730, 181, 48, 30]], "110": [[1081, 673, 48, 30]], "100": [[305, 639, 48, 30], [770, 849, 48, 30]], "90": [[169, 608, 35, 29], [709, 798, 34, 30]], "80": [[343, 596, 35, 30], [815, 803, 35, 30]], "50": [[991, 694, 35, 30]], "30": [[960, 581, 34, 29]], "10": [[882, 793, 35, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

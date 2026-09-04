@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C167931">C167_FX -/-</a> → 140 Контур охлаждения турбонагнетателя</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">C167_FX -/-</a> → 140 Контур охлаждения турбонагнетателя</div>
 <h1>140 Контур охлаждения турбонагнетателя</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.166.215_version_002.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.166.215_version_002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6562036700" title="Клик — скопировать">A 656 203 67 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Подающий трубопровод системы охлаждения к турбокомпрессору</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009978503" title="Клик — скопировать">A 000 997 85 03</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>2.9X17MM</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A6541421300" title="Клик — скопировать">A 654 142 13 00</td><td>- Уплотнение фланца (DICHTUNG)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N910105006011" title="Клик — скопировать">N 910105 006011</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к клапану рециркуляции ОГ; M6X70</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910143006002" title="Клик — скопировать">N 910143 006002</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к клапану рециркуляции ОГ; M6X20</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к головке блока цилиндров; M6X16</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к кронштейну вакуумной камеры; M6X16</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6562036100" title="Клик — скопировать">A 656 203 61 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Подающий трубопровод системы охлаждения к турбокомпрессору</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6562037000" title="Клик — скопировать">A 656 203 70 00</td><td>Трубопровод охлаждения</td><td>1</td><td>Подающий трубопровод системы охлаждения к турбокомпрессору</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A6562036100" title="Клик — скопировать">A 656 203 61 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Подающий трубопровод системы охлаждения к турбокомпрессору</td><td class="restr" data-expr="1U2/1U8"><span class="icode">1U2/1U8</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009978004" title="Клик — скопировать">A 000 997 80 04</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>2.25X12MM</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0009978104" title="Клик — скопировать">A 000 997 81 04</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>1.65X12MM</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A0009978204" title="Клик — скопировать">A 000 997 82 04</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>2.63X13.13MM</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000000001145" title="Клик — скопировать">N 000000 001145</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод сист.охлаждения на E\-приводе; M6X12</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="N000000001145" title="Клик — скопировать">N 000000 001145</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к турбокомпрессору; M6X12</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод сист.охлаждения на распределителе; M6X16</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A6562036200" title="Клик — скопировать">A 656 203 62 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>К турбокомпрессору</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009978004" title="Клик — скопировать">A 000 997 80 04</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>2.25X12MM</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0009978104" title="Клик — скопировать">A 000 997 81 04</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>1.65X12MM</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A6562036000" title="Клик — скопировать">A 656 203 60 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Обратная магистраль охлаждающей жидкости</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A6562037100" title="Клик — скопировать">A 656 203 71 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Обратная магистраль охлаждающей жидкости</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A6562036000" title="Клик — скопировать">A 656 203 60 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>Обратная магистраль охлаждающей жидкости</td><td class="restr" data-expr="1U2/1U8"><span class="icode">1U2/1U8</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009978603" title="Клик — скопировать">A 000 997 86 03</td><td>- Кольцевая прокладка (O-RING)</td><td>2</td><td>13.13X2.63MM/DBL 6038.46 FKM AC 70</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="N000000001145" title="Клик — скопировать">N 000000 001145</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>Трубопровод системы охлаждения к турбокомпрессору; M6X12</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A6562033900" title="Клик — скопировать">A 656 203 39 00</td><td>Трубопровод охлаждения (KUEHLMITTELLEITUNG)</td><td>1</td><td>К дополнительному водяному насосу</td><td class="restr"></td></tr><tr data-pos="305"><td>305</td><td class="pn" data-raw="A0009977525" title="Клик — скопировать">A 000 997 75 25</td><td>- Кольцевая прокладка (O-RING)</td><td>1</td><td>14.8MMX2.6MM</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к турбокомпрессору; M6X16</td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к турбокомпрессору; M6X16</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="N910143006007" title="Клик — скопировать">N 910143 006007</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод системы охлаждения к турбокомпрессору; M6X45</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="N000000001145" title="Клик — скопировать">N 000000 001145</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Трубопровод сист.охлаждения на трубопроводе сист.охлаждения; M6X12</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.166.215_version_002.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "100", "110", "120", "130", "140", "150", "160", "200", "210", "220", "250", "260", "270", "300", "305", "310", "320", "330", "340"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.166.215_version_002.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "100", "110", "120", "130", "140", "150", "160", "200", "210", "220", "250", "260", "270", "300", "305", "310", "320", "330", "340"], "hs": {"270": [[864, 164, 43, 28]], "150": [[535, 171, 42, 28]], "250": [[785, 131, 42, 29]], "130": [[716, 247, 42, 29]], "110": [[505, 313, 43, 29]], "330": [[1069, 423, 42, 29]], "210": [[620, 162, 43, 29]], "310": [[1248, 592, 42, 29]], "70": [[349, 467, 30, 29]], "50": [[36, 624, 30, 29]], "30": [[107, 774, 30, 29]], "10": [[266, 592, 31, 28]], "160": [[298, 82, 43, 29]], "260": [[795, 287, 42, 28], [835, 343, 43, 28]], "140": [[682, 102, 43, 28]], "120": [[261, 445, 42, 28]], "340": [[950, 232, 42, 29]], "220": [[259, 225, 43, 29]], "100": [[313, 309, 42, 28]], "320": [[855, 420, 43, 29]], "200": [[457, 90, 42, 29]], "300": [[1009, 483, 43, 28]], "305": [[958, 366, 43, 28]], "60": [[433, 599, 30, 29]], "40": [[45, 542, 30, 28]], "20": [[523, 692, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253380">C253_FC -/-</a> → 030 Колесная арка, подрамник переднего моста</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">C253_FC -/-</a> → 030 Колесная арка, подрамник переднего моста</div>
 <h1>030 Колесная арка, подрамник переднего моста</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.002.737.902_version_002.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.002.737.902_version_002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2136208700" title="Клик — скопировать">A 213 620 87 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2136208800" title="Клик — скопировать">A 213 620 88 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2056261116" title="Клик — скопировать">A 205 626 11 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>ЛОНЖЕРОН СПЕРЕДИ ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A2056261216" title="Клик — скопировать">A 205 626 12 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>ЛОНЖЕРОН СПЕРЕДИ ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2056260331" title="Клик — скопировать">A 205 626 03 31</td><td>- Консоль (CONSOLE)</td><td>1</td><td>ЛОНЖЕРОН СПЕРЕДИ ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2056260431" title="Клик — скопировать">A 205 626 04 31</td><td>- Консоль (CONSOLE)</td><td>1</td><td>ЛОНЖЕРОН СПЕРЕДИ ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2136208900" title="Клик — скопировать">A 213 620 89 00</td><td>- LONGITUDINAL MEMBER</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2136209000" title="Клик — скопировать">A 213 620 90 00</td><td>- LONGITUDINAL MEMBER</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2056260314" title="Клик — скопировать">A 205 626 03 14</td><td>- Держатель (HOLDER)</td><td>1</td><td>Тормозной шланг слева</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2056260314" title="Клик — скопировать">A 205 626 03 14</td><td>- Держатель (HOLDER)</td><td>1</td><td>Тормозной шланг справа</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2136208500" title="Клик — скопировать">A 213 620 85 00</td><td>- Консоль (CONSOLE)</td><td>1</td><td>Консоль амортизационной стойки слева</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2136208600" title="Клик — скопировать">A 213 620 86 00</td><td>- Консоль (CONSOLE)</td><td>1</td><td>Консоль амортизационной стойки справа</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2056260716" title="Клик — скопировать">A 205 626 07 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Снизу слева</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2056260816" title="Клик — скопировать">A 205 626 08 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Снизу справа</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000006253" title="Клик — скопировать">N 000000 006253</td><td>- Гайка заклепочная (RIVET NUT)</td><td>2</td><td>Продольный несущий элемент слева; M12</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000006253" title="Клик — скопировать">N 000000 006253</td><td>- Гайка заклепочная (RIVET NUT)</td><td>2</td><td>Продольный несущий элемент справа; M12</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2536205900" title="Клик — скопировать">A 253 620 59 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2536206000" title="Клик — скопировать">A 253 620 60 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2056802925" title="Клик — скопировать">A 205 680 29 25</td><td>Шумоизоляция лонжерона (DAMPING, LONGITUD. MEMBER)</td><td>2</td><td>ЛОНЖЕРОН СЛЕВА И СПРАВА</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2536206100" title="Клик — скопировать">A 253 620 61 00</td><td>Поперечина (CROSSMEMBER)</td><td>1</td><td>ПОЛ ПЕДАЛЕЙ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2536206200" title="Клик — скопировать">A 253 620 62 00</td><td>Поперечина (CROSSMEMBER)</td><td>1</td><td>ПОЛ ПЕДАЛЕЙ СПРАВА</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2536305101" title="Клик — скопировать">A 253 630 51 01</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>СВЕРХУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2536305201" title="Клик — скопировать">A 253 630 52 01</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>СВЕРХУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2026260711" title="Клик — скопировать">A 202 626 07 11</td><td>- ПЛАСТИНА</td><td>3</td><td>НА КРОНШТЕЙНЕ ВВЕРХУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2026260711" title="Клик — скопировать">A 202 626 07 11</td><td>- ПЛАСТИНА</td><td>3</td><td>НА КРОНШТЕЙНЕ ВВЕРХУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009874744" title="Клик — скопировать">A 000 987 47 44</td><td>Запорная шайба (STOPPER WASHER)</td><td>2</td><td>К продольному несущему элементу спереди слева; 25 MM</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009874744" title="Клик — скопировать">A 000 987 47 44</td><td>Запорная шайба (STOPPER WASHER)</td><td>2</td><td>К продольному несущему элементу спереди справа; 25 MM</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2136302902" title="Клик — скопировать">A 213 630 29 02</td><td>Распорка (STRUT)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2136303002" title="Клик — скопировать">A 213 630 30 02</td><td>Распорка (STRUT)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2536307701" title="Клик — скопировать">A 253 630 77 01</td><td>Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2536307801" title="Клик — скопировать">A 253 630 78 01</td><td>Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2536208500" title="Клик — скопировать">A 253 620 85 00</td><td>Интегральная балка (INTEGRAL CARRIER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009904959" title="Клик — скопировать">A 000 990 49 59</td><td>- Глухая заклепочная гайка (BLIND CLINCH NUT)</td><td>4</td><td>Интегральная балка; M10</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛИ СМ.: 46/015</td><td class="restr"></td></tr><tr data-pos="235"><td>235</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>4</td><td>ДЕТАЛИ СМ.: 46/015</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0009901411" title="Клик — скопировать">A 000 990 14 11</td><td>Самонарезающий винт (SELF-TAPPING SCREW)</td><td>2</td><td>Интегральная балка спереди; M14X1,5\-SGX50</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0009904911" title="Клик — скопировать">A 000 990 49 11</td><td>Самонарезающий винт (SELF-TAPPING SCREW)</td><td>2</td><td>Интегральная балка сзади</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2136281200" title="Клик — скопировать">A 213 628 12 00</td><td>крепление (MOUNT)</td><td>1</td><td>Автомобильный домкрат к интегральной балке</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A2536280900" title="Клик — скопировать">A 253 628 09 00</td><td>Распорка (STRUT)</td><td>2</td><td>Интегральная балка, слева и справа</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="N000000003276" title="Клик — скопировать">N 000000 003276</td><td>Гайка (NUT)</td><td>2</td><td>РАСТЯЖКА ЛЕВАЯ И ПРАВАЯ НА ИНТЕГРАЛЬНОЙ БАЛКЕ, СЗАДИ; M12X1.5</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 40 · подписано на схемах: 40 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.737.902_version_002.png", "poses": ["10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "110", "130", "140", "150", "160", "170", "200", "210", "230", "235", "240", "250", "260", "270", "280"]}];</script><script>
+<p class="muted">Позиций: 40 · подписано на схемах: 40 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.737.902_version_002.png", "poses": ["10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "110", "130", "140", "150", "160", "170", "200", "210", "230", "235", "240", "250", "260", "270", "280"], "hs": {"170": [[1133, 481, 43, 28]], "270": [[477, 243, 42, 29]], "150": [[1203, 355, 43, 29]], "250": [[423, 483, 43, 29]], "130": [[1034, 285, 42, 29]], "230": [[81, 107, 43, 29]], "110": [[952, 716, 42, 29]], "210": [[353, 420, 43, 29]], "235": [[119, 148, 42, 28]], "90": [[497, 447, 30, 29]], "70": [[525, 742, 30, 28]], "50": [[774, 141, 30, 28]], "30": [[423, 722, 30, 28]], "10": [[766, 458, 30, 29]], "15": [[416, 576, 30, 29]], "280": [[513, 305, 43, 28]], "160": [[963, 449, 42, 29]], "260": [[141, 388, 42, 28]], "140": [[825, 332, 43, 29]], "240": [[303, 494, 43, 29]], "200": [[341, 193, 42, 29]], "80": [[1062, 660, 30, 29]], "60": [[717, 738, 30, 28]], "40": [[578, 752, 30, 29]], "20": [[563, 438, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

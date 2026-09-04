@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>68 Обшивка / 085 ШУМОИЗОЛЯЦИЯ В ПАСС.САЛОНЕ</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/85">D43 -/-</a> → 085 ШУМОИЗОЛЯЦИЯ В ПАСС.САЛОНЕ</div>
+<h1>085 ШУМОИЗОЛЯЦИЯ В ПАСС.САЛОНЕ</h1>
+
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_B68085000141.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 1
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1726821828" title="Клик — скопировать">A 172 682 18 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРН.ЩИТ ВНУТРИ СЛЕВА Рулевое управление: Вправо</td><td class="restr" data-expr="M651/M274/M276+M016"><span class="icode">M651/M274/M276+M016</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1726821000" title="Клик — скопировать">A 172 682 10 00</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРН.ЩИТ ВНУТРИ СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1726826000" title="Клик — скопировать">A 172 682 60 00</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРН.ЩИТ ВНУТРИ СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0029881681" title="Клик — скопировать">A 002 988 16 81</td><td>Кнопка-застежка (DRUCKKNOPF)</td><td>7</td><td>НА МОТОРН.ЩИТЕ ВНУТРИ СПРАВА Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0029881681" title="Клик — скопировать">A 002 988 16 81</td><td>Кнопка-застежка (DRUCKKNOPF)</td><td>4</td><td>НА МОТОРН.ЩИТЕ ВНУТРИ СПРАВА Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A1726822028" title="Клик — скопировать">A 172 682 20 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРНЫЙ ЩИТ ПОД ЛЕВЫМ КРЫЛОМ</td><td class="restr" data-expr="M651"><span class="icode">M651</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2046829404" title="Клик — скопировать">A 204 682 94 04</td><td>Шумоизоляция пола (ABDAEMPFUNG PEDALBODEN)</td><td>1</td><td>ПОЛ ПЕДАЛИ 200 X 50</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2046829504" title="Клик — скопировать">A 204 682 95 04</td><td>Шумоизоляция пола (ABDAEMPFUNG PEDALBODEN)</td><td>1</td><td>ПОЛ ПЕДАЛИ 200 X 70</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1726820326" title="Клик — скопировать">A 172 682 03 26</td><td>Шумоизоляция капота (ABDAEMPFUNG MOTORHAUBE)</td><td>2</td><td>КРЫЛО СПРАВА И СЛЕВА</td><td class="restr" data-expr="M276/006"><span class="icode">M276/006</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1726820226" title="Клик — скопировать">A 172 682 02 26</td><td>Шумоизоляция капота (ABDAEMPFUNG MOTORHAUBE)</td><td>2</td><td>СНАРУЖИ СЛЕВА И СПРАВА</td><td class="restr" data-expr="M276/006"><span class="icode">M276/006</span></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A1726821328" title="Клик — скопировать">A 172 682 13 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МАНЖЕТА РУЛ.МЕХАНИЗМА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1726824028" title="Клик — скопировать">A 172 682 40 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРНЫЙ ЩИТ ВНИЗУ СЛЕВА</td><td class="restr" data-expr="M651"><span class="icode">M651</span></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A1726822828" title="Клик — скопировать">A 172 682 28 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПЕРЕГОРОДКА СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M651"><span class="icode">M651</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1726820304" title="Клик — скопировать">A 172 682 03 04</td><td>Шумоизоляция пола (ABDAEMPFUNG PEDALBODEN)</td><td>1</td><td>ПОЛ ПЕДАЛИ Рулевое управление: Влево</td><td class="restr" data-expr="(M651/006/806+M274/M276+M016)+-M152"><span class="icode">(M651/006/806+M274/M276+M016)+-M152</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1726821404" title="Клик — скопировать">A 172 682 14 04</td><td>Шумоизоляция пола (ABDAEMPFUNG PEDALBODEN)</td><td>1</td><td>ПОЛ ПЕДАЛИ Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/806+M274)+-M152"><span class="icode">(M651/806+M274)+-M152</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1726821230" title="Клик — скопировать">A 172 682 12 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>1</td><td>НА СТОЙКЕ A СВЕРХУ, СЛЕВА И СПРАВА</td><td class="restr" data-expr="M276/006"><span class="icode">M276/006</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1726821028" title="Клик — скопировать">A 172 682 10 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПЕРЕГОРОДКА, СНИЗУ СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1726822228" title="Клик — скопировать">A 172 682 22 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРНЫЙ ЩИТ ВНИЗУ СПРАВА Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M651/M274"><span class="icode">M651/M274</span></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1726822428" title="Клик — скопировать">A 172 682 24 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРНЫЙ ЩИТ СНАРУЖИ СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M276/006"><span class="icode">M276/006</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1726820828" title="Клик — скопировать">A 172 682 08 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРН.ЩИТ ВНУТРИ СПРАВА Рулевое управление: Влево</td><td class="restr" data-expr="M651/M274/M276+M016"><span class="icode">M651/M274/M276+M016</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1726821928" title="Клик — скопировать">A 172 682 19 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МОТОРН.ЩИТ ВНУТРИ СПРАВА Рулевое управление: Вправо</td><td class="restr" data-expr="M651/M274/M276+M016"><span class="icode">M651/M274/M276+M016</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0029881681" title="Клик — скопировать">A 002 988 16 81</td><td>Кнопка-застежка (DRUCKKNOPF)</td><td>1</td><td>НА МОТОРНОМ ЩИТЕ ВНУТРИ СЛЕВА Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0029881681" title="Клик — скопировать">A 002 988 16 81</td><td>Кнопка-застежка (DRUCKKNOPF)</td><td>1</td><td>НА МОТОРНОМ ЩИТЕ ВНУТРИ СЛЕВА Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1716821928" title="Клик — скопировать">A 171 682 19 28</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СТОЙКА A ВНУТРИ СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1716822028" title="Клик — скопировать">A 171 682 20 28</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>СТОЙКА A ВНУТРИ СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1716821628" title="Клик — скопировать">A 171 682 16 28</td><td>Демпфирование (DAEMPFUNG)</td><td>2</td><td>СТОЙКА A, СВЕРХУ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1726821330" title="Клик — скопировать">A 172 682 13 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>1</td><td>НА СТОЙКЕ A, СНИЗУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1726821430" title="Клик — скопировать">A 172 682 14 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>1</td><td>НА СТОЙКЕ A, СНИЗУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1716822828" title="Клик — скопировать">A 171 682 28 28</td><td>Шумоизоляция мот. щита</td><td>2</td><td>МОТОРНЫЙ ЩИТ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1716821728" title="Клик — скопировать">A 171 682 17 28</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>ПОПЕРЕЧИНА ПОД ВЕТРОВЫМ СТЕКЛОМ, СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1716821528" title="Клик — скопировать">A 171 682 15 28</td><td>Демпфирование (DAEMPFUNG)</td><td>1</td><td>ПОПЕРЕЧИНА ПОД ЛОБОВЫМ СТЕКЛОМ, ВВЕРХУ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(M651/006/M274/M276+M016)+-M152"><span class="icode">(M651/006/M274/M276+M016)+-M152</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1726823728" title="Клик — скопировать">A 172 682 37 28</td><td>Шумоизоляция поперечины (ABDAEMPFUNG QUERTRAEGER)</td><td>1</td><td>ПОПЕРЕЧИНА ПОД ЛОБОВЫМ СТЕКЛОМ</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1726821504" title="Клик — скопировать">A 172 682 15 04</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПОПЕРЕЧИНА ПОД ЛОБОВЫМ СТЕКЛОМ</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A1726825400" title="Клик — скопировать">A 172 682 54 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ВЕЩЕВОЙ ЯЩИК НА ПЕРЕДНЕЙ ПАНЕЛИ Рулевое управление: Влево</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A1726825500" title="Клик — скопировать">A 172 682 55 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ВЕЩЕВОЙ ЯЩИК НА ПЕРЕДНЕЙ ПАНЕЛИ Рулевое управление: Вправо</td><td class="restr" data-expr="M651/M152/M274+421/M276+M016"><span class="icode">M651/M152/M274+421/M276+M016</span></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A1726821228" title="Клик — скопировать">A 172 682 12 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ВЫВОД РУЛ. УПРАВЛЕНИЯ</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A1726821730" title="Клик — скопировать">A 172 682 17 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>2</td><td>СТОЙКА A, СВЕРХУ СЛЕВА</td><td class="restr" data-expr="-498"><span class="icode">-498</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1726825100" title="Клик — скопировать">A 172 682 51 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДНЯЯ ПАНЕЛЬ И ПОДУШКА ПЕРЕДН.ПАСС.</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1726825300" title="Клик — скопировать">A 172 682 53 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>INSTRUMENT PANEL LOWER PART TO FIRE WALL</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1726821704" title="Клик — скопировать">A 172 682 17 04</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДНЯЯ ПАНЕЛЬ НА ТУННЕЛЕ, СЛЕВА</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1726821804" title="Клик — скопировать">A 172 682 18 04</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДНЯЯ ПАНЕЛЬ НА ТУННЕЛЕ, СПРАВА</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A1726821604" title="Клик — скопировать">A 172 682 16 04</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДН. ПАНЕЛЬ НА РУЛ. УПРАВЛ.</td><td class="restr" data-expr="(M651/006/M152/M274+421/M276+M016)+-(460/494)"><span class="icode">(M651/006/M152/M274+421/M276+M016)+-(460/494)</span></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A1726826300" title="Клик — скопировать">A 172 682 63 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДН. ПАНЕЛЬ НА РУЛ. УПРАВЛ.</td><td class="restr" data-expr="(M651/006/M152/M274+421/M276+M016)+-(460/494)"><span class="icode">(M651/006/M152/M274+421/M276+M016)+-(460/494)</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A2106820530" title="Клик — скопировать">A 210 682 05 30</td><td>Демпфирование (DAEMPFUNG)</td><td>2</td><td>КОЛЕСН. АРКА СЗАДИ ВНУТРИ</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1726821528" title="Клик — скопировать">A 172 682 15 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПРОСТРАНСТВО ДЛЯ НОГ ПЕРЕДНЕГО ПАССАЖИРА Рулевое управление: Влево</td><td class="restr" data-expr="M651/006+-M152/M274+421/M276+M016"><span class="icode">M651/006+-M152/M274+421/M276+M016</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1726825000" title="Клик — скопировать">A 172 682 50 00</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПРОСТРАНСТВО ДЛЯ НОГ ПЕРЕДНЕГО ПАССАЖИРА Рулевое управление: Влево</td><td class="restr" data-expr="M651/006+-M152/M274+421/M276+M016"><span class="icode">M651/006+-M152/M274+421/M276+M016</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1726821528" title="Клик — скопировать">A 172 682 15 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПРОСТРАНСТВО ДЛЯ НОГ ПЕРЕДНЕГО ПАССАЖИРА Рулевое управление: Вправо</td><td class="restr" data-expr="M651/006+-M152/M274+421/M276+M016"><span class="icode">M651/006+-M152/M274+421/M276+M016</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1726825000" title="Клик — скопировать">A 172 682 50 00</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>ПРОСТРАНСТВО ДЛЯ НОГ ПЕРЕДНЕГО ПАССАЖИРА Рулевое управление: Вправо</td><td class="restr" data-expr="M651/006+-M152/M274+421/M276+M016"><span class="icode">M651/006+-M152/M274+421/M276+M016</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1726820601" title="Клик — скопировать">A 172 682 06 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП СПЕРЕДИ СЛЕВА</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A1726820900" title="Клик — скопировать">A 172 682 09 00</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП СПЕРЕДИ СПРАВА</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1726820530" title="Клик — скопировать">A 172 682 05 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>1</td><td>A\-СТОЙКА ВНИЗУ, СЛЕВА</td><td class="restr" data-expr="M651/006/M274"><span class="icode">M651/006/M274</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1726820630" title="Клик — скопировать">A 172 682 06 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>1</td><td>A\-СТОЙКА ВНИЗУ, СПРАВА</td><td class="restr" data-expr="M651/006/M274"><span class="icode">M651/006/M274</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A1726820930" title="Клик — скопировать">A 172 682 09 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>2</td><td>СТОЙКА A ВНУТРИ</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A1726820730" title="Клик — скопировать">A 172 682 07 30</td><td>Шумоизоляция пер. стойки (ABDAEMPFUNG A-SAEULE)</td><td>2</td><td>СТОЙКА А СЛЕВА И СПРАВА</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1726820401" title="Клик — скопировать">A 172 682 04 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП СЗАДИ СЛЕВА</td><td class="restr" data-expr="(802/803/804/805)+(M651/006)+-421"><span class="icode">(802/803/804/805)+(M651/006)+-421</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A1726820501" title="Клик — скопировать">A 172 682 05 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП СЗАДИ СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(802/803/804/805)+(M651/006)+-421"><span class="icode">(802/803/804/805)+(M651/006)+-421</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A1726820201" title="Клик — скопировать">A 172 682 02 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>2</td><td>КОРОБ КЛИМ. УСТАН. НА ТУННЕЛЕ</td><td class="restr" data-expr="M651/006/M274+421/M276+M016"><span class="icode">M651/006/M274+421/M276+M016</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A1726820001" title="Клик — скопировать">A 172 682 00 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП, ВНУТРИ СПЕРЕДИ</td><td class="restr" data-expr="M651/006/M274/M276+M016"><span class="icode">M651/006/M274/M276+M016</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A1726825200" title="Клик — скопировать">A 172 682 52 00</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДНЯЯ ПАНЕЛЬ В ЦЕНТРЕ</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A1726823828" title="Клик — скопировать">A 172 682 38 28</td><td>Шумоизоляция мот. щита (ABDAEMPFUNG STIRNWAND)</td><td>1</td><td>МЕХАНИЗМ ПРИВОДА ПЕРЕКЛЮЧЕНИЯ ПЕРЕДАЧ НА ТУННЕЛЕ</td><td class="restr" data-expr="006"><span class="icode">006</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1726820404" title="Клик — скопировать">A 172 682 04 04</td><td>Шумоизоляция пан.приб. (ABDAEMPFUNG INSTRUM.TAFEL)</td><td>1</td><td>ПЕРЕДНЯЯ ПАНЕЛЬ В ЦЕНТРЕ СВЕРХУ</td><td class="restr" data-expr="M651/006/M152/M274+421/M276+M016"><span class="icode">M651/006/M152/M274+421/M276+M016</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1726820301" title="Клик — скопировать">A 172 682 03 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>БУ ПОДУШ. БЕЗОПАСН.</td><td class="restr" data-expr="M651/006"><span class="icode">M651/006</span></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A1726821401" title="Клик — скопировать">A 172 682 14 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КОРОБКИ ПЕРЕДАЧ, ВНУТРИ СПЕРЕДИ ВВЕРХУ</td><td class="restr" data-expr="M651/M274/M276+M016"><span class="icode">M651/M274/M276+M016</span></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A1726821301" title="Клик — скопировать">A 172 682 13 01</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП СЗАДИ СВЕРХУ</td><td class="restr"></td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="A1726823100" title="Клик — скопировать">A 172 682 31 00</td><td>Шумоизоляция пола (ABDAEMPFUNG FAHRERBODEN)</td><td>2</td><td>ЛЕВЫЙ И ПРАВЫЙ</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A1726823200" title="Клик — скопировать">A 172 682 32 00</td><td>Шумоизоляция пола (ABDAEMPFUNG FAHRERBODEN)</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A1726824200" title="Клик — скопировать">A 172 682 42 00</td><td>Шумоизоляция пола (ABDAEMPFUNG FAHRERBODEN)</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="A1726823300" title="Клик — скопировать">A 172 682 33 00</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП,СЛЕВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="560"><td>560</td><td class="pn" data-raw="A1726824100" title="Клик — скопировать">A 172 682 41 00</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП,СПРАВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="570"><td>570</td><td class="pn" data-raw="A1726823400" title="Клик — скопировать">A 172 682 34 00</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП,СЛЕВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="580"><td>580</td><td class="pn" data-raw="A1726824000" title="Клик — скопировать">A 172 682 40 00</td><td>Шумоизоляция туннеля КП (ABDAEMPFUNG GETR.TUNNEL)</td><td>1</td><td>ТУННЕЛЬ КП,СПРАВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A1726823500" title="Клик — скопировать">A 172 682 35 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td>ПОЛ ОСНОВНОЙ</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="600"><td>600</td><td class="pn" data-raw="A1726823600" title="Клик — скопировать">A 172 682 36 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td>ГЛАВН.ПОЛ В ЦЕНТРЕ</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A1726823700" title="Клик — скопировать">A 172 682 37 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td>ОСНОВНОЕ ДНИЩЕ СНАРУЖИ</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A1726824300" title="Клик — скопировать">A 172 682 43 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td></td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="630"><td>630</td><td class="pn" data-raw="A1726823800" title="Клик — скопировать">A 172 682 38 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td>ОСНОВНОЕ ДНИЩЕ, СНАРУЖИ СЛЕВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="630"><td>630</td><td class="pn" data-raw="A1726824400" title="Клик — скопировать">A 172 682 44 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>1</td><td>ОСНОВНОЕ ДНИЩЕ, СНАРУЖИ СПРАВА</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="640"><td>640</td><td class="pn" data-raw="A1726823900" title="Клик — скопировать">A 172 682 39 00</td><td>Шумоизоляция осн. днища (ABDAEMPFUNG HAUPTBODEN)</td><td>2</td><td></td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A1726821830" title="Клик — скопировать">A 172 682 18 30</td><td>Шумоизоляция ср. стойки (ABDAEMPFUNG B-SAEULE)</td><td>1</td><td>СТОЙКА B, СВЕРХУ СЛЕВА И СПРАВА</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 79 · подписано на схемах: 79 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68085000141.png", "poses": ["10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "80", "85", "100", "110", "120", "130", "140", "150", "180", "190", "200", "210", "220", "230", "240", "250", "260", "270", "280", "320", "350", "360", "370", "380", "390", "400", "410", "420", "430", "440", "450", "460", "510", "520", "530", "540", "550", "560", "570", "580", "590", "600", "610", "620", "630", "640", "660"], "hs": {"45": [[296, 752, 35, 30]], "190": [[392, 560, 48, 30]], "390": [[876, 592, 48, 29]], "270": [[607, 320, 48, 30]], "150": [[754, 737, 48, 30]], "590": [[1093, 545, 48, 30]], "350": [[716, 636, 48, 30]], "230": [[426, 338, 48, 30]], "110": [[586, 759, 48, 29]], "550": [[888, 409, 48, 30]], "430": [[786, 464, 48, 29]], "630": [[1192, 512, 48, 30]], "510": [[966, 449, 48, 30]], "50": [[515, 834, 34, 30]], "10": [[424, 777, 34, 30]], "55": [[192, 727, 34, 30]], "15": [[257, 667, 34, 30]], "280": [[554, 412, 48, 29]], "360": [[778, 679, 48, 30]], "240": [[458, 277, 48, 30]], "120": [[709, 753, 48, 29]], "560": [[1047, 533, 48, 29]], "440": [[648, 377, 48, 30]], "320": [[818, 510, 48, 30]], "200": [[448, 513, 48, 29]], "640": [[1225, 546, 48, 29]], "520": [[1078, 427, 48, 29]], "400": [[933, 646, 48, 30]], "600": [[1142, 556, 48, 29]], "60": [[388, 822, 34, 30]], "20": [[537, 723, 34, 30]], "65": [[627, 619, 34, 29]], "25": [[132, 880, 35, 30]], "370": [[880, 712, 48, 30]], "250": [[538, 230, 47, 30]], "130": [[722, 789, 48, 30]], "570": [[1170, 468, 47, 30]], "450": [[706, 377, 47, 30]], "210": [[497, 487, 48, 30]], "530": [[1067, 614, 48, 29]], "410": [[856, 559, 48, 30]], "610": [[1186, 607, 48, 30]], "70": [[136, 655, 34, 30]], "30": [[359, 711, 34, 30]], "35": [[235, 832, 34, 29]], "180": [[555, 648, 48, 30]], "380": [[801, 572, 48, 29]], "260": [[549, 314, 48, 30]], "140": [[706, 686, 48, 30]], "580": [[1066, 358, 47, 30]], "460": [[828, 394, 48, 30]], "220": [[423, 382, 48, 30]], "660": [[1191, 409, 48, 30]], "100": [[639, 724, 48, 30]], "540": [[975, 550, 48, 30]], "420": [[708, 484, 48, 30]], "620": [[951, 356, 48, 30]], "80": [[161, 565, 34, 30]], "40": [[244, 795, 35, 30]], "85": [[260, 415, 35, 30]]}, "w": 1326, "h": 938}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>

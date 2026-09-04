@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251175">63U -/-</a> → 020 БЛОК ЦИЛИНДРОВ ДВИГАТЕЛЯ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">63U -/-</a> → 020 БЛОК ЦИЛИНДРОВ ДВИГАТЕЛЯ</div>
 <h1>020 БЛОК ЦИЛИНДРОВ ДВИГАТЕЛЯ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B01020000003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B01020000003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1130105705" title="Клик — скопировать">A 113 010 57 05</td><td>Блок цилиндров</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1130108805" title="Клик — скопировать">A 113 010 88 05</td><td>Блок цилиндров (CRANKCASE)</td><td>1</td><td>С ПОДОГНАН. ПОРШНЯМИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000000001811" title="Клик — скопировать">N 000000 001811</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>10</td><td>КРЫШКА КОРЕННОГО ПОДШИПНИКА M 10X90; M10X90</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000000001810" title="Клик — скопировать">N 000000 001810</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>10</td><td>КРЫШКА КОРЕННОГО ПОДШИПНИКА M 8X75; M8X75</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A0009904637" title="Клик — скопировать">A 000 990 46 37</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>6</td><td>КРЫШКА КОРЕННОГО ПОДШИПНИКА M 8X40; M8X40</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1179970230" title="Клик — скопировать">A 117 997 02 30</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>ЗАГЛУШКА СМАЗОЧНОГО КАНАЛА ВВЕРХУ; M38X1.5</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0239977048" title="Клик — скопировать">A 023 997 70 48</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>ЗАГЛУШКА СМАЗОЧНОГО КАНАЛА ВВЕРХУ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000443034002" title="Клик — скопировать">N 000443 034002</td><td>- Запорная крышка</td><td>3</td><td>ЗАГЛУШКА, МАСЛ. ОТВЕРСТИЯ ОПОРЫ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000000004057" title="Клик — скопировать">N 000000 004057</td><td>- Запорная крышка</td><td>3</td><td>ЗАГЛУШКА, МАСЛ. ОТВЕРСТИЯ ОПОРЫ</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000443020000" title="Клик — скопировать">N 000443 020000</td><td>- Запорная крышка</td><td>2</td><td>ЗАГЛУШКА МАСЛ. КАНАЛА СПЕРЕДИ И СЗАДИ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A6019920125" title="Клик — скопировать">A 601 992 01 25</td><td>- Зажимная гильза (CLAMPING SLEEVE)</td><td>2</td><td>КРЫШКА ЗАДНЕГО САЛЬНИКА КОЛЕНЧАТОГО ВАЛА К БЛОКУ ЦИЛИНДРОВ ДВИГАТЕЛЯ</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1129900901" title="Клик — скопировать">A 112 990 09 01</td><td>- болт (SCREW)</td><td>2</td><td>СЛИВ ВОДЫ БЛОКА ЦИЛИНДРОВ ДВИГАТЕЛЯ</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1129970144" title="Клик — скопировать">A 112 997 01 44</td><td>	- </td><td>2</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1129910441" title="Клик — скопировать">A 112 991 04 41</td><td>- Распорный штифт (TENSION PIN)</td><td>2</td><td>КП К БЛОКУ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1129910341" title="Клик — скопировать">A 112 991 03 41</td><td>- Распорный штифт (TENSION PIN)</td><td>4</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ К БЛОКУ ЦИЛИНДРОВ ДВИГ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1029910341" title="Клик — скопировать">A 102 991 03 41</td><td>- Направляющая втулка (PILOT BUSHING)</td><td>2</td><td>КАРТЕР ГРМ К БЛОКУ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1121800143" title="Клик — скопировать">A 112 180 01 43</td><td>- МАСЛ. ЖИКЛЁР</td><td>-</td><td>[414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1121800443" title="Клик — скопировать">A 112 180 04 43</td><td>- Масляная форсунка (OIL JET)</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1129900014" title="Клик — скопировать">A 112 990 00 14</td><td>- болт (SCREW)</td><td>4</td><td>РАСПЫЛИТЕЛЬ МАСЛА НА БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1120110108" title="Клик — скопировать">A 112 011 01 08</td><td>КРЫШКА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1120110208" title="Клик — скопировать">A 112 011 02 08</td><td>Крышка (CAP)</td><td>1</td><td>УПЛОТНЕНИЕ КОЛЕНЧАТОГО ВАЛА В ЗАДНЕЙ ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1129970246" title="Клик — скопировать">A 112 997 02 46</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>УПЛОТНЕНИЕ КОЛЕНЧАТОГО ВАЛА В ЗАДНЕЙ ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1129970346" title="Клик — скопировать">A 112 997 03 46</td><td>УПЛОТНИТ. КОЛЬЦО</td><td>1</td><td>УПЛОТНЕНИЕ КОЛЕНЧАТОГО ВАЛА В ЗАДНЕЙ ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>11</td><td>КРЫШКА ЗАДНЕГО САЛЬНИКА КОЛЕНЧАТОГО ВАЛА К БЛОКУ ЦИЛИНДРОВ ДВИГАТЕЛЯ M6X16; M6X16</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01020000003.png", "poses": ["5", "23", "29", "35", "41", "47", "53", "59", "65", "71", "77", "83", "89", "95", "101", "107", "113", "119", "125"]}];</script><script>
+<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01020000003.png", "poses": ["5", "23", "29", "35", "41", "47", "53", "59", "65", "71", "77", "83", "89", "95", "101", "107", "113", "119", "125"], "hs": {"77": [[789, 619, 31, 24]], "23": [[478, 820, 32, 24]], "89": [[915, 378, 32, 24]], "35": [[732, 770, 30, 24]], "47": [[478, 255, 32, 25]], "59": [[893, 330, 30, 24], [240, 500, 32, 25]], "29": [[414, 802, 33, 25]], "101": [[624, 737, 41, 25]], "113": [[1054, 462, 42, 24]], "125": [[1116, 216, 43, 26]], "5": [[687, 594, 19, 24]], "107": [[620, 778, 44, 24]], "119": [[1174, 410, 44, 25]], "71": [[842, 659, 28, 24]], "83": [[823, 253, 32, 25]], "95": [[274, 596, 33, 24]], "41": [[479, 217, 30, 24]], "53": [[625, 219, 33, 24]], "65": [[932, 447, 33, 24]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

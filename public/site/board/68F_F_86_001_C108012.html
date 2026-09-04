@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108012">68F  Действительно для: CA, US</a> → 001 СТЕКЛООМЫВ., АВАРИЙН. УСТР-ВА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/7">68F  Действительно для: CA, US</a> → 001 СТЕКЛООМЫВ., АВАРИЙН. УСТР-ВА</div>
 <h1>001 СТЕКЛООМЫВ., АВАРИЙН. УСТР-ВА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B86001000044.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B86001000044.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1158690121" title="Клик — скопировать">A 115 869 01 21</td><td>НАСОС</td><td>1</td><td>с  ELECTRIC SWITCH</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0008692520" title="Клик — скопировать">A 000 869 25 20</td><td>Бак</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="27"><td>27</td><td class="pn" data-raw="A1118690114" title="Клик — скопировать">A 111 869 01 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>[001] 012 UP TO CHASSIS 072725;016 UP TO CHASSIS 009667;018 UP TO CHASSIS 008220;019 UP TO CHASSIS 007639</td><td class="restr"></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A0008691847" title="Клик — скопировать">A 000 869 18 47</td><td>Жиклер</td><td>1</td><td>[003] 012 UP TO CHASSIS 073976;016 UP TO CHASSIS 019440;018 UP TO CHASSIS 019098;019 UP TO CHASSIS 019405</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1139940021" title="Клик — скопировать">A 113 994 00 21</td><td>Стопорная шайба</td><td>1</td><td>[003] 012 UP TO CHASSIS 073976;016 UP TO CHASSIS 019440;018 UP TO CHASSIS 019098;019 UP TO CHASSIS 019405</td><td class="restr"></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="A0029975982" title="Клик — скопировать">A 002 997 59 82</td><td>Шланг</td><td>NB</td><td>[008] 067,068 UP TO CHASSIS 007804 [010] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="67"><td>67</td><td class="pn" data-raw="A0009972081" title="Клик — скопировать">A 000 997 20 81</td><td>Проходная втулка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0009972490" title="Клик — скопировать">A 000 997 24 90</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1118600026" title="Клик — скопировать">A 111 860 00 26</td><td>НАСОС</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158690190" title="Клик — скопировать">A 115 869 01 90</td><td>SUPERSESSION DUMMY</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158690021" title="Клик — скопировать">A 115 869 00 21</td><td>НАСОС</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N007976004205" title="Клик — скопировать">N 007976 004205</td><td>Шуруп</td><td>2</td><td>FOOT PUMP TO FIRE WALL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125005317" title="Клик — скопировать">N 000125 005317</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000433005304" title="Клик — скопировать">N 000433 005304</td><td>Шайба</td><td>2</td><td>FOOT PUMP TO FIRE WALL; 5mm</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008690920" title="Клик — скопировать">A 000 869 09 20</td><td>БАЧОК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008692320" title="Клик — скопировать">A 000 869 23 20</td><td>БАЧОК</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1088690514" title="Клик — скопировать">A 108 869 05 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>[002] 012 FROM CHASSIS 072726;016 FROM CHASSIS 009668;018 FROM CHASSIS 008221;019 FROM CHASSIS 007640</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0008692447" title="Клик — скопировать">A 000 869 24 47</td><td>Двойная форсунка</td><td>1</td><td>[004] 012 FROM CHASSIS 073977;016 FROM CHASSIS 019441;018 FROM CHASSIS 019099;019 FROM CHASSIS 019406</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0109978982" title="Клик — скопировать">A 010 997 89 82</td><td>Шланг</td><td>NB</td><td>4.6X1.8 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [010] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [009] 067,068 FROM CHASSIS 007805</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009972181" title="Клик — скопировать">A 000 997 21 81</td><td>втулка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0019971290" title="Клик — скопировать">A 001 997 12 90</td><td>СОЕДИНИТЕЛЬНЫЙ ЭЛЕМЕНТ</td><td>-</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 21 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B86001000044.png", "poses": ["7", "17", "27", "37", "47", "57", "67", "77"]}];</script><script>
+<p class="muted">Позиций: 21 · подписано на схемах: 8 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B86001000044.png", "poses": ["7", "17", "27", "37", "47", "57", "67", "77"], "hs": {"77": [[423, 350, 33, 17]], "67": [[485, 264, 33, 17]], "57": [[485, 173, 33, 17]], "47": [[326, 125, 33, 17]], "37": [[322, 96, 33, 17]], "27": [[266, 409, 33, 17]], "17": [[184, 316, 33, 17]], "7": [[629, 388, 33, 17]]}, "w": 876, "h": 582}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

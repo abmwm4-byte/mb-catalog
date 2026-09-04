@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168007">66A Standard Недействительно для: JP</a> → 040 ТОПЛИВОПРОВОДЫ, А/М С ДИЗ. ДВИГАТЕЛЯМИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/405">66A Standard Недействительно для: JP</a> → 040 ТОПЛИВОПРОВОДЫ, А/М С ДИЗ. ДВИГАТЕЛЯМИ</div>
 <h1>040 ТОПЛИВОПРОВОДЫ, А/М С ДИЗ. ДВИГАТЕЛЯМИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B47040000038.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B47040000038.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1684761826" title="Клик — скопировать">A 168 476 18 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ПРИТОК ТОПЛИВА</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1684769126" title="Клик — скопировать">A 168 476 91 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ПРИТОК ТОПЛИВА</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1684769826" title="Клик — скопировать">A 168 476 98 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ПРИТОК ТОПЛИВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A1684760901" title="Клик — скопировать">A 168 476 09 01</td><td>Провод (LEITUNG)</td><td>1</td><td>ПРИТОК ТОПЛИВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (SCHLAUCHSCHELLE)</td><td>1</td><td>ПРОВОД НА ШЛАНГЕ; 13\-14.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (SCHLAUCHSCHELLE)</td><td>1</td><td>ПОДАЮЩ.ТРУБОПРОВОД НА ТОПЛИВНОМ БАКЕ; 13\-14.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (SCHELLE)</td><td>1</td><td>ОБРАТНЫЙ ТРУБОПРОВОД К БАКУ; 15.5\-17.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A1684760801" title="Клик — скопировать">A 168 476 08 01</td><td>Провод (LEITUNG)</td><td>1</td><td>ОБРАТН. ПОТОК ТОПЛИВА</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (SCHLAUCHSCHELLE)</td><td>1</td><td>ПРОВОД НА ШЛАНГЕ; 13\-14.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1684761926" title="Клик — скопировать">A 168 476 19 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОБРАТН. ПОТОК ТОПЛИВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1684769226" title="Клик — скопировать">A 168 476 92 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОБРАТН. ПОТОК ТОПЛИВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1684769926" title="Клик — скопировать">A 168 476 99 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОБРАТН. ПОТОК ТОПЛИВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (SCHLAUCHSCHELLE)</td><td>1</td><td>ОБРАТН. ТРУБОПРОВ. НА ТОПЛ. ФИЛЬТРЕ; 13\-14.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (SCHELLE)</td><td>1</td><td>НАПОРН. ТРУБОПРОВ. НА ТОПЛ. ФИЛЬТРЕ; 15.5\-17.5 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A4639940348" title="Клик — скопировать">A 463 994 03 48</td><td>предохранитель (SICHERUNG)</td><td>5</td><td>5 MM   2X8 MM</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A2304768726" title="Клик — скопировать">A 230 476 87 26</td><td>Шланг (SCHLAUCH)</td><td>NB</td><td>ПОДАЮЩАЯ МАГИСТРАЛЬ; 7,3 X 3 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0069971890" title="Клик — скопировать">A 006 997 18 90</td><td>Хомут для шланга (SCHLAUCHSCHELLE)</td><td>1</td><td>ADVANCE LINE TO FUEL TANK; 13\-14.5 MM</td><td class="restr" data-expr="M668/M166"><span class="icode">M668/M166</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A1684763926" title="Клик — скопировать">A 168 476 39 26</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОБРАТНАЯ МАГИСТРАЛЬ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A2024766526" title="Клик — скопировать">A 202 476 65 26</td><td>Шланг (SCHLAUCH)</td><td>NB</td><td>ОБРАТНАЯ МАГИСТРАЛЬ; 15.3X3 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A0059971990" title="Клик — скопировать">A 005 997 19 90</td><td>хомут (SCHELLE)</td><td>1</td><td>ОБРАТН. ТРУБОПР. НА ТОПЛ. БАКЕ; 15.5\-17.5 MM</td><td class="restr" data-expr="M668/M166"><span class="icode">M668/M166</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A1020783481" title="Клик — скопировать">A 102 078 34 81</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>МЕЖДУ БАКОМ И КЛАПАНОМ; 13.5X3.0/11.5X3.0  740 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="A1684760132" title="Клик — скопировать">A 168 476 01 32</td><td>Клапан (VENTIL)</td><td>1</td><td></td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A0004763726" title="Клик — скопировать">A 000 476 37 26</td><td>Шланг (SCHLAUCH)</td><td>NB</td><td>VENT VALVE; 11,5X3MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0009959006" title="Клик — скопировать">A 000 995 90 06</td><td>Кабельная стяжка (TEILESATZ KABELBAND)</td><td>1</td><td>310X5mm</td><td class="restr" data-expr="M166/M668"><span class="icode">M166/M668</span></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A1689950065" title="Клик — скопировать">A 168 995 00 65</td><td>ХОМУТ СТЯЖНОЙ</td><td>1</td><td></td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A1689950165" title="Клик — скопировать">A 168 995 01 65</td><td>хомут (SCHELLE)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M668"><span class="icode">M668</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B47040000038.png", "poses": ["300", "310", "320", "330", "340", "350", "360", "370", "380", "390", "400", "405", "410", "430", "440", "460", "470", "480", "500", "510"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B47040000038.png", "poses": ["300", "310", "320", "330", "340", "350", "360", "370", "380", "390", "400", "405", "410", "430", "440", "460", "470", "480", "500", "510"], "hs": {"390": [[260, 551, 48, 30]], "380": [[144, 609, 48, 30]], "370": [[176, 360, 48, 29]], "480": [[893, 808, 48, 29]], "360": [[229, 390, 48, 30]], "470": [[925, 756, 48, 30]], "350": [[622, 623, 48, 30]], "460": [[964, 696, 48, 29]], "340": [[648, 524, 48, 29]], "330": [[859, 600, 48, 29]], "440": [[995, 525, 48, 30]], "320": [[373, 439, 48, 30]], "430": [[758, 487, 48, 30]], "310": [[679, 713, 48, 30]], "300": [[297, 376, 48, 30]], "410": [[986, 441, 48, 30]], "400": [[843, 719, 48, 30]], "510": [[569, 327, 48, 30]], "500": [[1048, 789, 48, 30]], "405": [[679, 397, 48, 29]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

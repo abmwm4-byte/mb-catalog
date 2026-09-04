@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253305">C253_FC -/-</a> → 110 Водоотвод со всасывающими шлангами</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C253_FC -/-</a> → 110 Водоотвод со всасывающими шлангами</div>
 <h1>110 Водоотвод со всасывающими шлангами</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.077.478_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.077.478_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2538304900" title="Клик — скопировать">A 253 830 49 00</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Слева Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2538305100" title="Клик — скопировать">A 253 830 51 00</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Слева Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2538305000" title="Клик — скопировать">A 253 830 50 00</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Справа Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2538305200" title="Клик — скопировать">A 253 830 52 00</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Справа Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538306801" title="Клик — скопировать">A 253 830 68 01</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Посередине Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538306901" title="Клик — скопировать">A 253 830 69 01</td><td>Водосток (WATER BAFFLE)</td><td>1</td><td>Посередине Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2019900292" title="Клик — скопировать">A 201 990 02 92</td><td>Распорная заклепка</td><td>2</td><td>Крепление водоотвода; 8 MM</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2138310300" title="Клик — скопировать">A 213 831 03 00</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Снизу слева</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2538314300" title="Клик — скопировать">A 253 831 43 00</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Сверху слева</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2138310400" title="Клик — скопировать">A 213 831 04 00</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Снизу справа</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2538314400" title="Клик — скопировать">A 253 831 44 00</td><td>Уплотнение воздушн. кан. (SEAL, AIR DUCT)</td><td>1</td><td>Сверху справа</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>4</td><td>Крепление уплотнителя</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>4</td><td>Крепление уплотнителя</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A2538320500" title="Клик — скопировать">A 253 832 05 00</td><td>Спускной клапан (DRAIN VALVE)</td><td>1</td><td>Слева</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A2538320600" title="Клик — скопировать">A 253 832 06 00</td><td>Спускной клапан (DRAIN VALVE)</td><td>1</td><td>Справа</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A2138320400" title="Клик — скопировать">A 213 832 04 00</td><td>Спускной клапан (DRAIN VALVE)</td><td>1</td><td>Справа Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A2138307400" title="Клик — скопировать">A 213 830 74 00</td><td>Активный воздухозаборник (AIR INTAKE SCOOP)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A2138313500" title="Клик — скопировать">A 213 831 35 00</td><td>- Активный воздухозаборник (AIR INTAKE SCOOP)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A1668300218" title="Клик — скопировать">A 166 830 02 18</td><td>- Пылевой фильтр (DUST FILTER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A2138308603" title="Клик — скопировать">A 213 830 86 03</td><td>Воздушный канал (AIR DUCT)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A2138302500" title="Клик — скопировать">A 213 830 25 00</td><td>Воздушный канал (AIR DUCT)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="N000000004011" title="Клик — скопировать">N 000000 004011</td><td>ГАЙКА КОМБИНИРОВАННАЯ (NUT-AND-WASHER ASSEMBLY)</td><td>4</td><td>Воздушный канал к моторному щиту; M6</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="N000000008296" title="Клик — скопировать">N 000000 008296</td><td>ГАЙКА КОМБИНИРОВАННАЯ (NUT-AND-WASHER ASSEMBLY)</td><td>4</td><td>Воздушный канал к моторному щиту; M6</td><td class="restr"></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A0009055800" title="Клик — скопировать">A 000 905 58 00</td><td>Датчик NOx (NOX SENSOR)</td><td>1</td><td>Датчик концентрации вредных газов</td><td class="restr" data-expr="581+-830"><span class="icode">581+-830</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A0009055800" title="Клик — скопировать">A 000 905 58 00</td><td>Датчик NOx (NOX SENSOR)</td><td>1</td><td>Датчик концентрации вредных газов</td><td class="restr" data-expr="830+(580/581)"><span class="icode">830+(580/581)</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A2135421800" title="Клик — скопировать">A 213 542 18 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Датчик оксидов азота Рулевое управление: Влево</td><td class="restr" data-expr="581"><span class="icode">581</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A2135421800" title="Клик — скопировать">A 213 542 18 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Датчик оксидов азота Рулевое управление: Влево</td><td class="restr" data-expr="830+(580/581)"><span class="icode">830+(580/581)</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A2135421900" title="Клик — скопировать">A 213 542 19 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Датчик оксидов азота Рулевое управление: Вправо</td><td class="restr" data-expr="581"><span class="icode">581</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009984885" title="Клик — скопировать">A 000 998 48 85</td><td>Закладная гайка (SPREADER NUT)</td><td>1</td><td>Крепление держателя Рулевое управление: Влево</td><td class="restr" data-expr="581"><span class="icode">581</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009984885" title="Клик — скопировать">A 000 998 48 85</td><td>Закладная гайка (SPREADER NUT)</td><td>1</td><td>Крепление держателя Рулевое управление: Вправо</td><td class="restr" data-expr="581"><span class="icode">581</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.077.478_version_003.png", "poses": ["10", "90", "150", "160", "180", "190", "200", "210", "240", "270", "310", "320", "330", "340", "350", "380", "390", "400"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.077.478_version_003.png", "poses": ["10", "90", "150", "160", "180", "190", "200", "210", "240", "270", "310", "320", "330", "340", "350", "380", "390", "400"], "hs": {"190": [[456, 526, 42, 29]], "180": [[516, 670, 43, 28]], "390": [[872, 354, 43, 29]], "160": [[1013, 223, 42, 28]], "270": [[887, 630, 42, 29]], "380": [[878, 312, 42, 29]], "150": [[1235, 377, 43, 29]], "240": [[384, 646, 43, 29], [132, 491, 42, 28]], "350": [[760, 324, 42, 29]], "340": [[827, 259, 43, 28]], "330": [[657, 375, 43, 28]], "210": [[117, 366, 42, 28]], "320": [[651, 190, 43, 28]], "200": [[254, 482, 43, 29]], "310": [[543, 236, 43, 29]], "400": [[805, 377, 42, 29]], "90": [[298, 267, 30, 29]], "10": [[707, 598, 31, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

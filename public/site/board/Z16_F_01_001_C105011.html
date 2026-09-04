@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C105011">Z16 -/-</a> → 001 ENGINE HOUSING</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/31">Z16 -/-</a> → 001 ENGINE HOUSING</div>
 <h1>001 ENGINE HOUSING</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B01001Z16001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B01001Z16001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="2"><td>2</td><td class="pn" data-raw="A1800110011" title="Клик — скопировать">A 180 011 00 11</td><td>КРЫШКА ПОДШ. КОЛЕНВАЛА</td><td>3</td><td>для  1ST, 3RD AND 4TH CRANKSHAFT BEARING</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A1800100123" title="Клик — скопировать">A 180 010 01 23</td><td>КРЫШКА ПОДШИПНИКА</td><td>1</td><td>CAP с  TIGHTENING PIN для  2ND CRANKSHAFT BEARING</td><td class="restr"></td></tr><tr data-pos="4"><td>4</td><td class="pn" data-raw="A1219910041" title="Клик — скопировать">A 121 991 00 41</td><td>TIGHTENING PIN</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1800110152" title="Клик — скопировать">A 180 011 01 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.00\-MM = STANDARD для  CRANKSHAFT BEARING CAP</td><td class="restr"></td></tr><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1801860240" title="Клик — скопировать">A 180 186 02 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>для  SUCTION TUBE, OIL PUMP AT 2ND CRANKSHAFT BEARING IN CYLINDER CRANKCASE</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A1800110133" title="Клик — скопировать">A 180 011 01 33</td><td>COVER</td><td>1</td><td>для  CYLINDER CRANKCASE, FRONT</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1800110179" title="Клик — скопировать">A 180 011 01 79</td><td>GASKET</td><td>1</td><td>для  COVER PLATE AT CYLINDER CRANKCASE</td><td class="restr"></td></tr><tr data-pos="36"><td>36</td><td class="pn" data-raw="A1800100066" title="Клик — скопировать">A 180 010 00 66</td><td>НАПРАВЛ. ТРУБКА</td><td>1</td><td>IN THE OIL PAN для  OIL DIPSTICK</td><td class="restr"></td></tr><tr data-pos="37"><td>37</td><td class="pn" data-raw="A1989970040" title="Клик — скопировать">A 198 997 00 40</td><td>Уплотнительное кольцо</td><td>1</td><td>для  OIL DIPSTICK</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1800100372" title="Клик — скопировать">A 180 010 03 72</td><td>Маслоизмерительный щуп</td><td>1</td><td>с  BREATHER FILTER</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1369971230" title="Клик — скопировать">A 136 997 12 30</td><td>ЗАГЛУШКА РЕЗЬБОВАЯ</td><td>1</td><td>для  OIL DRAIN, OIL PAN</td><td class="restr"></td></tr><tr data-pos="46"><td>46</td><td class="pn" data-raw="A1800140180" title="Клик — скопировать">A 180 014 01 80</td><td>GASKET</td><td>1</td><td>RUBBER BETWEEN OIL PAN, FRONT AND REAR PART UP TO ENGINE 7501548</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1800100813" title="Клик — скопировать">A 180 010 08 13</td><td>OIL PAN,</td><td>1</td><td>REAR PART с  SEALING RING HOLDER HALF UP TO ENGINE 7501548</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110252" title="Клик — скопировать">A 180 011 02 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.05\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110352" title="Клик — скопировать">A 180 011 03 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.10\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110452" title="Клик — скопировать">A 180 011 04 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.15\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110552" title="Клик — скопировать">A 180 011 05 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.20\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110652" title="Клик — скопировать">A 180 011 06 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.25\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800110752" title="Клик — скопировать">A 180 011 07 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.30\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800111652" title="Клик — скопировать">A 180 011 16 52</td><td>GUARD PLATE</td><td>2</td><td>HALF, 3.35\-MM THICK для  CRANKSHAFT BEARING CAP REPAIR DESIGN</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809910162" title="Клик — скопировать">A 180 991 01 62</td><td>	- ШТИФТ</td><td>1</td><td>IN CASE OF CYLINDER CRANKCASE с  DOWEL PIN DIA. 8\-MM CLUTCH HOUSING WITH DOWEL PIN DIA. 12\-MM AND INTERMEDIATE WITH DO</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809910262" title="Клик — скопировать">A 180 991 02 62</td><td>	- ШТИФТ</td><td>1</td><td>IN CASE OF CYLINDER CRANKCASE с  DOWEL PIN DIA. 12\-MM CLUTCH HOUSING WITH DOWEL PIN DIA. 8\-MM AND INTERMEDIATE PLATE W</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809910462" title="Клик — скопировать">A 180 991 04 62</td><td>	- ШТИФТ</td><td>1</td><td>IN CASE OF CYLINDER CRANKCASE с  DOWEL PIN DIA. 12\-MM AND INTERMEDIATE PLATE WITH DOWEL PIN DIA. 8\-MM RECESSED DIA. 12</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1809910362" title="Клик — скопировать">A 180 991 03 62</td><td>	- ШТИФТ</td><td>1</td><td>IN CASE OF CYLINDER CRANKCASE с  DOWEL PIN DIA. 12\-MM INTERMEDIATE PLATE WITH DOWEL PIN DIA. 8\-MM AND CLUTCH HOUSING W</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800521006" title="Клик — скопировать">A 180 052 10 06</td><td>	- ПОДШИПНИК</td><td>1</td><td>для  INTERMEDIATE GEAR SHAFT, REAR SEE GROUP 05</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1801500107" title="Клик — скопировать">A 180 150 01 07</td><td>	- Подшипник</td><td>1</td><td>для  IGNITION DISTRIBUTOR AND OIL PUMP DRIVE SEE GROUP 15</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800102813" title="Клик — скопировать">A 180 010 28 13</td><td>OIL PAN</td><td>1</td><td>с  SEALING RING HOLDER HALF FROM ENGINE 7501549</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800310058" title="Клик — скопировать">A 180 031 00 58</td><td>	- Уплотнительное кольцо</td><td>1</td><td>для  CRANKSHAFT, REAR FROM ENGINE 7501549</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1800310058" title="Клик — скопировать">A 180 031 00 58</td><td>	- Уплотнительное кольцо</td><td>1</td><td>для  CRANKSHAFT, REAR UP TO ENGINE 7501548</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 29 · подписано на схемах: 13 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01001Z16001.png", "poses": ["2", "3", "4", "5", "6", "30", "31", "36", "37", "38", "40", "46", "47"]}];</script><script>
+<p class="muted">Позиций: 29 · подписано на схемах: 13 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01001Z16001.png", "poses": ["2", "3", "4", "5", "6", "30", "31", "36", "37", "38", "40", "46", "47"], "hs": {"46": [[419, 442, 33, 17]], "47": [[501, 397, 33, 17]], "36": [[107, 347, 33, 17]], "37": [[106, 300, 33, 17]], "38": [[74, 328, 33, 17]], "2": [[748, 249, 33, 17], [677, 261, 33, 17], [527, 305, 33, 17]], "3": [[602, 287, 33, 17]], "4": [[620, 244, 33, 17]], "5": [[625, 273, 33, 17]], "6": [[581, 334, 33, 17]], "40": [[28, 568, 33, 17]], "30": [[369, 188, 33, 17]], "31": [[411, 176, 33, 17]]}, "w": 903, "h": 599}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

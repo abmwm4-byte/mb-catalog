@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C167933">C167_FX -/-</a> → 125 НАВЕСНЫЕ ДЕТАЛИ КП, МАСЛОЗАЛИВНАЯ ТРУБКА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/340">C167_FX -/-</a> → 125 НАВЕСНЫЕ ДЕТАЛИ КП, МАСЛОЗАЛИВНАЯ ТРУБКА</div>
 <h1>125 НАВЕСНЫЕ ДЕТАЛИ КП, МАСЛОЗАЛИВНАЯ ТРУБКА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.003.323.877_version_006.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.003.323.877_version_006.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009903925" title="Клик — скопировать">A 000 990 39 25</td><td>Винт Torx External (SCHRAUBE MIT SECHSRUND)</td><td>4</td><td>Приводное соединение двигателя к гидротрансформатору; M8X21,5</td><td class="restr" data-expr="(M264/M254/M256/M176/M177/M654/M656)+421"><span class="icode">(M264/M254/M256/M176/M177/M654/M656)+421</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A0009903925" title="Клик — скопировать">A 000 990 39 25</td><td>Винт Torx External (SCHRAUBE MIT SECHSRUND)</td><td>4</td><td>Приводное соединение двигателя к гидротрансформатору; M8X21,5</td><td class="restr" data-expr="(M254/M256/M176/M177/M654/M656)+421"><span class="icode">(M254/M256/M176/M177/M654/M656)+421</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2540163400" title="Клик — скопировать">A 254 016 34 00</td><td>Металлическая прокладка (METALLSICKENDICHTUNG)</td><td>1</td><td>К картеру газораспределительного механизма</td><td class="restr" data-expr="M656+M30"><span class="icode">M656+M30</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2540163400" title="Клик — скопировать">A 254 016 34 00</td><td>Металлическая прокладка (METALLSICKENDICHTUNG)</td><td>1</td><td>К картеру газораспределительного механизма</td><td class="restr" data-expr="M656+M30"><span class="icode">M656+M30</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2540165000" title="Клик — скопировать">A 254 016 50 00</td><td>Металлическая прокладка (METALLSICKENDICHTUNG)</td><td>1</td><td>К картеру газораспределительного механизма</td><td class="restr" data-expr="M656+M30+1U2"><span class="icode">M656+M30+1U2</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>10</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M654/M656/M264)+421"><span class="icode">(M654/M656/M264)+421</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>10</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M654/M656)+421"><span class="icode">(M654/M656)+421</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>10</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M654/M656)+421/(M654+M006/((M656/M656+1U2)+M30))+94B+421"><span class="icode">(M654/M656)+421/(M654+M006/((M656/M656+1U2)+M30))+94B+421</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>10</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M654+M006/((M656/M656+1U2)+M30))+94B+421"><span class="icode">(M654+M006/((M656/M656+1U2)+M30))+94B+421</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>8</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M254/M256+(9U8/1U2)/M654+M006/M656+M30)+94B+421"><span class="icode">(M254/M256+(9U8/1U2)/M654+M006/M656+M30)+94B+421</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>10</td><td>Корпус коробки передач к блоку цилиндров; M10X45</td><td class="restr" data-expr="(M254/M254+1U2/M256+(9U8/1U2)/M654+M006/((M656/M656+1U2)+M30))+94B+421"><span class="icode">(M254/M254+1U2/M256+(9U8/1U2)/M654+M006/((M656/M656+1U2)+M30))+94B+421</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A7252713003" title="Клик — скопировать">A 725 271 30 03</td><td>Экран защитный (ABSCHIRMBLECH)</td><td>1</td><td>На картере коробки передач</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>Экран к масляному поддону; M6X16</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2136826602" title="Клик — скопировать">A 213 682 66 02</td><td>Шумоизоляция  гидротр. (ABDAEMPFUNG GEHAEUSE)</td><td>1</td><td>Автоматическая коробка передач</td><td class="restr" data-expr="94B+421"><span class="icode">94B+421</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A0009983121" title="Клик — скопировать">A 000 998 31 21</td><td>Колпачок (VERSCHLUSSKAPPE)</td><td>1</td><td>Запорная крышка монтажного отверстия в масляном поддоне</td><td class="restr" data-expr="421"><span class="icode">421</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A7252716803" title="Клик — скопировать">A 725 271 68 03</td><td>Переходная пластина (ADAPTERPLATTE)</td><td>1</td><td>Запорная крышка монтажного отверстия в масляном поддоне</td><td class="restr" data-expr="(M254/M256+(9U8/1U2)/M654+M006/M656+M30)+94B+421"><span class="icode">(M254/M256+(9U8/1U2)/M654+M006/M656+M30)+94B+421</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A7252716803" title="Клик — скопировать">A 725 271 68 03</td><td>Переходная пластина (ADAPTERPLATTE)</td><td>1</td><td>Запорная крышка монтажного отверстия в масляном поддоне</td><td class="restr" data-expr="(M254/M254+1U2/M256+(9U8/1U2)/M654+M006/((M656/M656+1U2)+M30))+94B+421"><span class="icode">(M254/M254+1U2/M256+(9U8/1U2)/M654+M006/((M656/M656+1U2)+M30))+94B+421</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1676820104" title="Клик — скопировать">A 167 682 01 04</td><td>Шумоизоляция корпуса КП (ABDAEMPFUNG GETR.GEHAEUSE)</td><td>1</td><td></td><td class="restr" data-expr="(M254/M256+9U8/M656+M30)+421"><span class="icode">(M254/M256+9U8/M656+M30)+421</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1676820104" title="Клик — скопировать">A 167 682 01 04</td><td>Шумоизоляция корпуса КП (ABDAEMPFUNG GETR.GEHAEUSE)</td><td>1</td><td></td><td class="restr" data-expr="(M254/M656+M30)+421"><span class="icode">(M254/M656+M30)+421</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A1676824904" title="Клик — скопировать">A 167 682 49 04</td><td>Шумоизоляция корпуса КП (ABDAEMPFUNG GETR.GEHAEUSE)</td><td>1</td><td></td><td class="restr" data-expr="(M254/M656+M30)+421"><span class="icode">(M254/M656+M30)+421</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 20 · подписано на схемах: 20 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.003.323.877_version_006.png", "poses": ["10", "200", "250", "260", "300", "400"]}];</script><script>
+<p class="muted">Позиций: 20 · подписано на схемах: 20 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.003.323.877_version_006.png", "poses": ["10", "200", "250", "260", "300", "400"], "hs": {"330": [[803, 185, 42, 29]], "320": [[728, 73, 42, 28]], "310": [[791, 56, 43, 29]], "200": [[766, 431, 43, 28]], "300": [[528, 75, 43, 29]], "400": [[102, 129, 42, 29]], "260": [[758, 833, 42, 29]], "250": [[764, 708, 43, 29]], "10": [[1084, 106, 30, 29]], "340": [[428, 88, 43, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115103">001 -/-</a> → Z  55.635 БАМПЕР</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/74">001 -/-</a> → Z  55.635 БАМПЕР</div>
 <h1>Z  55.635 БАМПЕР</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05563500001 <span class="hint">(0)</span></button><button data-i="1" class="">S05563500002 <span class="hint">(0)</span></button><button data-i="2" class="">S05563500003 <span class="hint">(8)</span></button><button data-i="3" class="">S05563500004 <span class="hint">(3)</span></button><button data-i="4" class="">S05563500005 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05563500001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05563500001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1158800071" title="Клик — скопировать">A 115 880 00 71</td><td>БАМПЕР ЗАДНИЙ</td><td>-</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1158850005" title="Клик — скопировать">A 115 885 00 05</td><td>БАМПЕР ЗАДНИЙ</td><td>-</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="43"><td>43</td><td class="pn" data-raw="A1158850305" title="Клик — скопировать">A 115 885 03 05</td><td>БАМПЕР ЗАДНИЙ</td><td>1</td><td>СЕРЕДИНА Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1158850105" title="Клик — скопировать">A 115 885 01 05</td><td>БАМПЕР ЗАДНИЙ</td><td>1</td><td>СНАРУЖИ СЛЕВА Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1158800416" title="Клик — скопировать">A 115 880 04 16</td><td>УСИЛИТЕЛЬ</td><td>-</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1158800716" title="Клик — скопировать">A 115 880 07 16</td><td>УСИЛИТЕЛЬ</td><td>1</td><td>БАМПЕР ЗАДНИЙ Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="48"><td>48</td><td class="pn" data-raw="A1119900029" title="Клик — скопировать">A 111 990 00 29</td><td>болт</td><td>1</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="49"><td>49</td><td class="pn" data-raw="A1158850221" title="Клик — скопировать">A 115 885 02 21</td><td>ПЛАНКА</td><td>2</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0009874735" title="Клик — скопировать">A 000 987 47 35</td><td>резиновый профиль</td><td>0</td><td>Z  55.635/11, Z  55.635/12, Z  55.635/13, Z  55.635/14, Z  55.635/15, Z  55.635/16 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1089870042" title="Клик — скопировать">A 108 987 00 42</td><td>Проставочный ролик</td><td>2</td><td>Z  55.635/11, Z  55.635/13, Z  55.635/14</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N000085005151" title="Клик — скопировать">N 000085 005151</td><td>Винт</td><td>2</td><td>Z  55.635/11, Z  55.635/13, Z  55.635/14</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1169970586" title="Клик — скопировать">A 116 997 05 86</td><td>Пробка</td><td>-</td><td>Z  55.635/11, Z  55.635/13</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1169971181" title="Клик — скопировать">A 116 997 11 81</td><td>втулка</td><td>4</td><td>ЗАДН. ЦЕНТР. ЭЛЕМЕНТ СНИЗУ СНАРУЖИ Z  55.635/11, Z  55.635/13</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1158850205" title="Клик — скопировать">A 115 885 02 05</td><td>БАМПЕР ЗАДНИЙ</td><td>1</td><td>СНАРУЖИ СПРАВА Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1159840856" title="Клик — скопировать">A 115 984 08 56</td><td>ШАЙБА</td><td>-</td><td>Z  55.635/11 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021008205" title="Клик — скопировать">N 009021 008205</td><td>Шайба</td><td>-</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N009021008213" title="Клик — скопировать">N 009021 008213</td><td>Шайба</td><td>2</td><td>8 MM Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>1</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008010" title="Клик — скопировать">N 000934 008010</td><td>Гайка</td><td>-</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка</td><td>1</td><td>M8 Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>6</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0949906810" title="Клик — скопировать">A 094 990 68 10</td><td>Пружинное кольцо</td><td>6</td><td>Z  55.635/11</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125006421" title="Клик — скопировать">N 000125 006421</td><td>Шайба</td><td>6</td><td>Z  55.635/11</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 11 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05563500001.png", "poses": []}, {"png": "../../img_png/drawing_S05563500002.png", "poses": []}, {"png": "../../img_png/drawing_S05563500003.png", "poses": ["43", "44", "47", "48", "49", "74", "85", "86"]}, {"png": "../../img_png/drawing_S05563500004.png", "poses": ["74", "85", "86"]}, {"png": "../../img_png/drawing_S05563500005.png", "poses": ["74"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 11 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05563500001.png", "poses": [], "hs": {}, "w": 876, "h": 583}, {"png": "../../img_png/drawing_S05563500002.png", "poses": [], "hs": {"23": [[460, 452, 33, 17]], "24": [[579, 458, 33, 17], [543, 470, 33, 17]], "35": [[420, 81, 33, 17]], "25": [[576, 445, 33, 17], [525, 471, 33, 17]], "36": [[390, 68, 33, 17]], "37": [[362, 52, 33, 17]], "38": [[455, 49, 33, 17]], "28": [[494, 247, 33, 17]], "39": [[478, 41, 33, 17]], "29": [[508, 158, 33, 17]], "40": [[326, 46, 33, 17], [324, 74, 33, 17]], "30": [[395, 226, 33, 17], [359, 227, 33, 17]], "31": [[414, 222, 33, 17], [361, 209, 33, 17]]}, "w": 876, "h": 583}, {"png": "../../img_png/drawing_S05563500003.png", "poses": ["43", "44", "47", "48", "49", "74", "85", "86"], "hs": {"74": [[660, 285, 33, 17]]}, "w": 876, "h": 583}, {"png": "../../img_png/drawing_S05563500004.png", "poses": ["74", "85", "86"], "hs": {"74": [[680, 256, 33, 17]]}, "w": 876, "h": 584}, {"png": "../../img_png/drawing_S05563500005.png", "poses": ["74"], "hs": {"74": [[216, 415, 33, 17]]}, "w": 876, "h": 583}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

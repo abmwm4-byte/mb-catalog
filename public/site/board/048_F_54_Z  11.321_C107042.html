@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107042">048 BIS 09/85</a> → Z  11.321 ON-BOARD COMPUTER (FOR TYPES 129,140 SEE STANDARD VERSION)</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">048 BIS 09/85</a> → Z  11.321 ON-BOARD COMPUTER (FOR TYPES 129,140 SEE STANDARD VERSION)</div>
 <h1>Z  11.321 ON-BOARD COMPUTER (FOR TYPES 129,140 SEE STANDARD VERSION)</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01132100001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01132100001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0025457732" title="Клик — скопировать">A 002 545 77 32</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td>(БЛОК УПРАВЛЕНИЯ) Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1265462743" title="Клик — скопировать">A 126 546 27 43</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>БЛОК УПРАВЛЕНИЯ Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0035450332" title="Клик — скопировать">A 003 545 03 32</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td>(TYPE PROGRAMMABLE READ\-ONLY MEMORY) Z  11.321/04</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1265450214" title="Клик — скопировать">A 126 545 02 14</td><td>ВЫКЛЮЧАТЕЛЬ</td><td>1</td><td>ПАНЕЛЬ УПРАВЛ. Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1075401110" title="Клик — скопировать">A 107 540 11 10</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>Рулевое управление: Влево Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0105455028" title="Клик — скопировать">A 010 545 50 28</td><td>- Штекер</td><td>1</td><td>КОМБИНАЦИЯ ПРИБОРОВ,15\-КОНТАКТ. Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A0105450528" title="Клик — скопировать">A 010 545 05 28</td><td>- Крышка</td><td>1</td><td>TO 010 545 50 28 Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0095451628" title="Клик — скопировать">A 009 545 16 28</td><td>- Корпус штекерной втулки</td><td>1</td><td>ВЫКЛЮЧАТЕЛЬ КНОПОЧНЫЙ Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A0095451728" title="Клик — скопировать">A 009 545 17 28</td><td>- Крышка</td><td>1</td><td>TO 009 545 16 28 Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0015452826" title="Клик — скопировать">A 001 545 28 26</td><td>- Штекерная втулка</td><td>-</td><td>Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0025459926" title="Клик — скопировать">A 002 545 99 26</td><td>- Контактная втулка</td><td>19</td><td>2,5 MM; 0.35\-2.5 MM2 RK2.5 Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0125452428" title="Клик — скопировать">A 012 545 24 28</td><td>- Разъем, электрический</td><td>1</td><td>AIR\-FLOW SENSOR\-PLATE CONTACT; 3\-PIN Z  11.321/01, Z  11.321/02, Z  11.321/04, Z  11.321/05, Z  11.321/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0015453526" title="Клик — скопировать">A 001 545 35 26</td><td>- Наружный круглый штекер</td><td>-</td><td>Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0035452626" title="Клик — скопировать">A 003 545 26 26</td><td>- Контактная втулка</td><td>2</td><td>4 MM; 0.35\-4.0 MM2 RK4 Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0085452028" title="Клик — скопировать">A 008 545 20 28</td><td>- Нижняя часть корпуса</td><td>1</td><td>SPEEDOMETER;1\-POLE; 1\-PIN Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0085452028" title="Клик — скопировать">A 008 545 20 28</td><td>- Нижняя часть корпуса</td><td>1</td><td>ДИАГНОСТ.РАЗЪЕМ; 1\-PIN Рулевое управление: Влево Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="195"><td>195</td><td class="pn" data-raw="A0015454426" title="Клик — скопировать">A 001 545 44 26</td><td>- Контактная втулка</td><td>2</td><td>4 MM; 0.35\-6.0 MM2 RK4.0 Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0095451428" title="Клик — скопировать">A 009 545 14 28</td><td>- Верхняя часть корпуса</td><td>4</td><td>TO 008 545 20 28/011 545 10 28 Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A0115451028" title="Клик — скопировать">A 011 545 10 28</td><td>- Корпус штекера</td><td>1</td><td>SPEEDOMETER;1\-POLE Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="225"><td>225</td><td class="pn" data-raw="A0115451028" title="Клик — скопировать">A 011 545 10 28</td><td>- Корпус штекера</td><td>1</td><td>ДИАГНОСТ.РАЗЪЕМ Рулевое управление: Влево Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0115451228" title="Клик — скопировать">A 011 545 12 28</td><td>- Штекерный штифт</td><td>2</td><td>4 MM Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="255"><td>255</td><td class="pn" data-raw="A0135451028" title="Клик — скопировать">A 013 545 10 28</td><td>- ШТЕКЕР</td><td>1</td><td>КОМБИН.ПРИБОРОВ,4\-КОНТАКТ. Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0125457328" title="Клик — скопировать">A 012 545 73 28</td><td>- Штекерный штифт</td><td>4</td><td>TO 013 545 10 28; 1.0 MM2 Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="286"><td>286</td><td class="pn" data-raw="A0135458928" title="Клик — скопировать">A 013 545 89 28</td><td>- Промежуточный штекер</td><td>1</td><td>ОТКЛЮЧЕНИЕ ПОДАЧИ ТОПЛИВА В РЕЖИМЕ ПХХ Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="287"><td>287</td><td class="pn" data-raw="A0145450428" title="Клик — скопировать">A 014 545 04 28</td><td>- Промежуточный штекер</td><td>1</td><td>TO 013 545 89 28 Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="288"><td>288</td><td class="pn" data-raw="A0105455228" title="Клик — скопировать">A 010 545 52 28</td><td>- Штекерная втулка</td><td>2</td><td>4 MM Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="387"><td>387</td><td class="pn" data-raw="A1109950165" title="Клик — скопировать">A 110 995 01 65</td><td>хомут</td><td>1</td><td>ELECTRIC CABLE TO WATER PIPE; 19 MM Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="393"><td>393</td><td class="pn" data-raw="A1169970790" title="Клик — скопировать">A 116 997 07 90</td><td>Кабельная стяжка</td><td>-</td><td>7X100MM Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="393"><td>393</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>ELECTRIC CABLE TO WATER PIPE; 7X100 MM Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr><tr data-pos="393"><td>393</td><td class="pn" data-raw="A0019974190" title="Клик — скопировать">A 001 997 41 90</td><td>Кабельная стяжка</td><td>1</td><td>100 MM; 7X100 MM Z  11.321/01, Z  11.321/02, Z  11.321/03, Z  11.321/04, Z  11.321/05, Z  11.321/06</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01132100001.png", "poses": ["15", "20", "30", "60", "75", "90", "105", "110", "115", "120", "150", "165", "180", "195", "210", "225", "240", "255", "270", "286", "287", "288", "387", "393"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01132100001.png", "poses": ["15", "20", "30", "60", "75", "90", "105", "110", "115", "120", "150", "165", "180", "195", "210", "225", "240", "255", "270", "286", "287", "288", "387", "393"], "hs": {"15": [[159, 101, 33, 17]], "180": [[223, 541, 33, 17]], "270": [[438, 33, 33, 17]], "195": [[175, 493, 33, 17]], "393": [[797, 170, 33, 17]], "240": [[482, 101, 33, 17]], "120": [[633, 507, 33, 17], [318, 175, 33, 17]], "110": [[309, 204, 33, 17]], "210": [[174, 558, 33, 17], [550, 75, 33, 17]], "387": [[81, 67, 33, 17]], "255": [[472, 68, 33, 17]], "225": [[515, 93, 33, 17]], "115": [[311, 150, 33, 17]], "105": [[552, 472, 33, 17]], "90": [[644, 471, 33, 17]], "60": [[774, 421, 33, 17]], "30": [[167, 188, 33, 17]], "75": [[460, 391, 33, 17]], "20": [[351, 76, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

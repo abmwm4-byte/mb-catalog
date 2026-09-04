@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107022">048 BIS 09/85</a> → Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/373">048 BIS 09/85</a> → Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</div>
 <h1>Z  56.008 РЕМЕНЬ БЕЗОПАСНОСТИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05600800001 <span class="hint">(12)</span></button><button data-i="1" class="">S05600800002 <span class="hint">(4)</span></button><button data-i="2" class="">S05600800003 <span class="hint">(11)</span></button><button data-i="3" class="">S05600800004 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05600800001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05600800001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1166920059" title="Клик — скопировать">A 116 692 00 59</td><td>РОЗЕТКА</td><td>2</td><td>Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [054] UP TO CHASSIS 107.022 000387 107.023 010213 107.024 009502</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1266920059" title="Клик — скопировать">A 126 692 00 59</td><td>Декоративная розетка</td><td>2</td><td>Z  56.008/10 [055] FROM CHASSIS 107.022 000388 107.023 010214 107.024 009503</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1078605585" title="Клик — скопировать">A 107 860 55 85</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>2</td><td>REPA Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="45"><td>45</td><td class="pn" data-raw="A6319900148" title="Клик — скопировать">A 631 990 01 48</td><td>- Диск</td><td>2</td><td>Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1159906640" title="Клик — скопировать">A 115 990 66 40</td><td>- Диск</td><td>2</td><td>FA.KLIPPAN Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1159906640" title="Клик — скопировать">A 115 990 66 40</td><td>- Диск</td><td>2</td><td>FA.KANGOL Z  56.008/10 [037] UP TO CHASSIS 107.023 009320; 107,024 006316</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0039903701" title="Клик — скопировать">A 003 990 37 01</td><td>- болт</td><td>2</td><td>7/16&quot;UNF\-2AX25 Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1078608685" title="Клик — скопировать">A 107 860 86 85</td><td>РЕМЕНЬ БЕЗОПАСНОСТИ</td><td>2</td><td>ЗАДНЕЕ СИДЕНЬЕ Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>4</td><td>M10X25 Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A0039902701" title="Клик — скопировать">A 003 990 27 01</td><td>- БОЛТ</td><td>2</td><td>FA.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [037] UP TO CHASSIS 107.023 009320; 107,024 006316</td><td class="restr"></td></tr><tr data-pos="78"><td>78</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>	- Винт с 6-гранной головкой</td><td>2</td><td>FA.KLIPPAN; M10X25 Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0019923601" title="Клик — скопировать">A 001 992 36 01</td><td>- ВТУЛКА</td><td>2</td><td>Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="108"><td>108</td><td class="pn" data-raw="A0039902701" title="Клик — скопировать">A 003 990 27 01</td><td>БОЛТ</td><td>2</td><td>FA.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="A0039901501" title="Клик — скопировать">A 003 990 15 01</td><td>- БОЛТ</td><td>6</td><td>A.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [037] UP TO CHASSIS 107.023 009320; 107,024 006316</td><td class="restr"></td></tr><tr data-pos="121"><td>121</td><td class="pn" data-raw="A0039902701" title="Клик — скопировать">A 003 990 27 01</td><td>БОЛТ</td><td>2</td><td>FA.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [055] FROM CHASSIS 107.022 000388 107.023 010214 107.024 009503 [009] FROM CHASSIS 107.023 002089</td><td class="restr"></td></tr><tr data-pos="162"><td>162</td><td class="pn" data-raw="A0019908440" title="Клик — скопировать">A 001 990 84 40</td><td>- ШАЙБА</td><td>4</td><td>FA.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [037] UP TO CHASSIS 107.023 009320; 107,024 006316</td><td class="restr"></td></tr><tr data-pos="194"><td>194</td><td class="pn" data-raw="A1169840356" title="Клик — скопировать">A 116 984 03 56</td><td>	- Диск</td><td>2</td><td>Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="219"><td>219</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>2</td><td>SAFETY BELT TO SIDE MEMBER; M10X25 Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="223"><td>223</td><td class="pn" data-raw="A2019901301" title="Клик — скопировать">A 201 990 13 01</td><td>- болт</td><td>2</td><td>ПЕРЕВОРОТН. СКОБА НА ЗАДНЕЙ СТОЙКЕ СВЕРХУ Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="241"><td>241</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>2</td><td>АВТОМ. КАТУШКА НА ЗАДН. СТОЙКЕ; M10X25 Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="246"><td>246</td><td class="pn" data-raw="N912004012100" title="Клик — скопировать">N 912004 012100</td><td>- Пружинное кольцо</td><td>2</td><td>АВТОМ. КАТУШКА НА ЗАДН. СТОЙКЕ Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="268"><td>268</td><td class="pn" data-raw="A2029901301" title="Клик — скопировать">A 202 990 13 01</td><td>- Винт с 6-гранной головкой</td><td>2</td><td>ЗАМОК РЕМНЯ НА ПОЛУ ПОД ЗАДН. СИД.; M10X25 Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="276"><td>276</td><td class="pn" data-raw="A0019924001" title="Клик — скопировать">A 001 992 40 01</td><td>- Диск</td><td>2</td><td>ЗАМОК РЕМНЯ НА ПОЛУ ПОД ЗАДН. СИД. Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="332"><td>332</td><td class="pn" data-raw="A1238680030" title="Клик — скопировать">A 123 868 00 30</td><td>- Колпачок</td><td>2</td><td>Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="349"><td>349</td><td class="pn" data-raw="A1239920405" title="Клик — скопировать">A 123 992 04 05</td><td>- втулка</td><td>2</td><td>ПЕРЕВОРОТН. СКОБА НА ЗАДНЕЙ СТОЙКЕ СВЕРХУ Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr><tr data-pos="369"><td>369</td><td class="pn" data-raw="A1159970940" title="Клик — скопировать">A 115 997 09 40</td><td>- УПЛОТНИТ. КОЛЬЦО</td><td>2</td><td>Z  56.008/10 [085] UP TO CHASSIS 107.022 004444 107.023 012129 107.024 019861</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A0008682169" title="Клик — скопировать">A 000 868 21 69</td><td>- ЗАМКОВЫЙ БЛОК</td><td>2</td><td>FA.KANGOL Z  56.008/10 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [037] UP TO CHASSIS 107.023 009320; 107,024 006316</td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A1238600469" title="Клик — скопировать">A 123 860 04 69</td><td>ЗАМКОВЫЙ БЛОК</td><td>2</td><td>Z  56.008/10 [086] FROM CHASSIS 107.022 004445 107.023 012130 107.024 019862</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05600800001.png", "poses": ["13", "31", "45", "50", "60", "78", "80", "108", "162", "194", "369", "370"]}, {"png": "../../img_png/drawing_S05600800002.png", "poses": ["108", "115", "121", "349"]}, {"png": "../../img_png/drawing_S05600800003.png", "poses": ["75", "219", "223", "241", "246", "268", "276", "332", "349", "369", "370"]}, {"png": "../../img_png/drawing_S05600800004.png", "poses": ["13"]}];</script><script>
+<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05600800001.png", "poses": ["13", "31", "45", "50", "60", "78", "80", "108", "162", "194", "369", "370"], "hs": {"78": [[697, 238, 31, 26], [697, 594, 31, 24]], "405": [[1005, 718, 42, 25]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800002.png", "poses": ["108", "115", "121", "349"], "hs": {"41": [[905, 569, 30, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800003.png", "poses": ["75", "219", "223", "241", "246", "268", "276", "332", "349", "369", "370"], "hs": {"374": [[673, 561, 43, 25]], "63": [[354, 155, 29, 27]], "241": [[1025, 763, 40, 24]], "373": [[786, 805, 42, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S05600800004.png", "poses": ["13"], "hs": {}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

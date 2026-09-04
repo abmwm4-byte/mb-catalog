@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C243712">C243_FH -/-</a> → 195 Схема трубопроводов хладагента</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">C243_FH -/-</a> → 195 Схема трубопроводов хладагента</div>
 <h1>195 Схема трубопроводов хладагента</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.084.331_version_005.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.084.331_version_005.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2438307200" title="Клик — скопировать">A 243 830 72 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>От расширительного клапана к разъёму</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2438307900" title="Клик — скопировать">A 243 830 79 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>От расширительного клапана к разъёму</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2438307100" title="Клик — скопировать">A 243 830 71 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>От расширительного клапана к разъёму</td><td class="restr" data-expr="2U8"><span class="icode">2U8</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2438307800" title="Клик — скопировать">A 243 830 78 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>От расширительного клапана к разъёму</td><td class="restr" data-expr="2U8"><span class="icode">2U8</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0239976545" title="Клик — скопировать">A 023 997 65 45</td><td>- Профильное упл. кольцо (PROFILE SEALING RING)</td><td>4</td><td>17.03MMX2.13MM</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0239976245" title="Клик — скопировать">A 023 997 62 45</td><td>- Профильное упл. кольцо (PROFILE SEALING RING)</td><td>3</td><td>8.00MMX2.03MM</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2938301201" title="Клик — скопировать">A 293 830 12 01</td><td>- Запорный клапан (CUTOFF VALVE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009915908" title="Клик — скопировать">A 000 991 59 08</td><td>	- Резьбовой палец (DOUBLE END STUD)</td><td>2</td><td>Запорный клапан к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>- Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>Запорный клапан к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009915908" title="Клик — скопировать">A 000 991 59 08</td><td>- Резьбовой палец (DOUBLE END STUD)</td><td>1</td><td>Трубопровод к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0008322400" title="Клик — скопировать">A 000 832 24 00</td><td>- Обратный клапан (CHECK VALVE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0999910000" title="Клик — скопировать">A 099 991 00 00</td><td>- Резьбовой палец (DOUBLE END STUD)</td><td>1</td><td>Трубопровод к обратному клапану; M8</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="N910143008003" title="Клик — скопировать">N 910143 008003</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Трубопровод к обратному клапану; M8X30</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N000000008303" title="Клик — скопировать">N 000000 008303</td><td>- Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Трубопровод к обратному клапану; M8</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0008320285" title="Клик — скопировать">A 000 832 02 85</td><td>- Золотник клапана (VALVE ELEMENT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0009984001" title="Клик — скопировать">A 000 998 40 01</td><td>- Проходная втулка (FEED-THROUGH GROMMET)</td><td>1</td><td>Трубопровод к поперечине</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009980906" title="Клик — скопировать">A 000 998 09 06</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>1</td><td>Трубопровод к поперечине</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0009984001" title="Клик — скопировать">A 000 998 40 01</td><td>- Проходная втулка (FEED-THROUGH GROMMET)</td><td>1</td><td>Трубопровод к продольному несущему элементу</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0009980906" title="Клик — скопировать">A 000 998 09 06</td><td>- Кнопка-застежка (SNAP FASTENER)</td><td>1</td><td>Трубопровод к продольному несущему элементу</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0019970744" title="Клик — скопировать">A 001 997 07 44</td><td>- Проставочное кольцо (SPACER RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Трубопровод к расширительному клапану; M6</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Трубопровод к опоре двигателя; M6X12</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1409880135" title="Клик — скопировать">A 140 988 01 35</td><td>Уплотнительный колпачок (SEAL CAP)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0009973595" title="Клик — скопировать">A 000 997 35 95</td><td>Резьбовая крышка (SCREW CAP)</td><td>1</td><td></td><td class="restr" data-expr="2U8"><span class="icode">2U8</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A0109905004" title="Клик — скопировать">A 010 990 50 04</td><td>Винт Torx с цил. головкой (CAP SCREW)</td><td>1</td><td>Трубопровод к трубопроводу; M8X30</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2438306700" title="Клик — скопировать">A 243 830 67 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>Разъем к разъему</td><td class="restr"></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2438306600" title="Клик — скопировать">A 243 830 66 00</td><td>Трубка контура хладагента (REFRIGERANT LINE)</td><td>1</td><td>Разъем к разъему</td><td class="restr" data-expr="2U8"><span class="icode">2U8</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A0239976245" title="Клик — скопировать">A 023 997 62 45</td><td>- Профильное упл. кольцо (PROFILE SEALING RING)</td><td>1</td><td>Трубопровод к трубопроводу; 8.00MMX2.03MM</td><td class="restr"></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0008320285" title="Клик — скопировать">A 000 832 02 85</td><td>- Золотник клапана (VALVE ELEMENT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0009915908" title="Клик — скопировать">A 000 991 59 08</td><td>- Резьбовой палец (DOUBLE END STUD)</td><td>1</td><td>Трубопровод к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Трубопровод к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Трубопровод к опоре двигателя; M6X12</td><td class="restr"></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Трубопровод к трубопроводу; M6</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A1409880035" title="Клик — скопировать">A 140 988 00 35</td><td>Колпачок (CAP)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0009973495" title="Клик — скопировать">A 000 997 34 95</td><td>Резьбовая крышка (SCREW CAP)</td><td>1</td><td></td><td class="restr" data-expr="2U8"><span class="icode">2U8</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.084.331_version_005.png", "poses": ["10", "20", "30", "50", "60", "80", "100", "120", "140", "150", "160", "180", "200", "210", "230", "240", "250", "260", "280", "300", "320", "400", "410", "420", "430", "450", "460", "480", "500"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.084.331_version_005.png", "poses": ["10", "20", "30", "50", "60", "80", "100", "120", "140", "150", "160", "180", "200", "210", "230", "240", "250", "260", "280", "300", "320", "400", "410", "420", "430", "450", "460", "480", "500"], "hs": {"150": [[433, 790, 42, 28]], "250": [[130, 433, 42, 28]], "230": [[70, 811, 42, 29]], "450": [[643, 279, 42, 28]], "210": [[723, 482, 42, 29]], "430": [[114, 290, 42, 28]], "410": [[447, 273, 42, 29]], "50": [[730, 178, 31, 29]], "30": [[867, 223, 31, 28], [1075, 685, 30, 29]], "10": [[691, 644, 30, 29]], "180": [[491, 428, 43, 29]], "280": [[433, 611, 42, 29]], "160": [[135, 842, 43, 29]], "260": [[939, 699, 42, 29]], "480": [[53, 309, 42, 28]], "140": [[231, 841, 42, 28]], "240": [[159, 725, 42, 29]], "460": [[418, 161, 43, 29]], "120": [[329, 820, 42, 29]], "100": [[575, 276, 43, 29]], "320": [[512, 638, 43, 29]], "200": [[741, 361, 42, 29]], "420": [[306, 143, 43, 29]], "300": [[486, 379, 43, 29]], "400": [[329, 247, 42, 29]], "500": [[302, 85, 42, 28]], "80": [[872, 335, 30, 28]], "60": [[824, 284, 30, 29]], "20": [[1055, 581, 30, 29], [586, 598, 30, 29], [372, 723, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

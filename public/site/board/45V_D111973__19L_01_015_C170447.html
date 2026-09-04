@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45V  Действительно для: JP</a> → 015 БЛОК ЦИЛИНДРОВ,КРЫШКА И КОМПЛЕКТ        ПРОКЛАДОК</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">45V  Действительно для: JP</a> → 015 БЛОК ЦИЛИНДРОВ,КРЫШКА И КОМПЛЕКТ        ПРОКЛАДОК</div>
 <h1>015 БЛОК ЦИЛИНДРОВ,КРЫШКА И КОМПЛЕКТ        ПРОКЛАДОК</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B01015000169.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B01015000169.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1110104608" title="Клик — скопировать">A 111 010 46 08</td><td>БЛОК ЦИЛИНДРОВ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1020110411" title="Клик — скопировать">A 102 011 04 11</td><td>- Крышка кор.подш.коленвала (KURBELWELLENLAGERDECKEL)</td><td>4</td><td>NR. 1/2/4/5 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1020110613" title="Клик — скопировать">A 102 011 06 13</td><td>- Крышка кор.подш.коленвала</td><td>1</td><td>ПОСАДОЧ.ПОДШИПНИК NR. 3 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A6010110371" title="Клик — скопировать">A 601 011 03 71</td><td>- болт (SCHRAUBE)</td><td>10</td><td>КРЫШКА ПОДШИПНИКА К БЛОКУ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000443034002" title="Клик — скопировать">N 000443 034002</td><td>- Запорная крышка</td><td>7</td><td>ЛИТОЕ ОТВЕРСТИЕ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0949904905" title="Клик — скопировать">A 094 990 49 05</td><td>- Запорная крышка (VERSCHLUSSDECKEL)</td><td>1</td><td>ЛИТОЕ ОТВЕРСТИЕ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1179970230" title="Клик — скопировать">A 117 997 02 30</td><td>- Резьбовая пробка (VERSCHLUSSSCHRAUBE)</td><td>1</td><td>ЗАГЛУШКА ЛИТОГО ОТВЕРСТИЯ СПЕРЕДИ СЛЕВА; M38X1.5</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0069977548" title="Клик — скопировать">A 006 997 75 48</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ЗАГЛУШКА ЛИТОГО ОТВЕРСТИЯ СПЕРЕДИ СЛЕВА; D=36.5 MM</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A0949904907" title="Клик — скопировать">A 094 990 49 07</td><td>- Шар (KUGEL)</td><td>1</td><td>МАСЛ.КАНАЛ СЗАДИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N000443020004" title="Клик — скопировать">N 000443 020004</td><td>- Запорная крышка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A6019970430" title="Клик — скопировать">A 601 997 04 30</td><td>- Резьб. пробка слив.отвер. (ABLASSSCHRAUBE)</td><td>1</td><td>СЛИВ ОХЛАЖД.ЖИДКОСТИ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0949901808" title="Клик — скопировать">A 094 990 18 08</td><td>- Резьбовая пробка (VERSCHLUSSSCHRAUBE)</td><td>1</td><td>СЛИВ ВОДЫ, БЛОК ЦИЛ., РЕМОНТ НЕГЕРМЕТИЧ. РЕЗЬБ. ПРОБКИ: 601 997 04 30</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N007603018100" title="Клик — скопировать">N 007603 018100</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>СЛИВ ВОДЫ БЛОКА ЦИЛИНДРОВ ДВИГАТЕЛЯ TO 007604 018101</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1111800143" title="Клик — скопировать">A 111 180 01 43</td><td>- МАСЛ. ЖИКЛЁР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1111800243" title="Клик — скопировать">A 111 180 02 43</td><td>- Масляная форсунка (OELDUESE)</td><td>4</td><td>ОХЛАЖДЕНИЕ ПОРШНЯ</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1041800432" title="Клик — скопировать">A 104 180 04 32</td><td>- Клапан (VENTIL)</td><td>1</td><td>ОБРАТНЫЙ КЛАПАН</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0179972248" title="Клик — скопировать">A 017 997 22 48</td><td>	- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ОБРАТНЫЙ КЛАПАН</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A6019920325" title="Клик — скопировать">A 601 992 03 25</td><td>- Зажимная гильза (SPANNHUELSE)</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N000007010126" title="Клик — скопировать">N 000007 010126</td><td>- Цилиндрический штифт</td><td>4</td><td>ГБЦ И КРЫШКА КАРТЕРА ГРМ НА БЛОКЕ ЦИЛ.</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A6019920125" title="Клик — скопировать">A 601 992 01 25</td><td>- Зажимная гильза (SPANNHUELSE)</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="N000007006121" title="Клик — скопировать">N 000007 006121</td><td>- Цилиндрический штифт (ZYLINDERSTIFT)</td><td>2</td><td>КРЫШКА ЗАДНЕГО САЛЬНИКА КОЛЕНЧАТОГО ВАЛА К БЛОКУ ЦИЛИНДРОВ ДВИГАТЕЛЯ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1110180130" title="Клик — скопировать">A 111 018 01 30</td><td>Трубопровод (ROHRLEITUNG)</td><td>1</td><td>ОБРАТНЫЙ СЛИВ МАСЛА</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="A1110140477" title="Клик — скопировать">A 111 014 04 77</td><td>Трубопровод (ROHRLEITUNG)</td><td>1</td><td>БЛОК ЦИЛ., СЛЕВА</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1110181582" title="Клик — скопировать">A 111 018 15 82</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ВЕНТИЛЯЦ. БЛОКА ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1110940082" title="Клик — скопировать">A 111 094 00 82</td><td>ШЛАНГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A0020940182" title="Клик — скопировать">A 002 094 01 82</td><td>Шланг (SCHLAUCH)</td><td>2</td><td>ВЕНТИЛЯЦ. БЛОКА ЦИЛИНДРОВ 125 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="A1110100091" title="Клик — скопировать">A 111 010 00 91</td><td>Клапан (VENTIL)</td><td>1</td><td>ОБРАТНЫЙ КЛАПАН</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1265010020" title="Клик — скопировать">A 126 501 00 20</td><td>Держатель (HALTER)</td><td>1</td><td>ВЕНТИЛЯЦ.ТРУБОПРОВОД К КРОНШТЕЙНУ</td><td class="restr"></td></tr><tr data-pos="137"><td>137</td><td class="pn" data-raw="A1269970690" title="Клик — скопировать">A 126 997 06 90</td><td>связующее вещество (SCHLAUCHSCHELLE)</td><td>1</td><td>ВЕНТИЛЯЦ. ТРУБКА НА СОЕДИНИТ. ШТУЦЕРЕ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A6040100014" title="Клик — скопировать">A 604 010 00 14</td><td>Крышка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A6010110108" title="Клик — скопировать">A 601 011 01 08</td><td>Крышка (DECKEL)</td><td>1</td><td>УПЛОТНЕНИЕ КОЛЕНЧАТОГО ВАЛА В ЗАДНЕЙ ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="143"><td>143</td><td class="pn" data-raw="A0179977447" title="Клик — скопировать">A 017 997 74 47</td><td>Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>УПЛОТНЕНИЕ КОЛЕНЧАТОГО ВАЛА В ЗАДНЕЙ ЧАСТИ</td><td class="restr"></td></tr><tr data-pos="146"><td>146</td><td class="pn" data-raw="N910143006002" title="Клик — скопировать">N 910143 006002</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>6</td><td>КРЫШКА ЗАДНЕГО САЛЬНИКА КОЛЕНЧАТОГО ВАЛА К БЛОКУ ЦИЛИНДРОВ ДВИГАТЕЛЯ; M6X20</td><td class="restr"></td></tr><tr data-pos="149"><td>149</td><td class="pn" data-raw="A1110103108" title="Клик — скопировать">A 111 010 31 08</td><td>набор уплотнений (DICHTUNGSSATZ)</td><td>1</td><td>БЛОК ЦИЛИНДРОВ ДВИГАТЕЛЯ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01015000169.png", "poses": ["5", "11", "14", "20", "23", "26", "32", "38", "44", "47", "50", "65", "68", "71", "77", "83", "101", "104", "113", "116", "122", "125", "137", "140", "143", "146", "149"]}];</script><script>
+<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01015000169.png", "poses": ["5", "11", "14", "20", "23", "26", "32", "38", "44", "47", "50", "65", "68", "71", "77", "83", "101", "104", "113", "116", "122", "125", "137", "140", "143", "146", "149"], "hs": {"44": [[257, 327, 34, 25]], "23": [[873, 490, 33, 25]], "68": [[166, 387, 32, 24]], "47": [[191, 303, 32, 27]], "26": [[833, 484, 32, 25]], "113": [[1210, 814, 44, 25]], "137": [[982, 628, 42, 25]], "116": [[1051, 554, 42, 27]], "71": [[209, 379, 30, 24]], "50": [[225, 314, 33, 24]], "32": [[773, 306, 33, 24]], "11": [[284, 649, 30, 25]], "77": [[591, 235, 32, 25], [204, 578, 33, 25]], "14": [[342, 722, 30, 25]], "38": [[843, 331, 32, 24]], "140": [[964, 342, 44, 25]], "143": [[1044, 329, 42, 25]], "122": [[1210, 561, 44, 25]], "101": [[531, 690, 40, 24]], "146": [[1112, 463, 44, 25]], "125": [[1071, 695, 43, 25]], "5": [[641, 553, 19, 25]], "104": [[708, 812, 44, 25]], "149": [[526, 164, 41, 25]], "83": [[881, 435, 32, 27]], "20": [[821, 377, 33, 24]], "65": [[660, 709, 32, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

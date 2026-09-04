@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116032">64Q SONDERSCHUTZ/SPECIAL PROTECTION</a> → 001 ОКНА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/21">64Q SONDERSCHUTZ/SPECIAL PROTECTION</a> → 001 ОКНА</div>
 <h1>001 ОКНА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B67001000067.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B67001000067.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1166701351" title="Клик — скопировать">A 116 670 13 51</td><td>КЛЮЧ</td><td>1</td><td>СВЕРХУ СПЕРЕДИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [798] UP TO CHASSIS NEW EQUIPMENT 7/75 028,029 028987 ALSO INSTALLED ON 029201 EXCEPT FOR 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041786 ALSO INSTALLED ON 041848 EXCEPT FOR 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="21"><td>21</td><td class="pn" data-raw="A1166701351" title="Клик — скопировать">A 116 670 13 51</td><td>КЛЮЧ</td><td>1</td><td>СВЕРХУ СПЕРЕДИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [799] FROM CHASSIS NEW EQUIPMENT 7/75 028,029 028988 EXCEPT FOR 029201 ALSO INSTALLED ON 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041787 EXCEPT FOR 041848 ALSO INSTALLED ON 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1166701551" title="Клик — скопировать">A 116 670 15 51</td><td>КЛЮЧ</td><td>1</td><td>СБОКУ СЛЕВА [798] UP TO CHASSIS NEW EQUIPMENT 7/75 028,029 028987 ALSO INSTALLED ON 029201 EXCEPT FOR 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041786 ALSO INSTALLED ON 041848 EXCEPT FOR 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1166701551" title="Клик — скопировать">A 116 670 15 51</td><td>КЛЮЧ</td><td>1</td><td>СБОКУ СЛЕВА [799] FROM CHASSIS NEW EQUIPMENT 7/75 028,029 028988 EXCEPT FOR 029201 ALSO INSTALLED ON 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041787 EXCEPT FOR 041848 ALSO INSTALLED ON 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1166701651" title="Клик — скопировать">A 116 670 16 51</td><td>КЛЮЧ</td><td>1</td><td>СБОКУ СПРАВА [798] UP TO CHASSIS NEW EQUIPMENT 7/75 028,029 028987 ALSO INSTALLED ON 029201 EXCEPT FOR 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041786 ALSO INSTALLED ON 041848 EXCEPT FOR 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A1166701651" title="Клик — скопировать">A 116 670 16 51</td><td>КЛЮЧ</td><td>1</td><td>СБОКУ СПРАВА [799] FROM CHASSIS NEW EQUIPMENT 7/75 028,029 028988 EXCEPT FOR 029201 ALSO INSTALLED ON 028908,  028924-  028940,  028942-  028949,  028951-  028953,  028955-  028958,  028960,  028961,  028963-  028971,  028973- 028975,  028977-  028986. 032,033 041787 EXCEPT FOR 041848 ALSO INSTALLED ON 041713,  041717,  041718,  041728,  041734,  041740,  041742,  041744,  041748,  041750,  041751,  041754-  041768,  041770- 041773,  041775,  041778-  041785.</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0008120486" title="Клик — скопировать">A 000 812 04 86</td><td>Пробка</td><td>4</td><td>WINDSHIELD INNER MOULDING</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1167250070" title="Клик — скопировать">A 116 725 00 70</td><td>Декоративная розетка</td><td>4</td><td>WINDSHIELD INNER MOULDING</td><td class="restr"></td></tr><tr data-pos="61"><td>61</td><td class="pn" data-raw="N007983002208" title="Клик — скопировать">N 007983 002208</td><td>Шуруп</td><td>4</td><td>WINDSHIELD INNER MOULDING</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1166700117" title="Клик — скопировать">A 116 670 01 17</td><td>ПЛАСТИНА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1166700217" title="Клик — скопировать">A 116 670 02 17</td><td>ПЛАСТИНА</td><td>13</td><td>ВЕТРОВОЕ СТЕКЛО [101] SECURITY VERSION &quot;A&quot;</td><td class="restr"></td></tr><tr data-pos="81"><td>81</td><td class="pn" data-raw="N000934004004" title="Клик — скопировать">N 000934 004004</td><td>Гайка</td><td>13</td><td>ЛОБ.СТЕКЛО НА РАМЕ; M4</td><td class="restr"></td></tr><tr data-pos="91"><td>91</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>Пружинное кольцо</td><td>13</td><td>ЛОБ.СТЕКЛО НА РАМЕ</td><td class="restr"></td></tr><tr data-pos="121"><td>121</td><td class="pn" data-raw="A1166700339" title="Клик — скопировать">A 116 670 03 39</td><td>- РАМА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>[101] SECURITY VERSION &quot;A&quot;</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1166711430" title="Клик — скопировать">A 116 671 14 30</td><td>- РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1166711530" title="Клик — скопировать">A 116 671 15 30</td><td>- РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1166711330" title="Клик — скопировать">A 116 671 13 30</td><td>- РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1166711630" title="Клик — скопировать">A 116 671 16 30</td><td>- РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="151"><td>151</td><td class="pn" data-raw="A1166700126" title="Клик — скопировать">A 116 670 01 26</td><td>- ПЛАНКА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="161"><td>161</td><td class="pn" data-raw="A1166710336" title="Клик — скопировать">A 116 671 03 36</td><td>- ПАНЕЛЬ</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="171"><td>171</td><td class="pn" data-raw="A1166700139" title="Клик — скопировать">A 116 670 01 39</td><td>- РАМА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>[101] SECURITY VERSION &quot;A&quot;</td><td class="restr"></td></tr><tr data-pos="181"><td>181</td><td class="pn" data-raw="A1166700116" title="Клик — скопировать">A 116 670 01 16</td><td>РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>[101] SECURITY VERSION &quot;A&quot;</td><td class="restr"></td></tr><tr data-pos="181"><td>181</td><td class="pn" data-raw="A1166700216" title="Клик — скопировать">A 116 670 02 16</td><td>РАМА ДЕКОРАТИВНАЯ</td><td>1</td><td>[101] SECURITY VERSION &quot;A&quot;</td><td class="restr"></td></tr><tr data-pos="211"><td>211</td><td class="pn" data-raw="N007981004243" title="Клик — скопировать">N 007981 004243</td><td>Шуруп</td><td>12</td><td>ДЕКОР.ПЛАНКА СЗАДИ НА КУЗОВЕ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>99</td><td>THIS DESIGN GROUP COMPRISES SAFETY PARTS ONLY</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>99</td><td>WINDSHIELD INNER MOULDING</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>99</td><td>ЛОБОВОЕ И ЗАДНЕЕ СТЕКЛО</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 27 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B67001000067.png", "poses": ["21", "31", "41", "51", "61", "71", "81", "91", "121", "131", "151", "161", "171", "181", "211"]}];</script><script>
+<p class="muted">Позиций: 27 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B67001000067.png", "poses": ["21", "31", "41", "51", "61", "71", "81", "91", "121", "131", "151", "161", "171", "181", "211"], "hs": {"181": [[679, 51, 33, 17], [856, 176, 33, 17]], "171": [[681, 152, 33, 17]], "161": [[102, 74, 33, 17]], "151": [[162, 429, 33, 17]], "131": [[25, 186, 33, 17], [252, 383, 33, 17]], "121": [[337, 362, 33, 17]], "211": [[814, 87, 33, 17]], "91": [[215, 72, 33, 17]], "81": [[226, 90, 33, 17]], "71": [[202, 57, 33, 17]], "61": [[383, 340, 33, 17]], "51": [[425, 365, 33, 17]], "41": [[403, 356, 33, 17]], "31": [[269, 135, 33, 17], [491, 249, 33, 17]], "21": [[389, 148, 33, 17]]}, "w": 892, "h": 593}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

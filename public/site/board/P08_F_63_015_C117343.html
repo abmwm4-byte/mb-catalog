@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C117343">P08 -/-</a> → 015 БОКОВИНЫ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">P08 -/-</a> → 015 БОКОВИНЫ</div>
 <h1>015 БОКОВИНЫ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B63015000259.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B63015000259.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1176300100" title="Клик — скопировать">A 117 630 01 00</td><td>Передняя стойка кузова</td><td>1</td><td>ВНУТРИ СВЕРХУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1176300200" title="Клик — скопировать">A 117 630 02 00</td><td>Передняя стойка кузова</td><td>1</td><td>ВНУТРИ СВЕРХУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009846321" title="Клик — скопировать">A 000 984 63 21</td><td>Заклепочная гайка</td><td>2</td><td>A\-СТОЙКА СПРАВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1176300511" title="Клик — скопировать">A 117 630 05 11</td><td>Средняя стойка кузова</td><td>1</td><td>ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1176303300" title="Клик — скопировать">A 117 630 33 00</td><td>Средняя стойка кузова</td><td>1</td><td>ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1176300611" title="Клик — скопировать">A 117 630 06 11</td><td>Средняя стойка кузова</td><td>1</td><td>ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1176303400" title="Клик — скопировать">A 117 630 34 00</td><td>Средняя стойка кузова</td><td>1</td><td>ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1176300513" title="Клик — скопировать">A 117 630 05 13</td><td>Задняя стойка кузова</td><td>1</td><td>ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1176300613" title="Клик — скопировать">A 117 630 06 13</td><td>Задняя стойка кузова</td><td>1</td><td>ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1176300500" title="Клик — скопировать">A 117 630 05 00</td><td>- Брызговик модульный</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1176300600" title="Клик — скопировать">A 117 630 06 00</td><td>- Брызговик модульный</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1176370700" title="Клик — скопировать">A 117 637 07 00</td><td>Усиливающий элемент</td><td>1</td><td>НА КОЛЕСНОЙ АРКЕ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1176300300" title="Клик — скопировать">A 117 630 03 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>СНИЗУ ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1176300400" title="Клик — скопировать">A 117 630 04 00</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>ВНУТРИ СНИЗУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1176370376" title="Клик — скопировать">A 117 637 03 76</td><td>- Брызговик внешний</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1176370476" title="Клик — скопировать">A 117 637 04 76</td><td>- Брызговик внешний</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1766301140" title="Клик — скопировать">A 176 630 11 40</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1766301240" title="Клик — скопировать">A 176 630 12 40</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1176300701" title="Клик — скопировать">A 117 630 07 01</td><td>Боковина кузова</td><td>1</td><td>ВНУТРИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1176300801" title="Клик — скопировать">A 117 630 08 01</td><td>Боковина кузова</td><td>1</td><td>ВНУТРИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1176370120" title="Клик — скопировать">A 117 637 01 20</td><td>Передняя стойка внешняя</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1176370220" title="Клик — скопировать">A 117 637 02 20</td><td>Передняя стойка внешняя</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1176370147" title="Клик — скопировать">A 117 637 01 47</td><td>Рама крыши внешняя</td><td>1</td><td>СНАРУЖИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="155"><td>155</td><td class="pn" data-raw="A1176370247" title="Клик — скопировать">A 117 637 02 47</td><td>Рама крыши внешняя</td><td>1</td><td>СНАРУЖИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1176300710" title="Клик — скопировать">A 117 630 07 10</td><td>Передняя стойка кузова</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1176300810" title="Клик — скопировать">A 117 630 08 10</td><td>Передняя стойка кузова</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1176302900" title="Клик — скопировать">A 117 630 29 00</td><td>Средняя стойка кузова</td><td>1</td><td>СНАРУЖИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1176303000" title="Клик — скопировать">A 117 630 30 00</td><td>Средняя стойка кузова</td><td>1</td><td>СНАРУЖИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1766360144" title="Клик — скопировать">A 176 636 01 44</td><td>Усиливающий элемент</td><td>1</td><td>ЛОНЖЕРОН СВЕРХУ, СЛЕВА</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A1766360244" title="Клик — скопировать">A 176 636 02 44</td><td>Усиливающий элемент</td><td>1</td><td>ЛОНЖЕРОН СВЕРХУ, СПРАВА</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1176302700" title="Клик — скопировать">A 117 630 27 00</td><td>Усиливающий элемент</td><td>1</td><td>СНАРУЖИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1176302800" title="Клик — скопировать">A 117 630 28 00</td><td>Усиливающий элемент</td><td>1</td><td>СНАРУЖИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1176361331" title="Клик — скопировать">A 117 636 13 31</td><td>Консоль</td><td>1</td><td>РАМА КРЫШИ, СЛЕВА</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A1176361431" title="Клик — скопировать">A 117 636 14 31</td><td>Консоль</td><td>1</td><td>РАМА КРЫШИ СЗАДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1766360131" title="Клик — скопировать">A 176 636 01 31</td><td>Консоль</td><td>1</td><td>РАМА КРЫШИ СПЕРЕДИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1766360231" title="Клик — скопировать">A 176 636 02 31</td><td>Консоль</td><td>1</td><td>РАМА КРЫШИ СПЕРЕДИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1176300159" title="Клик — скопировать">A 117 630 01 59</td><td>Молдинг боковины кузова</td><td>1</td><td>СПЕРЕДИ СНАРУЖИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A1176300259" title="Клик — скопировать">A 117 630 02 59</td><td>Молдинг боковины кузова</td><td>1</td><td>СПЕРЕДИ СНАРУЖИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1176370151" title="Клик — скопировать">A 117 637 01 51</td><td>Боковина кузова</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A1176370251" title="Клик — скопировать">A 117 637 02 51</td><td>Боковина кузова</td><td>1</td><td>СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1176370135" title="Клик — скопировать">A 117 637 01 35</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A1176370235" title="Клик — скопировать">A 117 637 02 35</td><td>LONGITUDINAL MEMBER</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A0009901210" title="Клик — скопировать">A 000 990 12 10</td><td>Шпилька с резьбой</td><td>NB</td><td>РЕМ. РЕШЕНИЕ ДЛЯ СЛОМАН. ПРИВАРЕН. ШПИЛЬКИ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B63015000259.png", "poses": ["10", "20", "50", "70", "75", "80", "100", "120", "130", "140", "150", "155", "160", "170", "180", "190", "200", "210", "250", "260", "270", "500"]}];</script><script>
+<p class="muted">Позиций: 43 · подписано на схемах: 43 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B63015000259.png", "poses": ["10", "20", "50", "70", "75", "80", "100", "120", "130", "140", "150", "155", "160", "170", "180", "190", "200", "210", "250", "260", "270", "500"], "hs": {"190": [[936, 429, 48, 30]], "180": [[602, 590, 48, 30]], "170": [[746, 522, 49, 30]], "160": [[718, 645, 48, 30]], "270": [[1071, 825, 48, 30]], "150": [[648, 473, 48, 29]], "260": [[1079, 631, 48, 30]], "140": [[468, 567, 48, 30]], "250": [[858, 768, 48, 30]], "130": [[337, 598, 48, 29]], "120": [[722, 404, 48, 29]], "100": [[333, 493, 48, 30]], "155": [[792, 401, 48, 30]], "210": [[657, 423, 48, 29]], "200": [[870, 375, 48, 30]], "500": [[241, 185, 48, 30]], "80": [[735, 300, 34, 30]], "70": [[563, 240, 34, 30]], "50": [[402, 351, 35, 30]], "20": [[335, 366, 35, 29]], "75": [[661, 312, 35, 30]], "10": [[408, 244, 34, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

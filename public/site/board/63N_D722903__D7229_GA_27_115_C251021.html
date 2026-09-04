@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251021">63N -/-</a> → 115 Масляный поддон, масляный фильтр</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">63N -/-</a> → 115 Масляный поддон, масляный фильтр</div>
 <h1>115 Масляный поддон, масляный фильтр</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.090.620_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.090.620_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2212700912" title="Клик — скопировать">A 221 270 09 12</td><td>Поддон масляный</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2212701212" title="Клик — скопировать">A 221 270 12 12</td><td>Поддон масляный (OIL PAN)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2222700512" title="Клик — скопировать">A 222 270 05 12</td><td>Поддон масляный (OIL PAN)</td><td>1</td><td></td><td class="restr" data-expr="A89"><span class="icode">A89</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A9062700501" title="Клик — скопировать">A 906 270 05 01</td><td>Поддон масляный (OIL PAN)</td><td>1</td><td></td><td class="restr" data-expr="A89/8A1"><span class="icode">A89/8A1</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000908012009" title="Клик — скопировать">N 000908 012009</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>M12X1.5</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="N007603012102" title="Клик — скопировать">N 007603 012102</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009880152" title="Клик — скопировать">A 000 988 01 52</td><td>Постоянный магнит (PERMANENT MAGNET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009880852" title="Клик — скопировать">A 000 988 08 52</td><td>Постоянный магнит (PERMANENT MAGNET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0009880152" title="Клик — скопировать">A 000 988 01 52</td><td>Постоянный магнит (PERMANENT MAGNET)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2202710180" title="Клик — скопировать">A 220 271 01 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>Масляный поддон к корпусу коробки передач</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2202710380" title="Клик — скопировать">A 220 271 03 80</td><td>Эластомерный уплотнитель (ELASTOMERIC MOLDED SEAL)</td><td>1</td><td>Масляный поддон к корпусу коробки передач</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2212770200" title="Клик — скопировать">A 221 277 02 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2212770100" title="Клик — скопировать">A 221 277 01 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td></td><td class="restr" data-expr="A89"><span class="icode">A89</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2222772000" title="Клик — скопировать">A 222 277 20 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td></td><td class="restr" data-expr="A89"><span class="icode">A89</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2222772800" title="Клик — скопировать">A 222 277 28 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td></td><td class="restr" data-expr="A89"><span class="icode">A89</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2212770000" title="Клик — скопировать">A 221 277 00 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td>[002823] ДЕЙСТВИТЕЛЬНО ТОЛЬКО ДЛЯ КОРОБКИ ПЕРЕДАЧ С КОДОМ A86 ИЛИ A87 НА А/М С ДВИГАТЕЛЕМ 642 LS ДО КОРОБКИ ПЕРЕДАЧ 3.154.599 [002824] ДЕЙСТВИТЕЛЬНО ТОЛЬКО ДЛЯ КОРОБКИ ПЕРЕДАЧ С КОДОМ A86 ИЛИ A87 НА А/М С ДВИГАТЕЛЕМ M278 ДО КОРОБКИ ПЕРЕДАЧ 3.103.390</td><td class="restr" data-expr="(M642/M278)+(A86/A87)"><span class="icode">(M642/M278)+(A86/A87)</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2212770100" title="Клик — скопировать">A 221 277 01 00</td><td>Масляный фильтр КП (TRANSMISSION OIL FILTER)</td><td>1</td><td></td><td class="restr" data-expr="(M642/M278)+(A86/A87)"><span class="icode">(M642/M278)+(A86/A87)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2202710068" title="Клик — скопировать">A 220 271 00 68</td><td>Зажимное тело (CLAMPING BODY)</td><td>5</td><td>Масляный поддон к корпусу коробки передач</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2202710268" title="Клик — скопировать">A 220 271 02 68</td><td>Зажимное тело (CLAMPING BODY)</td><td>1</td><td>Масляный поддон к корпусу коробки передач</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0049903512" title="Клик — скопировать">A 004 990 35 12</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>6</td><td>Масляный поддон к корпусу коробки передач; M6X40</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009904100" title="Клик — скопировать">A 000 990 41 00</td><td>Винт с 6-гранной головкой (HEXAGON HEAD SCREW)</td><td>6</td><td>Масляный поддон к корпусу коробки передач</td><td class="restr" data-expr="(G901+A26/G903)+Z07"><span class="icode">(G901+A26/G903)+Z07</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2512710097" title="Клик — скопировать">A 251 271 00 97</td><td>Переливная трубка (OVERFLOW PIPE)</td><td>1</td><td></td><td class="restr" data-expr="-A89"><span class="icode">-A89</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2222710097" title="Клик — скопировать">A 222 271 00 97</td><td>Переливная трубка (OVERFLOW PIPE)</td><td>1</td><td></td><td class="restr" data-expr="A89"><span class="icode">A89</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.090.620_version_001.png", "poses": ["10", "20", "25", "30", "40", "50", "60", "70", "80", "100"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.090.620_version_001.png", "poses": ["10", "20", "25", "30", "40", "50", "60", "70", "80", "100"], "hs": {"100": [[647, 507, 43, 29]], "25": [[723, 808, 31, 28]], "80": [[1003, 774, 30, 29]], "70": [[280, 743, 30, 29]], "60": [[1007, 693, 30, 29]], "50": [[421, 440, 30, 29]], "40": [[402, 224, 31, 29]], "30": [[756, 442, 30, 29]], "20": [[725, 851, 30, 29]], "10": [[408, 782, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

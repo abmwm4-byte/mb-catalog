@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116024">68N  Действительно для: CA, US</a> → Z  56.029 ПОДУШКА МЕЖДУ ПЕРЕДНИМИ СИДЕНЬЯМИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/52">68N  Действительно для: CA, US</a> → Z  56.029 ПОДУШКА МЕЖДУ ПЕРЕДНИМИ СИДЕНЬЯМИ</div>
 <h1>Z  56.029 ПОДУШКА МЕЖДУ ПЕРЕДНИМИ СИДЕНЬЯМИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05602900001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05602900001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1169100008" title="Клик — скопировать">A 116 910 00 08</td><td>ПОДУШКА ПРОМЕЖУТОЧНАЯ</td><td>1</td><td>Z  56.029/01 [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] BLACK NO. 9017 CODE 061,361;BLACK NO. 9027 CODE 001,301;BLUE NO. 5038 CODE 062,362; BLUE NO. 5049 CODE 002,302; MAHOGANY NO.  8178 CODE 063,363 BEIGE NO. 8177 CODE 064,364;PARCHMENT NO. 8179 CODE 065,365;PARCHMENT NO. 8223 CODE 005,305;TOBACCO NO. 8221 CODE 003,303;BAM-BOO NO. 8222 CODE 004,304 MOSS NO. 6058 CODE 006,306</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1169100208" title="Клик — скопировать">A 116 910 02 08</td><td>ПОДУШКА ПРОМЕЖУТОЧНАЯ</td><td>1</td><td>Z  56.029/02 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [002] BLACK NO. 9007 CODE 261;BLACK NO. 9028 CODE 201;BLUE NO. 5020 CODE 262;BLUE NO. 5045 CODE 202 MAHOGANY NO.8100 CODE 263;BEIGE NO. 8103 CODE 264;PARCHMENT NO. 8115 CODE 265;PARCH-MENT NO. 8211 CODE 205;OLIVE GREEN NO.6028CODE 266 BAMBOO NO. 8102 CODE 267;BAMBOO NO. 8210 CODE 204 RED NO. 3030 CODE 268 ;TOBACCO NO. 8209 CODE 203;MOSS NO. 6054 CODE 206</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1169100308" title="Клик — скопировать">A 116 910 03 08</td><td>ПОДУШКА ПРОМЕЖУТОЧНАЯ</td><td>1</td><td>Z  56.029/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [005] BLACK NO 9007 CODE 001,061,101,161,301,361,401,461,901;BLUE NO.5020 CODE 062,162,362,462;BLUE NO.5045 CODE 002,102,302,402,902;MAHONGANY NO.8100 CODE 063,163,363,463 BEIGE NO 8103 CODE 064,164,364,464 PARCHMENT NO 8115 CODE 065,165,365,465 PARCHMENT NO 8263 CODE 005,105,305,405,905;OLIVE GREEN NO.6028 CODE 166,466;BAMBOO NO.8102 CODE 167,467 BAMBOO NO 8262 CODE 004,104,304,404,904;RED NO.3030 CODE 168,468;TOBACCO NO.8261 CODE 003,103,303,403,903;MOSS NO.6070 CODE 006,106,306,406,906</td><td class="restr"></td></tr><tr data-pos="13"><td>13</td><td class="pn" data-raw="A1169100108" title="Клик — скопировать">A 116 910 01 08</td><td>ПОДУШКА ПРОМЕЖУТОЧНАЯ</td><td>1</td><td>Z  56.029/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [004] ANTHRACITE GREY NO. 7066 CODE 961;ANTHRACITE NO. 7081 CODE 901;BLUE NO. 5032 CODE 962;BLUE NO. 5050 CODE 902;MAHOGANY NO. 8150 CODE 963;BEIGE NO. 8149 CODE 964 PARCHMENT NO. 8151 CODE 965;PARCHMENT NO. 8226 CODE 905;OLIVE GREEN NO. 6038 CODE 966;TOBACCO NO. 8224 CODE 903;BAMBOO NO. 8225 CODE 904;MOOS NO. 6059 CODE 906</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1169101046" title="Клик — скопировать">A 116 910 10 46</td><td>- ОБИВКА</td><td>1</td><td>Z  56.029/01 [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] BLACK NO. 9017 CODE 061,361;BLACK NO. 9027 CODE 001,301;BLUE NO. 5038 CODE 062,362; BLUE NO. 5049 CODE 002,302; MAHOGANY NO.  8178 CODE 063,363 BEIGE NO. 8177 CODE 064,364;PARCHMENT NO. 8179 CODE 065,365;PARCHMENT NO. 8223 CODE 005,305;TOBACCO NO. 8221 CODE 003,303;BAM-BOO NO. 8222 CODE 004,304 MOSS NO. 6058 CODE 006,306</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1169101246" title="Клик — скопировать">A 116 910 12 46</td><td>- ОБИВКА</td><td>1</td><td>Z  56.029/02 [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [002] BLACK NO. 9007 CODE 261;BLACK NO. 9028 CODE 201;BLUE NO. 5020 CODE 262;BLUE NO. 5045 CODE 202 MAHOGANY NO.8100 CODE 263;BEIGE NO. 8103 CODE 264;PARCHMENT NO. 8115 CODE 265;PARCH-MENT NO. 8211 CODE 205;OLIVE GREEN NO.6028CODE 266 BAMBOO NO. 8102 CODE 267;BAMBOO NO. 8210 CODE 204 RED NO. 3030 CODE 268 ;TOBACCO NO. 8209 CODE 203;MOSS NO. 6054 CODE 206</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1169101346" title="Клик — скопировать">A 116 910 13 46</td><td>- ОБИВКА</td><td>1</td><td>Z  56.029/03 [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [005] BLACK NO 9007 CODE 001,061,101,161,301,361,401,461,901;BLUE NO.5020 CODE 062,162,362,462;BLUE NO.5045 CODE 002,102,302,402,902;MAHONGANY NO.8100 CODE 063,163,363,463 BEIGE NO 8103 CODE 064,164,364,464 PARCHMENT NO 8115 CODE 065,165,365,465 PARCHMENT NO 8263 CODE 005,105,305,405,905;OLIVE GREEN NO.6028 CODE 166,466;BAMBOO NO.8102 CODE 167,467 BAMBOO NO 8262 CODE 004,104,304,404,904;RED NO.3030 CODE 168,468;TOBACCO NO.8261 CODE 003,103,303,403,903;MOSS NO.6070 CODE 006,106,306,406,906</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1169101146" title="Клик — скопировать">A 116 910 11 46</td><td>- ОБИВКА</td><td>1</td><td>Z  56.029/04 [006] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [004] ANTHRACITE GREY NO. 7066 CODE 961;ANTHRACITE NO. 7081 CODE 901;BLUE NO. 5032 CODE 962;BLUE NO. 5050 CODE 902;MAHOGANY NO. 8150 CODE 963;BEIGE NO. 8149 CODE 964 PARCHMENT NO. 8151 CODE 965;PARCHMENT NO. 8226 CODE 905;OLIVE GREEN NO. 6038 CODE 966;TOBACCO NO. 8224 CODE 903;BAMBOO NO. 8225 CODE 904;MOOS NO. 6059 CODE 906</td><td class="restr"></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0009870281" title="Клик — скопировать">A 000 987 02 81</td><td>	- УПЛОТНИТЕЛЬНЫЙ ШНУР</td><td>1</td><td>960 MM Z  56.029/04 [004] ANTHRACITE GREY NO. 7066 CODE 961;ANTHRACITE NO. 7081 CODE 901;BLUE NO. 5032 CODE 962;BLUE NO. 5050 CODE 902;MAHOGANY NO. 8150 CODE 963;BEIGE NO. 8149 CODE 964 PARCHMENT NO. 8151 CODE 965;PARCHMENT NO. 8226 CODE 905;OLIVE GREEN NO. 6038 CODE 966;TOBACCO NO. 8224 CODE 903;BAMBOO NO. 8225 CODE 904;MOOS NO. 6059 CODE 906 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="69"><td>69</td><td class="pn" data-raw="A0019870230" title="Клик — скопировать">A 001 987 02 30</td><td>	- Окантовка</td><td>NB</td><td>Z  56.029/02, Z  56.029/03, Z  56.029/04 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ [005] BLACK NO 9007 CODE 001,061,101,161,301,361,401,461,901;BLUE NO.5020 CODE 062,162,362,462;BLUE NO.5045 CODE 002,102,302,402,902;MAHONGANY NO.8100 CODE 063,163,363,463 BEIGE NO 8103 CODE 064,164,364,464 PARCHMENT NO 8115 CODE 065,165,365,465 PARCHMENT NO 8263 CODE 005,105,305,405,905;OLIVE GREEN NO.6028 CODE 166,466;BAMBOO NO.8102 CODE 167,467 BAMBOO NO 8262 CODE 004,104,304,404,904;RED NO.3030 CODE 168,468;TOBACCO NO.8261 CODE 003,103,303,403,903;MOSS NO.6070 CODE 006,106,306,406,906</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05602900001.png", "poses": ["13", "35", "52", "69"]}];</script><script>
+<p class="muted">Позиций: 10 · подписано на схемах: 10 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05602900001.png", "poses": ["13", "35", "52", "69"], "hs": {"13": [[833, 681, 28, 26]], "35": [[466, 516, 28, 26]], "69": [[659, 513, 30, 25]], "52": [[767, 488, 30, 25]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

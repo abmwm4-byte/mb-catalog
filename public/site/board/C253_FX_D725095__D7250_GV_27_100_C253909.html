@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253909">C253_FX -/-</a> → 100 Электрогидравлический модуль управления</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C253_FX -/-</a> → 100 Электрогидравлический модуль управления</div>
 <h1>100 Электрогидравлический модуль управления</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.088.379_version_005.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.088.379_version_005.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252700118" title="Клик — скопировать">A 725 270 01 18</td><td>Упр. блок электрогидр. (CONTROLLER UNIT, ELECTROH)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="5A5+20A"><span class="icode">5A5+20A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252705509" title="Клик — скопировать">A 725 270 55 09</td><td>Упр. блок электрогидр. (CONTROLLER UNIT, ELECTROH)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="5A4+17A"><span class="icode">5A4+17A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252705309" title="Клик — скопировать">A 725 270 53 09</td><td>Упр. блок электрогидр. (CONTROLLER UNIT, ELECTROH)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="5A5+17A"><span class="icode">5A5+17A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252707415" title="Клик — скопировать">A 725 270 74 15</td><td>Упр. блок электрогидр.</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="5A5+18A"><span class="icode">5A5+18A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A7252701017" title="Клик — скопировать">A 725 270 10 17</td><td>Упр. блок электрогидр. (CONTROLLER UNIT, ELECTROH)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="5A5+19A"><span class="icode">5A5+19A</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0009973008" title="Клик — скопировать">A 000 997 30 08</td><td>- Плоское уплотнение (GASKET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>- ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>Детали см.: 27/150</td><td class="restr"></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0099900404" title="Клик — скопировать">A 009 990 04 04</td><td>- Винт с внутр. звездочкой (FLAT HEAD SCREW)</td><td>38</td><td>M6X33,5</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0099900404" title="Клик — скопировать">A 009 990 04 04</td><td>- Винт с внутр. звездочкой (FLAT HEAD SCREW)</td><td>13</td><td>Клапанный блок к крышке корпуса золотников; M6X33,5</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A7252709011" title="Клик — скопировать">A 725 270 90 11</td><td>- Ремк-т эл.гидр.блока упр. (REPAIR KIT, CONTR.UNIT)</td><td>1</td><td>[429] ДЕТАЛЬ, СВЯЗАННАЯ С ПРОТИВОУГОННОЙ БЕЗОПАСНОСТЬЮ [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="5A4"><span class="icode">5A4</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0249976645" title="Клик — скопировать">A 024 997 66 45</td><td>	- Кольцевая прокладка (O-RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0009975003" title="Клик — скопировать">A 000 997 50 03</td><td>	- Кольцевая прокладка (O-RING)</td><td>1</td><td>6.00X3.00MM</td><td class="restr" data-expr="5A5+18A/5A5+19A/5A5+20A"><span class="icode">5A5+18A/5A5+19A/5A5+20A</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0119904904" title="Клик — скопировать">A 011 990 49 04</td><td>	- Винт Torx с цил. головкой (CAP SCREW W HEXAL. SOCKET)</td><td>11</td><td>Блок управления к коммутационной панели; M5X20</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A7252776800" title="Клик — скопировать">A 725 277 68 00</td><td>Вставная трубка (PLAIN COUPLER)</td><td>1</td><td>Для направляющего кольца B05</td><td class="restr"></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A7252770900" title="Клик — скопировать">A 725 277 09 00</td><td>Вставная трубка (PLAIN COUPLER)</td><td>1</td><td>Парковочная блокировка</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A7252703900" title="Клик — скопировать">A 725 270 39 00</td><td>Маслопровод (OIL PIPE)</td><td>1</td><td>Впускной канал</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A7252773202" title="Клик — скопировать">A 725 277 32 02</td><td>Вставная трубка (PLAIN COUPLER)</td><td>1</td><td>Впускной канал</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A7252772601" title="Клик — скопировать">A 725 277 26 01</td><td>Вставная трубка (PLAIN COUPLER)</td><td>2</td><td>Напорный канал</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A7252778301" title="Клик — скопировать">A 725 277 83 01</td><td>Вставная трубка (PLAIN COUPLER)</td><td>2</td><td>Напорный канал</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A7252772402" title="Клик — скопировать">A 725 277 24 02</td><td>Вставная трубка (PLAIN COUPLER)</td><td>2</td><td>Напорный канал</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A7259900007" title="Клик — скопировать">A 725 990 00 07</td><td>Болт призонный (FIT SCREW)</td><td>1</td><td>M6X25 [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A7259900100" title="Клик — скопировать">A 725 990 01 00</td><td>Болт призонный (FIT SCREW)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A0049904412" title="Клик — скопировать">A 004 990 44 12</td><td>болт (SCREW)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="A0049907512" title="Клик — скопировать">A 004 990 75 12</td><td>Винт с полукругл.головкой (PAN HEAD SCREW)</td><td>14</td><td>Корпус золотников к корпусу коробки передач; M6X33</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.088.379_version_005.png", "poses": ["10", "20", "30", "190", "200", "250", "260", "270", "280", "290", "330", "340", "350", "370", "380"]}];</script><script>
+<p class="muted">Позиций: 24 · подписано на схемах: 24 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.088.379_version_005.png", "poses": ["10", "20", "30", "190", "200", "250", "260", "270", "280", "290", "330", "340", "350", "370", "380"], "hs": {"190": [[266, 726, 43, 29]], "290": [[504, 149, 43, 28]], "280": [[438, 153, 43, 28]], "380": [[511, 633, 43, 29]], "270": [[1210, 126, 42, 29]], "370": [[736, 526, 43, 29]], "260": [[1135, 288, 42, 28]], "250": [[1105, 364, 42, 29]], "350": [[311, 112, 42, 29]], "340": [[166, 75, 43, 29]], "330": [[199, 205, 42, 29]], "200": [[96, 659, 43, 29]], "30": [[495, 798, 30, 28]], "20": [[87, 249, 30, 29]], "10": [[171, 641, 31, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

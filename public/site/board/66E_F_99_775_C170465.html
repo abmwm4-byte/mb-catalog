@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170465">66E  Недействительно для: CA, JP, US</a> → 775 АВТОНОМНЫЙ ОТОПИТЕЛЬ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">66E  Недействительно для: CA, JP, US</a> → 775 АВТОНОМНЫЙ ОТОПИТЕЛЬ</div>
 <h1>775 АВТОНОМНЫЙ ОТОПИТЕЛЬ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B99775000015 <span class="hint">(0)</span></button><button data-i="1" class="">B99775000016 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B99775000015.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B99775000015.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B99775000015.png", "poses": []}, {"png": "../../img_png/drawing_B99775000016.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 0 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B99775000015.png", "poses": [], "hs": {"190": [[825, 452, 33, 20]], "170": [[1150, 424, 40, 22], [959, 423, 42, 24]], "270": [[529, 399, 47, 23]], "490": [[484, 462, 34, 23], [977, 727, 36, 23], [403, 852, 34, 22]], "150": [[1114, 224, 32, 23]], "590": [[215, 310, 34, 20]], "250": [[491, 350, 32, 21]], "470": [[210, 450, 40, 24]], "130": [[561, 496, 34, 20]], "570": [[218, 247, 56, 23]], "230": [[892, 643, 34, 22]], "110": [[450, 744, 33, 23], [826, 781, 35, 22], [614, 838, 32, 23]], "550": [[361, 221, 34, 21]], "210": [[922, 601, 35, 21]], "530": [[236, 221, 34, 21]], "630": [[628, 221, 34, 21]], "510": [[1098, 380, 33, 22], [499, 579, 35, 23]], "610": [[561, 221, 34, 21]], "90": [[732, 833, 23, 21]], "70": [[331, 843, 44, 32]], "50": [[372, 670, 23, 21]], "30": [[545, 755, 23, 20]], "10": [[1193, 596, 23, 20]], "180": [[680, 476, 34, 22]], "280": [[186, 592, 34, 20]], "160": [[1121, 331, 34, 21]], "260": [[426, 333, 35, 20]], "480": [[369, 294, 34, 21], [599, 418, 35, 23], [361, 592, 34, 20], [634, 615, 34, 20]], "140": [[1110, 272, 32, 23]], "580": [[186, 288, 34, 22]], "240": [[659, 719, 34, 23]], "120": [[1027, 396, 32, 21]], "560": [[438, 221, 34, 21]], "220": [[759, 672, 34, 21]], "100": [[946, 783, 33, 22], [522, 851, 32, 20]], "540": [[296, 221, 34, 21]], "200": [[871, 490, 34, 21]], "520": [[180, 221, 34, 21]], "620": [[507, 197, 34, 20]], "500": [[827, 842, 33, 23]], "600": [[257, 328, 34, 23]], "80": [[234, 831, 23, 22]], "60": [[289, 677, 24, 23]], "40": [[243, 713, 23, 20]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B99775000016.png", "poses": [], "hs": {"390": [[186, 693, 34, 21]], "380": [[182, 769, 34, 23]], "370": [[212, 635, 40, 34]], "360": [[209, 577, 34, 23]], "350": [[1157, 547, 34, 22]], "460": [[906, 181, 36, 21]], "340": [[1157, 616, 34, 22]], "450": [[807, 183, 34, 21]], "330": [[1159, 433, 34, 23]], "440": [[680, 186, 34, 23]], "320": [[1161, 495, 34, 22]], "430": [[541, 177, 36, 21]], "310": [[1157, 342, 34, 21]], "420": [[424, 180, 35, 23]], "300": [[771, 484, 34, 21]], "410": [[244, 177, 34, 21]], "400": [[297, 791, 36, 21]], "20": [[318, 334, 23, 22]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

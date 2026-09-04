@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168109">66A Standard Недействительно для: JP</a> → 625 ДОП.ДЕТАЛИ ТАКСИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">66A Standard Недействительно для: JP</a> → 625 ДОП.ДЕТАЛИ ТАКСИ</div>
 <h1>625 ДОП.ДЕТАЛИ ТАКСИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82625000020.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82625000020.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1408209110" title="Клик — скопировать">A 140 820 91 10</td><td>Переключатель (SCHALTER)</td><td>1</td><td>АВАР.СИСТЕМА ТРЕВОЖН. СИГНАЛИЗАЦИИ</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688220614" title="Клик — скопировать">A 168 822 06 14</td><td>Держатель (HALTER)</td><td>1</td><td>КЛАВИША ВКЛЮЧЕНИЯ ЭКСТРЕННОЙ ТРЕВОЖНОЙ СИГНАЛИЗАЦИИ Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A1688220314" title="Клик — скопировать">A 168 822 03 14</td><td>Держатель (HALTER)</td><td>1</td><td>КНОПКА УДАЛЕНИЯ Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0949907902" title="Клик — скопировать">A 094 990 79 02</td><td>Шуруп (BLECHSCHRAUBE)</td><td>2</td><td>ВЫКЛЮЧАТЕЛЬ К КРОНШТЕЙНУ; MBN 10169\-ST3.5X16\-C Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2108206610" title="Клик — скопировать">A 210 820 66 10</td><td>Переключатель (SCHALTER)</td><td>1</td><td>СИСТЕМА ГРОМКОЙ СВЯЗИ</td><td class="restr" data-expr="938"><span class="icode">938</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2108206710" title="Клик — скопировать">A 210 820 67 10</td><td>Переключатель (SCHALTER)</td><td>1</td><td>ЗНАК НА КРЫШЕ ТАКСИ Рулевое управление: Влево</td><td class="restr" data-expr="450"><span class="icode">450</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2028204826" title="Клик — скопировать">A 202 820 48 26</td><td>Сигнальное устройство (ALARMGERAET)</td><td>1</td><td>УСТРОЙСТВО ТРЕВОЖНОЙ СИГНАЛИЗАЦИИ ТАКСИ</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="N304017005002" title="Клик — скопировать">N 304017 005002</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>2</td><td>КРЕПЛЕНИЕ БУ НА ДЕРЖАТ.; M5X16 Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="58"><td>58</td><td class="pn" data-raw="N910143008020" title="Клик — скопировать">N 910143 008020</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>КРЕПЛЕНИЕ БУ НА ДЕРЖАТ.; M8X12 Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1688202502" title="Клик — скопировать">A 168 820 25 02</td><td>Динамик (LAUTSPRECHER)</td><td>1</td><td>TAXI DRIVER DOOR LEFT [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="450"><span class="icode">450</span></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1688280014" title="Клик — скопировать">A 168 828 00 14</td><td>Держатель (HALTER)</td><td>1</td><td>RADIO SET IN CENTER CONSOLE BOTTOM Рулевое управление: Влево</td><td class="restr" data-expr="450/(970/974/975)+962"><span class="icode">450/(970/974/975)+962</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1686802191" title="Клик — скопировать">A 168 680 21 91</td><td>Корпус перчаточного ящика (HANDSCHUHKASTEN)</td><td>1</td><td>РАЦИЯ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="450"><span class="icode">450</span></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N000000001552" title="Клик — скопировать">N 000000 001552</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>2</td><td>EMERGENCY WARNING SYSTEM ON SWITCH TO BRACKET; M4X16 Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0949908010" title="Клик — скопировать">A 094 990 80 10</td><td>Гайка (MUTTER)</td><td>2</td><td>EMERGENCY WARNING SYSTEM ON SWITCH TO BRACKET; M4 Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688200575" title="Клик — скопировать">A 168 820 05 75</td><td>Антенна (ANTENNE)</td><td>1</td><td>РАДИОУСТР\-ВО ТАКСИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356/356+353"><span class="icode">356/356+353</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688201475" title="Клик — скопировать">A 168 820 14 75</td><td>Антенна (ANTENNE)</td><td>1</td><td>РАДИОУСТР\-ВО ТАКСИ Рулевое управление: Влево</td><td class="restr" data-expr="356/356+353"><span class="icode">356/356+353</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1688201375" title="Клик — скопировать">A 168 820 13 75</td><td>Антенна (ANTENNE)</td><td>1</td><td>РАДИОУСТР\-ВО ТАКСИ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="U33/U33+353"><span class="icode">U33/U33+353</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2108202475" title="Клик — скопировать">A 210 820 24 75</td><td>Антенна (ANTENNE)</td><td>1</td><td>GPS, TELEPHONE, RADIO ANTENNA</td><td class="restr" data-expr="356/356+(525/527)"><span class="icode">356/356+(525/527)</span></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A2108280082" title="Клик — скопировать">A 210 828 00 82</td><td>Антенна (ANTENNE)</td><td>1</td><td>ANTENNA ROD для  TAXI TWO\-WAY RADIO</td><td class="restr" data-expr="356"><span class="icode">356</span></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A2118280082" title="Клик — скопировать">A 211 828 00 82</td><td>Антенна (ANTENNE)</td><td>1</td><td>ANTENNA ROD для  TAXI TWO\-WAY RADIO; 526 MM Рулевое управление: Влево</td><td class="restr" data-expr="356"><span class="icode">356</span></td></tr><tr data-pos="105"><td>105</td><td class="pn" data-raw="A2108280182" title="Клик — скопировать">A 210 828 01 82</td><td>АНТЕННЫЙ ШТЫРЬ</td><td>1</td><td>ANTENNA ROD для  TAXI TWO\-WAY RADIO</td><td class="restr" data-expr="U33"><span class="icode">U33</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N000000000528" title="Клик — скопировать">N 000000 000528</td><td>Шуруп (BLECHSCHRAUBE)</td><td>1</td><td>CENTER REINFORCEMENT TO HOUSING CENTER CONSOLE; 4.8X16 Рулевое управление: Влево</td><td class="restr" data-expr="450"><span class="icode">450</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2118280382" title="Клик — скопировать">A 211 828 03 82</td><td>Антенна (ANTENNE)</td><td>1</td><td>АНТЕННЫЙ ШТЫРЬ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="356/356+(525/527)"><span class="icode">356/356+(525/527)</span></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="N000000000528" title="Клик — скопировать">N 000000 000528</td><td>Шуруп (BLECHSCHRAUBE)</td><td>1</td><td>CENTER REINFORCEMENT TO HOUSING CENTER CONSOLE; 4.8X16 Рулевое управление: Влево</td><td class="restr" data-expr="450/962"><span class="icode">450/962</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0039948545" title="Клик — скопировать">A 003 994 85 45</td><td>SPRING NUT (FEDERMUTTER)</td><td>3</td><td>CENTER REINFORCEMENT TO HOUSING CENTER CONSOLE; 4.8/0.5\-2.5 MM Рулевое управление: Влево</td><td class="restr" data-expr="450/U63"><span class="icode">450/U63</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1688280114" title="Клик — скопировать">A 168 828 01 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>RADIO SET IN CENTER CONSOLE TOP Рулевое управление: Влево</td><td class="restr" data-expr="450/962"><span class="icode">450/962</span></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1688281114" title="Клик — скопировать">A 168 828 11 14</td><td>Держатель (HALTER)</td><td>1</td><td>RADIO SET IN CENTER CONSOLE TOP Рулевое управление: Влево</td><td class="restr" data-expr="450/U63"><span class="icode">450/U63</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A1688281214" title="Клик — скопировать">A 168 828 12 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>MOUNTING BRACKET RADIO SET IN CENTER CONSOLE TOP Рулевое управление: Влево</td><td class="restr" data-expr="450/U63"><span class="icode">450/U63</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1688203114" title="Клик — скопировать">A 168 820 31 14</td><td>Держатель (HALTER)</td><td>1</td><td>БЛОК УПРАВЛЕНИЯ Рулевое управление: Влево [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="145"><td>145</td><td class="pn" data-raw="A1688220514" title="Клик — скопировать">A 168 822 05 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>СИГНАЛЬНОЕ УСТРОЙСТВО Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0049941245" title="Клик — скопировать">A 004 994 12 45</td><td>SPRING NUT (FEDERMUTTER)</td><td>2</td><td>КРЕПЛЕНИЕ БУ НА ДЕРЖАТ.; M5 Рулевое управление: Влево</td><td class="restr" data-expr="934"><span class="icode">934</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82625000020.png", "poses": ["5", "10", "12", "15", "20", "30", "50", "57", "58", "60", "65", "68", "77", "80", "100", "105", "110", "115", "120", "125", "130", "140", "145", "150"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82625000020.png", "poses": ["5", "10", "12", "15", "20", "30", "50", "57", "58", "60", "65", "68", "77", "80", "100", "105", "110", "115", "120", "125", "130", "140", "145", "150"], "hs": {"68": [[375, 204, 30, 24]], "58": [[721, 219, 29, 24]], "15": [[388, 858, 27, 24]], "120": [[222, 656, 38, 26]], "110": [[902, 157, 47, 30]], "100": [[863, 293, 36, 26]], "125": [[221, 577, 36, 24]], "115": [[183, 777, 47, 30]], "105": [[773, 165, 36, 24]], "71": [[209, 225, 29, 24]], "50": [[561, 298, 30, 27]], "30": [[440, 336, 27, 24]], "74": [[272, 209, 29, 25]], "20": [[495, 333, 28, 26]], "10": [[353, 748, 28, 26]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

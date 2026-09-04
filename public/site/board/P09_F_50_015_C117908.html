@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C117908">P09 -/-</a> → 015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">P09 -/-</a> → 015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</div>
 <h1>015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B50015000550.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B50015000550.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2465001203" title="Клик — скопировать">A 246 500 12 03</td><td>Водяной радиатор</td><td>1</td><td></td><td class="restr" data-expr="(411/420)+-(429/M133)"><span class="icode">(411/420)+-(429/M133)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2465001303" title="Клик — скопировать">A 246 500 13 03</td><td>Водяной радиатор</td><td>1</td><td></td><td class="restr" data-expr="429+-(M270+M20/M133)"><span class="icode">429+-(M270+M20/M133)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0005000185" title="Клик — скопировать">A 000 500 01 85</td><td>- Резьб. пробка слив.отвер.</td><td>1</td><td>Резьбовая пробка сливного отверстия</td><td class="restr" data-expr="(411/420)+-429"><span class="icode">(411/420)+-429</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0005000185" title="Клик — скопировать">A 000 500 01 85</td><td>- Резьб. пробка слив.отвер.</td><td>1</td><td>Резьбовая пробка сливного отверстия</td><td class="restr" data-expr="429+-(M270+M20)"><span class="icode">429+-(M270+M20)</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0005010176" title="Клик — скопировать">A 000 501 01 76</td><td>	- Дистанционная шайба</td><td>1</td><td></td><td class="restr" data-expr="(411/420)+-429"><span class="icode">(411/420)+-429</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0005010176" title="Клик — скопировать">A 000 501 01 76</td><td>	- Дистанционная шайба</td><td>1</td><td></td><td class="restr" data-expr="429+-(M270+M20)"><span class="icode">429+-(M270+M20)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2465000454" title="Клик — скопировать">A 246 500 04 54</td><td>Конденсатор</td><td>1</td><td></td><td class="restr" data-expr="(580/581)+-M133"><span class="icode">(580/581)+-M133</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2465011720" title="Клик — скопировать">A 246 501 17 20</td><td>- Комплект держателя</td><td>1</td><td>Конденсатор слева и справа</td><td class="restr" data-expr="(580/581)+-M133"><span class="icode">(580/581)+-M133</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2468350000" title="Клик — скопировать">A 246 835 00 00</td><td>- Фильтр-осушитель</td><td>1</td><td>Конденсатор</td><td class="restr" data-expr="(580/581)+-M133"><span class="icode">(580/581)+-M133</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2228350200" title="Клик — скопировать">A 222 835 02 00</td><td>- Фильтр-осушитель</td><td>1</td><td>Конденсатор</td><td class="restr" data-expr="(580/581)+-M133"><span class="icode">(580/581)+-M133</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0998350000" title="Клик — скопировать">A 099 835 00 00</td><td>- Фильтр-осушитель</td><td>1</td><td>Конденсатор</td><td class="restr" data-expr="(580/581)+-M133"><span class="icode">(580/581)+-M133</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2465040012" title="Клик — скопировать">A 246 504 00 12</td><td>Эластомерная опора</td><td>2</td><td>Радиатор снизу</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1695040114" title="Клик — скопировать">A 169 504 01 14</td><td>Подшипник</td><td>2</td><td>Радиатор сверху</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009912195" title="Клик — скопировать">A 000 991 21 95</td><td>Фиксатор вставной</td><td>2</td><td>Радиатор сверху</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2465040540" title="Клик — скопировать">A 246 504 05 40</td><td>Держатель</td><td>1</td><td>Радиатор, слева</td><td class="restr" data-expr="-2U6"><span class="icode">-2U6</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2465040240" title="Клик — скопировать">A 246 504 02 40</td><td>Держатель</td><td>1</td><td>Радиатор (правый)</td><td class="restr" data-expr="-(2U6/M133)"><span class="icode">-(2U6/M133)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2465050330" title="Клик — скопировать">A 246 505 03 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху слева</td><td class="restr" data-expr="-(M133/494/460)"><span class="icode">-(M133/494/460)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2465050530" title="Клик — скопировать">A 246 505 05 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху слева</td><td class="restr" data-expr="(494/460)+-M133"><span class="icode">(494/460)+-M133</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2465050230" title="Клик — скопировать">A 246 505 02 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху справа</td><td class="restr" data-expr="-M133"><span class="icode">-M133</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A2465050430" title="Клик — скопировать">A 246 505 04 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху справа</td><td class="restr" data-expr="(494/460)+-M133"><span class="icode">(494/460)+-M133</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2465051130" title="Клик — скопировать">A 246 505 11 30</td><td>Воздуховод радиатора</td><td>1</td><td>Снизу</td><td class="restr" data-expr="M270+M20/M607/M651+927"><span class="icode">M270+M20/M607/M651+927</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A2465051530" title="Клик — скопировать">A 246 505 15 30</td><td>Воздуховод радиатора</td><td>1</td><td>Снизу</td><td class="restr" data-expr="M270+M16/M651+-927"><span class="icode">M270+M16/M651+-927</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2465051330" title="Клик — скопировать">A 246 505 13 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху</td><td class="restr" data-expr="(M651+824/M607+4U3)+(411/420)"><span class="icode">(M651+824/M607+4U3)+(411/420)</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2465051430" title="Клик — скопировать">A 246 505 14 30</td><td>Воздуховод радиатора</td><td>1</td><td>Сверху</td><td class="restr" data-expr="M651+429"><span class="icode">M651+429</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A2468000115" title="Клик — скопировать">A 246 800 01 15</td><td>Шланговый трубопровод</td><td>1</td><td></td><td class="restr" data-expr="M651+824"><span class="icode">M651+824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2465000064" title="Клик — скопировать">A 246 500 00 64</td><td>Вентилятор</td><td>1</td><td></td><td class="restr" data-expr="M651+M22+M013+-824"><span class="icode">M651+M22+M013+-824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2049066802" title="Клик — скопировать">A 204 906 68 02</td><td>Вентилятор</td><td>1</td><td></td><td class="restr" data-expr="M651+M22+M013+550+-824"><span class="icode">M651+M22+M013+550+-824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2465000064" title="Клик — скопировать">A 246 500 00 64</td><td>Вентилятор</td><td>1</td><td></td><td class="restr" data-expr="M651+M22+M013+429+-824"><span class="icode">M651+M22+M013+429+-824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2049066802" title="Клик — скопировать">A 204 906 68 02</td><td>Вентилятор</td><td>1</td><td></td><td class="restr" data-expr="M651+M22+M013+429+550+-824"><span class="icode">M651+M22+M013+429+550+-824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2049061403" title="Клик — скопировать">A 204 906 14 03</td><td>Вентилятор</td><td>1</td><td>600 W [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr" data-expr="M651+550+824"><span class="icode">M651+550+824</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A2049062102" title="Клик — скопировать">A 204 906 21 02</td><td>Вентилятор</td><td>1</td><td></td><td class="restr" data-expr="M651+824"><span class="icode">M651+824</span></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A2225400081" title="Клик — скопировать">A 222 540 00 81</td><td>Картер сцепления</td><td>1</td><td>ВЕНТИЛЯТ. РАДИАТОРА M4/14; 4\-PIN MAK8/9.5, MCP6.3</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50015000550.png", "poses": ["10", "20", "30", "100", "110", "120", "130", "140", "150", "160", "180", "190", "200", "210", "240", "260", "900"]}];</script><script>
+<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50015000550.png", "poses": ["10", "20", "30", "100", "110", "120", "130", "140", "150", "160", "180", "190", "200", "210", "240", "260", "900"], "hs": {"190": [[1060, 281, 48, 29]], "180": [[1149, 337, 48, 30]], "160": [[682, 807, 48, 30]], "150": [[597, 319, 48, 30]], "260": [[873, 588, 48, 30]], "140": [[596, 361, 48, 30]], "130": [[770, 712, 47, 30]], "240": [[726, 191, 47, 30]], "120": [[601, 727, 48, 30]], "110": [[218, 742, 48, 29]], "100": [[440, 716, 48, 30]], "210": [[1142, 192, 48, 30]], "200": [[1079, 535, 48, 29]], "900": [[1022, 640, 48, 30]], "30": [[762, 638, 34, 30]], "20": [[819, 622, 35, 29]], "10": [[635, 649, 35, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251163">63U -/-</a> → 345 АНТЕННА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/800">63U -/-</a> → 345 АНТЕННА</div>
 <h1>345 АНТЕННА</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B82345000185 <span class="hint">(13)</span></button><button data-i="1" class="">B82345000195 <span class="hint">(3)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82345000185.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82345000185.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202475" title="Клик — скопировать">A 164 820 24 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202575" title="Клик — скопировать">A 164 820 25 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="510/511/512/527/525/889"><span class="icode">510/511/512/527/525/889</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202575" title="Клик — скопировать">A 164 820 25 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202675" title="Клик — скопировать">A 164 820 26 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="537/537+889"><span class="icode">537/537+889</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202775" title="Клик — скопировать">A 164 820 27 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="(537/537+889)+(510/511/512/527/525)"><span class="icode">(537/537+889)+(510/511/512/527/525)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202875" title="Клик — скопировать">A 164 820 28 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="494/494+512/762/763/(762/763)+(510+494/511/512/525/527/528)"><span class="icode">494/494+512/762/763/(762/763)+(510+494/511/512/525/527/528)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2518201375" title="Клик — скопировать">A 251 820 13 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="494+536+763/494+536+763+(359/389/889)"><span class="icode">494+536+763/494+536+763+(359/389/889)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648203275" title="Клик — скопировать">A 164 820 32 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="761/761+(511/512/525/527)"><span class="icode">761/761+(511/512/525/527)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648202975" title="Клик — скопировать">A 164 820 29 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="(762/763)+889/(762/763)+889+(510+494/511/512/525/527/528)/494+763+889+(359/389/510/512)"><span class="icode">(762/763)+889/(762/763)+889+(510+494/511/512/525/527/528)/494+763+889+(359/389/510/512)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1648203075" title="Клик — скопировать">A 164 820 30 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>КРЫША СЗАДИ</td><td class="restr" data-expr="494+517+763+(510/512/528)/494+517+763+(359/389/889)+(510/512/528)"><span class="icode">494+517+763+(510/512/528)/494+517+763+(359/389/889)+(510/512/528)</span></td></tr><tr data-pos="75"><td>75</td><td class="pn" data-raw="A1698204475" title="Клик — скопировать">A 169 820 44 75</td><td>Антенна</td><td>1</td><td>BLUETOOTH</td><td class="restr" data-expr="-054"><span class="icode">-054</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1648205489" title="Клик — скопировать">A 164 820 54 89</td><td>Помехоподавляющий фильтр (INTERFER. SUPPR. FILTER)</td><td>1</td><td>БОРТ. СЕТЬ, ПОМЕХОЗАЩИТА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2518701889" title="Клик — скопировать">A 251 870 18 89</td><td>Усилитель (AMPLIFIER)</td><td>1</td><td>ЗАДН. ДВЕРЬ СЛЕВА FM2, FM3</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1648701989" title="Клик — скопировать">A 164 870 19 89</td><td>Усилитель (AMPLIFIER)</td><td>1</td><td>ЗАДН. ДВЕРЬ СПРАВА TV2, TV3 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="863"><span class="icode">863</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2515420440" title="Клик — скопировать">A 251 542 04 40</td><td>Держатель (HOLDER)</td><td>4</td><td>АНТЕНН. ПРОВОД</td><td class="restr" data-expr="890+-(536/810/498)"><span class="icode">890+-(536/810/498)</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1648702189" title="Клик — скопировать">A 164 870 21 89</td><td>Усилитель (AMPLIFIER)</td><td>1</td><td>С\-СТОЙКА СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="529/863/865"><span class="icode">529/863/865</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1648702189" title="Клик — скопировать">A 164 870 21 89</td><td>Усилитель (AMPLIFIER)</td><td>1</td><td>С\-СТОЙКА СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="529/863/865"><span class="icode">529/863/865</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1648703089" title="Клик — скопировать">A 164 870 30 89</td><td>Усилитель (AMPLIFIER)</td><td>1</td><td>СТОЙКА C, СПРАВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="537/537+863"><span class="icode">537/537+863</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2518202714" title="Клик — скопировать">A 251 820 27 14</td><td>Держатель (HOLDER)</td><td>1</td><td>К ЗАДН.СТОЙКЕ КУЗОВА СЛЕВА</td><td class="restr" data-expr="863"><span class="icode">863</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A2518202814" title="Клик — скопировать">A 251 820 28 14</td><td>Держатель (HOLDER)</td><td>1</td><td>К ЗАДН.СТОЙКЕ КУЗОВА СПРАВА</td><td class="restr" data-expr="863/537"><span class="icode">863/537</span></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A2218270042" title="Клик — скопировать">A 221 827 00 42</td><td>Антенный разветвитель (ANTENNA SPLITTER)</td><td>1</td><td>УДАЛЕН. ПУСК/ТЕЛЕФОН</td><td class="restr" data-expr="B24+386"><span class="icode">B24+386</span></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A0365456728" title="Клик — скопировать">A 036 545 67 28</td><td>Штекер (PLUG)</td><td>1</td><td>УСИЛИТЕЛЬ АНТЕННЫ ЗАДНЕГО СТЕКЛА A2/19, A2/92; 3\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="705"><td>705</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>0.25\-0.35 MM2 MQS</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0365456728" title="Клик — скопировать">A 036 545 67 28</td><td>Штекер (PLUG)</td><td>1</td><td>АНТЕННЫЙ МОДУЛЬ A2/93; 3\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="715"><td>715</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>NB</td><td>0.25\-0.35 MM2 MQS</td><td class="restr"></td></tr><tr data-pos="800"><td>800</td><td class="pn" data-raw="A2108202489" title="Клик — скопировать">A 210 820 24 89</td><td>Разделительный фильтр</td><td>1</td><td>GPS (СИСТЕМА ГЛОБАЛЬНОГО ПОЗИЦИОНИРОВАНИЯ)</td><td class="restr" data-expr="359+(510/512/528)"><span class="icode">359+(510/512/528)</span></td></tr><tr data-pos="810"><td>810</td><td class="pn" data-raw="A1648202175" title="Клик — скопировать">A 164 820 21 75</td><td>Антенна (ANTENNA)</td><td>1</td><td>ЗАДН. БОК. СТЕКЛО СЛЕВА</td><td class="restr" data-expr="359"><span class="icode">359</span></td></tr><tr data-pos="850"><td>850</td><td class="pn" data-raw="A2514403334" title="Клик — скопировать">A 251 440 33 34</td><td>Электрический жгут (ELECTRICAL WIRING HARNESS)</td><td>1</td><td>АНТЕННА НА КРЫШЕ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="517"><span class="icode">517</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82345000185.png", "poses": ["10", "75", "90", "110", "120", "150", "160", "170", "290", "700", "705", "710", "715"]}, {"png": "../../img_png/drawing_B82345000195.png", "poses": ["800", "810", "850"]}];</script><script>
+<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82345000185.png", "poses": ["10", "75", "90", "110", "120", "150", "160", "170", "290", "700", "705", "710", "715"], "hs": {"290": [[1173, 586, 48, 30]], "170": [[712, 162, 48, 30]], "280": [[1101, 660, 47, 30]], "160": [[560, 212, 48, 29]], "270": [[998, 613, 48, 30]], "150": [[642, 249, 48, 29]], "260": [[1050, 708, 48, 30]], "250": [[912, 759, 48, 30]], "120": [[1227, 259, 48, 30]], "110": [[1181, 467, 48, 30]], "710": [[1095, 317, 48, 29]], "90": [[682, 808, 34, 30]], "700": [[1042, 383, 48, 29]], "80": [[386, 199, 34, 30]], "70": [[250, 263, 35, 29]], "715": [[1136, 328, 48, 30]], "705": [[1011, 356, 48, 30]], "75": [[248, 370, 34, 30]], "10": [[983, 158, 35, 30]]}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B82345000195.png", "poses": ["800", "810", "850"], "hs": {"850": [[843, 342, 48, 29]], "810": [[1049, 713, 48, 29]], "800": [[1061, 239, 48, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115110">001 -/-</a> → Z  12.213 ДЕТАЛИ ДВИГ.ПРИ УСТАНОВКЕ КЛИМАТ.УСТАНОВКИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">001 -/-</a> → Z  12.213 ДЕТАЛИ ДВИГ.ПРИ УСТАНОВКЕ КЛИМАТ.УСТАНОВКИ</div>
 <h1>Z  12.213 ДЕТАЛИ ДВИГ.ПРИ УСТАНОВКЕ КЛИМАТ.УСТАНОВКИ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S01221300001 <span class="hint">(1)</span></button><button data-i="1" class="">S01221300002 <span class="hint">(0)</span></button><button data-i="2" class="">S01221300003 <span class="hint">(0)</span></button><button data-i="3" class="">S01221300004 <span class="hint">(7)</span></button><button data-i="4" class="">S01221300005 <span class="hint">(0)</span></button><button data-i="5" class="">S01221300006 <span class="hint">(0)</span></button><button data-i="6" class="">S01221300007 <span class="hint">(2)</span></button><button data-i="7" class="">S01221300008 <span class="hint">(1)</span></button><button data-i="8" class="">S01221300009 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01221300001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01221300001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="4"><td>4</td><td class="pn" data-raw="A6150104200" title="Клик — скопировать">A 615 010 42 00</td><td>МОТОР</td><td>-</td><td>Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="4"><td>4</td><td class="pn" data-raw="A6150107900" title="Клик — скопировать">A 615 010 79 00</td><td>МОТОР</td><td>1</td><td>(МЕХАНИЧЕСКАЯ КП) Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="4"><td>4</td><td class="pn" data-raw="A6150104300" title="Клик — скопировать">A 615 010 43 00</td><td>МОТОР</td><td>-</td><td>Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="4"><td>4</td><td class="pn" data-raw="A6150108000" title="Клик — скопировать">A 615 010 80 00</td><td>МОТОР</td><td>1</td><td>(АКП) Z  12.213/10 [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6150300168" title="Клик — скопировать">A 615 030 01 68</td><td>ШКИВ</td><td>1</td><td>Z  12.213/04, Z  12.213/05, Z  12.213/06, Z  12.213/07, Z  12.213/08, Z  12.213/09, Z  12.213/10 [046] /8/9 ДО ДВИГАТЕЛЯ: 115.923 10/50,20/60 169859 115.923 12/52,22/62 032599 115.926 10/50,20/60 011096 115.926 12/52,22/62 000477 НАЧИНАЯ С ДВИГАТЕЛЯ СМ. SA 12317 [047] /10 ДО ДВИГАТЕЛЯ: 615.912 10/50,20/60 351439 615.912 12/52,22/62 038179 615.913 10/50,20/60 230969 615.913 12/52,22/62 006407 616.916 10/50,20/60 046154 616.916 12/52,22/62 011559 НАЧИНАЯ С ДВИГАТЕЛЯ СМ. SA 12317 [051] /6 ДО ДВИГАТЕЛЯ: 115.951 10/50,20/60 016309 115.951 12/52,22/62 009799 НАЧИНАЯ С ДВИГАТЕЛЯ СМ. SA 12317</td><td class="restr"></td></tr><tr data-pos="461"><td>461</td><td class="pn" data-raw="A1211550272" title="Клик — скопировать">A 121 155 02 72</td><td>ГАЙКА</td><td>1</td><td>Z  12.213/04, Z  12.213/05, Z  12.213/06, Z  12.213/07, Z  12.213/08, Z  12.213/09, Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="465"><td>465</td><td class="pn" data-raw="N900071010202" title="Клик — скопировать">N 900071 010202</td><td>Гайка</td><td>1</td><td>Z  12.213/04, Z  12.213/05, Z  12.213/06, Z  12.213/07, Z  12.213/08, Z  12.213/09, Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="467"><td>467</td><td class="pn" data-raw="A6211310353" title="Клик — скопировать">A 621 131 03 53</td><td>РАСПОРН. ТРУБКА</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТА НА ВЫПУСКНОМ КОЛЛЕКТОРЕ Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="469"><td>469</td><td class="pn" data-raw="N912004010102" title="Клик — скопировать">N 912004 010102</td><td>Пружинное кольцо</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТА НА ВЫПУСКНОМ КОЛЛЕКТОРЕ Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="471"><td>471</td><td class="pn" data-raw="N000934010014" title="Клик — скопировать">N 000934 010014</td><td>Гайка</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТА НА ВЫПУСКНОМ КОЛЛЕКТОРЕ Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="474"><td>474</td><td class="pn" data-raw="A1219900151" title="Клик — скопировать">A 121 990 01 51</td><td>ГАЙКА</td><td>1</td><td>КОМПРЕССОР ХЛАДАГЕНТА НА ВЫПУСКНОМ КОЛЛЕКТОРЕ Z  12.213/04, Z  12.213/05, Z  12.213/06, Z  12.213/07, Z  12.213/08, Z  12.213/09, Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A0004357282" title="Клик — скопировать">A 000 435 72 82</td><td>ШЛАНГ</td><td>-</td><td>Z  12.213/10 [037] ДО ДВИГ.: 615.912 10/50,20/60 323903 615.912 12/52,22/62 035507 615.913 10/50,20/60 185880 615.913 12/52,22/62 005130</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A0004357382" title="Клик — скопировать">A 000 435 73 82</td><td>ШЛАНГ</td><td>-</td><td>Z  12.213/10 [037] ДО ДВИГ.: 615.912 10/50,20/60 323903 615.912 12/52,22/62 035507 615.913 10/50,20/60 185880 615.913 12/52,22/62 005130</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A0004357482" title="Клик — скопировать">A 000 435 74 82</td><td>ШЛАНГ</td><td>-</td><td>Z  12.213/10 [037] ДО ДВИГ.: 615.912 10/50,20/60 323903 615.912 12/52,22/62 035507 615.913 10/50,20/60 185880 615.913 12/52,22/62 005130</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A1154302329" title="Клик — скопировать">A 115 430 23 29</td><td>Провод</td><td>1</td><td>ВАКУУМНЫЙ НАСОС К ВПУСКНОМУ КОЛЛЕКТОРУ Z  12.213/10 [037] ДО ДВИГ.: 615.912 10/50,20/60 323903 615.912 12/52,22/62 035507 615.913 10/50,20/60 185880 615.913 12/52,22/62 005130</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A1154302429" title="Клик — скопировать">A 115 430 24 29</td><td>ПРОВОД</td><td>-</td><td>Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="477"><td>477</td><td class="pn" data-raw="A1154303629" title="Клик — скопировать">A 115 430 36 29</td><td>ПРОВОД</td><td>1</td><td>ВАКУУМНЫЙ НАСОС К ВПУСКНОМУ КОЛЛЕКТОРУ Z  12.213/10 [038] НАЧ. С ДВИГ.: 615.912 10/50,20/60 323904 615.912 12/52,22/62 035508 615.913 10/50,20/60 185881 615.913 12/52,22/62 005131</td><td class="restr"></td></tr><tr data-pos="673"><td>673</td><td class="pn" data-raw="N000939010077" title="Клик — скопировать">N 000939 010077</td><td>Шпилька</td><td>1</td><td>Z  12.213/10</td><td class="restr"></td></tr><tr data-pos="680"><td>680</td><td class="pn" data-raw="A6162000115" title="Клик — скопировать">A 616 200 01 15</td><td>Термостат</td><td>1</td><td>Z  12.213/10</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01221300001.png", "poses": ["4"]}, {"png": "../../img_png/drawing_S01221300002.png", "poses": []}, {"png": "../../img_png/drawing_S01221300003.png", "poses": []}, {"png": "../../img_png/drawing_S01221300004.png", "poses": ["20", "467", "469", "471", "474", "477", "673"]}, {"png": "../../img_png/drawing_S01221300005.png", "poses": []}, {"png": "../../img_png/drawing_S01221300006.png", "poses": []}, {"png": "../../img_png/drawing_S01221300007.png", "poses": ["461", "465"]}, {"png": "../../img_png/drawing_S01221300008.png", "poses": ["680"]}, {"png": "../../img_png/drawing_S01221300009.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01221300001.png", "poses": ["4"], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300002.png", "poses": [], "hs": {"50": [[200, 473, 33, 24]], "40": [[183, 331, 32, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300003.png", "poses": [], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300004.png", "poses": ["20", "467", "469", "471", "474", "477", "673"], "hs": {"530": [[1177, 522, 46, 25]], "673": [[1007, 691, 44, 24]], "543": [[1205, 394, 44, 24]], "675": [[950, 664, 46, 24]], "535": [[1001, 583, 44, 25]], "546": [[1149, 369, 44, 24]], "547": [[1093, 371, 43, 24]], "539": [[1057, 606, 44, 25]], "20": [[218, 848, 35, 24]]}, "w": 1326, "h": 936}, {"png": "../../img_png/drawing_S01221300005.png", "poses": [], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300006.png", "poses": [], "hs": {}, "w": 1326, "h": 936}, {"png": "../../img_png/drawing_S01221300007.png", "poses": ["461", "465"], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300008.png", "poses": ["680"], "hs": {}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_S01221300009.png", "poses": [], "hs": {}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

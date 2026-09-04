@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45V  Действительно для: JP</a> → 015 ВОДИТЕЛЬСКИЕ ДВЕРИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">45V  Действительно для: JP</a> → 015 ВОДИТЕЛЬСКИЕ ДВЕРИ</div>
 <h1>015 ВОДИТЕЛЬСКИЕ ДВЕРИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B72015000057.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B72015000057.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707200305" title="Клик — скопировать">A 170 720 03 05</td><td>ОСТОВ ДВЕРИ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707201305" title="Клик — скопировать">A 170 720 13 05</td><td>Каркас двери</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707201105" title="Клик — скопировать">A 170 720 11 05</td><td>Каркас двери</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707200405" title="Клик — скопировать">A 170 720 04 05</td><td>Дверь водителя</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707201405" title="Клик — скопировать">A 170 720 14 05</td><td>Каркас двери</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1707201205" title="Клик — скопировать">A 170 720 12 05</td><td>Каркас двери</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1707200109" title="Клик — скопировать">A 170 720 01 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>СЛЕВА [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1707200209" title="Клик — скопировать">A 170 720 02 09</td><td>- ПАНЕЛЬ</td><td>1</td><td>СПРАВА [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A2107200037" title="Клик — скопировать">A 210 720 00 37</td><td>Петля (SCHARNIER)</td><td>4</td><td>ДВЕРЬ ВОДИТЕЛЯ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A2109900422" title="Клик — скопировать">A 210 990 04 22</td><td>болт (SCHRAUBE)</td><td>8</td><td>ПЕТЛЯ НА ДВЕРИ ВОДИТ.</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1409900517" title="Клик — скопировать">A 140 990 05 17</td><td>БОЛТ</td><td>8</td><td>ДВЕРЬ ВОДИТ. НА СТОЙКЕ А</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2027200216" title="Клик — скопировать">A 202 720 02 16</td><td>КРОНШТЕЙН ДВЕРИ</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2107200116" title="Клик — скопировать">A 210 720 01 16</td><td>DOOR CHECK (TUERHALTER)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1407220108" title="Клик — скопировать">A 140 722 01 08</td><td>- Крышка (ABDECKUNG)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N910105006002" title="Клик — скопировать">N 910105 006002</td><td>Винт с 6-гранной головкой</td><td>6</td><td>ДЕРЖАТЕЛЬ ДВЕРИ НА ДВЕРИ ВОДИТ.; M6X12</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1409843729" title="Клик — скопировать">A 140 984 37 29</td><td>болт (SCHRAUBE)</td><td>2</td><td>ДЕРЖАТЕЛЬ ДВЕРИ НА СТОЙКЕ А</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1707270330" title="Клик — скопировать">A 170 727 03 30</td><td>Уплотнение (DICHTUNG)</td><td>2</td><td>ПОРОГ И ЗАМОК</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2027272430" title="Клик — скопировать">A 202 727 24 30</td><td>Уплотнение (DICHTUNG)</td><td>2</td><td>КРОНШТЕЙН ДВЕРИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A2027230114" title="Клик — скопировать">A 202 723 01 14</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1707230014" title="Клик — скопировать">A 170 723 00 14</td><td>Держатель (HALTER)</td><td>2</td><td>КРОНШТЕЙН ДВЕРИ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1706900962" title="Клик — скопировать">A 170 690 09 62</td><td>Планка (LEISTE)</td><td>1</td><td>ЛЕВ. НИЖН.</td><td class="restr" data-expr="-772"><span class="icode">-772</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="HWA1706900162" title="Клик — скопировать">H WA 170 690 01 62</td><td>НАКЛАДКА (LEISTE)</td><td>1</td><td>ЛЕВ. НИЖН.</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1706901062" title="Клик — скопировать">A 170 690 10 62</td><td>Планка (LEISTE)</td><td>1</td><td>СПРАВА СНИЗУ</td><td class="restr" data-expr="-772"><span class="icode">-772</span></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="HWA1706900262" title="Клик — скопировать">H WA 170 690 02 62</td><td>НАКЛАДКА (LEISTE)</td><td>1</td><td>СПРАВА СНИЗУ</td><td class="restr" data-expr="772"><span class="icode">772</span></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A0099880378" title="Клик — скопировать">A 009 988 03 78</td><td>- Пробка (VERSCHLUSSSTOPFEN)</td><td>14</td><td>НАКЛАДКА НА ДВЕРИ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1107270390" title="Клик — скопировать">A 110 727 03 90</td><td>Шумоизол. двери водителя</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A2106820008" title="Клик — скопировать">A 210 682 00 08</td><td>Шумоизоляция двери</td><td>-</td><td>[409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1686820308" title="Клик — скопировать">A 168 682 03 08</td><td>Демпфирование (DAEMPFUNG)</td><td>2</td><td>ОБЛИЦОВКА ДВЕРИ</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1708600105" title="Клик — скопировать">A 170 860 01 05</td><td>Боковая НПБ (SEITENAIRBAG)</td><td>-</td><td></td><td class="restr" data-expr="292"><span class="icode">292</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1708600505" title="Клик — скопировать">A 170 860 05 05</td><td>Боковая НПБ (SEITENAIRBAG)</td><td>1</td><td>ВОДИТЕЛЬСКАЯ ДВЕРИ СЛЕВА</td><td class="restr" data-expr="292"><span class="icode">292</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1708600205" title="Клик — скопировать">A 170 860 02 05</td><td>Боковая НПБ (SEITENAIRBAG)</td><td>-</td><td></td><td class="restr" data-expr="292"><span class="icode">292</span></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1708600605" title="Клик — скопировать">A 170 860 06 05</td><td>Боковая НПБ (SEITENAIRBAG)</td><td>1</td><td>ДВЕРЬ ВОДИТЕЛЯ СПРАВА</td><td class="restr" data-expr="292"><span class="icode">292</span></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0039902497" title="Клик — скопировать">A 003 990 24 97</td><td>Вытяжная заклепка (BLINDNIET)</td><td>6</td><td>SIDEBAG; 4.8X8</td><td class="restr" data-expr="292"><span class="icode">292</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B72015000057.png", "poses": ["5", "8", "11", "17", "20", "23", "26", "29", "32", "35", "38", "41", "47", "65", "68", "71"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B72015000057.png", "poses": ["5", "8", "11", "17", "20", "23", "26", "29", "32", "35", "38", "41", "47", "65", "68", "71"], "hs": {"11": [[391, 699, 28, 25]], "23": [[302, 590, 33, 24]], "35": [[132, 565, 34, 24]], "68": [[1177, 212, 32, 24]], "47": [[534, 655, 30, 25]], "26": [[175, 646, 33, 24]], "38": [[241, 642, 32, 24]], "17": [[459, 693, 30, 25]], "29": [[297, 658, 32, 26]], "5": [[1030, 202, 19, 25]], "8": [[908, 160, 20, 25]], "71": [[1119, 183, 30, 25]], "41": [[607, 696, 30, 27]], "20": [[216, 542, 32, 24]], "32": [[689, 786, 32, 24]], "65": [[839, 789, 32, 25]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

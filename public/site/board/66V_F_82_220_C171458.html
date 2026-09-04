@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C171458">66V -/-</a> → 220 ОСВЕЩЕНИЕ СЗАДИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">66V -/-</a> → 220 ОСВЕЩЕНИЕ СЗАДИ</div>
 <h1>220 ОСВЕЩЕНИЕ СЗАДИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82220000076.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82220000076.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200164" title="Клик — скопировать">A 171 820 01 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M271/M272"><span class="icode">M271/M272</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200264" title="Клик — скопировать">A 171 820 02 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="M271/M272"><span class="icode">M271/M272</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200364" title="Клик — скопировать">A 171 820 03 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="494+(M271/M272)"><span class="icode">494+(M271/M272)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200464" title="Клик — скопировать">A 171 820 04 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="494+(M271/M272)"><span class="icode">494+(M271/M272)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200564" title="Клик — скопировать">A 171 820 05 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="M271/M272+-494"><span class="icode">M271/M272+-494</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200664" title="Клик — скопировать">A 171 820 06 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="M271/M272+-494"><span class="icode">M271/M272+-494</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200764" title="Клик — скопировать">A 171 820 07 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="494+(M271/M272)"><span class="icode">494+(M271/M272)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200864" title="Клик — скопировать">A 171 820 08 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="494"><span class="icode">494</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200564" title="Клик — скопировать">A 171 820 05 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СЛЕВА</td><td class="restr" data-expr="P38+-M113+-494"><span class="icode">P38+-M113+-494</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1718200664" title="Клик — скопировать">A 171 820 06 64</td><td>Задний фонарь (SCHLUSSLEUCHTE)</td><td>1</td><td>СПРАВА</td><td class="restr" data-expr="P38+-M113+-494"><span class="icode">P38+-M113+-494</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1718260091" title="Клик — скопировать">A 171 826 00 91</td><td>- Уплотнение (DICHTUNG)</td><td>1</td><td>СЛЕВА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1718260191" title="Клик — скопировать">A 171 826 01 91</td><td>- уплотнение (DICHTUNG)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2308260182" title="Клик — скопировать">A 230 826 01 82</td><td>- Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2308260182" title="Клик — скопировать">A 230 826 01 82</td><td>- Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>ЗАДНИЙ ПРОТИВОТУМАННЫЙ ФОНАРЬ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A2308260082" title="Клик — скопировать">A 230 826 00 82</td><td>- Ламповый патрон (LAMPENFASSUNG)</td><td>2</td><td>МИГАЮЩИЙ СВЕТ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N072601012191" title="Клик — скопировать">N 072601 012191</td><td>- Лампа накаливания</td><td>2</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000006373" title="Клик — скопировать">N 000000 006373</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000008156" title="Клик — скопировать">N 000000 008156</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>СВЕТ ФАРЫ ЗАДНЕГО ХОДА; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N072601012191" title="Клик — скопировать">N 072601 012191</td><td>- Лампа накаливания</td><td>2</td><td>ЗАДНИЙ ПРОТИВОТУМАННЫЙ ФОНАРЬ; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000006373" title="Клик — скопировать">N 000000 006373</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ЗАДНИЙ ПРОТИВОТУМАННЫЙ ФОНАРЬ; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000008156" title="Клик — скопировать">N 000000 008156</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ЗАДНИЙ ПРОТИВОТУМАННЫЙ ФОНАРЬ; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N400809000005" title="Клик — скопировать">N 400809 000005</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>МИГАЮЩИЙ СВЕТ; 12V\-21W</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2208260691" title="Клик — скопировать">A 220 826 06 91</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>6</td><td>НА БОЛТАХ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910112005000" title="Клик — скопировать">N 910112 005000</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>8</td><td>КРЕПЛЕНИЕ БЛОКА ЗАДНИХ ФОНАРЕЙ; M5</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2118200756" title="Клик — скопировать">A 211 820 07 56</td><td>ФОНАРЬ НАРУЖНЫЙ</td><td>2</td><td>ФОНАРЬ ОСВЕЩЕНИЯ НОМЕРНОГО ЗНАКА</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="N000000002723" title="Клик — скопировать">N 000000 002723</td><td>- Лампа накаливания (GLUEHLAMPE)</td><td>2</td><td>ФОНАРЬ ОСВЕЩЕНИЯ НОМЕРНОГО ЗНАКА; 12V\-5W</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1718200056" title="Клик — скопировать">A 171 820 00 56</td><td>Доп. фонарь стоп-сигнала (ZUSATZBREMSLEUCHTE)</td><td>1</td><td>ДОП. СТОП\-СИГНАЛ</td><td class="restr" data-expr="-M113+-P61"><span class="icode">-M113+-P61</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1718200556" title="Клик — скопировать">A 171 820 05 56</td><td>Доп. фонарь стоп-сигнала (ZUSATZBREMSLEUCHTE)</td><td>1</td><td>ДОП. СТОП\-СИГНАЛ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M113/P61"><span class="icode">M113/P61</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N910112005000" title="Клик — скопировать">N 910112 005000</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>3</td><td>КРЕПЛЕНИЕ  ДОПОЛ. СТОП\-СИГНАЛА; M5</td><td class="restr"></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0375456028" title="Клик — скопировать">A 037 545 60 28</td><td>Штекер (STECKER)</td><td>1</td><td>ДОП. СТОП\-СИГНАЛ E21; 2\-PIN MQS</td><td class="restr"></td></tr><tr data-pos="901"><td>901</td><td class="pn" data-raw="A0165454126" title="Клик — скопировать">A 016 545 41 26</td><td>Контактная втулка (KONTAKTBUCHSE)</td><td>NB</td><td>0.25\-0.35 MM2 MQS</td><td class="restr"></td></tr><tr data-pos="902"><td>902</td><td class="pn" data-raw="A2105456328" title="Клик — скопировать">A 210 545 63 28</td><td>Корпус штекерной втулки (STECKHUELSENGEHAEUSE)</td><td>2</td><td>ФОНАРЬ НОМЕРНОГО ЗНАКА СЛЕВА СПРАВА; 2\-PIN JPT</td><td class="restr"></td></tr><tr data-pos="903"><td>903</td><td class="pn" data-raw="A0115458126" title="Клик — скопировать">A 011 545 81 26</td><td>Контактная пружина (FEDERSTECKER)</td><td>NB</td><td>0.5\-1.0 MM2 JPT</td><td class="restr"></td></tr><tr data-pos="904"><td>904</td><td class="pn" data-raw="A0375453528" title="Клик — скопировать">A 037 545 35 28</td><td>Сцепление, механическое (KUPPLUNG, MECHANISCH)</td><td>1</td><td>ЗАДН. ФОНАРЬ СЛЕВА И СПРАВА E3/E4; 6\-PIN MCP2.8</td><td class="restr"></td></tr><tr data-pos="905"><td>905</td><td class="pn" data-raw="A0135457626" title="Клик — скопировать">A 013 545 76 26</td><td>Контактная втулка (KONTAKTBUCHSE)</td><td>NB</td><td>0.5\-1.0 MM2 MCP2.8</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82220000076.png", "poses": ["10", "20", "25", "30", "40", "50", "70", "80", "100", "120", "900", "901", "902", "903", "904", "905"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82220000076.png", "poses": ["10", "20", "25", "30", "40", "50", "70", "80", "100", "120", "900", "901", "902", "903", "904", "905"], "hs": {"25": [[375, 480, 34, 30]], "120": [[903, 309, 48, 30]], "100": [[1046, 278, 48, 29]], "80": [[994, 797, 34, 29]], "70": [[1006, 711, 34, 29]], "900": [[993, 348, 48, 30]], "901": [[988, 381, 48, 29]], "50": [[441, 590, 34, 29]], "902": [[968, 633, 48, 30]], "40": [[478, 584, 34, 30]], "903": [[986, 606, 48, 30]], "30": [[448, 463, 35, 29]], "904": [[314, 501, 48, 29]], "20": [[517, 574, 35, 30]], "905": [[277, 519, 48, 30]], "10": [[586, 557, 35, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114060">68B  Действительно для: CA, US</a> → 001 ПЕДАЛЬНЫЙ УЗЕЛ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/87">68B  Действительно для: CA, US</a> → 001 ПЕДАЛЬНЫЙ УЗЕЛ</div>
 <h1>001 ПЕДАЛЬНЫЙ УЗЕЛ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B29001000509.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B29001000509.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1152901231" title="Клик — скопировать">A 115 290 12 31</td><td>ПОДШИПНИК</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="2"><td>2</td><td class="pn" data-raw="N000471016001" title="Клик — скопировать">N 000471 016001</td><td>Стопорное кольцо</td><td>1</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1102920150" title="Клик — скопировать">A 110 292 01 50</td><td>- втулка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1102910550" title="Клик — скопировать">A 110 291 05 50</td><td>- Втулка подшипника</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1242920050" title="Клик — скопировать">A 124 292 00 50</td><td>- Втулка подшипника</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1072910182" title="Клик — скопировать">A 107 291 01 82</td><td>Чехол</td><td>1</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A1232910082" title="Клик — скопировать">A 123 291 00 82</td><td>Накладка педали</td><td>1</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1079930410" title="Клик — скопировать">A 107 993 04 10</td><td>пружина</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="69"><td>69</td><td class="pn" data-raw="A1152910076" title="Клик — скопировать">A 115 291 00 76</td><td>Диск</td><td>2</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="A1154310180" title="Клик — скопировать">A 115 431 01 80</td><td>уплотнение</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1152940140" title="Клик — скопировать">A 115 294 01 40</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="94"><td>94</td><td class="pn" data-raw="A1152940087" title="Клик — скопировать">A 115 294 00 87</td><td>ВКЛАДКА</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N000931006084" title="Клик — скопировать">N 000931 006084</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N304017006027" title="Клик — скопировать">N 304017 006027</td><td>Винт с 6-гранной головкой</td><td>1</td><td>M6X45</td><td class="restr"></td></tr><tr data-pos="96"><td>96</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="N000934006013" title="Клик — скопировать">N 000934 006013</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="97"><td>97</td><td class="pn" data-raw="N304032006008" title="Клик — скопировать">N 304032 006008</td><td>Шестигранная гайка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152901818" title="Клик — скопировать">A 115 290 18 18</td><td>ПЕДАЛЬ</td><td>1</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1152910086" title="Клик — скопировать">A 115 291 00 86</td><td>УПОР</td><td>1</td><td>Рулевое управление: ВлевоКоробка передач [004] UP TO CHASSIS: 010 008396 060 004579</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1109870044" title="Клик — скопировать">A 110 987 00 44</td><td>ДИСК</td><td>-</td><td>Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1139870044" title="Клик — скопировать">A 113 987 00 44</td><td>Диск</td><td>1</td><td>20.5 MM Рулевое управление: ВлевоАвтоматическая коробка переключения передач</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0002950973" title="Клик — скопировать">A 000 295 09 73</td><td>ПРЕДОХРАНИТЕЛЬ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0002953183" title="Клик — скопировать">A 000 295 31 83</td><td>МАНЖЕТА</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B29001000509.png", "poses": ["1", "2", "7", "8", "10", "12", "68", "69", "89", "92", "94", "95", "96", "97"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B29001000509.png", "poses": ["1", "2", "7", "8", "10", "12", "68", "69", "89", "92", "94", "95", "96", "97"], "hs": {"44": [[462, 406, 33, 17]], "89": [[431, 228, 33, 17]], "48": [[600, 269, 33, 17]], "49": [[583, 265, 33, 17]], "150": [[60, 393, 33, 17]], "153": [[72, 426, 33, 17]], "110": [[299, 259, 33, 17]], "155": [[102, 382, 33, 17]], "112": [[460, 307, 33, 17]], "157": [[92, 293, 33, 17]], "113": [[347, 340, 33, 17]], "158": [[122, 291, 33, 17]], "114": [[374, 330, 33, 17]], "115": [[498, 254, 33, 17]], "116": [[477, 252, 33, 17]], "117": [[453, 257, 33, 17]], "92": [[641, 30, 33, 17]], "50": [[627, 289, 33, 17]], "94": [[619, 24, 33, 17]], "51": [[569, 257, 33, 17]], "95": [[596, 7, 33, 17]], "52": [[555, 243, 33, 17]], "96": [[678, 56, 33, 17]], "53": [[277, 11, 33, 17]], "97": [[697, 69, 33, 17]], "10": [[780, 353, 33, 17]], "57": [[587, 150, 33, 17]], "58": [[189, 102, 33, 17]], "162": [[113, 440, 33, 17]], "164": [[20, 401, 33, 17]], "120": [[403, 382, 33, 17]], "122": [[431, 427, 33, 17]], "1": [[517, 200, 33, 17]], "167": [[146, 369, 33, 17]], "2": [[767, 286, 33, 17]], "168": [[125, 378, 33, 17]], "3": [[664, 353, 33, 17]], "4": [[727, 273, 33, 17]], "6": [[322, 98, 33, 17]], "128": [[372, 552, 33, 17]], "7": [[366, 103, 33, 17]], "8": [[299, 30, 33, 17]], "20": [[487, 504, 33, 17]], "65": [[265, 79, 33, 17]], "66": [[243, 88, 33, 17]], "67": [[226, 88, 33, 17]], "68": [[464, 49, 33, 17]], "69": [[208, 97, 33, 17]], "26": [[542, 332, 33, 17]], "28": [[523, 360, 33, 17]], "170": [[237, 378, 33, 17]], "174": [[172, 468, 33, 17]], "131": [[341, 495, 33, 17]], "135": [[182, 564, 33, 17]], "179": [[237, 445, 33, 17]], "138": [[112, 553, 33, 17]], "139": [[274, 504, 33, 17]], "71": [[637, 122, 33, 17]], "72": [[555, 59, 33, 17]], "73": [[686, 103, 33, 17]], "74": [[698, 116, 33, 17]], "75": [[767, 197, 33, 17]], "76": [[757, 210, 33, 17]], "32": [[532, 488, 33, 17]], "77": [[718, 145, 33, 17]], "33": [[550, 498, 33, 17]], "34": [[447, 452, 33, 17]], "78": [[837, 182, 33, 17]], "79": [[810, 188, 33, 17]], "36": [[608, 408, 33, 17]], "37": [[694, 490, 33, 17]], "39": [[668, 523, 33, 17]], "180": [[214, 455, 33, 17]], "140": [[301, 504, 33, 17]], "142": [[245, 511, 33, 17]], "106": [[422, 321, 33, 17]], "107": [[298, 219, 33, 17]], "108": [[293, 238, 33, 17]], "82": [[791, 194, 33, 17]], "83": [[775, 220, 33, 17]], "84": [[788, 235, 33, 17]], "40": [[709, 458, 33, 17]], "85": [[781, 129, 33, 17]], "41": [[718, 433, 33, 17]], "42": [[577, 469, 33, 17]], "43": [[482, 410, 33, 17]], "87": [[751, 139, 33, 17]]}, "w": 876, "h": 585}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

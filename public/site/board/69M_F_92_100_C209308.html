@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C209308">69M -/-</a> → 100 ПОДГОЛОВНИК</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">69M -/-</a> → 100 ПОДГОЛОВНИК</div>
 <h1>100 ПОДГОЛОВНИК</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B92100000041.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B92100000041.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099701050" title="Клик — скопировать">A 209 970 10 50</td><td>Подголовник</td><td>2</td><td>ТКАНЬ</td><td class="restr" data-expr="(400A/410A/700A)+-(P98/M156)"><span class="icode">(400A/410A/700A)+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099705450" title="Клик — скопировать">A 209 970 54 50</td><td>Подголовник</td><td>2</td><td>ТКАНЬ &quot;AVANTGARDE&quot;</td><td class="restr" data-expr="710A+-(P98/M156)"><span class="icode">710A+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099701150" title="Клик — скопировать">A 209 970 11 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="831A/832A/835A/838A"><span class="icode">831A/832A/835A/838A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099701950" title="Клик — скопировать">A 209 970 19 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="858A"><span class="icode">858A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099701450" title="Клик — скопировать">A 209 970 14 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="820A"><span class="icode">820A</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099702250" title="Клик — скопировать">A 209 970 22 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="250A+-P98"><span class="icode">250A+-P98</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099706150" title="Клик — скопировать">A 209 970 61 50</td><td>Подголовник</td><td>2</td><td>AMG</td><td class="restr" data-expr="250A+-P98"><span class="icode">250A+-P98</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099705250" title="Клик — скопировать">A 209 970 52 50</td><td>Подголовник</td><td>2</td><td>КОЖА</td><td class="restr" data-expr="810A+-(P98/M156)"><span class="icode">810A+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099705350" title="Клик — скопировать">A 209 970 53 50</td><td>Подголовник</td><td>2</td><td>КОЖА</td><td class="restr" data-expr="810A+401+-(P98/M156)"><span class="icode">810A+401+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099706350" title="Клик — скопировать">A 209 970 63 50</td><td>ПОДГОЛОВНИК</td><td>2</td><td></td><td class="restr" data-expr="810A+X50+-(P98/M156)"><span class="icode">810A+X50+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099706550" title="Клик — скопировать">A 209 970 65 50</td><td>ПОДГОЛОВНИК</td><td>2</td><td></td><td class="restr" data-expr="810A+X50+401+-(P98/M156)"><span class="icode">810A+X50+401+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099702550" title="Клик — скопировать">A 209 970 25 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="(250A/831A)+X00"><span class="icode">(250A/831A)+X00</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099703450" title="Клик — скопировать">A 209 970 34 50</td><td>Подголовник</td><td>2</td><td>В ЗАДН. ЧАСТИ</td><td class="restr" data-expr="(820A/831A/832A/835A/838A/858A)+401"><span class="icode">(820A/831A/832A/835A/838A/858A)+401</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099707550" title="Клик — скопировать">A 209 970 75 50</td><td>Подголовник</td><td>2</td><td>ОДНОТОН. &quot;DESIGNO&quot;</td><td class="restr" data-expr="810A+X00+-(P98/M156)"><span class="icode">810A+X00+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099707650" title="Клик — скопировать">A 209 970 76 50</td><td>Подголовник</td><td>2</td><td>ОДНОТОН. &quot;DESIGNO&quot;</td><td class="restr" data-expr="810A+X00+401+-(P98/M156)"><span class="icode">810A+X00+401+-(P98/M156)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099703750" title="Клик — скопировать">A 209 970 37 50</td><td>Подголовник</td><td>2</td><td>ОДНОТОН. &quot;DESIGNO&quot;</td><td class="restr" data-expr="(831A/835A)+X00+401"><span class="icode">(831A/835A)+X00+401</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099703850" title="Клик — скопировать">A 209 970 38 50</td><td>Подголовник</td><td>2</td><td>DESIGNO TWO COLOR</td><td class="restr" data-expr="831A+X50+401"><span class="icode">831A+X50+401</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2099702850" title="Клик — скопировать">A 209 970 28 50</td><td>Подголовник</td><td>2</td><td>DESIGNO TWO COLOR</td><td class="restr" data-expr="(831A/835A)+X50"><span class="icode">(831A/835A)+X50</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 18 · подписано на схемах: 18 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B92100000041.png", "poses": ["10"]}];</script><script>
+<p class="muted">Позиций: 18 · подписано на схемах: 18 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B92100000041.png", "poses": ["10"], "hs": {"10": [[717, 302, 30, 25], [811, 362, 30, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

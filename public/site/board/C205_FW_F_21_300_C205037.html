@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205037">C205_FW -/-</a> → 300 Экраны и шумоизоляция на двигателе, коробке передач, редукторе переднего моста</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/500">C205_FW -/-</a> → 300 Экраны и шумоизоляция на двигателе, коробке передач, редукторе переднего моста</div>
 <h1>300 Экраны и шумоизоляция на двигателе, коробке передач, редукторе переднего моста</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">PV000.010.088.830_version_001 <span class="hint">(15)</span></button><button data-i="1" class="">PV000.010.088.825_version_001 <span class="hint">(0)</span></button><button data-i="2" class="">PV000.010.088.826_version_001 <span class="hint">(0)</span></button><button data-i="3" class="">PV000.010.088.827_version_001 <span class="hint">(0)</span></button><button data-i="4" class="">PV000.010.088.828_version_001 <span class="hint">(0)</span></button><button data-i="5" class="">PV000.010.088.829_version_001 <span class="hint">(0)</span></button><button data-i="6" class="">PV000.010.088.831_version_001 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.088.830_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.088.830_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="600"><td>600</td><td class="pn" data-raw="A6261500075" title="Клик — скопировать">A 626 150 00 75</td><td>Защитный экран (PROTECTIVE METAL SHEET)</td><td>1</td><td>Генератор</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="605"><td>605</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>3</td><td>Защитный лист к масляному фильтру; M6X16</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A6260780184" title="Клик — скопировать">A 626 078 01 84</td><td>Защитный экран (PROTECTIVE METAL SHEET)</td><td>1</td><td>ТНВД</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="615"><td>615</td><td class="pn" data-raw="A0009900218" title="Клик — скопировать">A 000 990 02 18</td><td>6-гр. распорный элемент (HEXAGON SPACER ELEMENT)</td><td>2</td><td>Защита к держателю</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="620"><td>620</td><td class="pn" data-raw="A0009900318" title="Клик — скопировать">A 000 990 03 18</td><td>6-гр. распорный элемент (HEXAGON SPACER ELEMENT)</td><td>2</td><td>Защита к держателю</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="625"><td>625</td><td class="pn" data-raw="N000000003474" title="Клик — скопировать">N 000000 003474</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>К защите; M7X20</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="630"><td>630</td><td class="pn" data-raw="N000000003474" title="Клик — скопировать">N 000000 003474</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Защитная пластина на распорном пальце; M7X20</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="640"><td>640</td><td class="pn" data-raw="A6429050000" title="Клик — скопировать">A 642 905 00 00</td><td>Датчик положения (POSITION SENSOR)</td><td>1</td><td>Коленвал</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="645"><td>645</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Датчик к промежуточному корпусу; M6X16</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="650"><td>650</td><td class="pn" data-raw="A6260160200" title="Клик — скопировать">A 626 016 02 00</td><td>Экран защитный</td><td>1</td><td>Датчик положения коленвала</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="650"><td>650</td><td class="pn" data-raw="A6260160400" title="Клик — скопировать">A 626 016 04 00</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Датчик положения коленвала</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="655"><td>655</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Экран к промежуточному корпусу; M6X16</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="660"><td>660</td><td class="pn" data-raw="A6260110100" title="Клик — скопировать">A 626 011 01 00</td><td>Декоративная накладка (COVER TRIM)</td><td>1</td><td>К промежуточному корпусу</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="665"><td>665</td><td class="pn" data-raw="N910143010000" title="Клик — скопировать">N 910143 010000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Промежуточный корпус к блоку цилиндров; M10X45</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="670"><td>670</td><td class="pn" data-raw="A6260960268" title="Клик — скопировать">A 626 096 02 68</td><td>Экран защитный (SCREENING PLATE)</td><td>1</td><td>Турбонагнетатель</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr><tr data-pos="675"><td>675</td><td class="pn" data-raw="A0029902603" title="Клик — скопировать">A 002 990 26 03</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>3</td><td>К экрану турбокомпрессора</td><td class="restr" data-expr="M626"><span class="icode">M626</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.088.830_version_001.png", "poses": ["600", "605", "610", "615", "620", "625", "630", "640", "645", "650", "655", "660", "665", "670", "675"]}, {"png": "../../img_png/drawing_PV000.010.088.825_version_001.png", "poses": []}, {"png": "../../img_png/drawing_PV000.010.088.826_version_001.png", "poses": []}, {"png": "../../img_png/drawing_PV000.010.088.827_version_001.png", "poses": []}, {"png": "../../img_png/drawing_PV000.010.088.828_version_001.png", "poses": []}, {"png": "../../img_png/drawing_PV000.010.088.829_version_001.png", "poses": []}, {"png": "../../img_png/drawing_PV000.010.088.831_version_001.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 16 · подписано на схемах: 16 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.088.830_version_001.png", "poses": ["600", "605", "610", "615", "620", "625", "630", "640", "645", "650", "655", "660", "665", "670", "675"], "hs": {}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.825_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.826_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.827_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.828_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.829_version_001.png", "poses": [], "hs": {"530": [[522, 246, 42, 29]], "520": [[203, 262, 43, 29]], "510": [[441, 268, 43, 29]], "500": [[433, 380, 42, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.010.088.831_version_001.png", "poses": [], "hs": {}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

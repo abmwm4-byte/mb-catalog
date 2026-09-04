@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C114015">028 -/-</a> → Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">028 -/-</a> → Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</div>
 <h1>Z  56.218 ПОРУЧЕНЬ К РАМЕ КРЫШИ СБОКУ СПЕРЕДИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05621800001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05621800001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1158100451" title="Клик — скопировать">A 115 810 04 51</td><td>ПОРУЧЕНЬ</td><td>1</td><td>Z  56.218/01 [800] ДО ШАССИ НОВОЙ КОМПЛЕКТАЦИИ 9/79 123.000,023 157706 EXCEPT FOR 144100,  147196,  147780,  147785,  148473,  148483,  149826,  150547,  152057,  152059,  152062,  154612,  156255,  156340, 156343,  156366,  156482,  156502,  156518,  156532,  156541,  156643,  157389,  157411,  157413,  157416,  157419,  157422, 157425-  157427,  157429,  157430,  157433-  157435,  157437-  157439,  157441,  157443-  157445,  157448,  157451-  157454, 157456,  157458,  157461,  157463,  157464,  157468,  157470,  157471,  157473-  157475,  157477-  157479,  157481,  157482, 157484-  157486,  157488-  157501,  157504-  157511,  157513-  157519,  157521-  157597,  157599,  157600,  157602-  157604, 157606-  157609,  157611-  157613,  157615-  157620,  157622,  157624,  157625,  157627-  157705. 123.026 079146 EXCEPT FOR 074658,  074659,  074757,  075440,  075442,  075447,  075640,  075741,  075750,  075841,  075844,  076033,  076133-  076137, 076139,  076141,  076230,  076322,  076421,  076570,  076571,  076574,  076633,  076820,  077037-  077040,  077043,  077046, 077098,  077101,  077218,  077221,  077223,  077227,  077527,  077529,  078726,  078728,  078730,  078733,  078735,  078739, 078741-  078745,  078749-  078754,  078756-  078758,  078760-  078770,  078773,  078774,  078776,  078777,  078779,  078784, 078787-  078797,  078799-  078801,  078804,  078806,  078808-  078811,  078813-  078834,  078836-  078852,  078854,  078855, 078857-  078860,  078969-  078975,  078978-  079018,  079020-  079069,  079072,  079074-  079093,  079095,  079097,  079100- 079105,  079107,  079115,  079117-  079119, 079121-  079129,  079131-  079144. 123.033 063898 EXCEPT FOR 055239,  058241,  059300,  060116,  060962,  061638,  061696,  061807,  062286,  062350,  062935,  062964,  063285,  063290, 063503,  063760,  063779,  063794,  063799,  063802,  063803,  063808,  063813,  063815-  063819,  063828-  063830,  063835, 063841,  063845,  063851,  063854,  063856,  063858,  063861,  063864,  063865,  063867,  063870,  063871,  063874-  063878, 063881,  063886,  063889-  063892,  063894,  063896,  063897. 123.093     004376 EXCEPT FOR 003196,  003355,  003552,  003818,  003865,  004180,  004186-  004202,  004204,  004207-  004220,  004222-  004375. 123.123 149360 EXCEPT FOR 131225,  138661,  139668,  139941,  142621,  143256,  143516,  144274,  144275,  144277,  144302,  144557,  144819,  145496, 146608,  146832,  147929,  148394,  149114,  149115,  149129,  149133,  149134,  149138-  149141,  149143,  149146,  149147, 149150,  149154,  149157,  149159-  149161,  149163,  149164,  149168,  149171-  149175,  149177,  149180-  149183,  149185, 149186,  149188,  149191-  149198,  149200-  149207,  149211-  149219,  149222-  149233,  149235-  149238,  149240-  149247, 149249-  149256,  149258-  149263,  149266-  149285,  149287-  149295,  149297,  149298,  149301-  149313,  149315-  149319, 149322-  149336,  149338-  149340,  149342-  149359. 123.130 164483 EXCEPT FOR 146071,  149572,  156068,  157925,  157931,  157935,  158133,  158138,  158343,  158361,  158511,  158672,  158674,  158680, 158687,  158693,  158847,  158850,  158851,  159152,  159158,  159308,  159316,  159318,  159667,  160005,  160356,  160568, 160732,  160735,  160884,  161050,  161057,  161559,  161729,  161879,  164127,  164144,  164145,  164152,  164154,  164163, 164165,  164169,  164176,  164182,  164184,  164185,  164187,  164189,  164191-  164197,  164199,  164201-  164204,  164206, 164209,  164211-  164213,  164216-  164218,  164223,  164224,  164226,  164227,  164229,  164231-  164238,  164241-  164247, 164249-  164273,  164276-  164280,  164282-  164312,  164314-  164316,  164319-  164321,  164324-  164327,  164330-  164335, 164337-  164349,  164351-  164360, 164363-  164395,  164397-  164406,  164408-  164432,  164434-  164436,  164439-  164441,  164443-  164446,  164448-  164462, 164464-  164466,  164468-  164471,  164473-  164482. КРОМЕ ТОГО УСТАНОВЛЕН НА 164501,164580,165050 123.190 011485 EXCEPT FOR 009485,  009712,  009805,  009893,  009899,  009933,  009986,  010119,  010147,  010150,  010286,  010383,  010401,  010676, 010730,  010736,  011073,  011074,  011076-  011108,  011110-  011116,  011120-  011163,  011167-  011195,  011197-  011333, 011335-  011484.</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1269941345" title="Клик — скопировать">A 126 994 13 45</td><td>предохранитель</td><td>4</td><td>Z  56.218/01</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="N007976004215" title="Клик — скопировать">N 007976 004215</td><td>Шуруп</td><td>4</td><td>4.8X16 Z  56.218/01</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 3 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05621800001.png", "poses": ["5", "10", "15"]}];</script><script>
+<p class="muted">Позиций: 3 · подписано на схемах: 3 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05621800001.png", "poses": ["5", "10", "15"], "hs": {"15": [[474, 511, 27, 25]], "5": [[334, 437, 15, 27]], "10": [[424, 482, 27, 25]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251154">63U -/-</a> → 015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">63U -/-</a> → 015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</div>
 <h1>015 РАДИАТОР, КРЕПЛЕНИЕ И ОБЛИЦОВКА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B50015000401.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B50015000401.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515000003" title="Клик — скопировать">A 251 500 00 03</td><td>Водяной радиатор</td><td>1</td><td>РАДИАТ. ОЖ ДВИГ.</td><td class="restr" data-expr="M113/M272"><span class="icode">M113/M272</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515000403" title="Клик — скопировать">A 251 500 04 03</td><td>Водяной радиатор</td><td>1</td><td>РАДИАТ. ОЖ ДВИГ.</td><td class="restr" data-expr="M113/M272"><span class="icode">M113/M272</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2515000603" title="Клик — скопировать">A 251 500 06 03</td><td>Радиатор (COOLER)</td><td>1</td><td>РАДИАТ. ОЖ ДВИГ.</td><td class="restr" data-expr="M113/M272/M276+-M002"><span class="icode">M113/M272/M276+-M002</span></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0009931302" title="Клик — скопировать">A 000 993 13 02</td><td>- Стопорная пружина (CATCH SPRING)</td><td>1</td><td>Маслопровод коробки передач к жидкостному радиатору</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A0005000185" title="Клик — скопировать">A 000 500 01 85</td><td>- Резьб. пробка слив.отвер. (DRAIN SCREW)</td><td>1</td><td>Резьбовая пробка сливного отверстия</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2515040012" title="Клик — скопировать">A 251 504 00 12</td><td>- Резиновая опора (RUBBER BUSHING)</td><td>2</td><td>К радиатору сверху</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="A0005010176" title="Клик — скопировать">A 000 501 01 76</td><td>- Дистанционная шайба (SPACER DISK)</td><td>1</td><td>Резьбовая пробка сливного отверстия</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2515040114" title="Клик — скопировать">A 251 504 01 14</td><td>- Подшипник (BEARING)</td><td>2</td><td>К радиатору сверху</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2515000054" title="Клик — скопировать">A 251 500 00 54</td><td>Конденсатор (CONDENSOR)</td><td>1</td><td>Климатическая система</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2518350047" title="Клик — скопировать">A 251 835 00 47</td><td>- Патрон фильтра-осушителя (DRYER CARTRIDGE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A1409970645" title="Клик — скопировать">A 140 997 06 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>2</td><td>К конденсатору; 7.5X2.0</td><td class="restr"></td></tr><tr data-pos="52"><td>52</td><td class="pn" data-raw="A0139974045" title="Клик — скопировать">A 013 997 40 45</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>2</td><td>К конденсатору; 7.5X2.0</td><td class="restr"></td></tr><tr data-pos="55"><td>55</td><td class="pn" data-raw="A2115040038" title="Клик — скопировать">A 211 504 00 38</td><td>- Элемент крепления (METAL MOUNTING SHEET)</td><td>1</td><td>ПНЕВМОПРОВОДА НА ОСУШИТЕЛЕ</td><td class="restr"></td></tr><tr data-pos="57"><td>57</td><td class="pn" data-raw="N000000001428" title="Клик — скопировать">N 000000 001428</td><td>- Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>КРЕПЁЖНЫЙ ЩИТОК К ОСУШИТЕЛЮ; M8X25\-8.8</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N000000003829" title="Клик — скопировать">N 000000 003829</td><td>Винт с неспадающей шайбой (BOLT AND WASHER ASSEMBLY)</td><td>1</td><td>Конденсатор к радиатору M6X22</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1645000193" title="Клик — скопировать">A 164 500 01 93</td><td>ВЕНТИЛЯТОР</td><td>1</td><td>600 W</td><td class="restr" data-expr="-(M156/M642)"><span class="icode">-(M156/M642)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1645000493" title="Клик — скопировать">A 164 500 04 93</td><td>ВЕНТИЛЯТОР</td><td>1</td><td>600W</td><td class="restr" data-expr="-(M156/M642)"><span class="icode">-(M156/M642)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1645000593" title="Клик — скопировать">A 164 500 05 93</td><td>Вентилятор (BLOWER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2519063900" title="Клик — скопировать">A 251 906 39 00</td><td>Вентилятор (BLOWER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0009955014" title="Клик — скопировать">A 000 995 50 14</td><td>- Держатель трубопровода (LINE BRACKET)</td><td>1</td><td>К вентилятору</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2515000016" title="Клик — скопировать">A 251 500 00 16</td><td>Воздушный дефлектор (AIR DEFLECTOR PLATE)</td><td>1</td><td>Передн.</td><td class="restr" data-expr="M113/M272/M273"><span class="icode">M113/M272/M273</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2515000016" title="Клик — скопировать">A 251 500 00 16</td><td>Воздушный дефлектор (AIR DEFLECTOR PLATE)</td><td>1</td><td>Передн.</td><td class="restr" data-expr="M113/M272"><span class="icode">M113/M272</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2515001516" title="Клик — скопировать">A 251 500 15 16</td><td>Воздуховод (AIR DUCTING)</td><td>1</td><td>Передн.</td><td class="restr" data-expr="M272/M276"><span class="icode">M272/M276</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1635010181" title="Клик — скопировать">A 163 501 01 81</td><td>Резиновая вставка (RUBBER INSERT)</td><td>2</td><td>Радиатор снизу</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2515040214" title="Клик — скопировать">A 251 504 02 14</td><td>Опора радиатора</td><td>2</td><td>Радиатор сверху</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A0995040002" title="Клик — скопировать">A 099 504 00 02</td><td>Крепежные детали (FASTENING PARTS)</td><td>2</td><td>Радиатор сверху</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="N000000003829" title="Клик — скопировать">N 000000 003829</td><td>Винт с неспадающей шайбой (BOLT AND WASHER ASSEMBLY)</td><td>2</td><td>Вентилятор к модулю системы охлаждения, отопителя и кондиционера</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="N000000003829" title="Клик — скопировать">N 000000 003829</td><td>Винт с неспадающей шайбой (BOLT AND WASHER ASSEMBLY)</td><td>4</td><td>Воздушный дефлектор к радиатору</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="N000000003829" title="Клик — скопировать">N 000000 003829</td><td>Винт с неспадающей шайбой (BOLT AND WASHER ASSEMBLY)</td><td>1</td><td>Конденсатор к радиатору M6X22</td><td class="restr" data-expr="-M156"><span class="icode">-M156</span></td></tr><tr data-pos="700"><td>700</td><td class="pn" data-raw="A2205450329" title="Клик — скопировать">A 220 545 03 29</td><td>Корпус штекерной втулки (RECEPTACLE HOUSING)</td><td>1</td><td>ВЕНТИЛЯТОР РАДИАТОРА БОКСА БУ N65/2; 4\-PIN SLK2.8, LSK8</td><td class="restr"></td></tr><tr data-pos="710"><td>710</td><td class="pn" data-raw="A0005403805" title="Клик — скопировать">A 000 540 38 05</td><td>Электрический провод (ELECTRIC LINE)</td><td>NB</td><td>0.75 MM2 SLK2.8 [T774] СОЕДИНИТЕЛИ СЛЕДУЕТ ЗАКАЗЫВАТЬ В СООТВЕТСТВИИ С ОБЩИМ ПОПЕРЕЧНЫМ СЕЧЕНИЕМ СОЕДИНЯЕМЫХ ПРОВОДОВРУКОВОДСТВО ПО РЕМОНТУ СМ. WIS. ================================================================================================= SOLDER CONNECTOR SLEEVES:      TOTAL WIRE CROSS-SECTION: A 001 546 99 41    GREEN            0.7 -  2.4 MM2 A 002 546 00 41    RED              2.0 -  4.0 MM2 A 002 546 01 41    BLUE             3.5 -  8.0 MM2 A 002 546 11 41    YELLOW           7.5 - 12.0 MM2 BUTT JOINT: A 002 546 13 41                       0.5 MM2 A 002 546 14 41                       0.8 MM2 A 002 546 15 41                       1.3 MM2 A 002 546 16 41                       2.0 MM2 ===================================================================================================</td><td class="restr"></td></tr><tr data-pos="760"><td>760</td><td class="pn" data-raw="A0028305484" title="Клик — скопировать">A 002 830 54 84</td><td>Клапан (VALVE)</td><td>1</td><td>Конденсатор</td><td class="restr"></td></tr><tr data-pos="770"><td>770</td><td class="pn" data-raw="A1409880035" title="Клик — скопировать">A 140 988 00 35</td><td>Колпачок (CAP)</td><td>1</td><td>Конденсатор</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50015000401.png", "poses": ["10", "12", "15", "20", "25", "30", "40", "50", "52", "55", "57", "59", "60", "65", "70", "110", "120", "130", "140", "150", "700", "710", "760", "770"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B50015000401.png", "poses": ["10", "12", "15", "20", "25", "30", "40", "50", "52", "55", "57", "59", "60", "65", "70", "110", "120", "130", "140", "150", "700", "710", "760", "770"], "hs": {"25": [[1037, 621, 35, 30]], "190": [[373, 809, 48, 30]], "150": [[519, 430, 48, 30]], "130": [[1234, 302, 48, 30]], "110": [[996, 687, 48, 30]], "770": [[616, 362, 48, 30]], "710": [[1183, 212, 48, 30]], "90": [[483, 732, 35, 30]], "70": [[206, 762, 34, 30]], "50": [[560, 624, 35, 30]], "30": [[1006, 649, 35, 30]], "52": [[670, 721, 35, 30]], "10": [[769, 357, 35, 30]], "55": [[710, 742, 34, 30]], "12": [[862, 274, 35, 30]], "57": [[759, 760, 35, 30]], "15": [[1091, 592, 35, 29]], "59": [[623, 726, 35, 30]], "160": [[886, 666, 48, 29]], "140": [[248, 403, 49, 29]], "120": [[990, 317, 48, 29]], "760": [[655, 353, 48, 30]], "200": [[307, 463, 48, 30]], "700": [[1142, 215, 48, 30]], "60": [[1101, 516, 34, 30]], "40": [[567, 368, 35, 30]], "20": [[986, 358, 35, 29]], "65": [[1054, 165, 35, 30]]}, "w": 1326, "h": 941}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

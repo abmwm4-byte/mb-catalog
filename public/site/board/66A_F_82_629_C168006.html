@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C168006">66A Standard Недействительно для: JP</a> → 629 ДОПОЛН. ДЕТАЛИ ДЛЯ СПЕЦ. А/М</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/175">66A Standard Недействительно для: JP</a> → 629 ДОПОЛН. ДЕТАЛИ ДЛЯ СПЕЦ. А/М</div>
 <h1>629 ДОПОЛН. ДЕТАЛИ ДЛЯ СПЕЦ. А/М</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B82629000013 <span class="hint">(9)</span></button><button data-i="1" class="">B82629000015 <span class="hint">(9)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B82629000013.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B82629000013.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1688200058" title="Клик — скопировать">A 168 820 00 58</td><td>СИГНАЛЬН. ФОНАРЬ</td><td>1</td><td>А/М ДЛЯ ПОЛИЦИИ</td><td class="restr" data-expr="970+962"><span class="icode">970+962</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1688220097" title="Клик — скопировать">A 168 822 00 97</td><td>ПОДКЛАДКА</td><td>1</td><td>BETWEEN SIGNAL SYSTEM AND COVER</td><td class="restr" data-expr="962"><span class="icode">962</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2108205926" title="Клик — скопировать">A 210 820 59 26</td><td>Устройство управления (BEDIENGERAET)</td><td>1</td><td>НАДСТРОЙКА НАД КРЫШЕЙ HELLA</td><td class="restr" data-expr="970+962"><span class="icode">970+962</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2108201358" title="Клик — скопировать">A 210 820 13 58</td><td>Сигнальный фонарь в двери (SIGNALLEUCHTE)</td><td>1</td><td></td><td class="restr" data-expr="(970/974/975)+-(962/963)"><span class="icode">(970/974/975)+-(962/963)</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1688200411" title="Клик — скопировать">A 168 820 04 11</td><td>ПЛАСТИНА</td><td>1</td><td>IN SPARE TIRE WELL AS CARRIER PLATE ABOVE FUSE AND RELAY HOLDER [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="115"><td>115</td><td class="pn" data-raw="N000000002624" title="Клик — скопировать">N 000000 002624</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>PLATE CENTER MOUNTING; M8X25</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1688201714" title="Клик — скопировать">A 168 820 17 14</td><td>Держатель</td><td>1</td><td>RELAY HOLDER ON PLATE IN SPARE\-WHEEL RECESS [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A0069971790" title="Клик — скопировать">A 006 997 17 90</td><td>Кабельная стяжка</td><td>7</td><td>LINE TO RELAY BASE; 3.6X150MM</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1688201814" title="Клик — скопировать">A 168 820 18 14</td><td>Держатель (HALTER)</td><td>1</td><td>FUSE HOLDER ON PLATE IN SPARE WHEEL RECESS</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A1688200029" title="Клик — скопировать">A 168 820 00 29</td><td>ОПОРН. СТОЙКА</td><td>1</td><td>PLATE SPARE\-WHEEL RECESS FRONT</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1688200129" title="Клик — скопировать">A 168 820 01 29</td><td>ОПОРН. СТОЙКА</td><td>1</td><td>PLATE SPARE\-WHEEL RECESS REAR</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0949902510" title="Клик — скопировать">A 094 990 25 10</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>4</td><td>MOUNTING SUPPORT FRONT AND REAR; M5X16</td><td class="restr" data-expr="970/974/975"><span class="icode">970/974/975</span></td></tr><tr data-pos="175"><td>175</td><td class="pn" data-raw="A1688221514" title="Клик — скопировать">A 168 822 15 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ДОП. УКАЗ. ПОВОРОТА [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(970/974/975)+962"><span class="icode">(970/974/975)+962</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A2108208602" title="Клик — скопировать">A 210 820 86 02</td><td>Динамик (LAUTSPRECHER)</td><td>1</td><td>В МОТОРНОМ ОТСЕКЕ</td><td class="restr" data-expr="(970/974/975)+-962"><span class="icode">(970/974/975)+-962</span></td></tr><tr data-pos="185"><td>185</td><td class="pn" data-raw="A1688221014" title="Клик — скопировать">A 168 822 10 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ДИНАМИК</td><td class="restr" data-expr="(970/974/975)+-962"><span class="icode">(970/974/975)+-962</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A1688201314" title="Клик — скопировать">A 168 820 13 14</td><td>Держатель</td><td>1</td><td>ДИНАМИК [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(970/974/975)+-962"><span class="icode">(970/974/975)+-962</span></td></tr><tr data-pos="195"><td>195</td><td class="pn" data-raw="A0025450840" title="Клик — скопировать">A 002 545 08 40</td><td>Держатель (HALTER)</td><td>1</td><td>SPEAKER CONNECTOR MOUNTING</td><td class="restr" data-expr="(970/974/975)+-962"><span class="icode">(970/974/975)+-962</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2208205226" title="Клик — скопировать">A 220 820 52 26</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td>МНОГОФУНКЦ.БЛОК УПРАВЛ. ДЛЯ СПЕЦ.А/М</td><td class="restr" data-expr="(974/975)+-962"><span class="icode">(974/975)+-962</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2108209026" title="Клик — скопировать">A 210 820 90 26</td><td>БЛОК УПРАВЛЕНИЯ</td><td>1</td><td>МНОГОФУНКЦ.БЛОК УПРАВЛ. ДЛЯ СПЕЦ.А/М</td><td class="restr" data-expr="970+-962"><span class="icode">970+-962</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82629000013.png", "poses": ["10", "60", "70", "80", "180", "185", "190", "195", "210"]}, {"png": "../../img_png/drawing_B82629000015.png", "poses": ["110", "115", "120", "135", "140", "150", "160", "165", "175"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B82629000013.png", "poses": ["10", "60", "70", "80", "180", "185", "190", "195", "210"], "hs": {"210": [[447, 298, 48, 29]], "80": [[1072, 283, 35, 30]], "190": [[386, 629, 48, 29]], "70": [[136, 341, 34, 30]], "180": [[406, 786, 47, 29]], "60": [[677, 582, 34, 30]], "195": [[259, 724, 48, 30]], "185": [[274, 569, 48, 29]], "10": [[830, 284, 34, 29]]}, "w": 1326, "h": 938}, {"png": "../../img_png/drawing_B82629000015.png", "poses": ["110", "115", "120", "135", "140", "150", "160", "165", "175"], "hs": {"110": [[1039, 622, 48, 30]], "165": [[988, 378, 48, 30]], "135": [[512, 463, 48, 30]], "115": [[886, 420, 48, 29]], "160": [[1043, 466, 48, 30]], "150": [[623, 606, 48, 30]], "140": [[973, 675, 48, 29]], "120": [[758, 422, 48, 30]], "175": [[441, 750, 48, 30]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

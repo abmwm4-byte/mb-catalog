@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C115010">001 -/-</a> → Z  12.308 НАСОС ВАКУУМНЫЙ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">001 -/-</a> → Z  12.308 НАСОС ВАКУУМНЫЙ</div>
 <h1>Z  12.308 НАСОС ВАКУУМНЫЙ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01230800001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01230800001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="1"><td>1</td><td class="pn" data-raw="A1152380139" title="Клик — скопировать">A 115 238 01 39</td><td>КРОНШТЕЙН</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="2"><td>2</td><td class="pn" data-raw="N006912008020" title="Клик — скопировать">N 006912 008020</td><td>БОЛТ</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="3"><td>3</td><td class="pn" data-raw="A0002300065" title="Клик — скопировать">A 000 230 00 65</td><td>Вакуумный насос</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0015860743" title="Клик — скопировать">A 001 586 07 43</td><td>ремкомплект</td><td>1</td><td>КОМПЛЕКТ МЕМБРАН Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0005864043" title="Клик — скопировать">A 000 586 40 43</td><td>ремкомплект</td><td>1</td><td>КОМПЛЕКТ КЛАП. Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N304014008004" title="Клик — скопировать">N 304014 008004</td><td>Винт с 6-гранной головкой</td><td>-</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="N304014008001" title="Клик — скопировать">N 304014 008001</td><td>Винт с 6-гранной головкой</td><td>1</td><td>M8X70\-10.9 Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="9"><td>9</td><td class="pn" data-raw="N000433008406" title="Клик — скопировать">N 000433 008406</td><td>Шайба</td><td>3</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="N000934008010" title="Клик — скопировать">N 000934 008010</td><td>Гайка</td><td>-</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка</td><td>2</td><td>M8 Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N000835008086" title="Клик — скопировать">N 000835 008086</td><td>Винт</td><td>1</td><td>M8X25 Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="N007980006003" title="Клик — скопировать">N 007980 006003</td><td>Пружинное кольцо</td><td>4</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="16"><td>16</td><td class="pn" data-raw="N007984006009" title="Клик — скопировать">N 007984 006009</td><td>Винт</td><td>4</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1102380012" title="Клик — скопировать">A 110 238 00 12</td><td>ШКИВ</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1152380112" title="Клик — скопировать">A 115 238 01 12</td><td>ШКИВ</td><td>1</td><td>Z  12.308/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="N000933006103" title="Клик — скопировать">N 000933 006103</td><td>Винт</td><td>-</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="N304017006018" title="Клик — скопировать">N 304017 006018</td><td>Винт с 6-гранной головкой</td><td>4</td><td>M6X12 Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="19"><td>19</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба</td><td>4</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1152050110" title="Клик — скопировать">A 115 205 01 10</td><td>ШКИВ</td><td>1</td><td>(WATER PUMP) Z  12.308/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A0029973092" title="Клик — скопировать">A 002 997 30 92</td><td>РЕМЕНЬ КЛИНОВОЙ</td><td>-</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="24"><td>24</td><td class="pn" data-raw="A0069972992" title="Клик — скопировать">A 006 997 29 92</td><td>РЕМЕНЬ КЛИНОВОЙ</td><td>1</td><td>9,5 X 838 Z  12.308/03 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="N915036010204" title="Клик — скопировать">N 915036 010204</td><td>Полый болт</td><td>-</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="25"><td>25</td><td class="pn" data-raw="N915036010108" title="Клик — скопировать">N 915036 010108</td><td>Полый болт</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N915009008002" title="Клик — скопировать">N 915009 008002</td><td>Штуцер</td><td>1</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="27"><td>27</td><td class="pn" data-raw="N007603014104" title="Клик — скопировать">N 007603 014104</td><td>Уплотнительное кольцо</td><td>2</td><td>Z  12.308/03</td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1154301929" title="Клик — скопировать">A 115 430 19 29</td><td>ПРОВОД</td><td>-</td><td>Z  12.308/04 [003] EXHAUST STOCK OF OLD PARTS UNTIL PRODUCTION STOP</td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1154302029" title="Клик — скопировать">A 115 430 20 29</td><td>ПРОВОД</td><td>1</td><td>Z  12.308/03, Z  12.308/04 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [004] /3 115.951 WITH CHASSIS 115.005,017 UP TO CHASSIS 025630</td><td class="restr"></td></tr><tr data-pos="28"><td>28</td><td class="pn" data-raw="A1154303029" title="Клик — скопировать">A 115 430 30 29</td><td>ПРОВОД</td><td>1</td><td>Z  12.308/03 [005] 115.951 WITH CHASSIS 115.005,017 FROM CHASSIS 025631</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01230800001.png", "poses": ["1", "2", "3", "5", "8", "9", "10", "11", "15", "16", "17", "18", "19", "23", "24", "25", "26", "27", "28"]}];</script><script>
+<p class="muted">Позиций: 28 · подписано на схемах: 28 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01230800001.png", "poses": ["1", "2", "3", "5", "8", "9", "10", "11", "15", "16", "17", "18", "19", "23", "24", "25", "26", "27", "28"], "hs": {"11": [[531, 400, 28, 24]], "23": [[275, 569, 33, 24]], "24": [[420, 505, 32, 25]], "25": [[670, 304, 32, 25]], "15": [[547, 509, 31, 25]], "26": [[733, 342, 32, 25]], "16": [[507, 475, 30, 24]], "27": [[698, 329, 33, 25]], "17": [[534, 647, 30, 25]], "28": [[971, 293, 33, 24]], "18": [[382, 563, 30, 25]], "19": [[430, 609, 30, 25]], "1": [[657, 505, 15, 25]], "2": [[559, 310, 19, 24]], "3": [[775, 559, 21, 25]], "5": [[933, 427, 20, 24]], "8": [[593, 615, 19, 24]], "9": [[687, 589, 20, 26], [469, 415, 21, 25]], "10": [[438, 419, 30, 25]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

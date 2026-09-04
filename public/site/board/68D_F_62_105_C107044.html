@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107044">68D BIS 09/85 Действительно для: CA, US</a> → 105 НАВЕСНЫЕ ДЕТАЛИ МОТОРНОГО ЩИТА,РАМА АКБ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">68D BIS 09/85 Действительно для: CA, US</a> → 105 НАВЕСНЫЕ ДЕТАЛИ МОТОРНОГО ЩИТА,РАМА АКБ</div>
 <h1>105 НАВЕСНЫЕ ДЕТАЛИ МОТОРНОГО ЩИТА,РАМА АКБ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B62105000063.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B62105000063.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200708" title="Клик — скопировать">A 107 620 07 08</td><td>МОТОРНЫЙ ЩИТ</td><td>-</td><td>[009] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ 024 007849 044 021164</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1076200908" title="Клик — скопировать">A 107 620 09 08</td><td>Моторный щит (FIREWALL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076201116" title="Клик — скопировать">A 107 620 11 16</td><td>- УСИЛИТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076201916" title="Клик — скопировать">A 107 620 19 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>МОТОРНЫЙ ЩИТ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076201716" title="Клик — скопировать">A 107 620 17 16</td><td>- УСИЛИТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1076201916" title="Клик — скопировать">A 107 620 19 16</td><td>- Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td>МОТОРНЫЙ ЩИТ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1076201914" title="Клик — скопировать">A 107 620 19 14</td><td>- ДЕРЖАТЕЛЬ</td><td>1</td><td>AUTOMATIC AIR CONDITIONING CONTROL UNIT [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1076250080" title="Клик — скопировать">A 107 625 00 80</td><td>Опорный кронштейн (BEARING BRACKET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1076201314" title="Клик — скопировать">A 107 620 13 14</td><td>Держатель (HOLDER)</td><td>1</td><td>СЗАДИ</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1076250114" title="Клик — скопировать">A 107 625 01 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ANTI\-BRAKE LOCKING SYSTEM DEVICE TO FIRE WALL,RIGHT [841] ДО ОКОНЧ. МОДЕЛЬНОГО ГОДА 84</td><td class="restr"></td></tr><tr data-pos="42"><td>42</td><td class="pn" data-raw="A1076250214" title="Клик — скопировать">A 107 625 02 14</td><td>ДЕРЖАТЕЛЬ</td><td>1</td><td>ANTI\-BRAKE LOCKING SYSTEM DEVICE TO FIRE WALL,RIGHT [841] ДО ОКОНЧ. МОДЕЛЬНОГО ГОДА 84</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200118" title="Клик — скопировать">A 107 620 01 18</td><td>РАМА</td><td>-</td><td>[017] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ 024 007856 044 021173</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200218" title="Клик — скопировать">A 107 620 02 18</td><td>РАМА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200518" title="Клик — скопировать">A 107 620 05 18</td><td>РАМА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200718" title="Клик — скопировать">A 107 620 07 18</td><td>РАМА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1076200818" title="Клик — скопировать">A 107 620 08 18</td><td>Рама батареи (BATTERY FRAME)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1076261112" title="Клик — скопировать">A 107 626 11 12</td><td>Держатель (HOLDER)</td><td>1</td><td>[019] FROM CHASSIS 024 007857 044 021174</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N000933006126" title="Клик — скопировать">N 000933 006126</td><td>Винт (SCREW)</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (SPRING WASHER)</td><td>4</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1076260612" title="Клик — скопировать">A 107 626 06 12</td><td>Крепежный уголок (ATTACHMENT ANGLE BRACKET)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>2</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N009021006103" title="Клик — скопировать">N 009021 006103</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="N009021006208" title="Клик — скопировать">N 009021 006208</td><td>Шайба (WASHER)</td><td>2</td><td>РАМА АКБ НА КОЛЕСН. АРКЕ И ПЕРЕГОРОДКЕ; 6 MM</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1076200316" title="Клик — скопировать">A 107 620 03 16</td><td>Усиливающий элемент (REINFORCEMENT)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1076200004" title="Клик — скопировать">A 107 620 00 04</td><td>Центральный элемент (CENTER PART)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1076280128" title="Клик — скопировать">A 107 628 01 28</td><td>Соединительная пластина (CONNECTING SHEET)</td><td>1</td><td>СНАРУЖИ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1076280228" title="Клик — скопировать">A 107 628 02 28</td><td>Соединительная пластина (CONNECTING SHEET)</td><td>1</td><td>СНАРУЖИ СПРАВА</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1076200074" title="Клик — скопировать">A 107 620 00 74</td><td>РАМА ПЕРЕДНЕЙ СТЕНКИ</td><td>-</td><td>[039] EXHAUST STOCK OF OLD PART NUMBER FIRST 044 044395</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1076200274" title="Клик — скопировать">A 107 620 02 74</td><td>РАМА ПЕРЕДНЕЙ СТЕНКИ</td><td>-</td><td>[409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ [059] EXHAUST STOCK OF OLD PARTS NUMBER FIRST UP TO CHASSIS A 042027</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1076200374" title="Клик — скопировать">A 107 620 03 74</td><td>Рама (FRAME)</td><td>1</td><td>СВЕРХУ, ПОПЕРЕК</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1076270028" title="Клик — скопировать">A 107 627 00 28</td><td>ПОДШИПНИК</td><td>-</td><td>[015] EXHAUST STOCK OF OLD PART NUMBER FIRST UP TO CHASSIS 044 004181</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1076270128" title="Клик — скопировать">A 107 627 01 28</td><td>ПОДШИПНИК</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0009903330" title="Клик — скопировать">A 000 990 33 30</td><td>Болт с потайной головкой (COUNTERSUNK SCREW)</td><td>4</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B62105000063.png", "poses": ["5", "11", "17", "20", "29", "40", "42", "44", "50", "53", "56", "62", "65", "68", "71", "74", "77", "80", "83", "86"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B62105000063.png", "poses": ["5", "11", "17", "20", "29", "40", "42", "44", "50", "53", "56", "62", "65", "68", "71", "74", "77", "80", "83", "86"], "hs": {"44": [[82, 341, 33, 17]], "11": [[338, 375, 33, 17]], "77": [[745, 477, 33, 17]], "56": [[37, 270, 33, 17]], "68": [[171, 222, 33, 17]], "17": [[565, 200, 33, 17]], "29": [[271, 349, 33, 17]], "5": [[567, 452, 33, 17]], "71": [[781, 250, 33, 17]], "50": [[123, 233, 33, 17]], "62": [[140, 264, 33, 17]], "40": [[349, 459, 33, 17]], "74": [[815, 209, 33, 17]], "53": [[39, 249, 33, 17]], "20": [[274, 412, 33, 17]], "42": [[400, 487, 33, 17]], "65": [[168, 198, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

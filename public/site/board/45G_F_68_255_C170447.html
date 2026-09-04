@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 255 КОРПУС С ВЕЩ. НИШЕЙ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/74">45G  Действительно для: CA, US</a> → 255 КОРПУС С ВЕЩ. НИШЕЙ</div>
 <h1>255 КОРПУС С ВЕЩ. НИШЕЙ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B68255000004.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B68255000004.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1706800852" title="Клик — скопировать">A 170 680 08 52</td><td>Корпус</td><td>1</td><td>МЕЖДУ ПРИБОРН. ПАНЕЛЬЮ И ОБЛИЦОВКОЙ ТУННЕЛЯ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1706800050" title="Клик — скопировать">A 170 680 00 50</td><td>Обшивка</td><td>1</td><td>КОРПУС С КРЫШКОЙ [881] ДО МОДЕЛЬН. ГОДА 98</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1706800850" title="Клик — скопировать">A 170 680 08 50</td><td>Обшивка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1706801350" title="Клик — скопировать">A 170 680 13 50</td><td>Облицовка</td><td>1</td><td>КОРПУС С КРЫШКОЙ [890] С МОДЕЛЬНОГО ГОДА 99</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1706800652" title="Клик — скопировать">A 170 680 06 52</td><td>- Корпус (GEHAEUSE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1706801050" title="Клик — скопировать">A 170 680 10 50</td><td>- Облицовка (VERKLEIDUNG)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1708200053" title="Клик — скопировать">A 170 820 00 53</td><td>- Прикуриватель (ZIGAR.ANZUENDER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1706830508" title="Клик — скопировать">A 170 683 05 08</td><td>- Крышка (ABDECKUNG)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1706800078" title="Клик — скопировать">A 170 680 00 78</td><td>- КРЫШКА</td><td>1</td><td>[881] ДО МОДЕЛЬН. ГОДА 98</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1706800378" title="Клик — скопировать">A 170 680 03 78</td><td>- Крышка</td><td>1</td><td>[890] С МОДЕЛЬНОГО ГОДА 99</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="N914151005003" title="Клик — скопировать">N 914151 005003</td><td>- Винт</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1706800217" title="Клик — скопировать">A 170 680 02 17</td><td>- Крышка (ABDECKUNG)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1706801452" title="Клик — скопировать">A 170 680 14 52</td><td>Корпус (GEHAEUSE)</td><td>1</td><td>MIT ASCHER</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1706801250" title="Клик — скопировать">A 170 680 12 50</td><td>Облицовка</td><td>1</td><td>MIT ASCHER\-&quot;DESIGNO&quot;</td><td class="restr" data-expr="Y97"><span class="icode">Y97</span></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1708130004" title="Клик — скопировать">A 170 813 00 04</td><td>- Вставка (EINSATZ)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1409900622" title="Клик — скопировать">A 140 990 06 22</td><td>болт (SCHRAUBE)</td><td>4</td><td>3.5X10</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N072601012230" title="Клик — скопировать">N 072601 012230</td><td>Лампа накаливания (GLUEHLAMPE)</td><td>1</td><td>12V 2W; 12V\-1.2W</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="N914151005003" title="Клик — скопировать">N 914151 005003</td><td>Винт</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="N913017006002" title="Клик — скопировать">N 913017 006002</td><td>Гайка</td><td>2</td><td>КОРПУС НА ТУННЕЛЕ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1406830110" title="Клик — скопировать">A 140 683 01 10</td><td>Крышка (DECKEL)</td><td>1</td><td>ПРОЁМ ДЛЯ АУДИОИСТЕМЫ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N914127004202" title="Клик — скопировать">N 914127 004202</td><td>Шуруп</td><td>4</td><td>ЦЕНТР.КОНСОЛЬ К ПЕРЕДН.ПАНЕЛИ; B4,2X16</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0009949345" title="Клик — скопировать">A 000 994 93 45</td><td>предохранитель (CLIPSMUTTER)</td><td>2</td><td>ЦЕНТР.КОНСОЛЬ НА БЛОКЕ ВКЛЮЧ.</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A0009942545" title="Клик — скопировать">A 000 994 25 45</td><td>Пружинная гайка самореза (CLIPSMUTTER BLECHSCHRAUBE)</td><td>2</td><td>ВОЗДУШ. КАНАЛ НА ЦЕНТР. КОНСОЛИ; 3.3MM</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1706800139" title="Клик — скопировать">A 170 680 01 39</td><td>Крышка (ABDECKUNG)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1706800079" title="Клик — скопировать">A 170 680 00 79</td><td>КАССЕТНЫЙ АРХИВ</td><td>1</td><td>В ЦЕНТРАЛЬНОЙ КОНСОЛИ CASSETTENBOX</td><td class="restr" data-expr="331"><span class="icode">331</span></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1706800179" title="Клик — скопировать">A 170 680 01 79</td><td>Корпус (GEHAEUSE)</td><td>1</td><td>В ЦЕНТРАЛЬНОЙ КОНСОЛИ CD \- BOX</td><td class="restr" data-expr="330"><span class="icode">330</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68255000004.png", "poses": ["5", "8", "14", "17", "23", "26", "29", "41", "44", "56", "62", "68", "71", "74", "77", "80", "104", "107", "110", "113"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B68255000004.png", "poses": ["5", "8", "14", "17", "23", "26", "29", "41", "44", "56", "62", "68", "71", "74", "77", "80", "104", "107", "110", "113"], "hs": {"44": [[637, 738, 32, 24]], "77": [[1084, 772, 30, 25]], "23": [[814, 306, 32, 24]], "56": [[608, 565, 32, 24]], "68": [[708, 440, 32, 25]], "14": [[830, 365, 30, 25]], "26": [[716, 358, 32, 24]], "17": [[750, 820, 29, 25]], "29": [[1054, 294, 32, 25]], "110": [[1011, 845, 50, 25]], "113": [[1122, 469, 49, 25]], "5": [[269, 573, 21, 24]], "104": [[657, 605, 42, 25]], "8": [[1100, 594, 21, 24]], "80": [[529, 329, 32, 25]], "107": [[637, 644, 40, 24]], "71": [[140, 195, 31, 25]], "62": [[578, 404, 31, 24]], "41": [[972, 385, 31, 24]], "74": [[464, 406, 32, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

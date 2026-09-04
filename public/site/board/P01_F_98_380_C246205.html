@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C246205">P01 -/-</a> → 380 ИНСТРУМЕНТ И СИСТЕМА БЕЗОПАСНОСТИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/30">P01 -/-</a> → 380 ИНСТРУМЕНТ И СИСТЕМА БЕЗОПАСНОСТИ</div>
 <h1>380 ИНСТРУМЕНТ И СИСТЕМА БЕЗОПАСНОСТИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B98380000034.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B98380000034.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008900294" title="Клик — скопировать">A 000 890 02 94</td><td>Стяжной ремень (LASHING STRAP)</td><td>1</td><td>5000 X 25 MM [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005830361" title="Клик — скопировать">A 000 583 03 61</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>Комплект из 2 светоотражающих жилетов [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td>1 светоотражающий жилет</td><td class="restr" data-expr="(494/460/919L/625)"><span class="icode">(494/460/919L/625)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823021" title="Клик — скопировать">A 000 982 30 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL/2XXL/831L/873L/527L/875L)+-(512L/549L)"><span class="icode">(5XXL/2XXL/831L/873L/527L/875L)+-(512L/549L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009822921" title="Клик — скопировать">A 000 982 29 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(494/460)"><span class="icode">(494/460)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823121" title="Клик — скопировать">A 000 982 31 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL+(515L/517L/518L/528L/551L/571L)/601L/625L/671L/771L/825L/837L/879L)+-(512L/549L)"><span class="icode">(5XXL+(515L/517L/518L/528L/551L/571L)/601L/625L/671L/771L/825L/837L/879L)+-(512L/549L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823221" title="Клик — скопировать">A 000 982 32 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="(5XXL+(537L/539L)/821L/822L/823L/824L/855L)"><span class="icode">(5XXL+(537L/539L)/821L/822L/823L/824L/855L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823421" title="Клик — скопировать">A 000 982 34 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(9XXL/625/919L)"><span class="icode">(9XXL/625/919L)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009823321" title="Клик — скопировать">A 000 982 33 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="830"><span class="icode">830</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824503" title="Клик — скопировать">A 000 982 45 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="623"><span class="icode">623</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009824803" title="Клик — скопировать">A 000 982 48 03</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С функцией поддержания зарядки</td><td class="restr" data-expr="498+-(512L/549L)"><span class="icode">498+-(512L/549L)</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0009820321" title="Клик — скопировать">A 000 982 03 21</td><td>Зарядное устройство АКБ (BATTERY CHARGER)</td><td>1</td><td>С карманом [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="(5XXL/2XXL/831L/873L/527L/875L)+-830"><span class="icode">(5XXL/2XXL/831L/873L/527L/875L)+-830</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0008992561" title="Клик — скопировать">A 000 899 25 61</td><td>Сумка (BAG)</td><td>1</td><td>Для домкрата</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A1668205000" title="Клик — скопировать">A 166 820 50 00</td><td>Монт.ком. сист. эк.вызова</td><td>1</td><td>E\-Call</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0019829708" title="Клик — скопировать">A 001 982 97 08</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0009828610" title="Клик — скопировать">A 000 982 86 10</td><td>Аккумуляторный блок (BATTERY PACK)</td><td>1</td><td>Система экстренного вызова [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A1669890000" title="Клик — скопировать">A 166 989 00 00</td><td>Отрез клейкой пленки (ADHESIVE FILM PRECUT PART)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="E64"><span class="icode">E64</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A9099890000" title="Клик — скопировать">A 909 989 00 00</td><td>TS Самокл. заготовка (PARTS KIT, PRECUT PART)</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B98380000034.png", "poses": ["30", "50", "80", "100", "200", "300", "310", "320", "330"]}];</script><script>
+<p class="muted">Позиций: 19 · подписано на схемах: 19 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B98380000034.png", "poses": ["30", "50", "80", "100", "200", "300", "310", "320", "330"], "hs": {"330": [[632, 596, 48, 29]], "100": [[1110, 347, 48, 30]], "320": [[520, 608, 48, 29]], "200": [[244, 597, 48, 29]], "310": [[627, 497, 48, 30]], "300": [[518, 519, 48, 30]], "80": [[825, 347, 34, 30]], "50": [[530, 347, 34, 30]], "30": [[239, 347, 34, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

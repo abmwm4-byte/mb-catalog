@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170449">66E  Недействительно для: CA, JP, US</a> → 075 КРЫШКА КЛАПАННОГО МЕХАНИЗМА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/98">66E  Недействительно для: CA, JP, US</a> → 075 КРЫШКА КЛАПАННОГО МЕХАНИЗМА</div>
 <h1>075 КРЫШКА КЛАПАННОГО МЕХАНИЗМА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B01075000295.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B01075000295.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1110161106" title="Клик — скопировать">A 111 016 11 06</td><td>Крышка (DECKEL)</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ, СПЕРЕДИ</td><td class="restr" data-expr="F203/F170/F202/F208/F210"><span class="icode">F203/F170/F202/F208/F210</span></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1110161106" title="Клик — скопировать">A 111 016 11 06</td><td>Крышка (DECKEL)</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ, СПЕРЕДИ</td><td class="restr" data-expr="F170"><span class="icode">F170</span></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1110161206" title="Клик — скопировать">A 111 016 12 06</td><td>Крышка (DECKEL)</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ, СПЕРЕДИ</td><td class="restr" data-expr="(F203/F170)+423"><span class="icode">(F203/F170)+423</span></td></tr><tr data-pos="7"><td>7</td><td class="pn" data-raw="A1110161206" title="Клик — скопировать">A 111 016 12 06</td><td>Крышка (DECKEL)</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ, СПЕРЕДИ</td><td class="restr" data-expr="F170+423"><span class="icode">F170+423</span></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0179972148" title="Клик — скопировать">A 017 997 21 48</td><td>Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>ПЕРЕДНЯЯ КРЫШКА К ГОЛОВКЕ БЛОКА ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N000933006123" title="Клик — скопировать">N 000933 006123</td><td>Винт (SCHRAUBE)</td><td>6</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ СПЕРЕДИ M6X22</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="N910105008014" title="Клик — скопировать">N 910105 008014</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ СПЕРЕДИ; M8X35</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1110101930" title="Клик — скопировать">A 111 010 19 30</td><td>Крышка механизма (ZYLINDERKOPFHAUBE)</td><td>1</td><td></td><td class="restr" data-expr="(F203/F170/F202/F208/F210)+M001"><span class="icode">(F203/F170/F202/F208/F210)+M001</span></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A1235849321" title="Клик — скопировать">A 123 584 93 21</td><td>- Информационная табличка (HINWEISSCHILD)</td><td>1</td><td>&quot;ОПАСНО ДЛЯ ЖИЗНИ! ВЫСОКОЕ НАПРЯЖЕНИЕ&quot;; ПО\-НЕМЕЦКИ, АНГЛИЙСКИ И ФРАНЦУЗСКИ</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛЬ СМ.: 15 / 060</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1110160221" title="Клик — скопировать">A 111 016 02 21</td><td>Уплотнительная прокладка (DICHTBEILAGE)</td><td>1</td><td>КРЫШКА КЛАПАННОГО МЕХАНИЗМА К ГОЛОВКЕ БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1110160921" title="Клик — скопировать">A 111 016 09 21</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>КРЫШКА КЛАПАННОГО МЕХАНИЗМА К ГОЛОВКЕ БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1110161221" title="Клик — скопировать">A 111 016 12 21</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>КРЫШКА КЛАПАННОГО МЕХАНИЗМА К ГОЛОВКЕ БЛОКЕ ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1110160721" title="Клик — скопировать">A 111 016 07 21</td><td>Эластомерный уплотнитель (ELASTOMERFORMDICHTUNG)</td><td>4</td><td>УПЛОТНИТЕЛЬ КОРПУСА СВЕЧИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N914011006019" title="Клик — скопировать">N 914011 006019</td><td>Винт с неспадающей шайбой</td><td>4</td><td>КРЫШКА КЛАПАННОГО МЕХАНИЗМА К ГОЛОВКЕ БЛОКЕ ЦИЛИНДРОВ M6X45</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N914011006018" title="Клик — скопировать">N 914011 006018</td><td>Винт с неспадающей шайбой</td><td>6</td><td>КРЫШКА КЛАПАННОГО МЕХАНИЗМА К ГОЛОВКЕ БЛОКЕ ЦИЛИНДРОВ M6X60</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1110180302" title="Клик — скопировать">A 111 018 03 02</td><td>Крышка наливной горловины</td><td>1</td><td>(КРЫШКА ЗАЛИВНОЙ ГОРЛОВИНЫ)</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0000100285" title="Клик — скопировать">A 000 010 02 85</td><td>Крышка наливной горловины</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0000101285" title="Клик — скопировать">A 000 010 12 85</td><td>Крышка наливной горловины (EINFUELLVERSCHLUSS)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0000101485" title="Клик — скопировать">A 000 010 14 85</td><td>Крышка наливной горловины (EINFUELLVERSCHLUSS)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0000100301" title="Клик — скопировать">A 000 010 03 01</td><td>Крышка наливной горловины (EINFUELLVERSCHLUSS)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1110180080" title="Клик — скопировать">A 111 018 00 80</td><td>- Уплотнительная прокладка (DICHTBEILAGE)</td><td>1</td><td>(КРЫШКА ЗАЛИВНОЙ ГОРЛОВИНЫ)</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛЬ СМ.: 09 / 015</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1110182882" title="Клик — скопировать">A 111 018 28 82</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>КРЫШКА ГБЦ И МАСЛООТДЕЛИТ.</td><td class="restr" data-expr="(F170/F202/F208/F210)+M001"><span class="icode">(F170/F202/F208/F210)+M001</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1110180730" title="Клик — скопировать">A 111 018 07 30</td><td>Трубопровод (ROHRLEITUNG)</td><td>1</td><td>НА ГОЛОВКЕ БЛОКА ЦИЛИНДРОВ</td><td class="restr" data-expr="(F170/F202/F208/F210)+M001"><span class="icode">(F170/F202/F208/F210)+M001</span></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A1110182682" title="Клик — скопировать">A 111 018 26 82</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>МАСЛООТДЕЛИТЕЛЬ</td><td class="restr" data-expr="M001/(F203+-M001)"><span class="icode">M001/(F203+-M001)</span></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A1110182582" title="Клик — скопировать">A 111 018 25 82</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ОБРАТН. МАСЛОПРОВОД</td><td class="restr" data-expr="(F170/F202/F208/F210)+M001"><span class="icode">(F170/F202/F208/F210)+M001</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="Q0000000001" title="Клик — скопировать">Q 0000000001</td><td>ВАЖНАЯ ИНФОРМАЦИЯ</td><td>1</td><td>ДЕТАЛЬ СМ.: 01 / 045</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N916016012200" title="Клик — скопировать">N 916016 012200</td><td>Хомут (SCHELLE)</td><td>1</td><td>ОБРАТН. МАСЛОПРОВОД; 12\-15 MM</td><td class="restr" data-expr="M001/(F203+-M001)"><span class="icode">M001/(F203+-M001)</span></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (SECHSRUNDSCHRAUBE)</td><td>1</td><td>ОБРАТН. МАСЛОПРОВОД; M6X16</td><td class="restr" data-expr="M001/(F203+-M001)"><span class="icode">M001/(F203+-M001)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01075000295.png", "poses": ["7", "11", "14", "17", "23", "29", "30", "32", "35", "38", "41", "44", "60", "77", "80", "83", "85", "90", "95", "98"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B01075000295.png", "poses": ["7", "11", "14", "17", "23", "29", "30", "32", "35", "38", "41", "44", "60", "77", "80", "83", "85", "90", "95", "98"], "hs": {"11": [[614, 685, 26, 25]], "44": [[684, 451, 28, 22]], "77": [[473, 292, 26, 20]], "23": [[844, 619, 34, 30]], "35": [[730, 706, 29, 21]], "14": [[363, 687, 27, 23]], "38": [[959, 373, 27, 23]], "17": [[431, 761, 29, 24]], "29": [[1031, 638, 27, 23]], "7": [[501, 750, 21, 29]], "90": [[376, 454, 35, 30]], "80": [[682, 266, 35, 30]], "60": [[228, 261, 35, 29]], "83": [[821, 213, 26, 23]], "95": [[618, 371, 25, 22]], "30": [[991, 298, 34, 30]], "85": [[437, 369, 34, 30]], "41": [[814, 397, 43, 35]], "32": [[561, 820, 32, 22]], "98": [[587, 301, 26, 21]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

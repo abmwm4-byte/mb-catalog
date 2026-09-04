@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C166875">D82 -/-</a> → 340 Системы кронштейнов крыши</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/300">D82 -/-</a> → 340 Системы кронштейнов крыши</div>
 <h1>340 Системы кронштейнов крыши</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B98340000058 <span class="hint">(3)</span></button><button data-i="1" class="">B98340000059 <span class="hint">(13)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B98340000058.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B98340000058.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1668901493" title="Клик — скопировать">A 166 890 14 93</td><td>Базовая опора (GRUNDTRAEGER)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ; СПЕРЕДИ И СЗАДИ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1668901493" title="Клик — скопировать">A 166 890 14 93</td><td>Базовая опора (GRUNDTRAEGER)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ; СПЕРЕДИ И СЗАДИ</td><td class="restr" data-expr="E22"><span class="icode">E22</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0008900293" title="Клик — скопировать">A 000 890 02 93</td><td>Кронштейн для велосипеда (FAHRRADHALTER)</td><td>1</td><td>[003907] ВНИМАНИЕ: ТАКЖЕ ДОПОЛНИТЕЛЬНО ЗАКАЗАТЬ A 002 990 03 99</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005831595" title="Клик — скопировать">A 000 583 15 95</td><td>Кабельный замок</td><td>1</td><td>1 ЗАМОК 3mm</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005831695" title="Клик — скопировать">A 000 583 16 95</td><td>ЗАМОК КАБЕЛЯ</td><td>1</td><td>К\-Т ДЕТАЛЕЙ, СОСТОИТ ИЗ 2 ЗАМКОВ 3mm [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005831795" title="Клик — скопировать">A 000 583 17 95</td><td>Кабельный замок</td><td>1</td><td>К\-Т ДЕТАЛЕЙ, СОСТОИТ ИЗ 4 ЗАМКОВ 3mm</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005831895" title="Клик — скопировать">A 000 583 18 95</td><td>Кабельный замок</td><td>1</td><td>1 ЗАМОК 6mm</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005831995" title="Клик — скопировать">A 000 583 19 95</td><td>Кабельный замок (KABELSCHLOSS)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ, СОСТОИТ ИЗ 2 ЗАМКОВ 6mm [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005832095" title="Клик — скопировать">A 000 583 20 95</td><td>Кабельный замок (KABELSCHLOSS)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ, СОСТОИТ ИЗ 4 ЗАМКОВ 6mm [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A0008400400" title="Клик — скопировать">A 000 840 04 00</td><td>Багажный бокс на крыше (DACHBOX)</td><td>1</td><td>С возможностью двустороннего открывания, матовое серебристое исполнение; 1894 X 769 X 406 (330 L) [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0019907799" title="Клик — скопировать">A 001 990 77 99</td><td>- Крепежные детали</td><td>1</td><td>К\-Т ДЕТАЛЕЙ КРЕПЛЕНИЯ БАГАЖНИКА\-БОКСА ДЛЯ ЛЫЖ</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008401400" title="Клик — скопировать">A 000 840 14 00</td><td>Багажный бокс на крыше (DACHBOX)</td><td>1</td><td>С возможностью двустороннего открывания, матовое серебристое исполнение [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008401200" title="Клик — скопировать">A 000 840 12 00</td><td>Багажный бокс на крыше (DACHBOX)</td><td>1</td><td>С возможностью двустороннего открывания, черного цвета [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1769900099" title="Клик — скопировать">A 176 990 00 99</td><td>- Крепежные детали (BEFESTIGUNGSTEILE)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ КРЕПЛЕНИЯ БАГАЖНИКА\-БОКСА ДЛЯ ЛЫЖ</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0008401100" title="Клик — скопировать">A 000 840 11 00</td><td>Багажный бокс на крыше (DACHBOX)</td><td>1</td><td>С возможностью двустороннего открывания, черного цвета [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0008401300" title="Клик — скопировать">A 000 840 13 00</td><td>Багажный бокс на крыше (DACHBOX)</td><td>1</td><td>С возможностью двустороннего открывания, матовое серебристое исполнение [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A1769900099" title="Клик — скопировать">A 176 990 00 99</td><td>- Крепежные детали (BEFESTIGUNGSTEILE)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ КРЕПЛЕНИЯ БАГАЖНИКА\-БОКСА ДЛЯ ЛЫЖ</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0008404718" title="Клик — скопировать">A 000 840 47 18</td><td>Кронштейн для лыж (SKIHALTER)</td><td>1</td><td>КОМПЛЕКТ ДЕТАЛЕЙ ДЛЯ ТРЕХ ПАР ЛЫЖ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0008404818" title="Клик — скопировать">A 000 840 48 18</td><td>Кронштейн для лыж (SKIHALTER)</td><td>1</td><td>КОМПЛЕКТ ДЕТАЛЕЙ ДЛЯ ПЯТИ ПАР ЛЫЖ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A0008900493" title="Клик — скопировать">A 000 890 04 93</td><td>Кронштейн для лыж (SKIHALTER)</td><td>1</td><td>4 ШТ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A0008900393" title="Клик — скопировать">A 000 890 03 93</td><td>Кронштейн для лыж (SKIHALTER)</td><td>1</td><td>6 ШТ. [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="285"><td>285</td><td class="pn" data-raw="A0009908406" title="Клик — скопировать">A 000 990 84 06</td><td>Крепежные детали (BEFESTIGUNGSTEILE)</td><td>1</td><td>К\-Т ПЕРЕХОДНИКОВ TO A 000 890 03 93 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="A0008900111" title="Клик — скопировать">A 000 890 01 11</td><td>Сумка (TASCHE)</td><td>1</td><td>ДЛЯ НЕСУЩИХ ЭЛЕМЕНТОВ БАГАЖНИКА КРЫШИ</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0008900411" title="Клик — скопировать">A 000 890 04 11</td><td>Текстильная сумка (TEXTILTASCHE)</td><td>1</td><td>КОМПЛЕКТ СУМОК ИЗ 4 ПРЕДМЕТОВ ДЛЯ ЛЫЖНОГО БОКСА ОБЪЕМОМ 330 Л [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0008460806" title="Клик — скопировать">A 000 846 08 06</td><td>Лыжный чехол (SKISACK)</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0008900511" title="Клик — скопировать">A 000 890 05 11</td><td>Текстильная сумка (TEXTILTASCHE)</td><td>1</td><td>КОМПЛЕКТ СУМОК ИЗ 6 ПРЕДМЕТОВ ДЛЯ ЛЫЖНОГО БОКСА ОБЪЕМОМ 450 Л [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A0008900911" title="Клик — скопировать">A 000 890 09 11</td><td>Текстильная сумка (TEXTILTASCHE)</td><td>1</td><td>КОМПЛЕКТ СУМОК ИЗ 5 ПРЕДМЕТОВ ДЛЯ ЛЫЖНОГО БОКСА ОБЪЕМОМ 400 Л [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 27 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B98340000058.png", "poses": ["10", "70", "80"]}, {"png": "../../img_png/drawing_B98340000059.png", "poses": ["100", "110", "150", "160", "200", "210", "270", "280", "285", "290", "300", "310", "330"]}];</script><script>
+<p class="muted">Позиций: 27 · подписано на схемах: 27 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B98340000058.png", "poses": ["10", "70", "80"], "hs": {"80": [[432, 163, 34, 29]], "70": [[434, 254, 34, 30]], "10": [[766, 446, 35, 30]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B98340000059.png", "poses": ["100", "110", "150", "160", "200", "210", "270", "280", "285", "290", "300", "310", "330"], "hs": {"290": [[229, 770, 48, 30]], "280": [[685, 614, 48, 29]], "160": [[826, 378, 48, 30]], "270": [[366, 613, 48, 30]], "150": [[788, 288, 48, 29]], "285": [[852, 614, 48, 30]], "110": [[436, 378, 48, 30]], "330": [[826, 748, 48, 30]], "100": [[398, 286, 48, 29]], "210": [[1192, 379, 48, 30]], "200": [[1151, 293, 48, 30]], "310": [[677, 804, 48, 30]], "300": [[1109, 577, 48, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

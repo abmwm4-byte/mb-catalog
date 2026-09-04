@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C108019">232 -/-</a> → Z  55.471 FRONT AND REAR FLOOR COIR MATS</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/98">232 -/-</a> → Z  55.471 FRONT AND REAR FLOOR COIR MATS</div>
 <h1>Z  55.471 FRONT AND REAR FLOOR COIR MATS</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05547100001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05547100001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos=""><td></td><td class="pn" data-raw="A1106841343" title="Клик — скопировать">A 110 684 13 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Влево Z  55.471/14, Z  55.471/16, Z  55.471/19 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106840743" title="Клик — скопировать">A 110 684 07 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Влево Z  55.471/18 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106841143" title="Клик — скопировать">A 110 684 11 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Вправо Z  55.471/14, Z  55.471/16, Z  55.471/18, Z  55.471/19 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106840843" title="Клик — скопировать">A 110 684 08 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Влево Z  55.471/14, Z  55.471/16, Z  55.471/18, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106841243" title="Клик — скопировать">A 110 684 12 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Вправо Z  55.471/18 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [036] UP TO CHASSIS: 108.015 002605 109.015 001642 111.02  088206 ПЕРЕКЛЮЧЕНИЕ ПЕРЕДАЧ НА РУЛЕВОМ КОЛЕСЕ 108.012 042057 MECHANICAL TRANSMISSION 108.012 041899 AUTOMATIC TRANSMISSION 108.014 033579 MECHANICAL TRANSMISSION 108.014 033438 AUTOMATIC TRANSMISSION 111.010 102087 MECHANICAL TRANSMISSION 111.010 102712 AUTOMATIC TRANSMISSION 110.010 178571 MECHANICAL TRANSMISSION 110.010 179684 AUTOMATIC TRANSMISSION 110.110 329967 MECHANICAL TRANSMISSION 110.110 332553 AUTOMATIC TRANSMISSION 110.011 026827 MECHANICAL TRANSMISSION 110.011 027152 AUTOMATIC TRANSMISSION 110.110 329220 MECHANICAL TRANSMISSION 110.011 026513 AUTOMATIC TRANSMISSION FLOOR SHIFT: 108.012              039924 108.014             031948</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106841843" title="Клик — скопировать">A 110 684 18 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Вправо Z  55.471/18 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023 [037] FROM CHASSIS: 108.015 002606 108.015 001643 111.02  088207 ПЕРЕКЛЮЧЕНИЕ ПЕРЕДАЧ НА РУЛЕВОМ КОЛЕСЕ 108.012 042058 MECHANICAL TRANSMISSION 108.012 041900 AUTOMATIC TRANSMISSION 108.014 033580 MECHANICAL TRANSMISSION 108.014 033439 AUTOMATIC TRANSMISSION 111.010 102088 MECHANICAL TRANSMISSION 111.010 102713 AUTOMATIC TRANSMISSION 110.010 178572 MECHANICAL TRANSMISSION 110.010 179685 AUTOMATIC TRANSMISSION 110.110 329968 MECHANICAL TRANSMISSION 110.110 332554 AUTOMATIC TRANSMISSION 110.011 026828 MECHANICAL TRANSMISSION 110.011 027153 AUTOMATIC TRANSMISSION FLOOR SHIFT: 111.010             101920 110.010             178312 110.110             329221 110.011             026514</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840343" title="Клик — скопировать">A 108 684 03 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Влево Z  55.471/18 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840443" title="Клик — скопировать">A 108 684 04 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Влево Z  55.471/14, Z  55.471/16, Z  55.471/18, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840543" title="Клик — скопировать">A 108 684 05 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Вправо Z  55.471/14, Z  55.471/16, Z  55.471/18, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840643" title="Клик — скопировать">A 108 684 06 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Вправо Z  55.471/18 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106841443" title="Клик — скопировать">A 110 684 14 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Вправо Z  55.471/14, Z  55.471/16, Z  55.471/19 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [036] UP TO CHASSIS: 108.015 002605 109.015 001642 111.02  088206 ПЕРЕКЛЮЧЕНИЕ ПЕРЕДАЧ НА РУЛЕВОМ КОЛЕСЕ 108.012 042057 MECHANICAL TRANSMISSION 108.012 041899 AUTOMATIC TRANSMISSION 108.014 033579 MECHANICAL TRANSMISSION 108.014 033438 AUTOMATIC TRANSMISSION 111.010 102087 MECHANICAL TRANSMISSION 111.010 102712 AUTOMATIC TRANSMISSION 110.010 178571 MECHANICAL TRANSMISSION 110.010 179684 AUTOMATIC TRANSMISSION 110.110 329967 MECHANICAL TRANSMISSION 110.110 332553 AUTOMATIC TRANSMISSION 110.011 026827 MECHANICAL TRANSMISSION 110.011 027152 AUTOMATIC TRANSMISSION 110.110 329220 MECHANICAL TRANSMISSION 110.011 026513 AUTOMATIC TRANSMISSION FLOOR SHIFT: 108.012              039924 108.014             031948</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1106842043" title="Клик — скопировать">A 110 684 20 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Z  55.471/14, Z  55.471/16, Z  55.471/19 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА [001] UNTIL PRODUCTION STOP: 108.012,014 109.015 111.021,023 112.021,023 [037] FROM CHASSIS: 108.015 002606 108.015 001643 111.02  088207 ПЕРЕКЛЮЧЕНИЕ ПЕРЕДАЧ НА РУЛЕВОМ КОЛЕСЕ 108.012 042058 MECHANICAL TRANSMISSION 108.012 041900 AUTOMATIC TRANSMISSION 108.014 033580 MECHANICAL TRANSMISSION 108.014 033439 AUTOMATIC TRANSMISSION 111.010 102088 MECHANICAL TRANSMISSION 111.010 102713 AUTOMATIC TRANSMISSION 110.010 178572 MECHANICAL TRANSMISSION 110.010 179685 AUTOMATIC TRANSMISSION 110.110 329968 MECHANICAL TRANSMISSION 110.110 332554 AUTOMATIC TRANSMISSION 110.011 026828 MECHANICAL TRANSMISSION 110.011 027153 AUTOMATIC TRANSMISSION FLOOR SHIFT: 111.010             101920 110.010             178312 110.110             329221 110.011             026514</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840743" title="Клик — скопировать">A 108 684 07 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ СЛЕВА Рулевое управление: Влево Z  55.471/14, Z  55.471/16, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1086840843" title="Клик — скопировать">A 108 684 08 43</td><td>НАСТИЛ</td><td>1</td><td>ПОЛ ВОДИТЕЛЯ,СПРАВА Рулевое управление: Вправо Z  55.471/14, Z  55.471/16, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096840143" title="Клик — скопировать">A 109 684 01 43</td><td>НАСТИЛ</td><td>1</td><td>ЗАДН. ПОЛ СЛЕВА Z  55.471/18, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1096840243" title="Клик — скопировать">A 109 684 02 43</td><td>НАСТИЛ</td><td>1</td><td>ЗАДН. ПОЛ СПРАВА Z  55.471/18, Z  55.471/19 [406] ПРИ ЗАКАЗЕ УКАЗЫВАТЬ НОМЕР ЦВЕТА</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 16 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05547100001.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 16 · подписано на схемах: 0 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05547100001.png", "poses": [], "hs": {"90": [[506, 220, 33, 17]], "80": [[279, 281, 33, 17], [645, 172, 33, 17], [527, 424, 33, 17]], "86": [[499, 110, 33, 17], [134, 224, 33, 17], [360, 370, 33, 17]], "98": [[419, 149, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 060 ВЫПУСКНОЙ КОЛЛЕКТОР</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/41">45G  Действительно для: CA, US</a> → 060 ВЫПУСКНОЙ КОЛЛЕКТОР</div>
 <h1>060 ВЫПУСКНОЙ КОЛЛЕКТОР</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B14060000055 <span class="hint">(13)</span></button><button data-i="1" class="">B14060000042 <span class="hint">(5)</span></button><button data-i="2" class="">B14060000054 <span class="hint">(5)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B14060000055.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B14060000055.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1111403709" title="Клик — скопировать">A 111 140 37 09</td><td>Выпускной коллектор</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1111403809" title="Клик — скопировать">A 111 140 38 09</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td>-</td><td>[028] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 921 10/50,20/60 145937 921 12/52,22/62 084454 942 10/50,20/60 063598 942 12/52,22/62 068059 943 10/50,      009300 944 10/50,      020943 944 12/52,      003459 945 10/50,20/60 039165 945 12/52,22/62 080276 946 10/50,20/60 021059 946 12/52,22/62 009655 947 10/50,      007298 947 12/52,      003117 973 10/50,20/60 021060 973 12/52,22/62 059550 975 10/50,20/60 016874 975 12/52,22/62 036116 977 12/52,      006143</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1111403909" title="Клик — скопировать">A 111 140 39 09</td><td>Выпускной коллектор (ABGASKRUEMMER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0009902552" title="Клик — скопировать">A 000 990 25 52</td><td>- Заклепочная гайка (EINNIETMUTTER)</td><td>2</td><td>M8</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1111420580" title="Клик — скопировать">A 111 142 05 80</td><td>ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1111420880" title="Клик — скопировать">A 111 142 08 80</td><td>Уплотнительная прокладка (DICHTBEILAGE)</td><td>1</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР К ГОЛОВКЕ БЛОКА ЦИЛИНДРОВ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1201420072" title="Клик — скопировать">A 120 142 00 72</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>11</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР К ГОЛОВКЕ БЛОКА ЦИЛИНДРОВ; M8</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1111401634" title="Клик — скопировать">A 111 140 16 34</td><td>КОЖУХ</td><td>1</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1111401834" title="Клик — скопировать">A 111 140 18 34</td><td>Экран защитный</td><td>1</td><td>ВЫПУСКНОЙ КОЛЛЕКТОР</td><td class="restr" data-expr="923"><span class="icode">923</span></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1119902204" title="Клик — скопировать">A 111 990 22 04</td><td>болт (SCHRAUBE)</td><td>5</td><td>ЭКРАНИРУЮЩИЙ ЩИТОК НА ВЫПУСКНОМ КОЛЛЕКТОРЕ СВЕРХУ; M6X12 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1111420040" title="Клик — скопировать">A 111 142 00 40</td><td>Держатель (HALTER)</td><td>1</td><td>ВЫПУСКН. КОЛЛЕКТОР ОГ НА КП</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1111420140" title="Клик — скопировать">A 111 142 01 40</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td>[028] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 921 10/50,20/60 145937 921 12/52,22/62 084454 942 10/50,20/60 063598 942 12/52,22/62 068059 943 10/50,      009300 944 10/50,      020943 944 12/52,      003459 945 10/50,20/60 039165 945 12/52,22/62 080276 946 10/50,20/60 021059 946 12/52,22/62 009655 947 10/50,      007298 947 12/52,      003117 973 10/50,20/60 021060 973 12/52,22/62 059550 975 10/50,20/60 016874 975 12/52,22/62 036116 977 12/52,      006143</td><td class="restr" data-expr="923"><span class="icode">923</span></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1111420240" title="Клик — скопировать">A 111 142 02 40</td><td>Держатель (HALTER)</td><td>1</td><td>ВЫПУСКН. КОЛЛЕКТОР ОГ НА КП</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A1119902104" title="Клик — скопировать">A 111 990 21 04</td><td>БОЛТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A9049900005" title="Клик — скопировать">A 904 990 00 05</td><td>ШПИЛЬКА</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0019904605" title="Клик — скопировать">A 001 990 46 05</td><td>Шпилька</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td><td class="restr" data-expr="923"><span class="icode">923</span></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0019904605" title="Клик — скопировать">A 001 990 46 05</td><td>Шпилька</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1201420072" title="Клик — скопировать">A 120 142 00 72</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ; M8</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0019902850" title="Клик — скопировать">A 001 990 28 50</td><td>ГАЙКА</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td><td class="restr" data-expr="923"><span class="icode">923</span></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0019902850" title="Клик — скопировать">A 001 990 28 50</td><td>ГАЙКА</td><td>1</td><td>КРОНШТЕЙН К ВЫПУСКНОМУ КОЛЛЕКТОРУ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0005406117" title="Клик — скопировать">A 000 540 61 17</td><td>Лямбда-зонд (LAMBDASONDE)</td><td>1</td><td>КИСЛОРОДНЫЙ ДАТЧИК [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ [002] ТОЛЬКО ДЛЯ А/М С СИСТ. НЕЙТРАЛИЗ. ОГ</td><td class="restr" data-expr="-828"><span class="icode">-828</span></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0015402117" title="Клик — скопировать">A 001 540 21 17</td><td>Лямбда-зонд (LAMBDASONDE)</td><td>1</td><td>КИСЛОРОДНЫЙ ДАТЧИК [002] ТОЛЬКО ДЛЯ А/М С СИСТ. НЕЙТРАЛИЗ. ОГ</td><td class="restr" data-expr="923-828"><span class="icode">923-828</span></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="A0015402117" title="Клик — скопировать">A 001 540 21 17</td><td>Лямбда-зонд (LAMBDASONDE)</td><td>1</td><td>КИСЛОРОДНЫЙ ДАТЧИК [002] ТОЛЬКО ДЛЯ А/М С СИСТ. НЕЙТРАЛИЗ. ОГ</td><td class="restr" data-expr="-828"><span class="icode">-828</span></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1705400573" title="Клик — скопировать">A 170 540 05 73</td><td>Держатель (HALTER)</td><td>1</td><td>КАБЕЛЬ ЗОНДА 02 НА ГБЦ,СЗАДИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A0005462075" title="Клик — скопировать">A 000 546 20 75</td><td>- хомут (SCHELLE)</td><td>2</td><td>18.0X18.5 MM</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="N910143008000" title="Клик — скопировать">N 910143 008000</td><td>Винт с 6-гр. глвк</td><td>1</td><td>КРОНШТЕЙН К ГОЛОВКЕ БЛОКА ЦИЛИНДРОВ M 8X16; M8X16</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14060000055.png", "poses": ["20", "23", "38", "41", "59", "62", "71", "74", "77", "83", "116", "119", "125"]}, {"png": "../../img_png/drawing_B14060000042.png", "poses": ["23", "38", "41", "62", "83"]}, {"png": "../../img_png/drawing_B14060000054.png", "poses": ["23", "38", "41", "62", "83"]}];</script><script>
+<p class="muted">Позиций: 26 · подписано на схемах: 26 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14060000055.png", "poses": ["20", "23", "38", "41", "59", "62", "71", "74", "77", "83", "116", "119", "125"], "hs": {"77": [[411, 838, 34, 27]], "23": [[742, 635, 34, 26]], "89": [[648, 449, 34, 26]], "59": [[601, 393, 35, 27]], "38": [[867, 829, 34, 26]], "116": [[1022, 257, 45, 27]], "92": [[675, 485, 33, 27]], "119": [[1067, 211, 46, 26]], "71": [[543, 859, 32, 27]], "83": [[793, 383, 32, 28]], "62": [[317, 426, 34, 26], [239, 541, 32, 26]], "41": [[263, 643, 34, 26]], "74": [[463, 817, 34, 27]], "20": [[544, 691, 34, 26]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B14060000042.png", "poses": ["23", "38", "41", "62", "83"], "hs": {"23": [[720, 734, 32, 24]], "26": [[652, 544, 33, 24]], "38": [[962, 743, 32, 25]], "83": [[525, 473, 33, 24]], "62": [[768, 343, 32, 27]], "41": [[633, 669, 32, 24]], "32": [[623, 416, 33, 27]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B14060000054.png", "poses": ["23", "38", "41", "62", "83"], "hs": {"23": [[1007, 583, 34, 27]], "38": [[1114, 767, 36, 27]], "83": [[651, 202, 35, 29]], "62": [[521, 226, 34, 27]], "41": [[416, 522, 32, 26]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

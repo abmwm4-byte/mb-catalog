@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C116028">040 STANDARD</a> → Z  55.894 VACUUM SUPPLY TANK (FOR TYPE 124 SEE STANDARD MICROFICHE)</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/118">040 STANDARD</a> → Z  55.894 VACUUM SUPPLY TANK (FOR TYPE 124 SEE STANDARD MICROFICHE)</div>
 <h1>Z  55.894 VACUUM SUPPLY TANK (FOR TYPE 124 SEE STANDARD MICROFICHE)</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">S05589400001 <span class="hint">(6)</span></button><button data-i="1" class="">S05589400002 <span class="hint">(1)</span></button><button data-i="2" class="">S05589400003 <span class="hint">(0)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S05589400001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S05589400001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1168000019" title="Клик — скопировать">A 116 800 00 19</td><td>БАЧОК</td><td>-</td><td>Z  55.894/04, Z  55.894/05 [016] ИСПОЛЬЗ.СТАР.НОМЕР ДЕТАЛИ ПРИ ШАССИ: 116.020     072528 116.024,025 068900 116.028,029 036006 115.032,033 055205 116.036     001346</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1168000219" title="Клик — скопировать">A 116 800 02 19</td><td>Бак</td><td>1</td><td>Z  55.894/04, Z  55.894/05</td><td class="restr"></td></tr><tr data-pos="15"><td>15</td><td class="pn" data-raw="A1238050298" title="Клик — скопировать">A 123 805 02 98</td><td>Уплотнение</td><td>1</td><td>Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A0009833598" title="Клик — скопировать">A 000 983 35 98</td><td>ПОРОЛОН</td><td>0</td><td>*** 10mm Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09 [017] STATE DIMENSION CODE NO.9005</td><td class="restr"></td></tr><tr data-pos="31"><td>31</td><td class="pn" data-raw="A0009833598" title="Клик — скопировать">A 000 983 35 98</td><td>ПОРОЛОН</td><td>1</td><td>ВАКУУМН. РЕСИВЕР 1000X1000 MM Z  55.894/04, Z  55.894/05, Z  55.894/07</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0009977252" title="Клик — скопировать">A 000 997 72 52</td><td>ШЛАНГ</td><td>-</td><td>Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0019973952" title="Клик — скопировать">A 001 997 39 52</td><td>Шланг</td><td>0</td><td>GREY/YELLOW Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0019973952" title="Клик — скопировать">A 001 997 39 52</td><td>Шланг</td><td>1</td><td>VACUUM DISTRIBUTOR IN ENGINE COMPARTMENT TO SUPPLY TANK ON REAR BODY PANEL 4200 MM Рулевое управление: Влево Z  55.894/04 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0019973952" title="Клик — скопировать">A 001 997 39 52</td><td>Шланг</td><td>1</td><td>*** 5250 MM Рулевое управление: Вправо Z  55.894/04 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="118"><td>118</td><td class="pn" data-raw="A0019973952" title="Клик — скопировать">A 001 997 39 52</td><td>Шланг</td><td>0</td><td>YELLOW/GREY Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N040621005200" title="Клик — скопировать">N 040621 005200</td><td>Изоляционный шланг</td><td>0</td><td>Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="135"><td>135</td><td class="pn" data-raw="A0019978652" title="Клик — скопировать">A 001 997 86 52</td><td>ШЛАНГ</td><td>0</td><td>VIOLET/GREY Z  55.894/01, Z  55.894/04, Z  55.894/05, Z  55.894/06, Z  55.894/07, Z  55.894/08, Z  55.894/09 [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0029885378" title="Клик — скопировать">A 002 988 53 78</td><td>Защита от проворота</td><td>1</td><td>Z  55.894/04, Z  55.894/05</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 13 · подписано на схемах: 12 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05589400001.png", "poses": ["10", "15", "31", "101", "122", "135"]}, {"png": "../../img_png/drawing_S05589400002.png", "poses": ["118"]}, {"png": "../../img_png/drawing_S05589400003.png", "poses": []}];</script><script>
+<p class="muted">Позиций: 13 · подписано на схемах: 12 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S05589400001.png", "poses": ["10", "15", "31", "101", "122", "135"], "hs": {"55": [[177, 36, 33, 17]], "66": [[197, 99, 33, 17]], "45": [[106, 179, 33, 17]], "35": [[120, 152, 33, 17]], "47": [[135, 213, 33, 17]], "58": [[177, 55, 33, 17]], "15": [[237, 468, 33, 17]], "122": [[242, 132, 33, 17]], "101": [[387, 214, 33, 17]], "135": [[638, 548, 33, 17]], "50": [[154, 224, 33, 17]], "61": [[177, 68, 33, 17]], "40": [[191, 133, 33, 17]], "31": [[325, 566, 33, 17]], "10": [[90, 84, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S05589400002.png", "poses": ["118"], "hs": {"118": [[495, 81, 33, 17]]}, "w": 890, "h": 592}, {"png": "../../img_png/drawing_S05589400003.png", "poses": [], "hs": {}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

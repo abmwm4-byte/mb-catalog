@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45G  Действительно для: CA, US</a> → 015 ВОЗДУШНЫЙ ФИЛЬТР</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/98">45G  Действительно для: CA, US</a> → 015 ВОЗДУШНЫЙ ФИЛЬТР</div>
 <h1>015 ВОЗДУШНЫЙ ФИЛЬТР</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B09015000112 <span class="hint">(14)</span></button><button data-i="1" class="">B09015000093 <span class="hint">(6)</span></button><button data-i="2" class="">B09015000105 <span class="hint">(12)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B09015000112.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B09015000112.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1110900001" title="Клик — скопировать">A 111 090 00 01</td><td>Воздушный фильтр (LUFTFILTER)</td><td>1</td><td>ФИРМА KNECHT</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A6040940904" title="Клик — скопировать">A 604 094 09 04</td><td>- Фил. элемент возд.фильтра (LUFTFILTEREINSATZ)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0000944055" title="Клик — скопировать">A 000 094 40 55</td><td>- Крышка (VERSCHLUSS)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A0000922760" title="Клик — скопировать">A 000 092 27 60</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>1</td><td>РЕГУЛЯТОР РЕЦИРКУЛЯЦ.НА ВОЗДУШ.ФИЛЬТРЕ</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0069972790" title="Клик — скопировать">A 006 997 27 90</td><td>Шланговый хомут (SCHLAUCHSCHELLE)</td><td>1</td><td>ВПУСКНОЙ ВОЗДУХОВОД К ФИЛЬТРУ; 60\-80 MM</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A0069972790" title="Клик — скопировать">A 006 997 27 90</td><td>Шланговый хомут (SCHLAUCHSCHELLE)</td><td>1</td><td>ШТУЦЕР ВПУСКНОГО КОЛЛЕКТОРА К ВПУСКНОМУ КОЛЛЕКТОРУ; 60\-80 MM</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A6040940285" title="Клик — скопировать">A 604 094 02 85</td><td>Резиновый буфер (GUMMIPUFFER)</td><td>3</td><td>ДЕМПФИРУЮЩИЙ ФИЛЬТР НА ЛОНЖЕРОНЕ</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1110980009" title="Клик — скопировать">A 111 098 00 09</td><td>Сервомеханизм рецирк. (UMLUFTSTELLER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="N914152006000" title="Клик — скопировать">N 914152 006000</td><td>Винт с неспадающей шайбой (KOMBISCHRAUBE)</td><td>2</td><td>РЕГУЛЯТОР РЕЦИРКУЛЯЦ.НА ВОЗДУШ.ФИЛЬТРЕ</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="A1110900182" title="Клик — скопировать">A 111 090 01 82</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ВОЗДУШНЫЙ ФИЛЬТР НА ПАТРУБКЕ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="A1110980483" title="Клик — скопировать">A 111 098 04 83</td><td>Шланг (SCHLAUCH)</td><td>1</td><td>ВОЗДУХОЗАБОРН. КОРПУС</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="N916026050000" title="Клик — скопировать">N 916026 050000</td><td>Хомут</td><td>-</td><td>50\-70MM</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0069972690" title="Клик — скопировать">A 006 997 26 90</td><td>Шланговый хомут (SCHLAUCHSCHELLE)</td><td>2</td><td>ВОЗДУХОЗАБОРН. КОРПУС; 50\-70/9 C7 W3</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1705280107" title="Клик — скопировать">A 170 528 01 07</td><td>Разветвитель трубы (ROHRKRUEMMER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="126"><td>126</td><td class="pn" data-raw="A1705200004" title="Клик — скопировать">A 170 520 00 04</td><td>Воздухозаборник (HUTZE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="128"><td>128</td><td class="pn" data-raw="A1705050686" title="Клик — скопировать">A 170 505 06 86</td><td>МАНЖЕТА</td><td>1</td><td>360 MM [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1239900092" title="Клик — скопировать">A 123 990 00 92</td><td>Распорная заклепка (SPREIZNIET)</td><td>3</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 17 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09015000112.png", "poses": ["14", "35", "44", "56", "59", "65", "86", "89", "92", "95", "98", "107", "126", "128"]}, {"png": "../../img_png/drawing_B09015000093.png", "poses": ["35", "44", "59", "65", "128", "140"]}, {"png": "../../img_png/drawing_B09015000105.png", "poses": ["35", "44", "56", "59", "65", "86", "89", "92", "95", "98", "128", "140"]}];</script><script>
+<p class="muted">Позиций: 17 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B09015000112.png", "poses": ["14", "35", "44", "56", "59", "65", "86", "89", "92", "95", "98", "107", "126", "128"], "hs": {"44": [[477, 528, 33, 25]], "56": [[823, 578, 33, 25]], "89": [[928, 695, 34, 25]], "35": [[965, 193, 34, 24]], "14": [[742, 592, 30, 24]], "59": [[889, 354, 32, 24]], "126": [[400, 734, 43, 24]], "128": [[197, 584, 44, 25]], "107": [[523, 672, 42, 25]], "92": [[1138, 456, 30, 24]], "95": [[1062, 803, 32, 24]], "86": [[856, 619, 32, 24]], "65": [[666, 692, 32, 24]], "98": [[1043, 592, 32, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B09015000093.png", "poses": ["35", "44", "59", "65", "128", "140"], "hs": {"44": [[540, 361, 34, 26]], "35": [[1163, 349, 34, 27]], "59": [[1061, 389, 34, 27]], "128": [[138, 529, 46, 27]], "140": [[369, 472, 46, 26]], "65": [[586, 681, 34, 26]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B09015000105.png", "poses": ["35", "44", "56", "59", "65", "86", "89", "92", "95", "98", "128", "140"], "hs": {"44": [[542, 341, 34, 27]], "56": [[913, 535, 34, 27]], "89": [[1030, 650, 34, 27]], "35": [[456, 359, 36, 26]], "59": [[953, 343, 34, 27]], "128": [[149, 497, 44, 26]], "92": [[1203, 449, 34, 26]], "95": [[1163, 759, 34, 28]], "140": [[376, 445, 45, 27]], "86": [[955, 574, 34, 26]], "65": [[622, 623, 36, 28]], "98": [[1107, 641, 34, 26]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

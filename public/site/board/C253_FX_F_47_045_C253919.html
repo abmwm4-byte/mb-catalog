@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253919">C253_FX -/-</a> → 045 Топливопроводы</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">C253_FX -/-</a> → 045 Топливопроводы</div>
 <h1>045 Топливопроводы</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.323.796_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.323.796_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2534764000" title="Клик — скопировать">A 253 476 40 00</td><td>Газовый распределитель (GAS DISTRIBUTOR)</td><td>1</td><td></td><td class="restr" data-expr="9O1/9O1+(QN3+AN2)"><span class="icode">9O1/9O1+(QN3+AN2)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2529050900" title="Клик — скопировать">A 252 905 09 00</td><td>Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>Распределитель газа</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Распределитель к раме; M6X25</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2534763700" title="Клик — скопировать">A 253 476 37 00</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>Газораспределитель к переднему блоку клапанов</td><td class="restr" data-expr="9O1/9O1+(QN3+AN2)"><span class="icode">9O1/9O1+(QN3+AN2)</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A2534763900" title="Клик — скопировать">A 253 476 39 00</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>Газораспределитель к блоку регулирования давления</td><td class="restr" data-expr="9O1/9O1+(QN3+AN2)"><span class="icode">9O1/9O1+(QN3+AN2)</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2534763800" title="Клик — скопировать">A 253 476 38 00</td><td>Топливопровод (FUEL LINE)</td><td>1</td><td>Газораспределитель к заднему блоку клапанов</td><td class="restr" data-expr="9O1/9O1+(QN3+AN2)"><span class="icode">9O1/9O1+(QN3+AN2)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A2534708600" title="Клик — скопировать">A 253 470 86 00</td><td>Обратный клапан (CHECK VALVE)</td><td>1</td><td></td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="85"><td>85</td><td class="pn" data-raw="A2534763600" title="Клик — скопировать">A 253 476 36 00</td><td>- Топливопровод (FUEL LINE)</td><td>1</td><td>От обратного клапана к газораспределителю</td><td class="restr" data-expr="9O1/9O1+(QN3+AN2)"><span class="icode">9O1/9O1+(QN3+AN2)</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A2534706701" title="Клик — скопировать">A 253 470 67 01</td><td>Заливной трубопровод (FILLER LINE)</td><td>1</td><td></td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2524710700" title="Клик — скопировать">A 252 471 07 00</td><td>Пылезащитный колпачок (DUST CAP)</td><td>1</td><td>Заливная горловина бака</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2529060100" title="Клик — скопировать">A 252 906 01 00</td><td>Передатчик (TRANSMITTER)</td><td>1</td><td>Заливная горловина бака</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2534765600" title="Клик — скопировать">A 253 476 56 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Заливной патрубок к кузову</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Датчик к держателю; M6X16</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N910143006001" title="Клик — скопировать">N 910143 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>3</td><td>Крепление заливной горловины бака; M6X16</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009959990" title="Клик — скопировать">A 000 995 99 90</td><td>Кабельная стяжка (CABLE STRAP)</td><td>1</td><td>Датчик к держателю</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="190"><td>190</td><td class="pn" data-raw="A0009950083" title="Клик — скопировать">A 000 995 00 83</td><td>Держатель разъема (PLUG HOLDER)</td><td>1</td><td></td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N000000003477" title="Клик — скопировать">N 000000 003477</td><td>Гайка (NUT)</td><td>3</td><td>Крепление кронштейна к кузову; M6</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N000000000276" title="Клик — скопировать">N 000000 000276</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление кронштейна к кузову; M8X20</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="A0029951577" title="Клик — скопировать">A 002 995 15 77</td><td>Держатель трубопровода (LINE BRACKET)</td><td>4</td><td>К монтажной раме (передн.)</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0059950277" title="Клик — скопировать">A 005 995 02 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>К монтажной раме (передн.)</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="260"><td>260</td><td class="pn" data-raw="A0059950277" title="Клик — скопировать">A 005 995 02 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>К монтажной раме (задн.)</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0009952900" title="Клик — скопировать">A 000 995 29 00</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>3</td><td>В правой колёсной арке Рулевое управление: Влево</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="270"><td>270</td><td class="pn" data-raw="A0009952900" title="Клик — скопировать">A 000 995 29 00</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>3</td><td>В правой колёсной арке Рулевое управление: Вправо</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="280"><td>280</td><td class="pn" data-raw="A2534763100" title="Клик — скопировать">A 253 476 31 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Обратный клапан</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="290"><td>290</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Кронштейн обратного клапана к раме; M6X25</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2539055102" title="Клик — скопировать">A 253 905 51 02</td><td>Датчик газа (GAS SENSOR)</td><td>1</td><td>К днищу</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="360"><td>360</td><td class="pn" data-raw="A2534712900" title="Клик — скопировать">A 253 471 29 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Датчик</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>Датчик к держателю; M6X16</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="380"><td>380</td><td class="pn" data-raw="N000000003477" title="Клик — скопировать">N 000000 003477</td><td>Гайка (NUT)</td><td>2</td><td>Датчик к раме; M6</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="390"><td>390</td><td class="pn" data-raw="A0055456340" title="Клик — скопировать">A 005 545 63 40</td><td>Держатель (HOLDER)</td><td>1</td><td>Штекер</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A2539005200" title="Клик — скопировать">A 253 900 52 00</td><td>Блок управления (CONTROL UNIT)</td><td>1</td><td>Топливная система [672] ДЕТАЛЬ ПОСЛЕ УСТАН.ПРОВЕРИТЬ НА АКТУАЛЬНОСТЬ &quot;ПРОШИВНОГО&quot; ПО</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="N000000003477" title="Клик — скопировать">N 000000 003477</td><td>Гайка (NUT)</td><td>3</td><td>Блок управления к остову кузова; M6</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.323.796_version_001.png", "poses": ["10", "20", "30", "50", "60", "70", "80", "85", "90", "130", "140", "150", "160", "170", "180", "190", "200", "210", "240", "250", "260", "270", "280", "290", "350", "360", "370", "380", "390", "450", "460"]}];</script><script>
+<p class="muted">Позиций: 32 · подписано на схемах: 32 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.323.796_version_001.png", "poses": ["10", "20", "30", "50", "60", "70", "80", "85", "90", "130", "140", "150", "160", "170", "180", "190", "200", "210", "240", "250", "260", "270", "280", "290", "350", "360", "370", "380", "390", "450", "460"], "hs": {"190": [[964, 208, 43, 28]], "290": [[641, 589, 43, 29]], "170": [[934, 83, 42, 29]], "390": [[704, 488, 43, 29]], "270": [[844, 425, 43, 29]], "150": [[1029, 173, 43, 29]], "370": [[645, 485, 43, 29]], "250": [[720, 661, 42, 28]], "130": [[716, 57, 43, 28]], "350": [[598, 440, 42, 28]], "450": [[317, 688, 42, 29]], "210": [[1057, 120, 43, 28]], "90": [[842, 313, 30, 29]], "70": [[428, 692, 30, 29]], "50": [[542, 676, 30, 28]], "30": [[546, 735, 30, 28]], "10": [[535, 708, 30, 29]], "180": [[898, 117, 42, 29]], "280": [[738, 571, 43, 29]], "160": [[845, 63, 43, 28]], "380": [[695, 414, 43, 29]], "260": [[688, 624, 42, 29]], "140": [[742, 108, 43, 29]], "360": [[597, 404, 42, 29]], "240": [[409, 771, 43, 29]], "460": [[295, 774, 42, 28]], "200": [[918, 206, 42, 28]], "80": [[651, 537, 31, 29]], "60": [[553, 782, 30, 28]], "85": [[563, 537, 31, 29]], "20": [[622, 712, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

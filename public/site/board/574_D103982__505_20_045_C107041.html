@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → 045 НАТЯЖИТЕЛЬ РЕМНЯ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">574 AB 09/85</a> → 045 НАТЯЖИТЕЛЬ РЕМНЯ</div>
 <h1>045 НАТЯЖИТЕЛЬ РЕМНЯ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B20045000030.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B20045000030.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1032000770" title="Клик — скопировать">A 103 200 07 70</td><td>НАТЯЖИТЕЛЬ РЕМНЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1032000670" title="Клик — скопировать">A 103 200 06 70</td><td>НАТЯЖИТЕЛЬ РЕМНЯ</td><td>-</td><td>[015] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 940 10/50,20/60 015408 940 12/52,22/62 031328 941 10/50,20/60 002804 941 12/52,22/62 009021 942 10/50,20/60 005771 942 12/52,22/62 008483 943 10/50,20/60 000091 943 12/52,22/62 000192 981 10/50,20/60 004691 981 12/52,22/62 038451 982 10/50,20/60 001575 982 12/52,22/62 006717 983 10/50,20/60 016853 983 12/52,22/62 085855 985 10/50,20/60 000412 985 12/52,22/62 001436</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1032000870" title="Клик — скопировать">A 103 200 08 70</td><td>Натяжитель ремня</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1032000570" title="Клик — скопировать">A 103 200 05 70</td><td>- Натяжной ролик ремня</td><td>1</td><td>НАТЯЖНОЙ РОЛИК РЕМНЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N006912008014" title="Клик — скопировать">N 006912 008014</td><td>- Винт</td><td>1</td><td>НАТЯЖНОЙ РОЛИК НА РЫЧАГЕ; M8X40 [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A6012020522" title="Клик — скопировать">A 601 202 05 22</td><td>- Запорная крышка</td><td>1</td><td>НАТЯЖНОЙ РОЛИК</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1032000114" title="Клик — скопировать">A 103 200 01 14</td><td>Амортизатор</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N914008007001" title="Клик — скопировать">N 914008 007001</td><td>Винт с неспадающей шайбой</td><td>1</td><td>АМОРТИЗАТОР К НАТЯЖИТЕЛЮ РЕМНЯ [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000933007037" title="Клик — скопировать">N 000933 007037</td><td>Винт</td><td>1</td><td>АМОРТИЗАТОР К НАТЯЖИТЕЛЮ РЕМНЯ [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N304017008027" title="Клик — скопировать">N 304017 008027</td><td>Винт с 6-гранной головкой</td><td>1</td><td>АМОРТИЗ.НА ПРОУШИНЕ ПОДВЕСКИ [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N006902007200" title="Клик — скопировать">N 006902 007200</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N009021008213" title="Клик — скопировать">N 009021 008213</td><td>Шайба</td><td>1</td><td>АМОРТИЗАТОР К НАТЯЖИТЕЛЮ РЕМНЯ; 8 MM [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N009021008205" title="Клик — скопировать">N 009021 008205</td><td>Шайба</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N009021008213" title="Клик — скопировать">N 009021 008213</td><td>Шайба</td><td>1</td><td>АМОРТИЗ.НА ПРОУШИНЕ ПОДВЕСКИ; 8 MM [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000934008010" title="Клик — скопировать">N 000934 008010</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка</td><td>1</td><td>АМОРТИЗ.НА ПРОУШИНЕ ПОДВЕСКИ; M8 [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000934007005" title="Клик — скопировать">N 000934 007005</td><td>Гайка</td><td>1</td><td>АМОРТИЗАТОР К НАТЯЖИТЕЛЮ РЕМНЯ [027] ДЛЯ А/М С АКП И/ИЛИ КОМПРЕСС. ХЛАДАГЕНТА</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1032000136" title="Клик — скопировать">A 103 200 01 36</td><td>ТЯГА</td><td>-</td><td>[013] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 940 10/50,20/60 003605 940 12/52,22/62 005408 941 10/50,20/60 000737 941 12/52,22/62 003015 981 10/50,20/60 001516 981 12/52,22/62 011360 982 10/50,20/60 000363 982 12/52,22/62 001929 983 10/50,20/60 004040 983 12/52,22/62 024162</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1032000236" title="Клик — скопировать">A 103 200 02 36</td><td>Натяжная штанга</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1022020174" title="Клик — скопировать">A 102 202 01 74</td><td>- БОЛТ</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N006799005002" title="Клик — скопировать">N 006799 005002</td><td>- Стопорная шайба</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N006799005004" title="Клик — скопировать">N 006799 005004</td><td>- Стопорная шайба</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1032020172" title="Клик — скопировать">A 103 202 01 72</td><td>- гайка</td><td>1</td><td>(НАТЯГ.ЭЛЕМ.) НАТЯЖ.РОЛИК РЕМНЯ НА КРОНШТ.</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1032020172" title="Клик — скопировать">A 103 202 01 72</td><td>- гайка</td><td>1</td><td>(НАТЯГ.ЭЛЕМ.) НАТЯЖ.РОЛИК РЕМНЯ НА КРОНШТ.</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1022020192" title="Клик — скопировать">A 102 202 01 92</td><td>Установочная метка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1022020053" title="Клик — скопировать">A 102 202 00 53</td><td>Проставочная трубка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1032000640" title="Клик — скопировать">A 103 200 06 40</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1032021440" title="Клик — скопировать">A 103 202 14 40</td><td>Держатель</td><td>1</td><td>НАТЯЖИТЕЛЬ РЕМНЯ</td><td class="restr"></td></tr><tr data-pos="51"><td>51</td><td class="pn" data-raw="A1032020353" title="Клик — скопировать">A 103 202 03 53</td><td>Проставочная трубка</td><td>1</td><td>НАТЯЖИТЕЛЬ РЕМНЯ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1032020840" title="Клик — скопировать">A 103 202 08 40</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td>[006] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 940 10/50,20/60 000172 940 12/52,22/62 000213 941 10/50,20/60 000047 941 12/52 22/62 000062 981 10/50,20/60 000112 981 12/52,22/62 000123 982 10/50,20/60 000031 982 12/52,22/62 000051 983 10/50,20/60 001195 983 12/52,22/62 002984</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1032021240" title="Клик — скопировать">A 103 202 12 40</td><td>Держатель</td><td>1</td><td>НАТЯЖИТЕЛЬ РЕМНЯ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N000931012175" title="Клик — скопировать">N 000931 012175</td><td>Винт</td><td>1</td><td>НАТЯЖИТ.РЕМНЯ НА КРОНШТ.НАСОСА ГУР</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1032000740" title="Клик — скопировать">A 103 200 07 40</td><td>ДЕРЖАТЕЛЬ</td><td>-</td><td>[006] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 940 10/50,20/60 000172 940 12/52,22/62 000213 941 10/50,20/60 000047 941 12/52 22/62 000062 981 10/50,20/60 000112 981 12/52,22/62 000123 982 10/50,20/60 000031 982 12/52,22/62 000051 983 10/50,20/60 001195 983 12/52,22/62 002984</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1029900040" title="Клик — скопировать">A 102 990 00 40</td><td>Пластина плоскопарал.</td><td>-</td><td>[039] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ДВИГАТЕЛЯ 940 10/50,20/60 026081 940 12/52,22/62 063064 941 10/50,20/60 003956 941 12/52,22/62 013291 942 10/50,20/60 013458 942 12/52,22/62 026280 943 10/50,20/60 000416 943 12/52,22/62 001000 981 10/50,20/60 006766 981 12/52,22/62 082241 982 10/50,20/60 002264 982 12/52,22/62 010154 983 10/50,20/60 030050 983 12/52,22/62 160986 984 10/50,20/60 000053 984 12/52,22/62 000069 985 10/50,20/60 001961 985 12/52,22/62 007396</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1039900040" title="Клик — скопировать">A 103 990 00 40</td><td>Диск</td><td>1</td><td>НАТЯЖИТ.РЕМНЯ НА КРОНШТ.НАСОСА ГУР</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="Q000000000001" title="Клик — скопировать">Q 000000000001</td><td>Важная информация</td><td>-</td><td>КЛИН. РЕМЕНЬ СМ. ГРУППУ 13</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 37 · подписано на схемах: 36 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B20045000030.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "51", "53", "56", "59"]}];</script><script>
+<p class="muted">Позиций: 37 · подписано на схемах: 36 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B20045000030.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "51", "53", "56", "59"], "hs": {"11": [[234, 241, 33, 17]], "44": [[409, 380, 33, 17]], "23": [[366, 295, 33, 17]], "56": [[283, 405, 33, 17]], "35": [[643, 246, 33, 17]], "14": [[203, 245, 33, 17]], "47": [[566, 331, 33, 17]], "26": [[528, 246, 33, 17]], "59": [[321, 392, 33, 17]], "38": [[575, 264, 33, 17]], "17": [[529, 205, 33, 17]], "29": [[551, 243, 33, 17]], "5": [[473, 348, 33, 17]], "8": [[269, 210, 33, 17]], "50": [[718, 269, 33, 17]], "51": [[654, 306, 33, 17]], "41": [[640, 116, 33, 17]], "20": [[339, 302, 33, 17]], "53": [[365, 411, 33, 17]], "32": [[604, 201, 33, 17]]}, "w": 890, "h": 592}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C251175">63U -/-</a> → 105 ВОЗДУШНЫЙ НАСОС</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/87">63U -/-</a> → 105 ВОЗДУШНЫЙ НАСОС</div>
 <h1>105 ВОЗДУШНЫЙ НАСОС</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B14105000026.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B14105000026.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0001403785" title="Клик — скопировать">A 000 140 37 85</td><td>Насос (PUMP)</td><td>1</td><td>(ВОЗД. НАСОС) ЭЛЕКТР.</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1122370240" title="Клик — скопировать">A 112 237 02 40</td><td>Держатель (HOLDER)</td><td>1</td><td>ВОЗДУШНЫЙ НАСОС</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1122370840" title="Клик — скопировать">A 112 237 08 40</td><td>Держатель (HOLDER)</td><td>1</td><td>ВОЗДУШНЫЙ НАСОС [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1122370012" title="Клик — скопировать">A 112 237 00 12</td><td>Буфер (BUFFER)</td><td>1</td><td>ВОЗДУШНЫЙ НАСОС</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0019907822" title="Клик — скопировать">A 001 990 78 22</td><td>БОЛТ</td><td>1</td><td>ДЕРЖАТ. И РЕЗИН. ОПОРА НА КАРТЕРЕ ГРМ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A0021403560" title="Клик — скопировать">A 002 140 35 60</td><td>Клапан (VALVE)</td><td>1</td><td>ОТКЛЮЧ. КЛАПАН СЛЕВА [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A0021403660" title="Клик — скопировать">A 002 140 36 60</td><td>Клапан (VALVE)</td><td>1</td><td>ОТКЛЮЧ. КЛАПАН СПРАВА [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A1122380080" title="Клик — скопировать">A 112 238 00 80</td><td>Уплотнительная прокладка (GASKET)</td><td>2</td><td>КЛАПАН ОТКЛЮЧЕНИЯ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A1122380082" title="Клик — скопировать">A 112 238 00 82</td><td>Шланг (HOSE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1122370140" title="Клик — скопировать">A 112 237 01 40</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A0019906222" title="Клик — скопировать">A 001 990 62 22</td><td>болт</td><td>-</td><td>M6X19</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="N000000001116" title="Клик — скопировать">N 000000 001116</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>2</td><td>ДЕРЖАТЕЛЬ НА НАСОСЕ ЖИДКОСТИ; M6X19</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0025401497" title="Клик — скопировать">A 002 540 14 97</td><td>Переключающий клапан</td><td>1</td><td>(ЭЛ. ПЕРЕКЛ. КЛАПАН)</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A0025407097" title="Клик — скопировать">A 002 540 70 97</td><td>Переключающий клапан (SWITCHOVER VALVE)</td><td>1</td><td>(ЭЛ. ПЕРЕКЛ. КЛАПАН)</td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A1170780981" title="Клик — скопировать">A 117 078 09 81</td><td>Сетчатый фильтр (SIEVE INSERT)</td><td>1</td><td>УПРАВЛЕНИЕ ВОЗДУШ. НАСОСА</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0041533228" title="Клик — скопировать">A 004 153 32 28</td><td>Датчик давления</td><td>1</td><td>(ДАТЧИК ДАВЛЕНИЯ)</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A0051535028" title="Клик — скопировать">A 005 153 50 28</td><td>Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>(ДАТЧИК ДАВЛЕНИЯ)</td><td class="restr"></td></tr><tr data-pos="87"><td>87</td><td class="pn" data-raw="A0279972748" title="Клик — скопировать">A 027 997 27 48</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N910142006001" title="Клик — скопировать">N 910142 006001</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>ДАТЧИК ДАВЛЕНИЯ К КРОНШТЕЙНУ M 6X16; M6X16</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A0001581435" title="Клик — скопировать">A 000 158 14 35</td><td>Трубопровод (PIPING)</td><td>1</td><td>ЭЛ. ПЕРЕКЛ. КЛАПАН К РАСПРЕД. ЭЛЕМЕНТУ 110mm; 4X1mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N040621018200" title="Клик — скопировать">N 040621 018200</td><td>Изоляционный шланг (INSULATING TUBING)</td><td>NB</td><td>150mm [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="104"><td>104</td><td class="pn" data-raw="N040621012200" title="Клик — скопировать">N 040621 012200</td><td>Изоляционный шланг (INSULATING TUBING)</td><td>NB</td><td>180 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A6010780245" title="Клик — скопировать">A 601 078 02 45</td><td>Штуцер ответвления (BRANCH FITTING)</td><td>1</td><td>ЭЛ. ПЕРЕКЛ. КЛАПАН К ОТКЛЮЧ. КЛАП.; 3.5 MM</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1162760929" title="Клик — скопировать">A 116 276 09 29</td><td>Соед. шланговый штуцер (HOSE CONNECTION FITTING)</td><td>1</td><td>ОТКЛЮЧ. КЛАПАН СПРАВА; 4 MM</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг (HOSE)</td><td>1</td><td>КЛАПАН ОТКЛЮЧЕНИЯ 245 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг (HOSE)</td><td>1</td><td>ДАТЧИК ДАВЛ. К ВСАСЫВ. ТРУБЕ 245 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1179970982" title="Клик — скопировать">A 117 997 09 82</td><td>Шланг (HOSE)</td><td>1</td><td>ВПУСКН. КОЛЛЕКТОР К ЭЛЕКТ. ПЕРЕКЛ. КЛАПАНУ 245 MM; 8X3.5 MM [404] ЗАКАЗЫВАТЬ ПОГОННЫМИ МЕТРАМИ</td><td class="restr"></td></tr><tr data-pos="125"><td>125</td><td class="pn" data-raw="A1170780381" title="Клик — скопировать">A 117 078 03 81</td><td>Шланг (HOSE)</td><td>1</td><td>ПЕРЕКЛЮЧАЮЩИЙ ЭЛЕКТРОКЛАПАН</td><td class="restr"></td></tr><tr data-pos="131"><td>131</td><td class="pn" data-raw="A1170780581" title="Клик — скопировать">A 117 078 05 81</td><td>Шланг (HOSE)</td><td>1</td><td>ВПУСКН. КОЛЛЕКТОР К ЭЛЕКТ. ПЕРЕКЛ. КЛАПАНУ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0011406660" title="Клик — скопировать">A 001 140 66 60</td><td>Клапан</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A0021408460" title="Клик — скопировать">A 002 140 84 60</td><td>Клапан (VALVE)</td><td>1</td><td>ОБРАТНЫЙ КЛАПАН</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14105000026.png", "poses": ["5", "11", "20", "23", "41", "44", "47", "53", "59", "65", "71", "77", "86", "87", "95", "101", "104", "107", "113", "119", "125", "131", "140"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B14105000026.png", "poses": ["5", "11", "20", "23", "41", "44", "47", "53", "59", "65", "71", "77", "86", "87", "95", "101", "104", "107", "113", "119", "125", "131", "140"], "hs": {"11": [[685, 868, 29, 24]], "44": [[791, 297, 34, 29]], "77": [[508, 438, 31, 26]], "23": [[615, 814, 32, 24]], "47": [[810, 372, 33, 24]], "59": [[513, 698, 32, 27]], "140": [[610, 321, 46, 28]], "131": [[616, 215, 42, 24]], "101": [[669, 173, 41, 24]], "113": [[872, 154, 44, 24]], "125": [[502, 255, 44, 25]], "5": [[581, 726, 19, 24]], "104": [[473, 186, 44, 25]], "107": [[818, 160, 44, 24]], "119": [[987, 197, 44, 26], [603, 496, 43, 25], [729, 538, 42, 25]], "71": [[506, 364, 31, 25]], "95": [[266, 217, 32, 24]], "41": [[994, 419, 33, 29]], "20": [[823, 801, 34, 28]], "53": [[997, 297, 31, 25]], "86": [[329, 332, 32, 24]], "65": [[425, 709, 32, 24]], "87": [[389, 316, 31, 26]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

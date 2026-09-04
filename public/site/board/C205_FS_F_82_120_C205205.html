@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205205">C205_FS -/-</a> → 120 Стеклоочиститель</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C205_FS -/-</a> → 120 Стеклоочиститель</div>
 <h1>120 Стеклоочиститель</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.078.292_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.078.292_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058200740" title="Клик — скопировать">A 205 820 07 40</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="805/806/807/808"><span class="icode">805/806/807/808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058208102" title="Клик — скопировать">A 205 820 81 02</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="805/806/807/808"><span class="icode">805/806/807/808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138207902" title="Клик — скопировать">A 213 820 79 02</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138205104" title="Клик — скопировать">A 213 820 51 04</td><td>Стеклоочиститель (WIPER SYSTEM)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138205804" title="Клик — скопировать">A 213 820 58 04</td><td>Стеклоочиститель (WIPER SYSTEM)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058200940" title="Клик — скопировать">A 205 820 09 40</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="805/806/807/808"><span class="icode">805/806/807/808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2058208202" title="Клик — скопировать">A 205 820 82 02</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="805/806/807/808"><span class="icode">805/806/807/808</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138207402" title="Клик — скопировать">A 213 820 74 02</td><td>WIPER SYSTEM</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138205204" title="Клик — скопировать">A 213 820 52 04</td><td>Стеклоочиститель (WIPER SYSTEM)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2138205904" title="Клик — скопировать">A 213 820 59 04</td><td>Стеклоочиститель (WIPER SYSTEM)</td><td>1</td><td>Рулевое управление: Вправо</td><td class="restr" data-expr="-(805/806/807/808)"><span class="icode">-(805/806/807/808)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2058200114" title="Клик — скопировать">A 205 820 01 14</td><td>- Держатель (HOLDER)</td><td>1</td><td>Стеклоочиститель к перегородке</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N910105008008" title="Клик — скопировать">N 910105 008008</td><td>- Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Держатель к трапеции стеклоочистителя; M8X16</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N910105008005" title="Клик — скопировать">N 910105 008005</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Стеклоочиститель к перегородке; M8X25</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="N304017008021" title="Клик — скопировать">N 304017 008021</td><td>Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Стеклоочиститель к перегородке; M8X20</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0949900805" title="Клик — скопировать">A 094 990 08 05</td><td>Винт с неспадающей шайбой (SCREW W WASHER ASSEMBLY)</td><td>1</td><td>Стеклоочиститель к перегородке; M8X25</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000008303" title="Клик — скопировать">N 000000 008303</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>2</td><td>Стеклоочиститель к моторному щиту; M8</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000008294" title="Клик — скопировать">N 000000 008294</td><td>ГАЙКА КОМБИНИРОВАННАЯ (NUT-AND-WASHER ASSEMBLY)</td><td>2</td><td>Стеклоочиститель к моторному щиту; M8</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2058208301" title="Клик — скопировать">A 205 820 83 01</td><td>Поводок стеклоочистителя (WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2058208401" title="Клик — скопировать">A 205 820 84 01</td><td>Поводок стеклоочистителя (WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2058240019" title="Клик — скопировать">A 205 824 00 19</td><td>- Крышка поводка стеклооч. (COVER, WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2058240000" title="Клик — скопировать">A 205 824 00 00</td><td>- Крышка поводка стеклооч. (COVER, WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2058240319" title="Клик — скопировать">A 205 824 03 19</td><td>- Крышка поводка стеклооч. (COVER, WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2058240319" title="Клик — скопировать">A 205 824 03 19</td><td>- Крышка поводка стеклооч. (COVER, WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2058240100" title="Клик — скопировать">A 205 824 01 00</td><td>- Крышка поводка стеклооч. (COVER, WIPER ARM)</td><td>1</td><td>Для стороны водителя Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058203501" title="Клик — скопировать">A 205 820 35 01</td><td>Поводок стеклоочистителя (WIPER ARM)</td><td>1</td><td>Для стороны переднего пассажира Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2058203601" title="Клик — скопировать">A 205 820 36 01</td><td>Поводок стеклоочистителя (WIPER ARM)</td><td>1</td><td>Для стороны переднего пассажира Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2058240119" title="Клик — скопировать">A 205 824 01 19</td><td>- Накладка шарн. стеклооч. (COVER, WIPER JOINT)</td><td>1</td><td>Для стороны переднего пассажира Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2058240219" title="Клик — скопировать">A 205 824 02 19</td><td>- Накладка шарн. стеклооч. (COVER, WIPER JOINT)</td><td>1</td><td>Для стороны переднего пассажира Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A2058205700" title="Клик — скопировать">A 205 820 57 00</td><td>К-т щетки стеклооч. (PARTS KIT, WIPER BLADE)</td><td>1</td><td>Комплект стеклоочистителя, сторона водителя и переднего пассажира Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A2058204503" title="Клик — скопировать">A 205 820 45 03</td><td>Ремк-т щетки стеклооч. (REPAIR KIT, WIPER BLADE)</td><td>1</td><td>Комплект стеклоочистителя, сторона водителя и переднего пассажира Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A2058205800" title="Клик — скопировать">A 205 820 58 00</td><td>К-т щетки стеклооч. (PARTS KIT, WIPER BLADE)</td><td>1</td><td>Комплект стеклоочистителя, сторона водителя и переднего пассажира Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A2058204603" title="Клик — скопировать">A 205 820 46 03</td><td>Ремк-т щетки стеклооч. (REPAIR KIT, WIPER BLADE)</td><td>1</td><td>Комплект стеклоочистителя, сторона водителя и переднего пассажира Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N910112010001" title="Клик — скопировать">N 910112 010001</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>3</td><td>Крепление поводка стеклоочистителя; M10 [003964] ВНИМАНИЕ: ОШИБКА В DMS!!! ДЛЯ ДАННОГО МЕСТА ПРИМЕНЕНИЯ СЛЕДУЕТ ОБЯЗАТЕЛЬНО ИСПОЛЬЗОВАТЬ TNR N910112010001. ПЕРЕПРОВЕРЬТЕ ВАШ З АКАЗ!!</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0009984821" title="Клик — скопировать">A 000 998 48 21</td><td>Защитный колпачок (COVER CAP)</td><td>2</td><td>Крепление поводка стеклоочистителя</td><td class="restr"></td></tr><tr data-pos="900"><td>900</td><td class="pn" data-raw="A0225456226" title="Клик — скопировать">A 022 545 62 26</td><td>Контактная втулка (CONTACT SOCKET)</td><td>1</td><td>Электродвигатель стеклоочистителя M6/6; 4\-PIN MCP2.8</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.078.292_version_001.png", "poses": ["10", "20", "30", "60", "100", "120", "130", "140", "150", "165", "200", "210", "900"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.078.292_version_001.png", "poses": ["10", "20", "30", "60", "100", "120", "130", "140", "150", "165", "200", "210", "900"], "hs": {"150": [[587, 245, 42, 28]], "140": [[450, 197, 42, 29]], "130": [[923, 464, 43, 28]], "120": [[786, 419, 43, 29]], "165": [[1018, 330, 42, 28]], "100": [[974, 626, 42, 29]], "210": [[233, 247, 43, 28]], "200": [[915, 598, 42, 29], [262, 287, 43, 29]], "900": [[378, 631, 42, 28]], "60": [[456, 724, 30, 29]], "30": [[525, 629, 30, 28]], "20": [[629, 752, 30, 28]], "10": [[746, 671, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

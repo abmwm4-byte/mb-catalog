@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C117903">P09 -/-</a> → 320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">P09 -/-</a> → 320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</div>
 <h1>320 ПРОЧИЕ ДОПОЛНИТЕЛЬНЫЕ РУКОВОДСТВА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B58320000068.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B58320000068.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175849503" title="Клик — скопировать">A 117 584 95 03</td><td>Брошюра с дополнениями</td><td>1</td><td>Мобильный телефон</td><td class="restr" data-expr="14U+(803/804/805/806/807)"><span class="icode">14U+(803/804/805/806/807)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842203" title="Клик — скопировать">A 205 584 22 03</td><td>Лист с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr" data-expr="829"><span class="icode">829</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055842303" title="Клик — скопировать">A 205 584 23 03</td><td>Брошюра с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr" data-expr="(05B/18B/22B/24B/26B)"><span class="icode">(05B/18B/22B/24B/26B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846003" title="Клик — скопировать">A 117 584 60 03</td><td>Доп. руководство</td><td>1</td><td>AMG ПАКЕТ ОБОРУДОВАНИЯ ДЛЯ ВОДИТЕЛЯ</td><td class="restr" data-expr="250+-(803/804/805/806)"><span class="icode">250+-(803/804/805/806)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840105" title="Клик — скопировать">A 117 584 01 05</td><td>Доп. руководство</td><td>1</td><td>РАЦИЯ ДЛЯ ТАКСИ</td><td class="restr" data-expr="229L/513L/515L/517L/523L/525L/527L/529L/531L/535L/537L/539L/542L/543L/546L/547L/549L/553L/557L/559L/561L/567L/569L/576L/577L/580L/583L/821L"><span class="icode">229L/513L/515L/517L/523L/525L/527L/529L/531L/535L/537L/539L/542L/543L/546L/547L/549L/553L/557L/559L/561L/567L/569L/576L/577L/580L/583L/821L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175840105" title="Клик — скопировать">A 117 584 01 05</td><td>Доп. руководство</td><td>1</td><td>РАЦИЯ ДЛЯ ТАКСИ</td><td class="restr" data-expr="541L/555L/571L"><span class="icode">541L/555L/571L</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1765842801" title="Клик — скопировать">A 176 584 28 01</td><td>Брошюра с дополнениями</td><td>1</td><td>СПЕЦАВТОМОБИЛИ</td><td class="restr" data-expr="(PEB/PQA)+806"><span class="icode">(PEB/PQA)+806</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055845502" title="Клик — скопировать">A 205 584 55 02</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="06U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)"><span class="icode">06U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848504" title="Клик — скопировать">A 205 584 85 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="06U+(01B/02B/05B/06B/07B/08B/16B/17B)"><span class="icode">06U+(01B/02B/05B/06B/07B/08B/16B/17B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848604" title="Клик — скопировать">A 205 584 86 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(806+140)+(06U+31B)"><span class="icode">(806+140)+(06U+31B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055848704" title="Клик — скопировать">A 205 584 87 04</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(806+140)+(06U+37B)"><span class="icode">(806+140)+(06U+37B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2315846101" title="Клик — скопировать">A 231 584 61 01</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="(06U/11U)+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)"><span class="icode">(06U/11U)+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2315846101" title="Клик — скопировать">A 231 584 61 01</td><td>Доп. руководство</td><td>1</td><td>MB CONNECT ME</td><td class="restr" data-expr="11U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)"><span class="icode">11U+(00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B)</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175843001" title="Клик — скопировать">A 117 584 30 01</td><td>Доп. руководство</td><td>1</td><td>AMG ПАКЕТ ОБОРУДОВАНИЯ ДЛЯ ВОДИТЕЛЯ</td><td class="restr" data-expr="250+806"><span class="icode">250+806</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175845301" title="Клик — скопировать">A 117 584 53 01</td><td>Брошюра с дополнениями</td><td>1</td><td>ДЕТСКОЕ СИДЕНЬЕ</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1725848402" title="Клик — скопировать">A 172 584 84 02</td><td>Лист с дополнениями</td><td>1</td><td></td><td class="restr" data-expr="23B"><span class="icode">23B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846004" title="Клик — скопировать">A 117 584 60 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B"><span class="icode">00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846405" title="Клик — скопировать">A 117 584 64 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B"><span class="icode">00B/01B/02B/03B/04B/05B/06B/07B/08B/09B/10B/11B/13B/14B/15B/16B/17B/30B/31B/32B/33B/34B/35B/36B/37B/38B/39B/40B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846104" title="Клик — скопировать">A 117 584 61 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="18B"><span class="icode">18B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846505" title="Клик — скопировать">A 117 584 65 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="18B"><span class="icode">18B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846204" title="Клик — скопировать">A 117 584 62 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="19B"><span class="icode">19B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846605" title="Клик — скопировать">A 117 584 66 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="19B"><span class="icode">19B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846304" title="Клик — скопировать">A 117 584 63 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B"><span class="icode">20B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846705" title="Клик — скопировать">A 117 584 67 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="20B"><span class="icode">20B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846404" title="Клик — скопировать">A 117 584 64 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="21B"><span class="icode">21B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846805" title="Клик — скопировать">A 117 584 68 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="21B"><span class="icode">21B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846504" title="Клик — скопировать">A 117 584 65 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="22B"><span class="icode">22B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846905" title="Клик — скопировать">A 117 584 69 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="22B"><span class="icode">22B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846604" title="Клик — скопировать">A 117 584 66 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="24B"><span class="icode">24B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175847005" title="Клик — скопировать">A 117 584 70 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="24B"><span class="icode">24B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175846704" title="Клик — скопировать">A 117 584 67 04</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="26B"><span class="icode">26B</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1175847105" title="Клик — скопировать">A 117 584 71 05</td><td>Складной буклет</td><td>1</td><td>БУКЛЕТ Quick Start Guide</td><td class="restr" data-expr="26B"><span class="icode">26B</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1178272000" title="Клик — скопировать">A 117 827 20 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1178272500" title="Клик — скопировать">A 117 827 25 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1778273500" title="Клик — скопировать">A 177 827 35 00</td><td>CD-ROM</td><td>1</td><td>ИНФОРМАЦИЯ О ЛИЦЕНЗИИ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58320000068.png", "poses": ["10", "20"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B58320000068.png", "poses": ["10", "20"], "hs": {"20": [[620, 330, 34, 29]], "10": [[276, 339, 35, 30]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

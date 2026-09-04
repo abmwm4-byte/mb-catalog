@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C205047">C205_FW -/-</a> → 030 Картер ГРМ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C205_FW -/-</a> → 030 Картер ГРМ</div>
 <h1>030 Картер ГРМ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.119.745_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.119.745_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740105700" title="Клик — скопировать">A 274 010 57 00</td><td>Картер ГРМ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740104301" title="Клик — скопировать">A 274 010 43 01</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447)+-M014"><span class="icode">(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740104112" title="Клик — скопировать">A 274 010 41 12</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447)+-M014"><span class="icode">(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740101814" title="Клик — скопировать">A 274 010 18 14</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014"><span class="icode">(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740103001" title="Клик — скопировать">A 274 010 30 01</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014"><span class="icode">(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740101914" title="Клик — скопировать">A 274 010 19 14</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014"><span class="icode">(F172/F204/F205/F212/F213/F207/F218/F238/F253/F447/F448)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740102014" title="Клик — скопировать">A 274 010 20 14</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740106806" title="Клик — скопировать">A 274 010 68 06</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740104412" title="Клик — скопировать">A 274 010 44 12</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740102214" title="Клик — скопировать">A 274 010 22 14</td><td>Картер ГРМ</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740104612" title="Клик — скопировать">A 274 010 46 12</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740102314" title="Клик — скопировать">A 274 010 23 14</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740102114" title="Клик — скопировать">A 274 010 21 14</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740101002" title="Клик — скопировать">A 274 010 10 02</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+A701"><span class="icode">F205+M014+A701</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740103001" title="Клик — скопировать">A 274 010 30 01</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="(700/A701)+-M014"><span class="icode">(700/A701)+-M014</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740101202" title="Клик — скопировать">A 274 010 12 02</td><td>Картер ГРМ</td><td>1</td><td></td><td class="restr" data-expr="M014+A701"><span class="icode">M014+A701</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740103001" title="Клик — скопировать">A 274 010 30 01</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="A701+382K"><span class="icode">A701+382K</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740101202" title="Клик — скопировать">A 274 010 12 02</td><td>Картер ГРМ</td><td>1</td><td></td><td class="restr" data-expr="M014+A701+382K"><span class="icode">M014+A701+382K</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2740106806" title="Клик — скопировать">A 274 010 68 06</td><td>Картер ГРМ (TIMING CASE)</td><td>1</td><td></td><td class="restr" data-expr="F205+M014+806"><span class="icode">F205+M014+806</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2741800175" title="Клик — скопировать">A 274 180 01 75</td><td>- Регулятор темп. масла (OIL TEMPERATURE REGULATOR)</td><td>1</td><td>Картер ГРМ</td><td class="restr" data-expr="M014"><span class="icode">M014</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2741800275" title="Клик — скопировать">A 274 180 02 75</td><td>- Масляный термостат (OIL THERMOSTAT)</td><td>1</td><td>Картер ГРМ</td><td class="restr" data-expr="F907/M014"><span class="icode">F907/M014</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0949900306" title="Клик — скопировать">A 094 990 03 06</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Поперечное масляное отверстие [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000008333" title="Клик — скопировать">N 000000 008333</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Поперечное масляное отверстие</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0949900306" title="Клик — скопировать">A 094 990 03 06</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Поперечное масляное отверстие</td><td class="restr" data-expr="F205+M014+A701"><span class="icode">F205+M014+A701</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="N000000008333" title="Клик — скопировать">N 000000 008333</td><td>- Резьбовая пробка (SCREW PLUG)</td><td>1</td><td>Поперечное масляное отверстие</td><td class="restr" data-expr="F205+M014+A701+(806/807+057)"><span class="icode">F205+M014+A701+(806/807+057)</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A0949909607" title="Клик — скопировать">A 094 990 96 07</td><td>- Уплотнительное кольцо (SEALING RING)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0139973746" title="Клик — скопировать">A 013 997 37 46</td><td>Уплотнительное кольцо (SEALING RING)</td><td>1</td><td>Коленчатый вал спереди</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0159975846" title="Клик — скопировать">A 015 997 58 46</td><td>Радиальный сальник (RADIAL SHAFT SEALING RING)</td><td>1</td><td>Коленчатый вал спереди</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0169970146" title="Клик — скопировать">A 016 997 01 46</td><td>Радиальный сальник (RADIAL SHAFT SEALING RING)</td><td>1</td><td>Коленчатый вал спереди</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0009971908" title="Клик — скопировать">A 000 997 19 08</td><td>Радиальный сальник (RADIAL SHAFT SEALING RING)</td><td>1</td><td>Коленчатый вал спереди</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009976220" title="Клик — скопировать">A 000 997 62 20</td><td>Запорная крышка (CLOSING CAP)</td><td>1</td><td>Натяжитель цепи</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>18</td><td>Картер газораспределительного механизма к блоку цилиндров; M6X25</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N910143006007" title="Клик — скопировать">N 910143 006007</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Картер газораспределительного механизма к блоку цилиндров; M6X45</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N910143010014" title="Клик — скопировать">N 910143 010014</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Картер газораспределительного механизма к блоку цилиндров; M10X35</td><td class="restr" data-expr="ME05/ME06/ME08"><span class="icode">ME05/ME06/ME08</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="N910143010014" title="Клик — скопировать">N 910143 010014</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Картер газораспределительного механизма к блоку цилиндров; M10X35</td><td class="restr" data-expr="ME05/ME08"><span class="icode">ME05/ME08</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.119.745_version_003.png", "poses": ["10", "20", "30", "40", "50", "60", "70"]}];</script><script>
+<p class="muted">Позиций: 35 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.119.745_version_003.png", "poses": ["10", "20", "30", "40", "50", "60", "70"], "hs": {"70": [[523, 755, 30, 29]], "60": [[306, 235, 30, 28]], "50": [[354, 676, 31, 28]], "40": [[974, 740, 30, 28]], "30": [[1026, 818, 31, 28]], "10": [[706, 825, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

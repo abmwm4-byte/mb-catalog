@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170445">45F  Недействительно для: CA, JP, US</a> → 045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">45F  Недействительно для: CA, JP, US</a> → 045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</div>
 <h1>045 ТОРМОЗ ЗАДНЕГО КОЛЕСА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B42045000045.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B42045000045.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1294200283" title="Клик — скопировать">A 129 420 02 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>СЛЕВА, БЕЗ НАКЛАДКИ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0014205083" title="Клик — скопировать">A 001 420 50 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>СЛЕВА, БЕЗ НАКЛАДКИ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1294200383" title="Клик — скопировать">A 129 420 03 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>СПРАВА, БЕЗ НАКЛАДКИ</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0014205183" title="Клик — скопировать">A 001 420 51 83</td><td>К-т торм. суппорта (TEILESATZ BREMSSATTEL)</td><td>1</td><td>СПРАВА, БЕЗ НАКЛАДКИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009919760" title="Клик — скопировать">A 000 991 97 60</td><td>- Штифт (STIFT)</td><td>4</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0019914360" title="Клик — скопировать">A 001 991 43 60</td><td>- Штифт (STIFT)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0004214091" title="Клик — скопировать">A 000 421 40 91</td><td>- пружина (FEDER)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0004216591" title="Клик — скопировать">A 000 421 65 91</td><td>- пружина (FEDER)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0004212765" title="Клик — скопировать">A 000 421 27 65</td><td>- Клапан выпуска воздуха</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0004217187" title="Клик — скопировать">A 000 421 71 87</td><td>	- КОЛПАЧОК</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2014230371" title="Клик — скопировать">A 201 423 03 71</td><td>- БОЛТ</td><td>-</td><td>[012] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ ДО ИД.№ F007080</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2014230471" title="Клик — скопировать">A 201 423 04 71</td><td>- БОЛТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A0004231771" title="Клик — скопировать">A 000 423 17 71</td><td>- Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>4</td><td>СКОБА ТОРМОЗНОГО МЕХАНИЗМА К КУЛАКУ ПОДВЕСКИ; M10X23</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0004217286" title="Клик — скопировать">A 000 421 72 86</td><td>ремкомплект (REPARATURSATZ)</td><td>2</td><td>СКОБА ТОРМОЗН. МЕХАНИЗМА</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0004218086" title="Клик — скопировать">A 000 421 80 86</td><td>ремкомплект (STAUBSCHUTZMANSCHETTE)</td><td>2</td><td>СКОБА ТОРМОЗН. МЕХАНИЗМА</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0014209520" title="Клик — скопировать">A 001 420 95 20</td><td>К-т тормозных колодок</td><td>1</td><td>К\-Т ДЕТАЛЕЙ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0054201720" title="Клик — скопировать">A 005 420 17 20</td><td>К-т тормозных колодок (TEILESATZ BREMSBELAG)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0024207120" title="Клик — скопировать">A 002 420 71 20</td><td>К-т тормозных колодок</td><td>-</td><td>[431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A0044201720" title="Клик — скопировать">A 004 420 17 20</td><td>К-т тормозных колодок (TEILESATZ BREMSBELAG)</td><td>1</td><td>К\-Т ДЕТАЛЕЙ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2104230412" title="Клик — скопировать">A 210 423 04 12</td><td>Диск тормоз. невентилир.</td><td>2</td><td>[408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2034230112" title="Клик — скопировать">A 203 423 01 12</td><td>Тормозной диск (BREMSSCHEIBE)</td><td>2</td><td>[408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A2014210171" title="Клик — скопировать">A 201 421 01 71</td><td>Винт с внутр. 6-гранником (FLACHKOPFSCHRAUBE M. ISK)</td><td>2</td><td>ТОРМОЗНОЙ ДИСК К СТУПИЦЕ КОЛЕСА; M6X15</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1244200720" title="Клик — скопировать">A 124 420 07 20</td><td>К-т тормозной колодки (TEILESATZ BREMSBACKE)</td><td>1</td><td>ОБЪЁМ ПОСТАВКИ [431] ПРИ ПРОДАЖЕ ТОРМ. КОЛОДОК КОНЕЧНОМУ ПОКУПАТЕЛЮ/КЛИЕНТУ СТОА БЕСПЛАТНО ПРЕДОСТАВИТЬ РУКОВОДСТВО ПО УСТАНОВКЕ A2030052599</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A2014230592" title="Клик — скопировать">A 201 423 05 92</td><td>- Пружина растяжения (ZUGFEDER)</td><td>4</td><td>ТОРМОЗН. КОЛОДКИ НА ПАНЕЛИ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A2104230092" title="Клик — скопировать">A 210 423 00 92</td><td>- Пружина растяжения (ZUGFEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2014230692" title="Клик — скопировать">A 201 423 06 92</td><td>- пружина (FEDER)</td><td>2</td><td>МЕХАНИЗМ ВОЗВРАТА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A2014200373" title="Клик — скопировать">A 201 420 03 73</td><td>- Регулятор торм. механизма (BREMSNACHSTELLER)</td><td>2</td><td>РЕГУЛИРОВКА ТОРМОЗНОЙ КОЛОДКИ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="A1244230050" title="Клик — скопировать">A 124 423 00 50</td><td>Опорная втулка (STUETZBUCHSE)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A2014230080" title="Клик — скопировать">A 201 423 00 80</td><td>Уплотнительная прокладка (DICHTBEILAGE)</td><td>2</td><td>ЗАЩИТНЫЙ ЩИТОК К КУЛАКУ ПОДВЕСКИ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A2014200589" title="Клик — скопировать">A 201 420 05 89</td><td>Разжимной механ. тормоза (SPREIZSCHLOSS BREMSE)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A1084270074" title="Клик — скопировать">A 108 427 00 74</td><td>Цилиндрический шрифт (ZYLINDERSTIFT)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A2104201444" title="Клик — скопировать">A 210 420 14 44</td><td>Защитный экран (SCHUTZBLECH)</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A2104201544" title="Клик — скопировать">A 210 420 15 44</td><td>Защитный экран (SCHUTZBLECH)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="N914125006502" title="Клик — скопировать">N 914125 006502</td><td>Винт (SCHRAUBE)</td><td>6</td><td>ЗАЩИТНЫЙ ЩИТОК К КУЛАКУ ПОДВЕСКИ; M6X12</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42045000045.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "35", "38", "41", "44", "47", "50", "53", "56", "59", "62", "65", "68", "71"]}];</script><script>
+<p class="muted">Позиций: 34 · подписано на схемах: 34 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B42045000045.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "35", "38", "41", "44", "47", "50", "53", "56", "59", "62", "65", "68", "71"], "hs": {"11": [[1222, 477, 28, 25]], "44": [[152, 693, 32, 25], [355, 768, 32, 24], [554, 728, 33, 24], [746, 795, 32, 24]], "23": [[1174, 561, 32, 25]], "56": [[758, 454, 32, 25]], "35": [[980, 837, 32, 24]], "68": [[579, 261, 33, 24]], "14": [[1019, 391, 32, 25]], "47": [[330, 707, 32, 24], [640, 713, 30, 24]], "26": [[1128, 286, 32, 24]], "59": [[257, 423, 32, 26]], "38": [[253, 751, 33, 24], [1136, 764, 32, 25], [703, 858, 34, 24]], "17": [[976, 372, 29, 24]], "5": [[996, 569, 19, 24]], "8": [[1220, 339, 20, 25]], "71": [[644, 343, 30, 25]], "50": [[244, 831, 32, 25], [562, 833, 32, 25]], "62": [[664, 563, 32, 25]], "41": [[456, 651, 30, 25]], "20": [[946, 506, 32, 24]], "53": [[712, 447, 32, 24], [677, 676, 32, 25], [364, 676, 30, 25]], "65": [[696, 632, 33, 25]]}, "w": 1326, "h": 938}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

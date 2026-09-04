@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C113044">68H  Действительно для: CA, US</a> → Z  12.207 AIR POLLUTION CONTROL SYSTEM</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/230">68H  Действительно для: CA, US</a> → Z  12.207 AIR POLLUTION CONTROL SYSTEM</div>
 <h1>Z  12.207 AIR POLLUTION CONTROL SYSTEM</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_S01220700001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_S01220700001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1149970172" title="Клик — скопировать">A 114 997 01 72</td><td>ШТУЦЕР</td><td>-</td><td>Z  12.207/05, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6159970472" title="Клик — скопировать">A 615 997 04 72</td><td>Штуцер</td><td>1</td><td>Z  12.207/05, Z  12.207/07 [004] FROM ENGINE 130.980 021168-026281 130.981 001656-001954</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N007603030100" title="Клик — скопировать">N 007603 030100</td><td>Уплотнительное кольцо</td><td>1</td><td>Z  12.207/05, Z  12.207/07 [004] FROM ENGINE 130.980 021168-026281 130.981 001656-001954</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0035451324" title="Клик — скопировать">A 003 545 13 24</td><td>ВЫКЛЮЧАТЕЛЬ АВТОМ.</td><td>-</td><td>Z  12.207/05, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0035452124" title="Клик — скопировать">A 003 545 21 24</td><td>ВЫКЛЮЧАТЕЛЬ АВТОМ.</td><td>1</td><td>17 DEGREES Z  12.207/05, Z  12.207/07 [004] FROM ENGINE 130.980 021168-026281 130.981 001656-001954</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="N007603014100" title="Клик — скопировать">N 007603 014100</td><td>Уплотнительное кольцо</td><td>1</td><td>14X18\-AL Z  12.207/05, Z  12.207/07 [004] FROM ENGINE 130.980 021168-026281 130.981 001656-001954</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1085402909" title="Клик — скопировать">A 108 540 29 09</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>(ADDITIONAL CABLE HARNESS) Z  12.207/05, Z  12.207/07 [005] FROM ENGINE 130.980 021168 130.981 001656</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1115404609" title="Клик — скопировать">A 111 540 46 09</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>ПРИВОД КП НА ЦЕНТР. КОНС. Z  12.207/04, Z  12.207/06 [009] ON MODELS 108.018,019 ON MODEL 109.016</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1085403109" title="Клик — скопировать">A 108 540 31 09</td><td>ЖГУТ ЭЛ.-ПРОВОДКИ</td><td>1</td><td>ПЕРЕКЛЮЧЕНИЕ ПЕРЕДАЧ НА РУЛЕВОМ КОЛЕСЕ Z  12.207/04, Z  12.207/06 [009] ON MODELS 108.018,019 ON MODEL 109.016</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0005425819" title="Клик — скопировать">A 000 542 58 19</td><td>Контактор</td><td>1</td><td>Z  12.207/05, Z  12.207/07 [005] FROM ENGINE 130.980 021168 130.981 001656</td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0005425919" title="Клик — скопировать">A 000 542 59 19</td><td>Контактор</td><td>1</td><td>Z  12.207/05, Z  12.207/07 [005] FROM ENGINE 130.980 021168 130.981 001656</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1300101920" title="Клик — скопировать">A 130 010 19 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>-</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A1300102620" title="Клик — скопировать">A 130 010 26 20</td><td>ГОЛОВКА БЛОКА ЦИЛИНДРОВ</td><td>1</td><td>Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1140500097" title="Клик — скопировать">A 114 050 00 97</td><td>ПОДШИПНИК</td><td>-</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1305860005" title="Клик — скопировать">A 130 586 00 05</td><td>К-т подш. распредвала</td><td>1</td><td>НОРМАЛЬНО Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1140500197" title="Клик — скопировать">A 114 050 01 97</td><td>ПОДШИПНИК</td><td>-</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1305860105" title="Клик — скопировать">A 130 586 01 05</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td>ПРОМЕЖУТОЧНАЯ СТУПЕНЬ Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1400500297" title="Клик — скопировать">A 140 050 02 97</td><td>ПОДШИПНИК</td><td>-</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A1305860205" title="Клик — скопировать">A 130 586 02 05</td><td>К-т подш. распредвала</td><td>1</td><td>РЕМОНТНАЯ СТУПЕНЬ Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1290530020" title="Клик — скопировать">A 129 053 00 20</td><td>ПРУЖИНА КЛАПАНА</td><td>-</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1290530220" title="Клик — скопировать">A 129 053 02 20</td><td>ПРУЖИНА КЛАПАНА</td><td>-</td><td>Z  12.207/06, Z  12.207/07 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1100530120" title="Клик — скопировать">A 110 053 01 20</td><td>Пружина клапана</td><td>12</td><td>Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051 [017] ELIMINATE 108 053 00 22,INNER VALVE SPRING</td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A1080530022" title="Клик — скопировать">A 108 053 00 22</td><td>Пружина клапана</td><td>-</td><td>Z  12.207/06, Z  12.207/07 [001] FROM ENGINE 130.981 10/50,12/52 000122 130.981 20/60,22/62 000919 130.983 10/50,12/52 002023 130.983 20/60,22/62 003051 [415] ПРИМЕЧ. ПО ЗАМЕНЕ ПРИМЕНИМО ТОЛЬКО ДЛЯ СТОЯЩИХ РЯДОМ ПОЗИЦИЙ</td><td class="restr"></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A1800510835" title="Клик — скопировать">A 180 051 08 35</td><td>РАСПРЕДВАЛ</td><td>1</td><td>Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A1300700101" title="Клик — скопировать">A 130 070 01 01</td><td>ТНВД</td><td>1</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0000740788" title="Клик — скопировать">A 000 074 07 88</td><td>- MAГНИТ</td><td>1</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N000127004203" title="Клик — скопировать">N 000127 004203</td><td>- Пружинное кольцо</td><td>-</td><td>Z  12.207/01, Z  12.207/02, Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N912004004102" title="Клик — скопировать">N 912004 004102</td><td>- Пружинное кольцо</td><td>1</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="N000084004156" title="Клик — скопировать">N 000084 004156</td><td>- Винт</td><td>1</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="230"><td>230</td><td class="pn" data-raw="A0000740780" title="Клик — скопировать">A 000 074 07 80</td><td>- ПРОКЛАДКА УПЛОТНИТЕЛЬНАЯ</td><td>1</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="240"><td>240</td><td class="pn" data-raw="N000127005203" title="Клик — скопировать">N 000127 005203</td><td>- Пружинное кольцо</td><td>4</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="N000084005130" title="Клик — скопировать">N 000084 005130</td><td>- Винт</td><td>4</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0011594403" title="Клик — скопировать">A 001 159 44 03</td><td>СВЕЧА ЗАЖИГАНИЯ</td><td>-</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0011594503" title="Клик — скопировать">A 001 159 45 03</td><td>СВЕЧА ЗАЖИГАНИЯ</td><td>-</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A0011596703" title="Клик — скопировать">A 001 159 67 03</td><td>СВЕЧА ЗАЖИГАНИЯ</td><td>6</td><td>Z  12.207/04, Z  12.207/05, Z  12.207/06, Z  12.207/07</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1300104900" title="Клик — скопировать">A 130 010 49 00</td><td>МОТОР</td><td>1</td><td>Z  12.207/06 [003] ON MODEL 130.983</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1300104600" title="Клик — скопировать">A 130 010 46 00</td><td>МОТОР</td><td>1</td><td>Z  12.207/07 [002] ON MODEL 130.981</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1300105000" title="Клик — скопировать">A 130 010 50 00</td><td>МОТОР</td><td>1</td><td>Z  12.207/07 [003] ON MODEL 130.983</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 38 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01220700001.png", "poses": ["10", "20", "30", "40", "50", "60", "110", "120", "140", "160", "170", "180", "200", "210", "230", "240", "250", "300"]}];</script><script>
+<p class="muted">Позиций: 38 · подписано на схемах: 35 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_S01220700001.png", "poses": ["10", "20", "30", "40", "50", "60", "110", "120", "140", "160", "170", "180", "200", "210", "230", "240", "250", "300"], "hs": {"210": [[1230, 481, 46, 24]], "200": [[1178, 490, 46, 25]], "190": [[1121, 724, 43, 25]], "180": [[1127, 490, 44, 25]], "170": [[685, 832, 44, 24]], "270": [[346, 843, 46, 25]], "250": [[1219, 617, 46, 24]], "240": [[1157, 626, 46, 25]], "230": [[1024, 517, 45, 24]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

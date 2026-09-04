@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253313">C253_FC -/-</a> → 165 Расширительный бачок, крепление и шланги</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C253_FC -/-</a> → 165 Расширительный бачок, крепление и шланги</div>
 <h1>165 Расширительный бачок, крепление и шланги</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.120.122_version_001.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.120.122_version_001.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2055000049" title="Клик — скопировать">A 205 500 00 49</td><td>Расширительный бачок (EXPANSION RESERVOIR)</td><td>1</td><td>К радиатору справа</td><td class="restr" data-expr="-M177"><span class="icode">-M177</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0005010000" title="Клик — скопировать">A 000 501 00 00</td><td>Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>Крепление расширительного бачка</td><td class="restr"></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2105010615" title="Клик — скопировать">A 210 501 06 15</td><td>Запорная крышка (CLOSING CAP)</td><td>1</td><td>Расширительный бачок</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2535017401" title="Клик — скопировать">A 253 501 74 01</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr" data-expr="M654+M20+M014/M654+550"><span class="icode">M654+M20+M014/M654+550</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2535017901" title="Клик — скопировать">A 253 501 79 01</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="M654+M20+M014/M654+550"><span class="icode">M654+M20+M014/M654+550</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2135010202" title="Клик — скопировать">A 213 501 02 02</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2135010001" title="Клик — скопировать">A 213 501 00 01</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="M654+926"><span class="icode">M654+926</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2135010302" title="Клик — скопировать">A 213 501 03 02</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="M654+M20+M014/M654+550"><span class="icode">M654+M20+M014/M654+550</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2135014400" title="Клик — скопировать">A 213 501 44 00</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="(M654+M20+M014/M654+550)+926"><span class="icode">(M654+M20+M014/M654+550)+926</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2535017501" title="Клик — скопировать">A 253 501 75 01</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку [414] СТАРУЮ ДЕТАЛЬ УСТАНАВЛИВАТЬ БОЛЬШЕ НЕ РАЗРЕШАЕТСЯ</td><td class="restr" data-expr="(M654+M20+M014/M654+550)+926"><span class="icode">(M654+M20+M014/M654+550)+926</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2535018001" title="Клик — скопировать">A 253 501 80 01</td><td>Шланг подачи ОЖ (COOLANT FILLING HOSE)</td><td>1</td><td>Радиатор к насосу и расширительному бачку</td><td class="restr" data-expr="(M654+M20+M014/M654+550)+926"><span class="icode">(M654+M20+M014/M654+550)+926</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2135015201" title="Клик — скопировать">A 213 501 52 01</td><td>Формовый шланг (MOLDED HOSE)</td><td>1</td><td>От радиатора (левая сторона) к двигателю</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2135010182" title="Клик — скопировать">A 213 501 01 82</td><td>Шланг ОЖ (COOLANT HOSE)</td><td>1</td><td>От радиатора (левая сторона) к двигателю</td><td class="restr" data-expr="M654+926"><span class="icode">M654+926</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2135012782" title="Клик — скопировать">A 213 501 27 82</td><td>Шланг ОЖ (COOLANT HOSE)</td><td>1</td><td>От радиатора (левая сторона) к двигателю</td><td class="restr" data-expr="M654+M20+M014/M654+550/(M654+M20+M014/M654+M20+ME05/M654+550)+926"><span class="icode">M654+M20+M014/M654+550/(M654+M20+M014/M654+M20+ME05/M654+550)+926</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2135012782" title="Клик — скопировать">A 213 501 27 82</td><td>Шланг ОЖ (COOLANT HOSE)</td><td>1</td><td>От радиатора (левая сторона) к двигателю</td><td class="restr" data-expr="M654+(M014/550)"><span class="icode">M654+(M014/550)</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2135012782" title="Клик — скопировать">A 213 501 27 82</td><td>Шланг ОЖ (COOLANT HOSE)</td><td>1</td><td>Радиатор к двигателю</td><td class="restr" data-expr="M654+(ME05/M014/550)+926"><span class="icode">M654+(ME05/M014/550)+926</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2135014801" title="Клик — скопировать">A 213 501 48 01</td><td>Формовый шланг (MOLDED HOSE)</td><td>1</td><td>От радиатора (правая сторона) к двигателю</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2135014901" title="Клик — скопировать">A 213 501 49 01</td><td>Формовый шланг (MOLDED HOSE)</td><td>1</td><td>От радиатора (правая сторона) к двигателю</td><td class="restr" data-expr="M654+M20+M014/M654+M20+ME05/M654+550"><span class="icode">M654+M20+M014/M654+M20+ME05/M654+550</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2535011401" title="Клик — скопировать">A 253 501 14 01</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От запорного клапана к разъёму на двигателе</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A2135018002" title="Клик — скопировать">A 213 501 80 02</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От запорного клапана к разъёму на двигателе</td><td class="restr" data-expr="M654+M014/M654+550"><span class="icode">M654+M014/M654+550</span></td></tr><tr data-pos="165"><td>165</td><td class="pn" data-raw="A0005061000" title="Клик — скопировать">A 000 506 10 00</td><td>Запорный клапан (CUTOFF VALVE)</td><td>1</td><td>Низкотемпературн.</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="168"><td>168</td><td class="pn" data-raw="A2135012001" title="Клик — скопировать">A 213 501 20 01</td><td>Держатель (HOLDER)</td><td>1</td><td>Запорный клапан</td><td class="restr" data-expr="M654/M656"><span class="icode">M654/M656</span></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0289979845" title="Клик — скопировать">A 028 997 98 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td>Штекерный разъем 21,6 X 3,25</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A0289979945" title="Клик — скопировать">A 028 997 99 45</td><td>Кольцевая прокладка (O-RING)</td><td>1</td><td>Штекерный разъем; 21.4MMX3.36MM</td><td class="restr"></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A2105010615" title="Клик — скопировать">A 210 501 06 15</td><td>Запорная крышка (CLOSING CAP)</td><td>1</td><td>Расширительный бачок</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0005010000" title="Клик — скопировать">A 000 501 00 00</td><td>Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>Крепление расширительного бачка</td><td class="restr"></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A2135010401" title="Клик — скопировать">A 213 501 04 01</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От запорного клапана к разъёму на двигателе</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="550"><td>550</td><td class="pn" data-raw="A2135012101" title="Клик — скопировать">A 213 501 21 01</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От запорного клапана к разъёму на двигателе</td><td class="restr" data-expr="M654+ME05/M654+550"><span class="icode">M654+ME05/M654+550</span></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A2135010501" title="Клик — скопировать">A 213 501 05 01</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От радиатора справа к расширительному бачку</td><td class="restr" data-expr="M654+M014/M654+550"><span class="icode">M654+M014/M654+550</span></td></tr><tr data-pos="590"><td>590</td><td class="pn" data-raw="A2535011501" title="Клик — скопировать">A 253 501 15 01</td><td>Вентиляционный трубопр. (BLEED LINE)</td><td>1</td><td>От радиатора справа к расширительному бачку</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr><tr data-pos="650"><td>650</td><td class="pn" data-raw="A6542031302" title="Клик — скопировать">A 654 203 13 02</td><td>Водяная трубка (WATER LINE)</td><td>1</td><td>Шланг системы охлаждения от радиатора (левая сторона) к разъёму насоса системы охлаждения</td><td class="restr" data-expr="M654"><span class="icode">M654</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.120.122_version_001.png", "poses": ["10", "30", "40", "100", "120", "140", "160", "165", "168", "550", "590", "650"]}];</script><script>
+<p class="muted">Позиций: 31 · подписано на схемах: 31 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.120.122_version_001.png", "poses": ["10", "30", "40", "100", "120", "140", "160", "165", "168", "550", "590", "650"], "hs": {"160": [[535, 277, 43, 29]], "590": [[238, 189, 43, 28]], "140": [[449, 625, 42, 28]], "120": [[734, 624, 43, 28]], "165": [[382, 271, 42, 28]], "550": [[469, 227, 42, 28]], "100": [[352, 476, 42, 28]], "650": [[667, 792, 42, 28]], "168": [[324, 331, 43, 28]], "630": [[1076, 362, 43, 29]], "620": [[1058, 319, 42, 29]], "610": [[933, 231, 43, 29]], "600": [[996, 445, 43, 28]], "40": [[363, 29, 30, 29]], "30": [[469, 176, 31, 28]], "10": [[478, 93, 31, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

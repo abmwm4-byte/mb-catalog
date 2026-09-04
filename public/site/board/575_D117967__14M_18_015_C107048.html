@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107048">575 AB 09/85 Действительно для: CA, US</a> → 015 МАСЛЯНЫЙ НАСОС</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">575 AB 09/85 Действительно для: CA, US</a> → 015 МАСЛЯНЫЙ НАСОС</div>
 <h1>015 МАСЛЯНЫЙ НАСОС</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B18015000047.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B18015000047.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171800601" title="Клик — скопировать">A 117 180 06 01</td><td>МАСЛЯНЫЙ НАСОС</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1171800501" title="Клик — скопировать">A 117 180 05 01</td><td>МАСЛЯНЫЙ НАСОС</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1161800207" title="Клик — скопировать">A 116 180 02 07</td><td>- ПРИВОДНОЙ ВАЛ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1171800104" title="Клик — скопировать">A 117 180 01 04</td><td>- ШЕСТЕРНЯ</td><td>1</td><td>С ВАЛОМ [417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1161800208" title="Клик — скопировать">A 116 180 02 08</td><td>- Вал масляного насоса</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1171810112" title="Клик — скопировать">A 117 181 01 12</td><td>- ПРИВОДНАЯ ШЕСТЕРНЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1171810512" title="Клик — скопировать">A 117 181 05 12</td><td>- ПРИВОДНАЯ ШЕСТЕРНЯ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N001481004029" title="Клик — скопировать">N 001481 004029</td><td>- Распорный штифт</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000933008018" title="Клик — скопировать">N 000933 008018</td><td>- Винт</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1169900248" title="Клик — скопировать">A 116 990 02 48</td><td>- ШАЙБА</td><td>1</td><td>ПРИВОДНАЯ ШЕСТЕРНЯ К ПРИВОДНОМ ВАЛУ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1101800355" title="Клик — скопировать">A 110 180 03 55</td><td>- Сетка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1021860007" title="Клик — скопировать">A 102 186 00 07</td><td>- КОМПЕНСАТОР</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="A1171810042" title="Клик — скопировать">A 117 181 00 42</td><td>- ПОРШЕНЬ</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A6171810074" title="Клик — скопировать">A 617 181 00 74</td><td>- БОЛТ</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A6171810093" title="Клик — скопировать">A 617 181 00 93</td><td>- ПРУЖИНА</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="68"><td>68</td><td class="pn" data-raw="A1171810156" title="Клик — скопировать">A 117 181 01 56</td><td>- Резьбовая пробка</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="71"><td>71</td><td class="pn" data-raw="A1265420817" title="Клик — скопировать">A 126 542 08 17</td><td>ДАТЧИК</td><td>1</td><td>(ИНДИКАТОР УРОВНЯ МАСЛА)</td><td class="restr"></td></tr><tr data-pos="74"><td>74</td><td class="pn" data-raw="A0179975748" title="Клик — скопировать">A 017 997 57 48</td><td>- Уплотнительное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="77"><td>77</td><td class="pn" data-raw="A0179975848" title="Клик — скопировать">A 017 997 58 48</td><td>- Уплотнительное кольцо</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1171410050" title="Клик — скопировать">A 117 141 00 50</td><td>ВТУЛКА</td><td>2</td><td>ДАТЧИК УРОВНЯ МАСЛА НА МАСЛ.НАСОСЕ</td><td class="restr"></td></tr><tr data-pos="83"><td>83</td><td class="pn" data-raw="N000933005066" title="Клик — скопировать">N 000933 005066</td><td>Винт</td><td>2</td><td>ДАТЧИК УРОВНЯ МАСЛА НА МАСЛ.НАСОСЕ</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="N000137005205" title="Клик — скопировать">N 000137 005205</td><td>ШАЙБА ПРУЖИННАЯ</td><td>2</td><td>ДАТЧИК УРОВНЯ МАСЛА НА МАСЛ.НАСОСЕ</td><td class="restr"></td></tr><tr data-pos="89"><td>89</td><td class="pn" data-raw="N912001014001" title="Клик — скопировать">N 912001 014001</td><td>Механический фиксатор</td><td>1</td><td>РАЗЪЕМ ДАТЧИКА УРОВНЯ МАСЛА НА БЛОКЕ ЦИЛ.; 14MM</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000933008152" title="Клик — скопировать">N 000933 008152</td><td>Винт</td><td>2</td><td>МАСЛ.НАСОС НА КРЫШКЕ КАРТЕРА ГРМ</td><td class="restr"></td></tr><tr data-pos="92"><td>92</td><td class="pn" data-raw="N000931008254" title="Клик — скопировать">N 000931 008254</td><td>Винт</td><td>1</td><td>МАСЛ.НАСОС НА КРЫШКЕ КАРТЕРА ГРМ</td><td class="restr"></td></tr><tr data-pos="95"><td>95</td><td class="pn" data-raw="N000125008418" title="Клик — скопировать">N 000125 008418</td><td>Шайба</td><td>3</td><td>МАСЛ.НАСОС НА КРЫШКЕ КАРТЕРА ГРМ</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0009978394" title="Клик — скопировать">A 000 997 83 94</td><td>Роликовая цепь</td><td>1</td><td>МАСЛ.НАСОС НА КРЫШКЕ КАРТЕРА ГРМ</td><td class="restr"></td></tr><tr data-pos="98"><td>98</td><td class="pn" data-raw="A0019972494" title="Клик — скопировать">A 001 997 24 94</td><td>РОЛИКОВАЯ ЦЕПЬ</td><td>1</td><td>МАСЛ.НАСОС НА КРЫШКЕ КАРТЕРА ГРМ</td><td class="restr"></td></tr><tr data-pos="101"><td>101</td><td class="pn" data-raw="A1161810793" title="Клик — скопировать">A 116 181 07 93</td><td>пружина</td><td>1</td><td>НАТЯЖИТЕЛЬ ЦЕПИ МАСЛЯНОГО НАСОСА</td><td class="restr"></td></tr><tr data-pos="107"><td>107</td><td class="pn" data-raw="A1161811059" title="Клик — скопировать">A 116 181 10 59</td><td>Зажимная скоба</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="N006799006003" title="Клик — скопировать">N 006799 006003</td><td>Стопорная шайба</td><td>1</td><td>6MM</td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1161801115" title="Клик — скопировать">A 116 180 11 15</td><td>ПРЕДОХРАНИТЕЛЬНЫЙ КЛАПАН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1191800015" title="Клик — скопировать">A 119 180 00 15</td><td>ПРЕДОХРАНИТЕЛЬНЫЙ КЛАПАН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1191800133" title="Клик — скопировать">A 119 180 01 33</td><td>КЛАПАН</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="113"><td>113</td><td class="pn" data-raw="A1191800015" title="Клик — скопировать">A 119 180 00 15</td><td>ПРЕДОХРАНИТЕЛЬНЫЙ КЛАПАН</td><td>1</td><td>НА ФЛАНЦЕ МАСЛ.ФИЛЬТРА, БЛОК ЦИЛ.</td><td class="restr"></td></tr><tr data-pos="116"><td>116</td><td class="pn" data-raw="A1161840232" title="Клик — скопировать">A 116 184 02 32</td><td>- КЛАПАН</td><td>1</td><td>[417] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ, ЗАКАЗЫВАТЬ КОМПЛЕКТ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="119"><td>119</td><td class="pn" data-raw="A1169931401" title="Клик — скопировать">A 116 993 14 01</td><td>- ПРУЖИНА</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="122"><td>122</td><td class="pn" data-raw="N000472012000" title="Клик — скопировать">N 000472 012000</td><td>- Стопорное кольцо</td><td>1</td><td></td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 38 · подписано на схемах: 38 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B18015000047.png", "poses": ["8", "11", "14", "17", "20", "23", "26", "32", "44", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "107", "110", "113", "116", "119", "122"]}];</script><script>
+<p class="muted">Позиций: 38 · подписано на схемах: 38 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B18015000047.png", "poses": ["8", "11", "14", "17", "20", "23", "26", "32", "44", "59", "62", "65", "68", "71", "74", "77", "80", "83", "86", "89", "92", "95", "98", "101", "107", "110", "113", "116", "119", "122"], "hs": {"44": [[530, 441, 33, 17]], "89": [[500, 114, 33, 17]], "23": [[247, 315, 33, 17]], "68": [[742, 500, 33, 17]], "26": [[271, 308, 33, 17]], "110": [[288, 345, 33, 17]], "113": [[695, 378, 33, 17]], "116": [[722, 397, 33, 17]], "92": [[334, 338, 33, 17]], "119": [[735, 410, 33, 17]], "71": [[625, 291, 33, 17]], "95": [[334, 308, 33, 17]], "74": [[516, 128, 33, 17]], "98": [[165, 361, 33, 17]], "32": [[396, 434, 33, 17]], "77": [[478, 98, 33, 17]], "11": [[462, 200, 33, 17]], "14": [[513, 273, 33, 17]], "59": [[647, 441, 33, 17]], "17": [[317, 237, 33, 17]], "122": [[762, 427, 33, 17]], "101": [[282, 430, 33, 17]], "8": [[355, 208, 33, 17]], "107": [[231, 419, 33, 17]], "80": [[697, 261, 33, 17]], "83": [[625, 357, 33, 17]], "62": [[681, 463, 33, 17]], "20": [[279, 265, 33, 17]], "86": [[625, 328, 33, 17]], "65": [[708, 477, 33, 17]]}, "w": 876, "h": 583}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

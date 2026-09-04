@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C253325">C253_FC -/-</a> → 135 Система впуска воздуха дизельных а/м</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C253_FC -/-</a> → 135 Система впуска воздуха дизельных а/м</div>
 <h1>135 Система впуска воздуха дизельных а/м</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.002.743.042_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.002.743.042_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420904401" title="Клик — скопировать">A 642 090 44 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td>Корпус воздушного фильтра справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A6420904801" title="Клик — скопировать">A 642 090 48 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td>Корпус воздушного фильтра справа</td><td class="restr" data-expr="M642+(824/2U3)"><span class="icode">M642+(824/2U3)</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6420903501" title="Клик — скопировать">A 642 090 35 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td>Корпус воздушного фильтра слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A6420904701" title="Клик — скопировать">A 642 090 47 01</td><td>Демпферный фильтр (DAMPING AIR FILTER)</td><td>1</td><td>Корпус воздушного фильтра слева</td><td class="restr" data-expr="M642+(824/2U3)"><span class="icode">M642+(824/2U3)</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0051535028" title="Клик — скопировать">A 005 153 50 28</td><td>- Датчик давления (PRESSURE SENSOR)</td><td>1</td><td>К корпусу воздушного фильтра слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A6420940685" title="Клик — скопировать">A 642 094 06 85</td><td>- Резиновый буфер (RUBBER BUMPER)</td><td>2</td><td>Крепление корпуса левого воздушного фильтра (передн. и задн.)</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A6420940685" title="Клик — скопировать">A 642 094 06 85</td><td>- Резиновый буфер (RUBBER BUMPER)</td><td>2</td><td>Крепление корпуса правого воздушного фильтра (передн. и задн.)</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A3522680250" title="Клик — скопировать">A 352 268 02 50</td><td>- втулка (BUSHING)</td><td>1</td><td>Крепление корпуса воздушного фильтра спереди, слева [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A3522680250" title="Клик — скопировать">A 352 268 02 50</td><td>- втулка (BUSHING)</td><td>1</td><td>Крепление корпуса воздушного фильтра спереди, справа [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009920307" title="Клик — скопировать">A 000 992 03 07</td><td>- Резьбовая втулка (THREADED BUSHING)</td><td>1</td><td>Крепление корпуса воздушного фильтра сзади слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A0009920307" title="Клик — скопировать">A 000 992 03 07</td><td>- Резьбовая втулка (THREADED BUSHING)</td><td>1</td><td>Крепление корпуса воздушного фильтра сзади справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0009908403" title="Клик — скопировать">A 000 990 84 03</td><td>- Винт Torx External</td><td>1</td><td>Крепление корпуса воздушного фильтра сзади справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A6420940000" title="Клик — скопировать">A 642 094 00 00</td><td>- К-т сменного возд. фил. (PARTS KIT, FILTER ELEMENT)</td><td>1</td><td>Комплект деталей слева и справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Корпус левого воздушного фильтра к крышке клапанного механизма (спереди); M6X25</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="N000000003648" title="Клик — скопировать">N 000000 003648</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Корпус правого воздушного фильтра к крышке клапанного механизма (спереди); M6X25</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009908403" title="Клик — скопировать">A 000 990 84 03</td><td>- Винт Torx External</td><td>1</td><td>Демпферный фильтр к головке блока цилиндров</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A6420902941" title="Клик — скопировать">A 642 090 29 41</td><td>Держатель (HOLDER)</td><td>1</td><td>Слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A6420903141" title="Клик — скопировать">A 642 090 31 41</td><td>Держатель (HOLDER)</td><td>1</td><td>Справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A6420940985" title="Клик — скопировать">A 642 094 09 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>К держателю слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A6420940985" title="Клик — скопировать">A 642 094 09 85</td><td>- Эластомерная опора (ELASTOMER BEARING)</td><td>2</td><td>К держателю справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>4</td><td>Держатель слева к крышке клапанного механизма; M6X12</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="N000000003018" title="Клик — скопировать">N 000000 003018</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>5</td><td>Держатель справа к крышке клапанного механизма; M6X18</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление держателя слева; M6</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Крепление держателя справа; M6</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="1000"><td>1000</td><td class="pn" data-raw="A6420948597" title="Клик — скопировать">A 642 094 85 97</td><td>Впускная труба (RAW AIR LINE)</td><td>1</td><td>Слева</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="1020"><td>1020</td><td class="pn" data-raw="A6420948497" title="Клик — скопировать">A 642 094 84 97</td><td>Впускная труба (RAW AIR LINE)</td><td>1</td><td>Справа</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="1100"><td>1100</td><td class="pn" data-raw="A2535000255" title="Клик — скопировать">A 253 500 02 55</td><td>Впуск холодного воздуха (COLD AIR INTAKE)</td><td>1</td><td></td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="1200"><td>1200</td><td class="pn" data-raw="A0009919540" title="Клик — скопировать">A 000 991 95 40</td><td>Распорная заклепка (EXPANSION RIVET)</td><td>4</td><td>Крепление воздухозаборника холодного воздуха</td><td class="restr"></td></tr><tr data-pos="1300"><td>1300</td><td class="pn" data-raw="A6420108309" title="Клик — скопировать">A 642 010 83 09</td><td>Защитный кожух двигателя (ENGINE COVER)</td><td>1</td><td></td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr><tr data-pos="1310"><td>1310</td><td class="pn" data-raw="A6420910350" title="Клик — скопировать">A 642 091 03 50</td><td>- Держатель шарнира (BALL JOINT MOUNT)</td><td>4</td><td>Кожух на двигателе</td><td class="restr" data-expr="M642"><span class="icode">M642</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.743.042_version_003.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "100", "110", "150", "160", "170", "180", "1000", "1020", "1100", "1200", "1300", "1310"]}];</script><script>
+<p class="muted">Позиций: 30 · подписано на схемах: 30 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.743.042_version_003.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "100", "110", "150", "160", "170", "180", "1000", "1020", "1100", "1200", "1300", "1310"], "hs": {"1000": [[640, 776, 55, 28]], "180": [[1083, 716, 42, 29]], "1020": [[439, 452, 55, 28]], "170": [[1068, 682, 42, 28]], "160": [[1065, 655, 43, 29]], "150": [[808, 828, 42, 29]], "110": [[793, 494, 43, 29]], "100": [[1034, 388, 42, 29]], "1300": [[123, 241, 55, 29]], "1310": [[526, 358, 55, 29]], "1200": [[28, 455, 55, 29]], "1100": [[403, 759, 55, 29]], "80": [[1147, 130, 30, 28]], "70": [[797, 149, 30, 29]], "60": [[797, 213, 30, 28]], "50": [[790, 573, 30, 29]], "40": [[788, 597, 30, 28], [797, 240, 30, 29]], "30": [[838, 398, 30, 29]], "20": [[1070, 551, 30, 29]], "10": [[807, 338, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

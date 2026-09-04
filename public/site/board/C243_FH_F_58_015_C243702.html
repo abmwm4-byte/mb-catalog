@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C243702">C243_FH -/-</a> → 015 Инструменты и принадлежности</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C243_FH -/-</a> → 015 Инструменты и принадлежности</div>
 <h1>015 Инструменты и принадлежности</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.079.826_version_007.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.079.826_version_007.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A1645800218" title="Клик — скопировать">A 164 580 02 18</td><td>Автомобильный домкрат (JACK)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2475800200" title="Клик — скопировать">A 247 580 02 00</td><td>Автомобильный домкрат (JACK)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A4145810049" title="Клик — скопировать">A 414 581 00 49</td><td>Ключ (KEY)</td><td>1</td><td>Для домкрата</td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0008992561" title="Клик — скопировать">A 000 899 25 61</td><td>Сумка (BAG)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2138900000" title="Клик — скопировать">A 213 890 00 00</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A0998900200" title="Клик — скопировать">A 099 890 02 00</td><td>Держатель (HOLDER)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A2035830075" title="Клик — скопировать">A 203 583 00 75</td><td>Противооткатный упор (CHOCK)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="40"><td>40</td><td class="pn" data-raw="A1648990054" title="Клик — скопировать">A 164 899 00 54</td><td>Клин (WEDGE)</td><td>1</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1718900097" title="Клик — скопировать">A 171 890 00 97</td><td>Знак аварийной остановки (WARNING TRIANGLE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="60"><td>60</td><td class="pn" data-raw="A1718900197" title="Клик — скопировать">A 171 890 01 97</td><td>- Знак аварийной остановки (WARNING TRIANGLE)</td><td>1</td><td>[409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A1718990261" title="Клик — скопировать">A 171 899 02 61</td><td>- крепление (MOUNT)</td><td>1</td><td>Знак аварийной остановки</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005836603" title="Клик — скопировать">A 000 583 66 03</td><td>Баллон с герметиком (TIRE SEALANT BOTTLE)</td><td>1</td><td>Принадлежности</td><td class="restr" data-expr="B51"><span class="icode">B51</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005836603" title="Клик — скопировать">A 000 583 66 03</td><td>Баллон с герметиком (TIRE SEALANT BOTTLE)</td><td>1</td><td>Принадлежности</td><td class="restr" data-expr="B51+(2XXL/0B2)"><span class="icode">B51+(2XXL/0B2)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005836703" title="Клик — скопировать">A 000 583 67 03</td><td>Баллон с герметиком (TIRE SEALANT BOTTLE)</td><td>1</td><td>Со шлангом</td><td class="restr" data-expr="B51"><span class="icode">B51</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0005837505" title="Клик — скопировать">A 000 583 75 05</td><td>Баллон с герметиком (TIRE SEALANT BOTTLE)</td><td>1</td><td>Со шлангом; REPLACEMENT IS ONLY VALID для  MFA2</td><td class="restr" data-expr="B51"><span class="icode">B51</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0005838200" title="Клик — скопировать">A 000 583 82 00</td><td>Компрессор для шин (TIRE INFLATION COMPRESSOR)</td><td>1</td><td></td><td class="restr" data-expr="B51"><span class="icode">B51</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0005838505" title="Клик — скопировать">A 000 583 85 05</td><td>Компрессор для шин (TIRE INFLATION COMPRESSOR)</td><td>1</td><td></td><td class="restr" data-expr="B51/672"><span class="icode">B51/672</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A1698600150" title="Клик — скопировать">A 169 860 01 50</td><td>Автомобильная аптечка (FIRST-AID BOX)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2045810074" title="Клик — скопировать">A 204 581 00 74</td><td>Палец (PIN)</td><td>1</td><td>Фиксация колеса</td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009885700" title="Клик — скопировать">A 000 988 57 00</td><td>Центрирующая оправка (CENTERING PIN)</td><td>1</td><td>Фиксация колеса</td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="A2215810001" title="Клик — скопировать">A 221 581 00 01</td><td>Торцовый гаечный ключ (SOCKET WRENCH)</td><td>1</td><td>SW17</td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="130"><td>130</td><td class="pn" data-raw="A2223150000" title="Клик — скопировать">A 222 315 00 00</td><td>Буксирная проушина (TOWING EYE)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="140"><td>140</td><td class="pn" data-raw="A2035830064" title="Клик — скопировать">A 203 583 00 64</td><td>Перчатка (GLOVE)</td><td>NB</td><td></td><td class="restr" data-expr="B12"><span class="icode">B12</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0008604980" title="Клик — скопировать">A 000 860 49 80</td><td>Огнетушитель (FIRE EXTINGUISHER)</td><td>1</td><td></td><td class="restr" data-expr="682"><span class="icode">682</span></td></tr><tr data-pos="160"><td>160</td><td class="pn" data-raw="A0005851900" title="Клик — скопировать">A 000 585 19 00</td><td>Текстильная сумка (TEXTILE BAG)</td><td>1</td><td>Аварийное запасное колесо</td><td class="restr" data-expr="690"><span class="icode">690</span></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0005830642" title="Клик — скопировать">A 000 583 06 42</td><td>Проверочный шаблон (GAUGE)</td><td>1</td><td>Износ тормозных колодок</td><td class="restr" data-expr="494"><span class="icode">494</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td></td><td class="restr" data-expr="70B"><span class="icode">70B</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td></td><td class="restr" data-expr="70B+(494/460/919L/625)"><span class="icode">70B+(494/460/919L/625)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>1</td><td></td><td class="restr" data-expr="70B+(919L/625)"><span class="icode">70B+(919L/625)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>4</td><td></td><td class="restr" data-expr="71B"><span class="icode">71B</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>4</td><td></td><td class="restr" data-expr="71B+(494/460/919L/625)"><span class="icode">71B+(494/460/919L/625)</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005833500" title="Клик — скопировать">A 000 583 35 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>5</td><td></td><td class="restr" data-expr="71B+567"><span class="icode">71B+567</span></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="A0005834300" title="Клик — скопировать">A 000 583 43 00</td><td>Светоотражающий жилет (SAFETY VEST)</td><td>5</td><td></td><td class="restr" data-expr="71B+567+(494/460/919L/625)"><span class="icode">71B+567+(494/460/919L/625)</span></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.079.826_version_007.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "140", "150", "160", "170", "180"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 33 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.079.826_version_007.png", "poses": ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "140", "150", "160", "170", "180"], "hs": {"180": [[178, 814, 42, 29]], "170": [[1194, 615, 42, 29]], "160": [[989, 616, 43, 28]], "150": [[756, 616, 43, 28]], "140": [[537, 610, 43, 29]], "130": [[321, 610, 42, 29]], "120": [[83, 608, 43, 29]], "110": [[748, 388, 43, 29]], "100": [[530, 388, 43, 29]], "90": [[324, 396, 30, 29]], "80": [[79, 399, 30, 29]], "70": [[1201, 386, 30, 29]], "60": [[1022, 120, 30, 28]], "50": [[1088, 327, 30, 28]], "40": [[752, 180, 30, 29]], "30": [[576, 159, 30, 29]], "20": [[318, 167, 30, 29]], "10": [[91, 181, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

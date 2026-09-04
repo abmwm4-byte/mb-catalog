@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C111023">68G USA 250/280 SE/C Действительно для: CA, US</a> → 001 СИСТЕМА ВЫПУСКА ОГ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/15">68G USA 250/280 SE/C Действительно для: CA, US</a> → 001 СИСТЕМА ВЫПУСКА ОГ</div>
 <h1>001 СИСТЕМА ВЫПУСКА ОГ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B49001000593 <span class="hint">(14)</span></button><button data-i="1" class="">B49001000594 <span class="hint">(1)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B49001000593.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B49001000593.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="6"><td>6</td><td class="pn" data-raw="A1084902120" title="Клик — скопировать">A 108 490 21 20</td><td>Выпускная труба</td><td>1</td><td>СПЕРЕДИ [409] ПРИ МОНТАЖЕ ПОДОГНАТЬ ПО МЕСТУ</td><td class="restr"></td></tr><tr data-pos="18"><td>18</td><td class="pn" data-raw="N915035000023" title="Клик — скопировать">N 915035 000023</td><td>Уплотнительное кольцо</td><td>2</td><td>FRONT EXHAUST PIPE TO EXHAUST MANIFOLD</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1084900521" title="Клик — скопировать">A 108 490 05 21</td><td>Выпускная труба</td><td>1</td><td>СЕРЕДИНА</td><td class="restr"></td></tr><tr data-pos="34"><td>34</td><td class="pn" data-raw="A1124920904" title="Клик — скопировать">A 112 492 09 04</td><td>Выпускная труба</td><td>2</td><td>СЗАДИ</td><td class="restr"></td></tr><tr data-pos="42"><td>42</td><td class="pn" data-raw="A1124913401" title="Клик — скопировать">A 112 491 34 01</td><td>Глушитель</td><td>1</td><td>[402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A1094900143" title="Клик — скопировать">A 109 490 01 43</td><td>Удерживающая дуга</td><td>1</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos="58"><td>58</td><td class="pn" data-raw="A0004920053" title="Клик — скопировать">A 000 492 00 53</td><td>втулка</td><td>2</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0004920183" title="Клик — скопировать">A 000 492 01 83</td><td>ИЗОЛЯЦИЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A0004920983" title="Клик — скопировать">A 000 492 09 83</td><td>Изоляционная шайба</td><td>2</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0004920043" title="Клик — скопировать">A 000 492 00 43</td><td>СКОБА</td><td>1</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos="86"><td>86</td><td class="pn" data-raw="A1074920082" title="Клик — скопировать">A 107 492 00 82</td><td>Резиновое кольцо</td><td>6</td><td></td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1124921140" title="Клик — скопировать">A 112 492 11 40</td><td>ХОМУТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A1124900341" title="Клик — скопировать">A 112 490 03 41</td><td>ХОМУТ</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="134"><td>134</td><td class="pn" data-raw="A1129870140" title="Клик — скопировать">A 112 987 01 40</td><td>Резиновый буфер</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="138"><td>138</td><td class="pn" data-raw="A1134920214" title="Клик — скопировать">A 113 492 02 14</td><td>Накладка</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="178"><td>178</td><td class="pn" data-raw="A1094920530" title="Клик — скопировать">A 109 492 05 30</td><td>Экран защитный</td><td>1</td><td>BELOW FIRE WALL</td><td class="restr"></td></tr><tr data-pos="182"><td>182</td><td class="pn" data-raw="A1084920330" title="Клик — скопировать">A 108 492 03 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008217" title="Клик — скопировать">N 000931 008217</td><td>Винт</td><td>6</td><td>FRONT EXHAUST PIPE TO EXHAUST MANIFOLD</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N999901008005" title="Клик — скопировать">N 999901 008005</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009903250" title="Клик — скопировать">A 000 990 32 50</td><td>гайка</td><td>6</td><td>M8</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127008203" title="Клик — скопировать">N 000127 008203</td><td>Пружинное кольцо</td><td>2</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008013" title="Клик — скопировать">N 000934 008013</td><td>Гайка</td><td>2</td><td>MAIN MUFFLER SUSPENSION</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000931008327" title="Клик — скопировать">N 000931 008327</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304017008043" title="Клик — скопировать">N 304017 008043</td><td>Винт с 6-гранной головкой</td><td>2</td><td>FRONT EXHAUST PIPE TO REAR EXHAUST PIPE; M8X55 \- 8.8</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000125008407" title="Клик — скопировать">N 000125 008407</td><td>ШАЙБА</td><td>2</td><td>FRONT EXHAUST PIPE TO REAR EXHAUST PIPE</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000127008203" title="Клик — скопировать">N 000127 008203</td><td>Пружинное кольцо</td><td>2</td><td>FRONT EXHAUST PIPE TO REAR EXHAUST PIPE</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000934008010" title="Клик — скопировать">N 000934 008010</td><td>Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка</td><td>2</td><td>FRONT EXHAUST PIPE TO REAR EXHAUST PIPE; M8</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1124900830" title="Клик — скопировать">A 112 490 08 30</td><td>ЗАЩИТНАЯ ПАНЕЛЬ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1094920530" title="Клик — скопировать">A 109 492 05 30</td><td>Экран защитный</td><td>1</td><td>BELOW FIRE WALL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="N000087006104" title="Клик — скопировать">N 000087 006104</td><td>БОЛТ</td><td>3</td><td>SCREENING PLATE BELOW FIRE WALL</td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A0009902036" title="Клик — скопировать">A 000 990 20 36</td><td>БОЛТ</td><td>NB</td><td></td><td class="restr"></td></tr><tr data-pos=""><td></td><td class="pn" data-raw="A1085860349" title="Клик — скопировать">A 108 586 03 49</td><td>РЕМКОМПЛЕКТ</td><td>1</td><td>[014] 021/023 FROM CHASSIS 082991</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 33 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49001000593.png", "poses": ["6", "18", "26", "34", "42", "50", "58", "62", "70", "86", "90", "134", "138", "182"]}, {"png": "../../img_png/drawing_B49001000594.png", "poses": ["178"]}];</script><script>
+<p class="muted">Позиций: 33 · подписано на схемах: 17 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B49001000593.png", "poses": ["6", "18", "26", "34", "42", "50", "58", "62", "70", "86", "90", "134", "138", "182"], "hs": {"34": [[770, 337, 33, 17]], "58": [[262, 125, 33, 17]], "26": [[595, 432, 33, 17]], "18": [[112, 333, 33, 17]], "190": [[65, 264, 33, 17]], "170": [[348, 354, 33, 17]], "182": [[507, 166, 33, 17]], "150": [[278, 346, 33, 17]], "162": [[353, 329, 33, 17]], "142": [[334, 306, 33, 17]], "154": [[324, 232, 33, 17]], "166": [[357, 341, 33, 17]], "134": [[511, 303, 33, 17]], "146": [[277, 365, 33, 17]], "158": [[323, 247, 33, 17]], "138": [[809, 184, 33, 17]], "6": [[168, 450, 33, 17]], "90": [[525, 526, 33, 17]], "70": [[710, 59, 33, 17]], "50": [[272, 82, 33, 17]], "62": [[285, 145, 33, 17]], "86": [[732, 110, 33, 17]], "42": [[618, 239, 33, 17]]}, "w": 876, "h": 584}, {"png": "../../img_png/drawing_B49001000594.png", "poses": ["178"], "hs": {"178": [[95, 166, 33, 17]], "15": [[285, 317, 33, 17]]}, "w": 876, "h": 584}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

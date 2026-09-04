@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C243702">C243_FH -/-</a> → 030 Поворотный кулак и поперечный рычаг</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/10">C243_FH -/-</a> → 030 Поворотный кулак и поперечный рычаг</div>
 <h1>030 Поворотный кулак и поперечный рычаг</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_PV000.010.084.825_version_003.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_PV000.010.084.825_version_003.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2473320100" title="Клик — скопировать">A 247 332 01 00</td><td>Поворотный кулак (STEERING KNUCKLE)</td><td>1</td><td>Спереди слева</td><td class="restr"></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2473320200" title="Клик — скопировать">A 247 332 02 00</td><td>Поворотный кулак (STEERING KNUCKLE)</td><td>1</td><td>Спереди справа</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2473340500" title="Клик — скопировать">A 247 334 05 00</td><td>Подшипник ступицы колеса (WHEEL BEARING)</td><td>1</td><td>Спереди слева</td><td class="restr"></td></tr><tr data-pos="30"><td>30</td><td class="pn" data-raw="A2473340500" title="Клик — скопировать">A 247 334 05 00</td><td>Подшипник ступицы колеса (WHEEL BEARING)</td><td>1</td><td>Спереди справа</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0029901903" title="Клик — скопировать">A 002 990 19 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>4</td><td>Подшипник ступицы колеса к поворотному кулаку слева; M12X1,5X45</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A0029901903" title="Клик — скопировать">A 002 990 19 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>4</td><td>Подшипник ступицы колеса к поворотному кулаку справа; M12X1,5X45</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0049901103" title="Клик — скопировать">A 004 990 11 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>1</td><td>Приводной вал к ступице переднего колеса, слева</td><td class="restr"></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A0049901103" title="Клик — скопировать">A 004 990 11 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>1</td><td>Приводной вал к ступице переднего колеса, справа</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1683570089" title="Клик — скопировать">A 168 357 00 89</td><td>Колпачок (LOCKING CAP)</td><td>1</td><td>Подшипник ступицы переднего левого колеса</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0003560000" title="Клик — скопировать">A 000 356 00 00</td><td>Колпак ступицы (CENTER CAP)</td><td>1</td><td>Подшипник ступицы переднего левого колеса</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A1683570089" title="Клик — скопировать">A 168 357 00 89</td><td>Колпачок (LOCKING CAP)</td><td>1</td><td>Подшипник ступицы переднего правого колеса</td><td class="restr"></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0003560000" title="Клик — скопировать">A 000 356 00 00</td><td>Колпак ступицы (CENTER CAP)</td><td>1</td><td>Подшипник ступицы переднего правого колеса</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2473305500" title="Клик — скопировать">A 247 330 55 00</td><td>Поперечный рычаг (TRANSVERSE CONTROL ARM)</td><td>1</td><td>Спереди слева</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2473300100" title="Клик — скопировать">A 247 330 01 00</td><td>Поперечный рычаг (TRANSVERSE CONTROL ARM)</td><td>1</td><td>Спереди слева</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2473305600" title="Клик — скопировать">A 247 330 56 00</td><td>Поперечный рычаг (TRANSVERSE CONTROL ARM)</td><td>1</td><td>Спереди справа</td><td class="restr"></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2473300200" title="Клик — скопировать">A 247 330 02 00</td><td>Поперечный рычаг (TRANSVERSE CONTROL ARM)</td><td>1</td><td>Спереди справа</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2473331100" title="Клик — скопировать">A 247 333 11 00</td><td>- Элепент подш., эл. (BEARING ELEMENT, ELASTOM.)</td><td>1</td><td>Спереди слева</td><td class="restr"></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A2473331200" title="Клик — скопировать">A 247 333 12 00</td><td>- Элепент подш., эл. (BEARING ELEMENT, ELASTOM.)</td><td>1</td><td>Спереди справа</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N910105014016" title="Клик — скопировать">N 910105 014016</td><td>- Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Опорный элемент к левому поперечному рычагу; M14X1.5X90</td><td class="restr"></td></tr><tr data-pos="120"><td>120</td><td class="pn" data-raw="N910105014016" title="Клик — скопировать">N 910105 014016</td><td>- Винт с 6-гранной головкой (HEXAGON HEAD BOLT)</td><td>1</td><td>Опорный элемент к правому поперечному рычагу; M14X1.5X90</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009906611" title="Клик — скопировать">A 000 990 66 11</td><td>Самонарезающий винт (SELF-TAPPING SCREW)</td><td>1</td><td>Опорный элемент к левому лонжерону; M10X28</td><td class="restr"></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A0009906611" title="Клик — скопировать">A 000 990 66 11</td><td>Самонарезающий винт (SELF-TAPPING SCREW)</td><td>1</td><td>Опорный элемент к правому лонжерону; M10X28</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0019909003" title="Клик — скопировать">A 001 990 90 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>2</td><td>Опорный элемент к интегральной балке (левая сторона); M10X100</td><td class="restr"></td></tr><tr data-pos="170"><td>170</td><td class="pn" data-raw="A0019909003" title="Клик — скопировать">A 001 990 90 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>2</td><td>Опорный элемент к интегральной балке (правая сторона); M10X100</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (NUT)</td><td>2</td><td>Опорный элемент к интегральной балке (левая сторона); M10</td><td class="restr"></td></tr><tr data-pos="180"><td>180</td><td class="pn" data-raw="N000000008270" title="Клик — скопировать">N 000000 008270</td><td>Гайка (NUT)</td><td>2</td><td>Опорный элемент к интегральной балке (правая сторона); M10</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0019908903" title="Клик — скопировать">A 001 990 89 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>1</td><td>Поперечный рычаг к интегральной балке (левая сторона); M14X1,5X125</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N000000009328" title="Клик — скопировать">N 000000 009328</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Поперечный рычаг к интегральной балке (левая сторона)</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="A0019908903" title="Клик — скопировать">A 001 990 89 03</td><td>Винт Torx External (HEXALOBULAR HEAD SCREW)</td><td>1</td><td>Поперечный рычаг к интегральной балке (правая сторона); M14X1,5X125</td><td class="restr"></td></tr><tr data-pos="200"><td>200</td><td class="pn" data-raw="N000000009328" title="Клик — скопировать">N 000000 009328</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Поперечный рычаг к интегральной балке (правая сторона)</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2203330076" title="Клик — скопировать">A 220 333 00 76</td><td>Дистанционная шайба</td><td>1</td><td>Поперечный рычаг к интегральной балке (левая сторона)</td><td class="restr"></td></tr><tr data-pos="210"><td>210</td><td class="pn" data-raw="A2203330076" title="Клик — скопировать">A 220 333 00 76</td><td>Дистанционная шайба</td><td>1</td><td>Поперечный рычаг к интегральной балке (правая сторона)</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019906756" title="Клик — скопировать">A 001 990 67 56</td><td>CAGE NUT</td><td>1</td><td>Поперечный рычаг к интегральной балке (левая сторона)</td><td class="restr"></td></tr><tr data-pos="220"><td>220</td><td class="pn" data-raw="A0019906756" title="Клик — скопировать">A 001 990 67 56</td><td>CAGE NUT</td><td>1</td><td>Поперечный рычаг к интегральной балке (правая сторона)</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0059904750" title="Клик — скопировать">A 005 990 47 50</td><td>Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>1</td><td>Поперечный рычаг к поворотному кулаку слева; M14X1,5</td><td class="restr"></td></tr><tr data-pos="250"><td>250</td><td class="pn" data-raw="A0059904750" title="Клик — скопировать">A 005 990 47 50</td><td>Гайка комбинированная (NUT-AND-WASHER ASSEMBLY)</td><td>1</td><td>Поперечный рычаг к поворотному кулаку справа; M14X1,5</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="N000000004179" title="Клик — скопировать">N 000000 004179</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Пружинная амортизационная стойка к левому поворотному кулаку; M12X1,5X75</td><td class="restr"></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="N000000004179" title="Клик — скопировать">N 000000 004179</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Пружинная амортизационная стойка к правому поворотн. кулаку; M12X1,5X75</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N000000008269" title="Клик — скопировать">N 000000 008269</td><td>Гайка (NUT)</td><td>1</td><td>Пружинная амортизационная стойка к левому поворотному кулаку; M12X1,5</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="N000000008269" title="Клик — скопировать">N 000000 008269</td><td>Гайка (NUT)</td><td>1</td><td>Пружинная амортизационная стойка к правому поворотн. кулаку; M12X1,5</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 40 · подписано на схемах: 40 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.084.825_version_003.png", "poses": ["10", "30", "50", "70", "80", "100", "110", "120", "150", "170", "180", "200", "210", "220", "250", "300", "310"]}];</script><script>
+<p class="muted">Позиций: 40 · подписано на схемах: 40 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.010.084.825_version_003.png", "poses": ["10", "30", "50", "70", "80", "100", "110", "120", "150", "170", "180", "200", "210", "220", "250", "300", "310"], "hs": {"180": [[587, 119, 43, 28]], "170": [[617, 367, 43, 29]], "150": [[759, 297, 42, 29]], "250": [[481, 407, 43, 28]], "120": [[853, 149, 43, 29]], "220": [[305, 290, 42, 29]], "110": [[712, 139, 43, 29]], "210": [[163, 339, 42, 29]], "100": [[278, 480, 42, 29]], "310": [[728, 412, 43, 29]], "200": [[60, 378, 43, 29]], "300": [[993, 383, 43, 28]], "80": [[1234, 801, 30, 28]], "70": [[1149, 750, 30, 29]], "50": [[733, 517, 30, 29]], "30": [[994, 719, 30, 28]], "10": [[1050, 493, 30, 28]]}, "w": 1326, "h": 881}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

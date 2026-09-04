@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C107041">574 AB 09/85</a> → 105 ПРУЖИНЫ И ПОДВЕСК. СЗАДИ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">574 AB 09/85</a> → 105 ПРУЖИНЫ И ПОДВЕСК. СЗАДИ</div>
 <h1>105 ПРУЖИНЫ И ПОДВЕСК. СЗАДИ</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B32105000007.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B32105000007.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1153242204" title="Клик — скопировать">A 115 324 22 04</td><td>Задняя пружина</td><td>2</td><td>[003] ДЛЯ ПОДБОРА ПЕРЕДНИХ ПРУЖИН СЛЕДУЕТ СЛОЖИТЬ                    ЧИСЛО ТОЧЕК ДЛЯ СООТВЕТСТВУЮЩЕГО ТИПОРЯДА И УСТАНОВЛЕННОГО СПЕЦ.ИСПОЛНЕНИЯ ИЗ НИЖЕПРИВЕДЕННОЙ ТАБЛИЦЫ ============================================================================================================================== MODEL         POINTS                                 SPECIAL EQUIPMENT                     POINTS 107.041 LL      12                                    HITCHING MECHANISM                5 107.041 RL      13                                    AUTOMOBILE TELEPHON               3 REAR SEAT                         2 AUTOMATIC TRANSMISSION            1 CATALYST                          1 ============================================================================================================================== TABLE REAR SPRING - RUBBER BOOT     NORMAL SPRINGS ============================================================================================================================== SUM OF POINTS        REAR SPRING                        BOOT:                        BOOT: WITH BLUE REAR SPRING        W/ RED REAR SPRING -16          115 324 22 04                     115 325 22 44                115 325 23 44 17-28          115 324 22 04                     115 325 23 44                115 325 24 44 29-            116 324 11 04                     115 325 22 44                115 325 23 44 ==============================================================================================================================</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1163241104" title="Клик — скопировать">A 116 324 11 04</td><td>Задняя пружина</td><td>2</td><td>[003] ДЛЯ ПОДБОРА ПЕРЕДНИХ ПРУЖИН СЛЕДУЕТ СЛОЖИТЬ                    ЧИСЛО ТОЧЕК ДЛЯ СООТВЕТСТВУЮЩЕГО ТИПОРЯДА И УСТАНОВЛЕННОГО СПЕЦ.ИСПОЛНЕНИЯ ИЗ НИЖЕПРИВЕДЕННОЙ ТАБЛИЦЫ ============================================================================================================================== MODEL         POINTS                                 SPECIAL EQUIPMENT                     POINTS 107.041 LL      12                                    HITCHING MECHANISM                5 107.041 RL      13                                    AUTOMOBILE TELEPHON               3 REAR SEAT                         2 AUTOMATIC TRANSMISSION            1 CATALYST                          1 ============================================================================================================================== TABLE REAR SPRING - RUBBER BOOT     NORMAL SPRINGS ============================================================================================================================== SUM OF POINTS        REAR SPRING                        BOOT:                        BOOT: WITH BLUE REAR SPRING        W/ RED REAR SPRING -16          115 324 22 04                     115 325 22 44                115 325 23 44 17-28          115 324 22 04                     115 325 23 44                115 325 24 44 29-            116 324 11 04                     115 325 22 44                115 325 23 44 ==============================================================================================================================</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252244" title="Клик — скопировать">A 115 325 22 44</td><td>Резиновая опора</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 1  (9,5 MM)</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252344" title="Клик — скопировать">A 115 325 23 44</td><td>Резиновая опора</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 2  (14 MM)</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1153252444" title="Клик — скопировать">A 115 325 24 44</td><td>Резиновая опора</td><td>2</td><td>ПО ПОТРЕБН.;КОЛИЧ.ШИШЕК: 3  (19 MM)</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200031" title="Клик — скопировать">A 126 320 00 31</td><td>АМОРТИЗАТОР</td><td>-</td><td>[408] ЗАМЕНЯТЬ ТОЛЬКО ПАРАМИ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1263200931" title="Клик — скопировать">A 126 320 09 31</td><td>АМОРТИЗАТОР</td><td>2</td><td>ОБЪЁМ ПОСТАВКИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A1153261668" title="Клик — скопировать">A 115 326 16 68</td><td>- Резиновое кольцо</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1153261768" title="Клик — скопировать">A 115 326 17 68</td><td>- Резиновое кольцо</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A1153260176" title="Клик — скопировать">A 115 326 01 76</td><td>- ШАЙБА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2023260076" title="Клик — скопировать">A 202 326 00 76</td><td>- Диск</td><td>2</td><td>АМОРТИЗАТОР К РАМЕ</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N000934010015" title="Клик — скопировать">N 000934 010015</td><td>- Гайка</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="N308673010000" title="Клик — скопировать">N 308673 010000</td><td>- Шестигранная гайка</td><td>4</td><td>АМОРТИЗАТОР К РАМЕ; M10X1</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N914125010308" title="Клик — скопировать">N 914125 010308</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="N910106010031" title="Клик — скопировать">N 910106 010031</td><td>Винт с 6-гранной головкой</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ; M10X25</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000137010201" title="Клик — скопировать">N 000137 010201</td><td>Пружинная шайба</td><td>4</td><td>АМОРТИЗ. НА ЗАДН. МОСТУ</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1153200056" title="Клик — скопировать">A 115 320 00 56</td><td>РЕМКОМПЛЕКТ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1159900099" title="Клик — скопировать">A 115 990 00 99</td><td>Крепежные детали</td><td>2</td><td>КРЕПЛЕНИЕ АМОРТИЗАТ. СЗАДИ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1153200344" title="Клик — скопировать">A 115 320 03 44</td><td>Резиновый буфер</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008009" title="Клик — скопировать">N 000912 008009</td><td>Винт</td><td>-</td><td>M8X20\-8.8</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008200" title="Клик — скопировать">N 000912 008200</td><td>Цилиндрич. винт</td><td>-</td><td>M 8X20\-8.8</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000912008219" title="Клик — скопировать">N 000912 008219</td><td>Цилиндрич. винт</td><td>2</td><td>БУФЕР НА РАМЕ; M8X20</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N912004008102" title="Клик — скопировать">N 912004 008102</td><td>Пружинное кольцо</td><td>2</td><td>БУФЕР НА РАМЕ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B32105000007.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "41", "44", "47", "50"]}];</script><script>
+<p class="muted">Позиций: 23 · подписано на схемах: 23 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B32105000007.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "41", "44", "47", "50"], "hs": {"44": [[282, 314, 33, 17]], "11": [[562, 128, 33, 17]], "23": [[419, 23, 33, 17], [417, 1, 33, 17]], "47": [[294, 381, 33, 17]], "14": [[418, 63, 33, 17]], "26": [[471, 199, 33, 17]], "17": [[415, 85, 33, 17]], "29": [[473, 240, 33, 17]], "5": [[395, 382, 33, 17]], "8": [[395, 310, 33, 17]], "50": [[288, 349, 33, 17]], "41": [[631, 205, 33, 17]], "20": [[417, 41, 33, 17]]}, "w": 876, "h": 583}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

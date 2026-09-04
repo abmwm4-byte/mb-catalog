@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>83 Отопитель и вентиляция / 181 Трубопроводы для горячей жидкости</title><style>
+* { box-sizing: border-box; }
+body { font: 15px/1.5 Manrope, system-ui, sans-serif; background: #f6f7f9; color: #1d1f22; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
+h1 { font-size: 24px; margin: 8px 0 4px; }
+h2 { font-size: 18px; margin: 28px 0 10px; }
+.crumbs { color: #7a8089; font-size: 13px; margin-bottom: 14px; }
+.crumbs a { color: #1268c8; text-decoration: none; }
+a { color: #1268c8; }
+.muted { color: #7a8089; }
+.series { display: flex; flex-wrap: wrap; gap: 10px; }
+.ser { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px 14px; min-width: 150px; }
+.ser b { font-size: 16px; }
+.ser .cnt { color: #7a8089; font-size: 12px; }
+.models { display: flex; flex-wrap: wrap; gap: 8px; }
+.model { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 10px; padding: 8px 12px; text-decoration: none; color: #1d1f22; min-width: 170px; }
+.model small { display: block; color: #7a8089; }
+.model.off { opacity: .45; }
+.badge { display: inline-block; background: #e7f3e8; color: #1c7a2d; border-radius: 20px; padding: 0 8px; font-size: 11px; }
+.group { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; margin: 14px 0; overflow: hidden; }
+.group > h3 { margin: 0; padding: 10px 14px; background: #eef1f4; font-size: 15px; }
+.sub { display: flex; justify-content: space-between; gap: 10px; padding: 8px 14px; border-top: 1px solid #eef1f4; text-decoration: none; color: #1d1f22; }
+.sub:hover { background: #f3f7fc; }
+.sub.off { color: #9aa1aa; }
+.cat-head { margin: 26px 0 6px; font-size: 17px; scroll-margin-top: 12px; }
+.catsel { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.catsel a { background: #fff; border: 1px solid #dbe1e8; border-radius: 20px; padding: 6px 14px; text-decoration: none; color: #1268c8; font-size: 14px; }
+.catsel a:hover { background: #f0f6ff; }
+.cat-tag { display: inline-block; background: #eef1f4; border-radius: 6px; padding: 1px 7px; font-size: 12px; color: #4a5058; margin-left: 6px; }
+.scope-head { margin: 20px 0 4px; font-size: 15px; }
+.scope-note { margin: 0 0 8px; font-size: 12px; }
+.scheme-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; align-items: center; }
+.scheme-tabs button { border: 1px solid #dbe1e8; background: #fff; border-radius: 8px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+.scheme-tabs button.on { background: #1268c8; color: #fff; border-color: #1268c8; }
+.scheme-tabs .hint { color: #7a8089; font-size: 13px; }
+.parts tr.dim { opacity: .35; }
+.showonly { margin: 2px 0 6px; font-size: 13px; color: #4a5058; }
+.tag-r { display: inline-block; background: #fff3d6; color: #7a5b00; border-radius: 6px; padding: 0 6px; font-size: 11px; margin-left: 4px; }
+.chassis-box { margin-left: 14px; }
+.chassis-box input { border: 1px solid #dbe1e8; border-radius: 8px; padding: 3px 8px; font-size: 13px; }
+.parts tr.no-fit { display: none; }
+.parts td.restr { font-family: ui-monospace, monospace; font-size: 12px; white-space: normal; }
+.icode { background: #eef3fb; border-radius: 6px; padding: 2px 6px; display: inline-block; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.tile { display: block; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; padding: 10px; text-decoration: none; color: #1d1f22; }
+.tile:hover { border-color: #1268c8; }
+.tile img { width: 100%; height: 110px; object-fit: contain; display: block; background: #fff; }
+.tile b { display: block; font-size: 14px; margin-top: 8px; }
+.tile small { color: #7a8089; display: block; }
+.tile.off { opacity: .45; }
+.tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
+.vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
+.vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
+.vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
+.vin-hit a { color:#1c5f29; }
+/* viewer */
+.blayout { display: grid; grid-template-columns: minmax(0,1fr) 420px; gap: 16px; }
+@media (max-width: 1000px) { .blayout { grid-template-columns: 1fr; } }
+.viewer { position: relative; height: 72vh; background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden; touch-action: none; cursor: grab; }
+.viewer img { position: absolute; left: 50%; top: 50%; user-select: none; -webkit-user-drag: none; }
+.toolbar { position: absolute; right: 10px; top: 10px; display: flex; gap: 6px; z-index: 2; }
+.toolbar button { border: 1px solid #d6dae0; background: #fff; border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+.parts { background: #fff; border: 1px solid #e3e6ea; border-radius: 12px; overflow: auto; max-height: 72vh; }
+.parts table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.parts th, .parts td { padding: 6px 10px; border-bottom: 1px solid #eef1f4; text-align: left; vertical-align: top; }
+.parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
+.part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
+</style></head><body><div class="wrap">
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/20">C253_FX -/-</a> → 181 Трубопроводы для горячей жидкости</div>
+<h1>181 Трубопроводы для горячей жидкости</h1>
+<div class="scheme-tabs"><button data-i="0" class="on">PV000.002.683.245_version_002 <span class="hint">(18)</span></button><button data-i="1" class="">PV000.002.972.250_version_004 <span class="hint">(28)</span></button><button data-i="2" class="">PV000.002.683.246_version_003 <span class="hint">(26)</span></button></div>
+<div class="blayout">
+  <div class="viewer" id="viewer">
+    <div class="toolbar">
+      <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
+    </div>
+    <img id="scheme" src="../../img_png/drawing_PV000.002.683.245_version_002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
+  </div>
+  <div class="parts">
+    <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
+    <div class="showonly"><label><input type="checkbox" id="only-scheme"> только позиции выбранной схемы</label> · схем в доске: 3
+      <span class="chassis-box">мой шасси: <input id="chassis" placeholder="__ последние цифр" size="16"> · коды авто: <input id="codes" placeholder="700,805…" size="16"></span></div>
+    <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2048350364" title="Клик — скопировать">A 204 835 03 64</td><td>Циркуляционный насос (CIRCULATION PUMP)</td><td>1</td><td></td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="10"><td>10</td><td class="pn" data-raw="A2048350364" title="Клик — скопировать">A 204 835 03 64</td><td>Циркуляционный насос (CIRCULATION PUMP)</td><td>1</td><td></td><td class="restr" data-expr="M274+M20+M014/M274+(ME05/228)/M264+228"><span class="icode">M274+M20+M014/M274+(ME05/228)/M264+228</span></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2535011100" title="Клик — скопировать">A 253 501 11 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Циркуляционный насос</td><td class="restr" data-expr="M274+M20+M014/M274+(ME05/228)/M264+228"><span class="icode">M274+M20+M014/M274+(ME05/228)/M264+228</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2538308101" title="Клик — скопировать">A 253 830 81 01</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Обратная магистраль, от разъема к циркуляционному насосу</td><td class="restr" data-expr="875+(ME05+M274/228/M274+M014)"><span class="icode">875+(ME05+M274/228/M274+M014)</span></td></tr><tr data-pos="70"><td>70</td><td class="pn" data-raw="A2538308201" title="Клик — скопировать">A 253 830 82 01</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Обратная магистраль, от разъема к циркуляционному насосу</td><td class="restr" data-expr="(M274+-M014)+875"><span class="icode">(M274+-M014)+875</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление обратного трубопровода</td><td class="restr" data-expr="-(B01+M264)"><span class="icode">-(B01+M264)</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0039955677" title="Клик — скопировать">A 003 995 56 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>5</td><td>Шланговый трубопровод к поперечине</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="80"><td>80</td><td class="pn" data-raw="A0009953204" title="Клик — скопировать">A 000 995 32 04</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>5</td><td>Шланговый трубопровод к поперечине</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0009953903" title="Клик — скопировать">A 000 995 39 03</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Шланговый трубопровод к поперечине</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="90"><td>90</td><td class="pn" data-raw="A0009953104" title="Клик — скопировать">A 000 995 31 04</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Шланговый трубопровод к поперечине</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="100"><td>100</td><td class="pn" data-raw="A2538300902" title="Клик — скопировать">A 253 830 09 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Обратная магистраль, от теплообменника к разъему</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="110"><td>110</td><td class="pn" data-raw="A0009953314" title="Клик — скопировать">A 000 995 33 14</td><td>Держатель (HOLDER)</td><td>1</td><td>Крепление шлангового трубопровода</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538309400" title="Клик — скопировать">A 253 830 94 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От теплообменника к перегородке Рулевое управление: Влево</td><td class="restr" data-expr="875+U77"><span class="icode">875+U77</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2058305905" title="Клик — скопировать">A 205 830 59 05</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От теплообменника к перегородке Рулевое управление: Влево</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2058306105" title="Клик — скопировать">A 205 830 61 05</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От теплообменника к перегородке Рулевое управление: Вправо</td><td class="restr" data-expr="875"><span class="icode">875</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2538309300" title="Клик — скопировать">A 253 830 93 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От теплообменника к перегородке Рулевое управление: Влево</td><td class="restr" data-expr="9O1+875"><span class="icode">9O1+875</span></td></tr><tr data-pos="150"><td>150</td><td class="pn" data-raw="A2058306105" title="Клик — скопировать">A 205 830 61 05</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От теплообменника к перегородке Рулевое управление: Вправо</td><td class="restr" data-expr="9O1+875"><span class="icode">9O1+875</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2055061860" title="Клик — скопировать">A 205 506 18 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Влево</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2535061460" title="Клик — скопировать">A 253 506 14 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Вправо</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2055061960" title="Клик — скопировать">A 205 506 19 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Влево</td><td class="restr" data-expr="(228/ME05)+875"><span class="icode">(228/ME05)+875</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2535061560" title="Клик — скопировать">A 253 506 15 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Вправо</td><td class="restr" data-expr="ME05+875"><span class="icode">ME05+875</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2055061960" title="Клик — скопировать">A 205 506 19 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Влево</td><td class="restr" data-expr="9O1+875"><span class="icode">9O1+875</span></td></tr><tr data-pos="300"><td>300</td><td class="pn" data-raw="A2535061560" title="Клик — скопировать">A 253 506 15 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъемы к теплообменнику Рулевое управление: Вправо</td><td class="restr" data-expr="9O1+875"><span class="icode">9O1+875</span></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление трубопровода отопителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="310"><td>310</td><td class="pn" data-raw="A2535060800" title="Клик — скопировать">A 253 506 08 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>Разъем к разъему</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="320"><td>320</td><td class="pn" data-raw="A2058308502" title="Клик — скопировать">A 205 830 85 02</td><td>Держатель (HOLDER)</td><td>1</td><td>Обратный трубопровод</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A2388305700" title="Клик — скопировать">A 238 830 57 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От аккумуляторной батареи к разъёму Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A2058300002" title="Клик — скопировать">A 205 830 00 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Обратный трубопровод от держателя к циркуляционному насосу</td><td class="restr"></td></tr><tr data-pos="330"><td>330</td><td class="pn" data-raw="A2538300701" title="Клик — скопировать">A 253 830 07 01</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>Обратный трубопровод от держателя к циркуляционному насосу</td><td class="restr" data-expr="700"><span class="icode">700</span></td></tr><tr data-pos="332"><td>332</td><td class="pn" data-raw="A0009958303" title="Клик — скопировать">A 000 995 83 03</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="336"><td>336</td><td class="pn" data-raw="A2388305200" title="Клик — скопировать">A 238 830 52 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Обратный трубопровод Рулевое управление: Влево</td><td class="restr" data-expr="B01"><span class="icode">B01</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление трубопровода отопителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление обратного трубопровода</td><td class="restr" data-expr="-(B01+M264)"><span class="icode">-(B01+M264)</span></td></tr><tr data-pos="340"><td>340</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление обратного трубопровода</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2055061635" title="Клик — скопировать">A 205 506 16 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>Трубопровод к переключающему клапану</td><td class="restr" data-expr="(806/807/808/809)+(228/ME05)"><span class="icode">(806/807/808/809)+(228/ME05)</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2528302300" title="Клик — скопировать">A 252 830 23 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к разъему [004047] ЗАКАЗ ЗАПАСНОЙ ЧАСТИ МОЖНО ВЫПОЛНИТЬ ИСКЛЮЧИТЕЛЬНО ЧЕРЕЗ ПОРТАЛ ЗАПЧАСТЕЙ EDAG (HTTPS://ETOS.EDAG.DE/).</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="350"><td>350</td><td class="pn" data-raw="A2535061600" title="Клик — скопировать">A 253 506 16 00</td><td>Формовый шланг (MOLDED HOSE)</td><td>1</td><td>Трубопровод к переключающему клапану</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="355"><td>355</td><td class="pn" data-raw="A0029957977" title="Клик — скопировать">A 002 995 79 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Шланг к держателю</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2535060035" title="Клик — скопировать">A 253 506 00 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>От переключающего клапана к разъему</td><td class="restr" data-expr="(806/807/808/809)+(228/ME05)"><span class="icode">(806/807/808/809)+(228/ME05)</span></td></tr><tr data-pos="370"><td>370</td><td class="pn" data-raw="A2528302500" title="Клик — скопировать">A 252 830 25 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От насоса к переключающему клапану [004047] ЗАКАЗ ЗАПАСНОЙ ЧАСТИ МОЖНО ВЫПОЛНИТЬ ИСКЛЮЧИТЕЛЬНО ЧЕРЕЗ ПОРТАЛ ЗАПЧАСТЕЙ EDAG (HTTPS://ETOS.EDAG.DE/).</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2535060300" title="Клик — скопировать">A 253 506 03 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>К дополнительному водяному насосу</td><td class="restr" data-expr="(228/ME05)+-M276"><span class="icode">(228/ME05)+-M276</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2535060400" title="Клик — скопировать">A 253 506 04 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>К дополнительному водяному насосу</td><td class="restr" data-expr="(228/ME05)+875+-M276"><span class="icode">(228/ME05)+875+-M276</span></td></tr><tr data-pos="400"><td>400</td><td class="pn" data-raw="A2528302400" title="Клик — скопировать">A 252 830 24 00</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От разъёма к циркуляционному насосу [004047] ЗАКАЗ ЗАПАСНОЙ ЧАСТИ МОЖНО ВЫПОЛНИТЬ ИСКЛЮЧИТЕЛЬНО ЧЕРЕЗ ПОРТАЛ ЗАПЧАСТЕЙ EDAG (HTTPS://ETOS.EDAG.DE/).</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="402"><td>402</td><td class="pn" data-raw="A2058301502" title="Клик — скопировать">A 205 830 15 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="402"><td>402</td><td class="pn" data-raw="A2538301502" title="Клик — скопировать">A 253 830 15 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="402"><td>402</td><td class="pn" data-raw="A2538305302" title="Клик — скопировать">A 253 830 53 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="405"><td>405</td><td class="pn" data-raw="A2535061500" title="Клик — скопировать">A 253 506 15 00</td><td>Формовый шланг (MOLDED HOSE)</td><td>1</td><td>Насос к клапану</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="407"><td>407</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление шлангового трубопровода; M6X12</td><td class="restr" data-expr="(581/824/670/M276+M30+M016/U77/875/M274+M20+M014)+-(228/M654/M656/M177/M264)"><span class="icode">(581/824/670/M276+M30+M016/U77/875/M274+M20+M014)+-(228/M654/M656/M177/M264)</span></td></tr><tr data-pos="410"><td>410</td><td class="pn" data-raw="A2535060800" title="Клик — скопировать">A 253 506 08 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>Дополнительный топливный насос к переключающему клапану</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>1</td><td>Крепление трубопровода отопителя</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009909918" title="Клик — скопировать">A 000 990 99 18</td><td>Пластмассовая гайка откр. (PLASTIC NUT OPEN)</td><td>1</td><td>Крепление трубопровода отопителя</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="420"><td>420</td><td class="pn" data-raw="A0009902862" title="Клик — скопировать">A 000 990 28 62</td><td>Пластмассовая гайка (PLASTIC NUT)</td><td>1</td><td>Крепление трубопровода отопителя</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление трубопровода отопителя Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление трубопровода отопителя</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="430"><td>430</td><td class="pn" data-raw="A0049955877" title="Клик — скопировать">A 004 995 58 77</td><td>Крепеж (трубо)провода (LINE FASTENER)</td><td>1</td><td>Крепление трубопровода отопителя</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2058301502" title="Клик — скопировать">A 205 830 15 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2538301502" title="Клик — скопировать">A 253 830 15 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="440"><td>440</td><td class="pn" data-raw="A2538305302" title="Клик — скопировать">A 253 830 53 02</td><td>Шланговый трубопровод (HOSE LINE)</td><td>1</td><td>От переключающего клапана к двигателю</td><td class="restr" data-expr="(M274/M274+875)+(228/ME05/M20+M014)"><span class="icode">(M274/M274+875)+(228/ME05/M20+M014)</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A0005062864" title="Клик — скопировать">A 000 506 28 64</td><td>Клапан (VALVE)</td><td>1</td><td></td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="450"><td>450</td><td class="pn" data-raw="A0005062864" title="Клик — скопировать">A 000 506 28 64</td><td>Клапан (VALVE)</td><td>1</td><td></td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A2535060540" title="Клик — скопировать">A 253 506 05 40</td><td>Держатель (HOLDER)</td><td>1</td><td>Переключающий клапан</td><td class="restr" data-expr="(806/807/808/809)+(228/ME05)"><span class="icode">(806/807/808/809)+(228/ME05)</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A2525060000" title="Клик — скопировать">A 252 506 00 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Переключающий клапан [004047] ЗАКАЗ ЗАПАСНОЙ ЧАСТИ МОЖНО ВЫПОЛНИТЬ ИСКЛЮЧИТЕЛЬНО ЧЕРЕЗ ПОРТАЛ ЗАПЧАСТЕЙ EDAG (HTTPS://ETOS.EDAG.DE/).</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="460"><td>460</td><td class="pn" data-raw="A2135060240" title="Клик — скопировать">A 213 506 02 40</td><td>Держатель (HOLDER)</td><td>1</td><td>Переключающий клапан</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="470"><td>470</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление держателя переключающего клапана; M6X12</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="480"><td>480</td><td class="pn" data-raw="A2525011900" title="Клик — скопировать">A 252 501 19 00</td><td>Держатель (HOLDER)</td><td>1</td><td>Циркуляционный насос [004047] ЗАКАЗ ЗАПАСНОЙ ЧАСТИ МОЖНО ВЫПОЛНИТЬ ИСКЛЮЧИТЕЛЬНО ЧЕРЕЗ ПОРТАЛ ЗАПЧАСТЕЙ EDAG (HTTPS://ETOS.EDAG.DE/).</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="490"><td>490</td><td class="pn" data-raw="N910143006000" title="Клик — скопировать">N 910143 006000</td><td>Винт с 6-гр. глвк (HEXALOBULAR SCREW)</td><td>1</td><td>Крепление держателя; M6X12</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2535060235" title="Клик — скопировать">A 253 506 02 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>К автономному отопителю Рулевое управление: Влево</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2535060235" title="Клик — скопировать">A 253 506 02 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>Разъем к разъему Рулевое управление: Влево</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2535060335" title="Клик — скопировать">A 253 506 03 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>К автономному отопителю Рулевое управление: Вправо</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="500"><td>500</td><td class="pn" data-raw="A2535060335" title="Клик — скопировать">A 253 506 03 35</td><td>Шланг отопителя (HOT WATER HOSE)</td><td>1</td><td>Разъем к разъему Рулевое управление: Вправо</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A2309950105" title="Клик — скопировать">A 230 995 01 05</td><td>Пружинный хомут (SPRING HOSE CLAMP)</td><td>1</td><td>Шланг к автономному отопителю; 24.0/26.8 MM</td><td class="restr" data-expr="228/ME05"><span class="icode">228/ME05</span></td></tr><tr data-pos="510"><td>510</td><td class="pn" data-raw="A2309950105" title="Клик — скопировать">A 230 995 01 05</td><td>Пружинный хомут (SPRING HOSE CLAMP)</td><td>1</td><td>Крепление трубопровода отопителя; 24.0/26.8 MM</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A2135061300" title="Клик — скопировать">A 213 506 13 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>Разъем к отопителю</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="520"><td>520</td><td class="pn" data-raw="A2535061060" title="Клик — скопировать">A 253 506 10 60</td><td>Трубка отопителя (HEATING WATER LINE)</td><td>1</td><td>Разъем к отопителю</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="A2055060600" title="Клик — скопировать">A 205 506 06 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>Отопитель к разъему</td><td class="restr" data-expr="ME05"><span class="icode">ME05</span></td></tr><tr data-pos="530"><td>530</td><td class="pn" data-raw="A2135062200" title="Клик — скопировать">A 213 506 22 00</td><td>Трубопровод охлаждения (HEATING LINE)</td><td>1</td><td>Отопитель к разъему</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="540"><td>540</td><td class="pn" data-raw="A0119909404" title="Клик — скопировать">A 011 990 94 04</td><td>Винт Torx с полукр. гол. (PAN HEAD SCREW)</td><td>1</td><td>К держателю; M6X12</td><td class="restr" data-expr="9O1"><span class="icode">9O1</span></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="A0009904337" title="Клик — скопировать">A 000 990 43 37</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Подводящий трубопровод к моторному щиту; M6 Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="610"><td>610</td><td class="pn" data-raw="N000000008290" title="Клик — скопировать">N 000000 008290</td><td>Шестигранная гайка (HEXAGON NUT)</td><td>1</td><td>Подводящий трубопровод к моторному щиту; M6 Рулевое управление: Вправо</td><td class="restr"></td></tr></tbody></table>
+  </div>
+</div>
+<p class="muted">Позиций: 79 · подписано на схемах: 79 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_PV000.002.683.245_version_002.png", "poses": ["10", "20", "70", "80", "90", "100", "110", "150", "300", "310", "320", "330", "340", "350", "402", "405", "407", "610"], "hs": {"150": [[968, 481, 42, 28]], "350": [[474, 477, 42, 28]], "340": [[539, 425, 43, 28]], "110": [[751, 594, 43, 28]], "330": [[590, 313, 43, 29]], "100": [[867, 636, 42, 29]], "320": [[714, 264, 42, 29]], "200": [[836, 372, 42, 29]], "310": [[968, 131, 43, 28]], "300": [[1051, 203, 42, 28]], "610": [[701, 87, 43, 28]], "402": [[298, 244, 42, 28]], "600": [[799, 161, 42, 28]], "90": [[615, 676, 30, 28]], "80": [[430, 634, 30, 28]], "70": [[462, 696, 30, 28]], "405": [[106, 313, 42, 28]], "407": [[133, 212, 43, 29]], "30": [[228, 368, 30, 28]], "20": [[224, 433, 30, 28]], "10": [[120, 505, 31, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.002.972.250_version_004.png", "poses": ["10", "70", "80", "100", "110", "150", "300", "310", "320", "330", "340", "350", "355", "370", "400", "410", "420", "430", "450", "460", "470", "480", "490", "500", "510", "520", "530", "540"], "hs": {"490": [[375, 352, 43, 28]], "150": [[1076, 390, 42, 28]], "370": [[219, 301, 42, 28]], "470": [[147, 375, 42, 28]], "350": [[368, 538, 43, 28]], "450": [[239, 452, 43, 28]], "110": [[615, 621, 43, 29]], "330": [[534, 414, 42, 28]], "430": [[588, 64, 43, 28]], "310": [[876, 272, 42, 29]], "530": [[517, 196, 43, 28]], "355": [[304, 463, 42, 28]], "410": [[434, 97, 43, 28]], "510": [[708, 195, 43, 28]], "70": [[462, 696, 30, 28]], "10": [[285, 336, 30, 29]], "480": [[416, 388, 42, 28]], "460": [[149, 431, 43, 28]], "340": [[552, 500, 43, 28]], "100": [[866, 637, 43, 28]], "320": [[572, 348, 43, 28]], "540": [[593, 105, 43, 28]], "420": [[418, 159, 43, 28]], "300": [[829, 367, 42, 29]], "520": [[700, 99, 42, 28]], "400": [[392, 268, 42, 29]], "500": [[736, 233, 42, 29]], "80": [[522, 584, 30, 29]]}, "w": 1326, "h": 881}, {"png": "../../img_png/drawing_PV000.002.683.246_version_003.png", "poses": ["10", "20", "70", "80", "90", "100", "110", "150", "300", "320", "330", "340", "350", "370", "400", "410", "420", "430", "440", "450", "460", "470", "500", "510", "520", "530"], "hs": {"150": [[1010, 561, 43, 29]], "370": [[312, 447, 43, 28]], "470": [[293, 272, 42, 28], [284, 293, 26, 23]], "350": [[452, 477, 43, 28]], "450": [[399, 293, 43, 28]], "110": [[764, 687, 43, 28]], "330": [[631, 393, 42, 28]], "430": [[426, 17, 43, 28]], "530": [[586, 78, 43, 28]], "410": [[303, 60, 42, 29]], "510": [[735, 202, 43, 28]], "90": [[489, 732, 30, 28]], "70": [[221, 739, 30, 28]], "10": [[300, 646, 30, 29]], "460": [[358, 257, 42, 28]], "340": [[613, 493, 43, 28]], "100": [[880, 730, 42, 28]], "320": [[812, 395, 42, 28], [799, 361, 41, 38]], "420": [[293, 187, 43, 28], [262, 187, 25, 19]], "520": [[722, 69, 43, 28]], "300": [[913, 251, 42, 28]], "400": [[190, 406, 43, 28]], "500": [[724, 332, 42, 28]], "80": [[335, 729, 31, 28]], "20": [[368, 547, 30, 29]]}, "w": 1326, "h": 881}];</script><script>
+const v=document.getElementById('viewer'), img=document.getElementById('scheme');
+let s=1,x=0,y=0,drag=null;
+const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
+function smooth(){img.style.transition='transform .18s ease-out';}
+function instant(){img.style.transition='none';}
+v.addEventListener('wheel',e=>{e.preventDefault();smooth();
+  const k=Math.exp(-e.deltaY*0.0016), ns=Math.min(15,Math.max(0.05,s*k));
+  const r=v.getBoundingClientRect(), cx=e.clientX-r.left-r.width/2, cy=e.clientY-r.top-r.height/2;
+  x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply();},{passive:false});
+v.addEventListener('pointerdown',e=>{instant();drag={a:e.clientX,b:e.clientY,x,y};v.setPointerCapture(e.pointerId);v.style.cursor='grabbing';});
+v.addEventListener('pointermove',e=>{if(drag){x=drag.x+e.clientX-drag.a;y=drag.y+e.clientY-drag.b;apply();}});
+addEventListener('pointerup',()=>{drag=null;v.style.cursor='grab';});
+function fit(){const r=v.getBoundingClientRect();smooth();s=Math.min((r.width-20)/img.naturalWidth,(r.height-20)/img.naturalHeight,1);x=0;y=0;apply();}
+function zoomBtn(k){smooth();s=Math.min(15,Math.max(0.05,s*k));apply();}
+img.addEventListener('load',fit); if(img.complete) fit();
+v.addEventListener('dblclick',e=>{e.preventDefault();smooth();const k=s<3?3:1;s=k;apply();});
+document.querySelectorAll('.pn').forEach(c=>c.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(c.dataset.raw||c.textContent.trim());c.style.background='#e7f3e8';setTimeout(()=>c.style.background='',600);}));
+const filt=document.getElementById('filter');
+if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();document.querySelectorAll('#ptable tbody tr').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+</script><script>
+(function(){
+  if(!SCHEMES.length)return;
+  const img=document.getElementById('scheme');
+  const btns=[...document.querySelectorAll('.scheme-tabs button')];
+  const chk=document.getElementById('only-scheme');
+  const rows=[...document.querySelectorAll('#ptable tbody tr')];
+  let cur=0;
+  function applyRows(){
+    const set=new Set(SCHEMES[cur].poses);
+    rows.forEach(tr=>{
+      const on=set.has(tr.dataset.pos);
+      tr.classList.toggle('dim',!!tr.dataset.pos&&!on);
+      if(chk&&chk.checked)tr.style.display=(!tr.dataset.pos||on)?'':'none';
+      else tr.style.display='';
+    });
+  }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
+  function pick(i){
+    cur=i;
+    btns.forEach((b,j)=>b.classList.toggle('on',j===i));
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
+    img.src=SCHEMES[i].png;
+    applyRows();
+    renderHov();
+  }
+  btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
+  if(chk)chk.addEventListener('change',applyRows);
+  const schq=new URLSearchParams(location.search).get('sch');
+  if(schq!=null){const si=Math.min(parseInt(schq,10)||0,SCHEMES.length-1);pick(Math.max(0,si));}
+
+  // фильтр «мой шасси» + «коды авто»
+  const chi=document.getElementById('chassis');
+  const ci=document.getElementById('codes');
+  let CODES=null;
+  function evalExpr(s){
+    if(!CODES)return true;
+    let i=0;
+    const peek=()=>s[i];
+    const f_=()=>{
+      if(peek()==='-'){i++;return !f_();}
+      if(peek()==='('){i++;const v=or_();while(i<s.length&&s[i]!==')')i++;i++;return v;}
+      let j=i;while(i<s.length&&!'+/)'.includes(s[i]))i++;
+      const code=s.slice(j,i).trim();if(!code)return true;return CODES.has(code);
+    };
+    const and_=()=>{let v=f_();while(s[i]==='+'){i++;v=v&&f_();}return v;};
+    const or_=()=>{let v=and_();while(s[i]==='/'){i++;v=v||and_();}return v;};
+    try{return or_();}catch(e){return true;}
+  }
+  function applyFit(){
+    const q=chi?(chi.value||'').replace(/\D/g,''):'';
+    const n=q?parseInt(q,10):NaN;
+    rows.forEach(tr=>{
+      let bad=false;
+      const f=tr.dataset.chFrom,t=tr.dataset.chTo;
+      if(!isNaN(n)&&(f||t)){
+        if(f&&n<parseInt(f.replace(/\D/g,''),10))bad=true;
+        if(t&&n>parseInt(t.replace(/\D/g,''),10))bad=true;
+      }
+      if(!bad){
+        const cell=tr.querySelector('td.restr[data-expr]');
+        if(cell){bad=!evalExpr(cell.dataset.expr);}
+      }
+      tr.classList.toggle('no-fit',bad);
+    });
+  }
+  if(chi)chi.addEventListener('input',applyFit);
+  if(ci)ci.addEventListener('input',()=>{
+    const raw=(ci.value||'').trim();
+    CODES=raw?new Set(raw.split(/[\s,;]+/).map(c=>c.replace(/[^\w]/g,'')).filter(Boolean)):null;
+    applyFit();
+  });
+  // префилл из URL (?codes=…&chassis=…) — приходит с VIN-страницы; фоллбэк — localStorage (навигация группа→доска)
+  const qp=new URLSearchParams(location.search);
+  if(!qp.get('codes')){const lc=localStorage.getItem('pl24_codes');if(lc)qp.set('codes',lc);}
+  if(!qp.get('chassis')){const lc=localStorage.getItem('pl24_chassis');if(lc)qp.set('chassis',lc);}
+  if(ci&&qp.get('codes')){ci.value=qp.get('codes');CODES=new Set(qp.get('codes').split(/[\s,;]+/));}
+  if(chi&&qp.get('chassis'))chi.value=qp.get('chassis');
+  const vinf=localStorage.getItem('pl24_vin');
+  if(CODES&&vinf){const b=document.createElement('div');b.className='vin-hit';b.innerHTML='🔎 VIN-фильтр: <b>'+vinf+'</b> · скрываем неподходящие позиции — <a href="#" id="vinoff">выключить</a>';document.body.insertBefore(b,document.body.firstChild.nextSibling);
+    b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
+  if(CODES||qp.get('chassis'))applyFit();
+  applyRows();
+  renderHov();
+})();
+</script></body></html>

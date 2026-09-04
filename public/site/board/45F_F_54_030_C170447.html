@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170447">45F  Недействительно для: CA, JP, US</a> → 030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">45F  Недействительно для: CA, JP, US</a> → 030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</div>
 <h1>030 АКБ, ПРОВОД АКБ И ГЕНЕРАТОРА</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B54030000391.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B54030000391.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0035416601" title="Клик — скопировать">A 003 541 66 01</td><td>аккумуляторная батарея</td><td>1</td><td>12V/62AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0055411901" title="Клик — скопировать">A 005 541 19 01</td><td>АКБ</td><td>1</td><td>12V/62AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0055412301" title="Клик — скопировать">A 005 541 23 01</td><td>АКБ</td><td>1</td><td>12V/62AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0009823008" title="Клик — скопировать">A 000 982 30 08</td><td>АКБ бортовой сети (BORDNETZBATTERIE)</td><td>1</td><td>ЗАПОЛН. 12V/62 AH; 12V/62AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0035417501" title="Клик — скопировать">A 003 541 75 01</td><td>аккумуляторная батарея</td><td>1</td><td>12V/74AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0055412001" title="Клик — скопировать">A 005 541 20 01</td><td>АКБ</td><td>1</td><td>12V/74AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0055412401" title="Клик — скопировать">A 005 541 24 01</td><td>аккумуляторная батарея</td><td>1</td><td>12V/74AH</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A0009823108" title="Клик — скопировать">A 000 982 31 08</td><td>АКБ бортовой сети (BORDNETZBATTERIE)</td><td>1</td><td>ЗАПОЛН. 12V/74 AH; 12V/74AH</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009891215" title="Клик — скопировать">A 000 989 12 15</td><td>Электролит (AKKUSAEURE)</td><td>1</td><td>TO 62 AH</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A0009891315" title="Клик — скопировать">A 000 989 13 15</td><td>Электролит (AKKUSAEURE)</td><td>1</td><td>TO 74 AH</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0005462335" title="Клик — скопировать">A 000 546 23 35</td><td>Крышка клеммы</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A0015460835" title="Клик — скопировать">A 001 546 08 35</td><td>Защитный колпачок (SCHUTZKAPPE)</td><td>1</td><td>ПЛЮС. ВЫВОД АКБ</td><td class="restr"></td></tr><tr data-pos="12"><td>12</td><td class="pn" data-raw="A0015410163" title="Клик — скопировать">A 001 541 01 63</td><td>Бак (BEHAELTER)</td><td>1</td><td>К АКБ СБОКУ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A0029972486" title="Клик — скопировать">A 002 997 24 86</td><td>Пробка (STOPFEN)</td><td>6</td><td>6X8 MM</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A2025400231" title="Клик — скопировать">A 202 540 02 31</td><td>Провод массы (MASSELEITUNG)</td><td>1</td><td>ОТ АКБ К КРЫЛУ</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="N304017008016" title="Клик — скопировать">N 304017 008016</td><td>Винт с 6-гранной головкой (SECHSKANTSCHRAUBE)</td><td>1</td><td>ПРОВОД МАССЫ НА КРЫЛЕ; M8X16</td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A1705400231" title="Клик — скопировать">A 170 540 02 31</td><td>Провод массы (MASSELEITUNG)</td><td>1</td><td>КУЗОВ К СИСТЕМЕ ВЫПУСКА ОГ</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1245400031" title="Клик — скопировать">A 124 540 00 31</td><td>Провод (LEITUNG)</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A9015400741" title="Клик — скопировать">A 901 540 07 41</td><td>Плоский провод массы (MASSEBAND)</td><td>1</td><td>ДВИГАТЕЛЬ К РАМЕ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1705400130" title="Клик — скопировать">A 170 540 01 30</td><td>Провод стартера (ANLASSERLEITUNG)</td><td>1</td><td>СТАРТЕР К ПЛЮС. ВЫВОДУ АКБ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1705403406" title="Клик — скопировать">A 170 540 34 06</td><td>Жгут электропроводки (LEITUNGSSATZ)</td><td>1</td><td>СТАРТЕР К ПЛЮС. ВЫВОДУ АКБ Рулевое управление: Влево</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1705400030" title="Клик — скопировать">A 170 540 00 30</td><td>Провод стартера (ANLASSERLEITUNG)</td><td>1</td><td>СТАРТЕР К ПЛЮС. ВЫВОДУ АКБ Рулевое управление: Вправо</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1705403506" title="Клик — скопировать">A 170 540 35 06</td><td>Жгут электропроводки (LEITUNGSSATZ)</td><td>1</td><td>СТАРТЕР К ПЛЮС. ВЫВОДУ АКБ Рулевое управление: Вправо [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N913018013201" title="Клик — скопировать">N 913018 013201</td><td>Колпачок</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A0008310929" title="Клик — скопировать">A 000 831 09 29</td><td>Колпачок (KAPPE)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="N000934006007" title="Клик — скопировать">N 000934 006007</td><td>Гайка</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 50</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="N304032008006" title="Клик — скопировать">N 304032 008006</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30; M8</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000137006204" title="Клик — скопировать">N 000137 006204</td><td>Пружинная шайба (FEDERSCHEIBE)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 50</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="N000137008212" title="Клик — скопировать">N 000137 008212</td><td>Пружинная шайба (FEDERSCHEIBE)</td><td>1</td><td>ПРОВОД НА СТАРТЕРЕ, КЛЕММА 30</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 29 · подписано на схемах: 29 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54030000391.png", "poses": ["5", "8", "11", "12", "14", "17", "20", "23", "32", "35", "38", "41", "44"]}];</script><script>
+<p class="muted">Позиций: 29 · подписано на схемах: 29 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B54030000391.png", "poses": ["5", "8", "11", "12", "14", "17", "20", "23", "32", "35", "38", "41", "44"], "hs": {"11": [[798, 191, 29, 24]], "44": [[726, 552, 31, 24]], "12": [[384, 316, 30, 24]], "23": [[1070, 734, 32, 24]], "35": [[1015, 341, 30, 27]], "14": [[455, 335, 30, 24]], "38": [[653, 571, 31, 24]], "17": [[331, 473, 29, 24]], "5": [[503, 521, 15, 24]], "8": [[229, 311, 17, 26]], "41": [[695, 559, 31, 25]], "20": [[276, 531, 31, 27]], "32": [[305, 760, 31, 26]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

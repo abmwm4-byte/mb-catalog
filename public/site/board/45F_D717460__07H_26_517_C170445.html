@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170445">45F  Недействительно для: CA, JP, US</a> → 517 КП В СБОРЕ С ВОЗВРАТН. ПОДШИПНИКОМ,     ИСПОЛ.ЦИЛ.,КОМПЛЕКТ УПЛОТН.</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/32">45F  Недействительно для: CA, JP, US</a> → 517 КП В СБОРЕ С ВОЗВРАТН. ПОДШИПНИКОМ,     ИСПОЛ.ЦИЛ.,КОМПЛЕКТ УПЛОТН.</div>
 <h1>517 КП В СБОРЕ С ВОЗВРАТН. ПОДШИПНИКОМ,     ИСПОЛ.ЦИЛ.,КОМПЛЕКТ УПЛОТН.</h1>
 
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B26517000002.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B26517000002.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A1702600000" title="Клик — скопировать">A 170 260 00 00</td><td>Коробка передач</td><td>1</td><td>[009] НАЧАЛО ВЫПУСКА 717.460 НАЧИН. С 22.09.94 ИЛИ С № АГРЕГ. 6656995 [697] ДЕТАЛЬ ПОСТАВЛЯЕТСЯ ТОЛЬКО/ИЛИ ТАКЖЕ КАК ЗАП.ЧАСТЬ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A1239910715" title="Клик — скопировать">A 123 991 07 15</td><td>- Шаровой палец (KUGELBOLZEN)</td><td>1</td><td>ВИЛКА ВЫЖИМНАЯ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1242900129" title="Клик — скопировать">A 124 290 01 29</td><td>- ВИЛКА ВЫЖИМНАЯ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A1242930111" title="Клик — скопировать">A 124 293 01 11</td><td>- Вилка выкл. сцепления (AUSRUECKGABEL)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A2022930073" title="Клик — скопировать">A 202 293 00 73</td><td>- предохранитель (SICHERUNG)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0012500115" title="Клик — скопировать">A 001 250 01 15</td><td>- Выжимной подшипник</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0022500515" title="Клик — скопировать">A 002 250 05 15</td><td>- ПОДШИПНИК ВЫЖИМНОЙ (AUSRUECKLAGER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0012502515" title="Клик — скопировать">A 001 250 25 15</td><td>- ПОДШИПНИК ВЫЖИМНОЙ</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0012500115" title="Клик — скопировать">A 001 250 01 15</td><td>- Выжимной подшипник</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A0022500515" title="Клик — скопировать">A 002 250 05 15</td><td>- ПОДШИПНИК ВЫЖИМНОЙ (AUSRUECKLAGER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2012900411" title="Клик — скопировать">A 201 290 04 11</td><td>РАБОЧИЙ ЦИЛИНДР</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2022900011" title="Клик — скопировать">A 202 290 00 11</td><td>CLUTCH SLAVE CYLINDER (KUPPLUNGSNEHMERZYLINDER)</td><td>1</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0002900611" title="Клик — скопировать">A 000 290 06 11</td><td>Ремк-т раб.цилиндра сцеп. (REP.SATZ NEHMERZYLINDER)</td><td>1</td><td>РАБОЧИЙ ЦИЛИНДР</td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1242950087" title="Клик — скопировать">A 124 295 00 87</td><td>Прокладка фланца (FLANSCHDICHTUNG)</td><td>1</td><td>РАБОЧИЙ ЦИЛИНДР НА КОРПУСЕ КП</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008116" title="Клик — скопировать">N 000933 008116</td><td>Винт</td><td>-</td><td>M8X28\-8.8</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000933008337" title="Клик — скопировать">N 000933 008337</td><td>Винт</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="A0099900101" title="Клик — скопировать">A 009 990 01 01</td><td>болт (SCHRAUBE)</td><td>2</td><td>РАБОЧИЙ ЦИЛИНДР НА КОРПУСЕ КП</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1232950640" title="Клик — скопировать">A 123 295 06 40</td><td>Держатель (HALTER)</td><td>1</td><td>ТРУБОПРОВОД НА КАРТЕРЕ КП</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A1232950450" title="Клик — скопировать">A 123 295 04 50</td><td>втулка (BUCHSE)</td><td>1</td><td>ТРУБОПРОВОД НА КАРТЕРЕ КП</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="N073379006101" title="Клик — скопировать">N 073379 006101</td><td>Шланг</td><td>2</td><td>ТРУБОПРОВОД НА КАРТЕРЕ КП 30mm</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A1262605101" title="Клик — скопировать">A 126 260 51 01</td><td>КОМПЛЕКТ УПЛОТНЕНИЙ (DICHTUNGSSATZ)</td><td>1</td><td>КОРОБКА ПЕРЕДАЧ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A1242950026" title="Клик — скопировать">A 124 295 00 26</td><td>Защитный экран (SCHUTZBLECH)</td><td>1</td><td>РАБОЧИЙ ЦИЛИНДР СЦЕПЛЕНИЯ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="A4602900733" title="Клик — скопировать">A 460 290 07 33</td><td>Держатель (HALTER)</td><td>1</td><td>РАБОЧИЙ ЦИЛИНДР СЦЕПЛЕНИЯ [402] БОЛЬШЕ НЕ ПОСТАВЛЯЕТСЯ</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="N910105006007" title="Клик — скопировать">N 910105 006007</td><td>Винт с 6-гранной головкой</td><td>2</td><td>ЗАЩИТНЫЙ ЭКРАН К КРОНШТЕЙНУ M 6X10; M6X10</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="N910105008016" title="Клик — скопировать">N 910105 008016</td><td>Винт с 6-гранной головкой</td><td>2</td><td>ДЕРЖАТЕЛЬ НА КП К ИСПОЛН. ЦИЛ. СЦЕПЛЕНИЯ M 8X30; M8X30</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26517000002.png", "poses": ["5", "8", "11", "14", "17", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53"]}];</script><script>
+<p class="muted">Позиций: 25 · подписано на схемах: 25 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B26517000002.png", "poses": ["5", "8", "11", "14", "17", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53"], "hs": {"11": [[325, 525, 25, 20]], "44": [[439, 245, 28, 20]], "23": [[769, 172, 29, 20]], "35": [[193, 158, 28, 21]], "14": [[294, 649, 26, 21]], "47": [[609, 273, 26, 21]], "26": [[722, 225, 31, 21]], "38": [[275, 202, 29, 21]], "17": [[184, 620, 26, 21]], "29": [[900, 285, 29, 20]], "5": [[495, 628, 15, 21]], "8": [[349, 624, 15, 21]], "50": [[377, 190, 29, 22]], "41": [[946, 502, 29, 20], [1199, 824, 27, 21]], "53": [[628, 200, 27, 21]], "32": [[195, 200, 28, 21]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>

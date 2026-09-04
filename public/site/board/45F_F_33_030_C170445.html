@@ -49,6 +49,9 @@ a { color: #1268c8; }
 .tile small { color: #7a8089; display: block; }
 .tile.off { opacity: .45; }
 .tile .ph { height: 110px; display: flex; align-items: center; justify-content: center; color: #c3c8cf; font-size: 30px; }
+#hov rect { fill: rgba(18,104,200,.14); stroke: #1268c8; stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: auto; cursor: pointer; rx: 4; }
+#hov rect.on { fill: rgba(18,104,200,.45); stroke-width: 3; }
+tr.rowhl { background: #dbe9fa; }
 .vin-box { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:16px; margin:14px 0 22px; }
 .vin-card { background:#f3f7fc; border:1px solid #dbe7f4; border-radius:10px; padding:12px 14px; font-size:14px; }
 .vin-hit { background:#e7f3e8; border:1px solid #b9dfc0; color:#1c5f29; border-radius:10px; padding:8px 14px; margin:10px auto; max-width:1200px; font-size:14px; }
@@ -66,7 +69,7 @@ a { color: #1268c8; }
 .parts td.pn { font-family: ui-monospace, monospace; cursor: copy; white-space: nowrap; }
 .part-filter { width: 100%; padding: 8px 12px; border: 0; border-bottom: 1px solid #e3e6ea; font-size: 14px; }
 </style></head><body><div class="wrap">
-<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/C170445">45F  Недействительно для: CA, JP, US</a> → 030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</div>
+<div class="crumbs"><a href="../">Каталог</a> → <a href="../model/65">45F  Недействительно для: CA, JP, US</a> → 030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</div>
 <h1>030 ПОВОРОТНЫЙ КУЛАК И ПОПЕРЕЧНЫЙ РЫЧАГ</h1>
 <div class="scheme-tabs"><button data-i="0" class="on">B33030000028 <span class="hint">(19)</span></button><button data-i="1" class="">B33030000029 <span class="hint">(4)</span></button></div>
 <div class="blayout">
@@ -74,7 +77,7 @@ a { color: #1268c8; }
     <div class="toolbar">
       <button onclick="zoomBtn(1.25)">+</button><button onclick="zoomBtn(0.8)">−</button><button onclick="fit()">вписать</button>
     </div>
-    <img id="scheme" src="../../img_png/drawing_B33030000028.png" alt="схема">
+    <img id="scheme" src="../../img_png/drawing_B33030000028.png" alt="схема"><svg id="hov" style="position:absolute;left:50%;top:50%;pointer-events:none"></svg>
   </div>
   <div class="parts">
     <input class="part-filter" id="filter" placeholder="фильтр по артикулу/названию…">
@@ -83,8 +86,8 @@ a { color: #1268c8; }
     <table id="ptable"><thead><tr><th>№</th><th>Артикул</th><th>Название</th><th>Кол.</th><th>Примечание</th><th>Ограничение</th></tr></thead><tbody><tr data-pos="5"><td>5</td><td class="pn" data-raw="A2023300020" title="Клик — скопировать">A 202 330 00 20</td><td>Поворотный кулак левый (ACHSSCHENKEL LINKS)</td><td>1</td><td>СЛЕВА</td><td class="restr"></td></tr><tr data-pos="5"><td>5</td><td class="pn" data-raw="A2023300120" title="Клик — скопировать">A 202 330 01 20</td><td>Поворотный кулак правый (ACHSSCHENKEL RECHTS)</td><td>1</td><td>СПРАВА</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A2103300035" title="Клик — скопировать">A 210 330 00 35</td><td>Опорный шарнир</td><td>-</td><td>[005] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТАЛИ</td><td class="restr"></td></tr><tr data-pos="8"><td>8</td><td class="pn" data-raw="A2113300335" title="Клик — скопировать">A 211 330 03 35</td><td>Опорный шарнир (TRAGGELENK)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="N913004014002" title="Клик — скопировать">N 913004 014002</td><td>Гайка</td><td>-</td><td>[002] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 001916 ВНИМАНИЕ УЧЕСТЬ ИЗМЕН. МОМЕНТА ЗАТЯЖКИ</td><td class="restr"></td></tr><tr data-pos="11"><td>11</td><td class="pn" data-raw="A2029900851" title="Клик — скопировать">A 202 990 08 51</td><td>Гайка для шурупа (MUTTER FUER BLECHSCHRAUBE)</td><td>2</td><td>ШАРНИР НА ПОВОРОТН. КУЛАКЕ; M14X1.5</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="N913004014002" title="Клик — скопировать">N 913004 014002</td><td>Гайка</td><td>-</td><td>[002] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 001916 ВНИМАНИЕ УЧЕСТЬ ИЗМЕН. МОМЕНТА ЗАТЯЖКИ</td><td class="restr"></td></tr><tr data-pos="14"><td>14</td><td class="pn" data-raw="A2029900851" title="Клик — скопировать">A 202 990 08 51</td><td>Гайка для шурупа (MUTTER FUER BLECHSCHRAUBE)</td><td>2</td><td>ШАРНИР НА ПОПЕРЕЧН. РЫЧАГЕ; M14X1.5</td><td class="restr"></td></tr><tr data-pos="17"><td>17</td><td class="pn" data-raw="A1243330259" title="Клик — скопировать">A 124 333 02 59</td><td>Защитный колпачок (SCHUTZKAPPE)</td><td>2</td><td>ОГРАНИЧИТЕЛЬ ПОВОРОТА УПРАВЛЯЕМЫХ КОЛЕС</td><td class="restr"></td></tr><tr data-pos="20"><td>20</td><td class="pn" data-raw="A2103300325" title="Клик — скопировать">A 210 330 03 25</td><td>Ступица переднего колеса (VORDERRADNABE)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="23"><td>23</td><td class="pn" data-raw="A0199978847" title="Клик — скопировать">A 019 997 88 47</td><td>- Уплотнительное кольцо (DICHTRING)</td><td>2</td><td></td><td class="restr"></td></tr><tr data-pos="26"><td>26</td><td class="pn" data-raw="A1163340372" title="Клик — скопировать">A 116 334 03 72</td><td>Зажимная гайка (KLEMMMUTTER)</td><td>2</td><td>СТУПИЦА ПЕРЕДН. КОЛЕСА НА ПОВОРОТН. КУЛАКЕ</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000912006053" title="Клик — скопировать">N 000912 006053</td><td>Цилиндрич. винт</td><td>-</td><td>M6X25</td><td class="restr"></td></tr><tr data-pos="29"><td>29</td><td class="pn" data-raw="N000912006176" title="Клик — скопировать">N 000912 006176</td><td>Цилиндрич. винт (ZYLINDERSCHRAUBE)</td><td>2</td><td>СТУПИЦА ПЕРЕДН. КОЛЕСА НА ПОВОРОТН. КУЛАКЕ; M6X25</td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A1163340425" title="Клик — скопировать">A 116 334 04 25</td><td>КОЛПАК КОЛЕСА</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="32"><td>32</td><td class="pn" data-raw="A2103570289" title="Клик — скопировать">A 210 357 02 89</td><td>Колпачок (VERSCHLUSSKAPPE)</td><td>2</td><td>СТУПИЦА ПЕРЕДН. КОЛЕСА НА ПОВОРОТН. КУЛАКЕ</td><td class="restr"></td></tr><tr data-pos="35"><td>35</td><td class="pn" data-raw="A2103300051" title="Клик — скопировать">A 210 330 00 51</td><td>ремкомплект (REPARATURSATZ)</td><td>2</td><td>ОПОРА КОЛЕСА СПЕРЕДИ</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A2023304107" title="Клик — скопировать">A 202 330 41 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1703300107" title="Клик — скопировать">A 170 330 01 07</td><td>Поперечный рычаг (QUERLENKER)</td><td>1</td><td>ВНИЗУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A2023304207" title="Клик — скопировать">A 202 330 42 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td></td><td class="restr"></td></tr><tr data-pos="38"><td>38</td><td class="pn" data-raw="A1703300207" title="Клик — скопировать">A 170 330 02 07</td><td>Поперечный рычаг (QUERLENKER)</td><td>1</td><td>СНИЗУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="41"><td>41</td><td class="pn" data-raw="A2023330571" title="Клик — скопировать">A 202 333 05 71</td><td>болт (SCHRAUBE)</td><td>4</td><td>ПОПЕРЕЧН. РЫЧАГ СНИЗУ НА РАМЕ</td><td class="restr"></td></tr><tr data-pos="44"><td>44</td><td class="pn" data-raw="A2023330476" title="Клик — скопировать">A 202 333 04 76</td><td>Диск (SCHEIBE)</td><td>4</td><td>ПОПЕРЕЧН. РЫЧАГ СНИЗУ НА РАМЕ</td><td class="restr"></td></tr><tr data-pos="47"><td>47</td><td class="pn" data-raw="N000000003281" title="Клик — скопировать">N 000000 003281</td><td>Шестигранная гайка (SECHSKANTMUTTER)</td><td>4</td><td>ПОПЕРЕЧН. РЫЧАГ СНИЗУ НА РАМЕ; M14X1,5</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2103302507" title="Клик — скопировать">A 210 330 25 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td>[021] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 025323</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2083300407" title="Клик — скопировать">A 208 330 04 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td>[004] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 043163</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2023304807" title="Клик — скопировать">A 202 330 48 07</td><td>Поперечный рычаг (QUERLENKER)</td><td>1</td><td>СВЕРХУ СЛЕВА</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2103302607" title="Клик — скопировать">A 210 330 26 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td>[021] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 025323</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2083300507" title="Клик — скопировать">A 208 330 05 07</td><td>ПОПЕРЕЧНЫЙ РЫЧАГ</td><td>-</td><td>[004] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 043163</td><td class="restr"></td></tr><tr data-pos="50"><td>50</td><td class="pn" data-raw="A2023304907" title="Клик — скопировать">A 202 330 49 07</td><td>Поперечный рычаг (QUERLENKER)</td><td>1</td><td>СВЕРХУ СПРАВА</td><td class="restr"></td></tr><tr data-pos="53"><td>53</td><td class="pn" data-raw="A2029903101" title="Клик — скопировать">A 202 990 31 01</td><td>болт (SCHRAUBE)</td><td>2</td><td>ПОПЕРЕЧН. РЫЧАГ СВЕРХУ НА РАМЕ</td><td class="restr"></td></tr><tr data-pos="56"><td>56</td><td class="pn" data-raw="N913023010002" title="Клик — скопировать">N 913023 010002</td><td>Гайка (MUTTER)</td><td>2</td><td>ПОПЕРЕЧН. РЫЧАГ СВЕРХУ НА РАМЕ; M10</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N913002010001" title="Клик — скопировать">N 913002 010001</td><td>Гайка (MUTTER)</td><td>-</td><td>[002] ИСПОЛЬЗОВАТЬ СТАРЫЙ НОМЕР ДЕТ. ДО ИД.№ F 001916 ВНИМАНИЕ УЧЕСТЬ ИЗМЕН. МОМЕНТА ЗАТЯЖКИ</td><td class="restr"></td></tr><tr data-pos="59"><td>59</td><td class="pn" data-raw="N910118010002" title="Клик — скопировать">N 910118 010002</td><td>Шестигранная гайка</td><td>2</td><td>ПОПЕРЕЧ. РЫЧАГ ВЕРХ. НА ПОВОРОТ. КУЛАКЕ</td><td class="restr"></td></tr><tr data-pos="62"><td>62</td><td class="pn" data-raw="A1703300075" title="Клик — скопировать">A 170 330 00 75</td><td>ремкомплект (REPARATURSATZ)</td><td>2</td><td>ПОПЕРЕЧН. РЫЧАГ СНИЗУ НА РАМЕ</td><td class="restr"></td></tr><tr data-pos="65"><td>65</td><td class="pn" data-raw="A2023300118" title="Клик — скопировать">A 202 330 01 18</td><td>Комплект пальцев (TEILESATZ BOLZEN)</td><td>4</td><td>КРЕП. ДЕТАЛИ ТРАВЕРСЫ СНИЗУ НА РАМЕ</td><td class="restr"></td></tr></tbody></table>
   </div>
 </div>
-<p class="muted">Позиций: 36 · подписано на схемах: 36 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать.</p>
-</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B33030000028.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "59"]}, {"png": "../../img_png/drawing_B33030000029.png", "poses": ["14", "47", "62", "65"]}];</script><script>
+<p class="muted">Позиций: 36 · подписано на схемах: 36 · колесо — плавный зум в курсор, перетаскивание — пан, двойной клик — зум, клик по артикулу — скопировать · наведите на строку или цифру на схеме — подсветка связки, клик — закрепить.</p>
+</div><script>const SCHEMES=[{"png": "../../img_png/drawing_B33030000028.png", "poses": ["5", "8", "11", "14", "17", "20", "23", "26", "29", "32", "35", "38", "41", "44", "47", "50", "53", "56", "59"], "hs": {"11": [[864, 709, 28, 24]], "44": [[260, 471, 32, 24]], "23": [[923, 699, 33, 25]], "56": [[829, 183, 32, 25]], "35": [[1108, 627, 32, 27]], "14": [[572, 534, 31, 25]], "47": [[397, 433, 32, 24]], "26": [[1070, 778, 32, 24]], "59": [[848, 360, 33, 24]], "38": [[391, 603, 32, 25]], "17": [[718, 576, 28, 25]], "29": [[1125, 703, 33, 25]], "5": [[838, 510, 18, 27]], "8": [[551, 693, 19, 25]], "50": [[725, 179, 33, 25]], "41": [[163, 496, 30, 24]], "20": [[1000, 774, 33, 25]], "53": [[564, 204, 32, 25]], "32": [[1127, 807, 32, 24]]}, "w": 1326, "h": 937}, {"png": "../../img_png/drawing_B33030000029.png", "poses": ["14", "47", "62", "65"], "hs": {"14": [[874, 552, 31, 24]], "47": [[787, 459, 32, 25], [1095, 377, 32, 24]], "62": [[654, 375, 32, 25]], "65": [[404, 217, 32, 26]]}, "w": 1326, "h": 937}];</script><script>
 const v=document.getElementById('viewer'), img=document.getElementById('scheme');
 let s=1,x=0,y=0,drag=null;
 const apply=()=>{img.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${s})`;};
@@ -121,12 +124,37 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
       else tr.style.display='';
     });
   }
+  // хотспоты: номер на схеме ↔ строка таблицы
+  const hov=document.getElementById('hov');
+  let pinned=null;
+  function hl(pos){if(hov)hov.querySelectorAll('rect').forEach(rc=>rc.classList.toggle('on',rc.dataset.pos===String(pos)));}
+  function renderHov(){
+    if(!hov)return;
+    const sch=SCHEMES[cur];
+    if(!sch.w){hov.innerHTML='';return;}
+    hov.setAttribute('viewBox','0 0 '+sch.w+' '+sch.h);
+    hov.setAttribute('width',sch.w);hov.setAttribute('height',sch.h);
+    hov.innerHTML=Object.entries(sch.hs||{}).map(function(kv){return kv[1].map(function(a){return '<rect data-pos="'+kv[0]+'" x="'+a[0]+'" y="'+a[1]+'" width="'+a[2]+'" height="'+a[3]+'"><title>'+kv[0]+'</title></rect>';}).join('');}).join('');
+    hov.querySelectorAll('rect').forEach(rc=>{
+      rc.addEventListener('mouseenter',()=>{hl(rc.dataset.pos);const tr=rows.find(t=>t.dataset.pos===rc.dataset.pos);if(tr)tr.classList.add('rowhl');});
+      rc.addEventListener('mouseleave',()=>{hl(pinned);rows.forEach(t=>t.classList.remove('rowhl'));});
+      rc.addEventListener('click',()=>{pinned=pinned===rc.dataset.pos?null:rc.dataset.pos;hl(pinned);const tr=rows.find(t=>t.dataset.pos===pinned);if(pinned&&tr){tr.scrollIntoView({block:'nearest'});tr.classList.add('rowhl');setTimeout(()=>tr.classList.remove('rowhl'),1800);}});
+    });
+    hl(pinned);
+  }
+  setInterval(()=>{if(hov&&hov.style.transform!==img.style.transform)hov.style.transform=img.style.transform;},60);
+  rows.forEach(tr=>{
+    tr.addEventListener('mouseenter',()=>hl(tr.dataset.pos));
+    tr.addEventListener('mouseleave',()=>hl(pinned));
+    tr.addEventListener('click',e=>{if(e.target.closest('.pn'))return;pinned=pinned===tr.dataset.pos?null:tr.dataset.pos;hl(pinned);});
+  });
   function pick(i){
     cur=i;
     btns.forEach((b,j)=>b.classList.toggle('on',j===i));
-    img.onload=()=>{if(typeof fit==='function')fit();};
+    img.onload=()=>{if(typeof fit==='function')fit();renderHov();};
     img.src=SCHEMES[i].png;
     applyRows();
+    renderHov();
   }
   btns.forEach((b,i)=>b.addEventListener('click',()=>pick(i)));
   if(chk)chk.addEventListener('change',applyRows);
@@ -185,5 +213,6 @@ if(filt)filt.addEventListener('input',()=>{const q=filt.value.toLowerCase();docu
     b.querySelector('#vinoff').onclick=e=>{e.preventDefault();localStorage.removeItem('pl24_codes');localStorage.removeItem('pl24_chassis');localStorage.removeItem('pl24_vin');location.search='';};}
   if(CODES||qp.get('chassis'))applyFit();
   applyRows();
+  renderHov();
 })();
 </script></body></html>
